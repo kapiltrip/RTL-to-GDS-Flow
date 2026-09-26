@@ -31,6 +31,7 @@ with tempfile.TemporaryDirectory(prefix='rtl-study-') as directory:
         ('tb_language', 'PASS: language, parameters, and state checks'),
         ('tb_delays', 'PASS: blocking and nonblocking delay timeline'),
         ('function_task_demo', '200 + 100 = 300'),
+        ('initial_always_demo', 't=30 ns clock=1 counter=0'),
     ]:
         output = folder / (top + '.vvp')
         # The examples use traditional Verilog. Explicit language mode avoids
@@ -39,7 +40,14 @@ with tempfile.TemporaryDirectory(prefix='rtl-study-') as directory:
         log = run([vvp, str(output)])
         if 'FAIL:' in log or expected not in log:
             raise AssertionError(log)
-        print(expected)
+        if top == 'initial_always_demo':
+            expected_trace = [f't={t} ns clock={v} counter=0' for t, v in [(0,0),(10,1),(20,0),(30,1)]]
+            actual_trace = [line for line in log.splitlines() if line.startswith('t=')]
+            if actual_trace != expected_trace:
+                raise AssertionError(log)
+            print('PASS: initial/always clock trace at 0/10/20/30 ns')
+        else:
+            print(expected)
 
     interpreter = tkinter.Tcl()
     previous_directory = Path.cwd()

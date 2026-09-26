@@ -57,6 +57,8 @@ Lecture images below are actual frames captured from the course videos in Chrome
 |---|---|---|
 | [Day 1, Lesson 03](Day%2001.md#trace-an-accelerator-request-and-calculate-its-communication-cost) | [Processor, accelerator, memory, and bus](images/Day%2001/Lesson%2003/04-accelerator-bus.png) | [26:20](https://www.youtube.com/watch?v=vKtoQEAoGck&t=1580s) |
 | [Day 1, Lesson 04](Day%2001.md#behavioral-synthesis-and-its-cost-measures) | [Behavioral-synthesis inputs and RTL output](images/Day%2001/Lesson%2004/04-hls-framework.png) | [23:46](https://www.youtube.com/watch?v=6_J-x1QfZs0&t=1426s) |
+| [Day 2, Lesson 08](Day%2002.md#defects-faults-and-test-patterns) | [Test patterns and expected-versus-actual responses](images/Day%2002/Lesson%2008/05-test-patterns.png) | [50:47](https://www.youtube.com/watch?v=g6ElOGlF3bs&t=3047s) |
+| [Day 2, Lesson 12](Day%2002.md#trace-the-lecture-clock-generator) | [Initial and always block execution](images/Day%2002/Lesson%2012/06-initial-always.png) | [21:55](https://www.youtube.com/watch?v=XEtpwZDhdTk&t=1315s) |
 
 ## Handwritten sources
 
@@ -90,6 +92,8 @@ These references support specific clarifications, rather than replacing the sele
 
 ## Example validation
 
+The two-day expansion checks the accelerator transfer-time calculations and the two-fault truth table. The runnable clock demonstration checks all four printed states at 0, 10, 20, and 30 ns, including the fact that the variable named `counter` never increments.
+
 The additional power, clock-skew, utilization, and patterning calculations are teaching examples with explicitly stated assumptions. Their numbers are not measurements from the captured lectures or specifications for a fabrication process. The Tcl and pipeline tables trace the runnable examples; the new four-state table states the bitwise results used in the explanations.
 
 The added arithmetic was checked directly. Tcl 8.6 reproduced all seven rows of the list trace, and Icarus Verilog in Verilog-2005 mode confirmed the four-state operator results and all three rows of the pipeline trace.
@@ -100,6 +104,7 @@ The checked source is in [examples](examples/verilog/README.md). Icarus Verilog 
 PASS: language, parameters, and state checks
 PASS: blocking and nonblocking delay timeline
 200 + 100 = 300
+PASS: initial/always clock trace at 0/10/20/30 ns
 PASS: Tcl list updates, procedure results, literal grouping, and file I/O
 ```
 

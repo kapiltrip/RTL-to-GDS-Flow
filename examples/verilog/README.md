@@ -10,6 +10,7 @@ The `.v` examples reproduce the complete code printed in the chapters. `tb_langu
 | [mux_forms.v](mux_forms.v) | Combinational wire and procedural variable descriptions |
 | [counter.v](counter.v) | Default width, parameter override, asynchronous reset, and wraparound |
 | [pipeline2.v](pipeline2.v) | Nonblocking updates preserve the previous stage value |
+| [initial_always_demo.v](initial_always_demo.v) | Initialization, a 20 ns clock period, unchanged counter state, and a finite run |
 | [function_task_demo.v](function_task_demo.v) | Nine-bit sum returned from a function and printed by a task |
 | [assignment_delays.v](assignment_delays.v) | Blocking updates at 10/40/60 ns and nonblocking updates at 10/30/20 ns |
 | [tb_language.v](tb_language.v) | Four-state values, wildcard matching, widths, edges, and sequential behavior |

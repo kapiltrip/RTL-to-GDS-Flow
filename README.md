@@ -78,6 +78,8 @@ The equal split is **six lessons per day**. Each row below opens the relevant le
 
 ## Find a concept quickly
 
+- **Accelerator communication and resource scheduling:** [Day 1's transfer-time calculation](Day%2001.md#trace-an-accelerator-request-and-calculate-its-communication-cost) and [HLS schedule](Day%2001.md#build-a-schedule-from-dependencies-and-resource-limits).
+- **Fault activation and process execution:** [Day 2's fault-detection table](Day%2002.md#work-out-a-test-that-activates-and-exposes-a-fault) and [initial/always clock trace](Day%2002.md#trace-the-lecture-clock-generator).
 - **Photolithography from start to finish:** [Lesson 01](Day%2001.md#photolithography), followed by [mask writing, OPC, and multiple patterning in Lesson 09](Day%2002.md#lesson-09-overview-of-vlsi-design-flow-vi--from-layout-to-chip).
 - **ASIC versus FPGA and choosing an implementation:** [Lesson 02](Day%2001.md#lesson-02-basic-concepts-of-integrated-circuit-ii), including a worked break-even calculation.
 - **Power versus energy per operation:** [Lesson 02's worked calculation](Day%2001.md#worked-example-power-is-not-energy-per-operation).
@@ -135,6 +137,7 @@ rtl to gdss/
 │       ├── mux_forms.v             Two combinational descriptions
 │       ├── counter.v               Parameterized counter and wrapper
 │       ├── pipeline2.v             Two stages of clocked state
+│       ├── initial_always_demo.v   Initialization and a timed clock generator
 │       ├── function_task_demo.v    Function result and task invocation
 │       ├── assignment_delays.v     Blocking/nonblocking timing example
 │       ├── tb_language.v           Values, widths, events, and state checks
@@ -159,7 +162,7 @@ rtl to gdss/
 | `examples/` | Open, change, and run editable code after predicting its behavior from the notes. |
 | `Data/` | Add new source material locally. Its contents are an inbox, not a second set of finished chapters. |
 
-There are currently **42 lecture frames, 40 handwritten snippets, 28 full-page handwritten images, and 2 original PDFs**. A handwritten page may supply several snippets or span more than one lesson, so snippet count and source-page count differ. Image filenames are local to each lesson folder; the caption gives the original video time or PDF page.
+There are currently **44 lecture frames, 40 handwritten snippets, 28 full-page handwritten images, and 2 original PDFs**. A handwritten page may supply several snippets or span more than one lesson, so snippet count and source-page count differ. Image filenames are local to each lesson folder; the caption gives the original video time or PDF page.
 
 ## Practice with the examples
 

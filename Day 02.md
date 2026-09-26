@@ -143,6 +143,7 @@ An **engineering change order (ECO)** is a controlled implementation change, oft
 - [Verification simulation and formal methods](#verification-simulation-and-formal-methods)
 - [Timing and physical verification](#timing-and-physical-verification)
 - [Defects faults and test patterns](#defects-faults-and-test-patterns)
+- [Work out a test that activates and exposes a fault](#work-out-a-test-that-activates-and-exposes-a-fault)
 - [Yield fault coverage and escapes](#yield-fault-coverage-and-escapes)
 - [Automatic test equipment and design for test](#automatic-test-equipment-and-design-for-test)
 
@@ -199,6 +200,14 @@ Your LVS wording “functionally equal” is understandable, but the concrete ch
 
 ### Defects faults and test patterns
 
+![A tester applies patterns and compares the measured chip response with an expected response](images/Day%2002/Lesson%2008/05-test-patterns.png)
+
+*Video frame: [50:47](https://www.youtube.com/watch?v=g6ElOGlF3bs&t=3047s). Test patterns, expected responses, actual responses, and the pass/fail decision.*
+
+Follow the two inputs to the comparison. One comes from the **actual fabricated die**, after the tester applies a pattern. The other is the **expected response** prepared for the intended circuit and test conditions. A pattern is useful for a targeted fault only when it makes the faulty response distinguishable from the expected one. Merely toggling many inputs does not establish that a hidden fault will become observable.
+
+The probe card and needles provide electrical access at wafer test; the test program controls stimulus, timing, and measurements. “Match” therefore includes what is measured and when it is sampled. A mismatch is evidence that the tested setup did not meet the expectation. Diagnosis must still distinguish a device defect from an incorrect pattern, expectation, contact, or test condition. Passing means passing these specified tests, rather than proving the absence of every possible defect.
+
 ![Kapil’s handwritten notes — Part 1, PDF page 22](images/Day%2002/Lesson%2008/h03-defects.jpg)
 
 *Handwritten source: Part 1, PDF page 22.*
@@ -209,6 +218,23 @@ A **defect** is a physical imperfection. A **fault model** is an abstract repres
 In your example, a short to ground can be modeled as a **stuck-at-0 fault** on a line. To detect that fault, a test must both excite it and propagate its effect to an observable point. If a good line would also be 0 under the chosen input, the short cannot be distinguished by that observation. If the good value is 1 but downstream logic masks it, the fault still escapes that test.
 
 For a simple AND gate $y=a\land b$, testing an `a` input stuck at 0 requires setting `a=1` and `b=1`: the good output is 1 and the faulty output is 0. Setting `b=0` masks the difference. This illustrates **controllability** and **observability**, the two central practical obstacles that test structures help address.
+
+#### Work out a test that activates and exposes a fault
+
+Extend your short-to-ground example to two gates: $n=a\land b$, followed by $y=n\lor c$. The internal net $n$ is the fault site; the tester observes only $y$. Assume settled binary inputs and a single stuck-at fault on $n$.
+
+To detect **$n$ stuck at zero**, first activate the difference: the good circuit must make $n=1$, requiring $a=b=1$. Next propagate it: set $c=0$ so the OR gate does not force both outputs to one. The pattern $(a,b,c)=(1,1,0)$ then gives good $y=1$ and faulty $y=0$.
+
+| Input pattern `(a,b,c)` | Good `n` | Good `y` | `y` with `n` stuck at 0 | `y` with `n` stuck at 1 |
+|---|---|---|---|---|
+| `(0,0,0)` | 0 | 0 | 0; not detected | 1; detected |
+| `(0,1,0)` | 0 | 0 | 0; not detected | 1; detected |
+| `(1,1,0)` | 1 | 1 | 0; detected | 1; not detected |
+| `(1,1,1)` | 1 | 1 | 1; masked | 1; not detected |
+
+The last row activates the stuck-at-zero difference internally, but `c=1` masks it at the observable output. This separates **activation** from **propagation**. To detect stuck-at-one, make the good `n` zero and keep `c=0`. Thus two carefully selected patterns, `(0,1,0)` and `(1,1,0)`, detect both faults in this deliberately limited fault set.
+
+That result does not establish coverage for every fault on every input, wire, transistor, or clock path. A coverage percentage needs an explicit denominator. Here the denominator is exactly two modeled faults on one named net. In a sequential circuit, reaching the required internal state may also require a sequence of clocks and inputs. DFT structures improve the ability to establish and observe those states; they do not remove the need to define the faults and expected responses correctly.
 
 Process variation, contamination, alignment error, and other mechanisms can affect manufactured structures. Optical distortion is a pattern-fidelity problem addressed through process and mask techniques; an electrical manufacturing test is not a microscope inspecting every rounded corner. If a distortion creates an electrically relevant failure, suitable electrical tests may detect its consequence. An inconsequential geometric imperfection need not fail an electrical acceptance test.
 
@@ -653,6 +679,7 @@ The runnable [language examples](examples/verilog/README.md) exercise these valu
 - [Modules ports hierarchy and parameters](#modules-ports-hierarchy-and-parameters)
 - [Operators and bit-level examples](#operators-and-bit-level-examples)
 - [Processes event controls and four-state edges](#processes-event-controls-and-four-state-edges)
+- [Trace the lecture clock generator](#trace-the-lecture-clock-generator)
 - [Functions and tasks](#functions-and-tasks)
 - [Continuous blocking and nonblocking assignment](#continuous-blocking-and-nonblocking-assignment)
 - [System tasks and the next study boundary](#system-tasks-and-the-next-study-boundary)
@@ -735,12 +762,60 @@ Operator precedence determines how an unparenthesized expression is grouped. Use
 
 ### Processes event controls and four-state edges
 
+#### Trace the lecture clock generator
+
+![The initial block initializes clock and counter while an always block toggles clock after each delay](images/Day%2002/Lesson%2012/06-initial-always.png)
+
+*Video frame: [21:55](https://www.youtube.com/watch?v=XEtpwZDhdTk&t=1315s). Initial and always blocks, including the repeated `#10` clock toggle.*
+
+The slide's `initial` block assigns zero to `clock` and `counter`. The separate `always` block waits ten time units, complements `clock`, reaches its end, and starts its body again. Both processes begin at simulation time zero. The clock's first toggle occurs later because the `always` process encounters a delay before its assignment, not because every `initial` block has priority over every `always` block.
+
+The name `counter` does not create a counter circuit. It is a one-bit variable in the slide, and no shown statement increments it, so it remains zero after initialization. Likewise, the slide's unused interface ports do not define a complete input-to-output function. The example illustrates process execution.
+
+This standalone version preserves the initialization and toggle, removes the unused interface, and adds explicit time units, observation, and a finite stopping time:
+
+```verilog
+`timescale 1ns/1ps
+module initial_always_demo;
+    reg clock, counter;
+
+    initial begin
+        clock = 1'b0;
+        counter = 1'b0;
+    end
+
+    always begin
+        #10 clock = ~clock;
+    end
+
+    initial begin
+        $timeformat(-9, 0, " ns", 0);
+        $monitor("t=%0t clock=%b counter=%b", $time, clock, counter);
+        #35 $finish;
+    end
+endmodule
+```
+
+The `timescale` sets a 1 ns delay unit and 1 ps precision. Therefore `#10` means 10 ns here. The third `initial` block starts once but finishes at 35 ns: **executed once** does not mean **completed at time zero**. Its `$monitor` reports changes after the values for that time slot settle.
+
+| Simulation time | What has happened | Settled `clock` | Settled `counter` |
+|---|---|---|---|
+| 0 ns | Initialization executes; the toggle process waits | 0 | 0 |
+| 10 ns | First delayed complement | 1 | 0 |
+| 20 ns | Second delayed complement | 0 | 0 |
+| 30 ns | Third delayed complement | 1 | 0 |
+| 35 ns | `$finish` ends the demonstration | 1 | 0 |
+
+Ten nanoseconds is the **half-period**. A complete cycle takes 20 ns, giving $f=1/(20\text{ ns})=50$ MHz. Omitting initialization can leave `clock` at `x`; complementing `x` does not establish a known zero or one. Omitting the delay creates a repeating zero-time process that can prevent simulation from advancing. The delays generate testbench events; they do not specify a physical on-chip oscillator with a guaranteed 10 ns gate delay.
+
+The editable [clock demonstration](examples/verilog/initial_always_demo.v) is included in the example checker. The next frame replaces fixed waiting time with waiting for signal events.
+
 ![Event controls suspend a process until a specified signal transition](images/Day%2002/Lesson%2012/03-events.png)
 
 *Video frame: [24:13](https://www.youtube.com/watch?v=XEtpwZDhdTk&t=1453s). Event controls suspend a process until a specified signal transition*
 
 
-An `initial` process starts once at simulation time zero. An `always` process repeatedly executes its statement for the duration of simulation. Different processes are concurrent; no source-code ordering guarantees which separate time-zero process runs first. A repeating process needs a blocking event or delay along its execution path. `always begin a = ~a; end` has no time advance and can trap the simulator in a zero-time loop.
+Different processes are concurrent; source-code order does not guarantee which separate time-zero process runs first. An event control can suspend one process while other processes continue. Event-driven simulation evaluates the modeled activity at the current time and advances to later scheduled events when that activity permits it; the simulator does not need to check every gate continuously at every possible physical instant.
 
 `begin ... end` groups sequentially executed statements within one process. “Sequentially executed statements” does not automatically mean “sequential hardware”: a combinational process also executes statements in order. `fork ... join` starts concurrent branches and waits for all of them to finish; it is particularly useful in testbenches.
 
