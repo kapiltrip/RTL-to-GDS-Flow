@@ -1,4 +1,4 @@
-// Complete example from Day 11.
+// Complete example from Lesson 11.
 module mux_forms (
     input  wire       sel,
     input  wire [7:0] a, b,

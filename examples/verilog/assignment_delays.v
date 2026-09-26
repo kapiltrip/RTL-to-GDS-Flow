@@ -1,4 +1,4 @@
-// Complete example from Day 12.
+// Complete example from Lesson 12.
 `timescale 1ns/1ps
 module assignment_delays;
     reg a, b, c, p, q, r;

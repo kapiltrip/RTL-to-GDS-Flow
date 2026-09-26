@@ -1,4 +1,4 @@
-// Complete example from Day 12.
+// Complete example from Lesson 12.
 module pipeline2 (
     input wire clk, rst_n,
     input wire [7:0] d,

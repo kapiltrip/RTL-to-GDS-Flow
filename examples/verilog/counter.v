@@ -1,4 +1,4 @@
-// Complete example from Day 12.
+// Complete example from Lesson 12.
 module counter #(parameter WIDTH = 4) (
     input wire clk, rst_n, enable,
     output reg [WIDTH-1:0] count

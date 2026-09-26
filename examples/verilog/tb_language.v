@@ -56,7 +56,7 @@ module tb_language;
         #1 check(y_wire === b && y_reg === b, "known mux select one");
         pulse;
         check(q1 === 25 && q2 === 0, "pipeline first sample");
-        check(registered_bit === b[0], "Day 06 registered mux selection");
+        check(registered_bit === b[0], "Lesson 06 registered mux selection");
         d = 8'd42;
         pulse;
         check(q1 === 42 && q2 === 25, "pipeline keeps previous stage value");

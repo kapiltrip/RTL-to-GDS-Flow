@@ -1,4 +1,4 @@
-// Complete example from Day 06.
+// Complete example from Lesson 06.
 module select_register (
     input  wire a,
     input  wire b,

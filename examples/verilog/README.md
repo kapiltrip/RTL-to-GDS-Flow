@@ -1,6 +1,6 @@
 # Runnable study examples
 
-[Course index](../../README.md) · [Day 11](../../Day%2011.md) · [Day 12](../../Day%2012.md)
+[Course index](../../README.md) · [Lesson 11](../../Day%2002.md#lesson-11-hardware-modeling--introduction-to-verilog-i) · [Lesson 12](../../Day%2002.md#lesson-12-hardware-modeling--introduction-to-verilog-ii)
 
 The `.v` examples reproduce the complete code printed in the chapters. `tb_language.v` checks values and behavior; `tb_delays.v` checks the six assignment times from the lecture example. These are small teaching models, not a complete chip project.
 

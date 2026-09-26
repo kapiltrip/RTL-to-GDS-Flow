@@ -1,4 +1,4 @@
-// Complete example from Day 12.
+// Complete example from Lesson 12.
 module function_task_demo;
     function [8:0] add8;
         input [7:0] a, b;

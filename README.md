@@ -4,7 +4,7 @@ Kapil's study notes for **VLSI Design Flow: RTL to GDS**, taught by **Prof. Sneh
 
 This collection covers **Weeks 1 and 2 and the first two lessons of Week 3**, ending at **Hardware Modeling: Introduction to Verilog II**. It combines the lecture material with all **28 pages from the two uploaded handwritten PDFs**. The next dedicated lesson, *Functional Verification Using Simulation*, is outside this batch.
 
-Read a chapter in this order: **lecture frame → concept explanation → matching handwritten snippet → explanation of your note and questions**. Some sections add worked calculations or complete code. Every chapter has an outline and navigation links. “Day” identifies the study sequence, not a claim about the calendar day on which you completed a lesson. Tutorial entries are included in the sequence, so these numbers differ from the course's theory-lecture numbers.
+Read a chapter in this order: **lecture frame → concept explanation → matching handwritten snippet → explanation of your note and questions**. Some sections add worked calculations or complete code. Every chapter has an outline and navigation links. **There are two study days, with six lessons in each. Day 2 is the current study day.** Lesson numbers identify the course sequence, including tutorials; they are separate from study-day numbers and the course’s theory-lecture numbering.
 
 [Handwritten page index](Handwritten%20Index.md) · [Questions and corrections](Questions.md) · [Sources and frame timestamps](Sources.md) · [Runnable examples](examples/verilog/README.md)
 
@@ -12,9 +12,9 @@ Read a chapter in this order: **lecture frame → concept explanation → matchi
 
 | What you want to do | Where to begin |
 |---|---|
-| Learn the material in order | [Study approach](#how-to-study-this-collection), then [Day 01](Day%2001.md) |
+| Learn the material in order | [Study approach](#how-to-study-this-collection), then [Lesson 01](Day%2001.md#lesson-01-basic-concepts-of-integrated-circuit-i) |
 | Understand what each folder contains | [Directory structure](#directory-structure) and [folder guide](#what-each-part-of-the-repository-is-for) |
-| Revise a particular lecture | [Course chapters](#course-chapters) and that chapter's outline |
+| Revise a particular lecture | [Study days and lessons](#study-days-and-course-lessons) and that chapter's outline |
 | Find something you wrote on paper | [Handwritten page index](Handwritten%20Index.md), using the PDF page or handwritten page number |
 | Resolve a doubt or incomplete formula | [Questions and corrections](Questions.md) |
 | Revisit the lecturer's explanation | The timestamp beneath the relevant video frame |
@@ -32,7 +32,7 @@ Work through **one concept block at a time**. A chapter may contain several bloc
 
 For example, in [photolithography](Day%2001.md#photolithography), first identify the substrate, deposited film, resist, and mask. Then follow one transparent mask region: exposure changes resist chemistry, development opens the positive resist, etching removes accessible film, and stripping removes the remaining resist. Finally, ask what reverses with negative resist and why development is different from etching. That is a stronger check of understanding than memorizing a list of process names.
 
-For [blocking and nonblocking assignments](Day%2012.md#continuous-blocking-and-nonblocking-assignment), write a small time table. Separate **when the right-hand side is evaluated** from **when the destination changes**. Predict the settled values before running the supplied simulation. A correct simulation result is useful only when you can explain why it occurs.
+For [blocking and nonblocking assignments](Day%2002.md#continuous-blocking-and-nonblocking-assignment), write a small time table. Separate **when the right-hand side is evaluated** from **when the destination changes**. Predict the settled values before running the supplied simulation. A correct simulation result is useful only when you can explain why it occurs.
 
 ### What the detailed explanations should give you
 
@@ -44,44 +44,51 @@ Treat worked numbers as **illustrative examples**, not foundry specifications. D
 
 | After studying | You should be able to explain or demonstrate |
 |---|---|
-| Days 01–02 | How geometry becomes a manufactured pattern; wafer versus die versus packaged chip; ASIC/FPGA choices; power, energy, performance, and area |
-| Days 03–04 | Why abstraction changes; what partitioning and HLS decide; how latency differs from throughput; how a register path meets setup and hold |
-| Day 05 | How the shell, current directory, paths, processes, and jobs affect a tool run |
-| Days 06–07 | How behavior becomes cell instances, then placement and wires; which files provide function, timing, geometry, and constraints |
-| Days 08–09 | Which checks address design errors and which address manufactured devices; what yield and fault coverage measure; how mask corrections and packaging fit the flow |
-| Day 10 | When Tcl performs substitution, which commands receive variable names, and how the list example changes at each iteration |
-| Days 11–12 | How widths and four-state values behave; why `reg` does not guarantee a flip-flop; when a process runs and when an assignment updates state |
+| Lessons 01–02 | How geometry becomes a manufactured pattern; wafer versus die versus packaged chip; ASIC/FPGA choices; power, energy, performance, and area |
+| Lessons 03–04 | Why abstraction changes; what partitioning and HLS decide; how latency differs from throughput; how a register path meets setup and hold |
+| Lesson 05 | How the shell, current directory, paths, processes, and jobs affect a tool run |
+| Lessons 06–07 | How behavior becomes cell instances, then placement and wires; which files provide function, timing, geometry, and constraints |
+| Lessons 08–09 | Which checks address design errors and which address manufactured devices; what yield and fault coverage measure; how mask corrections and packaging fit the flow |
+| Lesson 10 | When Tcl performs substitution, which commands receive variable names, and how the list example changes at each iteration |
+| Lessons 11–12 | How widths and four-state values behave; why `reg` does not guarantee a flip-flop; when a process runs and when an assignment updates state |
 
-## Course chapters
+## Study days and course lessons
 
-| Week | Study entry | Lecture | Main topics |
+| Study day | Lessons | Scope |
+|---|---|---|
+| [Day 1](Day%2001.md) | 01–06 | IC foundations through logic synthesis |
+| [Day 2 — current](Day%2002.md) | 07–12 | Physical design through Verilog II |
+
+The equal split is **six lessons per day**. Each row below opens the relevant lesson inside its day file.
+
+| Study day | Course week | Lesson | Title |
 |---|---|---|---|
-| 1 | [Day 01](Day%2001.md) | Basic Concepts of Integrated Circuit I | Integration, layers, photolithography, wafers, yield, industry, PDK |
-| 1 | [Day 02](Day%2002.md) | Basic Concepts of Integrated Circuit II | ASIC/GPIC, custom design, standard cells, FPGA, cost, PPA |
-| 1 | [Day 03](Day%2003.md) | Overview of VLSI Design Flow I | Flow, abstraction, hardware/software partitioning, estimates |
-| 1 | [Day 04](Day%2004.md) | Overview of VLSI Design Flow II | IP reuse, HLS, setup/hold timing, scheduling, resource sharing |
-| 1 | [Day 05](Day%2005.md) | Tutorial 1: Unix Commands | Linux/WSL, paths, files, permissions, processes, package commands |
-| 2 | [Day 06](Day%2006.md) | Overview of VLSI Design Flow III | RTL synthesis, Liberty/SDC, library pins, generic logic, mapping |
-| 2 | [Day 07](Day%2007.md) | Overview of VLSI Design Flow IV | LEF, floorplan, power, placement, CTS, routing, ECO |
-| 2 | [Day 08](Day%2008.md) | Overview of VLSI Design Flow V | Verification, STA, DRC/ERC/LVS, defects, yield, test, fault coverage |
-| 2 | [Day 09](Day%2009.md) | Overview of VLSI Design Flow VI | Mask preparation, OPC, multiple patterning, fabrication, packaging |
-| 2 | [Day 10](Day%2010.md) | Introduction to Tcl | Substitution, lists, loops, procedures, file channels, external programs |
-| 3 | [Day 11](Day%2011.md) | Hardware Modeling: Introduction to Verilog I | HDL, four-state values, literals, widths, nets, variables, wildcard cases |
-| 3 | [Day 12](Day%2012.md) | Hardware Modeling: Introduction to Verilog II | Modules, parameters, operators, events, functions/tasks, assignments |
+| 1 | 1 | [Lesson 01](Day%2001.md#lesson-01-basic-concepts-of-integrated-circuit-i) | Basic Concepts of Integrated Circuit I |
+| 1 | 1 | [Lesson 02](Day%2001.md#lesson-02-basic-concepts-of-integrated-circuit-ii) | Basic Concepts of Integrated Circuit II |
+| 1 | 1 | [Lesson 03](Day%2001.md#lesson-03-overview-of-vlsi-design-flow-i) | Overview of VLSI Design Flow I |
+| 1 | 1 | [Lesson 04](Day%2001.md#lesson-04-overview-of-vlsi-design-flow-ii) | Overview of VLSI Design Flow II |
+| 1 | 1 | [Lesson 05](Day%2001.md#lesson-05-tutorial-1--unix-foundations-for-eda) | Tutorial 1 — Unix foundations for EDA |
+| 1 | 2 | [Lesson 06](Day%2001.md#lesson-06-overview-of-vlsi-design-flow-iii--logic-synthesis) | Overview of VLSI Design Flow III — Logic synthesis |
+| 2 | 2 | [Lesson 07](Day%2002.md#lesson-07-overview-of-vlsi-design-flow-iv--physical-design) | Overview of VLSI Design Flow IV — Physical design |
+| 2 | 2 | [Lesson 08](Day%2002.md#lesson-08-overview-of-vlsi-design-flow-v--verification-and-test) | Overview of VLSI Design Flow V — Verification and test |
+| 2 | 2 | [Lesson 09](Day%2002.md#lesson-09-overview-of-vlsi-design-flow-vi--from-layout-to-chip) | Overview of VLSI Design Flow VI — From layout to chip |
+| 2 | 2 | [Lesson 10](Day%2002.md#lesson-10-introduction-to-tcl) | Introduction to Tcl |
+| 2 | 3 | [Lesson 11](Day%2002.md#lesson-11-hardware-modeling--introduction-to-verilog-i) | Hardware Modeling — Introduction to Verilog I |
+| 2 | 3 | [Lesson 12](Day%2002.md#lesson-12-hardware-modeling--introduction-to-verilog-ii) | Hardware Modeling — Introduction to Verilog II |
 
 ## Find a concept quickly
 
-- **Photolithography from start to finish:** [Day 01](Day%2001.md#photolithography), followed by [mask writing, OPC, and multiple patterning in Day 09](Day%2009.md).
-- **ASIC versus FPGA and choosing an implementation:** [Day 02](Day%2002.md), including a worked break-even calculation.
-- **Power versus energy per operation:** [Day 02's worked calculation](Day%2002.md#worked-example-power-is-not-energy-per-operation).
-- **Timing and sharing hardware:** [Day 04](Day%2004.md#paths-and-the-clock-period-budget), including [why skew helps setup but can hurt hold](Day%2004.md#why-clock-skew-can-help-setup-and-hurt-hold) and three ways to compute a sum.
-- **Timing arcs, slew, load, and PVT:** [Day 06's library explanation](Day%2006.md#timing-arcs-slew-load-and-operating-corners).
-- **Utilization versus routing congestion:** [Day 07's capacity example](Day%2007.md#worked-example-placement-area-and-routing-capacity).
-- **Yield, fault coverage, and escaped defective chips:** [Day 08](Day%2008.md#yield-fault-coverage-and-escapes).
-- **Line width, pitch, and alignment:** [Day 09's patterning example](Day%2009.md#read-the-geometry-width-spacing-pitch-and-overlay).
-- **Tcl substitution and list updates:** [Day 10's iteration trace](Day%2010.md#trace-the-list-instead-of-memorizing-the-output).
-- **`reg`, `wire`, `x`, `z`, and `?`:** [Day 11](Day%2011.md), including [how unknowns propagate through operators](Day%2011.md#why-an-unknown-input-does-not-always-make-the-output-unknown).
-- **Blocking versus nonblocking assignments:** [Day 12](Day%2012.md#continuous-blocking-and-nonblocking-assignment), including the 10/40/60 versus 10/30/20 ns example and a [cycle-by-cycle pipeline trace](Day%2012.md#follow-one-sample-through-both-registers).
+- **Photolithography from start to finish:** [Lesson 01](Day%2001.md#photolithography), followed by [mask writing, OPC, and multiple patterning in Lesson 09](Day%2002.md#lesson-09-overview-of-vlsi-design-flow-vi--from-layout-to-chip).
+- **ASIC versus FPGA and choosing an implementation:** [Lesson 02](Day%2001.md#lesson-02-basic-concepts-of-integrated-circuit-ii), including a worked break-even calculation.
+- **Power versus energy per operation:** [Lesson 02's worked calculation](Day%2001.md#worked-example-power-is-not-energy-per-operation).
+- **Timing and sharing hardware:** [Lesson 04](Day%2001.md#paths-and-the-clock-period-budget), including [why skew helps setup but can hurt hold](Day%2001.md#why-clock-skew-can-help-setup-and-hurt-hold) and three ways to compute a sum.
+- **Timing arcs, slew, load, and PVT:** [Lesson 06's library explanation](Day%2001.md#timing-arcs-slew-load-and-operating-corners).
+- **Utilization versus routing congestion:** [Lesson 07's capacity example](Day%2002.md#worked-example-placement-area-and-routing-capacity).
+- **Yield, fault coverage, and escaped defective chips:** [Lesson 08](Day%2002.md#yield-fault-coverage-and-escapes).
+- **Line width, pitch, and alignment:** [Lesson 09's patterning example](Day%2002.md#read-the-geometry-width-spacing-pitch-and-overlay).
+- **Tcl substitution and list updates:** [Lesson 10's iteration trace](Day%2002.md#trace-the-list-instead-of-memorizing-the-output).
+- **`reg`, `wire`, `x`, `z`, and `?`:** [Lesson 11](Day%2002.md#lesson-11-hardware-modeling--introduction-to-verilog-i), including [how unknowns propagate through operators](Day%2002.md#why-an-unknown-input-does-not-always-make-the-output-unknown).
+- **Blocking versus nonblocking assignments:** [Lesson 12](Day%2002.md#continuous-blocking-and-nonblocking-assignment), including the 10/40/60 versus 10/30/20 ns example and a [cycle-by-cycle pipeline trace](Day%2002.md#follow-one-sample-through-both-registers).
 
 ## Directory structure
 
@@ -89,70 +96,62 @@ The local folder is named **`rtl to gdss`**; its GitHub repository is **`RTL-to-
 
 ```text
 rtl to gdss/
-├── README.md                       Start here: study approach and master index
-├── Day 01.md                       IC construction and photolithography
-├── Day 02.md                       IC types, design styles, economics, PPA
-├── Day 03.md                       Flow, abstraction, hardware/software partition
-├── Day 04.md                       IP, HLS, timing, and resource sharing
-├── Day 05.md                       Unix foundations for EDA
-├── Day 06.md                       Logic synthesis and netlist terminology
-├── Day 07.md                       Physical design, clocks, and routing
-├── Day 08.md                       Verification, yield, manufacturing test
-├── Day 09.md                       Masks, OPC, fabrication, packaging
-├── Day 10.md                       Tcl commands and worked scripts
-├── Day 11.md                       Verilog values, widths, nets, and variables
-├── Day 12.md                       Verilog modules, events, and assignments
-├── Handwritten Index.md            All 28 PDF pages mapped to explanations
-├── Questions.md                    Handwritten doubts and correction links
-├── Sources.md                      Lecture timestamps and primary references
+├── README.md                       Study approach, two-day index, directory guide
+├── Day 01.md                       Lessons 01–06, with all explanations and images
+├── Day 02.md                       Lessons 07–12; current study day
+├── Handwritten Index.md            All 28 PDF pages mapped to day/lesson sections
+├── Questions.md                    Handwritten questions and correction links
+├── Sources.md                      Lecture frame timestamps and primary references
 │
-├── images/                         Images embedded in the day chapters
-│   ├── Day 01/                     6 lecture PNGs + 7 handwritten JPEGs
-│   ├── Day 02/                     4 lecture PNGs + 6 handwritten JPEGs
-│   ├── Day 03/                     3 lecture PNGs + 4 handwritten JPEGs
-│   ├── Day 04/                     3 lecture PNGs + 4 handwritten JPEGs
-│   ├── Day 05/                     1 lecture PNG; no matching handwritten page
-│   ├── Day 06/                     3 lecture PNGs + 2 handwritten JPEGs
-│   ├── Day 07/                     3 lecture PNGs + 4 handwritten JPEGs
-│   ├── Day 08/                     4 lecture PNGs + 5 handwritten JPEGs
-│   ├── Day 09/                     3 lecture PNGs + 3 handwritten JPEGs
-│   ├── Day 10/                     2 lecture PNGs + 1 handwritten JPEG
-│   ├── Day 11/                     3 lecture PNGs + 2 handwritten JPEGs
-│   └── Day 12/                     5 lecture PNGs + 2 handwritten JPEGs
+├── images/
+│   ├── Day 01/
+│   │   ├── Lesson 01/              IC construction and photolithography
+│   │   ├── Lesson 02/              IC types, implementation styles, cost, PPA
+│   │   ├── Lesson 03/              Abstraction and hardware/software partition
+│   │   ├── Lesson 04/              IP, HLS, timing, resource sharing
+│   │   ├── Lesson 05/              Unix tutorial
+│   │   └── Lesson 06/              Logic synthesis and libraries
+│   └── Day 02/
+│       ├── Lesson 07/              Physical design, clocks, routing
+│       ├── Lesson 08/              Verification, yield, manufacturing test
+│       ├── Lesson 09/              Masks, OPC, fabrication, packaging
+│       ├── Lesson 10/              Tcl
+│       ├── Lesson 11/              Verilog I
+│       └── Lesson 12/              Verilog II
 │
 ├── sources/
-│   └── handwritten/                Complete, preserved source material
-│       ├── Part-1-original.pdf     Original first PDF, 24 pages
-│       ├── Part-2-original.pdf     Original second PDF, 4 pages
+│   └── handwritten/
+│       ├── Part-1-original.pdf     Preserved first PDF, 24 pages
+│       ├── Part-2-original.pdf     Preserved second PDF, 4 pages
 │       ├── part1/                  page-01.jpg through page-24.jpg
 │       └── scan/                   page-01.jpg through page-04.jpg
 │
 ├── examples/
 │   ├── run_checks.py               Runs Verilog and Tcl example checks
-│   ├── tcl_basics.tcl              Complete Day 10 script examples
+│   ├── tcl_basics.tcl              Complete Lesson 10 scripts
 │   └── verilog/
-│       ├── README.md               File guide and commands to run examples
+│       ├── README.md               File guide and execution commands
 │       ├── select_register.v       Multiplexer feeding a flip-flop
 │       ├── mux_forms.v             Two combinational descriptions
-│       ├── counter.v               Counter plus parameter-override wrapper
+│       ├── counter.v               Parameterized counter and wrapper
 │       ├── pipeline2.v             Two stages of clocked state
 │       ├── function_task_demo.v    Function result and task invocation
-│       ├── assignment_delays.v     Blocking/nonblocking time example
+│       ├── assignment_delays.v     Blocking/nonblocking timing example
 │       ├── tb_language.v           Values, widths, events, and state checks
-│       └── tb_delays.v             Checks the assignment time table
+│       └── tb_delays.v             Assignment timing checks
 │
 ├── Data/                           Local inbox for new uploads
-│   ├── README.md                   Upload-folder instructions, tracked in Git
+│   ├── README.md                   Tracked upload instructions
 │   └── (uploaded PDFs and images)  Local originals; excluded from Git here
-└── .gitignore                      Excludes inbox contents and generated outputs
+└── .gitignore                      Inbox and generated-output exclusions
 ```
 
 ### What each part of the repository is for
 
 | Location | How to use it |
 |---|---|
-| `Day NN.md` | Read the explanation. Start at the outline; follow the frame, prose, handwriting, and worked example together. |
-| `images/Day NN/` | Find the exact image embedded in that chapter. Files such as `02-ic-layers.png` are lecture frames; files such as `h03-lithography.jpg` are handwritten crops. The `h` identifies handwriting. |
+| `Day 01.md` / `Day 02.md` | Read the explanation. Start at the outline; follow the frame, prose, handwriting, and worked example together. |
+| `images/Day NN/Lesson NN/` | Find the exact image embedded in that chapter. Files such as `02-ic-layers.png` are lecture frames; files such as `h03-lithography.jpg` are handwritten crops. The `h` identifies handwriting. |
 | `sources/handwritten/` | Recover the whole source when a crop does not show enough context. These complete PDFs and page images preserve everything uploaded in this batch. |
 | `Handwritten Index.md` | Translate between PDF page position, the number written on paper, and the corresponding day chapter. |
 | `Questions.md` | Jump directly to a doubt, unfinished calculation, or corrected interpretation. |
@@ -160,7 +159,7 @@ rtl to gdss/
 | `examples/` | Open, change, and run editable code after predicting its behavior from the notes. |
 | `Data/` | Add new source material locally. Its contents are an inbox, not a second set of finished chapters. |
 
-There are currently **40 lecture frames, 40 handwritten snippets, 28 full-page handwritten images, and 2 original PDFs**. A handwritten page may supply several snippets or span more than one lesson, so snippet count and source-page count differ. A day folder's image numbers describe files within that chapter; the caption gives the original video time or PDF page.
+There are currently **40 lecture frames, 40 handwritten snippets, 28 full-page handwritten images, and 2 original PDFs**. A handwritten page may supply several snippets or span more than one lesson, so snippet count and source-page count differ. Image filenames are local to each lesson folder; the caption gives the original video time or PDF page.
 
 ## Practice with the examples
 
