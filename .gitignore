@@ -1,0 +1,9 @@
+Data/*
+!Data/README.md
+__pycache__/
+*.tmp
+Thumbs.db
+.DS_Store
+*.vvp
+*.vcd
+tcl_demo_output.txt
