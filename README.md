@@ -159,7 +159,7 @@ rtl to gdss/
 | `examples/` | Open, change, and run editable code after predicting its behavior from the notes. |
 | `Data/` | Add new source material locally. Its contents are an inbox, not a second set of finished chapters. |
 
-There are currently **40 lecture frames, 40 handwritten snippets, 28 full-page handwritten images, and 2 original PDFs**. A handwritten page may supply several snippets or span more than one lesson, so snippet count and source-page count differ. Image filenames are local to each lesson folder; the caption gives the original video time or PDF page.
+There are currently **42 lecture frames, 40 handwritten snippets, 28 full-page handwritten images, and 2 original PDFs**. A handwritten page may supply several snippets or span more than one lesson, so snippet count and source-page count differ. Image filenames are local to each lesson folder; the caption gives the original video time or PDF page.
 
 ## Practice with the examples
 

@@ -383,6 +383,7 @@ Your added measures are essential: **testability** is how readily manufacturing 
 - [From a product idea to a manufactured chip](#from-a-product-idea-to-a-manufactured-chip)
 - [Abstraction and turnaround time](#abstraction-and-turnaround-time)
 - [Hardware and software partitioning](#hardware-and-software-partitioning)
+- [Trace an accelerator request and calculate its communication cost](#trace-an-accelerator-request-and-calculate-its-communication-cost)
 - [Estimating hardware before it exists](#estimating-hardware-before-it-exists)
 
 ### From a product idea to a manufactured chip
@@ -424,6 +425,33 @@ Your NOR example correctly identifies the equation as the more abstract represen
 Before partitioning, write measurable requirements: input/output formats, supported functions, maximum response time, throughput, power budget, and operating conditions. Market and schedule constraints help decide whether a technically possible design is a useful product. A vague requirement such as “very fast” cannot guide a partitioning algorithm.
 
 ### Hardware and software partitioning
+
+#### Trace an accelerator request and calculate its communication cost
+
+![Processor, dedicated hardware, and memory communicate through an interconnect](images/Day%2001/Lesson%2003/04-accelerator-bus.png)
+
+*Video frame: [26:20](https://www.youtube.com/watch?v=vKtoQEAoGck&t=1580s). Hardware/software partitioning: the processor, accelerator, memory, and bus.*
+
+Read the three boxes as different roles. The **processor** runs instructions implementing the software portion. The **accelerator** implements a selected operation using dedicated hardware. **Memory** holds instructions, input data, intermediate values, and results as required by the architecture. The **interconnect** carries transactions between these components. A bus drawn as one line is a connectivity abstraction; it does not imply unlimited bandwidth or zero communication delay.
+
+An accelerator request needs more than arithmetic. Software identifies the input and operation, makes data available, starts the work, detects completion, and consumes the result. A **control register** can hold a command or mode; a **status register** can report readiness or completion. These are examples of interfaces that implement the diagram's arrows, not a particular bus protocol specified by the slide. A result must belong to the intended request, so synchronization is part of correctness as well as performance.
+
+The comparison table summarizes common tradeoffs: fixed hardware can be expensive to change after fabrication, while processor software can often be revised without changing silicon. Its “high” and “low” labels are qualitative comparisons under that context, not universal numerical properties of every ASIC, FPGA, or software implementation.
+
+Suppose one operation takes 100 µs in software. An accelerator computes it in 5 µs, needs 3 µs of control overhead, and transfers 64 KiB of input plus 16 KiB of output. One KiB is 1,024 bytes, giving 81,920 bytes total. Assume a single request, serial transfers and computation, and sustained usable bandwidth $B$:
+
+$$
+T_{\text{accelerated}}=T_{\text{control}}+\frac{N_{\text{in}}+N_{\text{out}}}{B}+T_{\text{compute}}.
+$$
+
+| Sustained bandwidth | Transfer time | Total request time | Whole-request speedup |
+|---|---|---|---|
+| 2.0 GB/s | 40.96 µs | 48.96 µs | $100/48.96\approx2.04$ |
+| 0.5 GB/s | 163.84 µs | 171.84 µs | $100/171.84\approx0.582$; slower than software |
+
+Here GB/s uses $10^9$ bytes/s. Although computation alone is 20 times faster, communication can erase that gain. Under these assumptions, acceleration helps only if $B>81920/(92\times10^{-6})$, approximately 0.890 GB/s. This follows by requiring total request time below 100 µs. Overlapping transfers with computation, reusing nearby data, and batching requests can change the model; their benefit depends on the actual protocol and workload. Use sustained bandwidth, not an unjustified advertised peak.
+
+The next frame shows how the course uses repeated measurement to choose functions for hardware. Read your handwritten architecture below with these communication costs in mind.
 
 ![Profile bottlenecks, move functions into hardware, and evaluate again](images/Day%2001/Lesson%2003/03-partition.png)
 
@@ -482,6 +510,7 @@ An early performance estimate can come from an analytical model, high-level simu
 
 - [The implementation gap and IP reuse](#the-implementation-gap-and-ip-reuse)
 - [Behavioral synthesis and its cost measures](#behavioral-synthesis-and-its-cost-measures)
+- [Build a schedule from dependencies and resource limits](#build-a-schedule-from-dependencies-and-resource-limits)
 - [Paths and the clock-period budget](#paths-and-the-clock-period-budget)
 - [Three implementations of a plus b plus c](#three-implementations-of-a-plus-b-plus-c)
 
@@ -511,6 +540,12 @@ Integration must resolve width, protocol, clock, reset, and power-domain compati
 
 ### Behavioral synthesis and its cost measures
 
+![An algorithm, constraints, and a resource library jointly determine an RTL implementation](images/Day%2001/Lesson%2004/04-hls-framework.png)
+
+*Video frame: [23:46](https://www.youtube.com/watch?v=6_J-x1QfZs0&t=1426s). The three inputs to behavioral synthesis and its RTL output.*
+
+The yellow box specifies **what to compute**. The blue box specifies requirements such as frequency, latency, and resource use. The pink box describes resources the implementation can use. The output adds an architecture: operations happen in particular cycles, values are stored, resources are selected, and control coordinates execution. An algorithm alone does not uniquely determine those choices. “Untimed” does not remove data dependencies: an addition consuming a product still needs that product to exist first.
+
 **Behavioral synthesis**, also called **high-level synthesis (HLS)**, converts an algorithmic description into a timed RTL architecture under constraints. Its input is more than the algorithm: it also needs resource and implementation models, target clock requirements, and constraints on area, latency, throughput, or power.
 
 **Scheduling** assigns operations to control steps or cycles. **Allocation** chooses how many resources are available. **Binding** maps operations and stored values to particular resources and registers. These decisions interact: sharing one multiplier can reduce arithmetic area but introduce multiplexers, control, and longer scheduling intervals.
@@ -529,6 +564,24 @@ Your diagram captures the algorithm + constraints + resource-library → RTL rel
 | Throughput | Results completed per unit time in steady state | With interval 2 at 200 MHz, at most 100 million results/s |
 
 Register count and arithmetic-unit count provide an early area estimate. Physical wire length, congestion, buffering, and clocking remain uncertain until implementation. A resource-sharing solution can look small at RTL but collect so many signals around one unit that physical implementation becomes difficult. Generated RTL also needs verification against the original algorithm, including finite widths, overflow, signedness, and timing of inputs and outputs.
+
+#### Build a schedule from dependencies and resource limits
+
+Consider $y=ab+cd$ for one accepted transaction. The multiplications are independent; the addition depends on both products. Suppose each multiplier operation takes one cycle, an addition takes one cycle, and the selected clock period permits those assumptions. Results are stored at cycle boundaries. This illustrates scheduling; it is not a measured implementation result.
+
+| Cycle | Two multipliers and one adder | One shared multiplier and one adder |
+|---|---|---|
+| 1 | Compute $p=ab$ and $q=cd$ in parallel | Compute and store $p=ab$ |
+| 2 | Compute $y=p+q$ | Compute and store $q=cd$ |
+| 3 | This transaction has finished | Compute $y=p+q$ |
+
+Scheduling decides the cycle, allocation decides the resource count, and binding assigns each operation to a particular resource. Sharing requires operand selection and control. Storing $p$ preserves information needed after the second multiplication. Clock period and operation delay constrain whether dependent operations can be chained into one cycle; writing them on one source line does not establish that they fit. [AMD's HLS scheduling guide](https://docs.amd.com/r/en-US/ug1448-hls-guidance/Scheduling-Principles?contentId=_Zh2mpXMQfHk9G7W2ghsJw) explains scheduling after predecessor operations and the role of resource latency.
+
+At 5 ns per cycle, the illustrated latencies are 10 ns and 15 ns. Throughput requires a separate analysis. Each transaction needs two multiplications. If a multiplier accepts one operation per cycle, one multiplier imposes a resource lower bound of **two cycles per transaction** in steady state. The independent adder may finish an older transaction while the multiplier starts a newer one, so three-cycle latency does not automatically mean initiation interval three. Two multipliers can potentially support interval one. Dependencies, storage ports, interfaces, and stalls can make the achieved interval larger.
+
+Widths also affect correctness. Unsigned four-bit inputs range from 0 to 15. Each product can reach 225 and needs eight bits; the sum can reach 450 and needs nine bits. An eight-bit result loses information if the specification requires the full sum. Resource sharing must preserve the specified numeric behavior and transaction pairing.
+
+**Reproduce it:** label two transactions with different letters and overlap their schedules. Identify the registers holding each product before the adder reads them. A schedule is incomplete if it computes the right expression but combines products from different requests.
 
 ### Paths and the clock-period budget
 

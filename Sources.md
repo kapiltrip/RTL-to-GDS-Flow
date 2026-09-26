@@ -51,6 +51,13 @@ Lecture images below are actual frames captured from the course videos in Chrome
 | [Day 2 · Lesson 12](Day%2002.md#lesson-12-hardware-modeling--introduction-to-verilog-ii) | [Traditional Verilog functions and tasks have different timing rules](images/Day%2002/Lesson%2012/05-functions.png) | [31:54](https://www.youtube.com/watch?v=XEtpwZDhdTk&t=1914s) |
 | [Day 2 · Lesson 12](Day%2002.md#lesson-12-hardware-modeling--introduction-to-verilog-ii) | [Blocking delays accumulate while delayed nonblocking updates are scheduled independently](images/Day%2002/Lesson%2012/04-assignments.png) | [43:36](https://www.youtube.com/watch?v=XEtpwZDhdTk&t=2616s) |
 
+## Additional lecture frames
+
+| Study day and lesson | Captured frame | Video time |
+|---|---|---|
+| [Day 1, Lesson 03](Day%2001.md#trace-an-accelerator-request-and-calculate-its-communication-cost) | [Processor, accelerator, memory, and bus](images/Day%2001/Lesson%2003/04-accelerator-bus.png) | [26:20](https://www.youtube.com/watch?v=vKtoQEAoGck&t=1580s) |
+| [Day 1, Lesson 04](Day%2001.md#behavioral-synthesis-and-its-cost-measures) | [Behavioral-synthesis inputs and RTL output](images/Day%2001/Lesson%2004/04-hls-framework.png) | [23:46](https://www.youtube.com/watch?v=6_J-x1QfZs0&t=1426s) |
+
 ## Handwritten sources
 
 - `Data/Part1.pdf`: 24 pages, archived as [Part-1-original.pdf](sources/handwritten/Part-1-original.pdf).
@@ -63,6 +70,7 @@ These references support specific clarifications, rather than replacing the sele
 
 | Reference | Used for |
 |---|---|
+| [AMD — HLS scheduling principles](https://docs.amd.com/r/en-US/ug1448-hls-guidance/Scheduling-Principles?contentId=_Zh2mpXMQfHk9G7W2ghsJw) | Scheduling dependencies and operation/resource latency |
 | [ASML — Lithography principles](https://www.asml.com/en/technology/lithography-principles) | Mask-based exposure and optical imaging context |
 | [ASML — Semiconductor manufacturing steps](https://www.asml.com/en/company/stories/2021/semiconductor-manufacturing-process-steps) | Position of lithography among fabrication operations |
 | [SKY130 — Assumptions](https://skywater-pdk.readthedocs.io/en/main/rules/assumptions.html) | A concrete open-PDK example |
