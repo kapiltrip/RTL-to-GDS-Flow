@@ -108,6 +108,20 @@ Below 30,000 units, this simplified model favors FPGA cost; above it, ASIC cost.
 
 For example, a higher clock frequency does not guarantee lower end-to-end latency if an implementation requires many more cycles. A small cell-area result may still require a larger core to allow routing. Increasing drive strength may improve timing while increasing input capacitance, area, and power. An improvement in one figure can therefore worsen another.
 
+### Worked example: power is not energy per operation
+
+Charging and discharging capacitance consumes energy. A useful model for the capacitive switching component is
+
+$$
+P_{\text{switch}}=\alpha C V^2 f.
+$$
+
+Here $C$ is the load capacitance being modeled, $V$ is supply voltage, $f$ is clock frequency, and $\alpha$ counts average **zero-to-one charging events per clock cycle**. This convention avoids an extra factor of two associated with counting both transition directions. For many nodes, sum their contributions. The model excludes leakage and short-circuit current; Intel's [microarchitecture white paper, page 5](https://www.intel.com/pressroom/kits/core2duo/pdf/ICM_whitepaper.pdf#page=5) describes the capacitance, voltage-squared, and switching-frequency dependence.
+
+For an illustrative aggregate load of 10 pF, $\alpha=0.2$, $V=1$ V, and $f=500$ MHz, switching power is 1 mW. Reducing voltage to 0.8 V gives 0.64 mW **if the same frequency remains feasible**. Voltage changes can also change delay.
+
+Energy for a task is $E=P_{\text{average}}t$. At 1 mW, a 1,000-cycle task lasting 2 µs consumes 2 nJ of switching energy. Halving frequency halves this modeled power but doubles runtime, leaving switching energy at 2 nJ under unchanged activity, voltage, and cycle count. Leakage energy can increase with the longer runtime. State both the workload and the metric when comparing designs.
+
 ![Kapil’s handwritten notes — Part 1, PDF page 6, PPA note](images/Day%2002/h05-ppa.jpg)
 
 *Handwritten source: Part 1, PDF page 6, PPA note.*

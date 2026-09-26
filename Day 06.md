@@ -76,6 +76,32 @@ A **port** belongs to a module/design boundary. A **pin** in this synthesis voca
 
 Your `.lib`, `.sdc`, and `.v` triangle is a useful reminder: changing constraints or the cell library can change the result even when the RTL is unchanged. Relaxing timing may allow smaller/slower cells; tightening timing can require faster cells or a different logic structure. Unachievable constraints do not force the tool to create impossible hardware.
 
+### Timing arcs slew load and operating corners
+
+A **timing arc** describes a timing relationship between specified pins of a cell. For an AND gate, an `A`-to-`Y` propagation arc describes the output response to a relevant input transition, under conditions that permit that transition to propagate. The `B`-to-`Y` arc is a separate relationship. For a flip-flop, clock-to-Q is a propagation relationship; setup and hold are timing-check relationships between data and clock. A timing arc therefore need not mean that data flows directly between its two named pins.
+
+**Slew**, or transition time, measures how long a signal takes to cross specified voltage thresholds. It is different from **propagation delay**, which measures the time between reference crossings at the input and output. A slow input edge and a late output edge are related effects, but they are not the same measurement.
+
+**Capacitive load** is the capacitance the output must drive, including connected input pins and interconnect. Many cell models tabulate output delay and transition against input slew and output load, with separate rise/fall behavior. Consequently, “this gate takes 50 ps” is incomplete without its arc, input transition, loading, and operating conditions. Increasing load commonly slows an output; a stronger cell may drive it faster while presenting more input capacitance to the preceding stage.
+
+For an actual example, the [SKY130 medium-speed library's table templates](https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_fd_sc_ms.git/+/refs/tags/v0.0.2/timing/sky130_fd_sc_ms__common.lib.json) name `input_net_transition` and `total_output_net_capacitance` as delay-table variables. The same file distinguishes 50% propagation-delay reference thresholds from 20%–80% slew thresholds. Those values belong to that library; inspect the chosen library before interpreting another timing report.
+
+An operating **PVT corner** specifies process assumptions, supply voltage, and temperature. Different corners can produce different delays and leakage. Which corner is limiting depends on the check and technology; “hot is always worst for every check” is not a general rule.
+
+For instance, `tt_025C_1v80` in the documented SKY130 configuration means typical NMOS/PMOS process assumptions, 25 °C, and 1.80 V. The process label describes a characterization assumption, not the manufacturing date or a physical corner of the die. [LibreLane's timing-corner guide](https://librelane.readthedocs.io/en/latest/usage/timing_corners.html) also distinguishes these cell PVT corners from interconnect corners used to model wire parasitics.
+
+Keep the information sources separate:
+
+| Data | Question it helps answer |
+|---|---|
+| Liberty `.lib` | What function and characterized timing/power behavior does this cell have? |
+| Netlist `.v` | Which instances exist, and how are their pins connected? |
+| SDC constraints | What clocks, external timing, and timing intent must the implementation satisfy? |
+| LEF physical abstract | What placement dimensions, pin shapes, and routing obstructions must physical tools respect? |
+| SPEF parasitics | What modeled interconnect resistance and capacitance affect the implemented nets? |
+
+For concrete format context, see [OpenSTA's accepted timing inputs](https://github.com/The-OpenROAD-Project/OpenSTA#parallax-static-timing-analyzer) and [SKY130's file-type descriptions](https://skywater-pdk.readthedocs.io/en/main/contents/file_types.html). A LEF pin shape alone does not provide a timing arc, and a logic netlist alone does not provide extracted wire parasitics.
+
 ## Generic logic and technology mapping
 
 ![Technology mapping chooses real library cells and drive strengths](images/Day%2006/03-mapping.png)

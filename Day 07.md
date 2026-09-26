@@ -53,6 +53,22 @@ A **power delivery network (PDN)** distributes supply and ground through conduct
 
 **Congestion** means routing demand is excessive relative to available routing resources in a region. A narrow channel between macros may attract many signals but offer few tracks. A globally short placement can still route poorly if it blocks pin access or concentrates too much traffic. Placement optimizes estimated wire length, timing, density, and routability before the exact wires exist; the quality of those estimates matters.
 
+### Worked example: placement area and routing capacity
+
+With utilization defined as cell area divided by usable placement area, rearrange the definition:
+
+$$
+A_{\text{placement}}=\frac{A_{\text{cells}}}{U}.
+$$
+
+For 0.60 mm² of cells, a 60% target requires 1.00 mm² of usable placement area; a 75% target requires 0.80 mm². The second estimate is 20% smaller. It is an area calculation, not proof of routability. Macros, blockages, reserved regions, and the chosen utilization definition determine how this usable area relates to the total core. Later buffers and clock cells can also change the cell-area numerator.
+
+To understand congestion, imagine one routing boundary with eight available track units and twelve units of estimated demand. The demand/capacity ratio is $12/8=1.5$, and overflow is four units. Average chip utilization cannot reveal this local shortage. Other layers or detours may help, but their availability, vias, pin access, and delay must also be considered. These simple units illustrate the concept; actual congestion reports depend on the router's resource model.
+
+Moving cells apart can reduce demand concentration, while moving a macro can open a blocked channel. Strengthening the PDN may reserve additional routing space for supplies. These interactions explain why floorplanning, power planning, placement, and routing need iteration. As a concrete tool example, [OpenROAD's global placer](https://openroad.readthedocs.io/en/latest/main/src/gpl/README.html) estimates congestion during routability-driven placement and increases the modeled area of cells in congested regions to encourage spreading.
+
+**Try it:** if the cell area grows to 0.66 mm² while the usable placement area remains 1.00 mm², utilization becomes 66%. That percentage still does not tell you whether a particular macro channel has enough tracks.
+
 ## Clock tree synthesis
 
 ![Clock arrival times differ because the distribution network has delay](images/Day%2007/02-cts.png)

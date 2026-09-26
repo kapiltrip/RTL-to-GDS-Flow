@@ -42,6 +42,24 @@ foreach element $values {
 
 `foreach` receives the list value at loop entry and assigns each successive element to `element`. `lset` changes the named variable `values` at a zero-based index. `expr` performs arithmetic; `%` gives the integer remainder. The first negation leaves zero unchanged. The final list is `0 1 -2 3 -4 5 -6`. Modifying `values` does not rewrite the iteration list already supplied to this `foreach` invocation.
 
+### Trace the list instead of memorizing the output
+
+The index starts at −1 so that the first `incr index` makes it zero before `lset` runs. Here is the complete trace, with each list shown after that iteration's conditional update:
+
+| Index | Current `element` | Even? | `values` after the update |
+|---|---|---|---|
+| 0 | 0 | Yes; negating zero still gives zero | `0 1 2 3 4 5 6` |
+| 1 | 1 | No | `0 1 2 3 4 5 6` |
+| 2 | 2 | Yes | `0 1 -2 3 4 5 6` |
+| 3 | 3 | No | `0 1 -2 3 4 5 6` |
+| 4 | 4 | Yes | `0 1 -2 3 -4 5 6` |
+| 5 | 5 | No | `0 1 -2 3 -4 5 6` |
+| 6 | 6 | Yes | `0 1 -2 3 -4 5 -6` |
+
+At index two, `lset values $index [expr {-$element}]` receives the variable name `values`, index `2`, and replacement value `-2`. The first argument deliberately has no `$`: `lset` needs the **name of the variable to update**. Writing `lset $values ...` would substitute the list's contents and use that resulting string as a variable name, which changes the meaning and normally causes an error here. See Tcl's [`lset` specification](https://www.tcl-lang.org/man/tcl8.6/TclCmd/lset.htm).
+
+In contrast, `foreach element $values ...` needs the **list value to traverse**, so substitution is appropriate there. The loop variable `element` takes successive entries from that supplied list. Updating `values` inside the body does not make the next iteration revisit a modified entry. The [`foreach` specification](https://www.tcl-lang.org/man/tcl8.6.13/TclCmd/foreach.htm) describes how list elements are assigned to loop variables.
+
 ## Control flow and procedures
 
 `if` selects a branch. `for` has initialization, condition, next-step, and body arguments. `while` repeats while its expression is true. `break` exits the enclosing loop; `continue` skips the remaining body of the current iteration and proceeds with the loop's next iteration. Their Tcl syntax still follows command-and-argument parsing, so braces and spaces have real meaning.

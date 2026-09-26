@@ -49,6 +49,22 @@ The four logic states are:
 
 With ordinary equal-strength drivers, `0` against `1` resolves to `x`; an active `1` against a released `z` resolves to `1`. Drive strengths permit more detailed resolution, so the “conflicting drivers give `x`” rule assumes neither driver dominates. In ordinary RTL, avoid multiple procedural drivers for the same state variable.
 
+### Why an unknown input does not always make the output unknown
+
+For a one-bit Boolean operation, ask whether both possible known values of an unknown input give the same result. If they do, that result is already determined:
+
+| Verilog expression | Result | Reason |
+|---|---|---|
+| `1'b0 & 1'bx` | `1'b0` | Zero AND either zero or one is zero |
+| `1'b1 & 1'bx` | `1'bx` | The result depends on the unknown input |
+| `1'b1 \| 1'bx` | `1'b1` | One OR either zero or one is one |
+| `1'b0 \| 1'bx` | `1'bx` | The result depends on the unknown input |
+| `1'bx ^ 1'bx` | `1'bx` | The simulator does not establish a known Boolean relationship between the operands |
+
+Zero is the **controlling value** for AND; one is the controlling value for OR. A controlling value determines the output regardless of the other input. For these bitwise operators, `z` is also treated as an unknown operand, so `1'b0 & 1'bz` produces zero. This differs from **net resolution**, where an active driver can determine the value of a net whose other driver is released.
+
+The last row shows a limit of four-state simulation: an unknown value is not a symbolic variable whose relationships are tracked algebraically. Even `a ^ a` can evaluate to `x` when `a` contains `x`, although the corresponding ideal Boolean identity is zero. Therefore an `x` waveform asks you to inspect initialization, drivers, and operator semantics. It is not an instruction to treat that bit as a freely chosen don't-care.
+
 ## Sized literals padding truncation and signed values
 
 ![Sized constants retain the declared number of bits](images/Day%2011/02-literals.png)

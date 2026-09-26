@@ -55,6 +55,24 @@ Your L-shaped drawing captures precompensation: a modified mask is chosen becaus
 
 This decomposition introduces extra processing, masks, overlay requirements, and possible coloring conflicts. OPC changes how a pattern prints; pattern decomposition changes which features are formed together. They solve related resolution problems through different mechanisms and can be used together.
 
+### Read the geometry: width spacing pitch and overlay
+
+**Line width** is the distance across a feature. **Spacing** is the edge-to-edge gap between adjacent features. **Pitch** is the distance between corresponding points on repeating features, commonly their centerlines. For equal-width parallel lines with a uniform gap, $p=w+s$. A 20 nm line followed by a 20 nm gap has 40 nm pitch; width and pitch are different measurements.
+
+Consider four ideal line centers at 0, 40, 80, and 120 nm. An illustrative two-mask decomposition assigns alternating lines:
+
+| Patterning group | Line-center positions | Pitch within that group |
+|---|---|---|
+| A | 0 and 80 nm | 80 nm |
+| B | 40 and 120 nm | 80 nm |
+| Combined target | 0, 40, 80, and 120 nm | 40 nm |
+
+Each group has more generous spacing, while the combined target remains dense. These numbers demonstrate decomposition; they are not a claim about a particular foundry process. Not every multiple-patterning method uses two independent exposures arranged this way.
+
+**Overlay error** is misregistration between patterns that must align. If group B shifts right by 3 nm while A stays fixed, the combined centers become 0, 43, 80, and 123 nm. Adjacent center distances alternate between 43 and 37 nm. With unchanged 20 nm widths, the gaps become 23 and 17 nm. Thus a placement error can shrink one gap even though each line has the intended width. This is why the handwritten coloring example must be understood together with alignment requirements.
+
+**Check your understanding:** OPC corrects predictable printing distortion in the pattern; decomposition decides which features belong to each patterning group. Identify which operation is being shown before interpreting a modified corner or a colored line.
+
 ## Wafer fabrication packaging and screening
 
 ![A package provides electrical, thermal, and mechanical support](images/Day%2009/03-package.png)

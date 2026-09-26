@@ -82,6 +82,31 @@ For example, with $t_{\text{cq}}=0.08$ ns, combinational delay $0.62$ ns, setup 
 
 The “next cycle” rule assumes an ordinary single-cycle path. Valid multicycle protocols require explicitly justified constraints; they cannot be assumed merely because a path is slow.
 
+### Why clock skew can help setup and hurt hold
+
+**Setup time** requires the value being captured to be stable before the receiving clock edge. **Hold time** requires that value to remain stable after the edge. Thus setup limits how late the intended data may arrive, while hold limits how early the following data may replace it. These are separate checks on maximum and minimum delays.
+
+Define skew as capture-clock arrival minus launch-clock arrival for corresponding clock edges. Positive skew means the capture clock arrives later. For this single-cycle, equal-period model, with nonnegative setup and hold uncertainty margins $U_s$ and $U_h$:
+
+$$
+S_{\text{setup}}=T+t_{\text{skew}}-t_{\text{setup}}-U_s-(t_{\text{cq,max}}+t_{\text{comb,max}}).
+$$
+
+$$
+S_{\text{hold}}=t_{\text{cq,min}}+t_{\text{comb,min}}-(t_{\text{skew}}+t_{\text{hold}}+U_h).
+$$
+
+Both slacks must be nonnegative. Setup slack subtracts arrival from the latest allowed arrival. Hold slack subtracts the earliest allowed change from the actual earliest change. The opposite subtraction order reflects what each check protects.
+
+Use the setup numbers above, a 1.00 ns period, and $U_s=0.05$ ns. Separately, suppose minimum clock-to-Q is 0.04 ns, minimum combinational delay is 0.03 ns, hold time is 0.04 ns, and $U_h=0$ for this example:
+
+| Clock skew | Setup slack | Hold slack | Meaning |
+|---|---|---|---|
+| 0.00 ns | $1.00-0.10-0.05-0.70=0.15$ ns | $0.07-0.04=0.03$ ns | Both modeled checks pass |
+| +0.05 ns | $1.05-0.10-0.05-0.70=0.20$ ns | $0.07-0.09=-0.02$ ns | Setup improves, but hold fails |
+
+The later capture clock gives incoming setup data more time, but requires the previous value to survive longer against the earliest new data. Increasing the period does not change the second equation. Adding data-path delay may repair hold while consuming setup margin, so both checks must be repeated. Real STA selects the applicable edges, early/late delays, corners, and uncertainties rather than applying one nominal skew to every check.
+
 ## Three implementations of a plus b plus c
 
 ![One adder reused over two cycles with multiplexers and feedback](images/Day%2004/03-resource-sharing.png)

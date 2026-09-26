@@ -70,10 +70,21 @@ These references support specific clarifications, rather than replacing the sele
 | [SKY130 — Design rules](https://skywater-pdk.readthedocs.io/en/main/rules.html) | Process-specific physical rules |
 | [Microsoft — Install WSL](https://learn.microsoft.com/en-us/windows/wsl/install) | Updated Windows command and setup context for the Unix tutorial |
 | [GNU Bash — Job control](https://www.gnu.org/software/bash/manual/bash.html#Job-Control) | Shell jobs, foreground/background operation, and job specifications |
+| [Intel — Inside Intel Core Microarchitecture, page 5](https://www.intel.com/pressroom/kits/core2duo/pdf/ICM_whitepaper.pdf#page=5) | Capacitance, voltage-squared, and switching-frequency dependence of dynamic power |
+| [OpenSTA — Timing analyzer inputs](https://github.com/The-OpenROAD-Project/OpenSTA#parallax-static-timing-analyzer) | Netlist, Liberty, SDC, and parasitic inputs used by static timing analysis |
+| [SKY130 — Medium-speed library table templates](https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_fd_sc_ms.git/+/refs/tags/v0.0.2/timing/sky130_fd_sc_ms__common.lib.json) | Actual delay-table variables and slew/reference thresholds |
+| [LibreLane — Timing corners](https://librelane.readthedocs.io/en/latest/usage/timing_corners.html) | PVT corner names and their distinction from interconnect corners |
+| [OpenROAD — Global placement](https://openroad.readthedocs.io/en/latest/main/src/gpl/README.html) | A concrete example of congestion estimates feeding back into placement |
 | [Tcl 8.6 — expr](https://www.tcl-lang.org/man/tcl8.6/TclCmd/expr.htm) | Expression evaluation and braced expressions |
+| [Tcl 8.6 — lset](https://www.tcl-lang.org/man/tcl8.6/TclCmd/lset.htm) | Updating a named list variable at an index |
+| [Tcl 8.6 — foreach](https://www.tcl-lang.org/man/tcl8.6.13/TclCmd/foreach.htm) | List iteration and assignment to loop variables |
 | [Sutherland HDL — Verilog-2001 reference](https://sutherland-hdl.com/pdfs/verilog_2001_ref_guide.pdf) | Wildcard case matching and traditional language reference context |
 
 ## Example validation
+
+The additional power, clock-skew, utilization, and patterning calculations are teaching examples with explicitly stated assumptions. Their numbers are not measurements from the captured lectures or specifications for a fabrication process. The Tcl and pipeline tables trace the runnable examples; the new four-state table states the bitwise results used in the explanations.
+
+The added arithmetic was checked directly. Tcl 8.6 reproduced all seven rows of the list trace, and Icarus Verilog in Verilog-2005 mode confirmed the four-state operator results and all three rows of the pipeline trace.
 
 The checked source is in [examples](examples/verilog/README.md). Icarus Verilog 12.0 development build compiled the Verilog examples with `-g2005`; Python's Tcl 8.6 interpreter ran the Tcl example. The results were:
 

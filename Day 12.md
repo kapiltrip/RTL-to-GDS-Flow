@@ -202,6 +202,20 @@ endmodule
 
 At a normal rising clock edge, `q1` schedules the current input, while `q2` schedules the **old** value of `q1`. If old `q1=10` and `d=25`, the settled post-edge values are `q1=25`, `q2=10`. Both right-hand expressions were evaluated before their pending updates. If both lines instead used blocking assignment in this same order, the second line would observe the newly assigned `q1`, changing the model's behavior. Nonblocking assignment expresses the simultaneous sampling behavior expected from clocked registers.
 
+### Follow one sample through both registers
+
+Assume reset has established `q1=q2=0`, reset is released away from a sampling edge, and each input below is stable before its rising edge. Read the last two columns after the nonblocking updates for that edge have completed:
+
+| Rising edge | Input `d` before the edge | Old `q1` sampled by `q2` | New `q1` | New `q2` |
+|---|---|---|---|---|
+| First | 25 | 0 | 25 | 0 |
+| Second | 42 | 25 | 42 | 25 |
+| Third | 9 | 42 | 9 | 42 |
+
+The sample 25 enters `q1` on the first edge and reaches `q2` on the second. Once the pipeline is filled, a new sample can emerge at every edge even though each sample passes through two registers. This separates **latency**, the delay experienced by a particular sample, from **throughput**, the rate of completed samples. When stating a cycle latency, identify the reference event: here `q2` changes one clock period after the edge that first captures the sample into `q1`.
+
+The assignments run at the same simulation timestamp as the edge; the table does not require time to advance by a full period before `q1` updates. It requires the pending nonblocking assignments to settle. An observation made immediately in an active-region process at `posedge clk` can still see the old register values. This is why a waveform's timestamp and its event ordering both matter.
+
 ### The lecture's delayed-assignment example
 
 The following is a complete, explicitly timed simulation example. These `#` delays are for understanding the language; they are not a synthesizable implementation of arbitrary hardware delays.
