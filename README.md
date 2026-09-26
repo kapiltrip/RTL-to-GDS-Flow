@@ -6,7 +6,9 @@ This collection covers **Weeks 1 and 2 and the first two lessons of Week 3**, en
 
 Read a chapter in this order: **lecture frame → concept explanation → matching handwritten snippet → explanation of your note and questions**. Some sections add worked calculations or complete code. Every chapter has an outline and navigation links. **There are two study days, with six lessons in each. Day 2 is the current study day.** Lesson numbers identify the course sequence, including tutorials; they are separate from study-day numbers and the course’s theory-lecture numbering.
 
-[Handwritten page index](Handwritten%20Index.md) · [Questions and corrections](Questions.md) · [Sources and frame timestamps](Sources.md) · [Runnable examples](examples/verilog/README.md)
+Start with the two day files. All supporting files are grouped inside [Resources](Resources/README.md), including the [Data upload folder](Resources/Data/README.md).
+
+[Handwritten page index](Resources/Handwritten%20Index.md) · [Questions and corrections](Resources/Questions.md) · [Sources and frame timestamps](Resources/Sources.md) · [Runnable examples](Resources/examples/verilog/README.md)
 
 ## Start here
 
@@ -15,8 +17,8 @@ Read a chapter in this order: **lecture frame → concept explanation → matchi
 | Learn the material in order | [Study approach](#how-to-study-this-collection), then [Lesson 01](Day%2001.md#lesson-01-basic-concepts-of-integrated-circuit-i) |
 | Understand what each folder contains | [Directory structure](#directory-structure) and [folder guide](#what-each-part-of-the-repository-is-for) |
 | Revise a particular lecture | [Study days and lessons](#study-days-and-course-lessons) and that chapter's outline |
-| Find something you wrote on paper | [Handwritten page index](Handwritten%20Index.md), using the PDF page or handwritten page number |
-| Resolve a doubt or incomplete formula | [Questions and corrections](Questions.md) |
+| Find something you wrote on paper | [Handwritten page index](Resources/Handwritten%20Index.md), using the PDF page or handwritten page number |
+| Resolve a doubt or incomplete formula | [Questions and corrections](Resources/Questions.md) |
 | Revisit the lecturer's explanation | The timestamp beneath the relevant video frame |
 | Check a Verilog or Tcl example | [Practice with the examples](#practice-with-the-examples) |
 
@@ -94,59 +96,61 @@ The equal split is **six lessons per day**. Each row below opens the relevant le
 
 ## Directory structure
 
-The local folder is named **`rtl to gdss`**; its GitHub repository is **`RTL-to-GDS-Flow`**. The structure below describes the existing collection. Number ranges group repeated files rather than indicating additional folders. Git's own `.git/` metadata is omitted.
+The local folder is named **`rtl to gdss`**; its GitHub repository is **`RTL-to-GDS-Flow`**. The top level contains this guide, the two study days, and one supporting folder: **`Resources/`**. Images remain embedded in the day files. Number ranges below group repeated files rather than indicating additional folders. Git's own `.git/` metadata is omitted.
 
 ```text
 rtl to gdss/
-├── README.md                       Study approach, two-day index, directory guide
-├── Day 01.md                       Lessons 01–06, with all explanations and images
-├── Day 02.md                       Lessons 07–12; current study day
-├── Handwritten Index.md            All 28 PDF pages mapped to day/lesson sections
-├── Questions.md                    Handwritten questions and correction links
-├── Sources.md                      Lecture frame timestamps and primary references
-│
-├── images/
-│   ├── Day 01/
-│   │   ├── Lesson 01/              IC construction and photolithography
-│   │   ├── Lesson 02/              IC types, implementation styles, cost, PPA
-│   │   ├── Lesson 03/              Abstraction and hardware/software partition
-│   │   ├── Lesson 04/              IP, HLS, timing, resource sharing
-│   │   ├── Lesson 05/              Unix tutorial
-│   │   └── Lesson 06/              Logic synthesis and libraries
-│   └── Day 02/
-│       ├── Lesson 07/              Physical design, clocks, routing
-│       ├── Lesson 08/              Verification, yield, manufacturing test
-│       ├── Lesson 09/              Masks, OPC, fabrication, packaging
-│       ├── Lesson 10/              Tcl
-│       ├── Lesson 11/              Verilog I
-│       └── Lesson 12/              Verilog II
-│
-├── sources/
-│   └── handwritten/
-│       ├── Part-1-original.pdf     Preserved first PDF, 24 pages
-│       ├── Part-2-original.pdf     Preserved second PDF, 4 pages
-│       ├── part1/                  page-01.jpg through page-24.jpg
-│       └── scan/                   page-01.jpg through page-04.jpg
-│
-├── examples/
-│   ├── run_checks.py               Runs Verilog and Tcl example checks
-│   ├── tcl_basics.tcl              Complete Lesson 10 scripts
-│   └── verilog/
-│       ├── README.md               File guide and execution commands
-│       ├── select_register.v       Multiplexer feeding a flip-flop
-│       ├── mux_forms.v             Two combinational descriptions
-│       ├── counter.v               Parameterized counter and wrapper
-│       ├── pipeline2.v             Two stages of clocked state
-│       ├── initial_always_demo.v   Initialization and a timed clock generator
-│       ├── function_task_demo.v    Function result and task invocation
-│       ├── assignment_delays.v     Blocking/nonblocking timing example
-│       ├── tb_language.v           Values, widths, events, and state checks
-│       └── tb_delays.v             Assignment timing checks
-│
-├── Data/                           Local inbox for new uploads
-│   ├── README.md                   Tracked upload instructions
-│   └── (uploaded PDFs and images)  Local originals; excluded from Git here
-└── .gitignore                      Inbox and generated-output exclusions
+├── README.md                           Study approach, two-day index, directory guide
+├── Day 01.md                           Lessons 01–06, with explanations and images
+├── Day 02.md                           Lessons 07–12; current study day
+└── Resources/                          All supporting files, grouped together
+    ├── README.md                       Guide to the supporting material
+    ├── Handwritten Index.md            All 28 PDF pages mapped to day/lesson sections
+    ├── Questions.md                    Handwritten questions and correction links
+    ├── Sources.md                      Lecture frame timestamps and references
+    ├── .gitignore                      Inbox and generated-output exclusions
+    │
+    ├── Data/                           Local inbox for new uploads
+    │   ├── README.md                   Upload instructions
+    │   └── (uploaded PDFs and images)  Local originals; excluded from Git here
+    │
+    ├── images/
+    │   ├── Day 01/
+    │   │   ├── Lesson 01/              IC construction and photolithography
+    │   │   ├── Lesson 02/              IC types, implementation styles, cost, PPA
+    │   │   ├── Lesson 03/              Abstraction and hardware/software partition
+    │   │   ├── Lesson 04/              IP, HLS, timing, resource sharing
+    │   │   ├── Lesson 05/              Unix tutorial
+    │   │   └── Lesson 06/              Logic synthesis and libraries
+    │   └── Day 02/
+    │       ├── Lesson 07/              Physical design, clocks, routing
+    │       ├── Lesson 08/              Verification, yield, manufacturing test
+    │       ├── Lesson 09/              Masks, OPC, fabrication, packaging
+    │       ├── Lesson 10/              Tcl
+    │       ├── Lesson 11/              Verilog I
+    │       └── Lesson 12/              Verilog II
+    │
+    ├── sources/
+    │   └── handwritten/
+    │       ├── Part-1-original.pdf     Preserved first PDF, 24 pages
+    │       ├── Part-2-original.pdf     Preserved second PDF, 4 pages
+    │       ├── part1/                  page-01.jpg through page-24.jpg
+    │       └── scan/                   page-01.jpg through page-04.jpg
+    │
+    └── examples/
+        ├── run_checks.py               Runs Verilog and Tcl example checks
+        ├── tcl_basics.tcl              Complete Lesson 10 scripts
+        └── verilog/
+            ├── README.md               File guide and execution commands
+            ├── select_register.v       Multiplexer feeding a flip-flop
+            ├── mux_forms.v             Two combinational descriptions
+            ├── counter.v               Parameterized counter and wrapper
+            ├── pipeline2.v             Two stages of clocked state
+            ├── initial_always_demo.v   Initialization and a timed clock generator
+            ├── function_task_demo.v    Function result and task invocation
+            ├── assignment_delays.v     Blocking/nonblocking timing example
+            ├── tb_language.v           Values, widths, events, and state checks
+            └── tb_delays.v             Assignment timing checks
 ```
 
 ### What each part of the repository is for
@@ -154,38 +158,38 @@ rtl to gdss/
 | Location | How to use it |
 |---|---|
 | `Day 01.md` / `Day 02.md` | Read the explanation. Start at the outline; follow the frame, prose, handwriting, and worked example together. |
-| `images/Day NN/Lesson NN/` | Find the exact image embedded in that chapter. Files such as `02-ic-layers.png` are lecture frames; files such as `h03-lithography.jpg` are handwritten crops. The `h` identifies handwriting. |
-| `sources/handwritten/` | Recover the whole source when a crop does not show enough context. These complete PDFs and page images preserve everything uploaded in this batch. |
-| `Handwritten Index.md` | Translate between PDF page position, the number written on paper, and the corresponding day chapter. |
-| `Questions.md` | Jump directly to a doubt, unfinished calculation, or corrected interpretation. |
-| `Sources.md` | Find the video timestamp for a frame or the reference supporting an additional explanation. |
-| `examples/` | Open, change, and run editable code after predicting its behavior from the notes. |
-| `Data/` | Add new source material locally. Its contents are an inbox, not a second set of finished chapters. |
+| `Resources/images/Day NN/Lesson NN/` | Find the exact image embedded in that chapter. Files such as `02-ic-layers.png` are lecture frames; files such as `h03-lithography.jpg` are handwritten crops. The `h` identifies handwriting. |
+| `Resources/sources/handwritten/` | Recover the whole source when a crop does not show enough context. These complete PDFs and page images preserve everything uploaded in this batch. |
+| `Resources/Handwritten Index.md` | Translate between PDF page position, the number written on paper, and the corresponding day chapter. |
+| `Resources/Questions.md` | Jump directly to a doubt, unfinished calculation, or corrected interpretation. |
+| `Resources/Sources.md` | Find the video timestamp for a frame or the reference supporting an additional explanation. |
+| `Resources/examples/` | Open, change, and run editable code after predicting its behavior from the notes. |
+| `Resources/Data/` | Add new source material locally. Its contents are an inbox, not a second set of finished chapters. |
 
 There are currently **44 lecture frames, 40 handwritten snippets, 28 full-page handwritten images, and 2 original PDFs**. A handwritten page may supply several snippets or span more than one lesson, so snippet count and source-page count differ. Image filenames are local to each lesson folder; the caption gives the original video time or PDF page.
 
 ## Practice with the examples
 
-First read the matching code in the chapter, then open the editable version under `examples/`. With Python including Tk/Tcl and Icarus Verilog installed, run this from the repository root:
+First read the matching code in the chapter, then open the editable version under `Resources/examples/`. With Python including Tk/Tcl and Icarus Verilog installed, run this from the repository root:
 
 ```text
-python examples/run_checks.py
+python Resources/examples/run_checks.py
 ```
 
-The checker compiles into a temporary directory and runs the Tcl file-writing example there. [The example guide](examples/verilog/README.md) explains the individual files and expected messages. The deliberate `6'h88` truncation example can produce a warning; its resulting bits are checked. For revision, predict a changed input or parameter's effect before changing a file, and distinguish a failed expectation from a compiler or environment error.
+The checker compiles into a temporary directory and runs the Tcl file-writing example there. [The example guide](Resources/examples/verilog/README.md) explains the individual files and expected messages. The deliberate `6'h88` truncation example can produce a warning; its resulting bits are checked. For revision, predict a changed input or parameter's effect before changing a file, and distinguish a failed expectation from a compiler or environment error.
 
 ## Handwriting and source preservation
 
-Your original files remain in `Data/`. Reviewed copies are preserved under [sources/handwritten](sources/handwritten), with a full-page image for every page. Cropped snippets appear beside their explanations; a crop is never the only surviving copy of a page. The [handwritten index](Handwritten%20Index.md) distinguishes **PDF page numbers** from the numbers written on the paper.
+Your original uploads are kept in `Resources/Data/`. Reviewed copies are preserved under [Resources/sources/handwritten](Resources/sources/handwritten), with a full-page image for every page. Cropped snippets appear beside their explanations; a crop is never the only surviving copy of a page. The [handwritten index](Resources/Handwritten%20Index.md) distinguishes **PDF page numbers** from the numbers written on the paper.
 
-The working upload folder is `Desktop/rtl to gdss/Data`. New uploads can be reviewed and integrated in the same format. The raw upload folder is excluded from Git so future files are not published accidentally; this batch's two reviewed originals and their page images are included in the archive.
+The working upload folder is `Desktop/rtl to gdss/Resources/Data`. New uploads can be reviewed and integrated in the same format. The raw upload folder is excluded from Git so future files are not published accidentally; this batch's two reviewed originals and their page images are included in the archive.
 
-For new material, place the original PDF or image in `Data/` and identify the course topic if you know it. The study collection can then add readable page images or crops, connect them to the matching lecture, answer questions written on the pages, and update the chapter and handwritten indexes. There is no need to rewrite or erase an original handwritten page when its explanation needs a correction.
+For new material, place the original PDF or image in `Resources/Data/` and identify the course topic if you know it. The study collection can then add readable page images or crops, connect them to the matching lecture, answer questions written on the pages, and update the chapter and handwritten indexes. There is no need to rewrite or erase an original handwritten page when its explanation needs a correction.
 
 ## Reading and verification method
 
-The explanations were prepared by reviewing the available transcripts for all twelve selected videos, checking selected segments in the video player, and capturing actual lecture frames in Chrome. This is a transcript-led review with targeted frame inspection, not a claim of uninterrupted playback of every minute. Supplemental primary references are linked beside relevant clarifications and collected in [Sources](Sources.md). Worked numerical examples introduced for teaching are identified as illustrative.
+The explanations were prepared by reviewing the available transcripts for all twelve selected videos, checking selected segments in the video player, and capturing actual lecture frames in Chrome. This is a transcript-led review with targeted frame inspection, not a claim of uninterrupted playback of every minute. Supplemental primary references are linked beside relevant clarifications and collected in [Sources](Resources/Sources.md). Worked numerical examples introduced for teaching are identified as illustrative.
 
-The Verilog checks passed with Icarus Verilog in explicit Verilog-2005 mode. They cover four-state values, signedness, wildcard case matching, parameter overrides, reset/wraparound, pipeline state, edge events, and delayed assignments. Tcl list updates, procedure results, grouping, and file I/O also passed. See [the runnable examples](examples/verilog/README.md) to repeat those checks.
+The Verilog checks passed with Icarus Verilog in explicit Verilog-2005 mode. They cover four-state values, signedness, wildcard case matching, parameter overrides, reset/wraparound, pipeline state, edge events, and delayed assignments. Tcl list updates, procedure results, grouping, and file I/O also passed. See [the runnable examples](Resources/examples/verilog/README.md) to repeat those checks.
 
-The notes preserve the meaning of your handwriting while explaining shorthand and correcting ambiguous statements. The [question index](Questions.md) points directly to those discussions.
+The notes preserve the meaning of your handwriting while explaining shorthand and correcting ambiguous statements. The [question index](Resources/Questions.md) points directly to those discussions.

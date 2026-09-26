@@ -1,6 +1,6 @@
 # Runnable study examples
 
-[Course index](../../README.md) · [Lesson 11](../../Day%2002.md#lesson-11-hardware-modeling--introduction-to-verilog-i) · [Lesson 12](../../Day%2002.md#lesson-12-hardware-modeling--introduction-to-verilog-ii)
+[Course index](../../../README.md) · [Lesson 11](../../../Day%2002.md#lesson-11-hardware-modeling--introduction-to-verilog-i) · [Lesson 12](../../../Day%2002.md#lesson-12-hardware-modeling--introduction-to-verilog-ii)
 
 The `.v` examples reproduce the complete code printed in the chapters. `tb_language.v` checks values and behavior; `tb_delays.v` checks the six assignment times from the lecture example. These are small teaching models, not a complete chip project.
 
@@ -19,7 +19,7 @@ The `.v` examples reproduce the complete code printed in the chapters. `tb_langu
 From the repository root, with Python including Tk/Tcl and Icarus Verilog installed:
 
 ```text
-python examples/run_checks.py
+python Resources/examples/run_checks.py
 ```
 
 The script uses Verilog-2005 mode, compiles into a temporary directory, runs the checks, and checks the [Tcl examples](../tcl_basics.tcl). The deliberate `6'h88` truncation demonstration may generate a compiler warning; its low-six-bit result is checked explicitly. Simulator finish-message formatting can vary by version.
@@ -27,8 +27,8 @@ The script uses Verilog-2005 mode, compiles into a temporary directory, runs the
 To run only the assignment demonstration using tools on your PATH:
 
 ```text
-iverilog -g2005 -s assignment_delays -o assignment_delays.vvp examples/verilog/assignment_delays.v
-vvp assignment_delays.vvp
+iverilog -g2005 -s assignment_delays -o Resources/examples/verilog/assignment_delays.vvp Resources/examples/verilog/assignment_delays.v
+vvp Resources/examples/verilog/assignment_delays.vvp
 ```
 
 This prints changes in simulated values. `%t` formatting can display scaled time units according to simulator settings; the source declares a 1 ns unit and 1 ps precision. The chapter's table states times in nanoseconds.
