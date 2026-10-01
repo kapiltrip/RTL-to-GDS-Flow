@@ -10,12 +10,12 @@ The equal allocation is **six lessons per day**: `day = floor((lesson−1)/6)+1`
 
 | Day | Lessons | Topic | PDF | Pages |
 |---|---|---|---|---:|
-| [Day 01](Day%2001.md) | 01–06 | IC foundations and synthesis | [Read PDF](Resources/documents/Day%2001%20-%20IC%20Foundations%20and%20Logic%20Synthesis.pdf) | 62 |
-| [Day 02](Day%2002.md) | 07–12 | Physical design and Verilog | [Read PDF](Resources/documents/Day%2002%20-%20Physical%20Design%20and%20Verilog%20Foundations.pdf) | 64 |
-| [Day 03](Day%2003.md) | 13–18 | Simulation, synthesis and Boolean covers | [Read PDF](Resources/documents/Day%2003%20-%20Simulation%20Synthesis%20and%20Logic%20Optimization.pdf) | 39 |
-| [Day 04](Day%2004.md) | 19–24 | Multilevel optimization and formal methods | [Read PDF](Resources/documents/Day%2004%20-%20Multilevel%20Optimization%20and%20Formal%20Verification.pdf) | 26 |
-| [Day 05](Day%2005.md) | 25–30 | Equivalence, libraries and STA | [Read PDF](Resources/documents/Day%2005%20-%20Equivalence%20Libraries%20and%20Static%20Timing%20Analysis.pdf) | 25 |
-| [Day 06](Day%2006.md) | 31–32 | OpenSTA and Constraints I | [Read PDF](Resources/documents/Day%2006%20-%20OpenSTA%20and%20Clock%20Constraints.pdf) | 13 |
+| [Day 01](Day%2001.md) | 01–06 | IC foundations and synthesis | [Read PDF](Resources/documents/Day%2001%20-%20IC%20Foundations%20and%20Logic%20Synthesis.pdf) | 63 |
+| [Day 02](Day%2002.md) | 07–12 | Physical design and Verilog | [Read PDF](Resources/documents/Day%2002%20-%20Physical%20Design%20and%20Verilog%20Foundations.pdf) | 65 |
+| [Day 03](Day%2003.md) | 13–18 | Simulation, synthesis and Boolean covers | [Read PDF](Resources/documents/Day%2003%20-%20Simulation%20Synthesis%20and%20Logic%20Optimization.pdf) | 40 |
+| [Day 04](Day%2004.md) | 19–24 | Multilevel optimization and formal methods | [Read PDF](Resources/documents/Day%2004%20-%20Multilevel%20Optimization%20and%20Formal%20Verification.pdf) | 27 |
+| [Day 05](Day%2005.md) | 25–30 | Equivalence, libraries and STA | [Read PDF](Resources/documents/Day%2005%20-%20Equivalence%20Libraries%20and%20Static%20Timing%20Analysis.pdf) | 26 |
+| [Day 06](Day%2006.md) | 31–32 | OpenSTA and Constraints I | [Read PDF](Resources/documents/Day%2006%20-%20OpenSTA%20and%20Clock%20Constraints.pdf) | 14 |
 
 [Find handwritten pages](Resources/Handwritten%20Index.md) · [Full forms and meanings](Resources/Glossary.md) · [RTL-to-GDS flow map](Resources/Flow%20Map.md) · [Corrections and doubts](Resources/Questions.md) · [Sources and timestamps](Resources/Sources.md) · [Study method](Resources/Study%20Guide.md) · [Coverage and depth review](Resources/Coverage%20Review.md)
 

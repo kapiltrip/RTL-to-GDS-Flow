@@ -182,3 +182,137 @@ assert interpreter.eval('expr {1+2}')=='3'
 assert interpreter.eval('set result [expr {1+2}]')=='3'
 print('PASS: priority case, gate CNF, FSM refinement, cutpoint invariant, reachability, '
       'fanout counterexample, new numerical derivations and staged Tcl substitution')
+
+# Check the additional depth examples against exhaustive Boolean models and
+# independent event timelines. These checks do not claim physical signoff.
+for a,b,c,d in product((0,1),repeat=4):
+    n1=not (a and b);n2=not (c and d)
+    assert (not (n1 and n2))==bool((a and b) or (c and d))
+assert (not (0 and 0)) or (not (0 and 0))
+assert not ((0 and 0) or (0 and 0))
+
+state=0;updates=[]
+for n,datum in enumerate([2,3,4]):
+    old=state;state+=datum
+    updates.append((n,old,datum,3*n,3*(n+1),state))
+assert updates==[(0,0,2,0,3,2),(1,2,3,3,6,5),(2,5,4,6,9,9)]
+assert 1*2<3<=1*3
+
+latched=0;naive=[];gated=[]
+for time,clock,enable in [(-1,0,0),(0,1,0),(2,1,1),(5,0,1),(10,1,1)]:
+    if clock==0:latched=enable
+    naive.append((time,clock & enable))
+    gated.append((time,clock & latched))
+def rising_events(trace):
+    return [current[0] for previous,current in zip(trace,trace[1:])
+            if previous[1]==0 and current[1]==1]
+assert rising_events(naive)==[2,10] and rising_events(gated)==[10]
+assert 5-2==3 and 5-0==5
+assert latched==1
+
+day2=(ROOT/'Day 02.md').read_text(encoding='utf-8')
+command_block=re.search(r'```tcl\n(set output \{results/final netlist\.v\}.*?)```',day2,re.S).group(1)
+assert interpreter.eval(command_block).strip()=='results/final netlist.v'
+assert int(interpreter.eval('llength $command'))==4
+assert [interpreter.eval(f'lindex $command {n}') for n in range(4)]==[
+    'file','copy','netlists/top.v','results/final netlist.v']
+
+in_mux=F(6,10);out_mux=F(18,10);adder=F(24,10)
+arrivals=[]
+for data,select in [(0,7),(8,0),(2,3)]:
+    arrivals.append((max(data,select)+in_mux+adder,
+                     max(data+adder,select)+out_mux))
+assert arrivals==[(F(10),F(88,10)),(F(11),F(122,10)),(F(6),F(62,10))]
+assert arrivals[0][0]-arrivals[0][1]==adder+in_mux-out_mux==F(12,10)
+
+on={0,1,2,5,6,7}
+def cube_points(cube):
+    return {4*a+2*b+c for a,b,c in product((0,1),repeat=3)
+            if all(wanted is None or wanted==bit for wanted,bit in zip(cube,(a,b,c)))}
+cubes={cube:frozenset(cube_points(cube)) for cube in product((None,0,1),repeat=3)}
+legal={cube:points for cube,points in cubes.items() if points and points<=on}
+primes={cube:points for cube,points in legal.items()
+        if not any(points<larger for larger in legal.values())}
+expected_cubes=[(0,0,None),(0,None,0),(None,0,1),(None,1,0),(1,None,1),(1,1,None)]
+assert set(primes)==set(expected_cubes)
+prime_points=[primes[cube] for cube in expected_cubes]
+assert prime_points==[frozenset(x) for x in [{0,1},{0,2},{1,5},{2,6},{5,7},{6,7}]]
+assert all(sum(point in covered for covered in prime_points)==2 for point in on)
+covers=[selection for count in range(1,7) for selection in combinations(range(6),count)
+        if set().union(*(prime_points[i] for i in selection))==on]
+assert min(map(len,covers))==3
+assert {c for c in covers if len(c)==3}=={(0,3,4),(1,2,5)}
+minimal=(0,1,4,5)
+assert minimal in covers and all(
+    set().union(*(prime_points[i] for i in minimal if i!=removed))!=on
+    for removed in minimal)
+
+def equality_bdd(order):
+    unique={};nodes={}
+    def descend(level,assignment):
+        if level==4:
+            return int(assignment['a']==assignment['b'] and assignment['c']==assignment['d'])
+        variable=order[level]
+        low=descend(level+1,{**assignment,variable:0})
+        high=descend(level+1,{**assignment,variable:1})
+        if low==high:return low
+        key=(variable,low,high)
+        if key not in unique:
+            identifier=len(unique)+2;unique[key]=identifier;nodes[identifier]=key
+        return unique[key]
+    root=descend(0,{})
+    for bits in product((0,1),repeat=4):
+        values=dict(zip('abcd',bits));cursor=root
+        while cursor>1:
+            variable,low,high=nodes[cursor];cursor=high if values[variable] else low
+        assert cursor==int(bits[0]==bits[1] and bits[2]==bits[3])
+    counts={v:sum(node[0]==v for node in nodes.values()) for v in order}
+    return len(nodes),counts
+assert equality_bdd('abcd')==(6,{'a':1,'b':2,'c':1,'d':2})
+assert equality_bdd('acbd')==(9,{'a':1,'c':2,'b':4,'d':2})
+
+witnesses=[(x1,x2,x3) for x1,x2,x3 in product((0,1),repeat=3)
+           if (x1 or x2) and ((not x1) or x2) and (x1 or (not x3))]
+assert witnesses==[(0,1,0),(1,1,0),(1,1,1)]
+assert all(x2==1 for x1,x2,x3 in witnesses)
+assert not any(not x2 for x1,x2,x3 in witnesses)
+
+assert [not bool(a) for a in (0,1)]==[True,False]
+for other in (0,1):
+    nand=[not bool(a and other) for a in (0,1)]
+    xor=[bool(a ^ other) for a in (0,1)]
+    assert nand==([True,True] if other==0 else [True,False])
+    assert xor==([False,True] if other==0 else [True,False])
+assert F(80,100)+F(18,100)+F(8,100)==F(106,100)
+assert F(60,100)+F(25,100)+F(5,100)==F(90,100)
+early=min(F(17,100)+F(6,100),F(24,100)+F(6,100))
+late=max(F(110,100)+F(25,100),F(90,100)+F(25,100))
+assert early==F(23,100) and late==F(135,100)
+assert F(190,100)-late==F(55,100)
+assert early-F(30,100)==-F(7,100)
+assert late-F(30,100)==F(105,100)
+
+edge_train={'rise':[10*n for n in range(-2,4)],'fall':[10*n+4 for n in range(-2,4)]}
+timing=[]
+for launching,capturing,launch in [('rise','fall',0),('fall','rise',4)]:
+    capture=min(t for t in edge_train[capturing] if t>launch)
+    next_launch=min(t for t in edge_train[launching] if t>capture)
+    setup_gap=capture-launch;hold_gap=next_launch-capture
+    setup=setup_gap-F(20,100)-F(290,100)-F(30,100)
+    hold=hold_gap+F(8,100)+F(12,100)-F(10,100)
+    timing.append((setup_gap,setup,hold_gap,hold))
+assert timing==[(4,F(60,100),6,F(610,100)),(6,F(260,100),4,F(410,100))]
+def absolute_hold(launch_latency,capture_latency,uncertainty):
+    new_arrival=10+launch_latency+F(8,100)+F(12,100)
+    boundary=4+capture_latency+F(10,100)+uncertainty
+    return new_arrival-boundary
+baseline=absolute_hold(F(2,10),F(4,10),F(1,10))
+assert baseline==F(58,10)
+assert absolute_hold(F(2,10),F(5,10),F(1,10))==baseline-F(1,10)
+assert absolute_hold(F(2,10),F(4,10),F(2,10))==baseline-F(1,10)
+assert absolute_hold(F(3,10),F(4,10),F(1,10))==baseline+F(1,10)
+assert 4-F(45,10)==-F(5,10) and 6-3==3
+print('PASS: recurrence schedule; NAND polarity; gated-clock timeline; Tcl argument '
+      'boundaries; asymmetric speculation; all residual-cover primes and optimums; '
+      'BDD orders and truth tables; all CNF witnesses; arc polarity; max/min arrival '
+      'propagation; mixed-edge setup/hold pairing and pulse-width margins')

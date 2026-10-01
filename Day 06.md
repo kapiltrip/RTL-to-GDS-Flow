@@ -122,6 +122,41 @@ For the specified waveform, rising edges occur at 0, 10 and 20 time units; falli
 
 For the first pair, assume launch latency 0.2, capture latency 0.4, maximum clock-to-Q 0.3, data delay 2.5, setup 0.5 and setup uncertainty 0.2 in the same time unit. Arrival is $0.2+0.3+2.5=3.0$; required time is $4+0.4-0.5-0.2=3.7$; slack is +0.7. Substituting the period 10 for the actual capture edge would overstate the slack by six units. Edge selection comes before the usual arrival/deadline subtraction.
 
+#### A period alone does not specify pulse widths
+
+The same waveform has a four-unit high interval and six-unit low interval. Suppose a destination cell requires a minimum high pulse of 4.5 and a minimum low pulse of 3.0 in these units. The modeled high-pulse margin is $4-4.5=-0.5$, while the low-pulse margin is $6-3=+3$. Passing setup and hold alone does not establish that this separate clock requirement passes.
+
+A waveform with edges at 0 and 5 would have the same period but different high/low durations and mixed-edge setup budgets. Such a model is valid only if it represents the intended clock. Altering a waveform declaration to improve a report does not change the physical pulse delivered to a register. The clock definition in B-09 supplies event locations; the characterized destination requirements determine whether those events and pulse durations are acceptable.
+
+#### Derive the hold pairing for the same mixed-edge paths
+
+For the existing ten-unit clock with rising edges at 0 and 10 and falling edges at 4 and 14, a rising-to-falling path launches old data at 0 for capture at 4. Hold asks whether the next data launched at 10 can reach that destination too soon after its capture at 4. The source and destination edges are separated by six units for this hold comparison. Equivalently, translate both edges back one period and compare launch at 0 with the preceding falling capture at -6.
+
+For a falling-to-rising path, old data launches at 4 for capture at 10. The next falling launch at 14 is four units after that capture, giving the complementary hold separation. The same edge schedule must be used consistently; substituting the setup separation into the hold comparison swaps these two gaps.
+
+To include latency and uncertainty, let $E_{L,next}$ be the nominal next-data launch edge and $E_C$ the nominal capture edge. Let $L$ and $C$ be their respective clock latencies and $u_H$ the positive hold uncertainty. Then:
+
+$$
+A_{new,min}=E_{L,next}+L+t_{CQ,min}+d_{min}
+$$
+
+$$
+R_{hold}=E_C+C+t_H+u_H
+$$
+
+Hold slack is $A_{new,min}-R_{hold}$. The new data must arrive at or after the protected boundary. Positive $C-L$ moves capture later relative to launch and reduces this margin; increasing $u_H$ extends the protected interval and also reduces it. Both signs follow from the absolute event times.
+
+For a numerical comparison, assume ideal zero-latency clocks, no uncertainty, maximum clock-to-Q 0.20, maximum data delay 2.90, setup 0.30, minimum clock-to-Q 0.08, minimum data delay 0.12 and hold 0.10, all in the same arbitrary time unit. These assumptions differ from the preceding skewed-clock example and isolate edge geometry.
+
+| Path | Setup separation | Setup slack | Next-launch gap after capture | Hold slack |
+|---|---|---|---|---|
+| Rising to falling | 4 | 4 - 0.20 - 2.90 - 0.30 = +0.60 | 6 | 6 + 0.08 + 0.12 - 0.10 = +6.10 |
+| Falling to rising | 6 | 6 - 0.20 - 2.90 - 0.30 = +2.60 | 4 | 4 + 0.08 + 0.12 - 0.10 = +4.10 |
+
+The hold margins are large because the next launching edge is several units later than capture, not because the combinational path is intrinsically slow.
+
+Draw the old-data launch, capture and next-data launch before substituting numbers. Setup uses the latest old-data arrival before capture; hold uses the earliest new-data arrival after capture. A report's edge pairing and data-event identity are part of the calculation, rather than labels that can be omitted once the delays are known.
+
 ### B-10: Generated clocks, latency and model versus hardware
 
 [![Handwritten Scan B, PDF page 10](Resources/sources/handwritten/scan-b/h10.jpg)](#day-06-index)

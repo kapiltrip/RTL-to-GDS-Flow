@@ -324,9 +324,31 @@ If select arrives at 7 ns, operands at 0 ns, mux delay is 1 ns and adder delay i
 
 The nine-bit sum in the lecture diagram preserves carry for two unsigned eight-bit operands. Declaring an eight-bit destination truncates that carry. A structurally correct transformation must retain the original width and signedness semantics. Compare equivalent expressions at the same precision before evaluating their timing.
 
-Finally, the adder symbol is an internal word-level operator. Its ripple, carry-lookahead or other implementation is selected later under tool and library constraints. The picture alone cannot justify a numerical gate delay or guarantee the final area.
+The adder is a word-level operator whose ripple, carry-lookahead or other implementation depends on tool and library constraints. The drawing establishes neither measured gate delay nor final area.
 
-If every data operand arrives at time $t_D$, select arrives at $t_S$, and the illustrative mux and adder delays are $d_M$ and $d_A$, the shared path arrives at $\max(t_D,t_S)+d_M+d_A$. The speculative path arrives at $\max(t_D+d_A,t_S)+d_M$. When $t_S\ge t_D+d_A$, speculation removes the adder delay from the select-to-result path, saving $d_A$. When select arrives before the operands, both expressions reduce to $t_D+d_A+d_M$. This derives the late-select benefit and the early-select limit from dependency order rather than from operator count.
+With common operand arrival $t_D$, select arrival $t_S$, equal mux delay $d_M$ and adder delay $d_A$, sufficiently late select $t_S\ge t_D+d_A$ saves $d_A$ through speculation. For $t_S\le t_D$, both architectures arrive at $t_D+d_A+d_M$. These bounds explain the late-select benefit and early-select limit.
+
+#### Include the output-mux cost in the timing comparison
+
+Allow input and output mux delays $d_{in}$ and $d_{out}$ to differ: the latter selects completed sums and can see a different load. Retaining the same operand/select arrivals and adder delay gives:
+
+$$
+t_{shared}=\max(t_D,t_S)+d_{in}+d_A
+$$
+
+$$
+t_{spec}=\max(t_D+d_A,t_S)+d_{out}
+$$
+
+For illustrative delays $d_{in}=0.6$ ns, $d_{out}=1.8$ ns and $d_A=2.4$ ns, compare the same output precision and required function:
+
+| Operand arrival | Select arrival | Shared result arrival | Speculative result arrival | Consequence |
+|---|---|---|---|---|
+| 0 ns | 7 ns | 10.0 ns | 8.8 ns | Speculation saves 1.2 ns |
+| 8 ns | 0 ns | 11.0 ns | 12.2 ns | Speculation loses 1.2 ns |
+| 2 ns | 3 ns | 6.0 ns | 6.2 ns | Output-mux cost outweighs the benefit |
+
+For sufficiently late select, the saving is $d_A+d_{in}-d_{out}$, rather than necessarily the entire adder delay. For select earlier than the operands, the difference depends on the two mux delays. These numbers are analytical assumptions, not characterized cell measurements. The transformation in A-09 is useful when the relevant timing paths benefit enough to justify the extra arithmetic and selection cost; its drawn parallelism alone is insufficient evidence.
 
 ### A-10: Compiler-style optimization and arithmetic limits
 
@@ -447,6 +469,25 @@ First check legality: for example, x2'x3 covers 001 and 101, both ON, and no OFF
 Source for the restored chart: [Logic Optimization I lecture](https://www.youtube.com/watch?v=xL6VvlsKrjk), lecture-material slide 18. For a different chart, establish ON/OFF/DC identities, generate legal prime columns, fill every mark, select essentials, solve the remaining coverage problem and finally verify every required ON and OFF assignment.
 
 Distinguish **minimal** from **minimum**. A minimal cover has no whole selected term that can be removed while preserving the required coverage. A minimum cover has the best stated cost among all legal covers. Several irredundant covers can have different term or literal counts. “No cube is contained in one other cube” is a weaker condition: several other cubes together may make a selected cube removable.
+
+#### An irredundant cover can still cost more
+
+To make the distinction testable, consider a separate fully labeled practice function with ON-set $\{0,1,2,5,6,7\}$, OFF-set $\{3,4\}$ and no don't-cares, using $a,b,c$ bit order. This function is an additional example, rather than an interpretation of an unlabeled handwritten sketch. Its six primes are $P=\overline{a}\,\overline{b}$, $Q=\overline{a}\,\overline{c}$, $R=\overline{b}c$, $S=b\overline{c}$, $T=ac$ and $U=ab$.
+
+| ON minterm | P | Q | R | S | T | U |
+|---|---|---|---|---|---|---|
+| 0 | 1 | 1 | 0 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 1 | 0 | 0 | 0 |
+| 2 | 0 | 1 | 0 | 1 | 0 | 0 |
+| 5 | 0 | 0 | 1 | 0 | 1 | 0 |
+| 6 | 0 | 0 | 0 | 1 | 0 | 1 |
+| 7 | 0 | 0 | 0 | 0 | 1 | 1 |
+
+Every row has two covering primes, so there is no essential prime. The cover $P+Q+T+U$ uses four terms. Within that selected cover, minterms 1, 2, 5 and 6 uniquely require P, Q, T and U, respectively. Removing any selected term loses a required assignment; the cover is minimal.
+
+Nevertheless, $P+S+T$ and $Q+R+U$ cover the same ON-set with three terms. Every legal prime covers only two ON assignments, so two terms can cover at most four of the six required points. Three is therefore the minimum term count. Since all six primes contain two literals, the minimum covers also use six literal occurrences, compared with eight in the four-term minimal cover.
+
+Improvement requires replacing terms, not merely deleting one from the existing selection. This is why a cleanup that removes individually redundant terms need not solve the global cover problem. State the cost being minimized, retain the OFF-set legality check, and distinguish a local irredundancy test from a proof of minimum cost.
 
 The statement labeled **Quine's theorem** on A-13 says that a minimum cover can be chosen entirely from prime implicants. For the conventional term/literal objective, expand each nonprime term to a containing legal prime: required coverage is retained, no OFF point is introduced, and literal count does not increase. The optimization cost must still be specified: terms first, literals, or a mapped-cell cost need not rank implementations identically. The lecture's transition to multilevel optimization follows from this limitation; two nominal logic levels do not guarantee the lowest physical delay under fan-in and wire-load constraints.
 

@@ -221,6 +221,21 @@ The bottom sketch is a separate decision-tree exercise. Do not infer that its te
 
 The lecture's source reference is [Bryant's paper on graph-based Boolean-function algorithms](https://www.cs.cmu.edu/~bryant/pubdir/ieeetc86.pdf), which establishes the role of reduction and ordering in canonical representation.
 
+#### Count the effect of variable order on the same function
+
+Consider an additional binary example $g=(a\leftrightarrow b)\land(c\leftrightarrow d)$: both input pairs must agree. Use ordinary low/high edges without complemented-edge encoding, and exclude the two terminals from node counts.
+
+| Variable order | Nonterminal nodes by tested variable | Total |
+|---|---|---:|
+| a, b, c, d | a: 1; b: 2; c: 1; d: 2 | 6 |
+| a, c, b, d | a: 1; c: 2; b: 4; d: 2 | 9 |
+
+For the first order, choosing a leaves either the requirement $b=0$ or $b=1$, explaining the two b nodes. A mismatch terminates at zero. Either successful match reaches the same remaining function $c\leftrightarrow d$, so the two successful branches share one c node and its two d alternatives. There is no need to remember a once its equality has been checked.
+
+For the second order, both a and c are read before either equality is resolved. Their four combinations leave four distinct remaining functions: $\overline{b}\,\overline{d}$, $\overline{b}d$, $b\overline{d}$ and $bd$. Their b nodes cannot merge because their corresponding successors differ. The d tests can still be shared, giving two d nodes. The larger graph records unresolved information for longer; it represents the same truth table.
+
+These counts are obtained by applying the two reduction rules, not by changing the Boolean function. They illustrate the order sensitivity described in [Bryant's original BDD paper](https://www.cs.cmu.edu/~bryant/pubdir/ieeetc86.pdf). A reduced graph is canonical for its chosen order, while its node count remains conditional on that order and representation convention.
+
 ### A-21, upper section: ROBDD limitations
 
 **ROBDD means Reduced Ordered Binary Decision Diagram.** Its canonical form is conditional on a fixed variable order. In a shared BDD manager using that order, equality of canonical roots can establish function equality. Different orders can produce different graph sizes for the same function, so a visual comparison of diagrams built with different orders is not that equality test.
@@ -320,6 +335,21 @@ For `(x1+x2)(x1'+x3)(x1'+x3')`, deciding x1=1 forces both x3=1 and x3=0, a confl
 The course defines k-SAT with **at most k literals per clause**. Some texts use exactly k with appropriate conventions; state the convention. The course's 2-SAT case has polynomial algorithms, while general 3-SAT is NP-complete. This worst-case classification does not predict how long a particular circuit instance will take.
 
 The DPLL name expands to Davis–Putnam–Logemann–Loveland. Its central pattern is decision, implication, conflict detection and backtracking. Modern improvements refine this search. The page's CNF explanation is useful because all-zero clauses expose conflicts immediately.
+
+#### Derive all witnesses for the handwritten CNF
+
+Return to $F=(x_1+x_2)(\overline{x_1}+x_2)(x_1+\overline{x_3})$. If $x_2=0$, the first clause forces $x_1=1$ while the second forces $x_1=0$. That branch conflicts. Resolving the first two clauses on $x_1$ gives the consequence $x_2$, expressing why every satisfying assignment must instead have $x_2=1$.
+
+With $x_2=1$, both first clauses are satisfied. The remaining requirement is $x_1+\overline{x_3}$. Its only false assignment is $x_1=0,x_3=1$. The complete witness set in $x_1,x_2,x_3$ order is therefore $\{010,110,111\}$.
+
+| Stage | Consequence | Result interpretation |
+|---|---|---|
+| Try x2 = 0 | Simultaneously requires x1 = 1 and x1 = 0 | This decision branch has no witness |
+| Set x2 = 1 | First two clauses become true | Continue with the remaining clause |
+| Set x1 = 0 | Remaining clause forces x3 = 0 | Witness 010 |
+| Set x1 = 1 | Remaining clause is true for either x3 | Witnesses 110 and 111 |
+
+The decision conflict eliminates a subset of the search space; the surviving assignments establish SAT. If the formula additionally contained the unit clause $\overline{x_2}$, the derived requirement $x_2$ would contradict a requirement of the formula itself, establishing UNSAT. Compare these two scopes before interpreting a solver's conflict message or using its result as verification evidence.
 
 #### Encoding one circuit gate as CNF
 

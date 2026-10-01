@@ -641,6 +641,22 @@ Widths also affect correctness. Unsigned four-bit inputs range from 0 to 15. Eac
 
 **Reproduce it:** label two transactions with different letters and overlap their schedules. Identify the registers holding each product before the adder reads them. A schedule is incomplete if it computes the right expression but combines products from different requests.
 
+#### A feedback dependency can limit throughput despite spare hardware
+
+The resource bound above concerns independent requests. A feedback computation adds a different restriction: an operation can need the result of a preceding iteration. Consider the illustrative running sum $s_{n+1}=s_n+x_n$, initialized with $s_0=0$. Assume the selected adder accepts independent operands every cycle but returns each sum three cycles after acceptance. The next update needs that returned state, so this particular recurrence cannot start its next addition after only one cycle.
+
+| Update | State consumed | New input | Earliest start cycle | Result available at cycle | Updated state |
+|---|---:|---:|---:|---:|---:|
+| 0 | 0 | 2 | 0 | 3 | 2 |
+| 1 | 2 | 3 | 3 | 6 | 5 |
+| 2 | 5 | 4 | 6 | 9 | 9 |
+
+These are cycle-boundary assumptions for a teaching schedule, with no overflow. Although the adder can accept independent work in cycles 1 and 2, the state required for update 1 is unavailable until cycle 3. A second adder does not manufacture the missing state. Starting update 1 with the old zero would compute 3 rather than the required cumulative value 5.
+
+If a recurrence produces a value after $L$ cycles and its consumer is $d$ iterations later, starts separated by an initiation interval $II$ must satisfy $d\,II\ge L$. Hence its dependency bound is $II\ge\lceil L/d\rceil$. Here $L=3$ and $d=1$, giving a lower bound of three. Resource capacity, dependencies and interfaces all impose bounds; satisfying one does not establish the achieved interval. [AMD's loop-dependency guide](https://docs.amd.com/r/2021.1-English/ug1399-vitis-hls/Loop-Dependencies) explains why a later iteration may have to wait for an earlier computation.
+
+This distinction also clarifies the feedback adder on Part 1 page 14. Identify when a stored partial result is valid before assigning the next operation to a cycle. Reorganizing an algorithm can sometimes change a dependence, but merely ignoring a genuine dependence changes the computation.
+
 ### Paths and the clock-period budget
 
 [![Launch and capture flip-flops connected by combinational logic](Resources/images/Day%2001/Lesson%2004/02-timing.png)](#lesson-index)
@@ -980,6 +996,18 @@ A stronger inverter can drive a larger load with less output delay, but its inpu
 **Equivalence checking** verifies that intended behavior survives transformation. Timing analysis checks the modeled temporal constraints. Neither check replaces the other. The resulting netlist proceeds into physical implementation, with test-related transformations included where the flow requires them.
 
 [Back to lesson index](#lesson-index) · [Repository guide](README.md)
+
+#### Preserve polarity when mapping a Boolean function
+
+For the fully specified binary function $F=ab+cd$, define two NAND outputs $n_1=\overline{ab}$ and $n_2=\overline{cd}$. A final NAND implements:
+
+$$
+F=\overline{n_1n_2}=\overline{\overline{ab}\,\overline{cd}}=ab+cd
+$$
+
+The final inversion is part of the equivalence. Connecting the first two NAND outputs to an OR instead would give $\overline{ab}+\overline{cd}$, a different function. At $a=b=c=d=0$, the required output is zero, whereas that incorrect connection produces one. This single counterexample exposes a polarity error that a plausible gate drawing can hide.
+
+Two ANDs followed by an OR and three NANDs are both legal three-cell descriptions if those cells exist in the library. A compound cell implementing the same function may provide another covering choice. The Boolean proof establishes functional legality, while characterized arcs, input capacitances, output load and wiring determine the physical cost. A mapper cannot conclude that the NAND covering is faster merely from its Boolean identity or its cell count. Apply this two-step reasoning to the generic-gate question on Part 1 page 16: first establish the function, then compare its available implementations under the same constraints.
 
 ### Definitions and mechanisms in Lesson 06
 

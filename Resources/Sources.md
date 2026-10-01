@@ -147,5 +147,10 @@ The course uses two official NPTEL playlists: [early lessons and later physical-
 | [Bambu project](https://panda.dei.polimi.it/) | HLS tool and historical tutorial context |
 | [OpenSTA input overview](https://openroad.readthedocs.io/en/latest/main/src/sta/README.html) | Timing input roles |
 | [OpenSTA commands](https://opensta.readthedocs.io/en/latest/Commands/) | Clock, constraint and report syntax |
+| [AMD HLS loop dependencies](https://docs.amd.com/r/2021.1-English/ug1399-vitis-hls/Loop-Dependencies) | Iteration dependencies and their effect on scheduling |
+| [SKY130 clock-gating cell model](https://raw.githubusercontent.com/google/skywater-pdk-libs-sky130_fd_sc_hd/main/cells/dlclkp/sky130_fd_sc_hd__dlclkp.functional.v) | A concrete library clock-gating implementation |
+| [OpenSTA combinational-arc construction](https://github.com/The-OpenROAD-Project/OpenSTA/blob/master/liberty/LibertyBuilder.cc) | Timing sense and input/output transition-polarity matching |
 
 The lecture decks are retained locally for source review. Commands and numerics in the notes distinguish historical tutorial examples from current documentation. No installation or synthesis/STA result is inferred from merely viewing a tutorial.
+
+The additional worked derivations are checked by [the example checker](examples/check_new_study_examples.py): exhaustive Boolean assignments, independently generated prime covers and ROBDDs, executable Tcl argument handling, and recomputed scheduling and timing arithmetic. Assumed delays and pulse-width requirements are identified as teaching examples; they are not measured values from a characterized library or an executed ASIC flow.

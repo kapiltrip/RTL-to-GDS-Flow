@@ -41,6 +41,19 @@ All six PDFs now use concise lecture/source captions and formal technical prose.
 
 The expanded example checker exhaustively verifies the priority function, gate clauses, FSM refinement, cutpoint invariant and fanout example. It also recomputes the new numeric results, checks the reachability fixed point and executes the Tcl substitution cases. These are checks of the stated teaching models, not reports of an executed complete ASIC flow.
 
+## Additional depth iteration
+
+Each day now contains two further worked explanations beside the relevant source discussion:
+
+- Day 01: derives a feedback-limited HLS initiation interval from an explicit schedule, then proves a NAND mapping by preserving inversion polarity.
+- Day 02: traces the extra clock edge produced by a changing enable during the high phase, then demonstrates how Tcl lists preserve a filename containing spaces as one argument.
+- Day 03: includes different input/output mux delays in the speculation comparison, then constructs an irredundant four-term cover that costs more than either three-term optimum.
+- Day 04: counts ordinary ROBDD nodes for two variable orders of the same function, then derives every satisfying assignment of the handwritten CNF rather than stopping at one witness.
+- Day 05: follows rising/falling polarity through sensitized timing arcs, then propagates earliest and latest arrivals separately to expose a passing setup check alongside a failing hold check.
+- Day 06: calculates high/low pulse-width margins independently of period, then derives mixed-edge hold pairing from absolute events, including latency and uncertainty signs.
+
+The checker independently enumerates the legal primes and all selections for the new cover, constructs and evaluates both ROBDDs, and exhaustively checks the Boolean mappings and CNF witnesses. It also executes the Tcl list example, reproduces the clock-gating event trace, and recomputes the recurrence, mux, arc, arrival, pulse-width and mixed-edge timing results. The final visual pass checks every exported page, with full-page inspection of the new tables, formulas and paragraph breaks. Original handwritten pages and captured lecture frames are unchanged.
+
 ## What verification establishes
 
 The content review checks whether the explanation develops the mechanism, assumptions, calculations and corrections suggested by the source. Page counts and word counts alone do not establish depth. The daily notes retain examples and recall questions so revision involves reproducing reasoning rather than only recognizing terminology.
@@ -49,7 +62,7 @@ The maintained collection checker now verifies all 60 original page identities, 
 
 The small Boolean examples are checked exhaustively. For the restored chart, the example checker independently enumerates legal cubes and searches covers, verifying four primes and two minimum three-term covers. It also checks all assignments for the added UNSAT example. The executable Verilog/Tcl examples retain their stated checks. Tutorial command descriptions are not claims that a complete Yosys or OpenSTA flow has been run locally.
 
-The six exported PDFs contain **229 pages**. Every one of their **161 source-figure rectangles** and **229 footer rectangles** has a verified link to contents, and all **210 retained heading bookmarks** point to their matching sections. Exported-text/code and page-geometry checks pass. The final PDFs are visually reviewed, including the revised charts and margin explanations.
+The six exported PDFs contain **235 pages**. Every one of their **161 source-figure rectangles** and **235 footer rectangles** has a verified link to contents, and all **222 retained heading bookmarks** point to their matching sections. All 26 code blocks and native paragraphs pass exported-content checks; page-geometry checks report no issues. The final PDFs are visually reviewed, including the revised charts, derivations and margin explanations.
 
 ## Source limits retained honestly
 

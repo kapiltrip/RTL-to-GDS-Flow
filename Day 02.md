@@ -110,6 +110,24 @@ The high-priority clock note reflects its role in synchronous operation. Clock r
 
 **Clock gating** prevents unnecessary clock transitions from reaching inactive logic. The enable must be applied using a glitch-safe structure and verified behavior. A naive AND gate whose enable changes at the wrong time can create an unintended edge. Gating cells can be inserted at different points in an actual flow, so it should not be remembered as an operation that only ever occurs during CTS.
 
+#### Trace the unintended edge in a naive clock gate
+
+Assume a positive-edge-triggered destination and a clock high from 0 to 5 ns, low from 5 to 10 ns, then high again. The naive gate is $g=clk\land enable$. Let enable initially be zero and become one at 2 ns, while the clock is already high. The resulting gated clock rises at 2 ns even though no source-clock edge occurred then.
+
+| Time | Source clock | Enable | Naive AND output | Low-level latch state | Latch-gated output |
+|---|---:|---:|---:|---:|---:|
+| Before 0 ns | 0 | 0 | 0 | 0 | 0 |
+| 0 ns, source rising edge | 1 | 0 | 0 | 0 | 0 |
+| 2 ns, enable rises | 1 | 1 | 1 | 0 | 0 |
+| 5 ns, source falls | 0 | 1 | 0 | 1 | 0 |
+| 10 ns, next source rise | 1 | 1 | 1 | 1 | 1 |
+
+The naive circuit creates a three-nanosecond high pulse from 2 to 5 ns instead of passing a complete five-nanosecond source pulse. A destination may respond to the unexpected rising edge or violate its pulse-width requirements. If enable instead falls during a passed high pulse, the same AND structure can shorten that pulse. Functional inactivity does not justify creating an arbitrary clock event.
+
+In the ideal latch-based arrangement, the enable latch is transparent while the clock is low and holds its value while the clock is high. Its output therefore remains zero throughout the first high interval. It captures one during the following low interval and permits the complete pulse beginning at 10 ns. The [SKY130 clock-gating cell model](https://raw.githubusercontent.com/google/skywater-pdk-libs-sky130_fd_sc_hd/main/cells/dlclkp/sky130_fd_sc_hd__dlclkp.functional.v) provides a concrete library example; actual cells also have characterized gating checks and implementation requirements.
+
+The table assumes initialized latch state and ignores analog delay. An asynchronous enable still requires an appropriate synchronization and control design; a gating latch alone does not establish that requirement. Part 1 page 19's clock-gating reminder therefore concerns safe event generation as well as reducing switching activity.
+
 ### Global routing detailed routing and closure
 
 [![Detailed routing chooses actual wires and vias within the planned regions](Resources/images/Day%2002/Lesson%2007/03-routing.png)](#lesson-index)
@@ -500,6 +518,21 @@ foreach element $values {
 ```
 
 `foreach` receives the list value at loop entry and assigns each successive element to `element`. `lset` changes the named variable `values` at a zero-based index. `expr` performs arithmetic; `%` gives the integer remainder. The first negation leaves zero unchanged. The final list is `0 1 -2 3 -4 5 -6`. Modifying `values` does not rewrite the iteration list already supplied to this `foreach` invocation.
+
+#### Preserve argument boundaries in an automation command
+
+A path containing a space is one value even though its printed form contains several words. Tcl lists preserve that boundary. This standalone example constructs a copy command without executing it:
+
+```tcl
+set output {results/final netlist.v}
+set command [list file copy {netlists/top.v} $output]
+llength $command
+lindex $command 3
+```
+
+The command list has four elements: `file`, `copy`, `netlists/top.v` and the complete output path. The last two calls return `4` and `results/final netlist.v`, respectively. The space inside the final element does not create another argument. `list` applies the grouping needed to retain the supplied values; it does not run the command named by the first element.
+
+Tcl 8.6 argument expansion, written `{*}`, can later pass each list element as a separate command word. This is a different operation from treating an arbitrary constructed string as another script. For example, reparsing an ungrouped string containing the same output path would split it into separate words. The [Tcl syntax reference](https://www.tcl-lang.org/man/tcl8.6/TclCmd/Tcl.htm) distinguishes argument expansion, substitution and script evaluation. In EDA automation, check the command's actual arguments rather than assuming that a printed line preserves the intended file or object name.
 
 #### Trace the list instead of memorizing the output
 

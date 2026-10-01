@@ -89,6 +89,24 @@ The organization is library → cell → pin → timing or power groups. A cell 
 
 NLDM means **Nonlinear Delay Model**. Delay and output transition are separate functions of input transition and output load. Rise and fall tables may differ. Slew is commonly stored as transition time between specified voltage thresholds, for example 10% to 90%; it is not itself an arrival time. Propagation delay is measured between specified input/output threshold crossings. Read the library thresholds and units before comparing numbers from different models.
 
+#### Follow transition polarity through a timing arc
+
+Unateness describes how an input transition relates to an output transition when the relevant arc is sensitized. Positive-unate behavior preserves direction; negative-unate behavior reverses it. The term describes logical polarity, not the sign of propagation delay. A negative-unate arc still has a positive elapsed delay in an ordinary propagation example.
+
+| Cell function | Condition on the other input | Output response to an input rise |
+|---|---|---|
+| Inverter | No other input | Output falls |
+| Two-input NAND | Other input is 1 | Output falls |
+| Two-input NAND | Other input is 0 | Output remains 1; this input change is masked |
+| Two-input XOR | Other input is 0 | Output rises |
+| Two-input XOR | Other input is 1 | Output falls |
+
+The XOR's direction depends on its other input, so the function is non-unate in this input. [OpenSTA's combinational-arc construction](https://github.com/The-OpenROAD-Project/OpenSTA/blob/master/liberty/LibertyBuilder.cc) distinguishes these senses and associates the appropriate output rise/fall model with each arc.
+
+For a sensitized NAND followed by an inverter, suppose an input rise arrives at 0.80 ns. Illustrative NAND output-fall delay 0.18 ns gives an internal fall at 0.98 ns; inverter output-rise delay 0.08 ns gives a final rise at 1.06 ns. For a separate input-fall case arriving at 0.60 ns, NAND output-rise delay 0.25 ns followed by inverter output-fall delay 0.05 ns gives a final fall at 0.90 ns. These assumed delays illustrate arc selection and addition. A real lookup also uses the appropriate input slew, output load and corner at each stage.
+
+The two inversions restore the original transition direction, but they do not remove either stage's delay. A timing trace must keep the event polarity as well as the arrival value; selecting a rising-output table simply because the original input rose can query the wrong model.
+
 ### A small interpolation example
 
 Assume this authored delay table is in picoseconds, with input transition in ps and load in fF:
@@ -283,6 +301,21 @@ Keeping a late-arrival envelope and a large-slew envelope can make downstream gr
 The relationship between transition and delay is generally modeled by library tables and is often monotonic over a useful range, but it is not a universal linear law. Do not add slew duration directly to arrival time as if it were a separate propagation delay. Use slew to query the proper cell model, then add the resulting delay.
 
 **Recall check:** if a larger fanout increases output load, which quantities can change? Arc propagation delay and output transition can both change; downstream delays can then change because their input transition changed.
+
+#### Propagate earliest and latest arrivals separately
+
+For a particular eligible output transition, suppose a gate has two input arrival ranges. Input A can arrive from 0.17 to 1.10 ns and input B from 0.24 to 0.90 ns. Assume each relevant arc adds 0.06 ns in the minimum-delay analysis and 0.25 ns in the maximum-delay analysis. The candidates are:
+
+| Input route | Earliest output candidate | Latest output candidate |
+|---|---|---|
+| Via A | 0.17 + 0.06 = 0.23 ns | 1.10 + 0.25 = 1.35 ns |
+| Via B | 0.24 + 0.06 = 0.30 ns | 0.90 + 0.25 = 1.15 ns |
+
+The latest output bound is the maximum candidate, 1.35 ns. The earliest bound is the minimum candidate, 0.23 ns. These are separate analyses, not the two ends of a delay added to one chosen scalar arrival. The inputs and arc delays here are assumed graph bounds; the example does not claim that a single stimulus realizes every extremum simultaneously.
+
+With a latest acceptable setup arrival of 1.90 ns, setup slack is $1.90-1.35=+0.55$ ns. With an earliest permitted new-data arrival of 0.30 ns for hold, hold slack is $0.23-0.30=-0.07$ ns. Using the latest arrival in the hold calculation would incorrectly report $1.35-0.30=+1.05$ ns and hide the fast-path failure.
+
+This is the operational reason for the max/min distinction in B-04 and B-05. Setup protects the old result's arrival before a deadline; hold protects it from being replaced too soon. Increasing the clock period can relax a next-edge setup deadline, but it does not necessarily change the same-edge hold boundary. Both arrival envelopes and their matching requirements must remain visible when reviewing a timing repair.
 
 ### B-06: Graph-based versus path-based analysis and timing margins
 
