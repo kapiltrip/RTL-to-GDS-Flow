@@ -1,6 +1,6 @@
 # Day 02 — Physical design, verification, fabrication, Tcl, and Verilog I–II
 
-[Repository guide](README.md) · [Day 1](Day%2001.md) · [Handwritten index](Resources/Handwritten%20Index.md) · [Questions and corrections](Resources/Questions.md)
+[Repository guide](../README.md) · [Day 1](Day%2001.md) · [Handwritten index](../Resources/Handwritten%20Index.md) · [Questions and corrections](../Resources/Questions.md)
 
 This is **study day 2**. It contains six course lessons, numbered separately from study days. Read one lesson or concept block at a time; each lesson keeps its lecture frames, explanations, handwritten snippets, and worked examples together.
 
@@ -19,7 +19,7 @@ Use each lesson’s outline for topic-level links. Source captions distinguish v
 
 ## Lesson 07: Overview of VLSI Design Flow IV — Physical design
 
-[Course index](README.md) · Week 2 · [Lecture video](https://www.youtube.com/watch?v=--wJOkCvn2M) · [Handwritten index](Resources/Handwritten%20Index.md)
+[Course index](../README.md) · Week 2 · [Lecture video](https://www.youtube.com/watch?v=--wJOkCvn2M) · [Handwritten index](../Resources/Handwritten%20Index.md)
 
 ### Lesson 07 outline
 
@@ -30,14 +30,14 @@ Use each lesson’s outline for topic-level links. Source captions distinguish v
 
 ### From connectivity to geometry
 
-[![Physical design adds placement, clock distribution, and routing](Resources/images/Day%2002/Lesson%2007/01-physical-flow.png)](#lesson-index)
+[![Physical design adds placement, clock distribution, and routing](../Resources/images/Day%2002/Lesson%2007/01-physical-flow.png)](#lesson-index)
 
 *Lecture: [10:56](https://www.youtube.com/watch?v=--wJOkCvn2M&t=656s). Physical design adds placement, clock distribution, and routing*
 
 
 **Physical design** converts a logical netlist into manufacturable layout geometry. The logical netlist says which pins connect; physical implementation chooses where instances sit and how metal and vias realize those connections. The tool also changes the implementation where needed, for example by inserting buffers or selecting different cell sizes, while preserving the required behavior.
 
-[![Kapil’s handwritten notes — Part 1, PDF page 17](Resources/images/Day%2002/Lesson%2007/h01-physical.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 17](../Resources/images/Day%2002/Lesson%2007/h01-physical.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 17.*
 
@@ -61,7 +61,7 @@ LEF stands for **Library Exchange Format**. It is deliberately an abstract physi
 
 **Utilization** is meaningful only with a stated denominator. A common early estimate divides standard-cell area by the available placement area. If cells occupy 0.60 mm² and the usable row area is 1.00 mm², utilization is 60%. The remaining space is not simply wasted: it provides flexibility for placement, buffers, clock cells, routing access, and later fixes. Excessively dense placement can cause congestion and timing detours.
 
-[![Kapil’s handwritten notes — Part 1, PDF page 18](Resources/images/Day%2002/Lesson%2007/h02-floorplan.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 18](../Resources/images/Day%2002/Lesson%2007/h02-floorplan.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 18.*
 
@@ -90,7 +90,7 @@ Moving cells apart can reduce demand concentration, while moving a macro can ope
 
 ### Clock tree synthesis
 
-[![Clock arrival times differ because the distribution network has delay](Resources/images/Day%2002/Lesson%2007/02-cts.png)](#lesson-index)
+[![Clock arrival times differ because the distribution network has delay](../Resources/images/Day%2002/Lesson%2007/02-cts.png)](#lesson-index)
 
 *Lecture: [32:49](https://www.youtube.com/watch?v=--wJOkCvn2M&t=1969s). Clock arrival times differ because the distribution network has delay*
 
@@ -101,7 +101,7 @@ Moving cells apart can reduce demand concentration, while moving a macro can ope
 
 Symmetric topology and balanced electrical loading can reduce skew, but equal drawn wire lengths alone do not guarantee equal delays. Cell delays, loading, parasitics, and variation matter. The introductory goal is small skew; practical timing optimization can also use controlled useful skew under explicit setup and hold analysis.
 
-[![Kapil’s handwritten notes — Part 1, PDF page 19](Resources/images/Day%2002/Lesson%2007/h03-cts-routing.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 19](../Resources/images/Day%2002/Lesson%2007/h03-cts-routing.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 19.*
 
@@ -130,7 +130,7 @@ The table assumes initialized latch state and ignores analog delay. An asynchron
 
 ### Global routing detailed routing and closure
 
-[![Detailed routing chooses actual wires and vias within the planned regions](Resources/images/Day%2002/Lesson%2007/03-routing.png)](#lesson-index)
+[![Detailed routing chooses actual wires and vias within the planned regions](../Resources/images/Day%2002/Lesson%2007/03-routing.png)](#lesson-index)
 
 *Lecture: [41:13](https://www.youtube.com/watch?v=--wJOkCvn2M&t=2473s). Detailed routing chooses actual wires and vias within the planned regions*
 
@@ -139,7 +139,7 @@ The table assumes initialized latch state and ignores analog delay. An asynchron
 
 Routing seeks legal connectivity and suitable timing while managing wire length, via count, and congestion. More vias can add resistance and physical constraints; a long detour can worsen delay. After routing, extraction provides more realistic parasitic resistance and capacitance than early estimates, allowing timing and signal-integrity checks to be repeated.
 
-[![Kapil’s handwritten notes — Part 1, PDF page 20, right-side ECO notes](Resources/images/Day%2002/Lesson%2007/h04-eco.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 20, right-side ECO notes](../Resources/images/Day%2002/Lesson%2007/h04-eco.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 20, right-side ECO notes.*
 
@@ -150,7 +150,7 @@ An **engineering change order (ECO)** is a controlled implementation change, oft
 
 **Recall checks:** Can a netlist have correct connectivity but an unroutable placement? Can two clock sinks have equal latency but nonzero skew? Which checks must be revisited after inserting a buffer on a timing-critical net?
 
-[Back to lesson index](#lesson-index) · [Repository guide](README.md)
+[Back to lesson index](#lesson-index) · [Repository guide](../README.md)
 
 ### Definitions and mechanisms in Lesson 07
 
@@ -174,7 +174,7 @@ Physical implementation uses compatible cell abstracts, technology data and cons
 
 ## Lesson 08: Overview of VLSI Design Flow V — Verification and test
 
-[Course index](README.md) · Week 2 · [Lecture video](https://www.youtube.com/watch?v=g6ElOGlF3bs) · [Handwritten index](Resources/Handwritten%20Index.md)
+[Course index](../README.md) · Week 2 · [Lecture video](https://www.youtube.com/watch?v=g6ElOGlF3bs) · [Handwritten index](../Resources/Handwritten%20Index.md)
 
 ### Lesson 08 outline
 
@@ -187,7 +187,7 @@ Physical implementation uses compatible cell abstracts, technology data and cons
 
 ### Verification simulation and formal methods
 
-[![Compare a design response against the expected response for the same stimulus](Resources/images/Day%2002/Lesson%2008/01-simulation.png)](#lesson-index)
+[![Compare a design response against the expected response for the same stimulus](../Resources/images/Day%2002/Lesson%2008/01-simulation.png)](#lesson-index)
 
 *Lecture: [9:05](https://www.youtube.com/watch?v=g6ElOGlF3bs&t=545s). Compare a design response against the expected response for the same stimulus*
 
@@ -196,7 +196,7 @@ Physical implementation uses compatible cell abstracts, technology data and cons
 
 In **simulation**, a simulator evaluates the design under supplied input events. A testbench applies stimulus and checks the observed response against an expected result or reference model. Stimulus includes ordering and time, not just an unordered list of zeros and ones. A sequential design's output can depend on earlier inputs and reset history.
 
-[![Kapil’s handwritten notes — Part 1, PDF page 20, verification portion](Resources/images/Day%2002/Lesson%2008/h01-verification.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 20, verification portion](../Resources/images/Day%2002/Lesson%2008/h01-verification.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 20, verification portion.*
 
@@ -211,13 +211,13 @@ Passing a finite collection of simulation tests establishes agreement for those 
 
 ### Timing and physical verification
 
-[![Physical verification complements functional and timing checks](Resources/images/Day%2002/Lesson%2008/02-physical-checks.png)](#lesson-index)
+[![Physical verification complements functional and timing checks](../Resources/images/Day%2002/Lesson%2008/02-physical-checks.png)](#lesson-index)
 
 *Lecture: [25:42](https://www.youtube.com/watch?v=g6ElOGlF3bs&t=1542s). Physical verification complements functional and timing checks*
 
 Physical verification asks whether the manufactured geometry can implement the intended circuit under the selected technology rules. DRC checks geometry, LVS compares extracted devices and connections with a reference, and ERC checks electrical rules. Timing analysis answers a separate question: whether signals can arrive and remain stable when required.
 
-[![Kapil’s handwritten notes — Part 1, PDF page 21](Resources/images/Day%2002/Lesson%2008/h02-signoff.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 21](../Resources/images/Day%2002/Lesson%2008/h02-signoff.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 21.*
 
@@ -238,7 +238,7 @@ The LVS wording “functionally equal” is understandable, but the concrete che
 
 ### Defects faults and test patterns
 
-[![A tester applies patterns and compares the measured chip response with an expected response](Resources/images/Day%2002/Lesson%2008/05-test-patterns.png)](#lesson-index)
+[![A tester applies patterns and compares the measured chip response with an expected response](../Resources/images/Day%2002/Lesson%2008/05-test-patterns.png)](#lesson-index)
 
 *Lecture: [50:47](https://www.youtube.com/watch?v=g6ElOGlF3bs&t=3047s). Test patterns, expected responses, actual responses, and the pass/fail decision.*
 
@@ -246,7 +246,7 @@ Follow the two inputs to the comparison. One comes from the **actual fabricated 
 
 The probe card and needles provide electrical access at wafer test; the test program controls stimulus, timing, and measurements. “Match” therefore includes what is measured and when it is sampled. A mismatch is evidence that the tested setup did not meet the expectation. Diagnosis must still distinguish a device defect from an incorrect pattern, expectation, contact, or test condition. Passing means passing these specified tests, rather than proving the absence of every possible defect.
 
-[![Kapil’s handwritten notes — Part 1, PDF page 22](Resources/images/Day%2002/Lesson%2008/h03-defects.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 22](../Resources/images/Day%2002/Lesson%2008/h03-defects.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 22.*
 
@@ -278,13 +278,13 @@ Process variation, contamination, alignment error, and other mechanisms can affe
 
 ### Yield fault coverage and escapes
 
-[![Yield depends on die area, defect density, and defect clustering](Resources/images/Day%2002/Lesson%2008/03-yield.png)](#lesson-index)
+[![Yield depends on die area, defect density, and defect clustering](../Resources/images/Day%2002/Lesson%2008/03-yield.png)](#lesson-index)
 
 *Lecture: [47:24](https://www.youtube.com/watch?v=g6ElOGlF3bs&t=2844s). Yield depends on die area, defect density, and defect clustering*
 
 A yield model connects the fraction of acceptable dies with factors such as die area, relevant defect density, and defect clustering. Larger area usually exposes each die to more defect opportunities when the other factors are held fixed. The clustering parameter changes how those opportunities are distributed across dies; the model below makes those assumptions explicit.
 
-[![Kapil’s handwritten notes — Part 1, PDF page 23](Resources/images/Day%2002/Lesson%2008/h04-yield-coverage.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 23](../Resources/images/Day%2002/Lesson%2008/h04-yield-coverage.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 23.*
 
@@ -313,13 +313,13 @@ The arithmetic is correct under that assumption. The shortcut “50% fault cover
 
 ### Automatic test equipment and design for test
 
-[![Test quality affects which defective devices escape detection](Resources/images/Day%2002/Lesson%2008/04-ate.png)](#lesson-index)
+[![Test quality affects which defective devices escape detection](../Resources/images/Day%2002/Lesson%2008/04-ate.png)](#lesson-index)
 
 *Lecture: [55:40](https://www.youtube.com/watch?v=g6ElOGlF3bs&t=3340s). Test quality affects which defective devices escape detection*
 
 A test program screens manufactured devices by applying conditions and comparing responses. Its fault coverage describes a modeled fault population, while defect level describes bad devices among the devices that pass. The slide places those two quality measures side by side; they must not be treated as interchangeable percentages.
 
-[![Kapil’s handwritten notes — Part 1, PDF page 24, upper portion](Resources/images/Day%2002/Lesson%2008/h05-ate.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 24, upper portion](../Resources/images/Day%2002/Lesson%2008/h05-ate.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 24, upper portion.*
 
@@ -332,7 +332,7 @@ The bottom line of the final handwritten page begins “Functional Verification 
 
 **Recall checks:** Can a design pass LVS but fail timing? Can an incorrect RTL and its correctly synthesized netlist be equivalent? Why is fault coverage not interchangeable with yield?
 
-[Back to lesson index](#lesson-index) · [Repository guide](README.md)
+[Back to lesson index](#lesson-index) · [Repository guide](../README.md)
 
 ### Definitions and mechanisms in Lesson 08
 
@@ -356,7 +356,7 @@ Verification evidence identifies the design representation, requirements, stimul
 
 ## Lesson 09: Overview of VLSI Design Flow VI — From layout to chip
 
-[Course index](README.md) · Week 2 · [Lecture video](https://www.youtube.com/watch?v=BdIkRSzgV5I) · [Handwritten index](Resources/Handwritten%20Index.md)
+[Course index](../README.md) · Week 2 · [Lecture video](https://www.youtube.com/watch?v=BdIkRSzgV5I) · [Handwritten index](../Resources/Handwritten%20Index.md)
 
 ### Lesson 09 outline
 
@@ -366,14 +366,14 @@ Verification evidence identifies the design representation, requirements, stimul
 
 ### Mask data preparation and mask writing
 
-[![Mask manufacture patterns an absorbing film on a mask blank](Resources/images/Day%2002/Lesson%2009/01-mask.png)](#lesson-index)
+[![Mask manufacture patterns an absorbing film on a mask blank](../Resources/images/Day%2002/Lesson%2009/01-mask.png)](#lesson-index)
 
 *Lecture: [5:44](https://www.youtube.com/watch?v=BdIkRSzgV5I&t=344s). Mask manufacture patterns an absorbing film on a mask blank*
 
 
 Layout release is followed by manufacturing-data preparation. **Fracturing** breaks complex layout polygons into shapes supported by the selected mask-writing process. Resolution-enhancement processing can modify the mask geometry so the wafer result more closely matches the intended design. The manufactured mask therefore need not be a literal unchanged copy of every layout outline.
 
-[![Kapil’s handwritten notes — Part 1, PDF page 24, lower portion](Resources/images/Day%2002/Lesson%2009/h01-mask.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 24, lower portion](../Resources/images/Day%2002/Lesson%2009/h01-mask.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 24, lower portion.*
 
@@ -391,7 +391,7 @@ This manufactures the **mask**, which is subsequently used to expose resist on w
 
 ### Resolution enhancement
 
-[![Closely spaced features motivate resolution-enhancement methods](Resources/images/Day%2002/Lesson%2009/02-opc.png)](#lesson-index)
+[![Closely spaced features motivate resolution-enhancement methods](../Resources/images/Day%2002/Lesson%2009/02-opc.png)](#lesson-index)
 
 *Lecture: [13:33](https://www.youtube.com/watch?v=BdIkRSzgV5I&t=813s). Closely spaced features motivate resolution-enhancement methods*
 
@@ -400,7 +400,7 @@ This manufactures the **mask**, which is subsequently used to expose resist on w
 
 The lecture discusses 193 nm deep-ultraviolet lithography. This is one lithography technology; not all lithography uses that wavelength. Resolution depends on wavelength, numerical aperture, illumination, process, and computational enhancement. [ASML's lithography explanation](https://www.asml.com/en/technology/lithography-principles) provides the physical context.
 
-[![Kapil’s handwritten notes — Part 2, PDF page 1; handwritten page 24](Resources/images/Day%2002/Lesson%2009/h02-opc.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 2, PDF page 1; handwritten page 24](../Resources/images/Day%2002/Lesson%2009/h02-opc.jpg)](#lesson-index)
 
 *Source: Part 2, PDF page 1; handwritten page 24.*
 
@@ -431,7 +431,7 @@ Each group has more generous spacing, while the combined target remains dense. T
 
 ### Wafer fabrication packaging and screening
 
-[![A package provides electrical, thermal, and mechanical support](Resources/images/Day%2002/Lesson%2009/03-package.png)](#lesson-index)
+[![A package provides electrical, thermal, and mechanical support](../Resources/images/Day%2002/Lesson%2009/03-package.png)](#lesson-index)
 
 *Lecture: [22:57](https://www.youtube.com/watch?v=BdIkRSzgV5I&t=1377s). A package provides electrical, thermal, and mechanical support*
 
@@ -440,7 +440,7 @@ Wafer fabrication repeats many operations, including deposition, oxidation, lith
 
 After fabrication, wafer test identifies acceptable dies, the wafer is diced, and suitable dies proceed to packaging. A **package** provides external electrical connections, mechanical protection, and a thermal path. It also adds parasitic resistance, inductance, and capacitance, so it affects signal and power integrity. A **dual in-line package (DIP)** places leads along two sides; a **ball grid array (BGA)** uses a grid of solder-ball connections. Package choice is an electrical and thermal design decision as well as a mechanical one.
 
-[![Kapil’s handwritten notes — Part 2, PDF page 2, upper portion; handwritten page 25](Resources/images/Day%2002/Lesson%2009/h03-package.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 2, PDF page 2, upper portion; handwritten page 25](../Resources/images/Day%2002/Lesson%2009/h03-package.jpg)](#lesson-index)
 
 *Source: Part 2, PDF page 2, upper portion; handwritten page 25.*
 
@@ -453,7 +453,7 @@ The “heat dissipation” point means that generated heat must leave the die th
 
 **Recall checks:** Why can mask geometry differ from desired wafer geometry? How does multiple patterning change the spacing problem? Why is test repeated after packaging?
 
-[Back to lesson index](#lesson-index) · [Repository guide](README.md)
+[Back to lesson index](#lesson-index) · [Repository guide](../README.md)
 
 ### Definitions and mechanisms in Lesson 09
 
@@ -477,7 +477,7 @@ Mask preparation and wafer exposure are interpreted as separate operations. A co
 
 ## Lesson 10: Introduction to Tcl
 
-[Course index](README.md) · Week 2 · [Lecture video](https://www.youtube.com/watch?v=1fPNZstiL4o) · [Handwritten index](Resources/Handwritten%20Index.md)
+[Course index](../README.md) · Week 2 · [Lecture video](https://www.youtube.com/watch?v=1fPNZstiL4o) · [Handwritten index](../Resources/Handwritten%20Index.md)
 
 ### Lesson 10 outline
 
@@ -487,7 +487,7 @@ Mask preparation and wafer exposure are interpreted as separate operations. A co
 
 ### Commands variables and substitution
 
-[![Iterate over a list and negate its even elements](Resources/images/Day%2002/Lesson%2010/01-list.png)](#lesson-index)
+[![Iterate over a list and negate its even elements](../Resources/images/Day%2002/Lesson%2010/01-list.png)](#lesson-index)
 
 *Lecture: [3:11](https://www.youtube.com/watch?v=1fPNZstiL4o&t=191s). Iterate over a list and negate its even elements*
 
@@ -496,7 +496,7 @@ Mask preparation and wafer exposure are interpreted as separate operations. A co
 
 A Tcl command consists of a command name and words used as arguments. `set index -1` assigns the value `-1` to a variable named `index`. `$index` substitutes its value. Square brackets perform command substitution: `[expr {-$element}]` executes `expr` and substitutes its result. Braces group a word and suppress ordinary substitution at that parsing stage; the command receiving that word may later interpret it as an expression or script. Quotes group words while allowing substitutions.
 
-[![Kapil’s handwritten notes — Part 2, PDF page 2, Tcl snippet](Resources/images/Day%2002/Lesson%2010/h01-tcl.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 2, PDF page 2, Tcl snippet](../Resources/images/Day%2002/Lesson%2010/h01-tcl.jpg)](#lesson-index)
 
 *Source: Part 2, PDF page 2, Tcl snippet.*
 
@@ -571,7 +571,7 @@ The output is `60 500`. `return` ends this procedure invocation and provides its
 
 ### File channels and external commands
 
-[![The file-I/O example prints the text read back from its file](Resources/images/Day%2002/Lesson%2010/02-files.png)](#lesson-index)
+[![The file-I/O example prints the text read back from its file](../Resources/images/Day%2002/Lesson%2010/02-files.png)](#lesson-index)
 
 *Lecture: [7:13](https://www.youtube.com/watch?v=1fPNZstiL4o&t=433s). The file-I/O example prints the text read back from its file*
 
@@ -597,9 +597,9 @@ The final terminal output is `test` followed by the newline stored in the file. 
 
 **Practice:** change the list operation to square odd values. Trace the original value of `element`, the current `index`, and the updated list separately. Then modify `sum_product` so the caller selects either result using `lindex`.
 
-The repository contains [complete runnable Tcl examples](Resources/examples/tcl_basics.tcl).
+The repository contains [complete runnable Tcl examples](../Resources/examples/tcl_basics.tcl).
 
-[Back to lesson index](#lesson-index) · [Repository guide](README.md)
+[Back to lesson index](#lesson-index) · [Repository guide](../README.md)
 
 ### Definitions and mechanisms in Lesson 10
 
@@ -625,7 +625,7 @@ Source: [Tcl syntax and substitution rules](https://www.tcl-lang.org/man/tcl8.6/
 
 ## Lesson 11: Hardware Modeling — Introduction to Verilog I
 
-[Course index](README.md) · Week 3 · [Lecture video](https://www.youtube.com/watch?v=LOIqVrr9jGE) · [Handwritten index](Resources/Handwritten%20Index.md)
+[Course index](../README.md) · Week 3 · [Lecture video](https://www.youtube.com/watch?v=LOIqVrr9jGE) · [Handwritten index](../Resources/Handwritten%20Index.md)
 
 ### Lesson 11 outline
 
@@ -637,7 +637,7 @@ Source: [Tcl syntax and substitution rules](https://www.tcl-lang.org/man/tcl8.6/
 
 ### What a hardware description language must represent
 
-[![Bit-accurate values and resolved drivers are distinctive HDL features](Resources/images/Day%2002/Lesson%2011/01-hdl.png)](#lesson-index)
+[![Bit-accurate values and resolved drivers are distinctive HDL features](../Resources/images/Day%2002/Lesson%2011/01-hdl.png)](#lesson-index)
 
 *Lecture: [9:14](https://www.youtube.com/watch?v=LOIqVrr9jGE&t=554s). Bit-accurate values and resolved drivers are distinctive HDL features*
 
@@ -648,7 +648,7 @@ Hardware needs **concurrency**: two adders can respond to their inputs at the sa
 
 RTL describes state held in registers and the combinational transformations between them. It does not give every transistor's physical layout. Synthesis and physical design progressively supply those details. A delay written as `#10` in a testbench advances simulated time; it does not order the ASIC tool to manufacture a gate with exactly that delay.
 
-[![Kapil’s handwritten notes — Part 2, PDF page 2, lower HDL section](Resources/images/Day%2002/Lesson%2011/h01-hdl.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 2, PDF page 2, lower HDL section](../Resources/images/Day%2002/Lesson%2011/h01-hdl.jpg)](#lesson-index)
 
 *Source: Part 2, PDF page 2, lower HDL section.*
 
@@ -692,7 +692,7 @@ The last row shows a limit of four-state simulation: an unknown value is not a s
 
 ### Sized literals padding truncation and signed values
 
-[![Sized constants retain the declared number of bits](Resources/images/Day%2002/Lesson%2011/02-literals.png)](#lesson-index)
+[![Sized constants retain the declared number of bits](../Resources/images/Day%2002/Lesson%2011/02-literals.png)](#lesson-index)
 
 *Lecture: [33:10](https://www.youtube.com/watch?v=LOIqVrr9jGE&t=1990s). Sized constants retain the declared number of bits*
 
@@ -714,7 +714,7 @@ For the last row, start with six as `00000110`, invert to `11111001`, then add o
 
 Expression width matters before assignment. An eight-bit destination cannot recover information that was already discarded by a narrower intermediate operation. To calculate an unsigned eight-bit addition with its carry, explicitly widen both operands: `{1'b0, a} + {1'b0, b}` into a nine-bit destination. Unsized decimal constants are signed and at least 32 bits; mixing them with unsigned vectors can change extension and interpretation. Explicit widths and explicit intent make a design easier to review.
 
-[![Kapil’s handwritten notes — Part 2, PDF page 3, complete values and data-types page](Resources/images/Day%2002/Lesson%2011/h02-types.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 2, PDF page 3, complete values and data-types page](../Resources/images/Day%2002/Lesson%2011/h02-types.jpg)](#lesson-index)
 
 *Source: Part 2, PDF page 3, complete values and data-types page.*
 
@@ -739,7 +739,7 @@ For equality, `==` can return `x` when unknown or high-impedance bits make the c
 
 ### Nets variables vectors arrays and strings
 
-[![Net and variable types serve different modeling roles](Resources/images/Day%2002/Lesson%2011/03-types.png)](#lesson-index)
+[![Net and variable types serve different modeling roles](../Resources/images/Day%2002/Lesson%2011/03-types.png)](#lesson-index)
 
 *Lecture: [42:14](https://www.youtube.com/watch?v=LOIqVrr9jGE&t=2534s). Net and variable types serve different modeling roles*
 
@@ -773,7 +773,7 @@ Traditional types also include `integer` for a signed 32-bit variable, `time` fo
 
 A traditional Verilog string literal packs character codes, eight bits per character, into a vector context. `reg [39:0] text;` can hold five characters such as `"HELLO"`. A destination that is too small truncates the most significant portion, so choose the width deliberately. Strings used for `$display` messages are testbench text, not automatically a hardware text-storage subsystem.
 
-The runnable [language examples](Resources/examples/verilog/README.md) exercise these values and distinguish variable type from inferred storage. The parameter and edge-event notes at the right of the handwritten page continue in [Lesson 12](Day%2002.md#lesson-12-hardware-modeling--introduction-to-verilog-ii).
+The runnable [language examples](../Resources/examples/verilog/README.md) exercise these values and distinguish variable type from inferred storage. The parameter and edge-event notes at the right of the handwritten page continue in [Lesson 12](Day%2002.md#lesson-12-hardware-modeling--introduction-to-verilog-ii).
 
 ### Recall checks
 
@@ -783,7 +783,7 @@ The runnable [language examples](Resources/examples/verilog/README.md) exercise 
 4. Is `?` always a don't-care? No: in a based literal it encodes `z`; wildcard case matching gives that position its don't-care interpretation.
 5. Why provide a ninth bit for adding two eight-bit unsigned inputs? The maximum sum is 510, which needs nine bits.
 
-[Back to lesson index](#lesson-index) · [Repository guide](README.md)
+[Back to lesson index](#lesson-index) · [Repository guide](../README.md)
 
 ### Definitions and mechanisms in Lesson 11
 
@@ -807,7 +807,7 @@ A Verilog declaration establishes object kind, width, index direction and signed
 
 ## Lesson 12: Hardware Modeling — Introduction to Verilog II
 
-[Course index](README.md) · Week 3 · [Lecture video](https://www.youtube.com/watch?v=XEtpwZDhdTk) · [Handwritten index](Resources/Handwritten%20Index.md)
+[Course index](../README.md) · Week 3 · [Lecture video](https://www.youtube.com/watch?v=XEtpwZDhdTk) · [Handwritten index](../Resources/Handwritten%20Index.md)
 
 ### Lesson 12 outline
 
@@ -821,7 +821,7 @@ A Verilog declaration establishes object kind, width, index direction and signed
 
 ### Modules ports hierarchy and parameters
 
-[![A module can be reused with different elaboration-time parameters](Resources/images/Day%2002/Lesson%2012/01-modules.png)](#lesson-index)
+[![A module can be reused with different elaboration-time parameters](../Resources/images/Day%2002/Lesson%2012/01-modules.png)](#lesson-index)
 
 *Lecture: [8:41](https://www.youtube.com/watch?v=XEtpwZDhdTk&t=521s). A module can be reused with different elaboration-time parameters*
 
@@ -832,7 +832,7 @@ Named port connections make the interface explicit: `.clk(clk)` connects the chi
 
 A **parameter** is a constant chosen during elaboration, when the simulator or synthesis tool constructs the design hierarchy and sizes. It is not a runtime input. A default can be overridden for an instance. A `localparam` is useful for a derived constant that an instance should not override. Changing an input while a design runs changes a signal; changing a parameter requires a differently elaborated design.
 
-[![Kapil’s handwritten notes — Part 2, PDF page 3, parameter and edge-event notes](Resources/images/Day%2002/Lesson%2012/h02-parameters-events.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 2, PDF page 3, parameter and edge-event notes](../Resources/images/Day%2002/Lesson%2012/h02-parameters-events.jpg)](#lesson-index)
 
 *Source: Part 2, PDF page 3, parameter and edge-event notes.*
 
@@ -866,7 +866,7 @@ When reset becomes low, `count` clears without waiting for a rising clock; this 
 
 ### Operators and bit-level examples
 
-[![Bitwise operations, concatenation, replication, and conditional selection](Resources/images/Day%2002/Lesson%2012/02-operators.png)](#lesson-index)
+[![Bitwise operations, concatenation, replication, and conditional selection](../Resources/images/Day%2002/Lesson%2012/02-operators.png)](#lesson-index)
 
 *Lecture: [16:19](https://www.youtube.com/watch?v=XEtpwZDhdTk&t=979s). Bitwise operations, concatenation, replication, and conditional selection*
 
@@ -899,7 +899,7 @@ Operator precedence determines how an unparenthesized expression is grouped. Use
 
 #### Trace the lecture clock generator
 
-[![The initial block initializes clock and counter while an always block toggles clock after each delay](Resources/images/Day%2002/Lesson%2012/06-initial-always.png)](#lesson-index)
+[![The initial block initializes clock and counter while an always block toggles clock after each delay](../Resources/images/Day%2002/Lesson%2012/06-initial-always.png)](#lesson-index)
 
 *Lecture: [21:55](https://www.youtube.com/watch?v=XEtpwZDhdTk&t=1315s). Initial and always blocks, including the repeated `#10` clock toggle.*
 
@@ -943,9 +943,9 @@ The `timescale` sets a 1 ns delay unit and 1 ps precision. Therefore `#10` means
 
 Ten nanoseconds is the **half-period**. A complete cycle takes 20 ns, giving $f=1/(20\text{ ns})=50$ MHz. Omitting initialization can leave `clock` at `x`; complementing `x` does not establish a known zero or one. Omitting the delay creates a repeating zero-time process that can prevent simulation from advancing. The delays generate testbench events; they do not specify a physical on-chip oscillator with a guaranteed 10 ns gate delay.
 
-The editable [clock demonstration](Resources/examples/verilog/initial_always_demo.v) is included in the example checker. The next frame replaces fixed waiting time with waiting for signal events.
+The editable [clock demonstration](../Resources/examples/verilog/initial_always_demo.v) is included in the example checker. The next frame replaces fixed waiting time with waiting for signal events.
 
-[![Event controls suspend a process until a specified signal transition](Resources/images/Day%2002/Lesson%2012/03-events.png)](#lesson-index)
+[![Event controls suspend a process until a specified signal transition](../Resources/images/Day%2002/Lesson%2012/03-events.png)](#lesson-index)
 
 *Lecture: [24:13](https://www.youtube.com/watch?v=XEtpwZDhdTk&t=1453s). Event controls suspend a process until a specified signal transition*
 
@@ -972,14 +972,14 @@ A `for` loop does not automatically consume a clock cycle per iteration. A stati
 
 ### Functions and tasks
 
-[![Traditional Verilog functions and tasks have different timing rules](Resources/images/Day%2002/Lesson%2012/05-functions.png)](#lesson-index)
+[![Traditional Verilog functions and tasks have different timing rules](../Resources/images/Day%2002/Lesson%2012/05-functions.png)](#lesson-index)
 
 *Lecture: [31:54](https://www.youtube.com/watch?v=XEtpwZDhdTk&t=1914s). Traditional Verilog functions and tasks have different timing rules*
 
 
 Functions and tasks package reusable procedural work. Calling one is not the same as instantiating a module. A function computes a return value for an expression; a task is invoked as a statement and can communicate through output or inout arguments. These lessons use **traditional Verilog** rules; SystemVerilog extends several of them.
 
-[![Kapil’s handwritten notes — Part 2, PDF page 4, function/task comparison and assignment notes](Resources/images/Day%2002/Lesson%2012/h01-functions.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 2, PDF page 4, function/task comparison and assignment notes](../Resources/images/Day%2002/Lesson%2012/h01-functions.jpg)](#lesson-index)
 
 *Source: Part 2, PDF page 4, function/task comparison and assignment notes.*
 
@@ -1025,7 +1025,7 @@ The printed result is 300. Widening the inputs before adding preserves the ninth
 
 ### Continuous blocking and nonblocking assignment
 
-[![Blocking delays accumulate while delayed nonblocking updates are scheduled independently](Resources/images/Day%2002/Lesson%2012/04-assignments.png)](#lesson-index)
+[![Blocking delays accumulate while delayed nonblocking updates are scheduled independently](../Resources/images/Day%2002/Lesson%2012/04-assignments.png)](#lesson-index)
 
 *Lecture: [43:36](https://www.youtube.com/watch?v=XEtpwZDhdTk&t=2616s). Blocking delays accumulate while delayed nonblocking updates are scheduled independently*
 
@@ -1117,9 +1117,9 @@ System task/function names start with `$`. `$display` prints when it executes; `
 
 The final handwritten definition of **functional verification using simulation** says that a testbench applies stimuli and checks responses against expected behavior. That introductory definition connects to [Lesson 08](Day%2002.md#lesson-08-overview-of-vlsi-design-flow-v--verification-and-test). The dedicated *Functional Verification Using Simulation* lesson is documented in [Day 03, Lesson 13](Day%2003.md#lesson-13-functional-verification-using-simulation).
 
-The [Verilog example folder](Resources/examples/verilog/README.md) contains the complete modules and a check script. It checks arithmetic widths, four-state matching, edge-event behavior, parameter overrides, pipeline state, and the timed blocking/nonblocking example. The examples support these explanations; they do not claim exhaustive verification of a production design.
+The [Verilog example folder](../Resources/examples/verilog/README.md) contains the complete modules and a check script. It checks arithmetic widths, four-state matching, edge-event behavior, parameter overrides, pipeline state, and the timed blocking/nonblocking example. The examples support these explanations; they do not claim exhaustive verification of a production design.
 
-[Back to lesson index](#lesson-index) · [Repository guide](README.md)
+[Back to lesson index](#lesson-index) · [Repository guide](../README.md)
 
 ### Definitions and mechanisms in Lesson 12
 

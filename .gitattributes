@@ -1,0 +1,5 @@
+# Preserve PDF bytes and use binary diffs.
+*.pdf binary
+
+# Two trailing spaces are intentional Markdown line breaks.
+*.md whitespace=-blank-at-eol

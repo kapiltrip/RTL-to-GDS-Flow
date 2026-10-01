@@ -1,0 +1,6 @@
+vendor/
+cache/
+qa/
+logs/
+history/
+__pycache__/

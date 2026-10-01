@@ -1,11 +1,11 @@
 """Build the six reader-facing PDFs from the editable daily notes."""
 from pathlib import Path
 import os, sys, re, json, hashlib, html, math, io, unicodedata
-from urllib.parse import unquote, quote, urlparse
+from urllib.parse import unquote, quote, urlparse, urlsplit
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent.parent
-OUT = HERE.parent
+OUT = ROOT / 'PDFs'
 CACHE = HERE / 'cache'
 QA = HERE / 'qa'
 for folder in (CACHE, QA):
@@ -357,9 +357,18 @@ class Builder:
             if 'youtube.com' not in url:
                 self.external.setdefault(url,'')
             return url
-        if url.startswith('Resources/'):
-            return '../../'+quote(url,safe='/#')
-        return '../../'+quote(url,safe='/#')
+        parsed = urlsplit(url)
+        target = (ROOT / 'Daily Notes' / parsed.path).resolve()
+        references = {
+            ROOT / 'Resources/Glossary.md': ROOT / 'Full Forms.pdf',
+            ROOT / 'Resources/Flow Map.md': ROOT / 'RTL to GDS Flow.pdf',
+        }
+        target = references.get(target, target)
+        relative = Path(os.path.relpath(target, OUT)).as_posix()
+        result = quote(relative, safe='/')
+        if parsed.fragment and target.suffix.lower() != '.pdf':
+            result += '#' + quote(parsed.fragment)
+        return result
     def inline(self,tokens,sty='body'):
         parts=[]
         size=STYLES[sty].fontSize
@@ -458,7 +467,7 @@ class Builder:
         return KeepTogether([tbl]) if keep_small and tbl.wrap(WIDTH,HEIGHT)[1]<=200 else tbl
     def figure(self,token,caption_tokens=None):
         self.figure_count+=1
-        path=ROOT/unquote(token.attrGet('src'))
+        path=(ROOT/'Daily Notes'/unquote(token.attrGet('src'))).resolve()
         if not path.is_file():raise FileNotFoundError(path)
         w,h=PILImage.open(path).size
         hand='/h' in path.as_posix()
@@ -601,13 +610,13 @@ class NotesDoc(BaseDocTemplate):
                 self.notify('TOCEntry',(level,html.escape(title),self.page,key))
 
 def assembled(day):
-    original=(ROOT/f'Day {day:02d}.md').read_text(encoding='utf-8')
+    original=(ROOT/'Daily Notes'/f'Day {day:02d}.md').read_text(encoding='utf-8')
     lessons=re.split(r'(?=^## Lesson \d+:)',original,flags=re.M)[1:]
     result=[]
     for lesson in lessons:
         lesson=re.sub(r'^\[Back to (?:lesson|day) index\].*\n?', '',lesson,flags=re.M)
-        lesson=re.sub(r'^\[Course index\]\(README.md\) · ', '',lesson,flags=re.M)
-        lesson=re.sub(r' · \[Handwritten index\]\(Resources/Handwritten%20Index.md\)', '',lesson)
+        lesson=re.sub(r'^\[Course index\]\(\.\./README.md\) · ', '',lesson,flags=re.M)
+        lesson=re.sub(r' · \[Handwritten index\]\(\.\./Resources/Handwritten%20Index.md\)', '',lesson)
         lesson=re.sub(r' · \[Back to day index\]\([^)]+\)', '',lesson)
         lesson=re.sub(r'^### Lesson \d+ outline\n.*?(?=^### )','',lesson,flags=re.M|re.S)
         result.append(lesson.strip())
@@ -693,7 +702,7 @@ def main():
                           'code_blocks':len(b.code_records),'word_count':len(source.split()),
                           'headings':b.headings,'destinations':b.dest_pages,'figures_detail':b.figure_records,
                           'page_sections':doc.page_records,'passes':doc._pass,
-                          'source_sha256':hashlib.sha256((ROOT/f'Day {day:02d}.md').read_bytes()).hexdigest(),
+                          'source_sha256':hashlib.sha256((ROOT/'Daily Notes'/f'Day {day:02d}.md').read_bytes()).hexdigest(),
                           'paragraphs':b.body_records,'code':b.code_records}
         saved.write_text(json.dumps(summary,indent=2,ensure_ascii=False),encoding='utf-8')
         print(f'Day {day:02d}: {len(r.pages)} pages, {b.figure_count} figures, {len(b.code_records)} code blocks, {doc._pass} layout passes',flush=True)

@@ -6,9 +6,9 @@ The examples are small teaching checks. They do not establish that a full implem
 
 | Example | Study purpose | Notes |
 |---|---|---|
-| [queue_demo.v](queue_demo.v) | Observe an active-region value before a nonblocking update, then the settled value | [Day 03, Lesson 13](../../Day%2003.md#lesson-13-functional-verification-using-simulation) |
-| [counter_simulation.v](counter_simulation.v) | Explicitly assert asynchronous reset, then check counting and wraparound | [Day 03, Lesson 18](../../Day%2003.md#lesson-18-simulation-based-verification-using-icarus) |
-| [tcl_basics.tcl](tcl_basics.tcl) | Lists, procedures, command substitution and file channels | [Day 02, Lesson 10](../../Day%2002.md#lesson-10-introduction-to-tcl) |
+| [queue_demo.v](queue_demo.v) | Observe an active-region value before a nonblocking update, then the settled value | [Day 03, Lesson 13](../../Daily%20Notes/Day%2003.md#lesson-13-functional-verification-using-simulation) |
+| [counter_simulation.v](counter_simulation.v) | Explicitly assert asynchronous reset, then check counting and wraparound | [Day 03, Lesson 18](../../Daily%20Notes/Day%2003.md#lesson-18-simulation-based-verification-using-icarus) |
+| [tcl_basics.tcl](tcl_basics.tcl) | Lists, procedures, command substitution and file channels | [Day 02, Lesson 10](../../Daily%20Notes/Day%2002.md#lesson-10-introduction-to-tcl) |
 
 With Python, Icarus Verilog and Tcl available, run from the repository root:
 

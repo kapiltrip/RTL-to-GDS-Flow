@@ -1,6 +1,0 @@
-.build/vendor/
-.build/cache/
-.build/qa/
-.build/logs/
-.build/history/
-.build/__pycache__/

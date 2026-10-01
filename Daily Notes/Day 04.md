@@ -17,7 +17,7 @@ Lessons 19–24. Six-lesson study blocks; Day 06 remains partial through Constra
 - [Lesson 24: Formal Verification - III](#lesson-24-formal-verification---iii)
 
 
-[Master index](README.md) · [Handwritten page index](Resources/Handwritten%20Index.md) · [Glossary](Resources/Glossary.md)
+[Master index](../README.md) · [Handwritten page index](../Resources/Handwritten%20Index.md) · [Glossary](../Resources/Glossary.md)
 
 
 Figures link to the day index. Source page identifiers refer to the original scans.
@@ -29,13 +29,13 @@ Figures link to the day index. Source page identifiers refer to the original sca
 Week 5 · [Lecture video](https://www.youtube.com/watch?v=x747bipwDeQ&t=1351s) · [Back to day index](#day-04-index)
 
 
-[![A Boolean network exposes both local functions and structural dependencies](Resources/images/Day%2004/Lesson%2019/01-multilevel-logic.jpg)](#day-04-index)  
-[![Handwritten source A-15](Resources/images/Day%2004/Lesson%2019/handwritten-comparison.jpg)](#day-04-index)
+[![A Boolean network exposes both local functions and structural dependencies](../Resources/images/Day%2004/Lesson%2019/01-multilevel-logic.jpg)](#day-04-index)  
+[![Handwritten source A-15](../Resources/images/Day%2004/Lesson%2019/handwritten-comparison.jpg)](#day-04-index)
 
 
 *Lecture: [22:31](https://www.youtube.com/watch?v=x747bipwDeQ&t=1351s) · Source: A-15.*
 
-[![Full lecture frame: A Boolean network exposes both local functions and structural dependencies](Resources/images/Day%2004/Lesson%2019/01-multilevel-logic.jpg)](#day-04-index)
+[![Full lecture frame: A Boolean network exposes both local functions and structural dependencies](../Resources/images/Day%2004/Lesson%2019/01-multilevel-logic.jpg)](#day-04-index)
 
 *Lecture: [22:31](https://www.youtube.com/watch?v=x747bipwDeQ&t=1351s).*
 
@@ -49,7 +49,7 @@ Week 5 · [Lecture video](https://www.youtube.com/watch?v=x747bipwDeQ&t=1351s) �
 
 ### A-15: Factoring and Boolean-network structure
 
-[![Handwritten Scan A, PDF page 15](Resources/sources/handwritten/scan-a/h15.jpg)](#day-04-index)
+[![Handwritten Scan A, PDF page 15](../Resources/sources/handwritten/scan-a/h15.jpg)](#day-04-index)
 
 *Source: Scan A, PDF page 15.*
 
@@ -63,7 +63,7 @@ Literal totals and counts of graph stages are useful estimates during optimizati
 
 ### A-16: Substitution, extraction and the algebraic model
 
-[![Handwritten Scan A, PDF page 16](Resources/sources/handwritten/scan-a/h16.jpg)](#day-04-index)
+[![Handwritten Scan A, PDF page 16](../Resources/sources/handwritten/scan-a/h16.jpg)](#day-04-index)
 
 *Source: Scan A, PDF page 16.*
 
@@ -97,13 +97,13 @@ The acronym SDC in this optimization context can mean **satisfiability don't-car
 Week 5 · [Lecture video](https://www.youtube.com/watch?v=HNqmpCD2-pY&t=1400s) · [Back to day index](#day-04-index)
 
 
-[![FSM optimization and state encoding](Resources/images/Day%2004/Lesson%2020/01-sequential-optimization.jpg)](#day-04-index)  
-[![Handwritten source A-17](Resources/images/Day%2004/Lesson%2020/handwritten-comparison.jpg)](#day-04-index)
+[![FSM optimization and state encoding](../Resources/images/Day%2004/Lesson%2020/01-sequential-optimization.jpg)](#day-04-index)  
+[![Handwritten source A-17](../Resources/images/Day%2004/Lesson%2020/handwritten-comparison.jpg)](#day-04-index)
 
 
 *Lecture: [23:20](https://www.youtube.com/watch?v=HNqmpCD2-pY&t=1400s) · Source: A-17.*
 
-[![Full lecture frame: FSM optimization and state encoding](Resources/images/Day%2004/Lesson%2020/01-sequential-optimization.jpg)](#day-04-index)
+[![Full lecture frame: FSM optimization and state encoding](../Resources/images/Day%2004/Lesson%2020/01-sequential-optimization.jpg)](#day-04-index)
 
 *Lecture: [23:20](https://www.youtube.com/watch?v=HNqmpCD2-pY&t=1400s).*
 
@@ -112,7 +112,7 @@ Week 5 · [Lecture video](https://www.youtube.com/watch?v=HNqmpCD2-pY&t=1400s) �
 
 ### A-17: FSMs, state equivalence and encoding
 
-[![Handwritten Scan A, PDF page 17](Resources/sources/handwritten/scan-a/h17.jpg)](#day-04-index)
+[![Handwritten Scan A, PDF page 17](../Resources/sources/handwritten/scan-a/h17.jpg)](#day-04-index)
 
 *Source: Scan A, PDF page 17.*
 
@@ -156,13 +156,13 @@ The “how to find errors” question connects to the next formal-verification l
 Week 5 · [Lecture video](https://www.youtube.com/watch?v=Li-tGyilPOc&t=1091s) · [Back to day index](#day-04-index)
 
 
-[![BDDs and SAT solvers as formal-verification engines](Resources/images/Day%2004/Lesson%2021/01-formal-verification.jpg)](#day-04-index)  
-[![Handwritten source A-18](Resources/images/Day%2004/Lesson%2021/handwritten-comparison.jpg)](#day-04-index)
+[![BDDs and SAT solvers as formal-verification engines](../Resources/images/Day%2004/Lesson%2021/01-formal-verification.jpg)](#day-04-index)  
+[![Handwritten source A-18](../Resources/images/Day%2004/Lesson%2021/handwritten-comparison.jpg)](#day-04-index)
 
 
 *Lecture: [18:11](https://www.youtube.com/watch?v=Li-tGyilPOc&t=1091s) · Source: A-18.*
 
-[![Full lecture frame: BDDs and SAT solvers as formal-verification engines](Resources/images/Day%2004/Lesson%2021/01-formal-verification.jpg)](#day-04-index)
+[![Full lecture frame: BDDs and SAT solvers as formal-verification engines](../Resources/images/Day%2004/Lesson%2021/01-formal-verification.jpg)](#day-04-index)
 
 *Lecture: [18:11](https://www.youtube.com/watch?v=Li-tGyilPOc&t=1091s).*
 
@@ -173,7 +173,7 @@ The screenshot separates BDDs and SAT solvers as computational engines. Model ch
 
 ### A-18: Proof scope, simulation and symbolic representation
 
-[![Handwritten Scan A, PDF page 18](Resources/sources/handwritten/scan-a/h18.jpg)](#day-04-index)
+[![Handwritten Scan A, PDF page 18](../Resources/sources/handwritten/scan-a/h18.jpg)](#day-04-index)
 
 *Source: Scan A, PDF page 18.*
 
@@ -187,7 +187,7 @@ Truth tables provide a canonical explicit representation after variable order is
 
 ### A-19: Shannon expansion and cofactors
 
-[![Handwritten Scan A, PDF page 19](Resources/sources/handwritten/scan-a/h19.jpg)](#day-04-index)
+[![Handwritten Scan A, PDF page 19](../Resources/sources/handwritten/scan-a/h19.jpg)](#day-04-index)
 
 *Source: Scan A, PDF page 19.*
 
@@ -207,7 +207,7 @@ The red three-variable example used in the next drawing is `f=x1 x2 + x2' x3 + x
 
 ### A-20: Ordered graphs and reduction rules
 
-[![Handwritten Scan A, PDF page 20](Resources/sources/handwritten/scan-a/h20.jpg)](#day-04-index)
+[![Handwritten Scan A, PDF page 20](../Resources/sources/handwritten/scan-a/h20.jpg)](#day-04-index)
 
 *Source: Scan A, PDF page 20.*
 
@@ -252,7 +252,7 @@ The handwritten phrase “size grows as polynomial” is not a universal bound. 
 Week 5 · [Lecture video](https://www.youtube.com/watch?v=c-cFxuH-HbE&t=394s) · [Back to day index](#day-04-index)
 
 
-[![Yosys tutorial: commands that transform RTL into a mapped netlist](Resources/images/Day%2004/Lesson%2022/01-yosys-synthesis.jpg)](#day-04-index)
+[![Yosys tutorial: commands that transform RTL into a mapped netlist](../Resources/images/Day%2004/Lesson%2022/01-yosys-synthesis.jpg)](#day-04-index)
 
 
 *Lecture: [Lecture at 6:34](https://www.youtube.com/watch?v=c-cFxuH-HbE&t=394s).*
@@ -301,13 +301,13 @@ No SDC timing target is supplied by this simple tutorial script. Do not interpre
 Week 6 · [Lecture video](https://www.youtube.com/watch?v=wN6XP-aTlRs&t=901s) · [Back to day index](#day-04-index)
 
 
-[![CNF clause sizes and the k-SAT convention](Resources/images/Day%2004/Lesson%2023/02-sat-propagation.jpg)](#day-04-index)  
-[![Handwritten source A-21](Resources/images/Day%2004/Lesson%2023/handwritten-comparison.jpg)](#day-04-index)
+[![CNF clause sizes and the k-SAT convention](../Resources/images/Day%2004/Lesson%2023/02-sat-propagation.jpg)](#day-04-index)  
+[![Handwritten source A-21](../Resources/images/Day%2004/Lesson%2023/handwritten-comparison.jpg)](#day-04-index)
 
 
 *Lecture: [15:01](https://www.youtube.com/watch?v=wN6XP-aTlRs&t=901s) · Source: A-21.*
 
-[![Full lecture frame: CNF clause sizes and the k-SAT convention](Resources/images/Day%2004/Lesson%2023/02-sat-propagation.jpg)](#day-04-index)
+[![Full lecture frame: CNF clause sizes and the k-SAT convention](../Resources/images/Day%2004/Lesson%2023/02-sat-propagation.jpg)](#day-04-index)
 
 *Lecture: [15:01](https://www.youtube.com/watch?v=wN6XP-aTlRs&t=901s).*
 
@@ -316,7 +316,7 @@ Week 6 · [Lecture video](https://www.youtube.com/watch?v=wN6XP-aTlRs&t=901s) ·
 
 ### A-21: SAT, UNSAT, CNF and ROBDD scope
 
-[![Handwritten Scan A, PDF page 21](Resources/sources/handwritten/scan-a/h21.jpg)](#day-04-index)
+[![Handwritten Scan A, PDF page 21](../Resources/sources/handwritten/scan-a/h21.jpg)](#day-04-index)
 
 *Source: Scan A, PDF page 21.*
 
@@ -373,7 +373,7 @@ A circuit CNF can repeat this construction with auxiliary variables for gate out
 Week 6 · [Lecture video](https://www.youtube.com/watch?v=u494ozFC5pI&t=1840s) · [Back to day index](#day-04-index)
 
 
-[![BDD-based model checking: the one-step image of a state set](Resources/images/Day%2004/Lesson%2024/01-model-checking.jpg)](#day-04-index)
+[![BDD-based model checking: the one-step image of a state set](../Resources/images/Day%2004/Lesson%2024/01-model-checking.jpg)](#day-04-index)
 
 
 *Lecture: [Lecture at 30:40](https://www.youtube.com/watch?v=u494ozFC5pI&t=1840s).*

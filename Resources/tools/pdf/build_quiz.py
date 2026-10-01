@@ -1,6 +1,6 @@
 """Build the question-only Week 7/8 worksheet from its editable Markdown.
 
-One-time import: --import-source documents/.build/qa/quiz/source.json.
+One-time import: --import-source Resources/tools/pdf/qa/quiz/source.json.
 Normal rebuilds read the Markdown; the capture stays local for fidelity checks.
 """
 from pathlib import Path
@@ -28,7 +28,7 @@ from pypdf import PdfReader
 HERE = Path(__file__).resolve().parent
 RESOURCES = HERE.parent.parent
 SOURCE = RESOURCES / 'Week 07 and 08 - Practice Questions.md'
-OUTPUT = HERE.parent / 'Week 07 and 08 - Practice Questions.pdf'
+OUTPUT = RESOURCES.parent / 'PDFs/Week 07 and 08 - Practice Questions.pdf'
 QA = HERE / 'qa' / 'quiz'
 CAPTURE = QA / 'source.json'
 LICENSE = 'https://creativecommons.org/licenses/by-nc-sa/4.0/'
@@ -87,7 +87,7 @@ def import_source(path):
     capture = json.loads(path.read_text(encoding='utf-8'))
     lines = ['# Week 7 and Week 8 — Practice questions', '',
              'VLSI Design Flow: RTL to GDS · NPTEL · Prof. Sneh Saurabh', '',
-             '[PDF](documents/Week%2007%20and%2008%20-%20Practice%20Questions.pdf) · '
+             '[PDF](../PDFs/Week%2007%20and%2008%20-%20Practice%20Questions.pdf) · '
              '[Master index](../README.md)', '', '<a id="index"></a>', '## Index', '']
     for week in capture['weeks']:
         n = week['week']

@@ -6,7 +6,7 @@ from pypdf import PdfReader
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
-DOC = HERE.parent
+DOC = ROOT / 'PDFs'
 manifest = json.loads((HERE / 'qa/build-manifest.json').read_text(encoding='utf-8'))
 topics = ['IC foundations and synthesis', 'Physical design and Verilog',
           'Simulation, synthesis and Boolean covers',
@@ -22,8 +22,8 @@ def table(prefix):
         actual = len(PdfReader(pdf).pages)
         assert actual == m['pages'], f'Stale manifest: {pdf.name}'
         lessons = f'{(day-1)*6+1:02d}–{min(day*6,32):02d}'
-        href = prefix + 'Resources/documents/' + quote(pdf.name)
-        rows.append(f'| [Day {day:02d}]({prefix}Day%20{day:02d}.md) | {lessons} | '
+        href = prefix + 'PDFs/' + quote(pdf.name)
+        rows.append(f'| [Day {day:02d}]({prefix}Daily%20Notes/Day%20{day:02d}.md) | {lessons} | '
                     f'{topics[day-1]} | [Read PDF]({href}) | {actual} |')
     return '\n'.join(rows)
 
@@ -36,14 +36,23 @@ text = re.sub(r'\n{3,}', '\n\n', text)
 readme.write_text(text, encoding='utf-8')
 
 (DOC / 'README.md').write_text(
-    '# Daily PDF collection\n\n[Master index](../../README.md)\n\n' + table('../../') +
+    '# PDF collection\n\n[Master index](../README.md) · '
+    '[Full forms](../Full%20Forms.pdf) · [RTL-to-GDS flow](../RTL%20to%20GDS%20Flow.pdf)\n\n' + table('../') +
     '\n\nUse the contents or bookmarks to open a section. Click any figure or '
     'the footer to return to contents. The pages use white A4 paper, dark text '
     'and embedded Cambria/Consolas fonts. Keep the PDFs in this repository '
     'layout so cross-day and supporting-file links resolve.\n\n'
-    'Lecture frames are paired with handwritten comparison crops. Full source '
-    'pages, corrections, worked examples and complete code follow. Study-day '
-    'numbers are six-lesson blocks; the current partial block ends at '
-    'Constraints I. Page counts above are verified against the exported files.\n',
+    'Study-day numbers are six-lesson blocks; the current partial block ends at '
+    'Constraints I. Page counts above are verified against the exported files.\n\n'
+    '[Week 7 and Week 8 question-only worksheet](Week%2007%20and%2008%20-%20Practice%20Questions.pdf) '
+    'contains 20 original questions, 161 unmarked options and six source figures. '
+    'The worksheet has ' + str(len(PdfReader(DOC / 'Week 07 and 08 - Practice Questions.pdf').pages)) + ' pages.\n',
     encoding='utf-8')
-print('Updated both reading indexes:', sum(m['pages'] for m in manifest.values()), 'pages.')
+(ROOT / 'Daily Notes/README.md').write_text(
+    '# Daily RTL-to-GDS notes\n\n[Master index](../README.md) · '
+    '[PDF collection](../PDFs/README.md)\n\n' + table('../') +
+    '\n\nOpen a day to use its lesson and topic indexes. Figures return to the '
+    'day index. The PDFs retain the same explanations, source handwriting and '
+    'lecture frames. Each study day contains six lessons; Day 06 currently '
+    'contains Lessons 31 and 32.\n', encoding='utf-8')
+print('Updated three reading indexes:', sum(m['pages'] for m in manifest.values()), 'daily pages.')

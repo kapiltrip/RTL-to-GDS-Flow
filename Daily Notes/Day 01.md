@@ -1,6 +1,6 @@
 # Day 01 — IC foundations, design choices, the design flow, Unix, and synthesis
 
-[Repository guide](README.md) · [Day 2](Day%2002.md) · [Handwritten index](Resources/Handwritten%20Index.md) · [Questions and corrections](Resources/Questions.md)
+[Repository guide](../README.md) · [Day 2](Day%2002.md) · [Handwritten index](../Resources/Handwritten%20Index.md) · [Questions and corrections](../Resources/Questions.md)
 
 This is **study day 1**. It contains six course lessons, numbered separately from study days. Read one lesson or concept block at a time; each lesson keeps its lecture frames, explanations, handwritten snippets, and worked examples together.
 
@@ -19,7 +19,7 @@ Use each lesson’s outline for topic-level links. Source captions distinguish v
 
 ## Lesson 01: Basic Concepts of Integrated Circuit I
 
-[Course index](README.md) · Week 1 · [Lecture video](https://www.youtube.com/watch?v=9QgdNsl9qwk)
+[Course index](../README.md) · Week 1 · [Lecture video](https://www.youtube.com/watch?v=9QgdNsl9qwk)
 
 This lesson connects the physical construction of a chip to the design files that eventually become manufacturing patterns. Its central idea is that a circuit is designed once, then its geometry is reproduced across many dies and wafers.
 
@@ -37,7 +37,7 @@ This lesson connects the physical construction of a chip to the design files tha
 
 ### Integration and scaling
 
-[![The lecture's historical perspective on integrated circuits and Moore's prediction](Resources/images/Day%2001/Lesson%2001/01-scaling.png)](#lesson-index)
+[![The lecture's historical perspective on integrated circuits and Moore's prediction](../Resources/images/Day%2001/Lesson%2001/01-scaling.png)](#lesson-index)
 
 *Lecture: [09:15](https://www.youtube.com/watch?v=9QgdNsl9qwk&t=555s). The slide links monolithic integration, photolithography, and increasing component count.*
 
@@ -51,13 +51,13 @@ Shrinking structures can increase density and can improve energy or speed, but t
 
 #### Integration
 
-[![Kapil's integration and Moore's-law notes, Part 1 page 1](Resources/images/Day%2001/Lesson%2001/h01-integration.jpg)](#lesson-index)
+[![Kapil's integration and Moore's-law notes, Part 1 page 1](../Resources/images/Day%2001/Lesson%2001/h01-integration.jpg)](#lesson-index)
 
 The comparison between discrete components and an IC captures the key manufacturing change: many devices are formed together and connected by patterned material layers. “Monolithic” means one integrated piece. Photolithography helps reproduce the geometry; it is one operation inside a much longer fabrication sequence. The historical doubling interval is an observation about integration, not a guarantee that all chip properties improve at the same rate.
 
 ### Devices and interconnect
 
-[![CMOS inverter schematic and a cross-section showing devices, metal layers, dielectric, and vias](Resources/images/Day%2001/Lesson%2001/02-ic-layers.png)](#lesson-index)
+[![CMOS inverter schematic and a cross-section showing devices, metal layers, dielectric, and vias](../Resources/images/Day%2001/Lesson%2001/02-ic-layers.png)](#lesson-index)
 
 *Lecture: [15:38](https://www.youtube.com/watch?v=9QgdNsl9qwk&t=938s). Read the figure from the silicon substrate upward, then compare it with the inverter schematic on the left.*
 
@@ -78,13 +78,13 @@ The drawing is a conceptual cross-section, not a complete process recipe or a un
 
 #### The layer stack
 
-[![Kapil's drawing of device and interconnect layers, Part 1 page 1](Resources/images/Day%2001/Lesson%2001/h02-layers.jpg)](#lesson-index)
+[![Kapil's drawing of device and interconnect layers, Part 1 page 1](../Resources/images/Day%2001/Lesson%2001/h02-layers.jpg)](#lesson-index)
 
 Read the cross-section vertically: devices perform switching near the substrate, and metal levels provide connections above them. Dielectric separates conductors. A via deliberately bridges two levels. Read the A/B crossing drawing as a connectivity problem: the two paths may overlap in a top view while occupying different heights, so they need not short together.
 
 ### Why routing uses multiple layers
 
-[![Lecture diagram of crossing connections on separate metal layers](Resources/images/Day%2001/Lesson%2001/04-multilayer-routing.png)](#lesson-index)
+[![Lecture diagram of crossing connections on separate metal layers](../Resources/images/Day%2001/Lesson%2001/04-multilayer-routing.png)](#lesson-index)
 
 *Lecture: [19:35](https://www.youtube.com/watch?v=9QgdNsl9qwk&t=1175s).*
 
@@ -96,7 +96,7 @@ More layers provide routing freedom but do not remove constraints. Wires and via
 
 ### Photolithography
 
-[![The complete lecture diagram for film deposition, photoresist application, exposure, development, etching, and photoresist removal](Resources/images/Day%2001/Lesson%2001/03-photolithography.png)](#lesson-index)
+[![The complete lecture diagram for film deposition, photoresist application, exposure, development, etching, and photoresist removal](../Resources/images/Day%2001/Lesson%2001/03-photolithography.png)](#lesson-index)
 
 *Lecture: [27:58](https://www.youtube.com/watch?v=9QgdNsl9qwk&t=1678s). Follow the arrows across the top row and back across the bottom row. Orange is photoresist, blue is the film being patterned, and yellow is the substrate.*
 
@@ -146,11 +146,11 @@ The pattern is reused to fabricate many dies. A complete chip requires many alig
 
 #### What is a mask?
 
-[![The definition of lithography and boxed mask question, Part 1 page 1](Resources/images/Day%2001/Lesson%2001/h07-mask-question.jpg)](#lesson-index)
+[![The definition of lithography and boxed mask question, Part 1 page 1](../Resources/images/Day%2001/Lesson%2001/h07-mask-question.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 1, lower-left question.*
 
-[![Kapil's lithography sequence and mask question, Part 1 page 1](Resources/images/Day%2001/Lesson%2001/h03-lithography.jpg)](#lesson-index)
+[![Kapil's lithography sequence and mask question, Part 1 page 1](../Resources/images/Day%2001/Lesson%2001/h03-lithography.jpg)](#lesson-index)
 
 A **photomask** is a patterned optical template used by a lithography system to control which regions of a light-sensitive resist receive exposure. In a conventional transmissive mask, patterned absorbing material on a transparent substrate controls light transmission. The mask is distinct from the resist: the mask supplies the optical pattern; resist is the temporary coating on the wafer. A reticle commonly carries the pattern projected onto one exposure field, which the tool repeats across the wafer. Some lithography technologies use reflective masks, so “a glass plate that blocks light” is an introductory example rather than a universal definition.
 
@@ -162,7 +162,7 @@ The later notes on optical proximity correction and multiple patterning extend t
 
 ### Ingot, wafer, die, and chip
 
-[![The lecture distinguishes repeated dies on a wafer from a packaged chip](Resources/images/Day%2001/Lesson%2001/05-wafer-die-chip.png)](#lesson-index)
+[![The lecture distinguishes repeated dies on a wafer from a packaged chip](../Resources/images/Day%2001/Lesson%2001/05-wafer-die-chip.png)](#lesson-index)
 
 *Lecture: [36:46](https://www.youtube.com/watch?v=9QgdNsl9qwk&t=2206s). Each small rectangular region represents a separate die location, not an individual transistor.*
 
@@ -185,7 +185,7 @@ The denominator and test stage must be stated. Wafer-level die yield and final p
 
 #### How can we make good or defect-free dies?
 
-[![Kapil's ingot, wafer, die and yield notes, Part 1 page 2](Resources/images/Day%2001/Lesson%2001/h04-wafer-yield.jpg)](#lesson-index)
+[![Kapil's ingot, wafer, die and yield notes, Part 1 page 2](../Resources/images/Day%2001/Lesson%2001/h04-wafer-yield.jpg)](#lesson-index)
 
 The ingot-to-wafer-to-die sequence describes three scales of the same manufacturing chain. In Czochralski growth, a seed contacts molten silicon and is withdrawn under controlled conditions to grow a single-crystal ingot. Wafers are sliced, finished, and processed; dies are the individual circuit regions. The temperature written in the note is an approximate process value, not a setting to memorize as universally exact.
 
@@ -195,7 +195,7 @@ Testing then identifies dies that meet the specified checks; it does not normall
 
 ### Design, fabrication, and the PDK
 
-[![Lecture diagram connecting a foundry and design team through a PDK](Resources/images/Day%2001/Lesson%2001/06-pdk.png)](#lesson-index)
+[![Lecture diagram connecting a foundry and design team through a PDK](../Resources/images/Day%2001/Lesson%2001/06-pdk.png)](#lesson-index)
 
 *Lecture: [46:21](https://www.youtube.com/watch?v=9QgdNsl9qwk&t=2781s).*
 
@@ -209,11 +209,11 @@ Following design rules improves manufacturability; it does not by itself prove f
 
 #### Business models and process information
 
-[![Kapil's design-versus-fabrication and business-model notes, Part 1 page 2](Resources/images/Day%2001/Lesson%2001/h05-industry.jpg)](#lesson-index)
+[![Kapil's design-versus-fabrication and business-model notes, Part 1 page 2](../Resources/images/Day%2001/Lesson%2001/h05-industry.jpg)](#lesson-index)
 
 The table separates the design investment from the fabrication investment. Design needs engineers, tools, compute, and verification effort; fabrication needs process equipment, facilities, materials, and sustained process control. The useful lifetime and economics of a fab depend on its products and upgrades. A mature process can remain valuable; a newer node does not automatically make an older fab unusable after a fixed number of years.
 
-[![Kapil's PDK information loop, Part 1 page 3](Resources/images/Day%2001/Lesson%2001/h06-pdk.jpg)](#lesson-index)
+[![Kapil's PDK information loop, Part 1 page 3](../Resources/images/Day%2001/Lesson%2001/h06-pdk.jpg)](#lesson-index)
 
 The arrows are an information contract. The foundry supplies models and rules; the designer creates a circuit and layout compatible with them; the foundry receives manufacturing data. A **design rule** might specify minimum width, spacing, enclosure, or overlap. A **device model** predicts electrical behavior. A **standard-cell library** provides already designed logic building blocks for a particular technology and library family. These are related resources, but the PDK and the cell library are not interchangeable terms.
 
@@ -233,7 +233,7 @@ The arrows are an information contract. The foundry supplies models and rules; t
 3. Why does a design-rule-clean layout still need functional verification?
 4. If yield improves while wafer cost and gross die count stay fixed, why does the approximate manufacturing cost per good die fall?
 
-[Back to lesson index](#lesson-index) · [Repository guide](README.md)
+[Back to lesson index](#lesson-index) · [Repository guide](../README.md)
 
 ### Definitions and mechanisms in Lesson 01
 
@@ -255,7 +255,7 @@ A fabrication sequence is interpreted by tracking the same physical opening thro
 
 ## Lesson 02: Basic Concepts of Integrated Circuit II
 
-[Course index](README.md) · Week 1 · [Lecture video](https://www.youtube.com/watch?v=6lJ2u7eYrek) · [Handwritten index](Resources/Handwritten%20Index.md)
+[Course index](../README.md) · Week 1 · [Lecture video](https://www.youtube.com/watch?v=6lJ2u7eYrek) · [Handwritten index](../Resources/Handwritten%20Index.md)
 
 ### Lesson 02 outline
 
@@ -266,7 +266,7 @@ A fabrication sequence is interpreted by tracking the same physical opening thro
 
 ### Application-specific and general-purpose chips
 
-[![ASIC and general-purpose IC examples](Resources/images/Day%2001/Lesson%2002/01-application-classes.png)](#lesson-index)
+[![ASIC and general-purpose IC examples](../Resources/images/Day%2001/Lesson%2002/01-application-classes.png)](#lesson-index)
 
 *Lecture: [5:16](https://www.youtube.com/watch?v=6lJ2u7eYrek&t=316s). ASIC and general-purpose IC examples*
 
@@ -275,7 +275,7 @@ An **application-specific integrated circuit (ASIC)** is designed around a parti
 
 An ASIC can contain a programmable processor. It is still application-specific if the whole chip is built for a particular purpose. Conversely, configuring an FPGA for a camera implements application-specific behavior on an existing programmable fabric; it does not fabricate a custom ASIC. Production volume and programmability are tendencies in the lecture's introductory comparison, not necessary definitions. Some ASICs ship in enormous volumes, and some general-purpose parts serve small markets.
 
-[![Kapil’s handwritten notes — Part 1, PDF page 3, lower portion](Resources/images/Day%2001/Lesson%2002/h01-applications.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 3, lower portion](../Resources/images/Day%2001/Lesson%2002/h01-applications.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 3, lower portion.*
 
@@ -284,7 +284,7 @@ The camera/audio-processing examples distinguish the product's intended function
 
 ### Four implementation styles
 
-[![Comparison of customization, design effort, masks, and PPA](Resources/images/Day%2001/Lesson%2002/02-design-styles.png)](#lesson-index)
+[![Comparison of customization, design effort, masks, and PPA](../Resources/images/Day%2001/Lesson%2002/02-design-styles.png)](#lesson-index)
 
 *Lecture: [18:53](https://www.youtube.com/watch?v=6lJ2u7eYrek&t=1133s). Comparison of customization, design effort, masks, and PPA*
 
@@ -302,14 +302,14 @@ Full custom is useful where transistor-level choices matter strongly, including 
 
 The slide's PPA ranking is a broad comparison for implementing comparable functionality. It is not a promise that any full-custom design is better than any standard-cell design. Process, architecture, engineering quality, hard blocks, and constraints all matter.
 
-[![Kapil’s handwritten notes — Part 1, PDF page 4](Resources/images/Day%2001/Lesson%2002/h02-design-styles.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 4](../Resources/images/Day%2001/Lesson%2002/h02-design-styles.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 4.*
 
 
 The note correctly separates cell creation from cell use. Ordinary standard-cell implementation selects and instantiates characterized cells. Changing a NAND's internal transistor sizes or layout would create a different cell that needs appropriate characterization and physical verification. Selecting `NAND2_X1` versus a stronger library variant is not the same as editing that cell's internal geometry.
 
-[![Kapil’s handwritten notes — Part 1, PDF page 5](Resources/images/Day%2001/Lesson%2002/h03-fpga.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 5](../Resources/images/Day%2001/Lesson%2002/h03-fpga.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 5.*
 
@@ -322,7 +322,7 @@ Gate arrays are different again: base devices are fabricated in advance, but cus
 
 ### Economics and the break-even point
 
-[![Fixed cost, per-unit cost, and the break-even graph](Resources/images/Day%2001/Lesson%2002/03-cost.png)](#lesson-index)
+[![Fixed cost, per-unit cost, and the break-even graph](../Resources/images/Day%2001/Lesson%2002/03-cost.png)](#lesson-index)
 
 *Lecture: [27:52](https://www.youtube.com/watch?v=6lJ2u7eYrek&t=1672s). Fixed cost, per-unit cost, and the break-even graph*
 
@@ -335,7 +335,7 @@ $$
 
 The graph's vertical intercept is fixed cost; its slope is variable cost per unit. A standard-cell ASIC often has a larger intercept and smaller slope than an FPGA implementation of the same function. At low volume, avoiding ASIC development cost can dominate. At high volume, saving cost on every unit can repay that investment.
 
-[![Kapil’s handwritten notes — Part 1, PDF page 6, cost comparison](Resources/images/Day%2001/Lesson%2002/h04-cost.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 6, cost comparison](../Resources/images/Day%2001/Lesson%2002/h04-cost.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 6, cost comparison.*
 
@@ -354,7 +354,7 @@ Below 30,000 units, this simplified model favors FPGA cost; above it, ASIC cost.
 
 ### PPA and the rest of design quality
 
-[![Power, performance, and area as competing objectives](Resources/images/Day%2001/Lesson%2002/04-ppa.png)](#lesson-index)
+[![Power, performance, and area as competing objectives](../Resources/images/Day%2001/Lesson%2002/04-ppa.png)](#lesson-index)
 
 *Lecture: [30:13](https://www.youtube.com/watch?v=6lJ2u7eYrek&t=1813s). Power, performance, and area as competing objectives*
 
@@ -377,11 +377,11 @@ For an illustrative aggregate load of 10 pF, $\alpha=0.2$, $V=1$ V, and $f=500$ 
 
 Energy for a task is $E=P_{\text{average}}t$. At 1 mW, a 1,000-cycle task lasting 2 µs consumes 2 nJ of switching energy. Halving frequency halves this modeled power but doubles runtime, leaving switching energy at 2 nJ under unchanged activity, voltage, and cycle count. Leakage energy can increase with the longer runtime. State both the workload and the metric when comparing designs.
 
-[![Kapil’s handwritten notes — Part 1, PDF page 6, PPA note](Resources/images/Day%2001/Lesson%2002/h05-ppa.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 6, PPA note](../Resources/images/Day%2001/Lesson%2002/h05-ppa.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 6, PPA note.*
 
-[![Kapil’s handwritten notes — Part 1, PDF page 7, upper portion](Resources/images/Day%2001/Lesson%2002/h06-quality.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 7, upper portion](../Resources/images/Day%2001/Lesson%2002/h06-quality.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 7, upper portion.*
 
@@ -390,7 +390,7 @@ The added measures are essential: **testability** is how readily manufacturing f
 
 **Recall check:** if design A uses less cell area but cannot route within its core, while design B is slightly larger and meets timing after routing, which one actually satisfies the specification? Explain why the answer requires physical implementation evidence, not just the synthesis area report.
 
-[Back to lesson index](#lesson-index) · [Repository guide](README.md)
+[Back to lesson index](#lesson-index) · [Repository guide](../README.md)
 
 ### Definitions and mechanisms in Lesson 02
 
@@ -414,7 +414,7 @@ Implementation alternatives are compared with the required function, workload an
 
 ## Lesson 03: Overview of VLSI Design Flow I
 
-[Course index](README.md) · Week 1 · [Lecture video](https://www.youtube.com/watch?v=vKtoQEAoGck) · [Handwritten index](Resources/Handwritten%20Index.md)
+[Course index](../README.md) · Week 1 · [Lecture video](https://www.youtube.com/watch?v=vKtoQEAoGck) · [Handwritten index](../Resources/Handwritten%20Index.md)
 
 ### Lesson 03 outline
 
@@ -426,7 +426,7 @@ Implementation alternatives are compared with the required function, workload an
 
 ### From a product idea to a manufactured chip
 
-[![Pre-RTL, RTL-to-GDS, and post-GDS stages](Resources/images/Day%2001/Lesson%2003/01-flow.png)](#lesson-index)
+[![Pre-RTL, RTL-to-GDS, and post-GDS stages](../Resources/images/Day%2001/Lesson%2003/01-flow.png)](#lesson-index)
 
 *Lecture: [4:43](https://www.youtube.com/watch?v=vKtoQEAoGck&t=283s). Pre-RTL, RTL-to-GDS, and post-GDS stages*
 
@@ -435,7 +435,7 @@ The flow translates a desired behavior into successively more concrete represent
 
 **RTL**, register-transfer level, models stored state and the logic that transforms data between storage elements. **GDSII** is a layout-data format describing hierarchical geometry and layers; it is not executable software for a processor. The manufacturing flow uses layout data to prepare patterns and process wafers. These stages are connected by verification and feedback, not a one-way chain that always succeeds on its first attempt.
 
-[![Kapil’s handwritten notes — Part 1, PDF page 7, lower portion](Resources/images/Day%2001/Lesson%2003/h01-abstraction.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 7, lower portion](../Resources/images/Day%2001/Lesson%2003/h01-abstraction.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 7, lower portion.*
 
@@ -444,7 +444,7 @@ The idea → RTL → GDS → chip chain is the backbone of the course. The “de
 
 ### Abstraction and turnaround time
 
-[![The same NOR function described as an equation or a placed cell](Resources/images/Day%2001/Lesson%2003/02-abstraction.png)](#lesson-index)
+[![The same NOR function described as an equation or a placed cell](../Resources/images/Day%2001/Lesson%2003/02-abstraction.png)](#lesson-index)
 
 *Lecture: [14:10](https://www.youtube.com/watch?v=vKtoQEAoGck&t=850s). The same NOR function described as an equation or a placed cell*
 
@@ -453,7 +453,7 @@ The idea → RTL → GDS → chip chain is the backbone of the course. The “de
 
 A high-level representation lets us compare architectural alternatives quickly. Replacing one algorithm or pipeline organization before layout may be inexpensive; making the equivalent change after placement and routing can require extensive reimplementation. **Turnaround time** is the time needed to complete an iteration. Lower abstraction often increases analysis cost, but it also exposes effects that the higher model hides. Neither level replaces the other: use a simple model to explore and a detailed model to validate.
 
-[![Kapil’s handwritten notes — Part 1, PDF page 8](Resources/images/Day%2001/Lesson%2003/h02-system.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 8](../Resources/images/Day%2001/Lesson%2003/h02-system.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 8.*
 
@@ -466,7 +466,7 @@ Before partitioning, write measurable requirements: input/output formats, suppor
 
 #### Trace an accelerator request and calculate its communication cost
 
-[![Processor, dedicated hardware, and memory communicate through an interconnect](Resources/images/Day%2001/Lesson%2003/04-accelerator-bus.png)](#lesson-index)
+[![Processor, dedicated hardware, and memory communicate through an interconnect](../Resources/images/Day%2001/Lesson%2003/04-accelerator-bus.png)](#lesson-index)
 
 *Lecture: [26:20](https://www.youtube.com/watch?v=vKtoQEAoGck&t=1580s). Hardware/software partitioning: the processor, accelerator, memory, and bus.*
 
@@ -491,14 +491,14 @@ Here GB/s uses $10^9$ bytes/s. Although computation alone is 20 times faster, co
 
 The next frame shows how the course uses repeated measurement to choose functions for hardware. Read the handwritten architecture below with these communication costs in mind.
 
-[![Profile bottlenecks, move functions into hardware, and evaluate again](Resources/images/Day%2001/Lesson%2003/03-partition.png)](#lesson-index)
+[![Profile bottlenecks, move functions into hardware, and evaluate again](../Resources/images/Day%2001/Lesson%2003/03-partition.png)](#lesson-index)
 
 *Lecture: [37:48](https://www.youtube.com/watch?v=vKtoQEAoGck&t=2268s). Profile bottlenecks, move functions into hardware, and evaluate again*
 
 
 **Hardware/software partitioning** assigns system functions to dedicated hardware or programmable software. A common architecture combines a processor, memory, an interconnect, and one or more accelerators. The accelerator can exploit specialized datapaths and parallelism; software handles control, changing policies, or functions where dedicated hardware brings little benefit.
 
-[![Kapil’s handwritten notes — Part 1, PDF page 9](Resources/images/Day%2001/Lesson%2003/h03-partition.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 9](../Resources/images/Day%2001/Lesson%2003/h03-partition.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 9.*
 
@@ -513,7 +513,7 @@ $$
 
 If $p=0.8$, $s=1000$, and $o=0$, total speedup is $1/(0.2+0.0008)\approx4.98$, not 1000. The unaccelerated 20% caps the ideal benefit near 5. Adding overhead of 0.05 reduces speedup to about 3.99. These calculations extend the lecture's example and show why whole-system evaluation matters.
 
-[![Kapil’s handwritten notes — Part 1, PDF page 10](Resources/images/Day%2001/Lesson%2003/h04-algorithm.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 10](../Resources/images/Day%2001/Lesson%2003/h04-algorithm.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 10.*
 
@@ -538,7 +538,7 @@ An early performance estimate can come from an analytical model, high-level simu
 
 **Recall checks:** Why might the most frequently called function be a poor accelerator candidate? Why can an accelerator with a short arithmetic delay still reduce total system performance? Why should the stopping condition distinguish feasibility from global optimality?
 
-[Back to lesson index](#lesson-index) · [Repository guide](README.md)
+[Back to lesson index](#lesson-index) · [Repository guide](../README.md)
 
 ### Definitions and mechanisms in Lesson 03
 
@@ -562,7 +562,7 @@ An accelerator request is measured from available input to usable output. Transf
 
 ## Lesson 04: Overview of VLSI Design Flow II
 
-[Course index](README.md) · Week 1 · [Lecture video](https://www.youtube.com/watch?v=6_J-x1QfZs0) · [Handwritten index](Resources/Handwritten%20Index.md)
+[Course index](../README.md) · Week 1 · [Lecture video](https://www.youtube.com/watch?v=6_J-x1QfZs0) · [Handwritten index](../Resources/Handwritten%20Index.md)
 
 ### Lesson 04 outline
 
@@ -574,7 +574,7 @@ An accelerator request is measured from available input to usable output. Transf
 
 ### The implementation gap and IP reuse
 
-[![Metadata supports integration of reusable IP blocks](Resources/images/Day%2001/Lesson%2004/01-ip-assembly.png)](#lesson-index)
+[![Metadata supports integration of reusable IP blocks](../Resources/images/Day%2001/Lesson%2004/01-ip-assembly.png)](#lesson-index)
 
 *Lecture: [17:48](https://www.youtube.com/watch?v=6_J-x1QfZs0&t=1068s). Metadata supports integration of reusable IP blocks*
 
@@ -585,7 +585,7 @@ The **datapath** contains arithmetic, logic, multiplexers, and data registers. T
 
 Three routes bridge the gap: manually write RTL, integrate existing IP, or use behavioral/high-level synthesis. A **system on chip (SoC)** integrates substantial system components such as processors, memory, accelerators, peripherals, and sometimes analog/RF blocks. A **reusable IP block** packages a design capability and the information needed to use it. “Pre-verified” does not remove the need to verify its configuration and integration in the new system.
 
-[![Kapil’s handwritten notes — Part 1, PDF page 11](Resources/images/Day%2001/Lesson%2004/h01-ip.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 11](../Resources/images/Day%2001/Lesson%2004/h01-ip.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 11.*
 
@@ -598,7 +598,7 @@ Integration must resolve width, protocol, clock, reset, and power-domain compati
 
 ### Behavioral synthesis and its cost measures
 
-[![An algorithm, constraints, and a resource library jointly determine an RTL implementation](Resources/images/Day%2001/Lesson%2004/04-hls-framework.png)](#lesson-index)
+[![An algorithm, constraints, and a resource library jointly determine an RTL implementation](../Resources/images/Day%2001/Lesson%2004/04-hls-framework.png)](#lesson-index)
 
 *Lecture: [23:46](https://www.youtube.com/watch?v=6_J-x1QfZs0&t=1426s). The three inputs to behavioral synthesis and its RTL output.*
 
@@ -608,7 +608,7 @@ The yellow box specifies **what to compute**. The blue box specifies requirement
 
 **Scheduling** assigns operations to control steps or cycles. **Allocation** chooses how many resources are available. **Binding** maps operations and stored values to particular resources and registers. These decisions interact: sharing one multiplier can reduce arithmetic area but introduce multiplexers, control, and longer scheduling intervals.
 
-[![Kapil’s handwritten notes — Part 1, PDF page 12](Resources/images/Day%2001/Lesson%2004/h02-hls.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 12](../Resources/images/Day%2001/Lesson%2004/h02-hls.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 12.*
 
@@ -659,7 +659,7 @@ This distinction also clarifies the feedback adder on Part 1 page 14. Identify w
 
 ### Paths and the clock-period budget
 
-[![Launch and capture flip-flops connected by combinational logic](Resources/images/Day%2001/Lesson%2004/02-timing.png)](#lesson-index)
+[![Launch and capture flip-flops connected by combinational logic](../Resources/images/Day%2001/Lesson%2004/02-timing.png)](#lesson-index)
 
 *Lecture: [32:14](https://www.youtube.com/watch?v=6_J-x1QfZs0&t=1934s). Launch and capture flip-flops connected by combinational logic*
 
@@ -674,7 +674,7 @@ $$
 
 Here $t_{\text{cq,max}}$ is maximum clock-to-Q delay, $t_{\text{comb,max}}$ includes the logic and wires, and uncertainty reserves margin for specified clock effects. If capture clock arrival is later than launch clock arrival by $t_{\text{skew}}$, using that sign convention adds $t_{\text{skew}}$ to the available setup budget. Real STA also handles multiple clocks, exceptions, corners, and other checks.
 
-[![Kapil’s handwritten notes — Part 1, PDF page 13](Resources/images/Day%2001/Lesson%2004/h03-timing.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 13](../Resources/images/Day%2001/Lesson%2004/h03-timing.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 13.*
 
@@ -712,7 +712,7 @@ The later capture clock gives incoming setup data more time, but requires the pr
 
 ### Three implementations of a plus b plus c
 
-[![One adder reused over two cycles with multiplexers and feedback](Resources/images/Day%2001/Lesson%2004/03-resource-sharing.png)](#lesson-index)
+[![One adder reused over two cycles with multiplexers and feedback](../Resources/images/Day%2001/Lesson%2004/03-resource-sharing.png)](#lesson-index)
 
 *Lecture: [39:00](https://www.youtube.com/watch?v=6_J-x1QfZs0&t=2340s). One adder reused over two cycles with multiplexers and feedback*
 
@@ -727,7 +727,7 @@ The expression $y=a+b+c$ permits several architectures. For a fair comparison, d
 
 The pipelined version must delay `c` appropriately so the second stage combines values belonging to the same transaction. That alignment register may be omitted in a simplified drawing whose inputs are held stable. The table describes the protocol explicitly rather than assuming that any two-register drawing is a correct streaming pipeline.
 
-[![Kapil’s handwritten notes — Part 1, PDF page 14](Resources/images/Day%2001/Lesson%2004/h04-sharing.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 14](../Resources/images/Day%2001/Lesson%2004/h04-sharing.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 14.*
 
@@ -738,7 +738,7 @@ The toggle flip-flop creates alternating phases only if its initial phase is kno
 
 Area savings are conditional: the removed adder must save more than the added muxes, control, and registers cost. A shorter combinational path may permit a higher clock, but reduced initiation rate can still lower throughput. HLS chooses among these tradeoffs according to constraints and its available implementation models. The final design still needs synthesis and physical validation.
 
-[Back to lesson index](#lesson-index) · [Repository guide](README.md)
+[Back to lesson index](#lesson-index) · [Repository guide](../README.md)
 
 ### Definitions and mechanisms in Lesson 04
 
@@ -762,7 +762,7 @@ Scheduling assigns operations to clock steps while respecting dependencies and r
 
 ## Lesson 05: Tutorial 1 — Unix foundations for EDA
 
-[Course index](README.md) · Week 1 · [Lecture video](https://www.youtube.com/watch?v=ztPFMRfpPfk) · [Handwritten index](Resources/Handwritten%20Index.md)
+[Course index](../README.md) · Week 1 · [Lecture video](https://www.youtube.com/watch?v=ztPFMRfpPfk) · [Handwritten index](../Resources/Handwritten%20Index.md)
 
 ### Lesson 05 outline
 
@@ -773,7 +773,7 @@ Scheduling assigns operations to clock steps while respecting dependencies and r
 
 ### A shell is the working interface
 
-[![The tutorial demonstrates file and directory commands in a Linux shell](Resources/images/Day%2001/Lesson%2005/01-unix.png)](#lesson-index)
+[![The tutorial demonstrates file and directory commands in a Linux shell](../Resources/images/Day%2001/Lesson%2005/01-unix.png)](#lesson-index)
 
 *Lecture: [4:18](https://www.youtube.com/watch?v=ztPFMRfpPfk&t=258s). The tutorial demonstrates file and directory commands in a Linux shell*
 
@@ -841,7 +841,7 @@ For EDA, this matters when a simulation or implementation run takes a long time.
 
 **Recall checks:** Why does `cd` have to affect the shell itself? What is the difference between `%1` and PID 1? Why can a failed `cp` command result from a wrong working directory rather than missing privileges?
 
-[Back to lesson index](#lesson-index) · [Repository guide](README.md)
+[Back to lesson index](#lesson-index) · [Repository guide](../README.md)
 
 ### Definitions and mechanisms in Lesson 05
 
@@ -863,7 +863,7 @@ A reproducible tool run records the working directory, complete input paths, inv
 
 ## Lesson 06: Overview of VLSI Design Flow III — Logic synthesis
 
-[Course index](README.md) · Week 2 · [Lecture video](https://www.youtube.com/watch?v=3uujV3nJvNM) · [Handwritten index](Resources/Handwritten%20Index.md)
+[Course index](../README.md) · Week 2 · [Lecture video](https://www.youtube.com/watch?v=3uujV3nJvNM) · [Handwritten index](../Resources/Handwritten%20Index.md)
 
 ### Lesson 06 outline
 
@@ -873,7 +873,7 @@ A reproducible tool run records the working directory, complete input paths, inv
 
 ### RTL plus libraries plus constraints
 
-[![RTL selection and storage mapped into a mux and flip-flop](Resources/images/Day%2001/Lesson%2006/01-synthesis.png)](#lesson-index)
+[![RTL selection and storage mapped into a mux and flip-flop](../Resources/images/Day%2001/Lesson%2006/01-synthesis.png)](#lesson-index)
 
 *Lecture: [9:38](https://www.youtube.com/watch?v=3uujV3nJvNM&t=578s). RTL selection and storage mapped into a mux and flip-flop*
 
@@ -909,13 +909,13 @@ endmodule
 
 ### Library pins and instance pins
 
-[![A cell definition can have multiple independently named instances](Resources/images/Day%2001/Lesson%2006/02-pins.png)](#lesson-index)
+[![A cell definition can have multiple independently named instances](../Resources/images/Day%2001/Lesson%2006/02-pins.png)](#lesson-index)
 
 *Lecture: [25:48](https://www.youtube.com/watch?v=3uujV3nJvNM&t=1548s). A cell definition can have multiple independently named instances*
 
 A library describes reusable cell types. A netlist contains particular instances of those types and nets connecting their pins. Read the figure by first identifying each cell type, then its instance name, and finally the pin being connected. This distinction prevents two pins named `A` on different gates from being mistaken for one connection.
 
-[![Kapil’s handwritten notes — Part 1, PDF page 15](Resources/images/Day%2001/Lesson%2006/h01-pins.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 15](../Resources/images/Day%2001/Lesson%2006/h01-pins.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 15.*
 
@@ -967,13 +967,13 @@ For concrete format context, see [OpenSTA's accepted timing inputs](https://gith
 
 ### Generic logic and technology mapping
 
-[![Technology mapping chooses real library cells and drive strengths](Resources/images/Day%2001/Lesson%2006/03-mapping.png)](#lesson-index)
+[![Technology mapping chooses real library cells and drive strengths](../Resources/images/Day%2001/Lesson%2006/03-mapping.png)](#lesson-index)
 
 *Lecture: [38:43](https://www.youtube.com/watch?v=3uujV3nJvNM&t=2323s). Technology mapping chooses real library cells and drive strengths*
 
 Technology mapping replaces technology-independent logic with implementations available in the selected library. The available cells have real area, timing, drive, and power properties. Mapping and subsequent optimization therefore choose more than a Boolean symbol: they choose realizations that must meet the supplied constraints.
 
-[![Kapil’s handwritten notes — Part 1, PDF page 16](Resources/images/Day%2001/Lesson%2006/h02-synthesis.jpg)](#lesson-index)
+[![Kapil’s handwritten notes — Part 1, PDF page 16](../Resources/images/Day%2001/Lesson%2006/h02-synthesis.jpg)](#lesson-index)
 
 *Source: Part 1, PDF page 16.*
 
@@ -995,7 +995,7 @@ A stronger inverter can drive a larger load with less output delay, but its inpu
 
 **Equivalence checking** verifies that intended behavior survives transformation. Timing analysis checks the modeled temporal constraints. Neither check replaces the other. The resulting netlist proceeds into physical implementation, with test-related transformations included where the flow requires them.
 
-[Back to lesson index](#lesson-index) · [Repository guide](README.md)
+[Back to lesson index](#lesson-index) · [Repository guide](../README.md)
 
 #### Preserve polarity when mapping a Boolean function
 

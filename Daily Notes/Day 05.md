@@ -17,7 +17,7 @@ Lessons 25–30. Six-lesson study blocks; Day 06 remains partial through Constra
 - [Lesson 30: Static Timing Analysis - III](#lesson-30-static-timing-analysis---iii)
 
 
-[Master index](README.md) · [Handwritten page index](Resources/Handwritten%20Index.md) · [Glossary](Resources/Glossary.md)
+[Master index](../README.md) · [Handwritten page index](../Resources/Handwritten%20Index.md) · [Glossary](../Resources/Glossary.md)
 
 
 Figures link to the day index. Source page identifiers refer to the original scans.
@@ -29,7 +29,7 @@ Figures link to the day index. Source page identifiers refer to the original sca
 Week 6 · [Lecture video](https://www.youtube.com/watch?v=uQ-xAc7SxEc&t=1080s) · [Back to day index](#day-05-index)
 
 
-[![CEC matching: correspondence of registers and ports](Resources/images/Day%2005/Lesson%2025/02-register-matching.jpg)](#day-05-index)
+[![CEC matching: correspondence of registers and ports](../Resources/images/Day%2005/Lesson%2025/02-register-matching.jpg)](#day-05-index)
 
 
 *Lecture: [Lecture at 18:00](https://www.youtube.com/watch?v=uQ-xAc7SxEc&t=1080s).*
@@ -71,7 +71,7 @@ Source: NPTEL Formal Verification IV, lecture-material pages 4–13. Prerequisit
 Week 6 · [Lecture video](https://www.youtube.com/watch?v=tcfwuloB-zM&t=2700s) · [Back to day index](#day-05-index)
 
 
-[![Timing arcs and threshold-based propagation-delay definitions](Resources/images/Day%2005/Lesson%2026/02-nonlinear-delay-model.jpg)](#day-05-index)
+[![Timing arcs and threshold-based propagation-delay definitions](../Resources/images/Day%2005/Lesson%2026/02-nonlinear-delay-model.jpg)](#day-05-index)
 
 
 *Lecture: [Lecture at 45:00](https://www.youtube.com/watch?v=tcfwuloB-zM&t=2700s).*
@@ -134,7 +134,7 @@ The lecture introduces CCS (Composite Current Source) and ECSM (Effective Curren
 Week 6 · [Lecture video](https://www.youtube.com/watch?v=Phcq_iDo3ss&t=531s) · [Back to day index](#day-05-index)
 
 
-[![Unoptimized cell statistics and the optimization script](Resources/images/Day%2005/Lesson%2027/01-yosys-sharing.jpg)](#day-05-index)
+[![Unoptimized cell statistics and the optimization script](../Resources/images/Day%2005/Lesson%2027/01-yosys-sharing.jpg)](#day-05-index)
 
 
 *Lecture: [Lecture at 8:51](https://www.youtube.com/watch?v=Phcq_iDo3ss&t=531s).*
@@ -172,20 +172,20 @@ An operator-level area estimate makes the tradeoff explicit. With multiplier are
 Week 7 · [Lecture video](https://www.youtube.com/watch?v=qC5ZPVaOgTI&t=1700s) · [Back to day index](#day-05-index)
 
 
-[![STA: setup checks and data-path timing](Resources/images/Day%2005/Lesson%2028/01-setup-timing.jpg)](#day-05-index)  
-[![Handwritten source B-01](Resources/images/Day%2005/Lesson%2028/handwritten-comparison.jpg)](#day-05-index)
+[![STA: setup checks and data-path timing](../Resources/images/Day%2005/Lesson%2028/01-setup-timing.jpg)](#day-05-index)  
+[![Handwritten source B-01](../Resources/images/Day%2005/Lesson%2028/handwritten-comparison.jpg)](#day-05-index)
 
 
 *Lecture: [28:20](https://www.youtube.com/watch?v=qC5ZPVaOgTI&t=1700s) · Source: B-01.*
 
-[![Full lecture frame: STA: setup checks and data-path timing](Resources/images/Day%2005/Lesson%2028/01-setup-timing.jpg)](#day-05-index)
+[![Full lecture frame: STA: setup checks and data-path timing](../Resources/images/Day%2005/Lesson%2028/01-setup-timing.jpg)](#day-05-index)
 
 *Lecture: [28:20](https://www.youtube.com/watch?v=qC5ZPVaOgTI&t=1700s).*
 
 
 ### B-01: The sampling window and the basic setup equation
 
-[![Handwritten Scan B, PDF page 1](Resources/sources/handwritten/scan-b/h01.jpg)](#day-05-index)
+[![Handwritten Scan B, PDF page 1](../Resources/sources/handwritten/scan-b/h01.jpg)](#day-05-index)
 
 *Source: Scan B, PDF page 1.*
 
@@ -207,7 +207,7 @@ The slew annotation belongs to the shape of a transition. In library and STA usa
 
 ### B-02: Setup slack, skewed clocks and the hold window
 
-[![Handwritten Scan B, PDF page 2](Resources/sources/handwritten/scan-b/h02.jpg)](#day-05-index)
+[![Handwritten Scan B, PDF page 2](../Resources/sources/handwritten/scan-b/h02.jpg)](#day-05-index)
 
 *Source: Scan B, PDF page 2.*
 
@@ -221,7 +221,7 @@ Increasing the period can help an ordinary next-cycle setup check, but it does n
 
 ### B-03: Maximum frequency, hold repair and signed requirements
 
-[![Handwritten Scan B, PDF page 3](Resources/sources/handwritten/scan-b/h03.jpg)](#day-05-index)
+[![Handwritten Scan B, PDF page 3](../Resources/sources/handwritten/scan-b/h03.jpg)](#day-05-index)
 
 *Source: Scan B, PDF page 3.*
 
@@ -245,13 +245,13 @@ Setup and hold requirements may be negative in characterized cells because inter
 Week 7 · [Lecture video](https://www.youtube.com/watch?v=ftkMDGJY6cg&t=2000s) · [Back to day index](#day-05-index)
 
 
-[![Delay calculation uses input waveform, driver, wire and receiver models](Resources/images/Day%2005/Lesson%2029/01-slew-and-propagation.jpg)](#day-05-index)  
-[![Handwritten source B-05](Resources/images/Day%2005/Lesson%2029/handwritten-comparison.jpg)](#day-05-index)
+[![Delay calculation uses input waveform, driver, wire and receiver models](../Resources/images/Day%2005/Lesson%2029/01-slew-and-propagation.jpg)](#day-05-index)  
+[![Handwritten source B-05](../Resources/images/Day%2005/Lesson%2029/handwritten-comparison.jpg)](#day-05-index)
 
 
 *Lecture: [33:20](https://www.youtube.com/watch?v=ftkMDGJY6cg&t=2000s) · Source: B-05.*
 
-[![Full lecture frame: Delay calculation uses input waveform, driver, wire and receiver models](Resources/images/Day%2005/Lesson%2029/01-slew-and-propagation.jpg)](#day-05-index)
+[![Full lecture frame: Delay calculation uses input waveform, driver, wire and receiver models](../Resources/images/Day%2005/Lesson%2029/01-slew-and-propagation.jpg)](#day-05-index)
 
 *Lecture: [33:20](https://www.youtube.com/watch?v=ftkMDGJY6cg&t=2000s).*
 
@@ -262,7 +262,7 @@ Define skew as `C-L`, capture latency minus launch latency. This sign convention
 
 ### B-04: Derive the skew signs before memorizing them
 
-[![Handwritten Scan B, PDF page 4](Resources/sources/handwritten/scan-b/h04.jpg)](#day-05-index)
+[![Handwritten Scan B, PDF page 4](../Resources/sources/handwritten/scan-b/h04.jpg)](#day-05-index)
 
 *Source: Scan B, PDF page 4.*
 
@@ -288,7 +288,7 @@ To interpret the internal sampling sketch, consider a deliberately simplified ce
 
 ### B-05: Arrival time and slew are separate propagated quantities
 
-[![Handwritten Scan B, PDF page 5](Resources/sources/handwritten/scan-b/h05.jpg)](#day-05-index)
+[![Handwritten Scan B, PDF page 5](../Resources/sources/handwritten/scan-b/h05.jpg)](#day-05-index)
 
 *Source: Scan B, PDF page 5.*
 
@@ -319,7 +319,7 @@ This is the operational reason for the max/min distinction in B-04 and B-05. Set
 
 ### B-06: Graph-based versus path-based analysis and timing margins
 
-[![Handwritten Scan B, PDF page 6](Resources/sources/handwritten/scan-b/h06.jpg)](#day-05-index)
+[![Handwritten Scan B, PDF page 6](../Resources/sources/handwritten/scan-b/h06.jpg)](#day-05-index)
 
 *Source: Scan B, PDF page 6.*
 
@@ -341,13 +341,13 @@ Do not arbitrarily remove a margin to make a report pass. As physical implementa
 Week 7 · [Lecture video](https://www.youtube.com/watch?v=NOOXX3OIvj4&t=2600s) · [Back to day index](#day-05-index)
 
 
-[![MMMC scenarios combine cell-library, mode and interconnect conditions](Resources/images/Day%2005/Lesson%2030/02-multi-mode-multi-corner.jpg)](#day-05-index)  
-[![Handwritten source B-08](Resources/images/Day%2005/Lesson%2030/handwritten-comparison.jpg)](#day-05-index)
+[![MMMC scenarios combine cell-library, mode and interconnect conditions](../Resources/images/Day%2005/Lesson%2030/02-multi-mode-multi-corner.jpg)](#day-05-index)  
+[![Handwritten source B-08](../Resources/images/Day%2005/Lesson%2030/handwritten-comparison.jpg)](#day-05-index)
 
 
 *Lecture: [43:20](https://www.youtube.com/watch?v=NOOXX3OIvj4&t=2600s) · Source: B-08.*
 
-[![Full lecture frame: MMMC scenarios combine cell-library, mode and interconnect conditions](Resources/images/Day%2005/Lesson%2030/02-multi-mode-multi-corner.jpg)](#day-05-index)
+[![Full lecture frame: MMMC scenarios combine cell-library, mode and interconnect conditions](../Resources/images/Day%2005/Lesson%2030/02-multi-mode-multi-corner.jpg)](#day-05-index)
 
 *Lecture: [43:20](https://www.youtube.com/watch?v=NOOXX3OIvj4&t=2600s).*
 
@@ -356,7 +356,7 @@ Week 7 · [Lecture video](https://www.youtube.com/watch?v=NOOXX3OIvj4&t=2600s) �
 
 ### B-07: MMMC scenarios and the role of uncertainty
 
-[![Handwritten Scan B, PDF page 7](Resources/sources/handwritten/scan-b/h07.jpg)](#day-05-index)
+[![Handwritten Scan B, PDF page 7](../Resources/sources/handwritten/scan-b/h07.jpg)](#day-05-index)
 
 *Source: Scan B, PDF page 7.*
 
@@ -370,7 +370,7 @@ Global corner analysis captures coherent changes of the modeled operating condit
 
 ### B-08: Early/late derating and the inputs to STA
 
-[![Handwritten Scan B, PDF page 8](Resources/sources/handwritten/scan-b/h08.jpg)](#day-05-index)
+[![Handwritten Scan B, PDF page 8](../Resources/sources/handwritten/scan-b/h08.jpg)](#day-05-index)
 
 *Source: Scan B, PDF page 8.*
 

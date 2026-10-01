@@ -22,14 +22,15 @@ def normalized(s):
 
 for day in days:
     m=manifest[str(day)]
-    pdf=HERE.parent/m['filename']
-    source=(ROOT/f'Day {day:02d}.md').read_text(encoding='utf-8')
+    pdf=ROOT/'PDFs'/m['filename']
+    source=(ROOT/'Daily Notes'/f'Day {day:02d}.md').read_text(encoding='utf-8')
     source_images=re.findall(r'!\[[^\]]*\]\(([^)]+)\)',source)
     source_codes=re.findall(r'^```[^\n]*\n(.*?)^```',source,re.M|re.S)
     assert len(source_images)==m['figures']
     assert len(source_codes)==m['code_blocks']
-    assert {unquote(s).replace('\\','/') for s in source_images}=={r['path'].replace('\\','/') for r in m['figures_detail']}
-    assert hashlib.sha256((ROOT/f'Day {day:02d}.md').read_bytes()).hexdigest()==m['source_sha256']
+    assert {(source_path.resolve().relative_to(ROOT)).as_posix()
+            for source_path in (ROOT/'Daily Notes'/unquote(s) for s in source_images)}=={r['path'].replace('\\','/') for r in m['figures_detail']}
+    assert hashlib.sha256((ROOT/'Daily Notes'/f'Day {day:02d}.md').read_bytes()).hexdigest()==m['source_sha256']
     r=PdfReader(pdf)
     text='\n'.join(p.extract_text() or '' for p in r.pages)
     # Editorial acceptance criterion for the formal reading edition. Check

@@ -10,7 +10,7 @@ manifest=json.loads((QA/'build-manifest.json').read_text(encoding='utf-8'))
 results={}
 
 for day,m in manifest.items():
-    path=HERE.parent/m['filename']
+    path=HERE.parents[2]/'PDFs'/m['filename']
     reader=PdfReader(path)
     first=reader.pages[0].indirect_reference
     def contents_link(annotation):

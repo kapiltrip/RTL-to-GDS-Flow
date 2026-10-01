@@ -2,7 +2,7 @@
 
 VLSI Design Flow: RTL to GDS · NPTEL · Prof. Sneh Saurabh
 
-[PDF](documents/Week%2007%20and%2008%20-%20Practice%20Questions.pdf) · [Master index](../README.md)
+[PDF](../PDFs/Week%2007%20and%2008%20-%20Practice%20Questions.pdf) · [Master index](../README.md)
 
 <a id="index"></a>
 ## Index

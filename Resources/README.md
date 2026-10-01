@@ -1,29 +1,29 @@
 # Resources
 
-[Master reading index](../README.md) · [Daily PDFs](documents/README.md)
+[Master index](../README.md) · [Daily notes](../Daily%20Notes/README.md) · [PDF collection](../PDFs/README.md)
 
-Use [Handwritten Index](Handwritten%20Index.md) to locate all 60 readable source pages, [Glossary](Glossary.md) for full forms, [Flow Map](Flow%20Map.md) for stage purposes, [Questions](Questions.md) for corrections, and [Sources](Sources.md) for lecture timestamps. [Coverage Review](Coverage%20Review.md) records the source-to-note depth review for every day and the remaining source limits.
+The reader references are [Full Forms](../Full%20Forms.pdf) and [RTL to GDS Flow](../RTL%20to%20GDS%20Flow.pdf). Their maintained content sources are [Glossary](Glossary.md) and [Flow Map](Flow%20Map.md). The flow guide explains implementation theory and the NPTEL teaching approach; detailed tool tutorials remain in the relevant daily lessons.
 
-The [Week 7 and Week 8 practice questions](Week%2007%20and%2008%20-%20Practice%20Questions.md) reproduce all 20 original assignment questions, 161 unmarked options and six original figures. The [linked worksheet PDF](documents/Week%2007%20and%2008%20-%20Practice%20Questions.pdf) contains the questions without responses, solutions or grading information. Quiz figures live in `images/Quizzes/Week 07` and `Week 08`; the editable Markdown is the content source for `documents/.build/build_quiz.py`. Rebuild it with `python Resources/documents/.build/build_quiz.py`. Quiz coverage does not advance the completed-lecture marker.
+[Handwritten Index](Handwritten%20Index.md) locates all 60 readable source pages. [Sources](Sources.md) records lecture frames, timestamps and primary references. [Questions](Questions.md) collects corrections and doubts, and [Coverage Review](Coverage%20Review.md) records the depth review and source limits. Complete handwritten images live in `sources/handwritten`, course captures in `images/Day NN/Lesson NN`, and executable study material in [examples](examples/README.md).
 
-Reader-facing PDFs live in `documents`. Editable daily notes live at the repository root. Complete handwritten images live in `sources/handwritten`; actual lecture frames and comparison crops live in `images/Day NN/Lesson NN`. Examples live in `examples`.
+The daily Markdown files in `../Daily Notes` are the content sources for all six daily PDFs in `../PDFs`. They retain the explanations, complete handwriting, worked applications and code. The PDF builder supplies typography and navigation. The [Week 7 and Week 8 practice-question source](Week%2007%20and%2008%20-%20Practice%20Questions.md) produces the [question-only worksheet](../PDFs/Week%2007%20and%2008%20-%20Practice%20Questions.pdf): 20 original questions, 161 unmarked options and six original figures. Quiz coverage does not advance the completed-lecture marker.
 
-The PDFs use a formal reading style with concise source captions. The daily Markdown files are the single content source for all six PDFs, including definitions, page-specific reasoning, worked applications and code. The builder supplies layout and navigation; it does not append a second copy of lesson explanations.
+Raw scan PDFs remain in `Data`, locally preserved and ignored by Git. One upload is empty. Downloaded lecture decks and scratch files remain in the ignored `.work` directory. Maintained builders and checks live in `tools/pdf`; their `vendor`, `cache`, `qa`, `logs` and `history` subdirectories are ignored. The earlier course-position PDF is preserved in local history because its progress marker is superseded.
 
-Raw new scan PDFs are renamed and preserved in `Data`, which is local and ignored by Git. One upload is empty. Downloaded decks and review scratch files are local in `.work`, also ignored. PDF builders are maintained in `documents/.build`; caches, dependencies and rendered QA previews are ignored. The earlier course-position PDF is retained in the builder's history folder because its old progress marker is superseded by the master index.
+Append each completed lesson to its six-lesson study day, preserve each source-page identity and explanation, update sources and the handwriting index, and rebuild the affected PDF. Counts come from actual files; playlist availability does not establish completion.
 
-To maintain the collection, append the next lesson to its six-lesson day, give every source page a stable identity and explanation, update sources and the handwritten index, rebuild the changed PDF, then check all affected navigation and page layouts. Counts must come from actual files. Do not mark a lecture complete because it appears in a playlist.
-
-The verification scripts check Markdown links and anchors, all 60 original-page mappings and four readable source-PDF page counts, all 32 completed lesson identities, lecture capture hashes, PDF source coverage, complete code, bookmark and contents destinations, figure back-links, cross-day links and page geometry. Every PDF page is rendered for visual review. [Checked examples](examples/README.md) records what the executable examples establish.
-
-For a maintained rebuild from the repository root, use Python with the builder's dependencies available:
+Run the maintained workflow from the repository root, with Python and the dependencies available:
 
 ```text
-python Resources/documents/.build/build_notes.py
-python Resources/documents/.build/check_notes.py
-python Resources/documents/.build/check_navigation.py
-python Resources/documents/.build/check_collection.py
-python Resources/documents/.build/update_index.py
+python Resources/tools/pdf/build_references.py
+python Resources/tools/pdf/build_notes.py
+python Resources/tools/pdf/check_notes.py
+python Resources/tools/pdf/check_navigation.py
+python Resources/tools/pdf/check_references.py
+python Resources/tools/pdf/check_collection.py
+python Resources/tools/pdf/update_index.py
 ```
 
-Pass a day number to the PDF builder and checker to update only that day. The builder needs ReportLab, pypdf, Pillow, Matplotlib, svglib and markdown-it-py; the PDF checker also needs pdfplumber and Poppler. Local dependencies and QA artifacts remain inside the hidden builder directories. Raw scans and temporary previews are preserved locally; they are excluded from the portable Git collection.
+Run `python Resources/tools/pdf/build_quiz.py` to rebuild the worksheet. Pass a day number to the daily builder and checker to update only that day. Daily builds need ReportLab, pypdf, Pillow, Matplotlib, svglib and markdown-it-py; checks also use pdfplumber and Poppler. The reference builder needs ReportLab and pypdf. Local dependencies and QA artifacts stay inside `tools/pdf`.
+
+Verification covers Markdown paths and anchors, all 60 original-page mappings, four readable source-PDF page counts, 32 completed lessons, lecture-capture hashes, complete code, paragraph coverage, bookmarks, contents links, figure back-links, cross-document destinations and page geometry. Render the latest changed pages for visual inspection before publishing.

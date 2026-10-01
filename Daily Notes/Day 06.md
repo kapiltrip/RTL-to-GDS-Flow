@@ -9,7 +9,7 @@ Lessons 31–32. Six-lesson study blocks; Day 06 remains partial through Constra
 - [Lesson 32: Constraints I](#lesson-32-constraints-i)
 
 
-[Master index](README.md) · [Handwritten page index](Resources/Handwritten%20Index.md) · [Glossary](Resources/Glossary.md)
+[Master index](../README.md) · [Handwritten page index](../Resources/Handwritten%20Index.md) · [Glossary](../Resources/Glossary.md)
 
 
 Figures link to the day index. Source page identifiers refer to the original scans.
@@ -21,7 +21,7 @@ Figures link to the day index. Source page identifiers refer to the original sca
 Week 7 · [Lecture video](https://www.youtube.com/watch?v=fKKuQGoirfM&t=500s) · [Back to day index](#day-06-index)
 
 
-[![OpenSTA input files, command sequence and timing-report instructions](Resources/images/Day%2006/Lesson%2031/01-opensta-report.jpg)](#day-06-index)
+[![OpenSTA input files, command sequence and timing-report instructions](../Resources/images/Day%2006/Lesson%2031/01-opensta-report.jpg)](#day-06-index)
 
 
 *Lecture: [Lecture at 8:20](https://www.youtube.com/watch?v=fKKuQGoirfM&t=500s).*
@@ -75,20 +75,20 @@ The absence of a path from a report can mean it is unconstrained, disconnected, 
 Week 8 · [Lecture video](https://www.youtube.com/watch?v=rLhnmyGYsuQ&t=2300s) · [Back to day index](#day-06-index)
 
 
-[![Generated-clock definition preserves its relationship to a master clock](Resources/images/Day%2006/Lesson%2032/02-generated-clock-definition.jpg)](#day-06-index)  
-[![Handwritten source B-10](Resources/images/Day%2006/Lesson%2032/handwritten-comparison.jpg)](#day-06-index)
+[![Generated-clock definition preserves its relationship to a master clock](../Resources/images/Day%2006/Lesson%2032/02-generated-clock-definition.jpg)](#day-06-index)  
+[![Handwritten source B-10](../Resources/images/Day%2006/Lesson%2032/handwritten-comparison.jpg)](#day-06-index)
 
 
 *Lecture: [38:20](https://www.youtube.com/watch?v=rLhnmyGYsuQ&t=2300s) · Source: B-10.*
 
-[![Full lecture frame: Generated-clock definition preserves its relationship to a master clock](Resources/images/Day%2006/Lesson%2032/02-generated-clock-definition.jpg)](#day-06-index)
+[![Full lecture frame: Generated-clock definition preserves its relationship to a master clock](../Resources/images/Day%2006/Lesson%2032/02-generated-clock-definition.jpg)](#day-06-index)
 
 *Lecture: [38:20](https://www.youtube.com/watch?v=rLhnmyGYsuQ&t=2300s).*
 
 
 ### B-09: Constraint categories and primary-clock definitions
 
-[![Handwritten Scan B, PDF page 9](Resources/sources/handwritten/scan-b/h09.jpg)](#day-06-index)
+[![Handwritten Scan B, PDF page 9](../Resources/sources/handwritten/scan-b/h09.jpg)](#day-06-index)
 
 *Source: Scan B, PDF page 9.*
 
@@ -159,7 +159,7 @@ Draw the old-data launch, capture and next-data launch before substituting numbe
 
 ### B-10: Generated clocks, latency and model versus hardware
 
-[![Handwritten Scan B, PDF page 10](Resources/sources/handwritten/scan-b/h10.jpg)](#day-06-index)
+[![Handwritten Scan B, PDF page 10](../Resources/sources/handwritten/scan-b/h10.jpg)](#day-06-index)
 
 *Source: Scan B, PDF page 10.*
 
@@ -195,11 +195,11 @@ The handwritten “set_unit” is not a universal SDC command. Verify the select
 
 ### B-11: Jitter, skew, uncertainty and transition
 
-[![Lecture: clock uncertainty](Resources/images/Day%2006/Lesson%2032/03-clock-uncertainty.jpg)](#day-06-index)
+[![Lecture: clock uncertainty](../Resources/images/Day%2006/Lesson%2032/03-clock-uncertainty.jpg)](#day-06-index)
 
 *Lecture: [Clock uncertainty at 49:20](https://www.youtube.com/watch?v=rLhnmyGYsuQ&t=2960s). Jitter, skew estimates and explicit margins have different physical origins.*
 
-[![Handwritten Scan B, PDF page 11](Resources/sources/handwritten/scan-b/h11.jpg)](#day-06-index)
+[![Handwritten Scan B, PDF page 11](../Resources/sources/handwritten/scan-b/h11.jpg)](#day-06-index)
 
 *Source: Scan B, PDF page 11.*
 
