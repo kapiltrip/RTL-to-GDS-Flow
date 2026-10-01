@@ -1,0 +1,238 @@
+{
+  "reported_progress": "Week 8 Constraints I",
+  "as_of": "2026-09-30",
+  "lessons_per_day": 6,
+  "completed_sequence": 32,
+  "current_day": 6,
+  "current_day_lesson": 2,
+  "handwritten_new_pages": [
+    {
+      "key": "A-01",
+      "lesson": 13,
+      "day": 3,
+      "anchor": "a-01-testbench-dut-waveform-and-coverage",
+      "path": "Resources/sources/handwritten/scan-a/h01.jpg"
+    },
+    {
+      "key": "A-02",
+      "lesson": 13,
+      "day": 3,
+      "anchor": "a-02-evaluation-updates-event-queues-and-races",
+      "path": "Resources/sources/handwritten/scan-a/h02.jpg"
+    },
+    {
+      "key": "A-03",
+      "lesson": 13,
+      "day": 3,
+      "anchor": "a-03-classic-verilog-stratified-event-queue",
+      "path": "Resources/sources/handwritten/scan-a/h03.jpg"
+    },
+    {
+      "key": "A-04",
+      "lesson": 15,
+      "day": 3,
+      "anchor": "a-04-parsing-syntax-trees-and-elaboration",
+      "path": "Resources/sources/handwritten/scan-a/h04.jpg"
+    },
+    {
+      "key": "A-05",
+      "lesson": 15,
+      "day": 3,
+      "anchor": "a-05-port-direction-instances-and-parameterized-counters",
+      "path": "Resources/sources/handwritten/scan-a/h05.jpg"
+    },
+    {
+      "key": "A-06",
+      "lesson": 15,
+      "day": 3,
+      "anchor": "a-06-synthesis-support-muxes-and-wildcard-cases",
+      "path": "Resources/sources/handwritten/scan-a/h06.jpg"
+    },
+    {
+      "key": "A-07",
+      "lesson": 15,
+      "day": 3,
+      "anchor": "a-07-blocking-chains-pipelines-and-latch-inference",
+      "path": "Resources/sources/handwritten/scan-a/h07.jpg"
+    },
+    {
+      "key": "A-08",
+      "lesson": 16,
+      "day": 3,
+      "anchor": "a-08-loop-unrolling-functions-and-resource-sharing",
+      "path": "Resources/sources/handwritten/scan-a/h08.jpg"
+    },
+    {
+      "key": "A-09",
+      "lesson": 16,
+      "day": 3,
+      "anchor": "a-09-speculation-and-the-late-select-path",
+      "path": "Resources/sources/handwritten/scan-a/h09.jpg"
+    },
+    {
+      "key": "A-10",
+      "lesson": 16,
+      "day": 3,
+      "anchor": "a-10-compiler-style-optimization-and-arithmetic-limits",
+      "path": "Resources/sources/handwritten/scan-a/h10.jpg"
+    },
+    {
+      "key": "A-11",
+      "lesson": 17,
+      "day": 3,
+      "anchor": "a-11-literals-cubes-minterms-and-maxterms",
+      "path": "Resources/sources/handwritten/scan-a/h11.jpg"
+    },
+    {
+      "key": "A-12",
+      "lesson": 17,
+      "day": 3,
+      "anchor": "a-12-on-set-off-set-dont-cares-and-implicants",
+      "path": "Resources/sources/handwritten/scan-a/h12.jpg"
+    },
+    {
+      "key": "A-13",
+      "lesson": 17,
+      "day": 3,
+      "anchor": "a-13-the-prime-implicants-of-ab--abc--bc",
+      "path": "Resources/sources/handwritten/scan-a/h13.jpg"
+    },
+    {
+      "key": "A-14",
+      "lesson": 17,
+      "day": 3,
+      "anchor": "a-14-coverage-charts-minimal-covers-and-minimum-cost",
+      "path": "Resources/sources/handwritten/scan-a/h14.jpg"
+    },
+    {
+      "key": "A-15",
+      "lesson": 19,
+      "day": 4,
+      "anchor": "a-15-factoring-and-boolean-network-structure",
+      "path": "Resources/sources/handwritten/scan-a/h15.jpg"
+    },
+    {
+      "key": "A-16",
+      "lesson": 19,
+      "day": 4,
+      "anchor": "a-16-substitution-extraction-and-the-algebraic-model",
+      "path": "Resources/sources/handwritten/scan-a/h16.jpg"
+    },
+    {
+      "key": "A-17",
+      "lesson": 20,
+      "day": 4,
+      "anchor": "a-17-fsms-state-equivalence-and-encoding",
+      "path": "Resources/sources/handwritten/scan-a/h17.jpg"
+    },
+    {
+      "key": "A-18",
+      "lesson": 21,
+      "day": 4,
+      "anchor": "a-18-proof-scope-simulation-and-symbolic-representation",
+      "path": "Resources/sources/handwritten/scan-a/h18.jpg"
+    },
+    {
+      "key": "A-19",
+      "lesson": 21,
+      "day": 4,
+      "anchor": "a-19-shannon-expansion-and-cofactors",
+      "path": "Resources/sources/handwritten/scan-a/h19.jpg"
+    },
+    {
+      "key": "A-20",
+      "lesson": 21,
+      "day": 4,
+      "anchor": "a-20-ordered-graphs-and-reduction-rules",
+      "path": "Resources/sources/handwritten/scan-a/h20.jpg"
+    },
+    {
+      "key": "A-21",
+      "lesson": 23,
+      "day": 4,
+      "anchor": "a-21-sat-unsat-cnf-and-robdd-scope",
+      "path": "Resources/sources/handwritten/scan-a/h21.jpg"
+    },
+    {
+      "key": "B-01",
+      "lesson": 28,
+      "day": 5,
+      "anchor": "b-01-the-sampling-window-and-the-basic-setup-equation",
+      "path": "Resources/sources/handwritten/scan-b/h01.jpg"
+    },
+    {
+      "key": "B-02",
+      "lesson": 28,
+      "day": 5,
+      "anchor": "b-02-setup-slack-skewed-clocks-and-the-hold-window",
+      "path": "Resources/sources/handwritten/scan-b/h02.jpg"
+    },
+    {
+      "key": "B-03",
+      "lesson": 28,
+      "day": 5,
+      "anchor": "b-03-maximum-frequency-hold-repair-and-signed-requirements",
+      "path": "Resources/sources/handwritten/scan-b/h03.jpg"
+    },
+    {
+      "key": "B-04",
+      "lesson": 29,
+      "day": 5,
+      "anchor": "b-04-derive-the-skew-signs-before-memorizing-them",
+      "path": "Resources/sources/handwritten/scan-b/h04.jpg"
+    },
+    {
+      "key": "B-05",
+      "lesson": 29,
+      "day": 5,
+      "anchor": "b-05-arrival-time-and-slew-are-separate-propagated-quantities",
+      "path": "Resources/sources/handwritten/scan-b/h05.jpg"
+    },
+    {
+      "key": "B-06",
+      "lesson": 29,
+      "day": 5,
+      "anchor": "b-06-graph-based-versus-path-based-analysis-and-timing-margins",
+      "path": "Resources/sources/handwritten/scan-b/h06.jpg"
+    },
+    {
+      "key": "B-07",
+      "lesson": 30,
+      "day": 5,
+      "anchor": "b-07-mmmc-scenarios-and-the-role-of-uncertainty",
+      "path": "Resources/sources/handwritten/scan-b/h07.jpg"
+    },
+    {
+      "key": "B-08",
+      "lesson": 30,
+      "day": 5,
+      "anchor": "b-08-earlylate-derating-and-the-inputs-to-sta",
+      "path": "Resources/sources/handwritten/scan-b/h08.jpg"
+    },
+    {
+      "key": "B-09",
+      "lesson": 32,
+      "day": 6,
+      "anchor": "b-09-constraint-categories-and-primary-clock-definitions",
+      "path": "Resources/sources/handwritten/scan-b/h09.jpg"
+    },
+    {
+      "key": "B-10",
+      "lesson": 32,
+      "day": 6,
+      "anchor": "b-10-generated-clocks-latency-and-model-versus-hardware",
+      "path": "Resources/sources/handwritten/scan-b/h10.jpg"
+    },
+    {
+      "key": "B-11",
+      "lesson": 32,
+      "day": 6,
+      "anchor": "b-11-jitter-skew-uncertainty-and-transition",
+      "path": "Resources/sources/handwritten/scan-b/h11.jpg"
+    }
+  ],
+  "empty_upload": {
+    "path": "Resources/Data/Scan-Empty-Upload.pdf",
+    "bytes": 0
+  }
+}

@@ -30,19 +30,19 @@ Use each lesson’s outline for topic-level links. Source captions distinguish v
 
 ### From connectivity to geometry
 
-![Physical design adds placement, clock distribution, and routing](Resources/images/Day%2002/Lesson%2007/01-physical-flow.png)
+[![Physical design adds placement, clock distribution, and routing](Resources/images/Day%2002/Lesson%2007/01-physical-flow.png)](#lesson-index)
 
-*Video frame: [10:56](https://www.youtube.com/watch?v=--wJOkCvn2M&t=656s). Physical design adds placement, clock distribution, and routing*
+*Lecture: [10:56](https://www.youtube.com/watch?v=--wJOkCvn2M&t=656s). Physical design adds placement, clock distribution, and routing*
 
 
 **Physical design** converts a logical netlist into manufacturable layout geometry. The logical netlist says which pins connect; physical implementation chooses where instances sit and how metal and vias realize those connections. The tool also changes the implementation where needed, for example by inserting buffers or selecting different cell sizes, while preserving the required behavior.
 
-![Kapil’s handwritten notes — Part 1, PDF page 17](Resources/images/Day%2002/Lesson%2007/h01-physical.jpg)
+[![Kapil’s handwritten notes — Part 1, PDF page 17](Resources/images/Day%2002/Lesson%2007/h01-physical.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 17.*
+*Source: Part 1, PDF page 17.*
 
 
-Your input diagram needs several complementary views:
+The input diagram needs several complementary views:
 
 | View or input | What it provides |
 |---|---|
@@ -61,12 +61,12 @@ LEF stands for **Library Exchange Format**. It is deliberately an abstract physi
 
 **Utilization** is meaningful only with a stated denominator. A common early estimate divides standard-cell area by the available placement area. If cells occupy 0.60 mm² and the usable row area is 1.00 mm², utilization is 60%. The remaining space is not simply wasted: it provides flexibility for placement, buffers, clock cells, routing access, and later fixes. Excessively dense placement can cause congestion and timing detours.
 
-![Kapil’s handwritten notes — Part 1, PDF page 18](Resources/images/Day%2002/Lesson%2007/h02-floorplan.jpg)
+[![Kapil’s handwritten notes — Part 1, PDF page 18](Resources/images/Day%2002/Lesson%2007/h02-floorplan.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 18.*
+*Source: Part 1, PDF page 18.*
 
 
-Your note about “location of standard cells” at chip planning means **allocate regions and rows**, not finalize every cell coordinate. Those millions of individual locations belong to placement. The rectilinear L/I sketches describe flexibility available for some blocks. A hard macro with fixed physical geometry cannot arbitrarily be reshaped; a soft block or hierarchical region can offer different aspect ratios or shapes depending on its implementation.
+The note about “location of standard cells” at chip planning means **allocate regions and rows**, not finalize every cell coordinate. Those millions of individual locations belong to placement. The rectilinear L/I sketches describe flexibility available for some blocks. A hard macro with fixed physical geometry cannot arbitrarily be reshaped; a soft block or hierarchical region can offer different aspect ratios or shapes depending on its implementation.
 
 A **power delivery network (PDN)** distributes supply and ground through conductive structures to cells and macros. Wire resistance causes a voltage loss approximately $\Delta V=IR$ in a simple DC segment. For example, 20 mA through 0.5 Ω produces 10 mV of drop. Real networks have distributed current, transient effects, multiple paths, and reliability constraints. Lower local supply voltage can slow cells; adequate power wiring therefore supports timing as well as operation.
 
@@ -86,13 +86,13 @@ To understand congestion, imagine one routing boundary with eight available trac
 
 Moving cells apart can reduce demand concentration, while moving a macro can open a blocked channel. Strengthening the PDN may reserve additional routing space for supplies. These interactions explain why floorplanning, power planning, placement, and routing need iteration. As a concrete tool example, [OpenROAD's global placer](https://openroad.readthedocs.io/en/latest/main/src/gpl/README.html) estimates congestion during routability-driven placement and increases the modeled area of cells in congested regions to encourage spreading.
 
-**Try it:** if the cell area grows to 0.66 mm² while the usable placement area remains 1.00 mm², utilization becomes 66%. That percentage still does not tell you whether a particular macro channel has enough tracks.
+**Try it:** if the cell area grows to 0.66 mm² while the usable placement area remains 1.00 mm², utilization becomes 66%. That percentage still does not establish whether a particular macro channel has enough tracks.
 
 ### Clock tree synthesis
 
-![Clock arrival times differ because the distribution network has delay](Resources/images/Day%2002/Lesson%2007/02-cts.png)
+[![Clock arrival times differ because the distribution network has delay](Resources/images/Day%2002/Lesson%2007/02-cts.png)](#lesson-index)
 
-*Video frame: [32:49](https://www.youtube.com/watch?v=--wJOkCvn2M&t=1969s). Clock arrival times differ because the distribution network has delay*
+*Lecture: [32:49](https://www.youtube.com/watch?v=--wJOkCvn2M&t=1969s). Clock arrival times differ because the distribution network has delay*
 
 
 **Clock tree synthesis (CTS)** builds a network that distributes clock events to sequential elements with controlled skew, latency, transition time, and load. A single ideal clock source cannot directly drive an arbitrarily large physical load with zero delay. Buffers and branches distribute that load.
@@ -101,38 +101,58 @@ Moving cells apart can reduce demand concentration, while moving a macro can ope
 
 Symmetric topology and balanced electrical loading can reduce skew, but equal drawn wire lengths alone do not guarantee equal delays. Cell delays, loading, parasitics, and variation matter. The introductory goal is small skew; practical timing optimization can also use controlled useful skew under explicit setup and hold analysis.
 
-![Kapil’s handwritten notes — Part 1, PDF page 19](Resources/images/Day%2002/Lesson%2007/h03-cts-routing.jpg)
+[![Kapil’s handwritten notes — Part 1, PDF page 19](Resources/images/Day%2002/Lesson%2007/h03-cts-routing.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 19.*
+*Source: Part 1, PDF page 19.*
 
 
-Your high-priority clock note reflects its role in synchronous operation. Clock routing is planned before much ordinary signal routing in the lecture's flow, when resources are less constrained. The clock switches frequently and drives large capacitance, so it can consume a substantial fraction of dynamic power. The percentage depends on the design; it is not a universal constant.
+The high-priority clock note reflects its role in synchronous operation. Clock routing is planned before much ordinary signal routing in the lecture's flow, when resources are less constrained. The clock switches frequently and drives large capacitance, so it can consume a substantial fraction of dynamic power. The percentage depends on the design; it is not a universal constant.
 
 **Clock gating** prevents unnecessary clock transitions from reaching inactive logic. The enable must be applied using a glitch-safe structure and verified behavior. A naive AND gate whose enable changes at the wrong time can create an unintended edge. Gating cells can be inserted at different points in an actual flow, so it should not be remembered as an operation that only ever occurs during CTS.
 
 ### Global routing detailed routing and closure
 
-![Detailed routing chooses actual wires and vias within the planned regions](Resources/images/Day%2002/Lesson%2007/03-routing.png)
+[![Detailed routing chooses actual wires and vias within the planned regions](Resources/images/Day%2002/Lesson%2007/03-routing.png)](#lesson-index)
 
-*Video frame: [41:13](https://www.youtube.com/watch?v=--wJOkCvn2M&t=2473s). Detailed routing chooses actual wires and vias within the planned regions*
+*Lecture: [41:13](https://www.youtube.com/watch?v=--wJOkCvn2M&t=2473s). Detailed routing chooses actual wires and vias within the planned regions*
 
 
 **Global routing** plans approximate paths through routing regions and layers while accounting for capacity and congestion. **Detailed routing** assigns actual tracks, wire shapes, and vias to connect pins legally. A global route is a plan, not proof that a design-rule-clean detailed route exists. Pin access, spacing, enclosure, and competing wires can invalidate an apparently reasonable plan.
 
 Routing seeks legal connectivity and suitable timing while managing wire length, via count, and congestion. More vias can add resistance and physical constraints; a long detour can worsen delay. After routing, extraction provides more realistic parasitic resistance and capacitance than early estimates, allowing timing and signal-integrity checks to be repeated.
 
-![Kapil’s handwritten notes — Part 1, PDF page 20, right-side ECO notes](Resources/images/Day%2002/Lesson%2007/h04-eco.jpg)
+[![Kapil’s handwritten notes — Part 1, PDF page 20, right-side ECO notes](Resources/images/Day%2002/Lesson%2007/h04-eco.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 20, right-side ECO notes.*
+*Source: Part 1, PDF page 20, right-side ECO notes.*
 
 
 An **engineering change order (ECO)** is a controlled implementation change, often used for late functional or timing fixes. Examples include resizing a cell, inserting a buffer, or changing selected logic and connections. Every such change needs the appropriate rechecks. A “small” edit in the file can affect many paths, so its impact is judged electrically and logically, not by the number of edited lines.
 
-**Design closure** means that the implementation satisfies the required set of checks and constraints for the intended operating scenarios. It can require iterations: routing may expose a congested placement, and a timing fix may worsen power or hold timing. Your arrows back to earlier stages capture this feedback. **Tapeout** is release of the validated manufacturing design data to the foundry; it does not mean that fabricated parts have already passed test.
+**Design closure** means that the implementation satisfies the required set of checks and constraints for the intended operating scenarios. It can require iterations: routing may expose a congested placement, and a timing fix may worsen power or hold timing. The arrows back to earlier stages capture this feedback. **Tapeout** is release of the validated manufacturing design data to the foundry; it does not mean that fabricated parts have already passed test.
 
 **Recall checks:** Can a netlist have correct connectivity but an unroutable placement? Can two clock sinks have equal latency but nonzero skew? Which checks must be revisited after inserting a buffer on a timing-critical net?
 
 [Back to lesson index](#lesson-index) · [Repository guide](README.md)
+
+### Definitions and mechanisms in Lesson 07
+
+**Physical implementation.** Physical implementation converts instances and logical connectivity into positions, layers, wires and vias while satisfying the relevant electrical and geometric constraints. It also changes the implementation through operations such as buffering and resizing where the flow permits. A logical net names a connection; a physical route realizes it with finite resistance, capacitance and routing resources. The task is complete only to the extent supported by the required checks, not merely because the layout viewer displays connected shapes.
+
+**Floorplan and placement.** A floorplan establishes the chip's large-scale organization: boundaries, macros, I/O intent, placement regions and infrastructure. Placement assigns locations to individual cells within the legal regions. The distinction is between organizing available space and assigning instances within it. A floorplan can allow several possible placements, and a poor macro arrangement can make every subsequent placement difficult. A fixed hard macro cannot be freely reshaped just because a floorplanning sketch uses a flexible outline.
+
+**Utilization and congestion.** Utilization is an area ratio with an explicitly stated denominator, often standard-cell area divided by usable placement area. Congestion is a shortage of routing capacity relative to demand in a region or routing boundary. They are related through geometry but measure different things. Two layouts with the same utilization can have very different macro channels and pin access. Lowering average density may help routing, but it does not prove that every local bottleneck disappears.
+
+**Power delivery network.** A PDN distributes power and ground to devices through connected conductive structures. Its nonzero impedance means the local supply seen by a cell can differ from the ideal source. A simple DC segment gives a voltage drop proportional to current and resistance; a real network also has distributed and transient behavior. The PDN uses routing space and must support electrical and reliability requirements. Power planning therefore influences placement, routability and timing rather than serving as a purely decorative layout layer.
+
+**Clock latency, skew and transition.** Latency is the delay from a specified clock reference to a sink. Skew is an arrival-time difference between sinks. Transition time describes the edge shape at a point. A network can have equal sink latencies and therefore zero skew while all sinks receive the edge significantly after the source. CTS controls these related but distinct properties while managing load and power. Equal geometric length is only one influence on delay because buffering and electrical loading also matter.
+
+**Global routing, detailed routing and extraction.** Global routing allocates approximate routes and layer resources; detailed routing chooses legal wire shapes, tracks and vias. Extraction derives interconnect electrical models from the implemented geometry using the selected technology information. These steps answer progressively different questions: is there plausible capacity, can the actual connections be drawn legally, and what electrical consequences do those shapes create? A global route is not the final wire geometry, and a connected final route still needs timing and other signoff checks.
+
+### Application and validation in Lesson 07
+
+Physical implementation uses compatible cell abstracts, technology data and constraints to place and connect instances. The result is interpreted according to its stage: estimated placement timing and extracted post-route timing have different interconnect evidence. An ECO preserves the required function while resolving a named violation and rechecking affected paths.
+
+**Coupled setup and hold repair.** Suppose one path has setup slack $+0.6$ ns and hold slack $-0.2$ ns. A candidate data-path buffer adds 0.25 ns to its minimum delay and 0.35 ns to its maximum delay under the modeled corners. Hold slack becomes $-0.2+0.25=+0.05$ ns; setup slack becomes $0.6-0.35=+0.25$ ns. This candidate passes both arithmetic checks, whereas a buffer adding 0.70 ns to maximum delay would fail setup. Actual repair also changes slew, load, placement and routing, so the min/max increments must come from the implemented analysis rather than from one nominal buffer delay.
 
 ## Lesson 08: Overview of VLSI Design Flow V — Verification and test
 
@@ -149,21 +169,21 @@ An **engineering change order (ECO)** is a controlled implementation change, oft
 
 ### Verification simulation and formal methods
 
-![Compare a design response against the expected response for the same stimulus](Resources/images/Day%2002/Lesson%2008/01-simulation.png)
+[![Compare a design response against the expected response for the same stimulus](Resources/images/Day%2002/Lesson%2008/01-simulation.png)](#lesson-index)
 
-*Video frame: [9:05](https://www.youtube.com/watch?v=g6ElOGlF3bs&t=545s). Compare a design response against the expected response for the same stimulus*
+*Lecture: [9:05](https://www.youtube.com/watch?v=g6ElOGlF3bs&t=545s). Compare a design response against the expected response for the same stimulus*
 
 
 **Design verification** checks whether a design meets its specified behavior and requirements. **Manufacturing test** checks fabricated devices for faults and acceptance criteria. Verification can find a logic error shared by every chip made from a design; manufacturing test can reject an individual die affected by a fabrication defect. Design for test prepares the design so that those later tests are effective.
 
 In **simulation**, a simulator evaluates the design under supplied input events. A testbench applies stimulus and checks the observed response against an expected result or reference model. Stimulus includes ordering and time, not just an unordered list of zeros and ones. A sequential design's output can depend on earlier inputs and reset history.
 
-![Kapil’s handwritten notes — Part 1, PDF page 20, verification portion](Resources/images/Day%2002/Lesson%2008/h01-verification.jpg)
+[![Kapil’s handwritten notes — Part 1, PDF page 20, verification portion](Resources/images/Day%2002/Lesson%2008/h01-verification.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 20, verification portion.*
+*Source: Part 1, PDF page 20, verification portion.*
 
 
-Your two-branch drawing is a useful verification structure: apply equivalent transactions to the implementation and a **golden/reference model**, align their outputs in time, then compare. A mismatch identifies a discrepancy; debugging determines whether the implementation, testbench, reference model, or specification is wrong. A reference model is not correct merely because it is called “golden.”
+The two-branch drawing is a useful verification structure: apply equivalent transactions to the implementation and a **golden/reference model**, align their outputs in time, then compare. A mismatch identifies a discrepancy; debugging determines whether the implementation, testbench, reference model, or specification is wrong. A reference model is not correct merely because it is called “golden.”
 
 Passing a finite collection of simulation tests establishes agreement for those executed scenarios. For $n$ independent binary inputs, a combinational truth table already has $2^n$ assignments; stored state and input sequences make sequential verification much larger. Coverage measures what was exercised, but a high coverage number does not alone prove correct behavior.
 
@@ -173,20 +193,20 @@ Passing a finite collection of simulation tests establishes agreement for those 
 
 ### Timing and physical verification
 
-![Physical verification complements functional and timing checks](Resources/images/Day%2002/Lesson%2008/02-physical-checks.png)
+[![Physical verification complements functional and timing checks](Resources/images/Day%2002/Lesson%2008/02-physical-checks.png)](#lesson-index)
 
-*Video frame: [25:42](https://www.youtube.com/watch?v=g6ElOGlF3bs&t=1542s). Physical verification complements functional and timing checks*
+*Lecture: [25:42](https://www.youtube.com/watch?v=g6ElOGlF3bs&t=1542s). Physical verification complements functional and timing checks*
 
 Physical verification asks whether the manufactured geometry can implement the intended circuit under the selected technology rules. DRC checks geometry, LVS compares extracted devices and connections with a reference, and ERC checks electrical rules. Timing analysis answers a separate question: whether signals can arrive and remain stable when required.
 
-![Kapil’s handwritten notes — Part 1, PDF page 21](Resources/images/Day%2002/Lesson%2008/h02-signoff.jpg)
+[![Kapil’s handwritten notes — Part 1, PDF page 21](Resources/images/Day%2002/Lesson%2008/h02-signoff.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 21.*
+*Source: Part 1, PDF page 21.*
 
 
 **Static timing analysis (STA)** evaluates timing paths using the netlist, cell models, interconnect estimates or extracted parasitics, clocks, and constraints. “Static” means that it does not require an explicit functional stimulus sequence to calculate each path's timing. It checks setup, hold, and other relevant requirements across chosen modes and corners.
 
-Your phrase “considers worst-case behavior” should be read **within the modeled conditions and constraints**. A passing report cannot compensate for a missing clock, incorrect exception, unmodeled operating condition, or wrong library. Pessimistic modeling can create conservative reports; incomplete modeling can still hide real problems. The setup budget in [Lesson 04](Day%2001.md#paths-and-the-clock-period-budget) shows the components of one check.
+The phrase “considers worst-case behavior” should be read **within the modeled conditions and constraints**. A passing report cannot compensate for a missing clock, incorrect exception, unmodeled operating condition, or wrong library. Pessimistic modeling can create conservative reports; incomplete modeling can still hide real problems. The setup budget in [Lesson 04](Day%2001.md#paths-and-the-clock-period-budget) shows the components of one check.
 
 | Check | Main question | What it does not establish by itself |
 |---|---|---|
@@ -196,32 +216,32 @@ Your phrase “considers worst-case behavior” should be read **within the mode
 | STA | Do modeled paths meet temporal constraints in the analyzed scenarios? | Functional correctness |
 | RTL/constraint/netlist rule checks | Are suspicious constructs, conflicts, missing intent, or illegal structures present? | A proof of all design requirements |
 
-Your LVS wording “functionally equal” is understandable, but the concrete check compares extracted devices/connectivity against a reference under tool rules. It is not the same task as proving a high-level algorithm. DRC rules are technology-specific. ERC content varies by tool and rule deck; shorts and opens can also be exposed through connectivity comparison. These checks overlap, but their purposes should remain distinct.
+The LVS wording “functionally equal” is understandable, but the concrete check compares extracted devices/connectivity against a reference under tool rules. It is not the same task as proving a high-level algorithm. DRC rules are technology-specific. ERC content varies by tool and rule deck; shorts and opens can also be exposed through connectivity comparison. These checks overlap, but their purposes should remain distinct.
 
 ### Defects faults and test patterns
 
-![A tester applies patterns and compares the measured chip response with an expected response](Resources/images/Day%2002/Lesson%2008/05-test-patterns.png)
+[![A tester applies patterns and compares the measured chip response with an expected response](Resources/images/Day%2002/Lesson%2008/05-test-patterns.png)](#lesson-index)
 
-*Video frame: [50:47](https://www.youtube.com/watch?v=g6ElOGlF3bs&t=3047s). Test patterns, expected responses, actual responses, and the pass/fail decision.*
+*Lecture: [50:47](https://www.youtube.com/watch?v=g6ElOGlF3bs&t=3047s). Test patterns, expected responses, actual responses, and the pass/fail decision.*
 
 Follow the two inputs to the comparison. One comes from the **actual fabricated die**, after the tester applies a pattern. The other is the **expected response** prepared for the intended circuit and test conditions. A pattern is useful for a targeted fault only when it makes the faulty response distinguishable from the expected one. Merely toggling many inputs does not establish that a hidden fault will become observable.
 
 The probe card and needles provide electrical access at wafer test; the test program controls stimulus, timing, and measurements. “Match” therefore includes what is measured and when it is sampled. A mismatch is evidence that the tested setup did not meet the expectation. Diagnosis must still distinguish a device defect from an incorrect pattern, expectation, contact, or test condition. Passing means passing these specified tests, rather than proving the absence of every possible defect.
 
-![Kapil’s handwritten notes — Part 1, PDF page 22](Resources/images/Day%2002/Lesson%2008/h03-defects.jpg)
+[![Kapil’s handwritten notes — Part 1, PDF page 22](Resources/images/Day%2002/Lesson%2008/h03-defects.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 22.*
+*Source: Part 1, PDF page 22.*
 
 
 A **defect** is a physical imperfection. A **fault model** is an abstract representation of a possible incorrect circuit behavior caused by defects. A **failure** is an observed violation of required behavior. One physical defect can have several effects, and one fault model can abstract several different defects.
 
-In your example, a short to ground can be modeled as a **stuck-at-0 fault** on a line. To detect that fault, a test must both excite it and propagate its effect to an observable point. If a good line would also be 0 under the chosen input, the short cannot be distinguished by that observation. If the good value is 1 but downstream logic masks it, the fault still escapes that test.
+In the example, a short to ground can be modeled as a **stuck-at-0 fault** on a line. To detect that fault, a test must both excite it and propagate its effect to an observable point. If a good line would also be 0 under the chosen input, the short cannot be distinguished by that observation. If the good value is 1 but downstream logic masks it, the fault still escapes that test.
 
 For a simple AND gate $y=a\land b$, testing an `a` input stuck at 0 requires setting `a=1` and `b=1`: the good output is 1 and the faulty output is 0. Setting `b=0` masks the difference. This illustrates **controllability** and **observability**, the two central practical obstacles that test structures help address.
 
 #### Work out a test that activates and exposes a fault
 
-Extend your short-to-ground example to two gates: $n=a\land b$, followed by $y=n\lor c$. The internal net $n$ is the fault site; the tester observes only $y$. Assume settled binary inputs and a single stuck-at fault on $n$.
+Extend the short-to-ground example to two gates: $n=a\land b$, followed by $y=n\lor c$. The internal net $n$ is the fault site; the tester observes only $y$. Assume settled binary inputs and a single stuck-at fault on $n$.
 
 To detect **$n$ stuck at zero**, first activate the difference: the good circuit must make $n=1$, requiring $a=b=1$. Next propagate it: set $c=0$ so the OR gate does not force both outputs to one. The pattern $(a,b,c)=(1,1,0)$ then gives good $y=1$ and faulty $y=0$.
 
@@ -240,18 +260,18 @@ Process variation, contamination, alignment error, and other mechanisms can affe
 
 ### Yield fault coverage and escapes
 
-![Yield depends on die area, defect density, and defect clustering](Resources/images/Day%2002/Lesson%2008/03-yield.png)
+[![Yield depends on die area, defect density, and defect clustering](Resources/images/Day%2002/Lesson%2008/03-yield.png)](#lesson-index)
 
-*Video frame: [47:24](https://www.youtube.com/watch?v=g6ElOGlF3bs&t=2844s). Yield depends on die area, defect density, and defect clustering*
+*Lecture: [47:24](https://www.youtube.com/watch?v=g6ElOGlF3bs&t=2844s). Yield depends on die area, defect density, and defect clustering*
 
 A yield model connects the fraction of acceptable dies with factors such as die area, relevant defect density, and defect clustering. Larger area usually exposes each die to more defect opportunities when the other factors are held fixed. The clustering parameter changes how those opportunities are distributed across dies; the model below makes those assumptions explicit.
 
-![Kapil’s handwritten notes — Part 1, PDF page 23](Resources/images/Day%2002/Lesson%2008/h04-yield-coverage.jpg)
+[![Kapil’s handwritten notes — Part 1, PDF page 23](Resources/images/Day%2002/Lesson%2008/h04-yield-coverage.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 23.*
+*Source: Part 1, PDF page 23.*
 
 
-**Yield** is a fraction of manufactured units meeting specified goodness criteria at a stated stage. Your previous page's example is correct: 300 good dies out of 400 gives $300/400=75\%$. It does not imply that every mature process must exceed a single universal percentage; die area, design, process maturity, and acceptance criteria matter.
+**Yield** is a fraction of manufactured units meeting specified goodness criteria at a stated stage. The previous page's example is correct: 300 good dies out of 400 gives $300/400=75\%$. It does not imply that every mature process must exceed a single universal percentage; die area, design, process maturity, and acceptance criteria matter.
 
 The clustered-defect yield model in the lecture is
 
@@ -265,7 +285,7 @@ For $Ad=1$, $\alpha=1$ gives $Y=1/2=50\%$; $\alpha=2$ gives $Y=(1.5)^{-2}\approx
 
 **Fault coverage** measures detected modeled faults divided by the relevant modeled-fault population, with the exact denominator stated by the report. A coverage figure depends on fault model, exclusions, and treatment of untestable faults. It is not the fraction of bad chips automatically detected in all circumstances. Even 100% stuck-at coverage does not cover every delay, analog, intermittent, or other unmodeled physical failure.
 
-**Defect level** measures the fraction of bad units among units that passed test. Your 100-chip example assumes 90 good and 10 bad, and further assumes the test detects exactly 5 of those 10 bad units. It then passes 95 units, of which 5 are bad:
+**Defect level** measures the fraction of bad units among units that passed test. The 100-chip example assumes 90 good and 10 bad, and further assumes the test detects exactly 5 of those 10 bad units. It then passes 95 units, of which 5 are bad:
 
 $$
 DL=\frac{5}{95}\times10^6\approx52{,}632\ \text{parts per million}.
@@ -275,26 +295,46 @@ The arithmetic is correct under that assumption. The shortcut “50% fault cover
 
 ### Automatic test equipment and design for test
 
-![Test quality affects which defective devices escape detection](Resources/images/Day%2002/Lesson%2008/04-ate.png)
+[![Test quality affects which defective devices escape detection](Resources/images/Day%2002/Lesson%2008/04-ate.png)](#lesson-index)
 
-*Video frame: [55:40](https://www.youtube.com/watch?v=g6ElOGlF3bs&t=3340s). Test quality affects which defective devices escape detection*
+*Lecture: [55:40](https://www.youtube.com/watch?v=g6ElOGlF3bs&t=3340s). Test quality affects which defective devices escape detection*
 
 A test program screens manufactured devices by applying conditions and comparing responses. Its fault coverage describes a modeled fault population, while defect level describes bad devices among the devices that pass. The slide places those two quality measures side by side; they must not be treated as interchangeable percentages.
 
-![Kapil’s handwritten notes — Part 1, PDF page 24, upper portion](Resources/images/Day%2002/Lesson%2008/h05-ate.jpg)
+[![Kapil’s handwritten notes — Part 1, PDF page 24, upper portion](Resources/images/Day%2002/Lesson%2008/h05-ate.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 24, upper portion.*
+*Source: Part 1, PDF page 24, upper portion.*
 
 
 **Automatic test equipment (ATE)** supplies test conditions and patterns, measures responses, and compares them with acceptance criteria. At wafer test, a probe interface makes electrical contact to die pads. Packaged devices are tested through a suitable package interface. The test program defines timing, stimulus, expected values, and measurements; a diagram showing a comparator is an abstraction of that larger process.
 
-Your pass/fail drawing should read “passes the specified tests,” not “proved physically perfect.” Failed devices are screened out; test diagnosis and process feedback can identify systematic problems for future production. **Design for test (DFT)** adds structures and plans that improve access to internal state and observation, such as scan or built-in test in appropriate designs. Test-pattern generation and expected-response preparation occur before manufactured devices reach the tester.
+The pass/fail drawing should read “passes the specified tests,” not “proved physically perfect.” Failed devices are screened out; test diagnosis and process feedback can identify systematic problems for future production. **Design for test (DFT)** adds structures and plans that improve access to internal state and observation, such as scan or built-in test in appropriate designs. Test-pattern generation and expected-response preparation occur before manufactured devices reach the tester.
 
-The bottom line of your final handwritten page begins “Functional Verification — Simulation.” It is preserved in the source archive and its definition is covered in this chapter. The later dedicated simulation lecture remains outside this batch, as requested.
+The bottom line of the final handwritten page begins “Functional Verification — Simulation.” It is preserved in the source archive and its definition is covered in this chapter. The dedicated simulation lecture is now covered in [Day 03, Lesson 13](Day%2003.md#lesson-13-functional-verification-using-simulation).
 
 **Recall checks:** Can a design pass LVS but fail timing? Can an incorrect RTL and its correctly synthesized netlist be equivalent? Why is fault coverage not interchangeable with yield?
 
 [Back to lesson index](#lesson-index) · [Repository guide](README.md)
+
+### Definitions and mechanisms in Lesson 08
+
+**Verification and manufacturing test.** Design verification checks a representation against requirements or another intended representation. Manufacturing test measures fabricated devices under specified conditions to classify their acceptability. A design error can be reproduced on every die, while a fabrication defect can affect an individual unit. Test structures are planned during design, so the activities are connected, but they target different evidence. Passing a simulation is not a manufacturing-yield result, and passing a device test is not a proof of every intended behavior.
+
+**Simulation, reference model and formal property.** Simulation executes the design model for supplied stimulus and compares observations with expectations. A reference model defines expected behavior at a suitable abstraction and must itself be justified. A formal property states a condition to prove under explicit assumptions. The assurance depends on what was simulated or proved, the correctness of the reference and the validity of the environment assumptions. “The test passed” needs a named test and expected result; “the property was proved” needs the property and its assumptions.
+
+**Equivalence, DRC, LVS and STA.** Equivalence compares modeled behavior between representations. DRC checks geometry against a process rule deck. LVS compares extracted layout devices and connectivity with a circuit reference. STA checks modeled temporal requirements using clocks, constraints and delay information. These are complementary checks with different objects and acceptance criteria. A layout can match its reference and still miss timing; an equivalent netlist can faithfully preserve an error in the original RTL. Avoid treating any one pass as a certificate for all the others.
+
+**Defect, fault and failure.** A defect is a physical imperfection. A fault is a modeled abnormal circuit behavior used to reason about consequences and test detection. A failure is an observed violation of required behavior. A short can motivate a stuck-at model, but physical defects and modeled faults do not correspond one-to-one in all cases. This distinction explains why detecting all faults in a selected model does not prove the absence of all physical defects or all possible failures.
+
+**Activation, propagation and observation.** Activation makes the good and faulty circuits differ at the fault site. Propagation preserves that difference through the intervening logic. Observation makes the difference available at a measured output or accessible state. In the AND-then-OR example, a and b both high activate an internal stuck-at-zero fault, but c must be low to keep the OR gate from masking it. A pattern can activate a fault and still fail to detect it when the response is unobservable.
+
+**Yield, fault coverage and defect level.** Yield counts acceptable units among manufactured units at a stated stage. Fault coverage counts detected modeled faults among the stated fault population. Defect level counts bad devices among devices that pass the test. The denominators differ, so the percentages cannot be substituted. In the 100-device teaching example, five bad devices among 95 passing devices gives the escape fraction among shipped candidates. A 50% modeled-fault coverage figure alone would not justify assuming that exactly five of ten bad devices are detected.
+
+### Application and validation in Lesson 08
+
+Verification evidence identifies the design representation, requirements, stimulus or assumptions, and the comparison performed. Manufacturing fault detection requires both activation of the named fault and propagation to an observable output. These obligations apply to the specific modeled fault rather than to every possible physical defect.
+
+**Deriving outgoing defect level.** Let the manufactured-good fraction be $Y$ and let $c$ be the fraction of bad units detected by the specified test. Assume no good unit is rejected and no repair occurs. Passing units form fraction $Y+(1-Y)(1-c)$; escaping bad units form fraction $(1-Y)(1-c)$. The bad fraction among shipped passing units is their ratio. For $Y=0.9$ and $c=0.5$, it is $0.05/0.95\approx5.26\%$. The denominator is the passing population, not all manufactured units. Here $c$ is an assumed bad-unit detection probability; it must not be silently replaced by a modeled stuck-at coverage percentage.
 
 ## Lesson 09: Overview of VLSI Design Flow VI — From layout to chip
 
@@ -308,19 +348,19 @@ The bottom line of your final handwritten page begins “Functional Verification
 
 ### Mask data preparation and mask writing
 
-![Mask manufacture patterns an absorbing film on a mask blank](Resources/images/Day%2002/Lesson%2009/01-mask.png)
+[![Mask manufacture patterns an absorbing film on a mask blank](Resources/images/Day%2002/Lesson%2009/01-mask.png)](#lesson-index)
 
-*Video frame: [5:44](https://www.youtube.com/watch?v=BdIkRSzgV5I&t=344s). Mask manufacture patterns an absorbing film on a mask blank*
+*Lecture: [5:44](https://www.youtube.com/watch?v=BdIkRSzgV5I&t=344s). Mask manufacture patterns an absorbing film on a mask blank*
 
 
 Layout release is followed by manufacturing-data preparation. **Fracturing** breaks complex layout polygons into shapes supported by the selected mask-writing process. Resolution-enhancement processing can modify the mask geometry so the wafer result more closely matches the intended design. The manufactured mask therefore need not be a literal unchanged copy of every layout outline.
 
-![Kapil’s handwritten notes — Part 1, PDF page 24, lower portion](Resources/images/Day%2002/Lesson%2009/h01-mask.jpg)
+[![Kapil’s handwritten notes — Part 1, PDF page 24, lower portion](Resources/images/Day%2002/Lesson%2009/h01-mask.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 24, lower portion.*
+*Source: Part 1, PDF page 24, lower portion.*
 
 
-Your chromium–resist–substrate sketch shows the lecture's conventional transmissive-mask example. The mask process itself uses patterning:
+The chromium–resist–substrate sketch shows the lecture's conventional transmissive-mask example. The mask process itself uses patterning:
 
 1. Begin with a suitable transparent substrate carrying an absorbing chromium layer and resist.
 2. A writing system exposes the required pattern using an appropriate laser or electron-beam process.
@@ -333,21 +373,21 @@ This manufactures the **mask**, which is subsequently used to expose resist on w
 
 ### Resolution enhancement
 
-![Closely spaced features motivate resolution-enhancement methods](Resources/images/Day%2002/Lesson%2009/02-opc.png)
+[![Closely spaced features motivate resolution-enhancement methods](Resources/images/Day%2002/Lesson%2009/02-opc.png)](#lesson-index)
 
-*Video frame: [13:33](https://www.youtube.com/watch?v=BdIkRSzgV5I&t=813s). Closely spaced features motivate resolution-enhancement methods*
+*Lecture: [13:33](https://www.youtube.com/watch?v=BdIkRSzgV5I&t=813s). Closely spaced features motivate resolution-enhancement methods*
 
 
 **Optical proximity correction (OPC)** intentionally modifies mask patterns to compensate for predictable printing errors. Without compensation, a desired sharp corner can print rounded and a line end can pull back. Added or reshaped features such as serifs or hammerheads change the optical image so the processed wafer approaches the target geometry. Their shape is a means to produce the desired result, not necessarily a shape intended to appear identically on the final wafer.
 
 The lecture discusses 193 nm deep-ultraviolet lithography. This is one lithography technology; not all lithography uses that wavelength. Resolution depends on wavelength, numerical aperture, illumination, process, and computational enhancement. [ASML's lithography explanation](https://www.asml.com/en/technology/lithography-principles) provides the physical context.
 
-![Kapil’s handwritten notes — Part 2, PDF page 1; handwritten page 24](Resources/images/Day%2002/Lesson%2009/h02-opc.jpg)
+[![Kapil’s handwritten notes — Part 2, PDF page 1; handwritten page 24](Resources/images/Day%2002/Lesson%2009/h02-opc.jpg)](#lesson-index)
 
-*Handwritten source: Part 2, PDF page 1; handwritten page 24.*
+*Source: Part 2, PDF page 1; handwritten page 24.*
 
 
-Your L-shaped drawing captures precompensation: a modified mask is chosen because the printing process distorts it toward the intended result. Your “hammerhead, serif, mouse bite” list is a set of illustrative correction shapes. Modern OPC is model-based and process-dependent, so these shapes are not manual universal recipes.
+The L-shaped drawing captures precompensation: a modified mask is chosen because the printing process distorts it toward the intended result. The “hammerhead, serif, mouse bite” list is a set of illustrative correction shapes. Modern OPC is model-based and process-dependent, so these shapes are not manual universal recipes.
 
 **Double or multiple patterning** separates features into groups that are patterned in separate steps. In the lecture's layout-coloring illustration, neighboring features too close for one exposure receive different colors. Each group has easier spacing within that exposure, while their combined result forms the dense intended pattern. The colors label processing groups; they are not literal colored material on the wafer.
 
@@ -369,25 +409,25 @@ Each group has more generous spacing, while the combined target remains dense. T
 
 **Overlay error** is misregistration between patterns that must align. If group B shifts right by 3 nm while A stays fixed, the combined centers become 0, 43, 80, and 123 nm. Adjacent center distances alternate between 43 and 37 nm. With unchanged 20 nm widths, the gaps become 23 and 17 nm. Thus a placement error can shrink one gap even though each line has the intended width. This is why the handwritten coloring example must be understood together with alignment requirements.
 
-**Check your understanding:** OPC corrects predictable printing distortion in the pattern; decomposition decides which features belong to each patterning group. Identify which operation is being shown before interpreting a modified corner or a colored line.
+**Check the understanding:** OPC corrects predictable printing distortion in the pattern; decomposition decides which features belong to each patterning group. Identify which operation is being shown before interpreting a modified corner or a colored line.
 
 ### Wafer fabrication packaging and screening
 
-![A package provides electrical, thermal, and mechanical support](Resources/images/Day%2002/Lesson%2009/03-package.png)
+[![A package provides electrical, thermal, and mechanical support](Resources/images/Day%2002/Lesson%2009/03-package.png)](#lesson-index)
 
-*Video frame: [22:57](https://www.youtube.com/watch?v=BdIkRSzgV5I&t=1377s). A package provides electrical, thermal, and mechanical support*
+*Lecture: [22:57](https://www.youtube.com/watch?v=BdIkRSzgV5I&t=1377s). A package provides electrical, thermal, and mechanical support*
 
 
 Wafer fabrication repeats many operations, including deposition, oxidation, lithography, etching, implantation, cleaning, and thermal processing. **Front end of line (FEOL)** forms transistor/device structures; **back end of line (BEOL)** forms much of the interconnect above them, with contact-related processing often distinguished as middle of line. The detailed sequence depends on the process.
 
 After fabrication, wafer test identifies acceptable dies, the wafer is diced, and suitable dies proceed to packaging. A **package** provides external electrical connections, mechanical protection, and a thermal path. It also adds parasitic resistance, inductance, and capacitance, so it affects signal and power integrity. A **dual in-line package (DIP)** places leads along two sides; a **ball grid array (BGA)** uses a grid of solder-ball connections. Package choice is an electrical and thermal design decision as well as a mechanical one.
 
-![Kapil’s handwritten notes — Part 2, PDF page 2, upper portion; handwritten page 25](Resources/images/Day%2002/Lesson%2009/h03-package.jpg)
+[![Kapil’s handwritten notes — Part 2, PDF page 2, upper portion; handwritten page 25](Resources/images/Day%2002/Lesson%2009/h03-package.jpg)](#lesson-index)
 
-*Handwritten source: Part 2, PDF page 2, upper portion; handwritten page 25.*
+*Source: Part 2, PDF page 2, upper portion; handwritten page 25.*
 
 
-Your “heat dissipation” point means that generated heat must leave the die through a designed thermal path. A package may use lids, heat spreaders, or external cooling, depending on the product; not every package includes a separate heatsink. Excess temperature can reduce reliability or trigger failure well before literal silicon melting.
+The “heat dissipation” point means that generated heat must leave the die through a designed thermal path. A package may use lids, heat spreaders, or external cooling, depending on the product; not every package includes a separate heatsink. Excess temperature can reduce reliability or trigger failure well before literal silicon melting.
 
 **Final test** checks the packaged part, including problems introduced or revealed by packaging. **Burn-in** is controlled electrical/thermal stress used where required to expose certain early-life weaknesses. It is an engineered screening procedure with specified limits, not an instruction to apply arbitrary high voltage. The bathtub curve is a conceptual failure-rate model: early failures, a comparatively stable useful-life region, then wear-out. Actual product reliability must be established for the product and use conditions.
 
@@ -396,6 +436,26 @@ Your “heat dissipation” point means that generated heat must leave the die t
 **Recall checks:** Why can mask geometry differ from desired wafer geometry? How does multiple patterning change the spacing problem? Why is test repeated after packaging?
 
 [Back to lesson index](#lesson-index) · [Repository guide](README.md)
+
+### Definitions and mechanisms in Lesson 09
+
+**Manufacturing-data preparation and mask writing.** Manufacturing-data preparation converts released layout information into data suitable for the selected patterning process. Fracturing represents shapes in a form supported by the writer, and resolution-enhancement operations may change mask geometry. Mask writing patterns the physical mask blank. Wafer exposure subsequently uses that mask in a different operation. The shared idea is controlled patterning, but the object being manufactured and the optical or writing mechanism are different at the two stages.
+
+**Optical proximity correction.** OPC deliberately modifies the mask to compensate for predictable differences between the mask pattern and the wafer result. Neighboring features and imaging and process effects influence how a feature prints. A serif or hammerhead is therefore selected for its effect on the eventual printed shape, not because the designer necessarily wants that same shape on silicon. OPC is tied to a process model and target geometry; a correction copied from another context need not be valid.
+
+**Multiple patterning and decomposition.** Multiple patterning builds a dense target using more than one patterning operation. In the lecture's coloring example, decomposition assigns nearby features to different groups so each group has more manageable spacing. Recombining the groups produces the dense target. This introduces alignment and process constraints as well as extra steps. OPC changes how a selected pattern prints; decomposition changes which features are processed together. They can be applied within the same manufacturing preparation flow.
+
+**Width, spacing, pitch and overlay.** Width measures a feature across itself; spacing measures the edge-to-edge gap; pitch measures corresponding-point separation in a repeating pattern; overlay measures registration between patterns. For equal-width lines, pitch equals width plus spacing. A shift in one patterning group can reduce one gap and enlarge the next without changing line widths. Keep these quantities distinct when explaining why a mask or manufacturing result meets one geometric requirement but fails another.
+
+**Packaging and electrical connection.** Packaging connects a die to the surrounding system while supplying mechanical protection and a thermal path. It introduces electrical parasitics and interfaces that influence signals and power delivery. The package is therefore part of the system's electrical and thermal behavior, not simply a container. Wafer testing can identify suitable dies before packaging; final testing checks the packaged product, including effects or defects introduced by those additional operations.
+
+**Burn-in and binning.** Burn-in uses specified electrical and thermal stress where required to screen certain early-life weaknesses. Binning classifies parts by measured characteristics and product specifications. Neither term means repairing any arbitrary defect. A device assigned to a lower speed bin can meet that bin's specification completely. The selection of stress conditions, test limits and bins belongs to the product and manufacturing plan, so the conceptual bathtub curve cannot by itself determine the correct procedure for a particular part.
+
+### Application and validation in Lesson 09
+
+Mask preparation and wafer exposure are interpreted as separate operations. A corrected mask feature is related to the desired wafer shape, the predicted printing error and the purpose of the correction. Pattern decomposition assigns features to processing groups; their combined result also depends on registration.
+
+**Overlay tolerance from a spacing requirement.** In the 20 nm nominal-gap example, shifting one patterning group by a signed displacement $\delta$ creates adjacent gaps $20+\delta$ and $20-\delta$ nm. The smallest is $20-|\delta|$. If the illustrative minimum allowed gap is 18 nm, compliance requires $20-|\delta|\geq 18$, hence $|\delta|\leq 2$ nm. The 3 nm shift yields gaps of 23 and 17 nm and violates that assumed limit. Linewidth and overlay must be budgeted separately; this calculation holds linewidth fixed and is not a foundry rule.
 
 ## Lesson 10: Introduction to Tcl
 
@@ -409,21 +469,21 @@ Your “heat dissipation” point means that generated heat must leave the die t
 
 ### Commands variables and substitution
 
-![Iterate over a list and negate its even elements](Resources/images/Day%2002/Lesson%2010/01-list.png)
+[![Iterate over a list and negate its even elements](Resources/images/Day%2002/Lesson%2010/01-list.png)](#lesson-index)
 
-*Video frame: [3:11](https://www.youtube.com/watch?v=1fPNZstiL4o&t=191s). Iterate over a list and negate its even elements*
+*Lecture: [3:11](https://www.youtube.com/watch?v=1fPNZstiL4o&t=191s). Iterate over a list and negate its even elements*
 
 
 **Tcl** means **Tool Command Language**. The tutorial, presented by Jasmine Kaur, introduces a scripting language widely embedded in EDA tools. Plain Tcl supplies language commands; an EDA application adds commands that manipulate its design database. A command such as `get_cells` is not guaranteed to exist in standalone `tclsh` merely because an EDA tool accepts it.
 
 A Tcl command consists of a command name and words used as arguments. `set index -1` assigns the value `-1` to a variable named `index`. `$index` substitutes its value. Square brackets perform command substitution: `[expr {-$element}]` executes `expr` and substitutes its result. Braces group a word and suppress ordinary substitution at that parsing stage; the command receiving that word may later interpret it as an expression or script. Quotes group words while allowing substitutions.
 
-![Kapil’s handwritten notes — Part 2, PDF page 2, Tcl snippet](Resources/images/Day%2002/Lesson%2010/h01-tcl.jpg)
+[![Kapil’s handwritten notes — Part 2, PDF page 2, Tcl snippet](Resources/images/Day%2002/Lesson%2010/h01-tcl.jpg)](#lesson-index)
 
-*Handwritten source: Part 2, PDF page 2, Tcl snippet.*
+*Source: Part 2, PDF page 2, Tcl snippet.*
 
 
-Your “brackets first” note refers to command substitution in a word where substitution is enabled. It is not a rule that every bracket inside every braced string executes immediately. For example, `puts {[expr {1+2}]}` prints the bracketed text literally; `puts [expr {1+2}]` prints `3`. Bracing expressions is a useful default because the expression evaluator handles their variable substitution and evaluation predictably. [Tcl's `expr` manual](https://www.tcl-lang.org/man/tcl8.6/TclCmd/expr.htm) explains expression evaluation.
+The “brackets first” note refers to command substitution in a word where substitution is enabled. It is not a rule that every bracket inside every braced string executes immediately. For example, `puts {[expr {1+2}]}` prints the bracketed text literally; `puts [expr {1+2}]` prints `3`. Bracing expressions is a useful default because the expression evaluator handles their variable substitution and evaluation predictably. [Tcl's `expr` manual](https://www.tcl-lang.org/man/tcl8.6/TclCmd/expr.htm) explains expression evaluation.
 
 This complete version of the lecture's list example uses the same operations:
 
@@ -478,9 +538,9 @@ The output is `60 500`. `return` ends this procedure invocation and provides its
 
 ### File channels and external commands
 
-![The file-I/O example prints the text read back from its file](Resources/images/Day%2002/Lesson%2010/02-files.png)
+[![The file-I/O example prints the text read back from its file](Resources/images/Day%2002/Lesson%2010/02-files.png)](#lesson-index)
 
-*Video frame: [7:13](https://www.youtube.com/watch?v=1fPNZstiL4o&t=433s). The file-I/O example prints the text read back from its file*
+*Lecture: [7:13](https://www.youtube.com/watch?v=1fPNZstiL4o&t=433s). The file-I/O example prints the text read back from its file*
 
 
 An **open channel** is a handle for I/O. `open` returns a channel identifier; storing it in `fp` lets later commands use `$fp`. Closing a channel releases it and flushes the appropriate buffered output. The tutorial's `w+` mode permits reading and writing and truncates an existing file. Use that mode only for a file whose replacement is intended.
@@ -508,6 +568,28 @@ The repository contains [complete runnable Tcl examples](Resources/examples/tcl_
 
 [Back to lesson index](#lesson-index) · [Repository guide](README.md)
 
+### Definitions and mechanisms in Lesson 10
+
+**Interpreter, command and argument.** A Tcl interpreter parses command words and invokes the command named by the first word. The remaining words are arguments whose meaning depends on that command. Spaces and grouping delimit those words. An EDA tool extends Tcl with application-specific commands and a design database; standalone Tcl does not acquire those commands from the script filename. Identify the interpreter and available commands before interpreting or debugging an automation script.
+
+**Substitution and grouping.** Substitution replaces syntax with values or command results when the current parsing context permits it. A dollar sign introduces variable substitution, and square brackets introduce command substitution. Braces group one word while suppressing ordinary substitution at that stage; quotes group while permitting substitution. A command such as expr can subsequently evaluate the grouped text according to its own rules. The sequence of interpretation explains the result more accurately than a blanket instruction to evaluate all brackets first.
+
+**Variable name and variable value.** A command that updates a variable often needs its name; a command that consumes data needs its value. In lset values, the word values names the variable to modify. In foreach element followed by the substituted values list, the command receives the data to traverse. Adding or omitting a dollar sign changes the argument, not just the notation. State what each command expects before deciding whether substitution belongs there.
+
+**List value and iteration snapshot.** A Tcl list is a structured value containing elements that can be indexed, traversed and updated using list commands. The foreach call receives its list value at invocation and assigns successive elements to the loop variable. Updating the source variable during the body does not retroactively replace the list already supplied to that invocation. In the lesson's trace, element is the current item from the original list, while values is the progressively edited list. They play different roles despite starting from the same data.
+
+**Procedure result and printed output.** A procedure is a reusable Tcl command with parameters and a body. Its result is the value supplied back to its caller. Printed output is text written to a channel, often the terminal. A caller can use a returned list in another computation; text printed by puts does not automatically become that procedure's returned data. The sum_product example deliberately returns a proper list so either result can be selected reliably with list operations.
+
+**File channel and position.** Opening a file returns a channel identifier representing the I/O connection, not the file's contents. Reads and writes operate through that channel and its current position and mode. Closing the channel releases resources and completes appropriate buffered output. A mode that truncates an existing file changes stored data as soon as that open succeeds. Explain the mode and lifecycle when describing a file-I/O script, because a correct arithmetic expression does not make the surrounding file operations safe or correct.
+
+### Application and validation in Lesson 10
+
+Tcl evaluation is traced in two stages: the parser determines command words and performs permitted substitutions; the invoked command interprets those resulting words. A procedure returns structured data to its caller, whereas `puts` writes text to a channel. The list example distinguishes the iteration values from the variable changed by `lset`.
+
+**Substitution is not recursive script evaluation.** After `set word {[expr {1+2}]}`, `puts $word` prints the stored bracket expression literally. Variable substitution inserts the value as data; it does not restart command substitution on the newly inserted text. By contrast, `puts [expr {1+2}]` contains brackets in the original command and evaluates them, printing 3. Braces suppress the first-stage substitutions, while `expr` can perform its own expression evaluation when invoked. A script's behavior follows these staged rules, not a global instruction to execute every visible bracket.
+
+Source: [Tcl syntax and substitution rules](https://www.tcl-lang.org/man/tcl8.6/TclCmd/Tcl.htm).
+
 ## Lesson 11: Hardware Modeling — Introduction to Verilog I
 
 [Course index](README.md) · Week 3 · [Lecture video](https://www.youtube.com/watch?v=LOIqVrr9jGE) · [Handwritten index](Resources/Handwritten%20Index.md)
@@ -522,9 +604,9 @@ The repository contains [complete runnable Tcl examples](Resources/examples/tcl_
 
 ### What a hardware description language must represent
 
-![Bit-accurate values and resolved drivers are distinctive HDL features](Resources/images/Day%2002/Lesson%2011/01-hdl.png)
+[![Bit-accurate values and resolved drivers are distinctive HDL features](Resources/images/Day%2002/Lesson%2011/01-hdl.png)](#lesson-index)
 
-*Video frame: [9:14](https://www.youtube.com/watch?v=LOIqVrr9jGE&t=554s). Bit-accurate values and resolved drivers are distinctive HDL features*
+*Lecture: [9:14](https://www.youtube.com/watch?v=LOIqVrr9jGE&t=554s). Bit-accurate values and resolved drivers are distinctive HDL features*
 
 
 An **HDL (hardware description language)** describes the behavior and structure of electronic hardware. Verilog lets us express modules, wires, stored state, and the changes that occur when inputs or clocks change. A simulator interprets these descriptions to predict modeled behavior; a synthesis tool interprets a supported subset to construct a circuit. These are different uses of the same source text, so a statement that simulates successfully is not automatically synthesizable.
@@ -533,12 +615,12 @@ Hardware needs **concurrency**: two adders can respond to their inputs at the sa
 
 RTL describes state held in registers and the combinational transformations between them. It does not give every transistor's physical layout. Synthesis and physical design progressively supply those details. A delay written as `#10` in a testbench advances simulated time; it does not order the ASIC tool to manufacture a gate with exactly that delay.
 
-![Kapil’s handwritten notes — Part 2, PDF page 2, lower HDL section](Resources/images/Day%2002/Lesson%2011/h01-hdl.jpg)
+[![Kapil’s handwritten notes — Part 2, PDF page 2, lower HDL section](Resources/images/Day%2002/Lesson%2011/h01-hdl.jpg)](#lesson-index)
 
-*Handwritten source: Part 2, PDF page 2, lower HDL section.*
+*Source: Part 2, PDF page 2, lower HDL section.*
 
 
-Your examples of multiple drivers and bit-true behavior are the key motivations for an HDL. Distinguish **parallel hardware** from the order of statements inside one process: different `always` blocks are concurrent, while statements within a `begin ... end` block execute in their language-defined order. That order alone does not say how many clock cycles the resulting hardware needs.
+The examples of multiple drivers and bit-true behavior are the key motivations for an HDL. Distinguish **parallel hardware** from the order of statements inside one process: different `always` blocks are concurrent, while statements within a `begin ... end` block execute in their language-defined order. That order alone does not say how many clock cycles the resulting hardware needs.
 
 Verilog and SystemVerilog are related languages. This pair of lessons uses traditional Verilog terminology such as `wire` and `reg`. Keep those meanings clear before introducing SystemVerilog's additional types and verification features. An IEEE revision date is a language-standard milestone, not the birth date of every feature mentioned alongside it.
 
@@ -573,13 +655,13 @@ For a one-bit Boolean operation, ask whether both possible known values of an un
 
 Zero is the **controlling value** for AND; one is the controlling value for OR. A controlling value determines the output regardless of the other input. For these bitwise operators, `z` is also treated as an unknown operand, so `1'b0 & 1'bz` produces zero. This differs from **net resolution**, where an active driver can determine the value of a net whose other driver is released.
 
-The last row shows a limit of four-state simulation: an unknown value is not a symbolic variable whose relationships are tracked algebraically. Even `a ^ a` can evaluate to `x` when `a` contains `x`, although the corresponding ideal Boolean identity is zero. Therefore an `x` waveform asks you to inspect initialization, drivers, and operator semantics. It is not an instruction to treat that bit as a freely chosen don't-care.
+The last row shows a limit of four-state simulation: an unknown value is not a symbolic variable whose relationships are tracked algebraically. Even `a ^ a` can evaluate to `x` when `a` contains `x`, although the corresponding ideal Boolean identity is zero. Therefore an `x` waveform requires examination of initialization, drivers, and operator semantics. It is not an instruction to treat that bit as a freely chosen don't-care.
 
 ### Sized literals padding truncation and signed values
 
-![Sized constants retain the declared number of bits](Resources/images/Day%2002/Lesson%2011/02-literals.png)
+[![Sized constants retain the declared number of bits](Resources/images/Day%2002/Lesson%2011/02-literals.png)](#lesson-index)
 
-*Video frame: [33:10](https://www.youtube.com/watch?v=LOIqVrr9jGE&t=1990s). Sized constants retain the declared number of bits*
+*Lecture: [33:10](https://www.youtube.com/watch?v=LOIqVrr9jGE&t=1990s). Sized constants retain the declared number of bits*
 
 
 A based integer literal has the form **size, apostrophe, optional signed marker, base, digits**, for example `8'hA1` or `8'shFA`. The size is a number of **bits**, independent of the chosen base. Binary uses one bit per digit, octal three, and hexadecimal four. Underscores improve readability without changing the value.
@@ -599,18 +681,18 @@ For the last row, start with six as `00000110`, invert to `11111001`, then add o
 
 Expression width matters before assignment. An eight-bit destination cannot recover information that was already discarded by a narrower intermediate operation. To calculate an unsigned eight-bit addition with its carry, explicitly widen both operands: `{1'b0, a} + {1'b0, b}` into a nine-bit destination. Unsized decimal constants are signed and at least 32 bits; mixing them with unsigned vectors can change extension and interpretation. Explicit widths and explicit intent make a design easier to review.
 
-![Kapil’s handwritten notes — Part 2, PDF page 3, complete values and data-types page](Resources/images/Day%2002/Lesson%2011/h02-types.jpg)
+[![Kapil’s handwritten notes — Part 2, PDF page 3, complete values and data-types page](Resources/images/Day%2002/Lesson%2011/h02-types.jpg)](#lesson-index)
 
-*Handwritten source: Part 2, PDF page 3, complete values and data-types page.*
+*Source: Part 2, PDF page 3, complete values and data-types page.*
 
 
-Your worked truncation example is a **least-significant-bit retention** operation. A declared width is not a request to round a number. Your negative-number example uses two's complement correctly once the width is fixed; do not attach a unique decimal meaning to a bit string without also specifying signedness.
+The worked truncation example is a **least-significant-bit retention** operation. A declared width is not a request to round a number. The negative-number example uses two's complement correctly once the width is fixed; do not attach a unique decimal meaning to a bit string without also specifying signedness.
 
-#### Your questions: what is the difference between z and question mark?
+#### What is the difference between z and question mark?
 
 Inside a Verilog **based number literal**, `?` is an alternative spelling of `z`. Thus `4'b10?1` and `4'b10z1` encode the same four-state value. `?` is not a fifth logic state and is not automatically a wildcard everywhere. Separately, the punctuation in `condition ? true_value : false_value` belongs to the conditional operator.
 
-Your note “prefer `?` when high impedance is don't care” concerns readability in wildcard **case patterns**. A pattern such as `3'b1??` visually communicates ignored positions, while `3'b1zz` can look like an intentional electrical high-impedance value. The surrounding construct supplies the wildcard behavior:
+The note “prefer `?` when high impedance is don't care” concerns readability in wildcard **case patterns**. A pattern such as `3'b1??` visually communicates ignored positions, while `3'b1zz` can look like an intentional electrical high-impedance value. The surrounding construct supplies the wildcard behavior:
 
 | Construct | Matching rule |
 |---|---|
@@ -624,9 +706,9 @@ For equality, `==` can return `x` when unknown or high-impedance bits make the c
 
 ### Nets variables vectors arrays and strings
 
-![Net and variable types serve different modeling roles](Resources/images/Day%2002/Lesson%2011/03-types.png)
+[![Net and variable types serve different modeling roles](Resources/images/Day%2002/Lesson%2011/03-types.png)](#lesson-index)
 
-*Video frame: [42:14](https://www.youtube.com/watch?v=LOIqVrr9jGE&t=2534s). Net and variable types serve different modeling roles*
+*Lecture: [42:14](https://www.youtube.com/watch?v=LOIqVrr9jGE&t=2534s). Net and variable types serve different modeling roles*
 
 
 A **net** models a connection and takes its value from its drivers. `wire` is the common net type. An undriven ordinary wire reads `z`. Other net types express special resolution or supply behavior: `wand` models wired-AND resolution, `wor` wired-OR resolution, and `supply0`/`supply1` constant supplies. These modeling facilities do not imply that arbitrary internal tri-state or wired logic is supported by every synthesis target.
@@ -654,11 +736,11 @@ For known `sel`, the two outputs agree and describe multiplexers, without a cloc
 
 `wire [7:0] bus` declares one eight-bit **vector**; `bus[3]` selects a bit and `bus[7:4]` selects four bits. `reg [7:0] memory [0:15]` declares an **array** containing sixteen eight-bit words; `memory[2]` selects a word. A range before a name describes the vector bits, while the array dimension follows the name in this traditional syntax. `[0:7]` is also legal but reverses the index direction; use a consistent convention and never assume that index zero is always the least significant bit.
 
-Traditional types also include `integer` for a signed 32-bit variable, `time` for a 64-bit unsigned time value, and `real` for floating-point simulation values. Declaring `real` does not synthesize a floating-point arithmetic unit. For actual floating-point hardware, you need a suitable synthesizable architecture or IP and an explicit representation.
+Traditional types also include `integer` for a signed 32-bit variable, `time` for a 64-bit unsigned time value, and `real` for floating-point simulation values. Declaring `real` does not synthesize a floating-point arithmetic unit. Actual floating-point hardware requires a suitable synthesizable architecture or IP and an explicit representation.
 
 A traditional Verilog string literal packs character codes, eight bits per character, into a vector context. `reg [39:0] text;` can hold five characters such as `"HELLO"`. A destination that is too small truncates the most significant portion, so choose the width deliberately. Strings used for `$display` messages are testbench text, not automatically a hardware text-storage subsystem.
 
-The runnable [language examples](Resources/examples/verilog/README.md) exercise these values and distinguish variable type from inferred storage. Your parameter and edge-event notes at the right of the handwritten page continue in [Lesson 12](Day%2002.md#lesson-12-hardware-modeling--introduction-to-verilog-ii).
+The runnable [language examples](Resources/examples/verilog/README.md) exercise these values and distinguish variable type from inferred storage. The parameter and edge-event notes at the right of the handwritten page continue in [Lesson 12](Day%2002.md#lesson-12-hardware-modeling--introduction-to-verilog-ii).
 
 ### Recall checks
 
@@ -669,6 +751,26 @@ The runnable [language examples](Resources/examples/verilog/README.md) exercise 
 5. Why provide a ninth bit for adding two eight-bit unsigned inputs? The maximum sum is 510, which needs nine bits.
 
 [Back to lesson index](#lesson-index) · [Repository guide](README.md)
+
+### Definitions and mechanisms in Lesson 11
+
+**Hardware description and synthesizable subset.** An HDL describes concurrent structure and behavior, including bit widths, connections, state and event-driven activity. A simulator executes its modeling semantics. Synthesis interprets supported constructs as hardware. The two tools use the language for different purposes, so code that prints a message or waits for an arbitrary simulation delay need not describe manufacturable logic. Explain what the construct means in simulation and what hardware, if any, the chosen synthesis flow can infer.
+
+**Four-state value and physical interpretation.** Verilog's four states represent known low, known high, unknown and high impedance. Unknown records insufficiently established information in the model; high impedance records a released drive contribution or an undriven ordinary net. These are not two extra stable digital voltages. Operator evaluation and net resolution use the states differently: zero AND unknown is known zero, while an active driver against a released driver can determine a net's value. Operator evaluation and driver resolution must be distinguished.
+
+**Net and procedural variable.** A net derives its value from drivers and their resolution. A procedural variable retains its assigned simulation value until another procedural assignment updates it. In traditional Verilog, wire names a common net type and reg names a four-state variable type. The latter does not by itself imply a flip-flop. A complete combinational process can assign a reg without storage; an edge-triggered process describes state; incomplete combinational assignments can require retention and infer a latch.
+
+**Bit width and signedness.** Width determines how many bits are represented; signedness determines how the pattern participates in numeric interpretation and operations. At eight bits, the pattern 11111010 can represent unsigned 250 or signed negative six. Declaring a six-bit hexadecimal literal retains only six bits even if the written digits describe more. Overflow, extension and expression sizing must be handled deliberately. A wide destination is useful only if the expression rules and operand widths preserve the information being assigned.
+
+**Vector and array.** A vector groups bits into one multi-bit value. An array groups multiple elements, each of which can itself be a vector. In the traditional declaration with an eight-bit range before memory and a sixteen-element range after it, memory contains sixteen eight-bit words. A bit select, part select and array index identify different objects. The direction of a declared range also affects significance, so a numeric index alone does not identify which end is the least significant.
+
+**Wildcard matching and equality.** A question mark inside a based literal encodes z. A surrounding casez or casex construct supplies the wildcard interpretation; ordinary case performs exact four-state matching. Logical equality can return unknown when the result is indeterminate, while case equality explicitly compares four-state values and returns a known Boolean result. Those distinctions matter in debugging because an overly permissive match can conceal uninitialized or disconnected control signals rather than fixing them.
+
+### Application and validation in Lesson 11
+
+A Verilog declaration establishes object kind, width, index direction and signedness. Its drivers and procedural context establish behavior. Unknown values are traced through initialization, driver resolution and operators; controlling binary inputs can resolve an operator result even when another input is unknown.
+
+**Width required by a sum.** Two unsigned 8-bit inputs can each reach 255, giving maximum sum 510. Eight result bits represent at most 255, while nine represent 511, so a full sum requires nine bits. For $255+1$, truncation to eight bits produces zero and discards the carry; a nine-bit result represents 256. Explicitly extending operands, as in `{1'b0,a}+{1'b0,b}`, makes the intended precision visible before addition. Width checking must include intermediate expressions, not only the final destination. This numeric argument is independent of whether synthesis later implements a ripple or another adder structure.
 
 ## Lesson 12: Hardware Modeling — Introduction to Verilog II
 
@@ -686,9 +788,9 @@ The runnable [language examples](Resources/examples/verilog/README.md) exercise 
 
 ### Modules ports hierarchy and parameters
 
-![A module can be reused with different elaboration-time parameters](Resources/images/Day%2002/Lesson%2012/01-modules.png)
+[![A module can be reused with different elaboration-time parameters](Resources/images/Day%2002/Lesson%2012/01-modules.png)](#lesson-index)
 
-*Video frame: [8:41](https://www.youtube.com/watch?v=XEtpwZDhdTk&t=521s). A module can be reused with different elaboration-time parameters*
+*Lecture: [8:41](https://www.youtube.com/watch?v=XEtpwZDhdTk&t=521s). A module can be reused with different elaboration-time parameters*
 
 
 A **module** is a named hardware description with an interface and an implementation. Its ports connect it to a surrounding module: `input` receives a value, `output` drives outward, and `inout` represents a bidirectional connection. Instantiating a module creates a particular instance in the design hierarchy. Multiple instances of one definition are distinct pieces of modeled hardware, each with its own connections and state.
@@ -697,12 +799,12 @@ Named port connections make the interface explicit: `.clk(clk)` connects the chi
 
 A **parameter** is a constant chosen during elaboration, when the simulator or synthesis tool constructs the design hierarchy and sizes. It is not a runtime input. A default can be overridden for an instance. A `localparam` is useful for a derived constant that an instance should not override. Changing an input while a design runs changes a signal; changing a parameter requires a differently elaborated design.
 
-![Kapil’s handwritten notes — Part 2, PDF page 3, parameter and edge-event notes](Resources/images/Day%2002/Lesson%2012/h02-parameters-events.jpg)
+[![Kapil’s handwritten notes — Part 2, PDF page 3, parameter and edge-event notes](Resources/images/Day%2002/Lesson%2012/h02-parameters-events.jpg)](#lesson-index)
 
-*Handwritten source: Part 2, PDF page 3, parameter and edge-event notes.*
+*Source: Part 2, PDF page 3, parameter and edge-event notes.*
 
 
-Your default/override example means “use this constant unless this instance supplies another.” The following complete example creates an eight-bit counter from a module whose default width is four. `WIDTH` must be at least one.
+The default/override example means “use this constant unless this instance supplies another.” The following complete example creates an eight-bit counter from a module whose default width is four. `WIDTH` must be at least one.
 
 ```verilog
 module counter #(parameter WIDTH = 4) (
@@ -731,9 +833,9 @@ When reset becomes low, `count` clears without waiting for a rising clock; this 
 
 ### Operators and bit-level examples
 
-![Bitwise operations, concatenation, replication, and conditional selection](Resources/images/Day%2002/Lesson%2012/02-operators.png)
+[![Bitwise operations, concatenation, replication, and conditional selection](Resources/images/Day%2002/Lesson%2012/02-operators.png)](#lesson-index)
 
-*Video frame: [16:19](https://www.youtube.com/watch?v=XEtpwZDhdTk&t=979s). Bitwise operations, concatenation, replication, and conditional selection*
+*Lecture: [16:19](https://www.youtube.com/watch?v=XEtpwZDhdTk&t=979s). Bitwise operations, concatenation, replication, and conditional selection*
 
 
 An operator combines values according to its own width, signedness, and four-state rules. Do not substitute a logical operator for a bitwise one merely because their symbols look similar.
@@ -764,9 +866,9 @@ Operator precedence determines how an unparenthesized expression is grouped. Use
 
 #### Trace the lecture clock generator
 
-![The initial block initializes clock and counter while an always block toggles clock after each delay](Resources/images/Day%2002/Lesson%2012/06-initial-always.png)
+[![The initial block initializes clock and counter while an always block toggles clock after each delay](Resources/images/Day%2002/Lesson%2012/06-initial-always.png)](#lesson-index)
 
-*Video frame: [21:55](https://www.youtube.com/watch?v=XEtpwZDhdTk&t=1315s). Initial and always blocks, including the repeated `#10` clock toggle.*
+*Lecture: [21:55](https://www.youtube.com/watch?v=XEtpwZDhdTk&t=1315s). Initial and always blocks, including the repeated `#10` clock toggle.*
 
 The slide's `initial` block assigns zero to `clock` and `counter`. The separate `always` block waits ten time units, complements `clock`, reaches its end, and starts its body again. Both processes begin at simulation time zero. The clock's first toggle occurs later because the `always` process encounters a delay before its assignment, not because every `initial` block has priority over every `always` block.
 
@@ -810,9 +912,9 @@ Ten nanoseconds is the **half-period**. A complete cycle takes 20 ns, giving $f=
 
 The editable [clock demonstration](Resources/examples/verilog/initial_always_demo.v) is included in the example checker. The next frame replaces fixed waiting time with waiting for signal events.
 
-![Event controls suspend a process until a specified signal transition](Resources/images/Day%2002/Lesson%2012/03-events.png)
+[![Event controls suspend a process until a specified signal transition](Resources/images/Day%2002/Lesson%2012/03-events.png)](#lesson-index)
 
-*Video frame: [24:13](https://www.youtube.com/watch?v=XEtpwZDhdTk&t=1453s). Event controls suspend a process until a specified signal transition*
+*Lecture: [24:13](https://www.youtube.com/watch?v=XEtpwZDhdTk&t=1453s). Event controls suspend a process until a specified signal transition*
 
 
 Different processes are concurrent; source-code order does not guarantee which separate time-zero process runs first. An event control can suspend one process while other processes continue. Event-driven simulation evaluates the modeled activity at the current time and advances to later scheduled events when that activity permits it; the simulator does not need to check every gate continuously at every possible physical instant.
@@ -823,7 +925,7 @@ An **event control** suspends a process until the specified event occurs. `@(a o
 
 The slide's `always @(en)` illustration reacts whenever `en` changes; it does not remain active throughout the time `en` is high. If its body reads another variable, changing that other variable alone does not trigger this particular event control. It is an event-control illustration, not a complete template for a combinational multiplexer or a transparent latch. Use the complete `always @*` example in Lesson 11 when modeling combinational selection.
 
-Your handwritten edge list includes unknown and high-impedance transitions. The precise single-bit simulation rules are:
+The handwritten edge list includes unknown and high-impedance transitions. The precise single-bit simulation rules are:
 
 | Event | Transitions that trigger it |
 |---|---|
@@ -837,16 +939,16 @@ A `for` loop does not automatically consume a clock cycle per iteration. A stati
 
 ### Functions and tasks
 
-![Traditional Verilog functions and tasks have different timing rules](Resources/images/Day%2002/Lesson%2012/05-functions.png)
+[![Traditional Verilog functions and tasks have different timing rules](Resources/images/Day%2002/Lesson%2012/05-functions.png)](#lesson-index)
 
-*Video frame: [31:54](https://www.youtube.com/watch?v=XEtpwZDhdTk&t=1914s). Traditional Verilog functions and tasks have different timing rules*
+*Lecture: [31:54](https://www.youtube.com/watch?v=XEtpwZDhdTk&t=1914s). Traditional Verilog functions and tasks have different timing rules*
 
 
 Functions and tasks package reusable procedural work. Calling one is not the same as instantiating a module. A function computes a return value for an expression; a task is invoked as a statement and can communicate through output or inout arguments. These lessons use **traditional Verilog** rules; SystemVerilog extends several of them.
 
-![Kapil’s handwritten notes — Part 2, PDF page 4, function/task comparison and assignment notes](Resources/images/Day%2002/Lesson%2012/h01-functions.jpg)
+[![Kapil’s handwritten notes — Part 2, PDF page 4, function/task comparison and assignment notes](Resources/images/Day%2002/Lesson%2012/h01-functions.jpg)](#lesson-index)
 
-*Handwritten source: Part 2, PDF page 4, function/task comparison and assignment notes.*
+*Source: Part 2, PDF page 4, function/task comparison and assignment notes.*
 
 
 | Traditional Verilog feature | Function | Task |
@@ -890,16 +992,16 @@ The printed result is 300. Widening the inputs before adding preserves the ninth
 
 ### Continuous blocking and nonblocking assignment
 
-![Blocking delays accumulate while delayed nonblocking updates are scheduled independently](Resources/images/Day%2002/Lesson%2012/04-assignments.png)
+[![Blocking delays accumulate while delayed nonblocking updates are scheduled independently](Resources/images/Day%2002/Lesson%2012/04-assignments.png)](#lesson-index)
 
-*Video frame: [43:36](https://www.youtube.com/watch?v=XEtpwZDhdTk&t=2616s). Blocking delays accumulate while delayed nonblocking updates are scheduled independently*
+*Lecture: [43:36](https://www.youtube.com/watch?v=XEtpwZDhdTk&t=2616s). Blocking delays accumulate while delayed nonblocking updates are scheduled independently*
 
 
 A **continuous assignment**, such as `assign y = a & b;`, continuously drives a net as its source expression changes. A **procedural assignment** runs when execution reaches it inside a process. Traditional combinational procedural code commonly uses blocking `=`, while clocked state updates commonly use nonblocking `<=`.
 
 With **blocking assignment**, the process completes that assignment before moving to its next statement. Without an explicit delay, the new value is available to following statements in that process immediately. With **nonblocking assignment**, the process evaluates the right-hand expression when the statement executes and schedules the destination update. With no explicit delay, that update occurs in the nonblocking-assignment region of the **current simulation time slot**, after the relevant active-region execution. It does not wait until the entire simulation ends or automatically wait for another clock edge.
 
-This last distinction refines your two-step RHS/LHS note and the lecture's informal “end of simulation time” language. The simulator can process many events at one timestamp. Event ordering within that timestamp is different from advancing time to the next timestamp. The next dedicated simulation lesson develops scheduling in more detail; here we need enough to read RTL correctly.
+This last distinction refines the two-step RHS/LHS note and the lecture's informal “end of simulation time” language. The simulator can process many events at one timestamp. Event ordering within that timestamp is different from advancing time to the next timestamp. The next dedicated simulation lesson develops scheduling in more detail; here we need enough to read RTL correctly.
 
 Consider two registers in a pipeline:
 
@@ -980,8 +1082,30 @@ Here the delay is **inside** the assignment: `p <= #10 expression` samples the e
 
 System task/function names start with `$`. `$display` prints when it executes; `$monitor` reports changes to its argument values at the end of the time step; `$time` returns simulation time; `$finish` ends simulation and `$stop` requests a simulation stop, whose interactive behavior depends on the tool. Waveform dumping commonly uses `$dumpfile` and `$dumpvars` in tools supporting VCD output. Use the selected simulator's manual for nonstandard names and extensions; do not assume every `$` example on a slide is portable.
 
-Your final handwritten definition of **functional verification using simulation** says that a testbench applies stimuli and checks responses against expected behavior. That introductory definition connects to [Lesson 08](Day%2002.md#lesson-08-overview-of-vlsi-design-flow-v--verification-and-test). The separate course lesson titled *Functional Verification Using Simulation* is your current lesson and remains the next chapter, outside this completed batch.
+The final handwritten definition of **functional verification using simulation** says that a testbench applies stimuli and checks responses against expected behavior. That introductory definition connects to [Lesson 08](Day%2002.md#lesson-08-overview-of-vlsi-design-flow-v--verification-and-test). The dedicated *Functional Verification Using Simulation* lesson is documented in [Day 03, Lesson 13](Day%2003.md#lesson-13-functional-verification-using-simulation).
 
 The [Verilog example folder](Resources/examples/verilog/README.md) contains the complete modules and a check script. It checks arithmetic widths, four-state matching, edge-event behavior, parameter overrides, pipeline state, and the timed blocking/nonblocking example. The examples support these explanations; they do not claim exhaustive verification of a production design.
 
 [Back to lesson index](#lesson-index) · [Repository guide](README.md)
+
+### Definitions and mechanisms in Lesson 12
+
+**Module instance and elaboration.** A module definition describes a reusable hardware unit. An instance is one occurrence with particular parameters and connections. Elaboration constructs that hierarchy, resolves widths and applies constant configuration. Two counter instances can use the same definition while having distinct state. A parameter changes the elaborated design; a runtime input changes a signal during its operation. Named connections identify the child port and the parent signal explicitly, which helps prevent positional wiring mistakes.
+
+**Process, event and simulation time slot.** A process is an independently executing procedural activity, such as an initial or always block. An event can awaken a suspended process, and several activities may occur at the same simulation timestamp. The simulator's event ordering within that time slot is separate from advancing to a later time. An initial block starts once and may finish much later if it waits. An always block repeatedly executes its body and needs a meaningful wait or delay to avoid an uncontrolled zero-time loop.
+
+**Event control and sensitivity.** An event control suspends execution until a specified change or edge occurs. A sensitivity list identifies changes that trigger a process; it is not a statement that the process continuously runs whenever a signal is high. For combinational behavior, every relevant input change must be reflected and every output must be assigned along every path. An incomplete sensitivity list can make simulation stale, while incomplete assignments can require stored state. These are different mistakes even if both cause surprising waveforms.
+
+**Blocking and nonblocking assignment.** A blocking assignment completes before the process proceeds to its next statement. A nonblocking assignment evaluates its right-hand expression when reached and schedules its destination update. With no explicit delay, that scheduled write occurs in the current time slot's nonblocking update region. This allows several clocked registers to sample old state before their new values are committed. Nonblocking does not mean next clock, and blocking does not mean that the whole simulator or all other processes stop.
+
+**Assignment delay and event delay.** In a delayed nonblocking assignment, the right-hand value is sampled when the statement executes and the write is scheduled for later. A delay placed before the assignment instead suspends the process before expression evaluation. Changing inputs during the wait can therefore make the forms produce different values. Timing controls in the demonstration model simulator behavior; they do not compel synthesis to manufacture a logic path with an arbitrary specified delay.
+
+**Function, task and module reuse.** A traditional Verilog function supplies a value for an expression without a time-consuming suspension. A task is called procedurally and may use timing controls and output or inout arguments. A module instance creates a structural instance in the design hierarchy. These are different forms of reuse. Neither the word function nor the word task alone determines the inferred hardware; the body, context and tool support matter. The lesson's printed arithmetic demonstration is a simulation example even though its addition can also be described in synthesizable logic.
+
+**Reset, enable and validity.** Reset establishes a defined state according to its synchronous or asynchronous behavior. Enable determines whether an allowed state update occurs. Validity indicates whether stored data should be interpreted as a completed or meaningful transaction. They answer different interface questions. A register may contain a known reset value that is not a completed calculation; a shared datapath may temporarily hold an intermediate value. Correct communication about a block identifies when it accepts input and when its output is valid.
+
+### Application and validation in Lesson 12
+
+A sequential trace records state immediately before an event, evaluates right-hand sides using the applicable statement rules, lists scheduled updates and then records settled state. For nonblocking pipeline assignments, the receiving stage samples the preceding stage's old value. Delay controls determine when evaluation or updating occurs and must be interpreted in their exact statement position.
+
+**Pipeline latency versus throughput.** With `q1<=d; q2<=q1;`, reset state $(q1,q2)=(0,0)$ and successive sampled inputs 5, 7, 9, the settled states are $(5,0)$, $(7,5)$ and $(9,7)$. Each accepted sample reaches `q2` on the next rising edge after entering `q1`; the pipeline accepts a new sample every rising edge. Changing both assignments to blocking statements in the same process makes `q2` receive the newly assigned `q1` at that edge and removes the modeled interstage delay. A waveform checker must observe after nonblocking updates; observing in the active region can mistake old state for a design failure.

@@ -85,6 +85,7 @@ These references support specific clarifications, rather than replacing the sele
 | [SKY130 — Medium-speed library table templates](https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_fd_sc_ms.git/+/refs/tags/v0.0.2/timing/sky130_fd_sc_ms__common.lib.json) | Actual delay-table variables and slew/reference thresholds |
 | [LibreLane — Timing corners](https://librelane.readthedocs.io/en/latest/usage/timing_corners.html) | PVT corner names and their distinction from interconnect corners |
 | [OpenROAD — Global placement](https://openroad.readthedocs.io/en/latest/main/src/gpl/README.html) | A concrete example of congestion estimates feeding back into placement |
+| [Tcl 8.6 — Syntax and substitution rules](https://www.tcl-lang.org/man/tcl8.6/TclCmd/Tcl.htm) | Single-pass substitution and command-word boundaries |
 | [Tcl 8.6 — expr](https://www.tcl-lang.org/man/tcl8.6/TclCmd/expr.htm) | Expression evaluation and braced expressions |
 | [Tcl 8.6 — lset](https://www.tcl-lang.org/man/tcl8.6/TclCmd/lset.htm) | Updating a named list variable at an index |
 | [Tcl 8.6 — foreach](https://www.tcl-lang.org/man/tcl8.6.13/TclCmd/foreach.htm) | List iteration and assignment to loop variables |
@@ -109,3 +110,42 @@ PASS: Tcl list updates, procedure results, literal grouping, and file I/O
 ```
 
 The deliberate oversized literal `6'h88` produces an expected truncation warning, and its resulting six bits are checked. These tests validate the stated teaching examples; they do not validate the manufacturing process or certify a complete ASIC implementation.
+
+## September 30 lecture captures
+Actual video frames were captured in Chrome. Captions link to the relevant playback timestamp; the JSON register records image hashes and source identity. Handwritten comparison images are crops of the indexed full-page originals, not recreated artwork.
+| Day / lesson | Frame subject | Image | Lecture timestamp |
+|---|---|---|---|
+| [Day 03, Lesson 13](../Day%2003.md#lesson-13-functional-verification-using-simulation) | Code coverage: executed statements, branches and FSM states | [Frame](images/Day%2003/Lesson%2013/01-verification-coverage.jpg) | [22:30](https://www.youtube.com/watch?v=3EmADY-fSaw&t=1350s) |
+| [Day 03, Lesson 14](../Day%2003.md#lesson-14-high-level-synthesis-using-bambu---tutorial-3) | The Bambu tutorial installs the dependencies for its HLS environment | [Frame](images/Day%2003/Lesson%2014/01-bambu-tutorial.jpg) | [4:10](https://www.youtube.com/watch?v=Ubupdoq8Nio&t=250s) |
+| [Day 03, Lesson 15](../Day%2003.md#lesson-15-rtl-synthesis---part-i) | The synthesis boundary and support for Verilog constructs | [Frame](images/Day%2003/Lesson%2015/01-rtl-synthesis.jpg) | [20:00](https://www.youtube.com/watch?v=cnpWgZLgB4I&t=1200s) |
+| [Day 03, Lesson 16](../Day%2003.md#lesson-16-rtl-synthesis---part-ii) | Speculation: duplicate the adder to move a late selection to the output | [Frame](images/Day%2003/Lesson%2016/01-rtl-optimization.jpg) | [20:00](https://www.youtube.com/watch?v=7BEKV6FRrOg&t=1200s) |
+| [Day 03, Lesson 17](../Day%2003.md#lesson-17-logic-optimization---part-i) | Boolean space and the vertices of an n-dimensional hypercube | [Frame](images/Day%2003/Lesson%2017/01-cubes-and-minterms.jpg) | [22:30](https://www.youtube.com/watch?v=xL6VvlsKrjk&t=1350s) |
+| [Day 03, Lesson 18](../Day%2003.md#lesson-18-simulation-based-verification-using-icarus) | Counter and testbench structure in the Icarus tutorial | [Frame](images/Day%2003/Lesson%2018/01-icarus-simulation.jpg) | [10:50](https://www.youtube.com/watch?v=9Wzz--APeLU&t=650s) |
+| [Day 04, Lesson 19](../Day%2004.md#lesson-19-logic-optimization---part-ii) | A Boolean network exposes both local functions and structural dependencies | [Frame](images/Day%2004/Lesson%2019/01-multilevel-logic.jpg) | [22:31](https://www.youtube.com/watch?v=x747bipwDeQ&t=1351s) |
+| [Day 04, Lesson 20](../Day%2004.md#lesson-20-logic-optimization---part-iii) | FSM optimization and state encoding | [Frame](images/Day%2004/Lesson%2020/01-sequential-optimization.jpg) | [23:20](https://www.youtube.com/watch?v=HNqmpCD2-pY&t=1400s) |
+| [Day 04, Lesson 21](../Day%2004.md#lesson-21-formal-verification---i) | BDDs and SAT solvers as formal-verification engines | [Frame](images/Day%2004/Lesson%2021/01-formal-verification.jpg) | [18:11](https://www.youtube.com/watch?v=Li-tGyilPOc&t=1091s) |
+| [Day 04, Lesson 22](../Day%2004.md#lesson-22-logic-synthesis-using-yosys) | Yosys tutorial: commands that transform RTL into a mapped netlist | [Frame](images/Day%2004/Lesson%2022/01-yosys-synthesis.jpg) | [6:34](https://www.youtube.com/watch?v=c-cFxuH-HbE&t=394s) |
+| [Day 04, Lesson 23](../Day%2004.md#lesson-23-formal-verification---ii) | CNF clause sizes and the k-SAT convention | [Frame](images/Day%2004/Lesson%2023/02-sat-propagation.jpg) | [15:01](https://www.youtube.com/watch?v=wN6XP-aTlRs&t=901s) |
+| [Day 04, Lesson 24](../Day%2004.md#lesson-24-formal-verification---iii) | BDD-based model checking: the one-step image of a state set | [Frame](images/Day%2004/Lesson%2024/01-model-checking.jpg) | [30:40](https://www.youtube.com/watch?v=u494ozFC5pI&t=1840s) |
+| [Day 05, Lesson 25](../Day%2005.md#lesson-25-formal-verification---iv) | CEC matching: correspondence of registers and ports | [Frame](images/Day%2005/Lesson%2025/02-register-matching.jpg) | [18:00](https://www.youtube.com/watch?v=uQ-xAc7SxEc&t=1080s) |
+| [Day 05, Lesson 26](../Day%2005.md#lesson-26-technology-library) | Timing arcs and threshold-based propagation-delay definitions | [Frame](images/Day%2005/Lesson%2026/02-nonlinear-delay-model.jpg) | [45:00](https://www.youtube.com/watch?v=tcfwuloB-zM&t=2700s) |
+| [Day 05, Lesson 27](../Day%2005.md#lesson-27-logic-optimization-using-yosys) | Unoptimized cell statistics and the optimization script | [Frame](images/Day%2005/Lesson%2027/01-yosys-sharing.jpg) | [8:51](https://www.youtube.com/watch?v=Phcq_iDo3ss&t=531s) |
+| [Day 05, Lesson 28](../Day%2005.md#lesson-28-static-timing-analysis---i) | STA: setup checks and data-path timing | [Frame](images/Day%2005/Lesson%2028/01-setup-timing.jpg) | [28:20](https://www.youtube.com/watch?v=qC5ZPVaOgTI&t=1700s) |
+| [Day 05, Lesson 29](../Day%2005.md#lesson-29-static-timing-analysis---ii) | Delay calculation uses input waveform, driver, wire and receiver models | [Frame](images/Day%2005/Lesson%2029/01-slew-and-propagation.jpg) | [33:20](https://www.youtube.com/watch?v=ftkMDGJY6cg&t=2000s) |
+| [Day 05, Lesson 30](../Day%2005.md#lesson-30-static-timing-analysis---iii) | MMMC scenarios combine cell-library, mode and interconnect conditions | [Frame](images/Day%2005/Lesson%2030/02-multi-mode-multi-corner.jpg) | [43:20](https://www.youtube.com/watch?v=NOOXX3OIvj4&t=2600s) |
+| [Day 06, Lesson 31](../Day%2006.md#lesson-31-static-timing-analysis-using-opensta) | OpenSTA input files, command sequence and timing-report instructions | [Frame](images/Day%2006/Lesson%2031/01-opensta-report.jpg) | [8:20](https://www.youtube.com/watch?v=fKKuQGoirfM&t=500s) |
+| [Day 06, Lesson 32](../Day%2006.md#lesson-32-constraints-i) | Generated-clock definition preserves its relationship to a master clock | [Frame](images/Day%2006/Lesson%2032/02-generated-clock-definition.jpg) | [38:20](https://www.youtube.com/watch?v=rLhnmyGYsuQ&t=2300s) |
+| [Day 06, Lesson 32](../Day%2006.md#lesson-32-constraints-i) | Clock uncertainty: jitter, skew estimates and safety margins | [Frame](images/Day%2006/Lesson%2032/03-clock-uncertainty.jpg) | [49:20](https://www.youtube.com/watch?v=rLhnmyGYsuQ&t=2960s) |
+
+The course uses two official NPTEL playlists: [early lessons and later physical-design topics](https://www.youtube.com/playlist?list=PLyqSpQzTE6M8iOrfy70ELk9W72JG5a98V), and [optimization, formal verification, STA and constraints](https://www.youtube.com/playlist?list=PLyqSpQzTE6M_WlKg31y8qI7DMhJS5eHBY). The [NPTEL course](https://onlinecourses.nptel.ac.in/e-learning/course/noc26_ee147?unitId=113&lessonId=114) provides the lecture-material decks used for comparison.
+### Additional primary references
+| Source | Use |
+|---|---|
+| [Bryant: graph-based Boolean algorithms](https://www.cs.cmu.edu/~bryant/pubdir/ieeetc86.pdf) | Ordered/reduced BDDs and canonical representation |
+| [Yosys synthesis overview](https://yosyshq.readthedocs.io/projects/yosys/en/v0.66/using_yosys/synthesis/) | Process lowering, optimization and mapping |
+| [Icarus documentation](https://steveicarus.github.io/iverilog/) | Compilation and simulation runtime |
+| [Bambu project](https://panda.dei.polimi.it/) | HLS tool and historical tutorial context |
+| [OpenSTA input overview](https://openroad.readthedocs.io/en/latest/main/src/sta/README.html) | Timing input roles |
+| [OpenSTA commands](https://opensta.readthedocs.io/en/latest/Commands/) | Clock, constraint and report syntax |
+
+The lecture decks are retained locally for source review. Commands and numerics in the notes distinguish historical tutorial examples from current documentation. No installation or synthesis/STA result is inferred from merely viewing a tutorial.

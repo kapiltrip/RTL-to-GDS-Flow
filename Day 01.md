@@ -37,9 +37,9 @@ This lesson connects the physical construction of a chip to the design files tha
 
 ### Integration and scaling
 
-![The lecture's historical perspective on integrated circuits and Moore's prediction](Resources/images/Day%2001/Lesson%2001/01-scaling.png)
+[![The lecture's historical perspective on integrated circuits and Moore's prediction](Resources/images/Day%2001/Lesson%2001/01-scaling.png)](#lesson-index)
 
-*Video frame: [09:15](https://www.youtube.com/watch?v=9QgdNsl9qwk&t=555s). The slide links monolithic integration, photolithography, and increasing component count.*
+*Lecture: [09:15](https://www.youtube.com/watch?v=9QgdNsl9qwk&t=555s). The slide links monolithic integration, photolithography, and increasing component count.*
 
 An **integrated circuit (IC)** contains interconnected electronic devices fabricated together on a common substrate. In the silicon technology discussed here, transistors and other structures are formed in and above a silicon wafer. A **monolithic** IC is built as one integrated piece; it is not assembled by soldering a collection of separately packaged transistors onto a board. Single-crystal silicon is the usual starting material in this example, but “monolithic” describes integration into one piece and should not be treated as a universal definition of the substrate's crystallinity.
 
@@ -49,17 +49,17 @@ A board containing separate components also implements a circuit. Its assembly, 
 
 Shrinking structures can increase density and can improve energy or speed, but the benefits depend on the process and design. More transistors also mean more states, paths, connections, and constraints to verify. The course's design flow is needed because increasing manufacturing capability creates a growing design-management problem.
 
-#### Your handwritten note: integration
+#### Integration
 
-![Kapil's integration and Moore's-law notes, Part 1 page 1](Resources/images/Day%2001/Lesson%2001/h01-integration.jpg)
+[![Kapil's integration and Moore's-law notes, Part 1 page 1](Resources/images/Day%2001/Lesson%2001/h01-integration.jpg)](#lesson-index)
 
-Your comparison between discrete components and an IC captures the key manufacturing change: many devices are formed together and connected by patterned material layers. “Monolithic” means one integrated piece. Photolithography helps reproduce the geometry; it is one operation inside a much longer fabrication sequence. The historical doubling interval is an observation about integration, not a guarantee that all chip properties improve at the same rate.
+The comparison between discrete components and an IC captures the key manufacturing change: many devices are formed together and connected by patterned material layers. “Monolithic” means one integrated piece. Photolithography helps reproduce the geometry; it is one operation inside a much longer fabrication sequence. The historical doubling interval is an observation about integration, not a guarantee that all chip properties improve at the same rate.
 
 ### Devices and interconnect
 
-![CMOS inverter schematic and a cross-section showing devices, metal layers, dielectric, and vias](Resources/images/Day%2001/Lesson%2001/02-ic-layers.png)
+[![CMOS inverter schematic and a cross-section showing devices, metal layers, dielectric, and vias](Resources/images/Day%2001/Lesson%2001/02-ic-layers.png)](#lesson-index)
 
-*Video frame: [15:38](https://www.youtube.com/watch?v=9QgdNsl9qwk&t=938s). Read the figure from the silicon substrate upward, then compare it with the inverter schematic on the left.*
+*Lecture: [15:38](https://www.youtube.com/watch?v=9QgdNsl9qwk&t=938s). Read the figure from the silicon substrate upward, then compare it with the inverter schematic on the left.*
 
 The **CMOS inverter** uses a PMOS pull-up device connected toward the positive supply and an NMOS pull-down device connected toward ground. Their gates share the input; their output terminals meet at the output node. In the ideal steady-state switch model:
 
@@ -76,17 +76,17 @@ A **via** is a deliberately formed conductive connection between interconnect le
 
 The drawing is a conceptual cross-section, not a complete process recipe or a universal layer stack. Real dimensions, allowed layers, and connection rules come from the chosen process. [SKY130's process-stack documentation](https://skywater-pdk.readthedocs.io/en/main/rules/assumptions.html) is an example of such process-specific information.
 
-#### Your handwritten note: the layer stack
+#### The layer stack
 
-![Kapil's drawing of device and interconnect layers, Part 1 page 1](Resources/images/Day%2001/Lesson%2001/h02-layers.jpg)
+[![Kapil's drawing of device and interconnect layers, Part 1 page 1](Resources/images/Day%2001/Lesson%2001/h02-layers.jpg)](#lesson-index)
 
-Read your cross-section vertically: devices perform switching near the substrate, and metal levels provide connections above them. Dielectric separates conductors. A via deliberately bridges two levels. Read the A/B crossing drawing as a connectivity problem: the two paths may overlap in a top view while occupying different heights, so they need not short together.
+Read the cross-section vertically: devices perform switching near the substrate, and metal levels provide connections above them. Dielectric separates conductors. A via deliberately bridges two levels. Read the A/B crossing drawing as a connectivity problem: the two paths may overlap in a top view while occupying different heights, so they need not short together.
 
 ### Why routing uses multiple layers
 
-![Lecture diagram of crossing connections on separate metal layers](Resources/images/Day%2001/Lesson%2001/04-multilayer-routing.png)
+[![Lecture diagram of crossing connections on separate metal layers](Resources/images/Day%2001/Lesson%2001/04-multilayer-routing.png)](#lesson-index)
 
-*Video frame: [19:35](https://www.youtube.com/watch?v=9QgdNsl9qwk&t=1175s).*
+*Lecture: [19:35](https://www.youtube.com/watch?v=9QgdNsl9qwk&t=1175s).*
 
 The lecture's routing puzzle places two pairs of terminals around a bounded region. With alternating terminals on the boundary, connecting each pair inside a single plane forces a crossing. If both paths are conductors in the same layer, that crossing joins the nets electrically.
 
@@ -96,9 +96,9 @@ More layers provide routing freedom but do not remove constraints. Wires and via
 
 ### Photolithography
 
-![The complete lecture diagram for film deposition, photoresist application, exposure, development, etching, and photoresist removal](Resources/images/Day%2001/Lesson%2001/03-photolithography.png)
+[![The complete lecture diagram for film deposition, photoresist application, exposure, development, etching, and photoresist removal](Resources/images/Day%2001/Lesson%2001/03-photolithography.png)](#lesson-index)
 
-*Video frame: [27:58](https://www.youtube.com/watch?v=9QgdNsl9qwk&t=1678s). Follow the arrows across the top row and back across the bottom row. Orange is photoresist, blue is the film being patterned, and yellow is the substrate.*
+*Lecture: [27:58](https://www.youtube.com/watch?v=9QgdNsl9qwk&t=1678s). Follow the arrows across the top row and back across the bottom row. Orange is photoresist, blue is the film being patterned, and yellow is the substrate.*
 
 **Photolithography** defines a spatial pattern in a light-sensitive resist using optical exposure and development. A subsequent operation, such as etching, transfers that resist pattern into another material. The lecture groups these operations into one explanatory sequence. Keeping the operations separate makes it clear which material is changing at each step.
 
@@ -144,27 +144,27 @@ The causal chain is:
 
 The pattern is reused to fabricate many dies. A complete chip requires many aligned process steps; one exposure does not construct every transistor and interconnect layer at once. Real flows can also use implantation masks, hard masks, multiple patterning, and other operations. Those are extensions of the pattern-and-transfer principle, not evidence that the simple slide is a complete fabrication recipe.
 
-#### Your handwritten question: what is a mask?
+#### What is a mask?
 
-![Your definition of lithography and boxed mask question, Part 1 page 1](Resources/images/Day%2001/Lesson%2001/h07-mask-question.jpg)
+[![The definition of lithography and boxed mask question, Part 1 page 1](Resources/images/Day%2001/Lesson%2001/h07-mask-question.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 1, lower-left question.*
+*Source: Part 1, PDF page 1, lower-left question.*
 
-![Kapil's lithography sequence and mask question, Part 1 page 1](Resources/images/Day%2001/Lesson%2001/h03-lithography.jpg)
+[![Kapil's lithography sequence and mask question, Part 1 page 1](Resources/images/Day%2001/Lesson%2001/h03-lithography.jpg)](#lesson-index)
 
 A **photomask** is a patterned optical template used by a lithography system to control which regions of a light-sensitive resist receive exposure. In a conventional transmissive mask, patterned absorbing material on a transparent substrate controls light transmission. The mask is distinct from the resist: the mask supplies the optical pattern; resist is the temporary coating on the wafer. A reticle commonly carries the pattern projected onto one exposure field, which the tool repeats across the wafer. Some lithography technologies use reflective masks, so “a glass plate that blocks light” is an introductory example rather than a universal definition.
 
-Your sequence is correctly read as **coat → expose → develop → transfer the pattern → strip**. Exposure changes resist chemistry; development removes selected resist; etching removes exposed underlying material. The mask is not pressed into the silicon like a stamp, and UV light does not directly carve the finished metal line. The optical image and process chemistry together determine the printed feature. [ASML explains this pattern-transfer role](https://www.asml.com/en/technology/lithography-principles).
+The sequence is correctly read as **coat → expose → develop → transfer the pattern → strip**. Exposure changes resist chemistry; development removes selected resist; etching removes exposed underlying material. The mask is not pressed into the silicon like a stamp, and UV light does not directly carve the finished metal line. The optical image and process chemistry together determine the printed feature. [ASML explains this pattern-transfer role](https://www.asml.com/en/technology/lithography-principles).
 
-Suppose you want a narrow conductor to remain after subtractive etching. The resist must protect that conductor during the etch. With positive resist, the protected region must remain unexposed in this simplified example. Changing resist tone changes the required mask polarity. This is why “transparent part becomes a wire” is not a general rule: the answer depends on the layer, resist tone, and subsequent process.
+To retain a narrow conductor after subtractive etching, the resist must protect that conductor during the etch. With positive resist, the protected region must remain unexposed in this simplified example. Changing resist tone changes the required mask polarity. This is why “transparent part becomes a wire” is not a general rule: the answer depends on the layer, resist tone, and subsequent process.
 
-Your later notes on optical proximity correction and multiple patterning extend this topic in [Lesson 09](Day%2002.md#resolution-enhancement).
+The later notes on optical proximity correction and multiple patterning extend this topic in [Lesson 09](Day%2002.md#resolution-enhancement).
 
 ### Ingot, wafer, die, and chip
 
-![The lecture distinguishes repeated dies on a wafer from a packaged chip](Resources/images/Day%2001/Lesson%2001/05-wafer-die-chip.png)
+[![The lecture distinguishes repeated dies on a wafer from a packaged chip](Resources/images/Day%2001/Lesson%2001/05-wafer-die-chip.png)](#lesson-index)
 
-*Video frame: [36:46](https://www.youtube.com/watch?v=9QgdNsl9qwk&t=2206s). Each small rectangular region represents a separate die location, not an individual transistor.*
+*Lecture: [36:46](https://www.youtube.com/watch?v=9QgdNsl9qwk&t=2206s). Each small rectangular region represents a separate die location, not an individual transistor.*
 
 | Term | Meaning in this lecture | What happens next |
 |---|---|---|
@@ -183,21 +183,21 @@ $$
 
 The denominator and test stage must be stated. Wafer-level die yield and final packaged-product yield are not automatically identical. A package protects the die and supplies electrical connections, but it also introduces thermal, mechanical, electrical, and testing considerations. In general usage “chip” can also mean bare die; the lecture uses it primarily for the packaged product.
 
-#### Your handwritten question: how can we make good or defect-free dies?
+#### How can we make good or defect-free dies?
 
-![Kapil's ingot, wafer, die and yield notes, Part 1 page 2](Resources/images/Day%2001/Lesson%2001/h04-wafer-yield.jpg)
+[![Kapil's ingot, wafer, die and yield notes, Part 1 page 2](Resources/images/Day%2001/Lesson%2001/h04-wafer-yield.jpg)](#lesson-index)
 
-Your ingot-to-wafer-to-die sequence describes three scales of the same manufacturing chain. In Czochralski growth, a seed contacts molten silicon and is withdrawn under controlled conditions to grow a single-crystal ingot. Wafers are sliced, finished, and processed; dies are the individual circuit regions. The temperature written in the note is an approximate process value, not a setting to memorize as universally exact.
+The ingot-to-wafer-to-die sequence describes three scales of the same manufacturing chain. In Czochralski growth, a seed contacts molten silicon and is withdrawn under controlled conditions to grow a single-crystal ingot. Wafers are sliced, finished, and processed; dies are the individual circuit regions. The temperature written in the note is an approximate process value, not a setting to memorize as universally exact.
 
 **Answer:** increase the probability of a good die by controlling contamination, process variation, alignment, deposition, etching, and other fabrication steps, and by designing within the process's validated rules. Cleanrooms reduce particles; inspection and metrology detect process drift; design-for-manufacturability measures avoid fragile patterns. Verification removes design mistakes before fabrication. These measures target different causes of failure.
 
-Testing then identifies dies that meet the specified checks; it does not normally repair a broken transistor or turn a defective die into a good one. Some designs include redundancy or repair mechanisms, especially memories, but that must be designed in. No practical process promises that every die is defect-free. **Yield** measures the fraction passing the chosen acceptance criteria, while test coverage measures how effectively a test targets a stated fault model. [Lesson 08](Day%2002.md#yield-fault-coverage-and-escapes) explains the difference with your numerical examples.
+Testing then identifies dies that meet the specified checks; it does not normally repair a broken transistor or turn a defective die into a good one. Some designs include redundancy or repair mechanisms, especially memories, but that must be designed in. No practical process promises that every die is defect-free. **Yield** measures the fraction passing the chosen acceptance criteria, while test coverage measures how effectively a test targets a stated fault model. [Lesson 08](Day%2002.md#yield-fault-coverage-and-escapes) explains the difference with the numerical examples.
 
 ### Design, fabrication, and the PDK
 
-![Lecture diagram connecting a foundry and design team through a PDK](Resources/images/Day%2001/Lesson%2001/06-pdk.png)
+[![Lecture diagram connecting a foundry and design team through a PDK](Resources/images/Day%2001/Lesson%2001/06-pdk.png)](#lesson-index)
 
-*Video frame: [46:21](https://www.youtube.com/watch?v=9QgdNsl9qwk&t=2781s).*
+*Lecture: [46:21](https://www.youtube.com/watch?v=9QgdNsl9qwk&t=2781s).*
 
 **Design** chooses a circuit organization and physical implementation that meet the required behavior and constraints. **Fabrication** uses a manufacturing process to realize that implementation in material. Separating the businesses does not make the technical tasks independent: a layout is useful only if the chosen process can manufacture it and the resulting devices behave as assumed.
 
@@ -207,13 +207,13 @@ The lecture introduces three business models: a **fabless** company concentrates
 
 Following design rules improves manufacturability; it does not by itself prove functional correctness or guarantee a particular yield for every design. A design can be geometrically legal but logically wrong. Likewise, fabrication variability, defects, and electrical conditions affect the final outcome. The physical and functional checks address different failure modes.
 
-#### Your handwritten notes: business models and process information
+#### Business models and process information
 
-![Kapil's design-versus-fabrication and business-model notes, Part 1 page 2](Resources/images/Day%2001/Lesson%2001/h05-industry.jpg)
+[![Kapil's design-versus-fabrication and business-model notes, Part 1 page 2](Resources/images/Day%2001/Lesson%2001/h05-industry.jpg)](#lesson-index)
 
-Your table separates the design investment from the fabrication investment. Design needs engineers, tools, compute, and verification effort; fabrication needs process equipment, facilities, materials, and sustained process control. The useful lifetime and economics of a fab depend on its products and upgrades. A mature process can remain valuable; a newer node does not automatically make an older fab unusable after a fixed number of years.
+The table separates the design investment from the fabrication investment. Design needs engineers, tools, compute, and verification effort; fabrication needs process equipment, facilities, materials, and sustained process control. The useful lifetime and economics of a fab depend on its products and upgrades. A mature process can remain valuable; a newer node does not automatically make an older fab unusable after a fixed number of years.
 
-![Kapil's PDK information loop, Part 1 page 3](Resources/images/Day%2001/Lesson%2001/h06-pdk.jpg)
+[![Kapil's PDK information loop, Part 1 page 3](Resources/images/Day%2001/Lesson%2001/h06-pdk.jpg)](#lesson-index)
 
 The arrows are an information contract. The foundry supplies models and rules; the designer creates a circuit and layout compatible with them; the foundry receives manufacturing data. A **design rule** might specify minimum width, spacing, enclosure, or overlap. A **device model** predicts electrical behavior. A **standard-cell library** provides already designed logic building blocks for a particular technology and library family. These are related resources, but the PDK and the cell library are not interchangeable terms.
 
@@ -235,6 +235,24 @@ The arrows are an information contract. The foundry supplies models and rules; t
 
 [Back to lesson index](#lesson-index) · [Repository guide](README.md)
 
+### Definitions and mechanisms in Lesson 01
+
+**Integrated circuit and monolithic integration.** An integrated circuit is an interconnected collection of electronic devices formed together on a substrate to perform a circuit function. In monolithic integration, those structures belong to one integrated piece rather than an assembly of separately packaged components. The benefit comes from jointly fabricating small devices and their connections using repeatable processing. The word *integrated* therefore describes physical construction, not merely the fact that several components cooperate. A PCB containing packaged transistors is a circuit, but its board assembly is not itself a monolithic IC.
+
+**Device, conductor and dielectric.** A device controls or otherwise affects electrical behavior; a conductor provides a path for current; a dielectric separates conductors electrically. In the inverter cross-section, transistors perform switching, metal wires connect terminals, and insulating layers prevent unwanted connections. A via creates an intended conductive bridge through an interlayer dielectric. This role-based definition helps read an unfamiliar cross-section: first identify what switches, what connects, and what isolates. A top-view overlap does not supply enough information to decide connectivity without the layer and via information.
+
+**Lithography and pattern transfer.** Lithography creates a patterned resist by exposure and development. Pattern transfer uses that temporary pattern to control another operation, such as removing the exposed underlying film. The distinction identifies the material that changes: development changes the resist pattern; etching changes the target material; stripping removes the remaining temporary resist. In the positive-tone example, light makes exposed resist removable during development. The mask's bright region therefore determines an opening in resist, while the final device feature also depends on the subsequent process.
+
+**Critical dimension and overlay.** A critical dimension measures an important feature size, such as the width of a contact opening. Overlay measures the relative registration of patterns from different steps. A contact may have the correct width yet miss the intended terminal because its position is wrong. Conversely, an accurately centered contact may be too narrow. These are independent geometric questions, so a correct explanation names both size control and alignment control rather than saying only that the pattern must be accurate.
+
+**PDK and standard-cell library.** A PDK provides process-specific models, layer information and rules used to design for a manufacturing process. A standard-cell library provides reusable circuit implementations, such as a particular NAND or flip-flop, together with views for different tools. The PDK constrains and models the technology; the library supplies building blocks designed for that technology. A rule about metal spacing and a table describing NAND delay serve different purposes. A designer needs compatible resources, not an assumption that either file set contains every other kind of information.
+
+### Application and validation in Lesson 01
+
+A fabrication sequence is interpreted by tracking the same physical opening through exposure, development, etching and stripping. Each step changes a particular material; the resist opening and the etched film opening are different objects. Connectivity is reconstructed from layer identity and intentional contacts, including vias. A top-view crossing alone does not establish a connection.
+
+**Worked polarity check.** Consider a metal film patterned by subtractive etching with positive-tone resist. To retain a metal line, its region must remain protected during etching. The resist over that line therefore remains after development, requiring that region to be unexposed in this simplified process. Exposed neighboring regions develop into openings and their metal is removed. Reversing the resist tone changes the exposure choice. The final conductor is determined by the entire sequence, not by transparency alone.
+
 ## Lesson 02: Basic Concepts of Integrated Circuit II
 
 [Course index](README.md) · Week 1 · [Lecture video](https://www.youtube.com/watch?v=6lJ2u7eYrek) · [Handwritten index](Resources/Handwritten%20Index.md)
@@ -248,27 +266,27 @@ The arrows are an information contract. The foundry supplies models and rules; t
 
 ### Application-specific and general-purpose chips
 
-![ASIC and general-purpose IC examples](Resources/images/Day%2001/Lesson%2002/01-application-classes.png)
+[![ASIC and general-purpose IC examples](Resources/images/Day%2001/Lesson%2002/01-application-classes.png)](#lesson-index)
 
-*Video frame: [5:16](https://www.youtube.com/watch?v=6lJ2u7eYrek&t=316s). ASIC and general-purpose IC examples*
+*Lecture: [5:16](https://www.youtube.com/watch?v=6lJ2u7eYrek&t=316s). ASIC and general-purpose IC examples*
 
 
 An **application-specific integrated circuit (ASIC)** is designed around a particular application or class of applications. A **general-purpose IC** supplies a reusable capability that can serve many systems. A microprocessor executes different programs; a memory stores information for many applications; an FPGA offers configurable logic. This classification describes intended use, whereas full-custom, standard-cell, and FPGA-based design describe implementation styles.
 
-An ASIC can contain a programmable processor. It is still application-specific if the whole chip is built for a particular purpose. Conversely, configuring an FPGA for a camera does not mean you fabricated a custom ASIC: you implemented application-specific behavior on a manufactured programmable fabric. Production volume and programmability are tendencies in the lecture's introductory comparison, not necessary definitions. Some ASICs ship in enormous volumes, and some general-purpose parts serve small markets.
+An ASIC can contain a programmable processor. It is still application-specific if the whole chip is built for a particular purpose. Conversely, configuring an FPGA for a camera implements application-specific behavior on an existing programmable fabric; it does not fabricate a custom ASIC. Production volume and programmability are tendencies in the lecture's introductory comparison, not necessary definitions. Some ASICs ship in enormous volumes, and some general-purpose parts serve small markets.
 
-![Kapil’s handwritten notes — Part 1, PDF page 3, lower portion](Resources/images/Day%2001/Lesson%2002/h01-applications.jpg)
+[![Kapil’s handwritten notes — Part 1, PDF page 3, lower portion](Resources/images/Day%2001/Lesson%2002/h01-applications.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 3, lower portion.*
+*Source: Part 1, PDF page 3, lower portion.*
 
 
-Your camera/audio-processing examples distinguish the product's intended function from the flexibility offered to its user. Read “less programmable” as “more of the function is fixed in hardware,” not “contains no programmable element.” Volume helps choose a cost-effective implementation, but it cannot by itself identify a chip as ASIC or general-purpose.
+The camera/audio-processing examples distinguish the product's intended function from the flexibility offered to its user. Read “less programmable” as “more of the function is fixed in hardware,” not “contains no programmable element.” Volume helps choose a cost-effective implementation, but it cannot by itself identify a chip as ASIC or general-purpose.
 
 ### Four implementation styles
 
-![Comparison of customization, design effort, masks, and PPA](Resources/images/Day%2001/Lesson%2002/02-design-styles.png)
+[![Comparison of customization, design effort, masks, and PPA](Resources/images/Day%2001/Lesson%2002/02-design-styles.png)](#lesson-index)
 
-*Video frame: [18:53](https://www.youtube.com/watch?v=6lJ2u7eYrek&t=1133s). Comparison of customization, design effort, masks, and PPA*
+*Lecture: [18:53](https://www.youtube.com/watch?v=6lJ2u7eYrek&t=1133s). Comparison of customization, design effort, masks, and PPA*
 
 
 | Style | What the designer customizes | What is reused | Main consequence |
@@ -284,29 +302,29 @@ Full custom is useful where transistor-level choices matter strongly, including 
 
 The slide's PPA ranking is a broad comparison for implementing comparable functionality. It is not a promise that any full-custom design is better than any standard-cell design. Process, architecture, engineering quality, hard blocks, and constraints all matter.
 
-![Kapil’s handwritten notes — Part 1, PDF page 4](Resources/images/Day%2001/Lesson%2002/h02-design-styles.jpg)
+[![Kapil’s handwritten notes — Part 1, PDF page 4](Resources/images/Day%2001/Lesson%2002/h02-design-styles.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 4.*
-
-
-Your note correctly separates cell creation from cell use. During ordinary standard-cell implementation, you choose and instantiate characterized cells. Changing a NAND's internal transistor sizes or layout would create a different cell that needs appropriate characterization and physical verification. Selecting `NAND2_X1` versus a stronger library variant is not the same as editing that cell's internal geometry.
-
-![Kapil’s handwritten notes — Part 1, PDF page 5](Resources/images/Day%2001/Lesson%2002/h03-fpga.jpg)
-
-*Handwritten source: Part 1, PDF page 5.*
+*Source: Part 1, PDF page 4.*
 
 
-#### Your question: FPGA versus cell-based design
+The note correctly separates cell creation from cell use. Ordinary standard-cell implementation selects and instantiates characterized cells. Changing a NAND's internal transistor sizes or layout would create a different cell that needs appropriate characterization and physical verification. Selecting `NAND2_X1` versus a stronger library variant is not the same as editing that cell's internal geometry.
+
+[![Kapil’s handwritten notes — Part 1, PDF page 5](Resources/images/Day%2001/Lesson%2002/h03-fpga.jpg)](#lesson-index)
+
+*Source: Part 1, PDF page 5.*
+
+
+#### FPGA versus cell-based design
 
 Both can start from RTL, but their targets differ. ASIC synthesis maps logic into the selected standard-cell library; FPGA synthesis and implementation map logic into lookup tables, flip-flops, routing switches, memories, DSP blocks, and other resources provided by that FPGA family. A lookup table stores a truth-table result for each input combination; programmable routing connects blocks. The FPGA user pays for available fabric, including unused capacity and configurability overhead. The ASIC designer pays substantial development cost but can tailor the fabricated implementation to the application.
 
-Gate arrays are different again: base devices are fabricated in advance, but customization traditionally occurs through a manufacturing step for selected interconnect layers. FPGA configuration happens electrically after manufacturing. Fill your comparison table using these distinctions, especially the **custom mask** row: all relevant custom layout layers for a conventional standard-cell ASIC, selected upper layers for a traditional gate array, and no customer-specific fabrication masks for FPGA configuration.
+Gate arrays are different again: base devices are fabricated in advance, but customization traditionally occurs through a manufacturing step for selected interconnect layers. FPGA configuration happens electrically after manufacturing. The **custom mask** distinction is all relevant custom layout layers for a conventional standard-cell ASIC, selected upper layers for a traditional gate array, and no customer-specific fabrication masks for FPGA configuration.
 
 ### Economics and the break-even point
 
-![Fixed cost, per-unit cost, and the break-even graph](Resources/images/Day%2001/Lesson%2002/03-cost.png)
+[![Fixed cost, per-unit cost, and the break-even graph](Resources/images/Day%2001/Lesson%2002/03-cost.png)](#lesson-index)
 
-*Video frame: [27:52](https://www.youtube.com/watch?v=6lJ2u7eYrek&t=1672s). Fixed cost, per-unit cost, and the break-even graph*
+*Lecture: [27:52](https://www.youtube.com/watch?v=6lJ2u7eYrek&t=1672s). Fixed cost, per-unit cost, and the break-even graph*
 
 
 **Fixed cost** is development expenditure that is approximately independent of how many units are produced in a particular comparison: design work, verification, tools, and masks are examples. **Variable cost** grows with unit count: fabrication, packaging, test, and procurement contribute. Costs can be more complicated in practice, but a useful first model is
@@ -317,12 +335,12 @@ $$
 
 The graph's vertical intercept is fixed cost; its slope is variable cost per unit. A standard-cell ASIC often has a larger intercept and smaller slope than an FPGA implementation of the same function. At low volume, avoiding ASIC development cost can dominate. At high volume, saving cost on every unit can repay that investment.
 
-![Kapil’s handwritten notes — Part 1, PDF page 6, cost comparison](Resources/images/Day%2001/Lesson%2002/h04-cost.jpg)
+[![Kapil’s handwritten notes — Part 1, PDF page 6, cost comparison](Resources/images/Day%2001/Lesson%2002/h04-cost.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 6, cost comparison.*
+*Source: Part 1, PDF page 6, cost comparison.*
 
 
-#### Your question: what should we choose?
+#### What should we choose?
 
 Use required performance, power, volume, schedule, reprogrammability, and total cost together. The cheapest projected manufacturing cost is irrelevant if the design cannot meet the deadline or performance requirement. Conversely, choosing an expensive implementation only for a small speed benefit may be unjustified if both meet the specification.
 
@@ -336,9 +354,9 @@ Below 30,000 units, this simplified model favors FPGA cost; above it, ASIC cost.
 
 ### PPA and the rest of design quality
 
-![Power, performance, and area as competing objectives](Resources/images/Day%2001/Lesson%2002/04-ppa.png)
+[![Power, performance, and area as competing objectives](Resources/images/Day%2001/Lesson%2002/04-ppa.png)](#lesson-index)
 
-*Video frame: [30:13](https://www.youtube.com/watch?v=6lJ2u7eYrek&t=1813s). Power, performance, and area as competing objectives*
+*Lecture: [30:13](https://www.youtube.com/watch?v=6lJ2u7eYrek&t=1813s). Power, performance, and area as competing objectives*
 
 
 **Power** is the rate of energy consumption. Dynamic power includes switching-related consumption; static power includes leakage while the logical state is unchanged. **Performance** must be specified as a useful metric: clock frequency, operations per second, response latency, or another application measure. **Area** can mean the total cell area, core area, or die area; these are different quantities and must be named.
@@ -359,20 +377,40 @@ For an illustrative aggregate load of 10 pF, $\alpha=0.2$, $V=1$ V, and $f=500$ 
 
 Energy for a task is $E=P_{\text{average}}t$. At 1 mW, a 1,000-cycle task lasting 2 µs consumes 2 nJ of switching energy. Halving frequency halves this modeled power but doubles runtime, leaving switching energy at 2 nJ under unchanged activity, voltage, and cycle count. Leakage energy can increase with the longer runtime. State both the workload and the metric when comparing designs.
 
-![Kapil’s handwritten notes — Part 1, PDF page 6, PPA note](Resources/images/Day%2001/Lesson%2002/h05-ppa.jpg)
+[![Kapil’s handwritten notes — Part 1, PDF page 6, PPA note](Resources/images/Day%2001/Lesson%2002/h05-ppa.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 6, PPA note.*
+*Source: Part 1, PDF page 6, PPA note.*
 
-![Kapil’s handwritten notes — Part 1, PDF page 7, upper portion](Resources/images/Day%2001/Lesson%2002/h06-quality.jpg)
+[![Kapil’s handwritten notes — Part 1, PDF page 7, upper portion](Resources/images/Day%2001/Lesson%2002/h06-quality.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 7, upper portion.*
+*Source: Part 1, PDF page 7, upper portion.*
 
 
-Your added measures are essential: **testability** is how readily manufacturing faults can be controlled and observed; **reliability** concerns correct operation over the required lifetime and conditions; **time to market** is the schedule for delivering a usable product. **Quality of results (QoR)** is judged against the chosen objectives and constraints. A feasible design meets the constraints; an optimal design is best under a precisely defined objective and search space. Large design problems usually use heuristics, so finding an acceptable result does not prove a global optimum.
+The added measures are essential: **testability** is how readily manufacturing faults can be controlled and observed; **reliability** concerns correct operation over the required lifetime and conditions; **time to market** is the schedule for delivering a usable product. **Quality of results (QoR)** is judged against the chosen objectives and constraints. A feasible design meets the constraints; an optimal design is best under a precisely defined objective and search space. Large design problems usually use heuristics, so finding an acceptable result does not prove a global optimum.
 
 **Recall check:** if design A uses less cell area but cannot route within its core, while design B is slightly larger and meets timing after routing, which one actually satisfies the specification? Explain why the answer requires physical implementation evidence, not just the synthesis area report.
 
 [Back to lesson index](#lesson-index) · [Repository guide](README.md)
+
+### Definitions and mechanisms in Lesson 02
+
+**Application and implementation style.** An application describes the problem a product serves. An implementation style describes how its circuit is realized. “Application-specific” and “general-purpose” classify intended use; “full custom,” “standard cell,” “gate array” and “FPGA” classify construction or configuration choices. An application-specific system may contain a programmable processor. An FPGA may perform one specialized task while remaining a manufactured programmable device. State both classifications when discussing a product, because one does not uniquely determine the other.
+
+**Programmability and configurability.** A processor changes behavior by executing different instruction sequences on its existing architecture. An FPGA configuration selects functions and interconnections in an existing programmable fabric. Neither operation fabricates new transistors. A standard-cell ASIC can also contain configurable registers and software-controlled blocks, but its fixed physical circuit does not become an FPGA merely because some behavior is programmable. The useful question is which decisions can change after manufacture and what area, timing or power cost supports that flexibility.
+
+**Nonrecurring cost and unit cost.** Nonrecurring engineering cost is expenditure associated with developing and preparing a design, approximately independent of unit count in a simple model. Unit cost is the incremental cost associated with supplying another part. Their sum over a production volume produces total cost. Break-even is the volume at which two total-cost models are equal; it is a comparison under stated assumptions, not a universal boundary between ASIC and FPGA. A technically infeasible option cannot become acceptable merely by being cheaper on that graph.
+
+**Power and energy.** Power measures the rate of energy transfer or consumption. Energy measures the amount consumed during a task or interval. For a constant average power, energy equals power multiplied by duration. A lower-power implementation can consume more task energy if it takes sufficiently longer. Dynamic switching energy depends on transitions and capacitance; leakage continues over time. A meaningful comparison therefore identifies the workload, voltage, activity, duration and the included power components. Saying only “this circuit consumes less” leaves the metric undefined.
+
+**Latency, throughput and clock frequency.** Latency measures the delay of a particular transaction between defined events. Throughput measures how many transactions complete per unit time over an interval, often in steady state. Frequency measures clock cycles per second. These quantities connect through architecture and protocol, but they are not interchangeable. A pipeline can increase clock frequency and sustained throughput while adding stages that increase the latency of one item. Always name the acceptance and completion events when reporting a latency.
+
+**Constraint, objective and quality of results.** A constraint sets an acceptable boundary, such as a maximum delay. An objective ranks feasible alternatives, such as minimizing area while meeting that delay. Quality of results describes how the implementation performs on the chosen measures. A design that misses a hard timing requirement is infeasible even if its area is impressive. A result that meets all requirements is feasible, but proving it globally optimal requires a defined search space and stronger evidence than a successful tool run.
+
+### Application and validation in Lesson 02
+
+Implementation alternatives are compared with the required function, workload and performance constraints held constant. Development expenditure and per-unit expenditure enter different terms of total cost. In the stated example, equality at 30,000 units follows from both complete cost expressions, rather than from comparing unit prices alone.
+
+**Sensitivity to a respin.** If an additional ASIC development/mask expense of 3,000,000 cost units is introduced while the FPGA costs and both unit costs remain unchanged, the fixed-cost difference grows from 9,000,000 to 12,000,000. The break-even volume becomes $12{,}000{,}000/300=40{,}000$ units. At 35,000 units the original model favors the ASIC, whereas the revised model favors the FPGA. Feasibility must be checked before selecting the lower-cost alternative: a cost advantage does not resolve a missed timing, power or delivery requirement.
 
 ## Lesson 03: Overview of VLSI Design Flow I
 
@@ -388,39 +426,39 @@ Your added measures are essential: **testability** is how readily manufacturing 
 
 ### From a product idea to a manufactured chip
 
-![Pre-RTL, RTL-to-GDS, and post-GDS stages](Resources/images/Day%2001/Lesson%2003/01-flow.png)
+[![Pre-RTL, RTL-to-GDS, and post-GDS stages](Resources/images/Day%2001/Lesson%2003/01-flow.png)](#lesson-index)
 
-*Video frame: [4:43](https://www.youtube.com/watch?v=vKtoQEAoGck&t=283s). Pre-RTL, RTL-to-GDS, and post-GDS stages*
+*Lecture: [4:43](https://www.youtube.com/watch?v=vKtoQEAoGck&t=283s). Pre-RTL, RTL-to-GDS, and post-GDS stages*
 
 
 The flow translates a desired behavior into successively more concrete representations. **Pre-RTL design** establishes requirements, chooses algorithms and architecture, partitions hardware and software, and defines cycle-level hardware behavior. **RTL-to-GDS** develops a gate-level implementation and then its physical layout. **Post-GDS** prepares manufacturing data, fabricates, tests, and packages the chip.
 
 **RTL**, register-transfer level, models stored state and the logic that transforms data between storage elements. **GDSII** is a layout-data format describing hierarchical geometry and layers; it is not executable software for a processor. The manufacturing flow uses layout data to prepare patterns and process wafers. These stages are connected by verification and feedback, not a one-way chain that always succeeds on its first attempt.
 
-![Kapil’s handwritten notes — Part 1, PDF page 7, lower portion](Resources/images/Day%2001/Lesson%2003/h01-abstraction.jpg)
+[![Kapil’s handwritten notes — Part 1, PDF page 7, lower portion](Resources/images/Day%2001/Lesson%2003/h01-abstraction.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 7, lower portion.*
+*Source: Part 1, PDF page 7, lower portion.*
 
 
-Your idea → RTL → GDS → chip chain is the backbone of the course. The “design” bracket includes decisions before RTL and physical implementation after synthesis. Fabrication begins after design-data handoff, but manufacturability must influence design much earlier through the PDK and physical checks.
+The idea → RTL → GDS → chip chain is the backbone of the course. The “design” bracket includes decisions before RTL and physical implementation after synthesis. Fabrication begins after design-data handoff, but manufacturability must influence design much earlier through the PDK and physical checks.
 
 ### Abstraction and turnaround time
 
-![The same NOR function described as an equation or a placed cell](Resources/images/Day%2001/Lesson%2003/02-abstraction.png)
+[![The same NOR function described as an equation or a placed cell](Resources/images/Day%2001/Lesson%2003/02-abstraction.png)](#lesson-index)
 
-*Video frame: [14:10](https://www.youtube.com/watch?v=vKtoQEAoGck&t=850s). The same NOR function described as an equation or a placed cell*
+*Lecture: [14:10](https://www.youtube.com/watch?v=vKtoQEAoGck&t=850s). The same NOR function described as an equation or a placed cell*
 
 
 **Abstraction** is selective omission of detail so a representation exposes the properties needed for a particular decision. The Boolean equation $F=\overline{A+B}$ specifies the NOR truth function. It does not choose transistor sizes, a cell variant, a placement coordinate, or metal routes. A placed and connected NOR instance contains more implementation detail and supports more physically accurate analysis.
 
 A high-level representation lets us compare architectural alternatives quickly. Replacing one algorithm or pipeline organization before layout may be inexpensive; making the equivalent change after placement and routing can require extensive reimplementation. **Turnaround time** is the time needed to complete an iteration. Lower abstraction often increases analysis cost, but it also exposes effects that the higher model hides. Neither level replaces the other: use a simple model to explore and a detailed model to validate.
 
-![Kapil’s handwritten notes — Part 1, PDF page 8](Resources/images/Day%2001/Lesson%2003/h02-system.jpg)
+[![Kapil’s handwritten notes — Part 1, PDF page 8](Resources/images/Day%2001/Lesson%2003/h02-system.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 8.*
+*Source: Part 1, PDF page 8.*
 
 
-Your NOR example correctly identifies the equation as the more abstract representation. The claim “hardware is parallel and software is sequential” is a useful introductory contrast, but it needs qualification. Hardware can contain serial dependencies and shared resources; software can use multiple cores, vectors, and threads. The architectural question is which implementation gives the required behavior, cost, flexibility, and performance under the actual workload.
+The NOR example correctly identifies the equation as the more abstract representation. The claim “hardware is parallel and software is sequential” is a useful introductory contrast, but it needs qualification. Hardware can contain serial dependencies and shared resources; software can use multiple cores, vectors, and threads. The architectural question is which implementation gives the required behavior, cost, flexibility, and performance under the actual workload.
 
 Before partitioning, write measurable requirements: input/output formats, supported functions, maximum response time, throughput, power budget, and operating conditions. Market and schedule constraints help decide whether a technically possible design is a useful product. A vague requirement such as “very fast” cannot guide a partitioning algorithm.
 
@@ -428,9 +466,9 @@ Before partitioning, write measurable requirements: input/output formats, suppor
 
 #### Trace an accelerator request and calculate its communication cost
 
-![Processor, dedicated hardware, and memory communicate through an interconnect](Resources/images/Day%2001/Lesson%2003/04-accelerator-bus.png)
+[![Processor, dedicated hardware, and memory communicate through an interconnect](Resources/images/Day%2001/Lesson%2003/04-accelerator-bus.png)](#lesson-index)
 
-*Video frame: [26:20](https://www.youtube.com/watch?v=vKtoQEAoGck&t=1580s). Hardware/software partitioning: the processor, accelerator, memory, and bus.*
+*Lecture: [26:20](https://www.youtube.com/watch?v=vKtoQEAoGck&t=1580s). Hardware/software partitioning: the processor, accelerator, memory, and bus.*
 
 Read the three boxes as different roles. The **processor** runs instructions implementing the software portion. The **accelerator** implements a selected operation using dedicated hardware. **Memory** holds instructions, input data, intermediate values, and results as required by the architecture. The **interconnect** carries transactions between these components. A bus drawn as one line is a connectivity abstraction; it does not imply unlimited bandwidth or zero communication delay.
 
@@ -451,21 +489,21 @@ $$
 
 Here GB/s uses $10^9$ bytes/s. Although computation alone is 20 times faster, communication can erase that gain. Under these assumptions, acceleration helps only if $B>81920/(92\times10^{-6})$, approximately 0.890 GB/s. This follows by requiring total request time below 100 µs. Overlapping transfers with computation, reusing nearby data, and batching requests can change the model; their benefit depends on the actual protocol and workload. Use sustained bandwidth, not an unjustified advertised peak.
 
-The next frame shows how the course uses repeated measurement to choose functions for hardware. Read your handwritten architecture below with these communication costs in mind.
+The next frame shows how the course uses repeated measurement to choose functions for hardware. Read the handwritten architecture below with these communication costs in mind.
 
-![Profile bottlenecks, move functions into hardware, and evaluate again](Resources/images/Day%2001/Lesson%2003/03-partition.png)
+[![Profile bottlenecks, move functions into hardware, and evaluate again](Resources/images/Day%2001/Lesson%2003/03-partition.png)](#lesson-index)
 
-*Video frame: [37:48](https://www.youtube.com/watch?v=vKtoQEAoGck&t=2268s). Profile bottlenecks, move functions into hardware, and evaluate again*
+*Lecture: [37:48](https://www.youtube.com/watch?v=vKtoQEAoGck&t=2268s). Profile bottlenecks, move functions into hardware, and evaluate again*
 
 
 **Hardware/software partitioning** assigns system functions to dedicated hardware or programmable software. A common architecture combines a processor, memory, an interconnect, and one or more accelerators. The accelerator can exploit specialized datapaths and parallelism; software handles control, changing policies, or functions where dedicated hardware brings little benefit.
 
-![Kapil’s handwritten notes — Part 1, PDF page 9](Resources/images/Day%2001/Lesson%2003/h03-partition.jpg)
+[![Kapil’s handwritten notes — Part 1, PDF page 9](Resources/images/Day%2001/Lesson%2003/h03-partition.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 9.*
+*Source: Part 1, PDF page 9.*
 
 
-In your CPU–memory–accelerator drawing, communication is part of the computation. An accelerator needs input data, configuration, a start/ready protocol, and a way to return results. Shared memory bandwidth and bus contention may become bottlenecks. Replacing an expensive software function with fast hardware does not remove the cost of moving data into and out of that hardware.
+In the CPU–memory–accelerator drawing, communication is part of the computation. An accelerator needs input data, configuration, a start/ready protocol, and a way to return results. Shared memory bandwidth and bus contention may become bottlenecks. Replacing an expensive software function with fast hardware does not remove the cost of moving data into and out of that hardware.
 
 The lecture's DCT example illustrates a function that dominates execution time. To quantify the limit, let fraction $p$ of original execution time be accelerated by factor $s$, with normalized extra communication/control overhead $o$. A simple extension of Amdahl's argument is
 
@@ -475,12 +513,12 @@ $$
 
 If $p=0.8$, $s=1000$, and $o=0$, total speedup is $1/(0.2+0.0008)\approx4.98$, not 1000. The unaccelerated 20% caps the ideal benefit near 5. Adding overhead of 0.05 reduces speedup to about 3.99. These calculations extend the lecture's example and show why whole-system evaluation matters.
 
-![Kapil’s handwritten notes — Part 1, PDF page 10](Resources/images/Day%2001/Lesson%2003/h04-algorithm.jpg)
+[![Kapil’s handwritten notes — Part 1, PDF page 10](Resources/images/Day%2001/Lesson%2003/h04-algorithm.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 10.*
+*Source: Part 1, PDF page 10.*
 
 
-Read your algorithm as a heuristic search:
+Read the algorithm as a heuristic search:
 
 1. Start with hardware-function set $H=\varnothing$ and software set $S$ containing all candidate functions.
 2. Evaluate the current system. If it meets the performance requirement, retain that partition.
@@ -502,6 +540,26 @@ An early performance estimate can come from an analytical model, high-level simu
 
 [Back to lesson index](#lesson-index) · [Repository guide](README.md)
 
+### Definitions and mechanisms in Lesson 03
+
+**Design representation and abstraction.** A representation records selected properties of a design: an algorithm expresses a computation, RTL identifies state and clock-related behavior, a netlist identifies instances and connections, and layout identifies geometry and layers. Abstraction deliberately omits details that are unnecessary for the current question. A Boolean expression can establish a truth function without establishing timing or routability. Moving to a more detailed representation provides evidence about additional properties; it does not make the earlier requirement disappear.
+
+**RTL and GDSII.** Register-transfer level describes stored state and the operations that transform values between storage boundaries. GDSII is a hierarchical geometry interchange format used for layout data. RTL can express a mux and a clocked register without choosing their coordinates. Layout data records physical shapes without independently stating the complete system specification. “RTL to GDS” names a series of constrained transformations and checks between those representations. Producing a GDSII file alone is not evidence that every signoff requirement was met.
+
+**Hardware and software partitioning.** Partitioning assigns functions to dedicated hardware or to instruction execution on programmable processors. It is an architectural choice involving computation, communication and control. Moving a function into hardware creates or changes an interface: inputs must be transferred or made accessible, work must be started, completion must be recognized, and outputs must be associated with the correct request. The relevant benefit is the whole-system result after these costs, not just the accelerator's internal arithmetic speed.
+
+**Profiling and a bottleneck.** Profiling measures how execution time or another resource is distributed over a representative workload. A bottleneck limits the system's current performance. The most frequently called function need not consume the most time, and the most expensive arithmetic need not dominate after communication is included. Changing one component can expose a different limit. Reprofiling is therefore part of partitioning: it tests whether the assumed bottleneck still determines the result after an architectural change.
+
+**Bandwidth and transaction overhead.** Bandwidth is data transferred per unit time, with the byte convention and measurement conditions stated. Latency and setup overhead determine how long a particular request waits or takes to begin. A high-bandwidth interface can still have expensive small transactions. The accelerator example uses sustained usable bandwidth and assumes serial transfers and computation. If transfers overlap computation, the timing model changes. A bus line in a block diagram supplies connectivity information; its bandwidth and protocol costs require additional assumptions or measurements.
+
+**Heuristic search and optimality.** A heuristic chooses promising alternatives without exhaustively proving the best result over every possibility. Moving a dominant software function into hardware is one plausible step, but combinations, ordering and communication can affect the outcome. “This partition satisfies the requirement” is supported by a correctly scoped evaluation. “No feasible partition exists” requires stronger evidence than the failure of one greedy search. Use the conclusion that the actual search and model justify.
+
+### Application and validation in Lesson 03
+
+An accelerator request is measured from available input to usable output. Transfer bytes, sustained bandwidth, control overhead and computation time are included under an explicit overlap assumption. The communication calculation explains why a fast arithmetic block can fail to improve the application.
+
+**Deriving the limiting speedup.** Normalize the original execution time to one. If a fraction $p=0.9$ is accelerated by a factor $s$, with no added overhead, total time becomes $(1-p)+p/s$. Even as $s$ grows without bound, the remaining time approaches $0.1$, so overall speedup cannot exceed ten. With $s=100$, time is $0.109$ and speedup is approximately $9.17$. If communication adds $0.05$ of the original execution time per request, speedup falls to $1/0.159\approx6.29$. The overhead is added to elapsed time; it is not divided by the arithmetic speedup.
+
 ## Lesson 04: Overview of VLSI Design Flow II
 
 [Course index](README.md) · Week 1 · [Lecture video](https://www.youtube.com/watch?v=6_J-x1QfZs0) · [Handwritten index](Resources/Handwritten%20Index.md)
@@ -516,9 +574,9 @@ An early performance estimate can come from an analytical model, high-level simu
 
 ### The implementation gap and IP reuse
 
-![Metadata supports integration of reusable IP blocks](Resources/images/Day%2001/Lesson%2004/01-ip-assembly.png)
+[![Metadata supports integration of reusable IP blocks](Resources/images/Day%2001/Lesson%2004/01-ip-assembly.png)](#lesson-index)
 
-*Video frame: [17:48](https://www.youtube.com/watch?v=6_J-x1QfZs0&t=1068s). Metadata supports integration of reusable IP blocks*
+*Lecture: [17:48](https://www.youtube.com/watch?v=6_J-x1QfZs0&t=1068s). Metadata supports integration of reusable IP blocks*
 
 
 A functional specification says **what** computation must occur. RTL also commits to **when** operations occur relative to clock events and how state is stored. The difference is the **implementation gap**. Translating an untimed expression into RTL requires architectural choices: how many arithmetic units exist, which operations share them, where registers are placed, how inputs are accepted, and when outputs become valid.
@@ -527,12 +585,12 @@ The **datapath** contains arithmetic, logic, multiplexers, and data registers. T
 
 Three routes bridge the gap: manually write RTL, integrate existing IP, or use behavioral/high-level synthesis. A **system on chip (SoC)** integrates substantial system components such as processors, memory, accelerators, peripherals, and sometimes analog/RF blocks. A **reusable IP block** packages a design capability and the information needed to use it. “Pre-verified” does not remove the need to verify its configuration and integration in the new system.
 
-![Kapil’s handwritten notes — Part 1, PDF page 11](Resources/images/Day%2001/Lesson%2004/h01-ip.jpg)
+[![Kapil’s handwritten notes — Part 1, PDF page 11](Resources/images/Day%2001/Lesson%2004/h01-ip.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 11.*
+*Source: Part 1, PDF page 11.*
 
 
-Your hardware/software/verification-IP categories describe different reusable deliverables. Hardware IP can implement a processor or interface; software IP can provide drivers; verification IP can generate protocol transactions and check responses. A driver is not a physical gate block, but it can be essential to operating the hardware correctly.
+The hardware/software/verification-IP categories describe different reusable deliverables. Hardware IP can implement a processor or interface; software IP can provide drivers; verification IP can generate protocol transactions and check responses. A driver is not a physical gate block, but it can be essential to operating the hardware correctly.
 
 **Metadata** is structured information about the design: module identities, parameter values, ports, bus interfaces, address maps, registers, and configuration. A generator can use it to create connections, wrappers, register descriptions, or a verification environment. The lecture mentions IP-XACT, SystemRDL, XML, and spreadsheets. They do not all express the same information or offer identical guarantees.
 
@@ -540,9 +598,9 @@ Integration must resolve width, protocol, clock, reset, and power-domain compati
 
 ### Behavioral synthesis and its cost measures
 
-![An algorithm, constraints, and a resource library jointly determine an RTL implementation](Resources/images/Day%2001/Lesson%2004/04-hls-framework.png)
+[![An algorithm, constraints, and a resource library jointly determine an RTL implementation](Resources/images/Day%2001/Lesson%2004/04-hls-framework.png)](#lesson-index)
 
-*Video frame: [23:46](https://www.youtube.com/watch?v=6_J-x1QfZs0&t=1426s). The three inputs to behavioral synthesis and its RTL output.*
+*Lecture: [23:46](https://www.youtube.com/watch?v=6_J-x1QfZs0&t=1426s). The three inputs to behavioral synthesis and its RTL output.*
 
 The yellow box specifies **what to compute**. The blue box specifies requirements such as frequency, latency, and resource use. The pink box describes resources the implementation can use. The output adds an architecture: operations happen in particular cycles, values are stored, resources are selected, and control coordinates execution. An algorithm alone does not uniquely determine those choices. “Untimed” does not remove data dependencies: an addition consuming a product still needs that product to exist first.
 
@@ -550,12 +608,12 @@ The yellow box specifies **what to compute**. The blue box specifies requirement
 
 **Scheduling** assigns operations to control steps or cycles. **Allocation** chooses how many resources are available. **Binding** maps operations and stored values to particular resources and registers. These decisions interact: sharing one multiplier can reduce arithmetic area but introduce multiplexers, control, and longer scheduling intervals.
 
-![Kapil’s handwritten notes — Part 1, PDF page 12](Resources/images/Day%2001/Lesson%2004/h02-hls.jpg)
+[![Kapil’s handwritten notes — Part 1, PDF page 12](Resources/images/Day%2001/Lesson%2004/h02-hls.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 12.*
+*Source: Part 1, PDF page 12.*
 
 
-Your diagram captures the algorithm + constraints + resource-library → RTL relationship. Separate three metrics carefully:
+The diagram captures the algorithm + constraints + resource-library → RTL relationship. Separate three metrics carefully:
 
 | Metric | Definition | Example |
 |---|---|---|
@@ -585,9 +643,9 @@ Widths also affect correctness. Unsigned four-bit inputs range from 0 to 15. Eac
 
 ### Paths and the clock-period budget
 
-![Launch and capture flip-flops connected by combinational logic](Resources/images/Day%2001/Lesson%2004/02-timing.png)
+[![Launch and capture flip-flops connected by combinational logic](Resources/images/Day%2001/Lesson%2004/02-timing.png)](#lesson-index)
 
-*Video frame: [32:14](https://www.youtube.com/watch?v=6_J-x1QfZs0&t=1934s). Launch and capture flip-flops connected by combinational logic*
+*Lecture: [32:14](https://www.youtube.com/watch?v=6_J-x1QfZs0&t=1934s). Launch and capture flip-flops connected by combinational logic*
 
 
 A **path** is an ordered sequence of pins and connections along which a signal can propagate. A **combinational path** does not cross a state-holding element. Two flip-flops are **sequentially adjacent** when one can send data to the other through only combinational logic and interconnect. This is a connectivity relationship, not a statement that they sit next to one another on the die.
@@ -600,12 +658,12 @@ $$
 
 Here $t_{\text{cq,max}}$ is maximum clock-to-Q delay, $t_{\text{comb,max}}$ includes the logic and wires, and uncertainty reserves margin for specified clock effects. If capture clock arrival is later than launch clock arrival by $t_{\text{skew}}$, using that sign convention adds $t_{\text{skew}}$ to the available setup budget. Real STA also handles multiple clocks, exceptions, corners, and other checks.
 
-![Kapil’s handwritten notes — Part 1, PDF page 13](Resources/images/Day%2001/Lesson%2004/h03-timing.jpg)
+[![Kapil’s handwritten notes — Part 1, PDF page 13](Resources/images/Day%2001/Lesson%2004/h03-timing.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 13.*
+*Source: Part 1, PDF page 13.*
 
 
-Your arrival-time expression is pointing in the right direction but needs a time reference. Measured from a launch clock event at time zero, data arrival is $t_{\text{cq}}+t_{\text{comb}}$. Required arrival is the capture-edge time **minus** setup time and applicable uncertainty. Setup slack is required arrival minus actual arrival; nonnegative slack meets that modeled check.
+The arrival-time expression is pointing in the right direction but needs a time reference. Measured from a launch clock event at time zero, data arrival is $t_{\text{cq}}+t_{\text{comb}}$. Required arrival is the capture-edge time **minus** setup time and applicable uncertainty. Setup slack is required arrival minus actual arrival; nonnegative slack meets that modeled check.
 
 For example, with $t_{\text{cq}}=0.08$ ns, combinational delay $0.62$ ns, setup $0.10$ ns, and uncertainty $0.05$ ns, the minimum zero-skew period is $0.85$ ns, corresponding to approximately 1.176 GHz. These are illustrative values. Increasing the clock period helps this setup check; it does not generally fix a hold violation, which concerns data changing too soon around the same capture edge. A common zero-skew hold condition is $t_{\text{cq,min}}+t_{\text{comb,min}}\ge t_{\text{hold}}$ before adding the relevant margins.
 
@@ -638,9 +696,9 @@ The later capture clock gives incoming setup data more time, but requires the pr
 
 ### Three implementations of a plus b plus c
 
-![One adder reused over two cycles with multiplexers and feedback](Resources/images/Day%2001/Lesson%2004/03-resource-sharing.png)
+[![One adder reused over two cycles with multiplexers and feedback](Resources/images/Day%2001/Lesson%2004/03-resource-sharing.png)](#lesson-index)
 
-*Video frame: [39:00](https://www.youtube.com/watch?v=6_J-x1QfZs0&t=2340s). One adder reused over two cycles with multiplexers and feedback*
+*Lecture: [39:00](https://www.youtube.com/watch?v=6_J-x1QfZs0&t=2340s). One adder reused over two cycles with multiplexers and feedback*
 
 
 The expression $y=a+b+c$ permits several architectures. For a fair comparison, define the bit widths, arithmetic behavior, and input protocol consistently.
@@ -653,18 +711,38 @@ The expression $y=a+b+c$ permits several architectures. For a fair comparison, d
 
 The pipelined version must delay `c` appropriately so the second stage combines values belonging to the same transaction. That alignment register may be omitted in a simplified drawing whose inputs are held stable. The table describes the protocol explicitly rather than assuming that any two-register drawing is a correct streaming pipeline.
 
-![Kapil’s handwritten notes — Part 1, PDF page 14](Resources/images/Day%2001/Lesson%2004/h04-sharing.jpg)
+[![Kapil’s handwritten notes — Part 1, PDF page 14](Resources/images/Day%2001/Lesson%2004/h04-sharing.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 14.*
+*Source: Part 1, PDF page 14.*
 
 
-Your feedback drawing reuses one physical adder. In phase 0, the muxes select `a` and `b`, and the result register captures their sum. In phase 1, they select `c` and the saved sum, and the register captures the final result. With `a=2`, `b=3`, and `c=4`, the register becomes 5 after the first computing edge and 9 after the second. The first value is an intermediate result; a consumer must not mistake it for the completed transaction.
+The feedback drawing reuses one physical adder. In phase 0, the muxes select `a` and `b`, and the result register captures their sum. In phase 1, they select `c` and the saved sum, and the register captures the final result. With `a=2`, `b=3`, and `c=4`, the register becomes 5 after the first computing edge and 9 after the second. The first value is an intermediate result; a consumer must not mistake it for the completed transaction.
 
 The toggle flip-flop creates alternating phases only if its initial phase is known. A practical block needs a reset or other defined initialization, a clear input-acceptance rule, and an output-valid indication. Inputs must remain valid when consumed or be captured into local registers. Without these details, the diagram illustrates resource sharing but is not a complete interface specification.
 
 Area savings are conditional: the removed adder must save more than the added muxes, control, and registers cost. A shorter combinational path may permit a higher clock, but reduced initiation rate can still lower throughput. HLS chooses among these tradeoffs according to constraints and its available implementation models. The final design still needs synthesis and physical validation.
 
 [Back to lesson index](#lesson-index) · [Repository guide](README.md)
+
+### Definitions and mechanisms in Lesson 04
+
+**Datapath and control path.** A datapath stores and transforms data through registers, arithmetic units, logic and selection networks. A control path determines which operation occurs, which operands are selected, when state updates and when a result is valid. Reusing one adder requires control because the same hardware must perform different additions at different times. These are cooperating parts of one circuit. Calling control “software” because it sequences operations confuses an implementation role with the hardware/software partition.
+
+**Scheduling, allocation and binding.** Scheduling assigns operations to time steps while respecting dependencies and timing. Allocation chooses the available resources. Binding associates operations with particular resources and values with storage. With two products followed by a sum, the products can be scheduled together only if the chosen resources support that concurrency. A shared multiplier changes the schedule and requires operand selection and intermediate storage. The three decisions jointly define an architecture; none is merely a different name for translating syntax.
+
+**Dependency and transaction alignment.** A data dependency exists when an operation needs a value produced by another operation. A transaction identifies which input values belong to the same requested computation. Correct scheduling respects both. In a pipelined computation of a plus b plus c, delaying only the partial sum can accidentally pair an old sum with a newer c. Delay or store c so the final addition uses operands from the same transaction. Arithmetic correctness for isolated constant inputs does not prove correct streaming behavior.
+
+**Initiation interval.** The initiation interval is the number of cycles between successive accepted independent transactions under the stated schedule. It describes how often new work can enter; latency describes how long one item remains in the computation. A resource that accepts one multiplication per cycle cannot support more than one multiplication per cycle simply because its surrounding circuit is pipelined. Two multiplications per transaction impose a resource bound of at least two cycles per transaction for one such multiplier, before other restrictions are considered.
+
+**Arrival time, required time and slack.** Arrival time states when a signal reaches a point relative to a chosen reference. Required time states the relevant latest or earliest acceptable boundary. Setup slack compares actual arrival with the latest safe arrival; hold slack compares the earliest new-data change with the earliest safe change. The sign convention must be stated because the protected inequalities differ. A positive slack means that particular modeled check has margin; it does not certify unrelated paths, modes or operating conditions.
+
+**Clock skew.** Skew is a difference between clock arrival times at specified points. With capture arrival minus launch arrival as the sign convention, positive skew can increase a single-cycle setup budget and reduce hold margin. The same shift gives old data more time to arrive for the next capture and requires it to remain unchanged longer around the current capture. This causal explanation is more useful than remembering that skew is always bad or that a slower clock fixes every timing problem.
+
+### Application and validation in Lesson 04
+
+Scheduling assigns operations to clock steps while respecting dependencies and resource availability. Binding determines which physical operator executes each operation. Storage must retain each intermediate until its consumer uses it; transaction labels distinguish values belonging to different requests.
+
+**Deriving a resource bound.** A request containing two additions requires two adder uses. If one nonpipelined adder accepts at most one operation each cycle, $N$ completed requests require at least $2N$ occupied adder cycles. The long-run initiation interval is therefore at least two cycles, independent of whether one request's latency is two or three cycles. A second adder can remove this resource bound, but dependency and clock-period constraints still apply. For a two-stage pipeline at a 10 ns period, a request can have 20 ns latency while new requests begin every 10 ns after the pipeline fills; latency and initiation interval describe different quantities.
 
 ## Lesson 05: Tutorial 1 — Unix foundations for EDA
 
@@ -679,14 +757,14 @@ Area savings are conditional: the removed adder must save more than the added mu
 
 ### A shell is the working interface
 
-![The tutorial demonstrates file and directory commands in a Linux shell](Resources/images/Day%2001/Lesson%2005/01-unix.png)
+[![The tutorial demonstrates file and directory commands in a Linux shell](Resources/images/Day%2001/Lesson%2005/01-unix.png)](#lesson-index)
 
-*Video frame: [4:18](https://www.youtube.com/watch?v=ztPFMRfpPfk&t=258s). The tutorial demonstrates file and directory commands in a Linux shell*
+*Lecture: [4:18](https://www.youtube.com/watch?v=ztPFMRfpPfk&t=258s). The tutorial demonstrates file and directory commands in a Linux shell*
 
 
-This tutorial is presented by **Jasmine Kaur**, the course teaching assistant. It introduces Unix-style command-line work used to launch tools, manage design files, inspect logs, and control long-running jobs. A **shell** interprets commands; a **terminal** provides the text interface through which you interact with it. The **working directory** is the directory against which relative paths are resolved.
+This tutorial is presented by **Jasmine Kaur**, the course teaching assistant. It introduces Unix-style command-line work used to launch tools, manage design files, inspect logs, and control long-running jobs. A **shell** interprets commands; a **terminal** provides the shell's text interface. The **working directory** is the directory against which relative paths are resolved.
 
-On Windows, WSL provides a Linux environment. The tutorial demonstrates `wsl --install` from administrator PowerShell, a restart, and initial Linux-user setup. The exact installation path depends on the existing Windows/WSL state; [Microsoft's current installation instructions](https://learn.microsoft.com/en-us/windows/wsl/install) describe the prerequisites and supported command. This chapter documents the lesson; no WSL installation was performed for these notes.
+On Windows, WSL provides a Linux environment. The tutorial demonstrates `wsl --install` from administrator PowerShell, a restart, and initial Linux-user setup. The exact installation path depends on the existing Windows/WSL state; [Microsoft's current installation instructions](https://learn.microsoft.com/en-us/windows/wsl/install) describe the prerequisites and supported command.
 
 There is no dedicated Unix page in the uploaded handwriting. The Tcl note belongs to [Lesson 10](Day%2002.md#lesson-10-introduction-to-tcl), because a Tcl interpreter and a Unix shell are different command environments.
 
@@ -749,6 +827,24 @@ For EDA, this matters when a simulation or implementation run takes a long time.
 
 [Back to lesson index](#lesson-index) · [Repository guide](README.md)
 
+### Definitions and mechanisms in Lesson 05
+
+**Terminal and shell.** A terminal is the interaction surface for text input and output. A shell is the program that interprets command syntax, performs its defined expansions and launches or controls commands. Several shells can be used through the same terminal application. A command's behavior therefore depends on the interpreter, not the appearance of the window. Bash syntax, Tcl syntax and PowerShell syntax are different even when all three appear as text at a prompt.
+
+**Working directory and path resolution.** A process has a current working directory used to interpret relative paths. An absolute path identifies a location from the relevant filesystem root; a relative path requires that current-directory context. A missing-file error may result from using the correct relative name in the wrong directory. Printing the working directory and checking the expected file are concrete diagnostic steps. The directory containing a script and the process's working directory are not automatically the same.
+
+**Process and shell job.** A process is an operating-system execution instance with a PID and resources. A job is a shell's grouping and tracking of commands for job control; it can involve a pipeline containing multiple processes. A job identifier such as percent one belongs to that shell's job table, while a PID belongs to the operating system's process namespace. Foreground and background describe interaction with the shell and terminal, not whether computation is happening or whether files can be changed.
+
+**Suspension and background execution.** A suspended job has stopped executing until resumed. A background job can continue running while the shell accepts more input. Ctrl+Z normally requests suspension of the foreground job; bg resumes a stopped job in the background; fg brings a job to the foreground. A long EDA run can still consume CPU, memory and disk bandwidth in the background. Background execution also does not by itself guarantee survival after logout or terminal closure.
+
+**Executable search and privileges.** The shell resolves command names using built-ins, functions and its configured executable search rules. A missing command may mean the tool is absent or its directory is outside PATH. Permission failure is a different diagnosis. Elevation changes execution privileges; it does not correct a misspelled filename, a wrong working directory or syntax intended for a different shell. Identify the failure before deciding what action addresses it.
+
+### Application and validation in Lesson 05
+
+A reproducible tool run records the working directory, complete input paths, invocation, completion status and output paths. Relative paths are resolved against the process's working directory, not against the source file's location. Copying preserves the original pathname; moving relocates it.
+
+**Diagnosing an incomplete run.** In a shell command `tool design.v > run.log`, standard output is redirected while standard error may still appear in the terminal. `tool design.v > run.log 2>&1` sends both streams to the log in a conventional Unix shell. A log file's existence only establishes that redirection opened a file, not that the tool succeeded. The shell's exit status must be inspected after the tool completes, and the expected output must be checked for existence and relevant content. Background launch returns control before that completion evidence is available.
+
 ## Lesson 06: Overview of VLSI Design Flow III — Logic synthesis
 
 [Course index](README.md) · Week 2 · [Lecture video](https://www.youtube.com/watch?v=3uujV3nJvNM) · [Handwritten index](Resources/Handwritten%20Index.md)
@@ -761,9 +857,9 @@ For EDA, this matters when a simulation or implementation run takes a long time.
 
 ### RTL plus libraries plus constraints
 
-![RTL selection and storage mapped into a mux and flip-flop](Resources/images/Day%2001/Lesson%2006/01-synthesis.png)
+[![RTL selection and storage mapped into a mux and flip-flop](Resources/images/Day%2001/Lesson%2006/01-synthesis.png)](#lesson-index)
 
-*Video frame: [9:38](https://www.youtube.com/watch?v=3uujV3nJvNM&t=578s). RTL selection and storage mapped into a mux and flip-flop*
+*Lecture: [9:38](https://www.youtube.com/watch?v=3uujV3nJvNM&t=578s). RTL selection and storage mapped into a mux and flip-flop*
 
 
 **Logic synthesis** converts a synthesizable RTL description into a functionally equivalent network of available implementation cells while optimizing against constraints. It does not fabricate silicon or choose all final wire geometries. Its main output is a **netlist** describing instances and connectivity.
@@ -797,18 +893,18 @@ endmodule
 
 ### Library pins and instance pins
 
-![A cell definition can have multiple independently named instances](Resources/images/Day%2001/Lesson%2006/02-pins.png)
+[![A cell definition can have multiple independently named instances](Resources/images/Day%2001/Lesson%2006/02-pins.png)](#lesson-index)
 
-*Video frame: [25:48](https://www.youtube.com/watch?v=3uujV3nJvNM&t=1548s). A cell definition can have multiple independently named instances*
+*Lecture: [25:48](https://www.youtube.com/watch?v=3uujV3nJvNM&t=1548s). A cell definition can have multiple independently named instances*
 
 A library describes reusable cell types. A netlist contains particular instances of those types and nets connecting their pins. Read the figure by first identifying each cell type, then its instance name, and finally the pin being connected. This distinction prevents two pins named `A` on different gates from being mistaken for one connection.
 
-![Kapil’s handwritten notes — Part 1, PDF page 15](Resources/images/Day%2001/Lesson%2006/h01-pins.jpg)
+[![Kapil’s handwritten notes — Part 1, PDF page 15](Resources/images/Day%2001/Lesson%2006/h01-pins.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 15.*
+*Source: Part 1, PDF page 15.*
 
 
-#### Your question: what is a library pin versus an instance pin?
+#### What is a library pin versus an instance pin?
 
 A **library cell** is a reusable definition, such as a two-input AND gate called `AN2`. Its **library pins** `A`, `B`, and `Y` describe the interfaces and associated properties of that cell type. An **instance** is one use of that cell in a design. If `AN2` is instantiated as `I1` and `I2`, then `I1/A` and `I2/A` are different physical/logical connection points, although both refer to the library definition's `A` pin.
 
@@ -825,7 +921,7 @@ The slash is the course's naming convention; a tool may use another separator or
 
 A **port** belongs to a module/design boundary. A **pin** in this synthesis vocabulary belongs to a cell or instance. A **net** is a connection, not a gate. A net can have one driver and several loads, giving fanout. Direction is defined relative to the owner: an input port brings a signal into the top design, while an output pin of an internal cell can drive a net inside that design.
 
-Your `.lib`, `.sdc`, and `.v` triangle is a useful reminder: changing constraints or the cell library can change the result even when the RTL is unchanged. Relaxing timing may allow smaller/slower cells; tightening timing can require faster cells or a different logic structure. Unachievable constraints do not force the tool to create impossible hardware.
+The `.lib`, `.sdc`, and `.v` triangle is a useful reminder: changing constraints or the cell library can change the result even when the RTL is unchanged. Relaxing timing may allow smaller/slower cells; tightening timing can require faster cells or a different logic structure. Unachievable constraints do not force the tool to create impossible hardware.
 
 #### Timing arcs slew load and operating corners
 
@@ -855,18 +951,18 @@ For concrete format context, see [OpenSTA's accepted timing inputs](https://gith
 
 ### Generic logic and technology mapping
 
-![Technology mapping chooses real library cells and drive strengths](Resources/images/Day%2001/Lesson%2006/03-mapping.png)
+[![Technology mapping chooses real library cells and drive strengths](Resources/images/Day%2001/Lesson%2006/03-mapping.png)](#lesson-index)
 
-*Video frame: [38:43](https://www.youtube.com/watch?v=3uujV3nJvNM&t=2323s). Technology mapping chooses real library cells and drive strengths*
+*Lecture: [38:43](https://www.youtube.com/watch?v=3uujV3nJvNM&t=2323s). Technology mapping chooses real library cells and drive strengths*
 
 Technology mapping replaces technology-independent logic with implementations available in the selected library. The available cells have real area, timing, drive, and power properties. Mapping and subsequent optimization therefore choose more than a Boolean symbol: they choose realizations that must meet the supplied constraints.
 
-![Kapil’s handwritten notes — Part 1, PDF page 16](Resources/images/Day%2001/Lesson%2006/h02-synthesis.jpg)
+[![Kapil’s handwritten notes — Part 1, PDF page 16](Resources/images/Day%2001/Lesson%2006/h02-synthesis.jpg)](#lesson-index)
 
-*Handwritten source: Part 1, PDF page 16.*
+*Source: Part 1, PDF page 16.*
 
 
-#### Your question: is there a defined set of generic logic gates?
+#### Is there a defined set of generic logic gates?
 
 There is no single universal internal gate set required of every synthesis tool. A tool may represent intermediate logic using Boolean operators, muxes, arithmetic operators, flip-flops, or a more specialized internal graph. “Generic” means that the representation has not yet committed to a particular characterized cell implementation. A generic inverter specifies logical inversion; a library inverter adds a concrete implementation and characterized properties.
 
@@ -884,3 +980,23 @@ A stronger inverter can drive a larger load with less output delay, but its inpu
 **Equivalence checking** verifies that intended behavior survives transformation. Timing analysis checks the modeled temporal constraints. Neither check replaces the other. The resulting netlist proceeds into physical implementation, with test-related transformations included where the flow requires them.
 
 [Back to lesson index](#lesson-index) · [Repository guide](README.md)
+
+### Definitions and mechanisms in Lesson 06
+
+**Logic synthesis.** Logic synthesis interprets supported RTL behavior and constructs an implementation using available cells under constraints. It includes elaboration, inference, simplification, mapping and optimization. Its output is a netlist whose instances and connections implement the required behavior. The output is still a design representation: synthesis does not manufacture transistors or determine every routed wire. Correct syntax, logical equivalence and timing feasibility are different properties and require their respective checks.
+
+**Cell definition, instance, pin, port and net.** A cell definition specifies a reusable building block. An instance is one occurrence of that block. A library pin belongs to the definition; an instance pin belongs to a particular occurrence. A port is a connection on a module boundary, and a net connects pins or ports. Two NAND instances can both have a pin called A without those pins being electrically connected. Use the complete instance context when identifying a connection point.
+
+**Timing arc.** A timing arc is a modeled timing relationship between named cell pins under specified conditions. A combinational arc can describe propagation from an input to an output. A clock-to-Q arc describes a sequential output response, while setup and hold relationships constrain data relative to clock. The word arc therefore covers more than a wire inside a cell. Interpreting a timing report requires knowing which relationship is being measured and the transition, load and operating condition used.
+
+**Slew, delay and load.** Slew measures the duration of a signal transition between defined voltage thresholds. Propagation delay measures separation between defined input and output reference crossings. Load is the electrical burden an output drives, commonly modeled with pin and wire capacitance. These quantities interact: a slower input or larger output load can change cell delay and output transition. A stronger cell may improve its own output transition while increasing the load of the stage driving its input.
+
+**Technology mapping and optimization.** Mapping selects available cell implementations for technology-independent logic. Optimization then changes choices or structure to improve the specified measures while preserving behavior. A library's complex gate may implement a function with fewer or better stages than a literal translation into basic gates. Conversely, sharing a logical term can create a high-fanout net. Boolean simplification is one input to physical quality, not a direct measurement of area, delay or power.
+
+**Constraint and characterization corner.** A constraint communicates design intent, such as clock timing and external delays. A characterization corner provides modeled cell behavior for process, voltage and temperature assumptions. The tool evaluates the design using both. A timing report with the wrong clock or corner may answer a different question from the one intended. State the scenario when discussing a result; “the circuit meets timing” is incomplete if the analyzed conditions are unspecified.
+
+### Application and validation in Lesson 06
+
+Synthesis interpretation starts with the selected RTL top, elaborated parameters, compatible library and constraints. In the mux/register example, continuous selection describes combinational logic and the rising-edge assignment stores its selected value. The absent reset leaves the initial register value unspecified in the simulation model.
+
+**Why the smallest cell can miss timing.** Assume one critical arc has an 80 ps budget after other path contributions are accounted for. Under the same input slew and load, a small implementation has area 1.0 units and delay 95 ps; a stronger implementation has area 1.4 units and delay 70 ps. The smaller option has slack $80-95=-15$ ps; the larger has $80-70=10$ ps. Selecting the larger option satisfies this isolated arc budget, but its increased input capacitance can slow the preceding stage. The complete path and surrounding electrical checks must therefore be reevaluated; the local 25 ps improvement is not automatically a 25 ps path improvement.

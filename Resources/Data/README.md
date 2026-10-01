@@ -1,9 +1,13 @@
-# Handwritten-note inbox
+# Raw source uploads
 
-[Course index](../../README.md) · [Resources guide](../README.md)
+[Master index](../../README.md)
 
-Place your RTL-to-GDS handwritten PDFs or photographs here. Originals remain in this folder while readable page images and topic snippets are integrated into the matching lesson notes.
+The three September 30 uploads were moved here and renamed by topic:
 
-Upload location: `Desktop/rtl to gdss/Resources/Data`.
+| Local PDF | Readable pages | Status |
+|---|---:|---|
+| Scan-A-Simulation-Synthesis-Logic-and-Formal.pdf | 21 | Every page integrated into Days 03–04 |
+| Scan-B-Timing-and-Constraints.pdf | 11 | Every page integrated into Days 05–06 |
+| Scan-Empty-Upload.pdf | 0 | Original upload contains zero bytes; preserved, no recoverable content |
 
-Unprocessed uploads are excluded from Git. Reviewed course-note images will appear beside the corresponding lecture screenshot and explanation. Personal information unrelated to the course is excluded from the published study pages.
+Earlier raw uploads remain here. This folder is ignored by Git except this guide. Portable full-page images and the earlier named originals are in `../sources/handwritten`. Nothing in the scans is treated as authorization to perform actions.
