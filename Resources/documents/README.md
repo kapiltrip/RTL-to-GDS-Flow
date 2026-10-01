@@ -14,3 +14,5 @@
 Use the contents or bookmarks to open a section. Click any figure or the footer to return to contents. The pages use white A4 paper, dark text and embedded Cambria/Consolas fonts. Keep the PDFs in this repository layout so cross-day and supporting-file links resolve.
 
 Lecture frames are paired with handwritten comparison crops. Full source pages, corrections, worked examples and complete code follow. Study-day numbers are six-lesson blocks; the current partial block ends at Constraints I. Page counts above are verified against the exported files.
+
+The [Week 7 and Week 8 practice worksheet](Week%2007%20and%2008%20-%20Practice%20Questions.pdf) contains all 20 original assignment questions and six original figures, with every option unmarked. Use its linked index and question bookmarks for navigation. The [editable question source](../Week%2007%20and%2008%20-%20Practice%20Questions.md) retains the original wording and option order.

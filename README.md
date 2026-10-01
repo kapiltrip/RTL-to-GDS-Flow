@@ -19,6 +19,8 @@ The equal allocation is **six lessons per day**: `day = floor((lesson−1)/6)+1`
 
 [Find handwritten pages](Resources/Handwritten%20Index.md) · [Full forms and meanings](Resources/Glossary.md) · [RTL-to-GDS flow map](Resources/Flow%20Map.md) · [Corrections and doubts](Resources/Questions.md) · [Sources and timestamps](Resources/Sources.md) · [Study method](Resources/Study%20Guide.md) · [Coverage and depth review](Resources/Coverage%20Review.md)
 
+[Week 7 and Week 8 practice questions](Resources/Week%2007%20and%2008%20-%20Practice%20Questions.md) · [Question-only worksheet PDF](Resources/documents/Week%2007%20and%2008%20-%20Practice%20Questions.pdf). All 20 assignment questions, their unmarked options and six source figures are included.
+
 ## Course lesson index
 
 | Day | Week | Lesson and topic |
@@ -62,7 +64,7 @@ The equal allocation is **six lessons per day**: `day = floor((lesson−1)/6)+1`
 README.md          Master reading index and current position
 Day 01.md … 06.md   Editable daily notes
 Resources/
-  documents/       Six daily PDFs
+  documents/       Six daily PDFs and the question-only practice worksheet
     .build/        Maintained builders and local preview/QA files
   sources/         Original earlier PDFs and complete handwritten page images
   images/          Lecture frames and comparison crops, grouped by day/lesson

@@ -4,6 +4,8 @@
 
 Use [Handwritten Index](Handwritten%20Index.md) to locate all 60 readable source pages, [Glossary](Glossary.md) for full forms, [Flow Map](Flow%20Map.md) for stage purposes, [Questions](Questions.md) for corrections, and [Sources](Sources.md) for lecture timestamps. [Coverage Review](Coverage%20Review.md) records the source-to-note depth review for every day and the remaining source limits.
 
+The [Week 7 and Week 8 practice questions](Week%2007%20and%2008%20-%20Practice%20Questions.md) reproduce all 20 original assignment questions, 161 unmarked options and six original figures. The [linked worksheet PDF](documents/Week%2007%20and%2008%20-%20Practice%20Questions.pdf) contains the questions without responses, solutions or grading information. Quiz figures live in `images/Quizzes/Week 07` and `Week 08`; the editable Markdown is the content source for `documents/.build/build_quiz.py`. Rebuild it with `python Resources/documents/.build/build_quiz.py`. Quiz coverage does not advance the completed-lecture marker.
+
 Reader-facing PDFs live in `documents`. Editable daily notes live at the repository root. Complete handwritten images live in `sources/handwritten`; actual lecture frames and comparison crops live in `images/Day NN/Lesson NN`. Examples live in `examples`.
 
 The PDFs use a formal reading style with concise source captions. The daily Markdown files are the single content source for all six PDFs, including definitions, page-specific reasoning, worked applications and code. The builder supplies layout and navigation; it does not append a second copy of lesson explanations.
