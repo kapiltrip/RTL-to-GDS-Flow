@@ -472,7 +472,7 @@ Distinguish **minimal** from **minimum**. A minimal cover has no whole selected 
 
 #### An irredundant cover can still cost more
 
-To make the distinction testable, consider a separate fully labeled practice function with ON-set $\{0,1,2,5,6,7\}$, OFF-set $\{3,4\}$ and no don't-cares, using $a,b,c$ bit order. This function is an additional example, rather than an interpretation of an unlabeled handwritten sketch. Its six primes are $P=\overline{a}\,\overline{b}$, $Q=\overline{a}\,\overline{c}$, $R=\overline{b}c$, $S=b\overline{c}$, $T=ac$ and $U=ab$.
+To make the distinction testable, consider a separate fully labeled practice function with ON-set $\lbrace 0,1,2,5,6,7\rbrace$, OFF-set $\lbrace 3,4\rbrace$ and no don't-cares, using $a,b,c$ bit order. This function is an additional example, rather than an interpretation of an unlabeled handwritten sketch. Its six primes are $P=\overline{a}\cdot \overline{b},$ $Q=\overline{a}\cdot \overline{c},$ $R=\overline{b}c,$ $S=b\overline{c},$ $T=ac$ and $U=ab$.
 
 | ON minterm | P | Q | R | S | T | U |
 |---|---|---|---|---|---|---|

@@ -526,7 +526,7 @@ Read the algorithm as a heuristic search:
 4. Move selected candidate functions from $S$ to $H$, up to the chosen search limit, and evaluate again.
 5. Continue if the changes improve the objective. Stop successfully when requirements are met; otherwise report that this search did not find an acceptable partition.
 
-In a set update, $H\leftarrow H\cup\{f_i\}$ and $S\leftarrow S\setminus\{f_i\}$. The braces matter: a function is being moved as an element of a set. In a throughput objective, larger measured performance is better; in a latency objective, smaller is better. The inequality in a stopping condition must match the chosen metric.
+In a set update, $H\leftarrow H\cup\lbrace f_i\rbrace$ and $S\leftarrow S\setminus\lbrace f_i\rbrace$. The braces matter: a function is being moved as an element of a set. In a throughput objective, larger measured performance is better; in a latency objective, smaller is better. The inequality in a stopping condition must match the chosen metric.
 
 “No partition found” is not proof that no feasible partition exists. A greedy choice can miss a beneficial combination or a different architecture. Reprofiling matters because removing one bottleneck exposes another. Moving functions can also create new communication and synchronization costs.
 
@@ -653,7 +653,7 @@ The resource bound above concerns independent requests. A feedback computation a
 
 These are cycle-boundary assumptions for a teaching schedule, with no overflow. Although the adder can accept independent work in cycles 1 and 2, the state required for update 1 is unavailable until cycle 3. A second adder does not manufacture the missing state. Starting update 1 with the old zero would compute 3 rather than the required cumulative value 5.
 
-If a recurrence produces a value after $L$ cycles and its consumer is $d$ iterations later, starts separated by an initiation interval $II$ must satisfy $d\,II\ge L$. Hence its dependency bound is $II\ge\lceil L/d\rceil$. Here $L=3$ and $d=1$, giving a lower bound of three. Resource capacity, dependencies and interfaces all impose bounds; satisfying one does not establish the achieved interval. [AMD's loop-dependency guide](https://docs.amd.com/r/2021.1-English/ug1399-vitis-hls/Loop-Dependencies) explains why a later iteration may have to wait for an earlier computation.
+If a recurrence produces a value after $L$ cycles and its consumer is $d$ iterations later, starts separated by an initiation interval $II$ must satisfy $d\cdot II\ge L$. Hence its dependency bound is $II\ge\lceil L/d\rceil$. Here $L=3$ and $d=1$, giving a lower bound of three. Resource capacity, dependencies and interfaces all impose bounds; satisfying one does not establish the achieved interval. [AMD's loop-dependency guide](https://docs.amd.com/r/2021.1-English/ug1399-vitis-hls/Loop-Dependencies) explains why a later iteration may have to wait for an earlier computation.
 
 This distinction also clarifies the feedback adder on Part 1 page 14. Identify when a stored partial result is valid before assigning the next operation to a cycle. Reorganizing an algorithm can sometimes change a dependence, but merely ignoring a genuine dependence changes the computation.
 
@@ -1002,7 +1002,7 @@ A stronger inverter can drive a larger load with less output delay, but its inpu
 For the fully specified binary function $F=ab+cd$, define two NAND outputs $n_1=\overline{ab}$ and $n_2=\overline{cd}$. A final NAND implements:
 
 $$
-F=\overline{n_1n_2}=\overline{\overline{ab}\,\overline{cd}}=ab+cd
+F=\overline{n_1n_2}=\overline{\overline{ab}\cdot \overline{cd}}=ab+cd
 $$
 
 The final inversion is part of the equivalence. Connecting the first two NAND outputs to an OR instead would give $\overline{ab}+\overline{cd}$, a different function. At $a=b=c=d=0$, the required output is zero, whereas that incorrect connection produces one. This single counterexample exposes a polarity error that a plausible gate drawing can hide.

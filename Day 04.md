@@ -139,7 +139,7 @@ Consider four states with the following output and transitions. The output is ob
 | C | 1 | C | A |
 | D | 1 | D | C |
 
-Equal present outputs give the initial partition $\{A,B\},\{C,D\}$. States C and D split first: for input 1, C enters the output-zero class while D remains in the output-one class. With C and D separated, A and B then split because their input-1 successors are C and D. The stable partition contains four singleton classes. Thus identical current outputs did not justify either proposed merge.
+Equal present outputs give the initial partition $\lbrace A,B\rbrace,\lbrace C,D\rbrace$. States C and D split first: for input 1, C enters the output-zero class while D remains in the output-one class. With C and D separated, A and B then split because their input-1 successors are C and D. The stable partition contains four singleton classes. Thus identical current outputs did not justify either proposed merge.
 
 The input sequence 11 gives a distinguishing trace for A and B. Starting from A, the reached states are C then A, with outputs 1 then 0. Starting from B, they are D then C, with outputs 1 then 1. The first input alone does not distinguish the states; the second does. Refinement encodes this future-behavior obligation without enumerating every possible-length input sequence.
 
@@ -232,7 +232,7 @@ Consider an additional binary example $g=(a\leftrightarrow b)\land(c\leftrightar
 
 For the first order, choosing a leaves either the requirement $b=0$ or $b=1$, explaining the two b nodes. A mismatch terminates at zero. Either successful match reaches the same remaining function $c\leftrightarrow d$, so the two successful branches share one c node and its two d alternatives. There is no need to remember a once its equality has been checked.
 
-For the second order, both a and c are read before either equality is resolved. Their four combinations leave four distinct remaining functions: $\overline{b}\,\overline{d}$, $\overline{b}d$, $b\overline{d}$ and $bd$. Their b nodes cannot merge because their corresponding successors differ. The d tests can still be shared, giving two d nodes. The larger graph records unresolved information for longer; it represents the same truth table.
+For the second order, both a and c are read before either equality is resolved. Their four combinations leave four distinct remaining functions: $\overline{b}\cdot \overline{d}$, $\overline{b}d$, $b\overline{d}$ and $bd$. Their b nodes cannot merge because their corresponding successors differ. The d tests can still be shared, giving two d nodes. The larger graph records unresolved information for longer; it represents the same truth table.
 
 These counts are obtained by applying the two reduction rules, not by changing the Boolean function. They illustrate the order sensitivity described in [Bryant's original BDD paper](https://www.cs.cmu.edu/~bryant/pubdir/ieeetc86.pdf). A reduced graph is canonical for its chosen order, while its node count remains conditional on that order and representation convention.
 
@@ -340,7 +340,7 @@ The DPLL name expands to Davis–Putnam–Logemann–Loveland. Its central patte
 
 Return to $F=(x_1+x_2)(\overline{x_1}+x_2)(x_1+\overline{x_3})$. If $x_2=0$, the first clause forces $x_1=1$ while the second forces $x_1=0$. That branch conflicts. Resolving the first two clauses on $x_1$ gives the consequence $x_2$, expressing why every satisfying assignment must instead have $x_2=1$.
 
-With $x_2=1$, both first clauses are satisfied. The remaining requirement is $x_1+\overline{x_3}$. Its only false assignment is $x_1=0,x_3=1$. The complete witness set in $x_1,x_2,x_3$ order is therefore $\{010,110,111\}$.
+With $x_2=1$, both first clauses are satisfied. The remaining requirement is $x_1+\overline{x_3}$. Its only false assignment is $x_1=0,x_3=1$. The complete witness set in $x_1,x_2,x_3$ order is therefore $\lbrace 010,110,111\rbrace$.
 
 | Stage | Consequence | Result interpretation |
 |---|---|---|
@@ -393,7 +393,7 @@ The transition relation `T(s,i,s_next)` is true when the next-state function map
 
 Begin reachability with the initial set R0. Repeatedly compute one-step successors and union them with the reached set, stopping when no new state is found. For transitions 0→1, 1→2, 2→2 and an unreachable state 3→3, starting at 0 yields {0}, then {0,1}, then {0,1,2}, and then the same set. State 3 stays unreachable. A safety proof checks that no reached state lies in the bad-state set. A fixed point provides completeness for that finite modeled reachability calculation.
 
-For a reached-set function $R(s)$, symbolic image computation is $\exists s,i\,[R(s)\land T(s,i,s')]$, leaving a function of the next-state variables $s'$. The result is renamed into the current-state coordinates before union with R. Existentially removing the old state and input expresses that at least one allowed predecessor/input pair reaches the candidate successor. The fixed-point test is equality of sets, not merely equality of their cardinalities.
+For a reached-set function $R(s)$, symbolic image computation is $\exists s,i\quad [R(s)\land T(s,i,s')]$, leaving a function of the next-state variables $s'$. The result is renamed into the current-state coordinates before union with R. Existentially removing the old state and input expresses that at least one allowed predecessor/input pair reaches the candidate successor. The fixed-point test is equality of sets, not merely equality of their cardinalities.
 
 In the four-state example, a bad-state predicate selecting state 3 has empty intersection with the reached set and satisfies the modeled safety check. A predicate selecting state 2 instead fails, with the finite trace $0\to1\to2$. Changing the initial set to include 3 changes the conclusion immediately. Reset and initial-state assumptions are therefore part of the proof, rather than bookkeeping outside it.
 

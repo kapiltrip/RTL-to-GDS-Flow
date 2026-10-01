@@ -54,6 +54,8 @@ Each day now contains two further worked explanations beside the relevant source
 
 The checker independently enumerates the legal primes and all selections for the new cover, constructs and evaluates both ROBDDs, and exhaustively checks the Boolean mappings and CNF witnesses. It also executes the Tcl list example, reproduces the clock-gating event trace, and recomputes the recurrence, mux, arc, arrival, pulse-width and mixed-edge timing results. The final visual pass checks every exported page, with full-page inspection of the new tables, formulas and paragraph breaks. Original handwritten pages and captured lecture frames are unchanged.
 
+The Chrome review also checks GitHub's rendered formulas. Set delimiters and product signs use named LaTeX commands so Markdown escape handling preserves the intended notation in both the web notes and the PDFs.
+
 ## What verification establishes
 
 The content review checks whether the explanation develops the mechanism, assumptions, calculations and corrections suggested by the source. Page counts and word counts alone do not establish depth. The daily notes retain examples and recall questions so revision involves reproducing reasoning rather than only recognizing terminology.
