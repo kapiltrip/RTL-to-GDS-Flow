@@ -170,6 +170,22 @@ assert signature((0,0,1))==(0,1)
 results['signature_aliasing']={'zero_signature_streams':['000','111'],
                               'conditional_nonzero_alias_probability':str(Fraction(1,7))}
 
+# Check the deterministic-pattern gap independently of the random-trial estimate.
+state = (0,0,0,0,1)
+period = []
+while state not in period:
+    period.append(state)
+    state = state[1:] + (state[0] ^ state[2],)
+all_vectors = set(product((0,1), repeat=5))
+assert state == (0,0,0,0,1)
+assert set(period) == all_vectors - {(0,0,0,0,0)} and len(period) == 31
+detecting = [v for v in all_vectors if int(any(v)) != 1]
+assert detecting == [(0,0,0,0,0)]
+assert not any(v in detecting for v in period)
+assert int(any((0,0,0,0,0))) == 0
+results['lfsr_missing_or_test'] = {'period':31, 'detecting_vector':'00000',
+                                   'detections_in_period':0, 'independent_trial_probability':'1/32'}
+
 def load(chain, bits):
     state=dict.fromkeys(chain,0)
     for bit in bits:
@@ -219,6 +235,15 @@ skews=[arrivals[1]-arrivals[0],arrivals[2]-arrivals[1],arrivals[0]-arrivals[2]]
 assert skews==[50,50,-100] and sum(skews)==0
 repairs=[(-30+lo,70-hi) for lo,hi in [(20,35),(35,55),(45,80)]]
 assert repairs==[(-10,35),(5,15),(15,-10)]
+antenna = [2*(length+.4)*.35/.1 for length in (100,30)]
+close(antenna[0],702.8);close(antenna[1],212.8)
+assert antenna[0] > 400 > antenna[1]
+window_area = 200*200
+close((8000+20000)/(2*window_area),.35)
+assert 8000/window_area < .3 < 20000/window_area
+assert .3*window_area-8000 == 4000
+results['final_sanity_physical_models'] = {'antenna_ratios':antenna,
+    'density_global_average':.35, 'window_A_legal_fill_area_um2':4000}
 results['numeric_and_geometric_models']='yield/cost, signed requirements, scenario matrix, RC, decap, pin transforms, via pitch and ECO budgets'
 
 hashes={str(d):hashlib.sha256((ROOT/'Daily Notes'/f'Day {d:02}.md').read_bytes()).hexdigest()
@@ -227,4 +252,4 @@ hashes={str(d):hashlib.sha256((ROOT/'Daily Notes'/f'Day {d:02}.md').read_bytes()
                                                     indent=2)+'\n',encoding='utf-8')
 print('PASS: actual HDL (1024 four-state mux cases, delayed sampling, 256 signed inputs); '
       'care masks, constructed BDDs, reachability/induction, signature collisions, '
-      'scan permutations and dimensional calculations.')
+      'scan permutations, the missing LFSR/OR test, antenna/density and dimensional calculations.')

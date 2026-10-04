@@ -19,6 +19,7 @@ python Resources/tools/pdf/update_index.py
 python Resources/tools/pdf/check_notes.py
 python Resources/tools/pdf/check_navigation.py
 python Resources/tools/pdf/check_references.py
+python Resources/tools/pdf/check_quiz.py
 python Resources/tools/pdf/check_collection.py
 ```
 
@@ -28,4 +29,6 @@ The references resolve destinations into daily PDFs, so build the days first. To
 
 The PDF checks compare source paragraphs, figures and complete code; verify bookmarks, destinations, footers and links; and inspect page geometry. They render every daily page into `qa/dayNN-pages-*` and four-page contact sheets into `qa/dayNN-sheet-*`. Current reference renders go into `qa/references/flow-pages-*` and `qa/references/glossary-pages-*`; match the page count and modification time to the current export. Open each changed page or legible contact sheet, inspect formulas/tables/figures/code, and record the review against the exact PDF hash before committing. Automated geometry and text checks cannot judge interpretation or visual quality by themselves.
 
-`build_quiz.py` separately regenerates the Week 7/8 question-only worksheet. It preserves the original questions/options/figures and is not part of routine note edits. Historical import scripts are documented in [sources](../sources/README.md); they are not rebuild steps.
+`check_quiz.py` checks the existing Week 7/8 worksheet without changing it: the exact question/option sequence, six embedded figure pixel sets, 161 empty option circles, bookmark destinations, index/footer/source links and page bounds. It renders all nine pages in `qa/quiz/pages-9` for visual review and compares against the original local capture when available. This closes the separate worksheet's verification gap in the reading-collection workflow.
+
+`build_quiz.py` separately regenerates the question-only worksheet when its source is intentionally edited. It is not part of routine note edits. Historical import scripts are documented in [sources](../sources/README.md); they are not rebuild steps.

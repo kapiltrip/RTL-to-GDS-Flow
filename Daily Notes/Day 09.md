@@ -403,6 +403,23 @@ Metal fill adds permitted dummy shapes to meet density/uniformity requirements f
 
 Fill changes the electrostatic environment and can add ground/coupling capacitance near signal wires. Therefore a pre-fill parasitic/timing result may no longer represent the final manufacturing geometry. Re-extract or apply the flow's validated fill-aware treatment, then repeat the required analyses. The lower part of the page begins layout/circuit extraction because the completed geometry is the input to the next verification stage.
 
+#### Why CMP needs density control, and why one chip average is insufficient
+
+The circled “for?” beside CMP asks what polishing achieves. Chemical-mechanical polishing uses chemical action and mechanical removal to flatten a processed surface. In the copper trench/via sequence drawn on D-10, excess deposited metal above the dielectric is removed while the intended metal remains in the recessed features. An irregular surface makes subsequent layer formation and patterning harder. Removal behavior also depends on the local pattern: dishing can leave a metal region recessed instead of level with its surroundings.
+
+Dummy fill adjusts the pattern distribution within the permitted rules. The [GF180MCU dummy-metal rules](https://gf180mcu-pdk.readthedocs.io/en/latest/physical_verification/design_manual/drm_13_3.html) explicitly connect fill with metal density and reduced CMP dishing risk, and define windowing, dimensions, spacing and exclusions. Those process-specific requirements must be used together.
+
+For an **independent teaching example**, assume two equally sized $200\times200\ \mu\mathrm{m}$ windows and a minimum of 30% metal occupancy in **each** window. Each window has area $40{,}000\ \mu\mathrm{m}^2$.
+
+| Window | Existing metal area | Local density | Metal area needed to reach the assumed minimum |
+|---|---:|---:|---:|
+| A | $8000\ \mu\mathrm{m}^2$ | 20% | $4000\ \mu\mathrm{m}^2$ |
+| B | $20{,}000\ \mu\mathrm{m}^2$ | 50% | Zero |
+
+The combined average is $28{,}000/80{,}000=35\%$, yet window A fails the assumed local rule. Adding $4000\ \mu\mathrm{m}^2$ of **legal** fill to A reaches 30%; adding it only to B leaves A's deficiency untouched. Real windows can overlap and include exclusions, minimum/maximum limits and spacing constraints. The example's local 30% requirement is an assumption, not a transcription of GF180MCU's complete local/global density rules.
+
+Metal fill and standard-cell filler instances solve different problems. Metal fill adds layout shapes for pattern-density requirements; row fillers supply the library's required physical continuity between placed cells. Neither term means arbitrary functional gates should be added. Fill near a signal also changes its capacitance, linking the page's manufacturing question directly to the need for final-geometry extraction and timing analysis.
+
 [Back to day index](#day-09-index)
 
 ## Lesson 53: Post-layout Verification and Signoff

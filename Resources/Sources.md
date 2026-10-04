@@ -101,6 +101,8 @@ These references support specific clarifications, rather than replacing the sele
 | [Sutherland HDL — Verilog-2001 reference](https://sutherland-hdl.com/pdfs/verilog_2001_ref_guide.pdf) | Wildcard case matching and traditional language reference context |
 | [Sutherland and Mills — X behavior in simulation](https://sutherland-hdl.com/papers/2013-DVCon_In-love-with-my-X_paper.pdf) | Conditional-operator bit merging and optimistic procedural selection |
 | [Yosys — Binary word cells](https://yosyshq.readthedocs.io/projects/yosys/en/stable/cell/word_binary.html) | Signed division, shifts and the limits of strength reduction |
+| [SKY130 — Antenna definitions](https://skywater-pdk.readthedocs.io/en/main/rules/antenna.html) | Process-stage connectivity, sidewall/contact measures and diode treatment; the Day 08 geometry calculation is illustrative |
+| [GF180MCU — Dummy metal rules](https://gf180mcu-pdk.readthedocs.io/en/latest/physical_verification/design_manual/drm_13_3.html) | Density, CMP dishing, fill geometry and exclusions; the Day 09 local 30% threshold is an independent teaching assumption |
 
 ## Example validation
 

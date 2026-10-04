@@ -11,8 +11,8 @@
 | [Day 05](../Daily%20Notes/Day%2005.md) | 25–30 | Equivalence, libraries and STA | [Read PDF](../PDFs/Day%2005%20-%20Equivalence%20Libraries%20and%20Static%20Timing%20Analysis.pdf) | 26 |
 | [Day 06](../Daily%20Notes/Day%2006.md) | 31–36 | Constraints, mapping and timing optimization | [Read PDF](../PDFs/Day%2006%20-%20OpenSTA%20and%20Clock%20Constraints.pdf) | 42 |
 | [Day 07](../Daily%20Notes/Day%2007.md) | 37–42 | Power, scan design and ATPG | [Read PDF](../PDFs/Day%2007%20-%20Power%20Scan%20Design%20and%20ATPG.pdf) | 40 |
-| [Day 08](../Daily%20Notes/Day%2008.md) | 43–48 | BIST, physical foundations and chip planning | [Read PDF](../PDFs/Day%2008%20-%20BIST%20Physical%20Foundations%20and%20Chip%20Planning.pdf) | 41 |
-| [Day 09](../Daily%20Notes/Day%2009.md) | 49–54 | Placement, clocks, routing and signoff | [Read PDF](../PDFs/Day%2009%20-%20Placement%20Clocks%20Routing%20and%20Signoff.pdf) | 55 |
+| [Day 08](../Daily%20Notes/Day%2008.md) | 43–48 | BIST, physical foundations and chip planning | [Read PDF](../PDFs/Day%2008%20-%20BIST%20Physical%20Foundations%20and%20Chip%20Planning.pdf) | 42 |
+| [Day 09](../Daily%20Notes/Day%2009.md) | 49–54 | Placement, clocks, routing and signoff | [Read PDF](../PDFs/Day%2009%20-%20Placement%20Clocks%20Routing%20and%20Signoff.pdf) | 56 |
 
 Open a day to use its lesson and topic indexes. Figures return to the day index. The PDFs retain the same explanations, source handwriting and lecture frames. Each study day contains six lessons; Day 09 ends at the Week 12 tutorial, course Lesson 54.
 

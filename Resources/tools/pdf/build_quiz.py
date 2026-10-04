@@ -11,6 +11,9 @@ import argparse
 import hashlib
 import json
 import re
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parent / 'vendor'))
 
 from PIL import Image as PILImage
 from reportlab.lib import colors

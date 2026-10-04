@@ -76,6 +76,19 @@ All seven nonzero states occur before repetition; 000 is absorbing. Reversing th
 
 For a five-input OR output stuck at one, the good output must be zero to activate a difference. That requires 00000. Under independent uniform random input vectors its probability is 1/32, and the probability of missing it after m independent tests is $(31/32)^m$. At m=100, miss probability is about 4.18%; at m=200, about 0.175%. These probabilities describe the stated random model, not independent draws from a deterministic finite LFSR stream.
 
+#### A missing LFSR vector cannot be recovered by a longer test
+
+Suppose a maximal five-bit XOR LFSR, initialized to a nonzero seed, directly drives all five OR inputs with its complete state. Its 31-state period excludes 00000. The good OR therefore always outputs 1, matching the output stuck at 1; no amount of repetition exposes this fault.
+
+Independent uniform vectors give 00000 probability $1/32$ per trial. This deterministic connection never applies it. Balanced individual bits do not imply independent joint vectors.
+
+| Applied stimulus | Good OR output | Output stuck at 1 | Fault detected? |
+|---|---:|---:|---|
+| Any of the 31 nonzero LFSR states | 1 | 1 | No |
+| Deliberately inserted 00000 | 0 | 1 | Yes, if the difference is observed |
+
+The handwritten stored-pattern proposal addresses this gap: deliberately apply 00000 through the test selector and observe the OR difference. Resetting the basic XOR LFSR to zero traps it unless separate control restarts it. Scan loading, inversion or pattern expansion can change the input vectors; check the actual mapping and whether propagation or signature comparison preserves detection.
+
 The response-volume example has one million patterns and 100 observed bits per pattern: $10^8$ bits, or 12.5 MB using decimal bytes. Response compaction reduces stored or transmitted data dramatically, but introduces aliasing. A hybrid strategy can use pseudorandom patterns for broad coverage and deterministic patterns for resistant faults.
 
 ### D-08: Signature compression trades data volume for aliasing risk
@@ -225,6 +238,19 @@ Antenna ratios relate specified conductor area/perimeter measures to connected g
 A jumper to a later metal layer can break up the exposed conductor at an earlier manufacturing stage. An antenna diode can provide a discharge path when the process/model allows it. Either repair must satisfy electrical, geometric and timing constraints; a diode adds capacitance and placement/routing demand.
 
 Technology LEF describes routing layers, vias, sites and abstract rules needed by implementation tools. Cell/macro LEF describes footprints, abstract pin geometry and obstructions. It deliberately omits much transistor-level detail. Liberty supplies logical/electrical cell models; GDS/OASIS supplies detailed manufacturing geometry; DEF describes a design's placement/routing arrangement. Choosing the correct file for a task prevents treating an abstract footprint as a complete cell layout.
+
+#### Compute the antenna measure at the fabrication stage being checked
+
+The handwritten $A_{metal}/A_{oxide}$ ratio is a useful reminder, but its numerator must match the rule. For a sidewall-area rule, a rectangular wire with length $l$, width $w$ and layer thickness $t$ contributes exposed area $A_{exp}=2(l+w)t$, rather than its top area $lw$. Both numerator and gate area have units of area, so their ratio is dimensionless. The [SKY130 antenna definitions](https://skywater-pdk.readthedocs.io/en/main/rules/antenna.html) distinguish perimeter-times-thickness measures from contact/via bottom-area measures, and specify the applicable layer and diode treatment.
+
+For a teaching calculation, assume $w=0.4\ \mu\mathrm{m}$, $t=0.35\ \mu\mathrm{m}$, connected gate area $A_g=0.1\ \mu\mathrm{m}^2$ and an assumed no-diode ratio limit of 400. These dimensions and the simplified geometry are not a complete process-qualified route.
+
+| Metal connected to this gate during the checked stage | Exposed sidewall area | $A_{exp}/A_g$ | Comparison with assumed limit |
+|---|---:|---:|---|
+| One $100\ \mu\mathrm{m}$ segment | $70.28\ \mu\mathrm{m}^2$ | 702.8 | Fails |
+| Gate-side $30\ \mu\mathrm{m}$ segment after a later-layer jumper | $21.28\ \mu\mathrm{m}^2$ | 212.8 | Passes this one check |
+
+The jumper helps only if, at that earlier process stage, the remote metal has no completed connection to this gate. A bridge formed on a later layer can restore the intended final connectivity without exposing the gate to the entire earlier conductor at once. Merely renaming two connected shapes as separate segments changes nothing. The later layer, vias, cumulative rules and diode credit still need their own checks. A finished net being logically connected does not reveal every intermediate manufacturing connection.
 
 [Back to day index](#day-08-index)
 

@@ -53,7 +53,9 @@ readme.write_text(text, encoding='utf-8')
     '[build and verification guide](../Resources/tools/pdf/README.md).\n\n'
     '[Week 7 and Week 8 question-only worksheet](Week%2007%20and%2008%20-%20Practice%20Questions.pdf) '
     'contains 20 original questions, 161 unmarked options and six source figures. '
-    'The worksheet has ' + str(len(PdfReader(DOC / 'Week 07 and 08 - Practice Questions.pdf').pages)) + ' pages.\n',
+    'The worksheet has ' + str(len(PdfReader(DOC / 'Week 07 and 08 - Practice Questions.pdf').pages)) + ' pages. '
+    'Its [read-only checker](../Resources/tools/pdf/check_quiz.py) verifies content, figures, '
+    'navigation and layout without rebuilding it.\n',
     encoding='utf-8')
 (ROOT / 'Daily Notes/README.md').write_text(
     '# Daily RTL-to-GDS notes\n\n[Master index](../README.md) · '
