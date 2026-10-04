@@ -178,10 +178,10 @@ The lecture introduces the Czochralski growth idea: a seed crystal is pulled fro
 **Yield** is the fraction of manufactured items that meet the relevant acceptance criteria at a specified stage. If 500 tested dies contain 450 acceptable dies, the illustrative die yield is
 
 $$
-Y=\frac{450}{500}=0.90=90\%.
+Y=\frac{450}{500}=0.90.
 $$
 
-The denominator and test stage must be stated. Wafer-level die yield and final packaged-product yield are not automatically identical. A package protects the die and supplies electrical connections, but it also introduces thermal, mechanical, electrical, and testing considerations. In general usage “chip” can also mean bare die; the lecture uses it primarily for the packaged product.
+This fraction corresponds to 90%. The denominator and test stage must be stated. Wafer-level die yield and final packaged-product yield are not automatically identical. A package protects the die and supplies electrical connections, but it also introduces thermal, mechanical, electrical, and testing considerations. In general usage “chip” can also mean bare die; the lecture uses it primarily for the packaged product.
 
 #### How can we make good or defect-free dies?
 

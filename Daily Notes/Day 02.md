@@ -294,10 +294,10 @@ A yield model connects the fraction of acceptable dies with factors such as die 
 The clustered-defect yield model in the lecture is
 
 $$
-Y=\left(1+\frac{Ad}{\alpha}\right)^{-\alpha},\qquad Y_{\%}=100Y.
+Y=\left(1+\frac{Ad}{\alpha}\right)^{-\alpha}.
 $$
 
-Here $A$ is die area, $d$ is the relevant defect density per unit area, and $\alpha>0$ is a clustering parameter. The exponent applies to the **whole parenthesis**, a detail that is easy to lose in handwriting. $Ad$ must be dimensionless. This is a model fitted to a process and defect population, not an exact physical law for every yield mechanism.
+The formula gives $Y$ as a fraction; multiplying by 100 gives its numerical value in percent. Here $A$ is die area, $d$ is the relevant defect density per unit area, and $\alpha>0$ is a clustering parameter. The exponent applies to the **whole parenthesis**, a detail that is easy to lose in handwriting. $Ad$ must be dimensionless. This is a model fitted to a process and defect population, not an exact physical law for every yield mechanism.
 
 For $Ad=1$, $\alpha=1$ gives $Y=1/2=0.50$, or 50%; $\alpha=2$ gives $Y=(1.5)^{-2}\approx0.4444$, or about 44.44%. As $\alpha$ becomes very large, this expression approaches $e^{-Ad}$, giving about 36.79% for $Ad=1$. Smaller positive $\alpha$ corresponds to stronger clustering in this model. The same number of defects concentrated on already-bad dies can leave more other dies untouched. Deliberately adding defects is not a yield-improvement strategy; the observation compares distributions at a stated defect density.
 
