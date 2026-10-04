@@ -289,7 +289,7 @@ A yield model connects the fraction of acceptable dies with factors such as die 
 *Source: Part 1, PDF page 23.*
 
 
-**Yield** is a fraction of manufactured units meeting specified goodness criteria at a stated stage. The previous page's example is correct: 300 good dies out of 400 gives $300/400=75\%$. It does not imply that every mature process must exceed a single universal percentage; die area, design, process maturity, and acceptance criteria matter.
+**Yield** is a fraction of manufactured units meeting specified goodness criteria at a stated stage. The previous page's example is correct: 300 good dies out of 400 gives $300/400=0.75$, or 75%. It does not imply that every mature process must exceed a single universal percentage; die area, design, process maturity, and acceptance criteria matter.
 
 The clustered-defect yield model in the lecture is
 
@@ -299,7 +299,7 @@ $$
 
 Here $A$ is die area, $d$ is the relevant defect density per unit area, and $\alpha>0$ is a clustering parameter. The exponent applies to the **whole parenthesis**, a detail that is easy to lose in handwriting. $Ad$ must be dimensionless. This is a model fitted to a process and defect population, not an exact physical law for every yield mechanism.
 
-For $Ad=1$, $\alpha=1$ gives $Y=1/2=50\%$; $\alpha=2$ gives $Y=(1.5)^{-2}\approx44.44\%$. As $\alpha$ becomes very large, this expression approaches $e^{-Ad}$, giving about 36.79% for $Ad=1$. Smaller positive $\alpha$ corresponds to stronger clustering in this model. The same number of defects concentrated on already-bad dies can leave more other dies untouched. Deliberately adding defects is not a yield-improvement strategy; the observation compares distributions at a stated defect density.
+For $Ad=1$, $\alpha=1$ gives $Y=1/2=0.50$, or 50%; $\alpha=2$ gives $Y=(1.5)^{-2}\approx0.4444$, or about 44.44%. As $\alpha$ becomes very large, this expression approaches $e^{-Ad}$, giving about 36.79% for $Ad=1$. Smaller positive $\alpha$ corresponds to stronger clustering in this model. The same number of defects concentrated on already-bad dies can leave more other dies untouched. Deliberately adding defects is not a yield-improvement strategy; the observation compares distributions at a stated defect density.
 
 **Fault coverage** measures detected modeled faults divided by the relevant modeled-fault population, with the exact denominator stated by the report. A coverage figure depends on fault model, exclusions, and treatment of untestable faults. It is not the fraction of bad chips automatically detected in all circumstances. Even 100% stuck-at coverage does not cover every delay, analog, intermittent, or other unmodeled physical failure.
 
@@ -352,7 +352,7 @@ The bottom line of the final handwritten page begins “Functional Verification 
 
 Verification evidence identifies the design representation, requirements, stimulus or assumptions, and the comparison performed. Manufacturing fault detection requires both activation of the named fault and propagation to an observable output. These obligations apply to the specific modeled fault rather than to every possible physical defect.
 
-**Deriving outgoing defect level.** Let the manufactured-good fraction be $Y$ and let $c$ be the fraction of bad units detected by the specified test. Assume no good unit is rejected and no repair occurs. Passing units form fraction $Y+(1-Y)(1-c)$; escaping bad units form fraction $(1-Y)(1-c)$. The bad fraction among shipped passing units is their ratio. For $Y=0.9$ and $c=0.5$, it is $0.05/0.95\approx5.26\%$. The denominator is the passing population, not all manufactured units. Here $c$ is an assumed bad-unit detection probability; it must not be silently replaced by a modeled stuck-at coverage percentage.
+**Deriving outgoing defect level.** Let the manufactured-good fraction be $Y$ and let $c$ be the fraction of bad units detected by the specified test. Assume no good unit is rejected and no repair occurs. Passing units form fraction $Y+(1-Y)(1-c)$; escaping bad units form fraction $(1-Y)(1-c)$. The bad fraction among shipped passing units is their ratio. For $Y=0.9$ and $c=0.5$, it is $0.05/0.95\approx0.0526$, or about 5.26%. The denominator is the passing population, not all manufactured units. Here $c$ is an assumed bad-unit detection probability; it must not be silently replaced by a modeled stuck-at coverage percentage.
 
 ## Lesson 09: Overview of VLSI Design Flow VI — From layout to chip
 

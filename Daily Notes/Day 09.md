@@ -416,7 +416,7 @@ For an **independent teaching example**, assume two equally sized $200\times200\
 | A | $8000\ \mu\mathrm{m}^2$ | 20% | $4000\ \mu\mathrm{m}^2$ |
 | B | $20{,}000\ \mu\mathrm{m}^2$ | 50% | Zero |
 
-The combined average is $28{,}000/80{,}000=35\%$, yet window A fails the assumed local rule. Adding $4000\ \mu\mathrm{m}^2$ of **legal** fill to A reaches 30%; adding it only to B leaves A's deficiency untouched. Real windows can overlap and include exclusions, minimum/maximum limits and spacing constraints. The example's local 30% requirement is an assumption, not a transcription of GF180MCU's complete local/global density rules.
+The combined average is $28{,}000/80{,}000=0.35$, or 35%, yet window A fails the assumed local rule. Adding $4000\ \mu\mathrm{m}^2$ of **legal** fill to A reaches 30%; adding it only to B leaves A's deficiency untouched. Real windows can overlap and include exclusions, minimum/maximum limits and spacing constraints. The example's local 30% requirement is an assumption, not a transcription of GF180MCU's complete local/global density rules.
 
 Metal fill and standard-cell filler instances solve different problems. Metal fill adds layout shapes for pattern-density requirements; row fillers supply the library's required physical continuity between placed cells. Neither term means arbitrary functional gates should be added. Fill near a signal also changes its capacitance, linking the page's manufacturing question directly to the need for final-geometry extraction and timing analysis.
 
