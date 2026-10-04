@@ -2,14 +2,16 @@
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 import hashlib, json, re, subprocess, sys, unicodedata
+
+HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE / 'vendor'))
 from pypdf import PdfReader
 import pdfplumber
 
-HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 QA = HERE / 'qa/references'
-POPPLER = Path('C:/Users/kapil/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/poppler/Library/bin/pdftoppm.exe')
-sys.path.insert(0, str(HERE / 'vendor'))
+from runtime import pdftoppm
+POPPLER = pdftoppm()
 from markdown_it import MarkdownIt
 
 def normalized(value):

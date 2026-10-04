@@ -5,7 +5,7 @@ import re, tempfile, subprocess, shutil, json
 from fractions import Fraction
 import tkinter
 
-ROOT=Path(__file__).resolve().parents[2]
+ROOT=Path(__file__).resolve().parents[2]/'Daily Notes'
 HERE=Path(__file__).resolve().parent
 iverilog=shutil.which('iverilog') or 'C:/iverilog/bin/iverilog.exe'
 vvp=shutil.which('vvp') or 'C:/iverilog/bin/vvp.exe'

@@ -1,0 +1,719 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-10-04",
+  "readable_pages": 128,
+  "originals": [
+    {
+      "source": "Part 1",
+      "path": "Resources/sources/handwritten/Part-1-original.pdf",
+      "pages": 24,
+      "sha256": "08ff55a0e562b06c1d2316d3d6bfb7b86eda8dc01c9d05489f277e68cb12beb8",
+      "local_archive": false,
+      "page_images": [
+        {
+          "pdf_page": 1,
+          "path": "Resources/sources/handwritten/part1/page-01.jpg",
+          "sha256": "d3b89719ad7f4000c803a6f90de71f792ebde2fd4c7ef96d161e0a55bf6b7204"
+        },
+        {
+          "pdf_page": 2,
+          "path": "Resources/sources/handwritten/part1/page-02.jpg",
+          "sha256": "606971b046350309e7bce13b5b95e0e18551aa1a94a35f3e66405661206ceeda"
+        },
+        {
+          "pdf_page": 3,
+          "path": "Resources/sources/handwritten/part1/page-03.jpg",
+          "sha256": "8a9d92fc80752f67e87a767694e5daf996111c76503436390b8b771b79a6ddb5"
+        },
+        {
+          "pdf_page": 4,
+          "path": "Resources/sources/handwritten/part1/page-04.jpg",
+          "sha256": "7eb7ffcb8ecf99069e61d0458812b28bbe3ab1255d09f7408cc565fe65804394"
+        },
+        {
+          "pdf_page": 5,
+          "path": "Resources/sources/handwritten/part1/page-05.jpg",
+          "sha256": "89f0893ee44d0cb55ab3a9f1d0d1036162de795531e16953edb179cb49f8d71c"
+        },
+        {
+          "pdf_page": 6,
+          "path": "Resources/sources/handwritten/part1/page-06.jpg",
+          "sha256": "161b9fb4a734d5249b6a68f67653678803bf96c18b388a3c27ed48fd7d491de7"
+        },
+        {
+          "pdf_page": 7,
+          "path": "Resources/sources/handwritten/part1/page-07.jpg",
+          "sha256": "922eb6d36a787a48fdc1cf250faaf13306f25270fadbfd4bd613716431246490"
+        },
+        {
+          "pdf_page": 8,
+          "path": "Resources/sources/handwritten/part1/page-08.jpg",
+          "sha256": "e96b9b74600c175de2542adb94592f86e5294c5fab38c1e3794952e1bf278a69"
+        },
+        {
+          "pdf_page": 9,
+          "path": "Resources/sources/handwritten/part1/page-09.jpg",
+          "sha256": "944384827d1e2a310d8353931047d0e6eaf51ed4fb8331ed6c22583681222d7e"
+        },
+        {
+          "pdf_page": 10,
+          "path": "Resources/sources/handwritten/part1/page-10.jpg",
+          "sha256": "23e5dcb0ac3c04613ff3713eecfdc89685abcc6c6e8d3b3e6caacf6a4beb273e"
+        },
+        {
+          "pdf_page": 11,
+          "path": "Resources/sources/handwritten/part1/page-11.jpg",
+          "sha256": "9f3b00b393846a37ac3609549a3e1386972e1e2881b8e9e65bd72fd7df61aba3"
+        },
+        {
+          "pdf_page": 12,
+          "path": "Resources/sources/handwritten/part1/page-12.jpg",
+          "sha256": "0a25ffcd7712177dfcf46117276c4eea28c3ce70ad87e09d9caf5e18b3ce2a9e"
+        },
+        {
+          "pdf_page": 13,
+          "path": "Resources/sources/handwritten/part1/page-13.jpg",
+          "sha256": "f5acb1c733ee835b838f203ab03ebb5a193b00d31de856e71c0bc0623f748e60"
+        },
+        {
+          "pdf_page": 14,
+          "path": "Resources/sources/handwritten/part1/page-14.jpg",
+          "sha256": "2b5d07324e0ab874b187e218462ba5ecbd7964ba525cc384e59a77218d59c390"
+        },
+        {
+          "pdf_page": 15,
+          "path": "Resources/sources/handwritten/part1/page-15.jpg",
+          "sha256": "2307413c501b94f33b260260a2162c9030f812e318c71ea78341d988a22a5ebf"
+        },
+        {
+          "pdf_page": 16,
+          "path": "Resources/sources/handwritten/part1/page-16.jpg",
+          "sha256": "c7c33d0b89c7a9329425b4d2d7dbbecc426f28eda10b687f4b4729ccb0d109bf"
+        },
+        {
+          "pdf_page": 17,
+          "path": "Resources/sources/handwritten/part1/page-17.jpg",
+          "sha256": "3af5b2f94f49d6e632eabdb059b40cee6c1fa96f041b93d6b0c7f161664bedda"
+        },
+        {
+          "pdf_page": 18,
+          "path": "Resources/sources/handwritten/part1/page-18.jpg",
+          "sha256": "05c0813eee391af817c94930140ee2ed884701b0ada5120145163389ba414304"
+        },
+        {
+          "pdf_page": 19,
+          "path": "Resources/sources/handwritten/part1/page-19.jpg",
+          "sha256": "ee2a16151e67ccb1699ee7fadd6ead013857b2d4422521cd793631a995f54cb0"
+        },
+        {
+          "pdf_page": 20,
+          "path": "Resources/sources/handwritten/part1/page-20.jpg",
+          "sha256": "fd0aece8a757cf0df61f7129ce15383351e4a5d68fbbae5cd080bf1204e92e51"
+        },
+        {
+          "pdf_page": 21,
+          "path": "Resources/sources/handwritten/part1/page-21.jpg",
+          "sha256": "835bf7f2d8b56956c808b6a1a0fc4e5ae84d088b98865ec3a05a5547f2d60d37"
+        },
+        {
+          "pdf_page": 22,
+          "path": "Resources/sources/handwritten/part1/page-22.jpg",
+          "sha256": "c6f37ca87673a2087c2b280ec30ca8bbc06c55c6ab57c4d69fe4e05c810a286d"
+        },
+        {
+          "pdf_page": 23,
+          "path": "Resources/sources/handwritten/part1/page-23.jpg",
+          "sha256": "db75af79af1f8a9aa7daeff6293b7da370263a78f08b392f882cd60c9f2dce8e"
+        },
+        {
+          "pdf_page": 24,
+          "path": "Resources/sources/handwritten/part1/page-24.jpg",
+          "sha256": "2ce31a73f4f1564e36bd1a416531cd3c75a1d6bfbccef04aa377cd929bd6a802"
+        }
+      ]
+    },
+    {
+      "source": "Part 2",
+      "path": "Resources/sources/handwritten/Part-2-original.pdf",
+      "pages": 4,
+      "sha256": "06fcef22819d31ebd2b191f1d8b7bf8a2f7fe244e07c21bb6587d5e3f3c930ff",
+      "local_archive": false,
+      "page_images": [
+        {
+          "pdf_page": 1,
+          "path": "Resources/sources/handwritten/scan/page-01.jpg",
+          "sha256": "1d266351883919254a45dddb5eb909f25520a0ee2529f266a08ce4193db8e828"
+        },
+        {
+          "pdf_page": 2,
+          "path": "Resources/sources/handwritten/scan/page-02.jpg",
+          "sha256": "8f200c6393a0b98a38b5cb40e652428ce7ae79648c2421f8af22f33e7e74315c"
+        },
+        {
+          "pdf_page": 3,
+          "path": "Resources/sources/handwritten/scan/page-03.jpg",
+          "sha256": "2b49d43d075991929b5603fadd732b698dfef563c48580186bf87adc21ad76ff"
+        },
+        {
+          "pdf_page": 4,
+          "path": "Resources/sources/handwritten/scan/page-04.jpg",
+          "sha256": "37583d9a2cdf7b9f02a524e9b777c5b289d3099e3dfbddb10438a30e4483c814"
+        }
+      ]
+    },
+    {
+      "source": "Scan A",
+      "path": "Resources/Data/Scan-A-Simulation-Synthesis-Logic-and-Formal.pdf",
+      "pages": 21,
+      "sha256": "bf001d0d872d6cd702aa9f682ac5d94fbad3aa2847baf1cb987759c60e233236",
+      "local_archive": true,
+      "page_images": [
+        {
+          "pdf_page": 1,
+          "path": "Resources/sources/handwritten/scan-a/h01.jpg",
+          "sha256": "a7fb6ffd99f14c0f6c30bfe93b4af4fa9904c0c1fb83f9c929330b9db431152c"
+        },
+        {
+          "pdf_page": 2,
+          "path": "Resources/sources/handwritten/scan-a/h02.jpg",
+          "sha256": "1ce3a85bb2a082c37b833fe9728e786217d272013885e6c5622c338473c35ca1"
+        },
+        {
+          "pdf_page": 3,
+          "path": "Resources/sources/handwritten/scan-a/h03.jpg",
+          "sha256": "32c9711d53c2f3e331708595ded7809ed60f98eb171692984edba6e4bab02917"
+        },
+        {
+          "pdf_page": 4,
+          "path": "Resources/sources/handwritten/scan-a/h04.jpg",
+          "sha256": "49734802ecef237e246dbab4d3aa2fdcdca0bfa77452ec86ddfd7fc828eb755a"
+        },
+        {
+          "pdf_page": 5,
+          "path": "Resources/sources/handwritten/scan-a/h05.jpg",
+          "sha256": "bbdfd44e853b6f15fcddc17b1141fee4e02bba14c1cb30aa187cc0e005096c44"
+        },
+        {
+          "pdf_page": 6,
+          "path": "Resources/sources/handwritten/scan-a/h06.jpg",
+          "sha256": "7021186cfe30cf49943d716553bfff853a09dc2cf80826d6df86e7bdfdf9d791"
+        },
+        {
+          "pdf_page": 7,
+          "path": "Resources/sources/handwritten/scan-a/h07.jpg",
+          "sha256": "1f0d6e351b125fa60d789a03c11f30ecd5871ef5079f08de0c05b6bc993a6153"
+        },
+        {
+          "pdf_page": 8,
+          "path": "Resources/sources/handwritten/scan-a/h08.jpg",
+          "sha256": "9ca1dc64c87a47d224cb8b04a41c5b4c42528dd3a4aabaa7567b404f527554cc"
+        },
+        {
+          "pdf_page": 9,
+          "path": "Resources/sources/handwritten/scan-a/h09.jpg",
+          "sha256": "fd570305144a4a7ce207212ead592af3c7ab83edc2f5121f44b5bd91b4a6b6b0"
+        },
+        {
+          "pdf_page": 10,
+          "path": "Resources/sources/handwritten/scan-a/h10.jpg",
+          "sha256": "e2d30f13238df9cb3b090de4edca342385fa3f13cd947eaaa1e132cacf801d7e"
+        },
+        {
+          "pdf_page": 11,
+          "path": "Resources/sources/handwritten/scan-a/h11.jpg",
+          "sha256": "e447aadee024ba74b2886c65bac1ed72038408d7c518d22fc8af0e84da9e6d04"
+        },
+        {
+          "pdf_page": 12,
+          "path": "Resources/sources/handwritten/scan-a/h12.jpg",
+          "sha256": "4279f3c06a297dcfa151313c5fae800763dc1a344ebb620466d3e19c1e9dd855"
+        },
+        {
+          "pdf_page": 13,
+          "path": "Resources/sources/handwritten/scan-a/h13.jpg",
+          "sha256": "a6766b199cffa3c9a8a244ff68175626d41ba172f437f52733c080eb9c66aa42"
+        },
+        {
+          "pdf_page": 14,
+          "path": "Resources/sources/handwritten/scan-a/h14.jpg",
+          "sha256": "ec3b9faf2d65496da8063dc3ea235e29903ccd8c1d450316f0bcbe3d2c1deb55"
+        },
+        {
+          "pdf_page": 15,
+          "path": "Resources/sources/handwritten/scan-a/h15.jpg",
+          "sha256": "8ee254a4aaa76e4ab2928070449d36a429872967fdde29094685a7c44dc7e9cf"
+        },
+        {
+          "pdf_page": 16,
+          "path": "Resources/sources/handwritten/scan-a/h16.jpg",
+          "sha256": "d8a7a51ca74171b88103bcda1e71af93913b33bc830b83d44a0120b763619b72"
+        },
+        {
+          "pdf_page": 17,
+          "path": "Resources/sources/handwritten/scan-a/h17.jpg",
+          "sha256": "e52cd350755dfe7ef119dd851578ad653960de369d2c45af0d9aaa8ceafdc8c8"
+        },
+        {
+          "pdf_page": 18,
+          "path": "Resources/sources/handwritten/scan-a/h18.jpg",
+          "sha256": "6c612c5a094a27d8bf0368d4dc36241b0b78c7b8823d0ec85acee67c7d0dfcb8"
+        },
+        {
+          "pdf_page": 19,
+          "path": "Resources/sources/handwritten/scan-a/h19.jpg",
+          "sha256": "3092958e8a404664dc5b3325f5b78f8e2172b240645424f53fe283baaab45d93"
+        },
+        {
+          "pdf_page": 20,
+          "path": "Resources/sources/handwritten/scan-a/h20.jpg",
+          "sha256": "fa5c245e54b4754154a0b3618fa2e8190ee6c2c91e115d8367feaedb50e1f824"
+        },
+        {
+          "pdf_page": 21,
+          "path": "Resources/sources/handwritten/scan-a/h21.jpg",
+          "sha256": "bb58f7666df02b27963768b83a51cfe7de144eb7694600b2e72d281b07311c74"
+        }
+      ]
+    },
+    {
+      "source": "Scan B",
+      "path": "Resources/Data/Scan-B-Timing-and-Constraints.pdf",
+      "pages": 11,
+      "sha256": "1eec560f08c0aac84d03207de1da6e9042cb7fbe786eabdfce68e3421c94d81e",
+      "local_archive": true,
+      "page_images": [
+        {
+          "pdf_page": 1,
+          "path": "Resources/sources/handwritten/scan-b/h01.jpg",
+          "sha256": "fb84d81164e365378ffd1bfc27857f063cf03a28302839d1a48d7a59fbaa4128"
+        },
+        {
+          "pdf_page": 2,
+          "path": "Resources/sources/handwritten/scan-b/h02.jpg",
+          "sha256": "4cb67cbe61d04ef9ba1acee6b138d13a5a99bf8827de4d51b0696adbdd019ca5"
+        },
+        {
+          "pdf_page": 3,
+          "path": "Resources/sources/handwritten/scan-b/h03.jpg",
+          "sha256": "8651b0db73c8a2c313113b38804008ed5ddb0652e547a147d539621adab08e1c"
+        },
+        {
+          "pdf_page": 4,
+          "path": "Resources/sources/handwritten/scan-b/h04.jpg",
+          "sha256": "3a563f56dffb19b7f4cbf406cad179c30748b51267daf7b3fb66a80068de6e23"
+        },
+        {
+          "pdf_page": 5,
+          "path": "Resources/sources/handwritten/scan-b/h05.jpg",
+          "sha256": "84affb8e91b812510cb6d75adc7aed3bdf35992d19746e47d8044ead49f74698"
+        },
+        {
+          "pdf_page": 6,
+          "path": "Resources/sources/handwritten/scan-b/h06.jpg",
+          "sha256": "524d8ba7089b85d5e25196f923710f4a6d56f490819b905a8ea80697c5fbcd75"
+        },
+        {
+          "pdf_page": 7,
+          "path": "Resources/sources/handwritten/scan-b/h07.jpg",
+          "sha256": "70ac2125977f8a461f5fcaacec1bfd9e748811f11ed010b5f5721bf023f475a4"
+        },
+        {
+          "pdf_page": 8,
+          "path": "Resources/sources/handwritten/scan-b/h08.jpg",
+          "sha256": "255b9c04a7bfc1936fc74bf86052315346e910be295058a46e7a9366e6c1aa04"
+        },
+        {
+          "pdf_page": 9,
+          "path": "Resources/sources/handwritten/scan-b/h09.jpg",
+          "sha256": "3fcf267196ea3a60fa6742a90cee9ba0a08e44e917652bacaf6bee4ea8c07fb8"
+        },
+        {
+          "pdf_page": 10,
+          "path": "Resources/sources/handwritten/scan-b/h10.jpg",
+          "sha256": "ea6342156507f6c5ef4d053065067fe225f000f4098d41646de6f32c2d528c2d"
+        },
+        {
+          "pdf_page": 11,
+          "path": "Resources/sources/handwritten/scan-b/h11.jpg",
+          "sha256": "29b81dcbc88aef924ddb93822f7d00c2bd4fd60e9c02cc802822664de894b97b"
+        }
+      ]
+    },
+    {
+      "source": "Scan C",
+      "path": "Resources/Data/Scan-C-Constraints-Mapping-Power-and-DFT.pdf",
+      "pages": 24,
+      "sha256": "722c22c77e07903c846465465c86db7d7836705770838344311c526c461c1fb0",
+      "local_archive": true,
+      "page_images": [
+        {
+          "pdf_page": 1,
+          "path": "Resources/sources/handwritten/scan-c/h01.jpg",
+          "sha256": "b451e0ac28e30d8656e3e1e282a8d629fa9e934dab8a3e7be3632dab126605ef"
+        },
+        {
+          "pdf_page": 2,
+          "path": "Resources/sources/handwritten/scan-c/h02.jpg",
+          "sha256": "51fd1c327d20c9d1b60c1cf4560ad15503cbcafaa32de6a893b72962f092148c"
+        },
+        {
+          "pdf_page": 3,
+          "path": "Resources/sources/handwritten/scan-c/h03.jpg",
+          "sha256": "f1187b69498bf20b0b34d1165a43051c50fe397aa2fd5ddb5602ce0495b34596"
+        },
+        {
+          "pdf_page": 4,
+          "path": "Resources/sources/handwritten/scan-c/h04.jpg",
+          "sha256": "78b1a00e28889f47f57f2530c3dd2349b7125031aaf81a479e83bdf683c263b2"
+        },
+        {
+          "pdf_page": 5,
+          "path": "Resources/sources/handwritten/scan-c/h05.jpg",
+          "sha256": "806adf37530824cbaf8c615e6d1e401b0e89bd2db5ed961c8b7754900083b71a"
+        },
+        {
+          "pdf_page": 6,
+          "path": "Resources/sources/handwritten/scan-c/h06.jpg",
+          "sha256": "5fff65bcfbf7fb567ad1964d8a3833d66bf077d746159e8747e22c4478431025"
+        },
+        {
+          "pdf_page": 7,
+          "path": "Resources/sources/handwritten/scan-c/h07.jpg",
+          "sha256": "9fa5c1daa1a98c18af76b5ea6f41821af091c9bed210a1004e228a397ceb4607"
+        },
+        {
+          "pdf_page": 8,
+          "path": "Resources/sources/handwritten/scan-c/h08.jpg",
+          "sha256": "a64ce0de8d83da8d7ce2cf2ba9fbc19f975838f97dabeadf13fc20d48f872295"
+        },
+        {
+          "pdf_page": 9,
+          "path": "Resources/sources/handwritten/scan-c/h09.jpg",
+          "sha256": "54374ad430005907e50092fa901c46aa5c7e09438a0af056cb4f919eaade091d"
+        },
+        {
+          "pdf_page": 10,
+          "path": "Resources/sources/handwritten/scan-c/h10.jpg",
+          "sha256": "bf6965317cb38cf528481b71dbec9b954aea114b764534aa1ec8de7350d31408"
+        },
+        {
+          "pdf_page": 11,
+          "path": "Resources/sources/handwritten/scan-c/h11.jpg",
+          "sha256": "cffe35b88d06fca91dfb68b26bbd6a9a41ea3dfc7befb4eefad00efe04e717c6"
+        },
+        {
+          "pdf_page": 12,
+          "path": "Resources/sources/handwritten/scan-c/h12.jpg",
+          "sha256": "a1dbf6fcbe5bb20fd766d3a8aa011cfe445510d859544e96e86fb0c088baf2ae"
+        },
+        {
+          "pdf_page": 13,
+          "path": "Resources/sources/handwritten/scan-c/h13.jpg",
+          "sha256": "0ef85f80be1b989be836265b7b4eceeb2c112156e25dba745f28b28e1f5eb246"
+        },
+        {
+          "pdf_page": 14,
+          "path": "Resources/sources/handwritten/scan-c/h14.jpg",
+          "sha256": "6ae3f3887bfd66a4e6a7e5235b9bf2601eddf9d0a5bb5f4c4cd939df4a47dbd5"
+        },
+        {
+          "pdf_page": 15,
+          "path": "Resources/sources/handwritten/scan-c/h15.jpg",
+          "sha256": "47b56991ca788f07802586d5f488f69d4fdab00c8c232b8efc37a0daddf133d7"
+        },
+        {
+          "pdf_page": 16,
+          "path": "Resources/sources/handwritten/scan-c/h16.jpg",
+          "sha256": "b53495e850f99f5bf52898bcfc99d911fdf925645055745ac305d3076049b31a"
+        },
+        {
+          "pdf_page": 17,
+          "path": "Resources/sources/handwritten/scan-c/h17.jpg",
+          "sha256": "7958f84333eb9c283ef97088723dd3b347a26fa596ae10cdb07d8e1b91dee913"
+        },
+        {
+          "pdf_page": 18,
+          "path": "Resources/sources/handwritten/scan-c/h18.jpg",
+          "sha256": "2ea8ea66b5b4c22f458922c5573046b00e1acca740dfd7d1923a257f668f24d2"
+        },
+        {
+          "pdf_page": 19,
+          "path": "Resources/sources/handwritten/scan-c/h19.jpg",
+          "sha256": "f1e779fa514085490503b2f1984ce5be10f58c7b85e64e1c3d0f43bfd8a64806"
+        },
+        {
+          "pdf_page": 20,
+          "path": "Resources/sources/handwritten/scan-c/h20.jpg",
+          "sha256": "b73ec52f1c91f1d250cba2bf3831cd6dd0cd0eac40037ea6dec144934e820cae"
+        },
+        {
+          "pdf_page": 21,
+          "path": "Resources/sources/handwritten/scan-c/h21.jpg",
+          "sha256": "6de1fed82997b27950f25e44aec1d8a1b9f52440171acaf33157264a738d3b08"
+        },
+        {
+          "pdf_page": 22,
+          "path": "Resources/sources/handwritten/scan-c/h22.jpg",
+          "sha256": "aaae2a1f9301fa5445bc62e01dd22eaaccea3388f8fa84f5fd7c4e0bf0e497a8"
+        },
+        {
+          "pdf_page": 23,
+          "path": "Resources/sources/handwritten/scan-c/h23.jpg",
+          "sha256": "06c07f9dc65a7be0e734a8374dea4cd233e4cf5d0e3c32655b08c6e798963090"
+        },
+        {
+          "pdf_page": 24,
+          "path": "Resources/sources/handwritten/scan-c/h24.jpg",
+          "sha256": "403e474118cf2302ab5d687238f8962c4dd3a70b6b0af02464cbced77102633f"
+        }
+      ]
+    },
+    {
+      "source": "Scan D",
+      "path": "Resources/Data/Scan-D-Scan-ATPG-BIST-and-Physical-Design.pdf",
+      "pages": 24,
+      "sha256": "52f7cc6bbbac3541d192a10854a8040a6410286a8b32dd371f60aed85ed11d18",
+      "local_archive": true,
+      "page_images": [
+        {
+          "pdf_page": 1,
+          "path": "Resources/sources/handwritten/scan-d/h01.jpg",
+          "sha256": "5a79e21f37836977784552359cd2774be5e362bb97997165d3f24aa1b1e44b70"
+        },
+        {
+          "pdf_page": 2,
+          "path": "Resources/sources/handwritten/scan-d/h02.jpg",
+          "sha256": "694c31e9189641999b8705f9af38b149dafc662c0ad399477b884b600751fdbf"
+        },
+        {
+          "pdf_page": 3,
+          "path": "Resources/sources/handwritten/scan-d/h03.jpg",
+          "sha256": "cf24c646c6640b9b6f46eb2f64f2adeb761346fba18dfe6866aa04dc14a8f546"
+        },
+        {
+          "pdf_page": 4,
+          "path": "Resources/sources/handwritten/scan-d/h04.jpg",
+          "sha256": "4b39165d721f7b55bb1626c45aa7f3f31ccd31b1157b46d88706ee0574aa8471"
+        },
+        {
+          "pdf_page": 5,
+          "path": "Resources/sources/handwritten/scan-d/h05.jpg",
+          "sha256": "d5b22aa3c8d38434abd9de5e17be56b88f38d3f59b0e4d3ba49de5b9273c6acf"
+        },
+        {
+          "pdf_page": 6,
+          "path": "Resources/sources/handwritten/scan-d/h06.jpg",
+          "sha256": "3c00fe4530d0b7d31add0b58fe159770b10d45ca1055ba1c55c823345202f758"
+        },
+        {
+          "pdf_page": 7,
+          "path": "Resources/sources/handwritten/scan-d/h07.jpg",
+          "sha256": "15c538317d404db8fd91946e0f998d341b568af6028c607d20a785608afa8f8d"
+        },
+        {
+          "pdf_page": 8,
+          "path": "Resources/sources/handwritten/scan-d/h08.jpg",
+          "sha256": "c68e8dc8e24595feb90b2999a0a081e2fd41178abc0183318a47707215002112"
+        },
+        {
+          "pdf_page": 9,
+          "path": "Resources/sources/handwritten/scan-d/h09.jpg",
+          "sha256": "7027e8d76611b642b2899271f5c4462893ed41d501faec96a8accade0867d585"
+        },
+        {
+          "pdf_page": 10,
+          "path": "Resources/sources/handwritten/scan-d/h10.jpg",
+          "sha256": "5145443aa7b68bffdd06b3c0fe0c8f567d2cc6aef6eec18d72dd9cc423d588de"
+        },
+        {
+          "pdf_page": 11,
+          "path": "Resources/sources/handwritten/scan-d/h11.jpg",
+          "sha256": "0ce0a660f678c309366d56e1b0bf6e234da806e30a152f159b1c47effc3385aa"
+        },
+        {
+          "pdf_page": 12,
+          "path": "Resources/sources/handwritten/scan-d/h12.jpg",
+          "sha256": "8b01a2cd7e8b34ef44b6596e72e559f16b12849266824da23f88f8d9194333b5"
+        },
+        {
+          "pdf_page": 13,
+          "path": "Resources/sources/handwritten/scan-d/h13.jpg",
+          "sha256": "8c664f5d48e0a4ead0cdad52537bbab6b8bd5bba5d24a2175b0440fdc6475c79"
+        },
+        {
+          "pdf_page": 14,
+          "path": "Resources/sources/handwritten/scan-d/h14.jpg",
+          "sha256": "8af32696bef6884aee6f3537f76ca121ed91148f19f373c8fc25e9bb16660097"
+        },
+        {
+          "pdf_page": 15,
+          "path": "Resources/sources/handwritten/scan-d/h15.jpg",
+          "sha256": "17b989a2c3618f8aaf747113098f15ad747ec04530e6b73278c483ed2f4e95a1"
+        },
+        {
+          "pdf_page": 16,
+          "path": "Resources/sources/handwritten/scan-d/h16.jpg",
+          "sha256": "1bd2ad62ca556fe97b003755519ad6054b4fdac9d67ca989d772cd1270c393cf"
+        },
+        {
+          "pdf_page": 17,
+          "path": "Resources/sources/handwritten/scan-d/h17.jpg",
+          "sha256": "2309edc19e0240380f967f3179ab0e6b64c35b580fbdddff8b9bb939323a3636"
+        },
+        {
+          "pdf_page": 18,
+          "path": "Resources/sources/handwritten/scan-d/h18.jpg",
+          "sha256": "6a8a089c2390599c0543cea4dc5ab2face10559179ba56557042077dc077afff"
+        },
+        {
+          "pdf_page": 19,
+          "path": "Resources/sources/handwritten/scan-d/h19.jpg",
+          "sha256": "dab40f2657d722de166c90ac47fa15f843c7bffffd7648661f7243b1b6ddcbf8"
+        },
+        {
+          "pdf_page": 20,
+          "path": "Resources/sources/handwritten/scan-d/h20.jpg",
+          "sha256": "3c5fe9f333a1546e5ad9ae4a28158d5a9c1f5c8d895263f0f119ff7d6b4cdd1a"
+        },
+        {
+          "pdf_page": 21,
+          "path": "Resources/sources/handwritten/scan-d/h21.jpg",
+          "sha256": "a08790ddfbd03f133d0b5c59146392a0a59d034a74d3a948cd1c748f9e58e398"
+        },
+        {
+          "pdf_page": 22,
+          "path": "Resources/sources/handwritten/scan-d/h22.jpg",
+          "sha256": "019c5e6d8b17797b9a2902a77b5a56386cb16868a2371106010651449f293e4e"
+        },
+        {
+          "pdf_page": 23,
+          "path": "Resources/sources/handwritten/scan-d/h23.jpg",
+          "sha256": "a9903fe9f6af3e8402e3625231908afbb74b97962da5c17d9ec72420f4faf3f9"
+        },
+        {
+          "pdf_page": 24,
+          "path": "Resources/sources/handwritten/scan-d/h24.jpg",
+          "sha256": "fb74e75f1e33563102ab7263954f77565aedb35cdec875cb43458d24293bbf99"
+        }
+      ]
+    },
+    {
+      "source": "Scan E",
+      "path": "Resources/Data/Scan-E-Placement-CTS-Routing-and-Signoff.pdf",
+      "pages": 19,
+      "sha256": "2a3ebd4e05e4ee12fc03d0abea70fe1e36563429833079a215409c41f64e560f",
+      "local_archive": true,
+      "page_images": [
+        {
+          "pdf_page": 1,
+          "path": "Resources/sources/handwritten/scan-e/h01.jpg",
+          "sha256": "6788016d3186e8d2ed78d4f5bb62eaba32d04ee3518b4eda2adf827ede4bf350"
+        },
+        {
+          "pdf_page": 2,
+          "path": "Resources/sources/handwritten/scan-e/h02.jpg",
+          "sha256": "0acaa48b254fdb1d3d0ca5ca06b233426f7d29b072f8d2ecf4823291dd37d52d"
+        },
+        {
+          "pdf_page": 3,
+          "path": "Resources/sources/handwritten/scan-e/h03.jpg",
+          "sha256": "d8588a87fe5884624df6f6142a45e8fa6b682fb68df337abe1ad23afa4685c3c"
+        },
+        {
+          "pdf_page": 4,
+          "path": "Resources/sources/handwritten/scan-e/h04.jpg",
+          "sha256": "e23930a8589c364701189d8378867bc42c272321a32f719d8423453d7b7a25e9"
+        },
+        {
+          "pdf_page": 5,
+          "path": "Resources/sources/handwritten/scan-e/h05.jpg",
+          "sha256": "016389a659a36aeab851507da0fe8749e302bb68422bfdbbff286547666646ac"
+        },
+        {
+          "pdf_page": 6,
+          "path": "Resources/sources/handwritten/scan-e/h06.jpg",
+          "sha256": "d9fe2b23ac9065caa15405c63576974eae806acbdd83e90b85111909bac376b7"
+        },
+        {
+          "pdf_page": 7,
+          "path": "Resources/sources/handwritten/scan-e/h07.jpg",
+          "sha256": "6456239ef86335310853b07ad124cb7004c56eed550c29b84a04394866e58605"
+        },
+        {
+          "pdf_page": 8,
+          "path": "Resources/sources/handwritten/scan-e/h08.jpg",
+          "sha256": "37bf095e6b428a293c9ec1dce48853d89e50d7f6073c1031dbdfc96e155becd2"
+        },
+        {
+          "pdf_page": 9,
+          "path": "Resources/sources/handwritten/scan-e/h09.jpg",
+          "sha256": "35c57250e17e301c1a6b9dbba2dfb20def22a4f0893cc9899cfccd34dbb5403d"
+        },
+        {
+          "pdf_page": 10,
+          "path": "Resources/sources/handwritten/scan-e/h10.jpg",
+          "sha256": "746f2d6fbc527212307fa83de9120b765cee6d8bf2496fb67683898d043ff746"
+        },
+        {
+          "pdf_page": 11,
+          "path": "Resources/sources/handwritten/scan-e/h11.jpg",
+          "sha256": "b5ec53af6ee664785e7a39ffbd58e8db3b6a01532c3cdb66a194c76eb13c1fad"
+        },
+        {
+          "pdf_page": 12,
+          "path": "Resources/sources/handwritten/scan-e/h12.jpg",
+          "sha256": "2a8f8dd85c9e7dade1aedbb97dac454481c0a45972552474706cb2541af1de0a"
+        },
+        {
+          "pdf_page": 13,
+          "path": "Resources/sources/handwritten/scan-e/h13.jpg",
+          "sha256": "5059e75a1da85e06f6a320187a10cef27a1465ef002856d7f56870f644d682f7"
+        },
+        {
+          "pdf_page": 14,
+          "path": "Resources/sources/handwritten/scan-e/h14.jpg",
+          "sha256": "b2bed533d1e086c0d4bbfdfedbc3d56c86dc7ec9a1887e85e48b85b2f2139b7c"
+        },
+        {
+          "pdf_page": 15,
+          "path": "Resources/sources/handwritten/scan-e/h15.jpg",
+          "sha256": "372afcd8741045dbf29a081d600bc4672a81de3f3fba05da00b4b05aad36d46f"
+        },
+        {
+          "pdf_page": 16,
+          "path": "Resources/sources/handwritten/scan-e/h16.jpg",
+          "sha256": "28833cee4ae1b360e1ba2d7ba2e328f35d70b493008803141d66fabfdc122151"
+        },
+        {
+          "pdf_page": 17,
+          "path": "Resources/sources/handwritten/scan-e/h17.jpg",
+          "sha256": "76b8f6c2d8220c852054767d8ce0b1e29d0370db36985384a89a512aea28a214"
+        },
+        {
+          "pdf_page": 18,
+          "path": "Resources/sources/handwritten/scan-e/h18.jpg",
+          "sha256": "35dbb128321e83623c78cee48179484c7dcbf4b33482c04b1811d7ece629fcad"
+        },
+        {
+          "pdf_page": 19,
+          "path": "Resources/sources/handwritten/scan-e/h19.jpg",
+          "sha256": "47cc2fbf8199652b44a6eb70d66c367cefa8590e23b091c6fcb065c088ecd892"
+        }
+      ]
+    },
+    {
+      "source": "ATPG notebook",
+      "path": "Resources/Data/Notebook-ATPG-Backtracking-and-Redundant-Faults.pdf",
+      "pages": 1,
+      "sha256": "b05179551aa5b6f303ec99cc59d8d398408427ad9b2ec9d6a40b60c3023e44b5",
+      "local_archive": true,
+      "page_images": [
+        {
+          "pdf_page": 1,
+          "path": "Resources/sources/handwritten/notebook-atpg/h01.jpg",
+          "sha256": "2de07e4b26367f2e3280554a7028904e87ba8472615a792ceb4d04304404bb3c"
+        }
+      ]
+    }
+  ]
+}

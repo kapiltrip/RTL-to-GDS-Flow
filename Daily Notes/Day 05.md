@@ -1,6 +1,6 @@
 # Day 05: Equivalence, libraries and static timing analysis
 
-Lessons 25–30. Six-lesson study blocks; Day 06 remains partial through Constraints I.
+Lessons 25–30. Six-lesson study blocks; the full collection is complete through Week 12, Lesson 54.
 
 ## Day 05 index
 
@@ -235,6 +235,13 @@ Setup and hold requirements may be negative in characterized cells because inter
 
 **Recall check:** if T increases from 3 to 4 ns in the 1.7-versus-2 ns example, what happens? The setup margin increases by 1 ns; the same-edge hold violation remains -0.3 ns under the stated assumptions.
 
+#### Substitute a negative requirement without changing the check
+
+Take an illustrative cell with hold requirement -20 ps, launch clock arrival 0 ps, capture arrival 30 ps, and earliest clock-to-Q plus data delay 13 ps. Ignore uncertainty. The receiving hold threshold is $30+(-20)=10$ ps, so hold slack is 13-10=+3 ps. Setting the negative requirement to zero would instead impose 30 ps and incorrectly report -17 ps.
+
+The new data arrives before the capture pin's reference edge, yet after this characterized external hold boundary. That behavior reflects the cell's internal data/clock relationship; it does not license ignoring pulse width, setup, or the characterized range. A different cell's positive hold requirement cannot inherit this allowance.
+
+For setup, a requirement of -10 ps moves the latest allowed data arrival to ten ps after the relevant capture reference edge, under the analyzer's model and sign convention. Still substitute it into $\mathrm{required}=\mathrm{capture}-t_{su}$ and compare the correct latest arrival. Negative setup and hold values are signed model inputs. Their meaning remains relative to specified pin thresholds, transitions, slews and operating conditions.
 
 [Back to day index](#day-05-index)
 
@@ -367,6 +374,19 @@ A scenario that looks dominated can be omitted only if its coverage is establish
 Clock uncertainty can reserve budget for jitter and other explicitly modeled effects. Before clock-tree implementation, it may also include estimated skew. After propagated clock latencies are known, revise the skew estimate to avoid double counting, while retaining uncertainty that is still real. The “remove or lower margins later” statement needs this condition; it is not a general permission to reduce a signoff requirement.
 
 Global corner analysis captures coherent changes of the modeled operating condition. Local differences between cells and nets on the same die require on-chip variation modeling as well. Parallel execution of independent scenarios may reduce runtime, but it does not alter the checks or their required coverage.
+
+#### Use a scenario matrix to find different setup and hold failures
+
+Assume a 1 ns same-clock period, zero skew/uncertainty, setup 0.08 ns and hold 0.05 ns. The following authored scenarios provide **separate** minimum and maximum clock-to-Q-plus-data totals:
+
+| Scenario | Latest data total | Earliest data total | Setup slack | Hold slack |
+|---|---:|---:|---:|---:|
+| Slow functional | 0.95 ns | 0.10 ns | 1 - 0.08 - 0.95 = -0.03 ns | 0.10 - 0.05 = +0.05 ns |
+| Fast functional | 0.60 ns | 0.03 ns | 1 - 0.08 - 0.60 = +0.32 ns | 0.03 - 0.05 = -0.02 ns |
+
+The slow scenario identifies the setup failure; the fast scenario identifies the hold failure. Repairing one and rerunning only that scenario leaves the other failure unexamined. Lowering frequency helps this setup deadline but leaves the stated same-edge hold boundary intact.
+
+Actual scenarios also vary clock paths, requirements, slew and RC models. A scan-shift mode introduces another constraint set and cannot be inferred from either functional row. A scenario list is useful when it names the mode, clocks, library/RC models, exceptions and check types together, so the positive slack has a defined scope.
 
 ### B-08: Early/late derating and the inputs to STA
 

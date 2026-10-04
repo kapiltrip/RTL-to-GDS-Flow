@@ -1,6 +1,6 @@
 # Day 04: Multilevel optimization and formal verification
 
-Lessons 19–24. Six-lesson study blocks; Day 06 remains partial through Constraints I.
+Lessons 19–24. Six-lesson study blocks; the full collection is complete through Week 12, Lesson 54.
 
 ## Day 04 index
 
@@ -242,6 +242,15 @@ These counts are obtained by applying the two reduction rules, not by changing t
 
 The handwritten phrase “size grows as polynomial” is not a universal bound. ROBDD size can be exponential in the number of inputs. Many useful functions have compact graphs under suitable orders; finding and maintaining useful orders is a practical challenge. This qualification matters when explaining why another formal engine such as SAT may be preferable for some designs.
 
+#### Count how variable order changes an equality BDD
+
+Use an authored function that compares two two-bit words: f=1 exactly when A1=B1 and A0=B0. Count nonterminal nodes, without complemented edges, after applying both ROBDD reduction rules.
+
+For the interleaved order A1,B1,A0,B0, there is one A1 node, two possible B1 tests, one shared A0 node and two B0 tests: six nodes. A mismatch goes directly to zero; a matching pair lets the graph reuse the remainder. For the grouped order A1,A0,B1,B0, the graph must remember which of four A values to compare against B. Its levels have 1,2,4,2 nodes: nine in total.
+
+The difference is already visible for three-bit words: nine nodes with interleaving versus 21 with grouping under the same graph conventions. Both graphs represent the same function and are canonical **within their own fixed order**. Comparing their shapes across different orders is not an equivalence test.
+
+This is why the polynomial-size margin note on A-21 needs qualification. Good sharing depends on the function and order; the ROBDD data structure alone does not guarantee a small graph. The executable checker constructs and reduces the graphs from the equality truth function, rather than relying on these counts as assumptions.
 
 [Back to day index](#day-04-index)
 
@@ -405,5 +414,14 @@ A bug first appearing at cycle 20 is missed by a complete search only through cy
 
 Source: NPTEL Formal Verification III, lecture-material pages 4–16.
 
+#### See why induction sometimes needs a stronger invariant
+
+Consider a three-bit state register reset to zero. Its transition is q'=1 when q=0, and q'=0 for every other value. The reachable sequence is 0,1,0,1,..., so the property q<2 holds forever. BMC can check successively longer prefixes, but a finite sequence of passing bounds is not itself the proof.
+
+Here one-step induction succeeds: the base case has q=0; from either state satisfying q<2, the next state is again 0 or 1. Now change the transition only for unreachable q=2: let it go to q=3, and consider the weaker property q!=3. All reset-reachable traces still satisfy it. However, an induction step starting from an arbitrary state satisfying q!=3 may choose q=2 and reach 3. A failed induction step is therefore not necessarily a reachable counterexample.
+
+Strengthen the induction hypothesis with q<2, which excludes the unreachable state 2 and is preserved by the reachable transitions. Then q!=3 follows. The base check must establish the strengthening too; merely assuming it would change the model.
+
+Report which result you have: a reset-reachable counterexample, bounded absence of a counterexample, or an inductive proof with established invariants. A SAT assignment from an induction step has a different interpretation from a SAT trace constrained by reset and every preceding transition.
 
 [Back to day index](#day-04-index)

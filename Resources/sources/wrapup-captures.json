@@ -1,0 +1,496 @@
+[
+  {
+    "lesson": 47,
+    "id": "37Hf_q6IhAs",
+    "path": "Resources/images/Day 08/Lesson 47/01-lecture-frame.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-47-01-lecture-frame.jpg",
+    "caption": "Budget one complete cross-block transfer",
+    "time_seconds": 1331,
+    "duration": 3642.801,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1070,
+      "height": 602
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "91d86b0f1cb5cb85db32919cbbdcc86775cb53401dd6bacc4cfd5df9bf993d81",
+    "url": "https://www.youtube.com/watch?v=37Hf_q6IhAs&t=1331s"
+  },
+  {
+    "lesson": 48,
+    "id": "H2UHFlFTUoo",
+    "path": "Resources/images/Day 08/Lesson 48/01-lecture-frame.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-48-01-lecture-frame.jpg",
+    "caption": "A halo reserves pin-access space at macro corners",
+    "time_seconds": 1330,
+    "duration": 3092.561,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1070,
+      "height": 602
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "db2596874f60f4a8c50ce6af7f768290a4562ba250480feb841f609b038db38a",
+    "url": "https://www.youtube.com/watch?v=H2UHFlFTUoo&t=1330s"
+  },
+  {
+    "lesson": 50,
+    "id": "NWgkBBXXFKg",
+    "path": "Resources/images/Day 09/Lesson 50/01-lecture-frame.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-50-01-lecture-frame.jpg",
+    "caption": "A generated power grid still needs electrical analysis",
+    "time_seconds": 601,
+    "duration": 1043.561,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1058,
+      "height": 595
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "729d8518e0d1d1148c63dd058a1030856b5fc712415f56a0a6f4920a0fb35192",
+    "url": "https://www.youtube.com/watch?v=NWgkBBXXFKg&t=601s"
+  },
+  {
+    "lesson": 51,
+    "id": "BQHczZr4ONA",
+    "path": "Resources/images/Day 09/Lesson 51/01-lecture-frame.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-51-01-lecture-frame.jpg",
+    "caption": "Identify the clock boundary before measuring skew",
+    "time_seconds": 620,
+    "duration": 2907.681,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1058,
+      "height": 595
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "f35093cf5b60d43c5bbf6e37693871ee4bfc25be5db164db768facf2cd0a0d79",
+    "url": "https://www.youtube.com/watch?v=BQHczZr4ONA&t=620s"
+  },
+  {
+    "lesson": 52,
+    "id": "nsYhC5btQko",
+    "path": "Resources/images/Day 09/Lesson 52/01-lecture-frame.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-52-01-lecture-frame.jpg",
+    "caption": "A graph edge represents a limited physical resource",
+    "time_seconds": 1598,
+    "duration": 3883.041,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1058,
+      "height": 595
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "3a6cff43e4b41a38f92298962b1a75f1cf76028f2b793824a881048d428648a2",
+    "url": "https://www.youtube.com/watch?v=nsYhC5btQko&t=1598s"
+  },
+  {
+    "lesson": 53,
+    "id": "EKt-Ev3c_bE",
+    "path": "Resources/images/Day 09/Lesson 53/01-lecture-frame.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-53-01-lecture-frame.jpg",
+    "caption": "LVS compares two independently formed circuit descriptions",
+    "time_seconds": 1601,
+    "duration": 2670.041,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1058,
+      "height": 595
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "2c44200dc45f26adcef231c74647b27fedbe0beb38c4e2a2ded43dfde1542386",
+    "url": "https://www.youtube.com/watch?v=EKt-Ev3c_bE&t=1601s"
+  },
+  {
+    "lesson": 54,
+    "id": "78O_COvyqAw",
+    "path": "Resources/images/Day 09/Lesson 54/01-lecture-frame.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-54-01-lecture-frame.jpg",
+    "caption": "The script records routing evidence and checkpoints",
+    "time_seconds": 500,
+    "duration": 811.561,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1058,
+      "height": 595
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "22bd6638b68f565ffc37ce2ce31da0516ad8e32d0316114a2b8214e1b8c83878",
+    "url": "https://www.youtube.com/watch?v=78O_COvyqAw&t=500s"
+  },
+  {
+    "lesson": 33,
+    "id": "psrHHK7GFiY",
+    "path": "Resources/images/Day 06/Lesson 33/01-lecture-frame.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-33-01-lecture-frame.jpg",
+    "caption": "Translate the external receiver into an output requirement",
+    "time_seconds": 1201,
+    "duration": 2334.281,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1058,
+      "height": 595
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "d3466daa4a4af423d3eb5afd617bfe8d0d2a9ed523bcd7908ff82d908195439a",
+    "url": "https://www.youtube.com/watch?v=psrHHK7GFiY&t=1201s"
+  },
+  {
+    "lesson": 34,
+    "id": "ooOZagskglo",
+    "path": "Resources/images/Day 06/Lesson 34/01-lecture-frame.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-34-01-lecture-frame.jpg",
+    "caption": "Count every mapped cell and every relevant input arc",
+    "time_seconds": 851,
+    "duration": 1835.901,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1058,
+      "height": 595
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "d82748f054d916662d2c681ba774724e98bb2638fb9f25b7cd35f650434bfa71",
+    "url": "https://www.youtube.com/watch?v=ooOZagskglo&t=851s"
+  },
+  {
+    "lesson": 36,
+    "id": "u_XXFBwTXRk",
+    "path": "Resources/images/Day 06/Lesson 36/01-lecture-frame.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-36-01-lecture-frame.jpg",
+    "caption": "Recompute the actual tutorial timing report",
+    "time_seconds": 664,
+    "duration": 1084.921,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1058,
+      "height": 595
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "4e16c23fba66d50a782807915ff9b76a4f6fc784be407d0cbbcfa12c95a2a465",
+    "url": "https://www.youtube.com/watch?v=u_XXFBwTXRk&t=664s"
+  },
+  {
+    "lesson": 37,
+    "id": "u3--39QdD2Y",
+    "path": "Resources/images/Day 07/Lesson 37/01-lecture-frame.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-37-01-lecture-frame.jpg",
+    "caption": "Charge the wire and every receiving pin",
+    "time_seconds": 879,
+    "duration": 2835.121,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1058,
+      "height": 595
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "d8339fa4533debe1fdb8a102e54f7fddb219c1a6264b00e133d2c012db4f36b9",
+    "url": "https://www.youtube.com/watch?v=u3--39QdD2Y&t=879s"
+  },
+  {
+    "lesson": 38,
+    "id": "-jYtXAHvoZM",
+    "path": "Resources/images/Day 07/Lesson 38/01-lecture-frame.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-38-01-lecture-frame.jpg",
+    "caption": "Keep the switch, retention and isolation supplies distinct",
+    "time_seconds": 1533,
+    "duration": 2266.561,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1058,
+      "height": 595
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "7eb9aa7a3319abbb98c891cdc08f46f79efcccca6874a2f56e3dbb71545a89ba",
+    "url": "https://www.youtube.com/watch?v=-jYtXAHvoZM&t=1533s"
+  },
+  {
+    "lesson": 39,
+    "id": "1OoJG8CeFns",
+    "path": "Resources/images/Day 07/Lesson 39/01-lecture-frame.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-39-01-lecture-frame.jpg",
+    "caption": "A physical short becomes a testable logical model",
+    "time_seconds": 1172,
+    "duration": 3112.581,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1058,
+      "height": 595
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "aa42812eb93e79be9344801d39239c185eceadaed252ebe66971f8e0e84aa32f",
+    "url": "https://www.youtube.com/watch?v=1OoJG8CeFns&t=1172s"
+  },
+  {
+    "lesson": 40,
+    "id": "7fGJto2F8JU",
+    "path": "Resources/images/Day 07/Lesson 40/01-lecture-frame.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-40-01-lecture-frame.jpg",
+    "caption": "SE selects the value captured at the next clock edge",
+    "time_seconds": 707,
+    "duration": 2537.721,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1058,
+      "height": 595
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "660caf65c68feb7b85b4685fd76a54b4dd162a9f0722146001572967a9d1c1b3",
+    "url": "https://www.youtube.com/watch?v=7fGJto2F8JU&t=707s"
+  },
+  {
+    "lesson": 41,
+    "id": "ZHk9e0KpHUY",
+    "path": "Resources/images/Day 07/Lesson 41/01-lecture-frame.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-41-01-lecture-frame.jpg",
+    "caption": "Read the internal-energy table before multiplying by activity",
+    "time_seconds": 694,
+    "duration": 1068.921,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1058,
+      "height": 595
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "9b9a11968d01d1535a965a0ebf8aca70d6caa4db5b0c017b2b82e8440c04ed31",
+    "url": "https://www.youtube.com/watch?v=ZHk9e0KpHUY&t=694s"
+  },
+  {
+    "lesson": 42,
+    "id": "oOVaTWGkVy8",
+    "path": "Resources/images/Day 07/Lesson 42/01-lecture-frame.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-42-01-lecture-frame.jpg",
+    "caption": "Activation alone does not make a complete ATPG vector",
+    "time_seconds": 1702,
+    "duration": 2825.041,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1058,
+      "height": 595
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "c45f2e360066912839b25e47da7cdd797df9bdc2ad1b392ffeab9279f789fb5f",
+    "url": "https://www.youtube.com/watch?v=oOVaTWGkVy8&t=1702s"
+  },
+  {
+    "lesson": 43,
+    "id": "iT_lXRDUdZI",
+    "path": "Resources/images/Day 08/Lesson 43/01-lecture-frame.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-43-01-lecture-frame.jpg",
+    "caption": "Pseudorandom sequences are repeatable, not independent randomness",
+    "time_seconds": 1227,
+    "duration": 2726.901,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1058,
+      "height": 595
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "36726ccae14e16257e98db4ecc08efc9da9c627e6c8a9a1696600abdda3a836d",
+    "url": "https://www.youtube.com/watch?v=iT_lXRDUdZI&t=1227s"
+  },
+  {
+    "lesson": 44,
+    "id": "r0rianLiAg4",
+    "path": "Resources/images/Day 08/Lesson 44/01-lecture-frame.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-44-01-lecture-frame.jpg",
+    "caption": "A patterned mask selects where dopants enter",
+    "time_seconds": 762,
+    "duration": 3700.201,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1058,
+      "height": 595
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "bfd3250e176cf28935cb3c4527794e0882e8cefea58a3121b317fa4b79665cb8",
+    "url": "https://www.youtube.com/watch?v=r0rianLiAg4&t=762s"
+  },
+  {
+    "lesson": 45,
+    "id": "uIZ7hVuZGHA",
+    "path": "Resources/images/Day 08/Lesson 45/01-lecture-frame.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-45-01-lecture-frame.jpg",
+    "caption": "Glitch amplitude depends on the electrical environment",
+    "time_seconds": 1487,
+    "duration": 2208.401,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1058,
+      "height": 595
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "79d77b2ad6682e708e4337a9daf278ddad067593c21c6f6d4d153c91a17121b6",
+    "url": "https://www.youtube.com/watch?v=uIZ7hVuZGHA&t=1487s"
+  },
+  {
+    "lesson": 49,
+    "id": "-M6o03yNb78",
+    "path": "Resources/images/Day 09/Lesson 49/01-lecture-frame.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-49-01-lecture-frame.jpg",
+    "caption": "Measure the box, then remember what it omits",
+    "time_seconds": 883,
+    "duration": 2598.521,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1058,
+      "height": 595
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "0af13b5e9955a3f9c3dbacd008a03735dbd66aaab7254998e9131a6767e7efb7",
+    "url": "https://www.youtube.com/watch?v=-M6o03yNb78&t=883s"
+  },
+  {
+    "lesson": 51,
+    "id": "BQHczZr4ONA",
+    "path": "Resources/images/Day 09/Lesson 51/03-useful-skew.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-51-03-useful-skew.jpg",
+    "caption": "Clock Tree Synthesis (CTS)",
+    "time_seconds": 2397,
+    "duration": 2907.681,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1058,
+      "height": 595
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "36222e792e5b9c657b9913ad305aa481a51b7bd2d8bb1d19048da61dc441e538",
+    "url": "https://www.youtube.com/watch?v=BQHczZr4ONA&t=2397s"
+  },
+  {
+    "lesson": 51,
+    "id": "BQHczZr4ONA",
+    "path": "Resources/images/Day 09/Lesson 51/02-clock-wire-buffers.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-51-02-clock-wire-buffers.jpg",
+    "caption": "Clock Tree Synthesis (CTS)",
+    "time_seconds": 737,
+    "duration": 2907.681,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1058,
+      "height": 595
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "f7772fbd9ff76216764e510ef4e2de65db839ab8f202935a7f81dbb26e563552",
+    "url": "https://www.youtube.com/watch?v=BQHczZr4ONA&t=737s"
+  },
+  {
+    "lesson": 52,
+    "id": "nsYhC5btQko",
+    "path": "Resources/images/Day 09/Lesson 52/02-detailed-routing-grid.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-52-02-detailed-routing-grid.jpg",
+    "caption": "Routing",
+    "time_seconds": 2806,
+    "duration": 3883.041,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1058,
+      "height": 595
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "313b00a370cbe1c906f7b00e79aee713c406634aa6e216dd2dbc8aa45ecb9d43",
+    "url": "https://www.youtube.com/watch?v=nsYhC5btQko&t=2806s"
+  },
+  {
+    "lesson": 54,
+    "id": "78O_COvyqAw",
+    "path": "Resources/images/Day 09/Lesson 54/02-routed-layout.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-54-02-routed-layout.jpg",
+    "caption": "Clock Tree Synthesis (CTS) and Routing",
+    "time_seconds": 694,
+    "duration": 811.561,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1058,
+      "height": 595
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "2ee79f1ddb0c6d782015683323ea4f522a2fc4187db048a2e3c69d6cee9b107f",
+    "url": "https://www.youtube.com/watch?v=78O_COvyqAw&t=694s"
+  },
+  {
+    "lesson": 35,
+    "id": "xLw7xAosmtI",
+    "path": "Resources/images/Day 06/Lesson 35/01-lecture-frame.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-35-01-lecture-frame.jpg",
+    "caption": "Late-input rewiring changes 220 ps into 180 ps",
+    "time_seconds": 1468,
+    "duration": 2982.901,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1058,
+      "height": 595
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "6c7cd993d2183c131145168764ab9ba5970f0df9bcfa4ac89b0820f497559c23",
+    "url": "https://www.youtube.com/watch?v=xLw7xAosmtI&t=1468s"
+  },
+  {
+    "lesson": 46,
+    "id": "FGpM8YYS6ic",
+    "path": "Resources/images/Day 08/Lesson 46/01-lecture-frame.jpg",
+    "raw_path": "Resources/tools/pdf/qa/incoming/captures/lesson-46-01-lecture-frame.jpg",
+    "caption": "The installation tutorial provisions dependencies in WSL",
+    "time_seconds": 168,
+    "duration": 365.001,
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1058,
+      "height": 595
+    },
+    "captured_on": "2026-10-03",
+    "capture_method": "Actual paused Chrome video screenshot; player crop preserves the slide and lecturer",
+    "sha256": "77b1b707c825dd80f538e35ef3181799460a5219f4d5a7a55982fbbfd969f575",
+    "url": "https://www.youtube.com/watch?v=FGpM8YYS6ic&t=168s"
+  }
+]

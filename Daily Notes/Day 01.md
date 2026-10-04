@@ -352,6 +352,19 @@ $$
 
 Below 30,000 units, this simplified model favors FPGA cost; above it, ASIC cost. These are teaching numbers, not current price quotations. Mask respins, yield, inventory, engineering changes, and time value can shift the decision. In the slide's manufacturing model, larger die area reduces gross dies per wafer and can reduce yield; both can increase cost per good die. A commercial FPGA purchase price also includes many business factors beyond bare-die cost.
 
+#### Carry die yield into cost per shipped unit
+
+The handwritten cost graph assumes a known unit cost. To connect it to manufacturing, consider a separate teaching scenario: a wafer costs 6,000 cost units and contains 500 gross dies. Assume failed dies are discarded before packaging; packaging and final test cost 5 per good die, with no further losses. These assumptions deliberately omit edge-die estimation, test escapes and business margins.
+
+| Die yield | Good dies per wafer | Wafer cost per good die | Finished-unit cost |
+|---|---:|---:|---:|
+| 80% | 400 | 6,000 / 400 = 15 | 15 + 5 = 20 |
+| 50% | 250 | 6,000 / 250 = 24 | 24 + 5 = 29 |
+
+If a competing implementation costs 35 per unit and the ASIC needs 9,000,000 more fixed investment, break-even volume is 600,000 units at cost 20, but 1,500,000 at cost 29. The same design investment now takes 2.5 times as many shipments to recover. The denominator is the **saving per shipped unit**, not the gross fabrication cost of one die.
+
+This also explains why reducing die area can help twice: it can increase gross dies per wafer and improve defect-limited yield. Those effects require an area/yield model; neither follows from changing an RTL gate count alone. At an ASIC unit cost of 35 or more, these assumptions provide no positive-volume cost crossover. Recompute the graph when yield or packaging losses change.
+
 ### PPA and the rest of design quality
 
 [![Power, performance, and area as competing objectives](../Resources/images/Day%2001/Lesson%2002/04-ppa.png)](#lesson-index)
@@ -737,6 +750,19 @@ The feedback drawing reuses one physical adder. In phase 0, the muxes select `a`
 The toggle flip-flop creates alternating phases only if its initial phase is known. A practical block needs a reset or other defined initialization, a clear input-acceptance rule, and an output-valid indication. Inputs must remain valid when consumed or be captured into local registers. Without these details, the diagram illustrates resource sharing but is not a complete interface specification.
 
 Area savings are conditional: the removed adder must save more than the added muxes, control, and registers cost. A shorter combinational path may permit a higher clock, but reduced initiation rate can still lower throughput. HLS chooses among these tradeoffs according to constraints and its available implementation models. The final design still needs synthesis and physical validation.
+
+#### Follow transaction ownership through the shared adder
+
+Part 1 page 14 draws arithmetic and phase control; the missing interface question is which transaction owns each operand. Suppose transaction A is (2,3,4) and transaction B is (7,11,13). A's first computing edge stores 5. At its second edge the adder must use A's c=4 and return 9. If the external input has already advanced to B's c=13, a design that did not save c instead returns 18. Both additions are individually correct, but the transaction is wrong.
+
+| Computing edge | Accepted tuple | Operation on the shared adder | Result status |
+|---|---|---|---|
+| 1 | A: (2,3,4) | 2 + 3 = 5; save A's c | Intermediate |
+| 2 | None | 5 + saved 4 = 9 | A valid |
+| 3 | B: (7,11,13) | 7 + 11 = 18; save B's c | Intermediate |
+| 4 | None | 18 + saved 13 = 31 | B valid |
+
+One solution captures the tuple when a request is accepted; another requires the sender to hold the relevant operands until consumed. Either needs an explicit handshake or fixed schedule. Reset must establish the first phase, and output-valid must identify the second phase. For streaming data, a pipelined two-adder design similarly delays c alongside a+b. Resource sharing changes the acceptance schedule as well as the gate count; verification should compare results indexed by accepted transactions.
 
 [Back to lesson index](#lesson-index) · [Repository guide](../README.md)
 

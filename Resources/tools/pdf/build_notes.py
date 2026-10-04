@@ -1,4 +1,4 @@
-"""Build the six reader-facing PDFs from the editable daily notes."""
+"""Build the nine reader-facing PDFs from the editable daily notes."""
 from pathlib import Path
 import os, sys, re, json, hashlib, html, math, io, unicodedata
 from urllib.parse import unquote, quote, urlparse, urlsplit
@@ -89,11 +89,15 @@ TITLES.update({
 3:('Simulation RTL synthesis and two-level optimization','Lessons 13 to 18','Simulation scheduling, hardware inference and minimum Boolean covers'),
 4:('Multilevel optimization and formal verification','Lessons 19 to 24','Factoring, FSMs, BDDs, SAT and model checking'),
 5:('Equivalence libraries and static timing analysis','Lessons 25 to 30','Equivalence, timing models, setup and hold, graph propagation and variation'),
-6:('OpenSTA and clock constraints','Lessons 31 to 32','Timing reports and clock constraints through Week 8 Constraints I'),
+6:('Constraints, mapping and timing optimization','Lessons 31 to 36','OpenSTA, the external timing environment, technology mapping and timing repair'),
+7:('Power, scan design and ATPG','Lessons 37 to 42','Power mechanisms, low-power transformations, scan chains and fault detection'),
+8:('BIST, physical foundations and chip planning','Lessons 43 to 48','On-chip test, fabrication and interconnect, floorplanning and power delivery'),
+9:('Placement, clocks, routing and signoff','Lessons 49 to 54','Placement, clock trees, routing, extraction and final verification through Week 12'),
 })
 FILES = {1:'Day 01 - IC Foundations and Logic Synthesis.pdf',
          2:'Day 02 - Physical Design and Verilog Foundations.pdf'}
 FILES.update({3:'Day 03 - Simulation Synthesis and Logic Optimization.pdf',4:'Day 04 - Multilevel Optimization and Formal Verification.pdf',5:'Day 05 - Equivalence Libraries and Static Timing Analysis.pdf',6:'Day 06 - OpenSTA and Clock Constraints.pdf'})
+FILES.update({7:'Day 07 - Power Scan Design and ATPG.pdf',8:'Day 08 - BIST Physical Foundations and Chip Planning.pdf',9:'Day 09 - Placement Clocks Routing and Signoff.pdf'})
 LESSONS = {
 1:'IC construction and manufacturing foundations',
 2:'Implementation choices and design quality',
@@ -109,6 +113,7 @@ LESSONS = {
 12:'Verilog structure events and assignments',
 }
 LESSONS.update({13:'Functional verification using simulation',14:'High-level synthesis using Bambu',15:'RTL synthesis Part I',16:'RTL synthesis Part II',17:'Logic optimization Part I',18:'Simulation with Icarus',19:'Logic optimization Part II',20:'Logic optimization Part III',21:'Formal verification I',22:'Logic synthesis using Yosys',23:'Formal verification II',24:'Formal verification III',25:'Formal verification IV',26:'Technology library',27:'Logic optimization using Yosys',28:'Static timing analysis I',29:'Static timing analysis II',30:'Static timing analysis III',31:'Static timing analysis using OpenSTA',32:'Constraints I'})
+LESSONS.update({33:'Constraints II',34:'Technology mapping',35:'Timing-driven optimizations',36:'Technology library and constraints',37:'Power analysis',38:'Power optimizations',39:'Basic concepts of DFT',40:'Scan design flow',41:'Power analysis using OpenSTA',42:'Automatic test pattern generation',43:'Built-in self-test',44:'Basic concepts of physical design I',45:'Basic concepts of physical design II',46:'Installation of OpenROAD',47:'Chip planning I',48:'Chip planning II',49:'Placement',50:'Chip planning and placement',51:'Clock tree synthesis',52:'Routing',53:'Post-layout verification and signoff',54:'Clock tree synthesis and routing'})
 
 def clean(text):
     return text.replace('\u202f',' ').replace('\u00a0',' ').replace('—',' - ').replace('–','-').replace('−','-').replace('‑','-')
@@ -611,6 +616,9 @@ class NotesDoc(BaseDocTemplate):
 
 def assembled(day):
     original=(ROOT/'Daily Notes'/f'Day {day:02d}.md').read_text(encoding='utf-8')
+    # Maintenance comments identify frame insertions in editable Markdown;
+    # they are not reader-facing paragraphs when HTML parsing is disabled.
+    original=re.sub(r'^<!-- wrapup-frame-\d+ -->\s*\n','',original,flags=re.M)
     lessons=re.split(r'(?=^## Lesson \d+:)',original,flags=re.M)[1:]
     result=[]
     for lesson in lessons:
@@ -651,7 +659,7 @@ def backmatter(b):
     heading('Sources and references','sources-and-study-boundary')
     flow.append(b.simple('Primary course: **VLSI Design Flow: RTL to GDS**, Prof. Sneh Saurabh, IIIT Delhi, NPTEL. Unix and Tcl tutorials: Jasmine Kaur. Lecture captions provide video timestamps. Additional derivations and practice examples are study annotations.'))
     flow.append(b.simple('[Open the course video playlist](https://www.youtube.com/playlist?list=PLyqSpQzTE6M8iOrfy70ELk9W72JG5a98V).'))
-    handwritten={1:'Part 1 PDF pages 1 to 16',2:'Part 1 PDF pages 17 to 24 and Part 2 PDF pages 1 to 4',3:'Scan A PDF pages 1 to 14',4:'Scan A PDF pages 15 to 21 (A-21 upper section is discussed with BDDs and its full page appears with SAT)',5:'Scan B PDF pages 1 to 8',6:'Scan B PDF pages 9 to 11'}[b.day]
+    handwritten={1:'Part 1 PDF pages 1 to 16',2:'Part 1 PDF pages 17 to 24 and Part 2 PDF pages 1 to 4',3:'Scan A PDF pages 1 to 14',4:'Scan A PDF pages 15 to 21 (A-21 upper section is discussed with BDDs and its full page appears with SAT)',5:'Scan B PDF pages 1 to 8',6:'Scan B pages 9 to 11 and Scan C pages 1 to 12',7:'Scan C pages 13 to 24, Scan D pages 1 to 4 and Notebook ATPG page 1',8:'Scan D pages 5 to 21',9:'Scan D pages 22 to 24 and Scan E pages 1 to 19'}[b.day]
     flow.append(b.simple(f'Original handwritten sources: **{handwritten}**. Source identifiers are separate from the page numbers of this document.'))
     p=Paragraph('Primary references for the technical clarifications',STYLES['heading'])
     p._heading=(1,'primary-references','Primary references for the technical clarifications',0);flow.append(p)
@@ -686,7 +694,7 @@ def add_named_destinations(path, dests):
 def main():
     saved=QA/'build-manifest.json'
     summary=json.loads(saved.read_text(encoding='utf-8')) if saved.exists() else {}
-    days=[int(x) for x in sys.argv[1:]] or [1,2,3,4,5,6]
+    days=[int(x) for x in sys.argv[1:]] or list(range(1,10))
     for day in days:
         source=assembled(day)
         (CACHE/f'day{day:02d}-assembled.md').write_text(source,encoding='utf-8')

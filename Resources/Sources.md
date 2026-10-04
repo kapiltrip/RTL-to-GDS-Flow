@@ -62,9 +62,18 @@ Lecture images below are actual frames captured from the course videos in Chrome
 
 ## Handwritten sources
 
-- `Resources/Data/Part1.pdf`: 24 pages, archived as [Part-1-original.pdf](sources/handwritten/Part-1-original.pdf).
-- The scanned PDF uploaded alongside it: 4 pages, archived as [Part-2-original.pdf](sources/handwritten/Part-2-original.pdf).
-- [The complete page index](Handwritten%20Index.md) maps all 28 pages to their explanations. Full-page JPEGs and topical crops were rendered from those PDFs without altering the handwriting.
+| Source | PDF pages | Preserved source |
+|---|---:|---|
+| Part 1 | 24 | [Original PDF](sources/handwritten/Part-1-original.pdf) |
+| Part 2 | 4 | [Original PDF](sources/handwritten/Part-2-original.pdf) |
+| Scan A | 21 | Local `Data/Scan-A-Simulation-Synthesis-Logic-and-Formal.pdf` |
+| Scan B | 11 | Local `Data/Scan-B-Timing-and-Constraints.pdf` |
+| Scan C | 24 | Local `Data/Scan-C-Constraints-Mapping-Power-and-DFT.pdf` |
+| Scan D | 24 | Local `Data/Scan-D-Scan-ATPG-BIST-and-Physical-Design.pdf` |
+| Scan E | 19 | Local `Data/Scan-E-Placement-CTS-Routing-and-Signoff.pdf` |
+| Digital ATPG notebook | 1 | Local `Data/Notebook-ATPG-Backtracking-and-Redundant-Faults.pdf` |
+
+[The complete page index](Handwritten%20Index.md) maps all **128 readable pages** to explanations and published full-page images. Topical crops retain their original handwriting. The [source inventory](sources/handwritten-inventory.json) records PDF page counts and SHA-256 hashes for originals and all complete page images. The [raw-upload guide](Data/README.md) distinguishes preserved local PDFs from published material. A fresh checkout includes all 128 source-page images and both earlier PDF archives. The separate zero-byte upload supplies no readable pages.
 
 ## Supplemental primary references
 
@@ -90,26 +99,14 @@ These references support specific clarifications, rather than replacing the sele
 | [Tcl 8.6 — lset](https://www.tcl-lang.org/man/tcl8.6/TclCmd/lset.htm) | Updating a named list variable at an index |
 | [Tcl 8.6 — foreach](https://www.tcl-lang.org/man/tcl8.6.13/TclCmd/foreach.htm) | List iteration and assignment to loop variables |
 | [Sutherland HDL — Verilog-2001 reference](https://sutherland-hdl.com/pdfs/verilog_2001_ref_guide.pdf) | Wildcard case matching and traditional language reference context |
+| [Sutherland and Mills — X behavior in simulation](https://sutherland-hdl.com/papers/2013-DVCon_In-love-with-my-X_paper.pdf) | Conditional-operator bit merging and optimistic procedural selection |
+| [Yosys — Binary word cells](https://yosyshq.readthedocs.io/projects/yosys/en/stable/cell/word_binary.html) | Signed division, shifts and the limits of strength reduction |
 
 ## Example validation
 
-The two-day expansion checks the accelerator transfer-time calculations and the two-fault truth table. The runnable clock demonstration checks all four printed states at 0, 10, 20, and 30 ns, including the fact that the variable named `counter` never increments.
+The [executable study checks](examples/README.md) cover the printed Verilog/Tcl examples and the additional analytical models. The language checks compile with Icarus in the stated Verilog mode; Tcl examples run through Python's Tcl interpreter. The model checks enumerate Boolean assignments, prime covers, BDD/state structures, ATPG detection, scan permutations and signature collisions, and independently recompute timing and physical arithmetic.
 
-The additional power, clock-skew, utilization, and patterning calculations are teaching examples with explicitly stated assumptions. Their numbers are not measurements from the captured lectures or specifications for a fabrication process. The Tcl and pipeline tables trace the runnable examples; the new four-state table states the bitwise results used in the explanations.
-
-The added arithmetic was checked directly. Tcl 8.6 reproduced all seven rows of the list trace, and Icarus Verilog in Verilog-2005 mode confirmed the four-state operator results and all three rows of the pipeline trace.
-
-The checked source is in [examples](examples/verilog/README.md). Icarus Verilog 12.0 development build compiled the Verilog examples with `-g2005`; Python's Tcl 8.6 interpreter ran the Tcl example. The results were:
-
-```text
-PASS: language, parameters, and state checks
-PASS: blocking and nonblocking delay timeline
-200 + 100 = 300
-PASS: initial/always clock trace at 0/10/20/30 ns
-PASS: Tcl list updates, procedure results, literal grouping, and file I/O
-```
-
-The deliberate oversized literal `6'h88` produces an expected truncation warning, and its resulting six bits are checked. These tests validate the stated teaching examples; they do not validate the manufacturing process or certify a complete ASIC implementation.
+All four checker entry points pass for the 4 October reading edition. Numerical examples identify their assumed values; they are not measurements from the lecture frames or fabrication specifications. The [coverage review](Coverage%20Review.md) records the complete notebook review, final PDF checks and remaining source ambiguities.
 
 ## September 30 lecture captures
 Actual video frames were captured in Chrome. Captions link to the relevant playback timestamp; the JSON register records image hashes and source identity. Handwritten comparison images are crops of the indexed full-page originals, not recreated artwork.
@@ -153,4 +150,37 @@ The course uses two official NPTEL playlists: [early lessons and later physical-
 
 The lecture decks are retained locally for source review. Commands and numerics in the notes distinguish historical tutorial examples from current documentation. No installation or synthesis/STA result is inferred from merely viewing a tutorial.
 
-The additional worked derivations are checked by [the example checker](examples/check_new_study_examples.py): exhaustive Boolean assignments, independently generated prime covers and ROBDDs, executable Tcl argument handling, and recomputed scheduling and timing arithmetic. Assumed delays and pulse-width requirements are identified as teaching examples; they are not measured values from a characterized library or an executed ASIC flow.
+The [study-example checkers](examples/README.md) verify the worked derivations through exhaustive Boolean assignments, independently generated prime covers and ROBDDs, executable Verilog/Tcl, scan and signature traces, and recomputed dimensional arithmetic. Assumed delays, pulse-width requirements and physical values are identified as teaching examples; they are not measured values from a characterized library or an executed ASIC flow.
+
+## Weeks 8–12 continuation
+
+Reviewed in Chrome on 3 October 2026 using the official NPTEL outline, lecture segments, captions and actual player screenshots. The 54-item course sequence includes tutorials. Study-day numbers use six lessons; they do not assert laboratory completion.
+
+| Course lesson | Week | Primary video | Saved player frames |
+|---|---:|---|---|
+| 33 | 8 | [Constraints II](https://www.youtube.com/watch?v=psrHHK7GFiY) | [20:01](images/Day%2006/Lesson%2033/01-lecture-frame.jpg) |
+| 34 | 8 | [Technology Mapping](https://www.youtube.com/watch?v=ooOZagskglo) | [14:11](images/Day%2006/Lesson%2034/01-lecture-frame.jpg) |
+| 35 | 8 | [Timing-driven Optimizations](https://www.youtube.com/watch?v=xLw7xAosmtI) | [24:28](images/Day%2006/Lesson%2035/01-lecture-frame.jpg) |
+| 36 | 8 | [Technology Library and Constraints](https://www.youtube.com/watch?v=u_XXFBwTXRk) | [11:04](images/Day%2006/Lesson%2036/01-lecture-frame.jpg) |
+| 37 | 9 | [Power Analysis](https://www.youtube.com/watch?v=u3--39QdD2Y) | [14:39](images/Day%2007/Lesson%2037/01-lecture-frame.jpg) |
+| 38 | 9 | [Power Optimizations](https://www.youtube.com/watch?v=-jYtXAHvoZM) | [25:33](images/Day%2007/Lesson%2038/01-lecture-frame.jpg) |
+| 39 | 9 | [Basic Concepts of DFT](https://www.youtube.com/watch?v=1OoJG8CeFns) | [19:32](images/Day%2007/Lesson%2039/01-lecture-frame.jpg) |
+| 40 | 9 | [Scan Design Flow](https://www.youtube.com/watch?v=7fGJto2F8JU) | [11:47](images/Day%2007/Lesson%2040/01-lecture-frame.jpg) |
+| 41 | 9 | [Power Analysis using OpenSTA](https://www.youtube.com/watch?v=ZHk9e0KpHUY) | [11:34](images/Day%2007/Lesson%2041/01-lecture-frame.jpg) |
+| 42 | 10 | [ATPG](https://www.youtube.com/watch?v=oOVaTWGkVy8) | [28:22](images/Day%2007/Lesson%2042/01-lecture-frame.jpg) |
+| 43 | 10 | [BIST](https://www.youtube.com/watch?v=iT_lXRDUdZI) | [20:27](images/Day%2008/Lesson%2043/01-lecture-frame.jpg) |
+| 44 | 10 | [Basic Concepts of Physical Design I](https://www.youtube.com/watch?v=r0rianLiAg4) | [12:42](images/Day%2008/Lesson%2044/01-lecture-frame.jpg) |
+| 45 | 10 | [Basic Concepts of Physical Design II](https://www.youtube.com/watch?v=uIZ7hVuZGHA) | [24:47](images/Day%2008/Lesson%2045/01-lecture-frame.jpg) |
+| 46 | 10 | [Installation of OpenROAD](https://www.youtube.com/watch?v=FGpM8YYS6ic) | [2:48](images/Day%2008/Lesson%2046/01-lecture-frame.jpg) |
+| 47 | 11 | [Chip Planning I](https://www.youtube.com/watch?v=37Hf_q6IhAs) | [22:11](images/Day%2008/Lesson%2047/01-lecture-frame.jpg) |
+| 48 | 11 | [Chip Planning II](https://www.youtube.com/watch?v=H2UHFlFTUoo) | [22:10](images/Day%2008/Lesson%2048/01-lecture-frame.jpg) |
+| 49 | 11 | [Placement](https://www.youtube.com/watch?v=-M6o03yNb78) | [14:43](images/Day%2009/Lesson%2049/01-lecture-frame.jpg) |
+| 50 | 11 | [Chip Planning and Placement](https://www.youtube.com/watch?v=NWgkBBXXFKg) | [10:01](images/Day%2009/Lesson%2050/01-lecture-frame.jpg) |
+| 51 | 12 | [Clock Tree Synthesis (CTS)](https://www.youtube.com/watch?v=BQHczZr4ONA) | [10:20](images/Day%2009/Lesson%2051/01-lecture-frame.jpg), [39:57](images/Day%2009/Lesson%2051/03-useful-skew.jpg), [12:17](images/Day%2009/Lesson%2051/02-clock-wire-buffers.jpg) |
+| 52 | 12 | [Routing](https://www.youtube.com/watch?v=nsYhC5btQko) | [26:38](images/Day%2009/Lesson%2052/01-lecture-frame.jpg), [46:46](images/Day%2009/Lesson%2052/02-detailed-routing-grid.jpg) |
+| 53 | 12 | [Post-layout Verification and Signoff](https://www.youtube.com/watch?v=EKt-Ev3c_bE) | [26:41](images/Day%2009/Lesson%2053/01-lecture-frame.jpg) |
+| 54 | 12 | [Clock Tree Synthesis (CTS) and Routing](https://www.youtube.com/watch?v=78O_COvyqAw) | [8:20](images/Day%2009/Lesson%2054/01-lecture-frame.jpg), [11:34](images/Day%2009/Lesson%2054/02-routed-layout.jpg) |
+
+Week 12 primary slide decks are preserved beside the notes: [CTS](sources/lectures/week12/lecture-40.pdf), [Routing](sources/lectures/week12/lecture-41.pdf), [Signoff](sources/lectures/week12/lecture-42.pdf), and [Tutorial 12](sources/lectures/week12/tutorial-12.pdf). They came from the course-linked [Week 12 material folder](https://drive.google.com/drive/folders/12GNzun_dE9kfmT2qc_Kg9sP5MdG2z_Ll). Course lesson 51 corresponds to printed lecture 40; tutorials explain the numbering difference.
+
+Current tool clarification references: [OpenSTA command reference](https://opensta.readthedocs.io/en/latest/Commands/), [OpenROAD setup and flow overview](https://openroad.readthedocs.io/en/latest/main/README.html), [OpenROAD Flow Scripts tutorial](https://openroad-flow-scripts.readthedocs.io/en/latest/tutorials/FlowTutorial.html), [OpenROAD placement](https://openroad.readthedocs.io/en/latest/main/src/gpl/README.html), [OpenROAD power-network generation](https://openroad.readthedocs.io/en/latest/main/src/pdn/README.html), [OpenROAD clock-tree synthesis](https://openroad.readthedocs.io/en/latest/main/src/cts/README.html), [OpenROAD timing repair](https://openroad.readthedocs.io/en/latest/main/src/rsz/README.html), [OpenROAD global routing](https://openroad.readthedocs.io/en/latest/main/src/grt/README.html), [OpenROAD detailed routing](https://openroad.readthedocs.io/en/latest/main/src/drt/README.html), [OpenRCX parasitic extraction](https://openroad.readthedocs.io/en/latest/main/src/rcx/README.html). Historical tutorial helper procedures and flags are distinguished from current documented commands.

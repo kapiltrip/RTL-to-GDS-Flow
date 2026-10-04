@@ -11,9 +11,10 @@ from pypdf import PdfReader
 import pdfplumber
 from PIL import Image, ImageDraw, ImageFont
 
-POPPLER=Path('C:/Users/kapil/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/poppler/Library/bin/pdftoppm.exe')
+from runtime import pdftoppm
+POPPLER=pdftoppm()
 manifest=json.loads((QA/'build-manifest.json').read_text(encoding='utf-8'))
-days=[int(x) for x in sys.argv[1:]] or [1,2,3,4,5,6]
+days=[int(x) for x in sys.argv[1:]] or list(range(1,10))
 checks=json.loads((QA/'checks.json').read_text(encoding='utf-8')) if (QA/'checks.json').exists() else {}
 
 def normalized(s):
@@ -39,7 +40,7 @@ for day in days:
     forbidden=('evidence pair:', 'comparison crop', 'click either image',
                'the full handwritten page is reproduced below',
                'the larger view preserves', 'your handwritten note',
-               'i am studying', 'paired figures compare')
+               'i am studying', 'paired figures compare', 'wrapup-frame-', '<!--')
     assert not [phrase for phrase in forbidden if phrase in reader_text], (day, 'Repetitive comparison narration')
     (QA/f'day{day:02d}-extracted.txt').write_text(text,encoding='utf-8')
     cleaned=re.sub(r'^Lesson \d\d [^\n]*\n','',text,flags=re.M)

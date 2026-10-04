@@ -1,19 +1,25 @@
 """Validate portable Markdown links, source coverage and captured-image hashes."""
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
-import re, json, hashlib, sys
+import re, json, hashlib, sys, argparse
 from collections import Counter
-from pypdf import PdfReader
 
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[2]
 sys.path.insert(0,str(HERE/'vendor'))
+from pypdf import PdfReader
 from markdown_it import MarkdownIt
 md=MarkdownIt('commonmark')
-files=list(ROOT.glob('*.md')) + list((ROOT/'Resources').glob('*.md'))
-files += list((ROOT/'Daily Notes').glob('*.md'))
-files += [ROOT/'PDFs/README.md', ROOT/'Resources/Data/README.md']
-files += list((ROOT/'Resources/examples').rglob('README.md'))
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--require-originals', action='store_true',
+                    help='Require all eight raw PDFs in the local archive as well as portable images.')
+parser.add_argument('--public-only', action='store_true',
+                    help='Check published material without using the ignored local PDF archive.')
+args=parser.parse_args()
+assert not (args.require_originals and args.public_only), 'Choose one archive mode.'
+excluded={'.git','.work','vendor','cache','qa','logs','history','__pycache__','.venv'}
+files=sorted(p for p in ROOT.rglob('*.md')
+             if not excluded.intersection(p.relative_to(ROOT).parts))
 
 def anchors(file):
     counts={};result=set()
@@ -46,38 +52,40 @@ for file in files:
                     errors.append(f'{file.relative_to(ROOT)} -> missing anchor {url}')
 assert not errors,'\n'.join(errors)
 register=json.loads((ROOT/'Resources/sources/study-register.json').read_text(encoding='utf-8'))
-assert register['completed_sequence']==32
-assert register['current_day']==(32-1)//6+1==6
-assert register['current_day_lesson']==(32-1)%6+1==2
+assert register['completed_sequence']==54
+assert register['current_day']==(54-1)//6+1==9
+assert register['current_day_lesson']==(54-1)%6+1==6
 for source in register['handwritten_new_pages']:
     file=ROOT/'Daily Notes'/f'Day {source["day"]:02d}.md'
     assert source['anchor'] in cache[file.resolve()],source
     assert (ROOT/source['path']).is_file(),source
-assert len(register['handwritten_new_pages'])==32
+assert len(register['handwritten_new_pages'])==100
 
 # Validate every original page, including the 28 older pages. The structural
 # checks complement the human review of the page's content and explanations.
-groups=[
-    ('Part 1','Resources/sources/handwritten/Part-1-original.pdf',
-     'Resources/sources/handwritten/part1',24,'page-{n:02d}.jpg'),
-    ('Part 2','Resources/sources/handwritten/Part-2-original.pdf',
-     'Resources/sources/handwritten/scan',4,'page-{n:02d}.jpg'),
-    ('Scan A','Resources/Data/Scan-A-Simulation-Synthesis-Logic-and-Formal.pdf',
-     'Resources/sources/handwritten/scan-a',21,'h{n:02d}.jpg'),
-    ('Scan B','Resources/Data/Scan-B-Timing-and-Constraints.pdf',
-     'Resources/sources/handwritten/scan-b',11,'h{n:02d}.jpg'),
-]
+inventory=json.loads((ROOT/'Resources/sources/handwritten-inventory.json').read_text(encoding='utf-8'))
+assert inventory['schema_version']==1 and inventory['readable_pages']==128
+assert len(inventory['originals'])==8
 expected={};pdf_inventory=[]
-for label,pdf_path,image_folder,count,pattern in groups:
-    pdf=ROOT/pdf_path
-    assert len(PdfReader(pdf).pages)==count,(label,'PDF page count')
-    paths={f'{image_folder}/{pattern.format(n=n)}' for n in range(1,count+1)}
-    assert {p.relative_to(ROOT).as_posix() for p in (ROOT/image_folder).glob('*.jpg')}==paths,label
-    for n in range(1,count+1):
-        path=f'{image_folder}/{pattern.format(n=n)}'
-        expected[path]={'source':label,'pdf_page':n,'source_pdf':pdf_path}
-    pdf_inventory.append({'source':label,'path':pdf_path,'pages':count,
-                          'sha256':hashlib.sha256(pdf.read_bytes()).hexdigest()})
+for original in inventory['originals']:
+    label=original['source']; pdf_path=original['path']; count=original['pages']
+    pdf=ROOT/pdf_path; local=original['local_archive']
+    available=pdf.is_file() and not (args.public_only and local)
+    if args.require_originals or not local: assert available,(label,'Missing original PDF')
+    if available:
+        assert len(PdfReader(pdf).pages)==count,(label,'PDF page count')
+        assert hashlib.sha256(pdf.read_bytes()).hexdigest()==original['sha256'],(label,'Original PDF hash')
+    pages=original['page_images']
+    assert [p['pdf_page'] for p in pages]==list(range(1,count+1)),label
+    paths={p['path'] for p in pages}; folder=(ROOT/pages[0]['path']).parent
+    assert {p.relative_to(ROOT).as_posix() for p in folder.glob('*.jpg')}==paths,label
+    for page in pages:
+        path=page['path']
+        assert path not in expected,path
+        assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==page['sha256'],path
+        expected[path]={'source':label,'pdf_page':page['pdf_page'],'source_pdf':pdf_path}
+    pdf_inventory.append({k:original[k] for k in ('source','path','pages','sha256')})
+    pdf_inventory[-1]['original_verified_in_this_run']=available
 index=ROOT/'Resources/Handwritten Index.md'
 mapped={}
 for row in index.read_text(encoding='utf-8').splitlines():
@@ -93,37 +101,40 @@ for row in index.read_text(encoding='utf-8').splitlines():
                   'explanations':[url for url,day in targets],
                   'sha256':hashlib.sha256((ROOT/path).read_bytes()).hexdigest()}
 assert set(mapped)==set(expected),(set(expected)-set(mapped),set(mapped)-set(expected))
-assert len(mapped)==60
+assert len(mapped)==128
 for page in register['handwritten_new_pages']:
     target=f'../Daily%20Notes/Day%20{page["day"]:02d}.md#{page["anchor"]}'
     assert target in mapped[page['path']]['explanations'],page
     day_source=(ROOT/'Daily Notes'/f'Day {page["day"]:02d}.md').read_text(encoding='utf-8')
     assert '../'+page['path'] in unquote(day_source),(page,'Full image missing from day notes')
-assert len({p['path'] for p in register['handwritten_new_pages']})==32
+assert len({p['path'] for p in register['handwritten_new_pages']})==100
 day_counts=Counter(p['day'] for p in mapped.values())
-assert dict(sorted(day_counts.items()))=={1:16,2:12,3:14,4:7,5:8,6:3},day_counts
+assert dict(sorted(day_counts.items()))=={1:16,2:12,3:14,4:7,5:8,6:15,7:17,8:17,9:22},day_counts
 lesson_ids=[]
-for day in range(1,7):
+for day in range(1,10):
     ids=[int(x) for x in re.findall(r'^## Lesson (\d\d):',
          (ROOT/'Daily Notes'/f'Day {day:02d}.md').read_text(encoding='utf-8'),re.M)]
-    assert ids==list(range((day-1)*6+1,min(day*6,32)+1)),(day,ids)
+    assert ids==list(range((day-1)*6+1,day*6+1)),(day,ids)
     lesson_ids.extend(ids)
-assert lesson_ids==list(range(1,33))
+assert lesson_ids==list(range(1,55))
 empty=ROOT/register['empty_upload']['path']
-assert empty.is_file() and empty.stat().st_size==0
+if empty.is_file() and not args.public_only: assert empty.stat().st_size==0
+elif args.require_originals: raise AssertionError('Missing preserved empty upload')
 captures=json.loads((ROOT/'Resources/sources/lecture-captures.json').read_text(encoding='utf-8'))
 records=captures if isinstance(captures,list) else captures.get('captures',captures.get('frames',[]))
 for c in records:
     path=ROOT/c['path']
     assert path.is_file(),c
     assert hashlib.sha256(path.read_bytes()).hexdigest()==c['sha256'],c
-coverage={'source_pdfs':pdf_inventory,'readable_source_pages':60,
+coverage={'source_pdfs':pdf_inventory,'readable_source_pages':128,
           'pages_per_day':dict(sorted(day_counts.items())),'completed_lessons':lesson_ids,
           'page_mappings':list(mapped.values()),'empty_upload':register['empty_upload'],
           'local_links_checked':checked,'markdown_files_checked':len(files),
           'lecture_capture_hashes_checked':len(records),
           'scope':'Structural coverage; depth and interpretation require source-to-note human review.'}
+(HERE/'qa').mkdir(parents=True,exist_ok=True)
 (HERE/'qa/source-coverage.json').write_text(json.dumps(coverage,indent=2),encoding='utf-8')
-print(f'PASS: {checked} local links across {len(files)} Markdown files; all 60 source pages '
-      f'(28 earlier + 32 new) mapped; 4 readable PDF page counts; 32 completed lessons; '
+verified=sum(p['original_verified_in_this_run'] for p in pdf_inventory)
+print(f'PASS: {checked} local links across {len(files)} Markdown files; all 128 source pages '
+      f'(28 earlier + 32 previous + 68 October) mapped and hashed; {verified}/8 original PDFs verified here; 54 completed lessons; '
       f'{len(records)} lecture capture hashes; progress and empty-upload boundary.')

@@ -1,6 +1,6 @@
 # Day 03: Simulation, RTL synthesis and two-level optimization
 
-Lessons 13–18. Six-lesson study blocks; Day 06 remains partial through Constraints I.
+Lessons 13–18. Six-lesson study blocks; the full collection is complete through Week 12, Lesson 54.
 
 ## Day 03 index
 
@@ -364,6 +364,20 @@ Strength reduction replaces some expensive operations with simpler ones: unsigne
 
 Common-expression reuse increases fanout on the shared result and may increase wire load. A logical operator count is an early estimate, not final physical area or delay. The [Yosys optimization passes](https://yosyshq.readthedocs.io/projects/yosys/en/v0.66/using_yosys/synthesis/) describe constant folding, expression merging and cleanup at several representations.
 
+#### Repair a signed divide-by-four replacement
+
+For a signed eight-bit x, consider quotient values stored in signed eight-bit destinations. At x=-7, `x / 8'sd4` yields -1 while `x >>> 2` yields -2. At x=-8 both yield -2. The problem is the discarded nonzero remainder of a negative operand, not every negative operand.
+
+| x | Division toward zero | Arithmetic shift by two | Correction needed |
+|---:|---:|---:|---|
+| -8 | -2 | -2 | No; exact multiple |
+| -7 | -1 | -2 | Add one |
+| -1 | 0 | -1 | Add one |
+| 7 | 1 | 1 | None |
+
+A floor quotient can be corrected by adding one only when x is negative and the discarded low two bits are nonzero. The corrected value equals division toward zero for every known eight-bit input. Keep the test, arithmetic and destination signedness explicit; a surrounding unsigned operand can alter expression interpretation. This rule assumes a positive power-of-two divisor and known bits; it is not a generic replacement for arbitrary division or x-valued operands.
+
+The [Yosys binary-cell reference](https://yosyshq.readthedocs.io/projects/yosys/en/stable/cell/word_binary.html) distinguishes truncating division from floored division. The repository's depth-example checker independently simulates all 256 signed eight-bit inputs to verify this particular correction.
 
 [Back to day index](#day-03-index)
 
@@ -416,6 +430,21 @@ The cube example has ON points 010 and 011, with 110 and 111 available as don't-
 An implicant is a product term whose covered points lie within ON plus permitted don't-cares, with useful coverage of the ON-set. A prime implicant cannot be expanded further by dropping a literal without entering the OFF-set. An essential prime implicant covers an ON minterm that no other prime implicant covers. “Essential” describes unique coverage, not simply a large or visually prominent group.
 
 For SOP minimization, group ones and usable don't-cares. For POS minimization, reason about zeros, equivalently minimizing an SOP for the complemented function and then complementing. Avoid calling a maxterm a product implicant; the terms belong to different representations.
+
+#### Check a cube expansion against every care assignment
+
+In A-12, start from $f=\overline{A}B$ and propose g=B. With C omitted from both terms, only the four B=1 assignments need attention:
+
+| ABC | Specification | Original f | Proposed g | Legal comparison |
+|---|---|---:|---:|---|
+| 010 | ON | 1 | 1 | Required one preserved |
+| 011 | ON | 1 | 1 | Required one preserved |
+| 110 | Don't-care | 0 | 1 | Either value permitted |
+| 111 | Don't-care | 0 | 1 | Either value permitted |
+
+For all B=0 assignments both expressions are zero, matching this example's OFF-set. Therefore the expansion is valid **under this specification**. If 110 later becomes a required zero, the proposal fails at precisely that assignment. A previously passing equivalence check cannot establish correctness against the changed specification.
+
+One way to express the proof obligation is $\mathrm{care}\land(f\oplus g)=0$ for every input, where care is true on ON and OFF and false on the justified don't-care set. Checking only f XOR g without the care mask rejects permitted changes; masking a reachable required assignment accepts a bug. The specification, mask and implementation must travel together through optimization and verification.
 
 ### A-13: The prime implicants of AB + ABC + BC
 

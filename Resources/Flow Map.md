@@ -20,7 +20,7 @@ Describe bit-accurate combinational logic and state transitions. Simulation exer
 
 ## 4. Make the design testable
 
-Plan DFT early; add appropriate scan/test structures to improve internal controllability and observability. Generate tests for defined fault models and recheck functional/test modes and timing. Scan insertion and physical scan-chain reordering belong to coordinated logical and physical stages. [L08](../Daily%20Notes/Day%2002.md#lesson-08-overview-of-vlsi-design-flow-v--verification-and-test)
+Plan DFT early; add appropriate scan/test structures to improve internal controllability and observability. Generate tests for defined fault models and recheck functional/test modes and timing. Scan insertion and physical scan-chain reordering belong to coordinated logical and physical stages. [L39-L42](../Daily%20Notes/Day%2007.md#lesson-40-scan-design-flow)
 
 ## 5. Implement the physical design
 
@@ -28,11 +28,11 @@ Plan DFT early; add appropriate scan/test structures to improve internal control
 
 **Place and legalize:** assign legal cell locations, balancing wirelength, congestion and timing. **Clock tree synthesis:** distribute clocks with controlled skew, latency and transition.
 
-**Route:** allocate signal paths, then create rule-compliant wires and vias. Output: placed and routed geometry with a realizable clock and power network. [L07](../Daily%20Notes/Day%2002.md#lesson-07-overview-of-vlsi-design-flow-iv--physical-design)
+**Route:** allocate signal paths, then create rule-compliant wires and vias. Output: placed and routed geometry with a realizable clock and power network. [L47-L48](../Daily%20Notes/Day%2008.md#lesson-47-chip-planning-i); [L49-L52](../Daily%20Notes/Day%2009.md#lesson-49-placement)
 
 ## 6. Close and hand off GDSII
 
-Extract interconnect parasitics; close setup/hold timing across required modes/corners, physical rules and power/reliability checks. DRC checks geometry, LVS checks extracted connectivity against the reference, and ERC checks electrical rules. ECOs trigger relevant rechecks. GDSII exports layout geometry; masks, fabrication, packaging and manufactured-device test follow the design handoff. [L08-L09](../Daily%20Notes/Day%2002.md#lesson-08-overview-of-vlsi-design-flow-v--verification-and-test)
+Extract interconnect parasitics; close setup/hold timing across required modes/corners, physical rules and power/reliability checks. DRC checks geometry, LVS checks extracted connectivity against the reference, and ERC checks electrical rules. ECOs trigger relevant rechecks. GDSII exports layout geometry; masks, fabrication, packaging and manufactured-device test follow the design handoff. [L53-L54](../Daily%20Notes/Day%2009.md#lesson-53-post-layout-verification-and-signoff)
 
 <!-- pagebreak -->
 
@@ -72,4 +72,4 @@ The teaching order introduces models before detailed optimization. Implementatio
 
 ## Sources and deeper reading
 
-[NPTEL official course outline](https://onlinecourses.nptel.ac.in/e-learning/preview/noc26_ee147) supports the week sequence and flow scope. Lesson links open the detailed course notes. The [timing-repair reference](https://openroad.readthedocs.io/en/latest/main/src/rsz/README.html#repair-timing) supports interacting setup/hold repairs; only the underlying rationale is used here. [Full forms](../Full%20Forms.pdf) expands the abbreviations. Current completed notes end at Week 8, Constraints I (Lesson 32).
+[NPTEL course outline](https://onlinecourses.nptel.ac.in/e-learning/preview/noc26_ee147) gives the week sequence. Lesson links open the detailed notes. [Timing repair](https://openroad.readthedocs.io/en/latest/main/src/rsz/README.html#repair-timing) explains interacting setup/hold checks; [Full forms](../Full%20Forms.pdf) expands abbreviations. All 54 lessons through Week 12 are complete.

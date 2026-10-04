@@ -895,6 +895,29 @@ The conditional expression `sel ? b : a` selects `b` for a true condition and `a
 
 Operator precedence determines how an unparenthesized expression is grouped. Use parentheses to state the intended comparison and logical grouping, especially when mixing bitwise, equality, shift, and arithmetic operators. Parentheses clarify grouping; they do not by themselves widen an expression or change unsigned operands into signed values.
 
+#### An unknown mux select can expose different simulation behavior
+
+For a one-bit select and equal-width integral operands, the conditional operator merges corresponding bits when the condition is x or z. Equal known bits remain known; disagreeing bits become x. Thus selecting between 1010 and 1000 with sel=x produces 10x0. It preserves the information that the two possible choices share.
+
+An ordinary procedural `if (sel)` takes its then branch only when the condition is true; x does not make it true. In the complete example below, sel=x therefore produces `by_if=1000`. This can hide an uninitialized control even though the modeled Boolean mux is ambiguous. Both descriptions agree for a known one-bit select.
+
+```verilog
+module unknown_select (
+    input wire sel,
+    input wire [3:0] a, b,
+    output wire [3:0] by_conditional,
+    output reg [3:0] by_if
+);
+    assign by_conditional = sel ? a : b;
+    always @* begin
+        if (sel) by_if = a;
+        else     by_if = b;
+    end
+endmodule
+```
+
+The useful debugging question is why sel is unknown and whether reset and the control protocol define it before use. Changing syntax alone does not repair that protocol. This example concerns four-state simulation, not a physical x-valued voltage or a synthesis don't-care. See [Sutherland and Mills' discussion of X optimism](https://sutherland-hdl.com/papers/2013-DVCon_In-love-with-my-X_paper.pdf), particularly conditional statements and operators.
+
 ### Processes event controls and four-state edges
 
 #### Trace the lecture clock generator
@@ -1110,6 +1133,30 @@ endmodule
 | `r` | 20 ns | Scheduled from time zero with a delay of twenty |
 
 Here the delay is **inside** the assignment: `p <= #10 expression` samples the expression now and schedules the write ten time units later. Moving the delay in front, `#10 p <= expression`, first suspends the process and then evaluates the expression. These forms can produce different results if inputs change during the delay. The example uses constant RHS values to isolate scheduling.
+
+#### Change the RHS to reveal when sampling happens
+
+The lecture uses constants, which conceal the difference between delaying a sample and delaying a write. In this complete simulation, d changes at 5 ns, away from the two sampling times:
+
+```verilog
+`timescale 1ns/1ps
+module delayed_samples;
+    reg d = 0;
+    reg inside_delay = 0, before_delay = 0;
+    initial #5 d = 1;
+    initial inside_delay <= #10 d;
+    initial #10 before_delay <= d;
+    initial begin
+        #11;
+        $display("inside=%b before=%b", inside_delay, before_delay);
+        $finish;
+    end
+endmodule
+```
+
+`inside_delay <= #10 d` evaluates d=0 at time zero and schedules that sampled zero for 10 ns. `#10 before_delay <= d` first waits until 10 ns, then evaluates d=1 and schedules its nonblocking update in that time slot. After both updates settle, the display reports `inside=0 before=1`.
+
+Neither form samples continuously during the waiting interval. Each reads the RHS at one execution event. Observing at 11 ns also avoids confusing active-region execution at 10 ns with the later nonblocking update at that same timestamp. These explicit delays are simulation models; a synthesizable pipeline expresses delayed samples with registers and a clock, as the earlier pipeline example does.
 
 ### System tasks and the next study boundary
 

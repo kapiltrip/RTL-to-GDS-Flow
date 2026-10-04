@@ -1,0 +1,134 @@
+[
+  {
+    "lesson": 33,
+    "id": "psrHHK7GFiY",
+    "title": "Constraints II",
+    "week": 8
+  },
+  {
+    "lesson": 34,
+    "id": "ooOZagskglo",
+    "title": "Technology Mapping",
+    "week": 8
+  },
+  {
+    "lesson": 35,
+    "id": "xLw7xAosmtI",
+    "title": "Timing-driven Optimizations",
+    "week": 8
+  },
+  {
+    "lesson": 36,
+    "id": "u_XXFBwTXRk",
+    "title": "Technology Library and Constraints",
+    "week": 8
+  },
+  {
+    "lesson": 37,
+    "id": "u3--39QdD2Y",
+    "title": "Power Analysis",
+    "week": 9
+  },
+  {
+    "lesson": 38,
+    "id": "-jYtXAHvoZM",
+    "title": "Power Optimizations",
+    "week": 9
+  },
+  {
+    "lesson": 39,
+    "id": "1OoJG8CeFns",
+    "title": "Basic Concepts of DFT",
+    "week": 9
+  },
+  {
+    "lesson": 40,
+    "id": "7fGJto2F8JU",
+    "title": "Scan Design Flow",
+    "week": 9
+  },
+  {
+    "lesson": 41,
+    "id": "ZHk9e0KpHUY",
+    "title": "Power Analysis using OpenSTA",
+    "week": 9
+  },
+  {
+    "lesson": 42,
+    "id": "oOVaTWGkVy8",
+    "title": "ATPG",
+    "week": 10
+  },
+  {
+    "lesson": 43,
+    "id": "iT_lXRDUdZI",
+    "title": "BIST",
+    "week": 10
+  },
+  {
+    "lesson": 44,
+    "id": "r0rianLiAg4",
+    "title": "Basic Concepts of Physical Design I",
+    "week": 10
+  },
+  {
+    "lesson": 45,
+    "id": "uIZ7hVuZGHA",
+    "title": "Basic Concepts of Physical Design II",
+    "week": 10
+  },
+  {
+    "lesson": 46,
+    "id": "FGpM8YYS6ic",
+    "title": "Installation of OpenROAD",
+    "week": 10
+  },
+  {
+    "lesson": 47,
+    "id": "37Hf_q6IhAs",
+    "title": "Chip Planning I",
+    "week": 11
+  },
+  {
+    "lesson": 48,
+    "id": "H2UHFlFTUoo",
+    "title": "Chip Planning II",
+    "week": 11
+  },
+  {
+    "lesson": 49,
+    "id": "-M6o03yNb78",
+    "title": "Placement",
+    "week": 11
+  },
+  {
+    "lesson": 50,
+    "id": "NWgkBBXXFKg",
+    "title": "Chip Planning and Placement",
+    "week": 11
+  },
+  {
+    "lesson": 51,
+    "id": "BQHczZr4ONA",
+    "title": "Clock Tree Synthesis (CTS)",
+    "week": 12
+  },
+  {
+    "lesson": 52,
+    "id": "nsYhC5btQko",
+    "title": "Routing",
+    "week": 12
+  },
+  {
+    "lesson": 53,
+    "id": "EKt-Ev3c_bE",
+    "title": "Post-layout Verification and Signoff",
+    "week": 12
+  },
+  {
+    "lesson": 54,
+    "id": "78O_COvyqAw",
+    "title": "Clock Tree Synthesis (CTS) and Routing",
+    "week": 12
+  }
+]

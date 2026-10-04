@@ -1,0 +1,34 @@
+[
+  {
+    "key": "C",
+    "name": "Scanned Document 03-10-26 at 9.04.35 PM.pdf",
+    "pages": 24,
+    "path": "Resources/Data/Scan-C-Constraints-Mapping-Power-and-DFT.pdf",
+    "sha256": "722c22c77e07903c846465465c86db7d7836705770838344311c526c461c1fb0",
+    "image_folder": "Resources/sources/handwritten/scan-c"
+  },
+  {
+    "key": "D",
+    "name": "Scanned Document 03-10-26 at 9.08.10 PM.pdf",
+    "pages": 24,
+    "path": "Resources/Data/Scan-D-Scan-ATPG-BIST-and-Physical-Design.pdf",
+    "sha256": "52f7cc6bbbac3541d192a10854a8040a6410286a8b32dd371f60aed85ed11d18",
+    "image_folder": "Resources/sources/handwritten/scan-d"
+  },
+  {
+    "key": "E",
+    "name": "Scanned Document 03-10-26 at 9.13.37 PM.pdf",
+    "pages": 19,
+    "path": "Resources/Data/Scan-E-Placement-CTS-Routing-and-Signoff.pdf",
+    "sha256": "2a3ebd4e05e4ee12fc03d0abea70fe1e36563429833079a215409c41f64e560f",
+    "image_folder": "Resources/sources/handwritten/scan-e"
+  },
+  {
+    "key": "N",
+    "name": "Untitled Notebook.pdf",
+    "pages": 1,
+    "path": "Resources/Data/Notebook-ATPG-Backtracking-and-Redundant-Faults.pdf",
+    "sha256": "b05179551aa5b6f303ec99cc59d8d398408427ad9b2ec9d6a40b60c3023e44b5",
+    "image_folder": "Resources/sources/handwritten/notebook-atpg"
+  }
+]

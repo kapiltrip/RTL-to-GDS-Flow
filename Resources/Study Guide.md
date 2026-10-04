@@ -33,3 +33,16 @@ Treat worked numbers as **illustrative examples**, not foundry specifications. D
 | Lessons 08–09 | Which checks address design errors and which address manufactured devices; what yield and fault coverage measure; how mask corrections and packaging fit the flow |
 | Lesson 10 | When Tcl performs substitution, which commands receive variable names, and how the list example changes at each iteration |
 | Lessons 11–12 | How widths and four-state values behave; why `reg` does not guarantee a flip-flop; when a process runs and when an assignment updates state |
+
+## Revising the final weeks
+
+Use Days 06–09 in order when rebuilding the reasoning from constraints to tapeout. For a focused Week 12 review, start at [Day 09](../Daily%20Notes/Day%2009.md#day-09-index). Each full source page has its own explanation; lecture frames link to the demonstrated segment.
+
+| Study block | Reproduce without looking |
+|---|---|
+| Day 06 | Derive input/output delay signs, calculate every mapped path, and compare the original, rewired and Shannon-decomposed timing examples. |
+| Day 07 | Account for event energy/activity, explain clock versus power gating, shift a non-palindromic scan vector, and justify a complete ATPG test or redundancy proof. |
+| Day 08 | Generate the seven-state LFSR, state aliasing assumptions, calculate wire resistance/coupled voltage and supply drop, and allocate one cross-block timing budget. |
+| Day 09 | Calculate HPWL, explain buffered-wire delay, reproduce useful skew and the hold failure, distinguish guides from final geometry, and connect each signoff check with its required input artifacts. |
+
+At the end, follow one register transfer through placement, CTS, routing, extraction and STA. Then explain why a final ECO or fill change can require renewed physical, parasitic and timing checks. The connected design story at the end of Lesson 54 ties those dependencies together.

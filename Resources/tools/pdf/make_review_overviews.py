@@ -6,7 +6,7 @@ HERE=Path(__file__).resolve().parent
 QA=HERE/'qa'
 manifest=json.loads((QA/'build-manifest.json').read_text(encoding='utf-8'))
 font=ImageFont.truetype('C:/Windows/Fonts/arial.ttf',20)
-for day in ([int(x) for x in sys.argv[1:]] or range(1,7)):
+for day in ([int(x) for x in sys.argv[1:]] or range(1,10)):
     count=manifest[str(day)]['pages']
     pages=sorted((QA/f'day{day:02d}-pages-{count}').glob('page-*.png'))
     assert len(pages)==count,(day,len(pages),count)

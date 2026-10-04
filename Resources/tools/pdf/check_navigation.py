@@ -1,15 +1,19 @@
 """Check bookmark targets and clickable regions on every figure and footer."""
 from pathlib import Path
-import json, hashlib
+import json, hashlib, sys
+
+HERE=Path(__file__).resolve().parent
+sys.path.insert(0,str(HERE/'vendor'))
 import pdfplumber
 from pypdf import PdfReader
 
-HERE=Path(__file__).resolve().parent
 QA=HERE/'qa'
 manifest=json.loads((QA/'build-manifest.json').read_text(encoding='utf-8'))
-results={}
+results=json.loads((QA/'navigation-detail.json').read_text(encoding='utf-8')) if (QA/'navigation-detail.json').exists() else {}
+selected=sys.argv[1:] or list(manifest)
 
-for day,m in manifest.items():
+for day in selected:
+    m=manifest[day]
     path=HERE.parents[2]/'PDFs'/m['filename']
     reader=PdfReader(path)
     first=reader.pages[0].indirect_reference
@@ -48,4 +52,4 @@ for day,m in manifest.items():
 (QA/'navigation-detail.json').write_text(json.dumps(results,indent=2),encoding='utf-8')
 print(f'PASS: {sum(x["figure_backlinks"] for x in results.values())} figure regions, '
       f'{sum(x["footer_backlinks"] for x in results.values())} footer regions and '
-      f'{sum(x["headings_with_verified_bookmarks"] for x in results.values())} heading bookmarks in all six PDFs.')
+      f'{sum(x["headings_with_verified_bookmarks"] for x in results.values())} heading bookmarks in all {len(results)} PDFs.')

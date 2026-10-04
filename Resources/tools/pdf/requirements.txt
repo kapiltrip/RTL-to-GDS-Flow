@@ -1,0 +1,8 @@
+# Versions used for the 4 October 2026 reading edition.
+reportlab==5.0.1
+pypdf==6.10.0
+Pillow==12.3.0
+matplotlib==3.11.2
+svglib==2.2.0
+markdown-it-py==4.2.0
+pdfplumber==0.11.9

@@ -1,10 +1,10 @@
 {
-  "reported_progress": "Week 8 Constraints I",
-  "as_of": "2026-09-30",
+  "reported_progress": "Week 12 complete, as reported by Kapil",
+  "as_of": "2026-10-03",
   "lessons_per_day": 6,
-  "completed_sequence": 32,
-  "current_day": 6,
-  "current_day_lesson": 2,
+  "completed_sequence": 54,
+  "current_day": 9,
+  "current_day_lesson": 6,
   "handwritten_new_pages": [
     {
       "key": "A-01",
@@ -229,10 +229,556 @@
       "day": 6,
       "anchor": "b-11-jitter-skew-uncertainty-and-transition",
       "path": "Resources/sources/handwritten/scan-b/h11.jpg"
+    },
+    {
+      "key": "C-01",
+      "lesson": 33,
+      "day": 6,
+      "anchor": "c-01-input-delay-describes-the-circuit-outside-the-block",
+      "path": "Resources/sources/handwritten/scan-c/h01.jpg",
+      "title": "Input delay describes the circuit outside the block"
+    },
+    {
+      "key": "C-02",
+      "lesson": 33,
+      "day": 6,
+      "anchor": "c-02-input-slew-and-output-capacitance-are-different-boundary-conditions",
+      "path": "Resources/sources/handwritten/scan-c/h02.jpg",
+      "title": "Input slew and output capacitance are different boundary conditions"
+    },
+    {
+      "key": "C-03",
+      "lesson": 33,
+      "day": 6,
+      "anchor": "c-03-derive-the-410-ps-output-delay-from-the-external-receiver",
+      "path": "Resources/sources/handwritten/scan-c/h03.jpg",
+      "title": "Derive the 410 ps output delay from the external receiver"
+    },
+    {
+      "key": "C-04",
+      "lesson": 33,
+      "day": 6,
+      "anchor": "c-04-output-timing-load-and-false-paths",
+      "path": "Resources/sources/handwritten/scan-c/h04.jpg",
+      "title": "Output timing, load and false paths"
+    },
+    {
+      "key": "C-05",
+      "lesson": 33,
+      "day": 6,
+      "anchor": "c-05-multicycle-checks-case-analysis-and-the-mappers-inputs",
+      "path": "Resources/sources/handwritten/scan-c/h05.jpg",
+      "title": "Multicycle checks, case analysis and the mapper's inputs"
+    },
+    {
+      "key": "C-06",
+      "lesson": 34,
+      "day": 6,
+      "anchor": "c-06-replace-generic-logic-with-characterized-cells",
+      "path": "Resources/sources/handwritten/scan-c/h06.jpg",
+      "title": "Replace generic logic with characterized cells"
+    },
+    {
+      "key": "C-07",
+      "lesson": 34,
+      "day": 6,
+      "anchor": "c-07-structural-alternatives-must-preserve-the-complete-function",
+      "path": "Resources/sources/handwritten/scan-c/h07.jpg",
+      "title": "Structural alternatives must preserve the complete function"
+    },
+    {
+      "key": "C-08",
+      "lesson": 35,
+      "day": 6,
+      "anchor": "c-08-timing-optimization-is-an-analysis-and-change-loop",
+      "path": "Resources/sources/handwritten/scan-c/h08.jpg",
+      "title": "Timing optimization is an analysis-and-change loop"
+    },
+    {
+      "key": "C-09",
+      "lesson": 35,
+      "day": 6,
+      "anchor": "c-09-upsizing-and-rewiring-move-delay-between-stages",
+      "path": "Resources/sources/handwritten/scan-c/h09.jpg",
+      "title": "Upsizing and rewiring move delay between stages"
+    },
+    {
+      "key": "C-10",
+      "lesson": 35,
+      "day": 6,
+      "anchor": "c-10-reassociate-the-and-chain-around-the-late-input",
+      "path": "Resources/sources/handwritten/scan-c/h10.jpg",
+      "title": "Reassociate the AND chain around the late input"
+    },
+    {
+      "key": "C-11",
+      "lesson": 35,
+      "day": 6,
+      "anchor": "c-11-a-late-select-mux-saves-15-ps-in-the-pages-example",
+      "path": "Resources/sources/handwritten/scan-c/h11.jpg",
+      "title": "A late-select mux saves 15 ps in the page's example"
+    },
+    {
+      "key": "C-12",
+      "lesson": 35,
+      "day": 6,
+      "anchor": "c-12-balance-fanout-and-retime-with-cycle-alignment-preserved",
+      "path": "Resources/sources/handwritten/scan-c/h12.jpg",
+      "title": "Balance fanout and retime with cycle alignment preserved"
+    },
+    {
+      "key": "C-13",
+      "lesson": 37,
+      "day": 7,
+      "anchor": "c-13-where-the-energy-of-a-cmos-transition-goes",
+      "path": "Resources/sources/handwritten/scan-c/h13.jpg",
+      "title": "Where the energy of a CMOS transition goes"
+    },
+    {
+      "key": "C-14",
+      "lesson": 37,
+      "day": 7,
+      "anchor": "c-14-switching-short-circuit-and-leakage-power",
+      "path": "Resources/sources/handwritten/scan-c/h14.jpg",
+      "title": "Switching, short-circuit and leakage power"
+    },
+    {
+      "key": "C-15",
+      "lesson": 37,
+      "day": 7,
+      "anchor": "c-15-power-tables-need-realistic-activity-and-parasitics",
+      "path": "Resources/sources/handwritten/scan-c/h15.jpg",
+      "title": "Power tables need realistic activity and parasitics"
+    },
+    {
+      "key": "C-16",
+      "lesson": 38,
+      "day": 7,
+      "anchor": "c-16-signal-probability-is-not-transition-activity-dvfs-changes-both-power-and-time",
+      "path": "Resources/sources/handwritten/scan-c/h16.jpg",
+      "title": "Signal probability is not transition activity; DVFS changes both power and time"
+    },
+    {
+      "key": "C-17",
+      "lesson": 38,
+      "day": 7,
+      "anchor": "c-17-power-gating-disconnects-an-idle-domain",
+      "path": "Resources/sources/handwritten/scan-c/h17.jpg",
+      "title": "Power gating disconnects an idle domain"
+    },
+    {
+      "key": "C-18",
+      "lesson": 38,
+      "day": 7,
+      "anchor": "c-18-retention-and-isolation-preserve-system-behavior",
+      "path": "Resources/sources/handwritten/scan-c/h18.jpg",
+      "title": "Retention and isolation preserve system behavior"
+    },
+    {
+      "key": "C-19",
+      "lesson": 38,
+      "day": 7,
+      "anchor": "c-19-a-low-level-latch-makes-the-clock-enable-stable-during-the-high-pulse",
+      "path": "Resources/sources/handwritten/scan-c/h19.jpg",
+      "title": "A low-level latch makes the clock enable stable during the high pulse"
+    },
+    {
+      "key": "C-20",
+      "lesson": 38,
+      "day": 7,
+      "anchor": "c-20-spend-noncritical-slack-on-power-distinguish-design-verification-from-manufacturing-test",
+      "path": "Resources/sources/handwritten/scan-c/h20.jpg",
+      "title": "Spend noncritical slack on power; distinguish design verification from manufacturing test"
+    },
+    {
+      "key": "C-21",
+      "lesson": 39,
+      "day": 7,
+      "anchor": "c-21-structural-tests-target-a-fault-model",
+      "path": "Resources/sources/handwritten/scan-c/h21.jpg",
+      "title": "Structural tests target a fault model"
+    },
+    {
+      "key": "C-22",
+      "lesson": 39,
+      "day": 7,
+      "anchor": "c-22-activate-the-fault-and-observe-the-difference",
+      "path": "Resources/sources/handwritten/scan-c/h22.jpg",
+      "title": "Activate the fault and observe the difference"
+    },
+    {
+      "key": "C-23",
+      "lesson": 39,
+      "day": 7,
+      "anchor": "c-23-five-nand-patterns-and-the-counter-state-problem",
+      "path": "Resources/sources/handwritten/scan-c/h23.jpg",
+      "title": "Five NAND patterns and the counter-state problem"
+    },
+    {
+      "key": "C-24",
+      "lesson": 40,
+      "day": 7,
+      "anchor": "c-24-the-scan-mux-chooses-functional-data-or-serial-test-data",
+      "path": "Resources/sources/handwritten/scan-c/h24.jpg",
+      "title": "The scan mux chooses functional data or serial test data"
+    },
+    {
+      "key": "D-01",
+      "lesson": 40,
+      "day": 7,
+      "anchor": "d-01-follow-the-serial-bits-through-shift-capture-and-readout",
+      "path": "Resources/sources/handwritten/scan-d/h01.jpg",
+      "title": "Follow the serial bits through shift, capture and readout"
+    },
+    {
+      "key": "D-02",
+      "lesson": 40,
+      "day": 7,
+      "anchor": "d-02-scan-insertion-is-a-logical-and-physical-flow",
+      "path": "Resources/sources/handwritten/scan-d/h02.jpg",
+      "title": "Scan insertion is a logical and physical flow"
+    },
+    {
+      "key": "D-03",
+      "lesson": 42,
+      "day": 7,
+      "anchor": "d-03-write-both-propagation-paths-and-check-reconvergence",
+      "path": "Resources/sources/handwritten/scan-d/h03.jpg",
+      "title": "Write both propagation paths and check reconvergence"
+    },
+    {
+      "key": "D-04",
+      "lesson": 42,
+      "day": 7,
+      "anchor": "d-04-controlling-values-and-a-complete-nand-test",
+      "path": "Resources/sources/handwritten/scan-d/h04.jpg",
+      "title": "Controlling values and a complete NAND test"
+    },
+    {
+      "key": "N-01",
+      "lesson": 42,
+      "day": 7,
+      "anchor": "n-01-backtrack-the-failed-y-path-and-detect-the-fault-at-z",
+      "path": "Resources/sources/handwritten/notebook-atpg/h01.jpg",
+      "title": "Backtrack the failed Y path and detect the fault at Z"
+    },
+    {
+      "key": "D-05",
+      "lesson": 43,
+      "day": 8,
+      "anchor": "d-05-move-selected-test-functions-onto-the-chip",
+      "path": "Resources/sources/handwritten/scan-d/h05.jpg",
+      "title": "Move selected test functions onto the chip"
+    },
+    {
+      "key": "D-06",
+      "lesson": 43,
+      "day": 8,
+      "anchor": "d-06-the-bist-blocks-each-have-a-specific-role",
+      "path": "Resources/sources/handwritten/scan-d/h06.jpg",
+      "title": "The BIST blocks each have a specific role"
+    },
+    {
+      "key": "D-07",
+      "lesson": 43,
+      "day": 8,
+      "anchor": "d-07-work-out-the-seven-state-lfsr-and-the-rare-pattern-problem",
+      "path": "Resources/sources/handwritten/scan-d/h07.jpg",
+      "title": "Work out the seven-state LFSR and the rare-pattern problem"
+    },
+    {
+      "key": "D-08",
+      "lesson": 43,
+      "day": 8,
+      "anchor": "d-08-signature-compression-trades-data-volume-for-aliasing-risk",
+      "path": "Resources/sources/handwritten/scan-d/h08.jpg",
+      "title": "Signature compression trades data volume for aliasing risk"
+    },
+    {
+      "key": "D-09",
+      "lesson": 44,
+      "day": 8,
+      "anchor": "d-09-feol-forms-devices-beol-connects-them",
+      "path": "Resources/sources/handwritten/scan-d/h09.jpg",
+      "title": "FEOL forms devices; BEOL connects them"
+    },
+    {
+      "key": "D-10",
+      "lesson": 44,
+      "day": 8,
+      "anchor": "d-10-wire-dimensions-set-resistance-and-manufacturing-behavior",
+      "path": "Resources/sources/handwritten/scan-d/h10.jpg",
+      "title": "Wire dimensions set resistance and manufacturing behavior"
+    },
+    {
+      "key": "D-11",
+      "lesson": 44,
+      "day": 8,
+      "anchor": "d-11-capacitance-comes-from-several-geometric-relationships",
+      "path": "Resources/sources/handwritten/scan-d/h11.jpg",
+      "title": "Capacitance comes from several geometric relationships"
+    },
+    {
+      "key": "D-12",
+      "lesson": 45,
+      "day": 8,
+      "anchor": "d-12-coupling-acts-on-the-difference-between-two-voltages",
+      "path": "Resources/sources/handwritten/scan-d/h12.jpg",
+      "title": "Coupling acts on the difference between two voltages"
+    },
+    {
+      "key": "D-13",
+      "lesson": 45,
+      "day": 8,
+      "anchor": "d-13-a-quiet-victim-can-receive-a-noise-pulse",
+      "path": "Resources/sources/handwritten/scan-d/h13.jpg",
+      "title": "A quiet victim can receive a noise pulse"
+    },
+    {
+      "key": "D-14",
+      "lesson": 45,
+      "day": 8,
+      "anchor": "d-14-antenna-rules-and-lef-describe-different-physical-obligations",
+      "path": "Resources/sources/handwritten/scan-d/h14.jpg",
+      "title": "Antenna rules and LEF describe different physical obligations"
+    },
+    {
+      "key": "D-15",
+      "lesson": 47,
+      "day": 8,
+      "anchor": "d-15-hierarchy-needs-interface-budgets-not-just-partitions",
+      "path": "Resources/sources/handwritten/scan-d/h15.jpg",
+      "title": "Hierarchy needs interface budgets, not just partitions"
+    },
+    {
+      "key": "D-16",
+      "lesson": 47,
+      "day": 8,
+      "anchor": "d-16-floorplanning-defines-the-space-available-for-implementation",
+      "path": "Resources/sources/handwritten/scan-d/h16.jpg",
+      "title": "Floorplanning defines the space available for implementation"
+    },
+    {
+      "key": "D-17",
+      "lesson": 47,
+      "day": 8,
+      "anchor": "d-17-utilization-io-direction-and-package-access",
+      "path": "Resources/sources/handwritten/scan-d/h17.jpg",
+      "title": "Utilization, I/O direction and package access"
+    },
+    {
+      "key": "D-18",
+      "lesson": 47,
+      "day": 8,
+      "anchor": "d-18-macro-location-shape-and-halos-affect-routability",
+      "path": "Resources/sources/handwritten/scan-d/h18.jpg",
+      "title": "Macro location, shape and halos affect routability"
+    },
+    {
+      "key": "D-19",
+      "lesson": 48,
+      "day": 8,
+      "anchor": "d-19-legal-orientation-and-the-beginning-of-the-power-network",
+      "path": "Resources/sources/handwritten/scan-d/h19.jpg",
+      "title": "Legal orientation and the beginning of the power network"
+    },
+    {
+      "key": "D-20",
+      "lesson": 48,
+      "day": 8,
+      "anchor": "d-20-meshes-spread-current-electromigration-sets-reliability-limits",
+      "path": "Resources/sources/handwritten/scan-d/h20.jpg",
+      "title": "Meshes spread current; electromigration sets reliability limits"
+    },
+    {
+      "key": "D-21",
+      "lesson": 48,
+      "day": 8,
+      "anchor": "d-21-separate-steady-ir-drop-from-transient-droop-and-decap-support",
+      "path": "Resources/sources/handwritten/scan-d/h21.jpg",
+      "title": "Separate steady IR drop from transient droop and decap support"
+    },
+    {
+      "key": "D-22",
+      "lesson": 49,
+      "day": 9,
+      "anchor": "d-22-placement-makes-later-routing-possible",
+      "path": "Resources/sources/handwritten/scan-d/h22.jpg",
+      "title": "Placement makes later routing possible"
+    },
+    {
+      "key": "D-23",
+      "lesson": 49,
+      "day": 9,
+      "anchor": "d-23-hpwl-is-a-bounding-box-estimate-not-a-routed-tree",
+      "path": "Resources/sources/handwritten/scan-d/h23.jpg",
+      "title": "HPWL is a bounding-box estimate, not a routed tree"
+    },
+    {
+      "key": "D-24",
+      "lesson": 49,
+      "day": 9,
+      "anchor": "d-24-density-and-legality-complete-the-placement-objective",
+      "path": "Resources/sources/handwritten/scan-d/h24.jpg",
+      "title": "Density and legality complete the placement objective"
+    },
+    {
+      "key": "E-01",
+      "lesson": 49,
+      "day": 9,
+      "anchor": "e-01-reorder-scan-chains-and-reserve-spare-cells-deliberately",
+      "path": "Resources/sources/handwritten/scan-e/h01.jpg",
+      "title": "Reorder scan chains and reserve spare cells deliberately"
+    },
+    {
+      "key": "E-02",
+      "lesson": 51,
+      "day": 9,
+      "anchor": "e-02-replace-the-ideal-clock-assumption-with-a-physical-network",
+      "path": "Resources/sources/handwritten/scan-e/h02.jpg",
+      "title": "Replace the ideal-clock assumption with a physical network"
+    },
+    {
+      "key": "E-03",
+      "lesson": 51,
+      "day": 9,
+      "anchor": "e-03-why-an-extra-buffer-can-reduce-wire-delay",
+      "path": "Resources/sources/handwritten/scan-e/h03.jpg",
+      "title": "Why an extra buffer can reduce wire delay"
+    },
+    {
+      "key": "E-04",
+      "lesson": 51,
+      "day": 9,
+      "anchor": "e-04-global-skew-and-balanced-trees",
+      "path": "Resources/sources/handwritten/scan-e/h04.jpg",
+      "title": "Global skew and balanced trees"
+    },
+    {
+      "key": "E-05",
+      "lesson": 51,
+      "day": 9,
+      "anchor": "e-05-clock-meshes-improve-robustness-at-an-electrical-cost",
+      "path": "Resources/sources/handwritten/scan-e/h05.jpg",
+      "title": "Clock meshes improve robustness at an electrical cost"
+    },
+    {
+      "key": "E-06",
+      "lesson": 51,
+      "day": 9,
+      "anchor": "e-06-recompute-the-333-to-4-ghz-useful-skew-example",
+      "path": "Resources/sources/handwritten/scan-e/h06.jpg",
+      "title": "Recompute the 3.33-to-4 GHz useful-skew example"
+    },
+    {
+      "key": "E-07",
+      "lesson": 51,
+      "day": 9,
+      "anchor": "e-07-useful-skew-transfers-margin-and-can-create-hold-failures",
+      "path": "Resources/sources/handwritten/scan-e/h07.jpg",
+      "title": "Useful skew transfers margin and can create hold failures"
+    },
+    {
+      "key": "E-08",
+      "lesson": 52,
+      "day": 9,
+      "anchor": "e-08-global-routing-plans-detailed-routing-creates-geometry",
+      "path": "Resources/sources/handwritten/scan-e/h08.jpg",
+      "title": "Global routing plans; detailed routing creates geometry"
+    },
+    {
+      "key": "E-09",
+      "lesson": 52,
+      "day": 9,
+      "anchor": "e-09-turn-the-routing-space-into-a-layer-aware-graph",
+      "path": "Resources/sources/handwritten/scan-e/h09.jpg",
+      "title": "Turn the routing space into a layer-aware graph"
+    },
+    {
+      "key": "E-10",
+      "lesson": 52,
+      "day": 9,
+      "anchor": "e-10-count-demand-capacity-overflow-and-congestion-separately",
+      "path": "Resources/sources/handwritten/scan-e/h10.jpg",
+      "title": "Count demand, capacity, overflow and congestion separately"
+    },
+    {
+      "key": "E-11",
+      "lesson": 52,
+      "day": 9,
+      "anchor": "e-11-feasibility-can-require-detours-and-grid-size-changes-accuracy",
+      "path": "Resources/sources/handwritten/scan-e/h11.jpg",
+      "title": "Feasibility can require detours, and grid size changes accuracy"
+    },
+    {
+      "key": "E-12",
+      "lesson": 52,
+      "day": 9,
+      "anchor": "e-12-track-pitch-must-leave-room-for-both-wires-and-vias",
+      "path": "Resources/sources/handwritten/scan-e/h12.jpg",
+      "title": "Track pitch must leave room for both wires and vias"
+    },
+    {
+      "key": "E-13",
+      "lesson": 52,
+      "day": 9,
+      "anchor": "e-13-post-route-repair-changes-the-circuit-and-must-be-analyzed-again",
+      "path": "Resources/sources/handwritten/scan-e/h13.jpg",
+      "title": "Post-route repair changes the circuit and must be analyzed again"
+    },
+    {
+      "key": "E-14",
+      "lesson": 52,
+      "day": 9,
+      "anchor": "e-14-redundant-vias-and-metal-fill-protect-different-aspects-of-fabrication",
+      "path": "Resources/sources/handwritten/scan-e/h14.jpg",
+      "title": "Redundant vias and metal fill protect different aspects of fabrication"
+    },
+    {
+      "key": "E-15",
+      "lesson": 53,
+      "day": 9,
+      "anchor": "e-15-circuit-extraction-and-parasitic-extraction-answer-different-questions",
+      "path": "Resources/sources/handwritten/scan-e/h15.jpg",
+      "title": "Circuit extraction and parasitic extraction answer different questions"
+    },
+    {
+      "key": "E-16",
+      "lesson": 53,
+      "day": 9,
+      "anchor": "e-16-characterized-patterns-make-full-chip-extraction-practical",
+      "path": "Resources/sources/handwritten/scan-e/h16.jpg",
+      "title": "Characterized patterns make full-chip extraction practical"
+    },
+    {
+      "key": "E-17",
+      "lesson": 53,
+      "day": 9,
+      "anchor": "e-17-drc-checks-geometry-erc-checks-electrical-construction",
+      "path": "Resources/sources/handwritten/scan-e/h17.jpg",
+      "title": "DRC checks geometry; ERC checks electrical construction"
+    },
+    {
+      "key": "E-18",
+      "lesson": 53,
+      "day": 9,
+      "anchor": "e-18-lvs-and-signoff-must-refer-to-the-same-final-design",
+      "path": "Resources/sources/handwritten/scan-e/h18.jpg",
+      "title": "LVS and signoff must refer to the same final design"
+    },
+    {
+      "key": "E-19",
+      "lesson": 53,
+      "day": 9,
+      "anchor": "e-19-ecos-change-the-evidence-tapeout-releases-a-verified-layout",
+      "path": "Resources/sources/handwritten/scan-e/h19.jpg",
+      "title": "ECOs change the evidence; tapeout releases a verified layout"
     }
   ],
   "empty_upload": {
     "path": "Resources/Data/Scan-Empty-Upload.pdf",
     "bytes": 0
-  }
+  },
+  "october_upload_pages": 68,
+  "readable_handwritten_pages": 128
 }
