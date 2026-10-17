@@ -251,16 +251,21 @@ def revision_scans(folder,entries):
         digest=hashlib.sha256(source.read_bytes()).hexdigest()
         if entry.get('source_sha256'):
             assert digest==entry['source_sha256'],f'Original source changed: {source}'
-        page=entry['page'];prefix=assets/f'original-{page:02d}'
-        subprocess.run([str(pdftoppm()),'-f',str(page),'-l',str(page),
-            '-singlefile','-r','160','-png',str(source),str(prefix)],
-            capture_output=True,check=True)
-        path=prefix.with_suffix('.png')
+        page=entry['page'];prefix=assets/f'{source.stem}-{page:02d}-{digest[:8]}'
+        if source.suffix.lower()=='.pdf':
+            subprocess.run([str(pdftoppm()),'-f',str(page),'-l',str(page),
+                '-singlefile','-r','160','-png',str(source),str(prefix)],
+                capture_output=True,check=True)
+            path=prefix.with_suffix('.png')
+        else:
+            # Use canonical full-page scans directly, without recompression.
+            with PILImage.open(source) as original:original.verify()
+            path=source
         if entry.get('crop_top_ratio'):
             with PILImage.open(path) as original:
                 top=round(original.height*entry['crop_top_ratio'])
                 cropped=original.crop((0,top,original.width,original.height))
-            path=assets/f'original-{page:02d}-week-portion.png';cropped.save(path)
+            path=assets/f'{prefix.name}-week-portion.png';cropped.save(path)
         records.append({**entry,'path':path,'source_sha256':digest})
     return records
 

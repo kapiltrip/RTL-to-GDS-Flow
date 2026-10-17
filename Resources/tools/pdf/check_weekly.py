@@ -102,8 +102,15 @@ def check(record):
         for index,scan in enumerate(scans,1):
             page=len(parts)+index-1
             assert reader.get_destination_page_number(names[f'handwritten-{index}'])==page
-            with Image.open(scan['path']) as original:expected=pixels(original)
-            assert expected in {pixels(saved.image) for saved in reader.pages[page].images},(path.name,index,'Handwriting changed')
+            embedded=list(reader.pages[page].images)
+            if scan['path'].suffix.lower() in ('.jpg','.jpeg'):
+                # pypdf's image-export helper can re-encode JPEGs. Check the
+                # native DCT stream instead: ReportLab preserves it verbatim.
+                original=scan['path'].read_bytes()
+                assert any(saved.indirect_reference.get_object().get_data()==original for saved in embedded),(path.name,index,'Original JPEG changed')
+            else:
+                with Image.open(scan['path']) as original:expected=pixels(original)
+                assert expected in {pixels(saved.image) for saved in embedded},(path.name,index,'Handwriting changed')
             handwritten_figures+=1
     output=QA/path.stem;output.mkdir(exist_ok=True)
     (output/'extracted.txt').write_text(text,encoding='utf-8')

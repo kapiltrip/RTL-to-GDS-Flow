@@ -36,6 +36,7 @@ REFERENCES = [
 WEEKLY = [
     ('Revision/Week 01 - Revision.pdf', 'Week 1 revision', 'Short revision with detailed behavioural synthesis'),
     ('Revision/Week 02 - Revision.pdf', 'Week 2 revision', 'Implementation, verification, test, manufacturing and Tcl; four handwritten pages'),
+    ('Revision/Week 03 - Revision.pdf', 'Week 3 revision', 'Verilog, simulation, coverage and Bambu HLS; six handwritten pages'),
     ('Assignments/Original Course Questions - Weeks 01 to 12.pdf', 'Original course questions', '120 original questions across Weeks 1-12'),
     ('Assignments/Practice MCQs - 50 per Week.pdf', '50 practice MCQs per week', '600 newly authored questions across Weeks 1-12'),
 ]
@@ -158,7 +159,7 @@ def main():
     if weekly:
         text += ('\n## Weekly revision and assignments\n\n' + weekly_table(DOC / 'README.md') + '\n\n'
                  'The weekly packs are in the separate [Revision](../Revision/README.md) and '
-                 '[Assignments](../Assignments/README.md) folders. Revision currently covers Weeks 1 and 2; '
+                 '[Assignments](../Assignments/README.md) folders. Revision currently covers Weeks 1 to 3; '
                  'both question sets cover all 12 weeks. The [browser practice download]('
                  + REPOSITORY + '/raw/refs/heads/main/Assignments/Practice/Browser%20Practice%20-%20All%20Weeks.zip) '
                  'lets you fill answers and reveal marks later without displaying correct answers.\n')

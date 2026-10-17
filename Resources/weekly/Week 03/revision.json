@@ -1,0 +1,58 @@
+{
+  "sections": [
+    "Types",
+    "Widths",
+    "Operators",
+    "Modules",
+    "Time",
+    "Assignments",
+    "Queues",
+    "Coverage",
+    "HLS",
+    "Recall/sources"
+  ],
+  "handwritten": [
+    {
+      "source": "../../sources/handwritten/scan/page-02.jpg",
+      "page": 2,
+      "title": "Your notes: HDL foundations",
+      "caption": "Complete Part 2 original page 2. The lower HDL section introduces Week 3 concurrency, time, multiple drivers and bit-accurate data; the earlier package/Tcl material belongs to Week 2. See typed section 1.",
+      "source_sha256": "8f200c6393a0b98a38b5cb40e652428ce7ae79648c2421f8af22f33e7e74315c"
+    },
+    {
+      "source": "../../sources/handwritten/scan/page-03.jpg",
+      "page": 3,
+      "title": "Your notes: values, types and events",
+      "caption": "Complete Part 2 original page 3. Typed sections 1-5 explain nets/variables, unknowns and wildcards, sized constants, parameters, strings, modules and four-state edge events.",
+      "source_sha256": "2b49d43d075991929b5603fadd732b698dfef563c48580186bf87adc21ad76ff"
+    },
+    {
+      "source": "../../sources/handwritten/scan/page-04.jpg",
+      "page": 4,
+      "title": "Your notes: functions and assignments",
+      "caption": "Complete Part 2 original page 4. Typed sections 4, 6 and 8 clarify traditional function/task timing, RHS evaluation versus NBA updates, system tasks and functional verification.",
+      "source_sha256": "37583d9a2cdf7b9f02a524e9b777c5b289d3099e3dfbddb10438a30e4483c814"
+    },
+    {
+      "source": "../../sources/handwritten/scan-a/h01.jpg",
+      "page": 1,
+      "title": "Your notes: testbench and coverage",
+      "caption": "Complete Scan A original page 1. Typed section 8 explains DUT, clock/reset stimulus, VCD, line/branch/state/toggle coverage and a separate functional coverage model.",
+      "source_sha256": "a7fb6ffd99f14c0f6c30bfe93b4af4fa9904c0c1fb83f9c929330b9db431152c"
+    },
+    {
+      "source": "../../sources/handwritten/scan-a/h02.jpg",
+      "page": 2,
+      "title": "Your notes: events and races",
+      "caption": "Complete Scan A original page 2. Typed sections 6-7 explain evaluation/update events, simulation time, the illustrative time wheel, event propagation and race conditions.",
+      "source_sha256": "1ce3a85bb2a082c37b833fe9728e786217d272013885e6c5622c338473c35ca1"
+    },
+    {
+      "source": "../../sources/handwritten/scan-a/h03.jpg",
+      "page": 3,
+      "title": "Your notes: stratified event queue",
+      "caption": "Complete Scan A original page 3. Typed section 7 traces the classic Verilog event regions and why display and settled observations can see different values at one timestamp.",
+      "source_sha256": "32c9711d53c2f3e331708595ded7809ed60f98eb171692984edba6e4bab02917"
+    }
+  ]
+}
