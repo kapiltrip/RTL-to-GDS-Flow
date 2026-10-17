@@ -1,0 +1,4039 @@
+{
+  "course": "VLSI Design Flow: RTL to GDS",
+  "courseId": "noc26_ee147",
+  "week": 4,
+  "capturedOn": "2026-10-17",
+  "questions": [
+    {
+      "html": "<div class=\"question-html-content\">Which of the following statements is/are correct regarding RTL synthesis of an always block in an RTL model written in Verilog?<br>\nA.An always block can never be synthesized to a combinational logic.<br>\nB.An always block can sometimes be synthesized to a latch.<br>\nC.An always block can sometimes be synthesized to a flip-flop.</div>",
+      "images": [],
+      "number": 1,
+      "options": [
+        "only A",
+        "only B",
+        "only C",
+        "only A, B",
+        "only A, C",
+        "only B, C",
+        "All statements are correct",
+        "No statement is correct"
+      ],
+      "text": "Which of the following statements is/are correct regarding RTL synthesis of an always block in an RTL model written in Verilog?\nA.An always block can never be synthesized to a combinational logic.\nB.An always block can sometimes be synthesized to a latch.\nC.An always block can sometimes be synthesized to a flip-flop.",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All statements are correct",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "No statement is correct",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the following statements is/are correct regarding RTL synthesis of an always block in an RTL model written in Verilog?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\nA.An always block can never be synthesized to a combinational logic.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\nB.An always block can sometimes be synthesized to a latch.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\nC.An always block can sometimes be synthesized to a flip-flop.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "d7acd857e2a60d87",
+      "answerHash": "f6ec4f2196d783a0e54bf8cf85bf4c820a11d05d604b808f341eee9e2f18219a"
+    },
+    {
+      "html": "<div class=\"question-html-content\">Which of the following statements is/are correct regarding RTL synthesis of an RTL model written in Verilog?<br>\nA.The initial block is typically ignored by an RTL synthesis tool.<br>\nB.The delay of 10 specified in the statement:\n<b>reg2 &lt;= #10 reg1</b>\nwill be ignored by the RTL synthesis tool.<br>\nC.System functions such as <b>$display</b> and <b>$monitor</b> are typically synthesized to latches.</div>",
+      "images": [],
+      "number": 2,
+      "options": [
+        "only A",
+        "only B",
+        "only C",
+        "only A, B",
+        "only A, C",
+        "only B, C",
+        "All statements are correct.",
+        "No statement is correct."
+      ],
+      "text": "Which of the following statements is/are correct regarding RTL synthesis of an RTL model written in Verilog?\nA.The initial block is typically ignored by an RTL synthesis tool.\nB.The delay of 10 specified in the statement: reg2 <= #10 reg1 will be ignored by the RTL synthesis tool.\nC.System functions such as $display and $monitor are typically synthesized to latches.",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All statements are correct.",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "No statement is correct.",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the following statements is/are correct regarding RTL synthesis of an RTL model written in Verilog?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\nA.The initial block is typically ignored by an RTL synthesis tool.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\nB.The delay of 10 specified in the statement:\n",
+          "type": "text"
+        },
+        {
+          "text": "reg2 <= #10 reg1",
+          "type": "text"
+        },
+        {
+          "text": "\nwill be ignored by the RTL synthesis tool.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\nC.System functions such as ",
+          "type": "text"
+        },
+        {
+          "text": "$display",
+          "type": "text"
+        },
+        {
+          "text": " and ",
+          "type": "text"
+        },
+        {
+          "text": "$monitor",
+          "type": "text"
+        },
+        {
+          "text": " are typically synthesized to latches.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "a3a439d54b10caa3",
+      "answerHash": "e3df7dfeeb4491bc1cdc89f32c9bde82819c2ff9f3e73c5676cc235ed8330586"
+    },
+    {
+      "html": "<div class=\"question-html-content\">What is the expected RTL synthesis output of the following piece of RTL code?<br><code>module top(a, b, c, s, en, out1, out2);\n<br><span style=\"white-space:pre\">\t</span>input a, b, c, s, en;\n<br><span style=\"white-space:pre\">\t</span>output out1, out2;\n<br><span style=\"white-space:pre\">\t</span>reg out1, out2;\n<br><br><span style=\"white-space:pre\">\t</span>always @(*) begin<br><span style=\"white-space:pre\">\t</span>&nbsp;if (s==1'b0)\n<br><span style=\"white-space:pre\">\t\t</span>out1 = a;<br><span style=\"white-space:pre\">\t</span>&nbsp;else\n<br><span style=\"white-space:pre\">\t\t</span>out1 = b;<br><span style=\"white-space:pre\">\t</span>end\n<br><br><span style=\"white-space:pre\">\t</span>always @(*) begin<br><span style=\"white-space:pre\">\t</span>&nbsp;if (en==1'b1)<br><span style=\"white-space:pre\">\t\t</span>out2 = c;<br>&nbsp;<span style=\"white-space:pre\">\t</span>end<br>endmodule</code></div>",
+      "images": [],
+      "number": 3,
+      "options": [
+        "Both out1 and out2 driven by latches",
+        "Both out1 and out2 driven by flip-flops",
+        "Both out1 and out2 driven by 2-to-1 multiplexers",
+        "out1 driven by a latch and out2 driven by a 2-to-1 multiplexer",
+        "out1 driven by a latch and out2 driven by a flip-flop",
+        "out1 driven by a flip-flop and out2 driven by a 2-to-1 multiplexer",
+        "out1 driven by a flip-flop and out2 driven by a latch",
+        "out1 driven by a 2-to-1 multiplexer and out2 driven by a latch",
+        "out1 driven by a 2-to-1 multiplexer and out2 driven by a flip-flop"
+      ],
+      "text": "What is the expected RTL synthesis output of the following piece of RTL code?\nmodule top(a, b, c, s, en, out1, out2);\n\tinput a, b, c, s, en;\n\toutput out1, out2;\n\treg out1, out2;\n\n\talways @(*) begin\n\t if (s==1'b0)\n\t\tout1 = a;\n\t else\n\t\tout1 = b;\n\tend\n\n\talways @(*) begin\n\t if (en==1'b1)\n\t\tout2 = c;\n \tend\nendmodule",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Both ",
+            "type": "text"
+          },
+          {
+            "text": "out1",
+            "type": "text"
+          },
+          {
+            "text": " and ",
+            "type": "text"
+          },
+          {
+            "text": "out2",
+            "type": "text"
+          },
+          {
+            "text": " driven by latches",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Both ",
+            "type": "text"
+          },
+          {
+            "text": "out1",
+            "type": "text"
+          },
+          {
+            "text": " and ",
+            "type": "text"
+          },
+          {
+            "text": "out2",
+            "type": "text"
+          },
+          {
+            "text": " driven by flip-flops",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Both ",
+            "type": "text"
+          },
+          {
+            "text": "out1",
+            "type": "text"
+          },
+          {
+            "text": " and ",
+            "type": "text"
+          },
+          {
+            "text": "out2",
+            "type": "text"
+          },
+          {
+            "text": " driven by 2-to-1 multiplexers",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "out1",
+            "type": "text"
+          },
+          {
+            "text": " driven by a latch and ",
+            "type": "text"
+          },
+          {
+            "text": "out2",
+            "type": "text"
+          },
+          {
+            "text": " driven by a 2-to-1 multiplexer",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "out1",
+            "type": "text"
+          },
+          {
+            "text": " driven by a latch and ",
+            "type": "text"
+          },
+          {
+            "text": "out2",
+            "type": "text"
+          },
+          {
+            "text": " driven by a flip-flop",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "out1",
+            "type": "text"
+          },
+          {
+            "text": " driven by a flip-flop and ",
+            "type": "text"
+          },
+          {
+            "text": "out2",
+            "type": "text"
+          },
+          {
+            "text": " driven by a 2-to-1 multiplexer",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "out1",
+            "type": "text"
+          },
+          {
+            "text": " driven by a flip-flop and ",
+            "type": "text"
+          },
+          {
+            "text": "out2",
+            "type": "text"
+          },
+          {
+            "text": " driven by a latch",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "out1 ",
+            "type": "text"
+          },
+          {
+            "text": "driven by a 2-to-1 multiplexer and ",
+            "type": "text"
+          },
+          {
+            "text": "out2",
+            "type": "text"
+          },
+          {
+            "text": " driven by a latch",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "out1",
+            "type": "text"
+          },
+          {
+            "text": " driven by a 2-to-1 multiplexer and ",
+            "type": "text"
+          },
+          {
+            "text": "out2",
+            "type": "text"
+          },
+          {
+            "text": " driven by a flip-flop",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "What is the expected RTL synthesis output of the following piece of RTL code?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "module top(a, b, c, s, en, out1, out2);\n\tinput a, b, c, s, en;\n\toutput out1, out2;\n\treg out1, out2;\n\talways @(*) begin\t if (s==1'b0)\n\t\tout1 = a;\t else\n\t\tout1 = b;\tend\n\talways @(*) begin\t if (en==1'b1)\t\tout2 = c; \tendendmodule",
+          "type": "code"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "dd5211a1c3704807",
+      "answerHash": "f82dff659e7f0bcaaae4640143a1b6d02ee54afe0db18f8d6498bcf98b317610"
+    },
+    {
+      "html": "<div class=\"question-html-content\">What will be the typical RTL synthesis result of the following piece of RTL code?<br><code>\nmodule top1(in1, clk, out1);\n<br><span style=\"white-space:pre\">\t</span>input in1, clk;<br><span style=\"white-space:pre\">\t</span>output out1;<br><span style=\"white-space:pre\">\t</span>reg reg1, reg2, reg3, out1;<br><br><span style=\"white-space:pre\">\t</span>always @(posedge clk)<br><span style=\"white-space:pre\">\t</span>begin<br><span style=\"white-space:pre\">\t</span>&nbsp;reg1 = in1;<br><span style=\"white-space:pre\">\t</span>&nbsp;reg2 = reg1;<br><span style=\"white-space:pre\">\t</span>&nbsp;reg3 = reg2;<br><span style=\"white-space:pre\">\t</span>&nbsp;out1 = reg3;<br><span style=\"white-space:pre\">\t</span>end\n<br>endmodule</code></div>",
+      "images": [],
+      "number": 4,
+      "options": [
+        "One 2-to-1 multiplexer",
+        "One latch",
+        "One flip-flop",
+        "3-bit shift register",
+        "4-bit shift register"
+      ],
+      "text": "What will be the typical RTL synthesis result of the following piece of RTL code?\nmodule top1(in1, clk, out1);\n\tinput in1, clk;\n\toutput out1;\n\treg reg1, reg2, reg3, out1;\n\n\talways @(posedge clk)\n\tbegin\n\t reg1 = in1;\n\t reg2 = reg1;\n\t reg3 = reg2;\n\t out1 = reg3;\n\tend\nendmodule",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "One 2-to-1 multiplexer",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "One latch",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "One flip-flop",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "3-bit shift register",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "4-bit shift register",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "What will be the typical RTL synthesis result of the following piece of RTL code?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\nmodule top1(in1, clk, out1);\n\tinput in1, clk;\toutput out1;\treg reg1, reg2, reg3, out1;\talways @(posedge clk)\tbegin\t reg1 = in1;\t reg2 = reg1;\t reg3 = reg2;\t out1 = reg3;\tend\nendmodule",
+          "type": "code"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "22e3ea53bde19cfd",
+      "answerHash": "23f67169d94bbde02e663526c40f43778195de9852472309d07161fe2ac4c464"
+    },
+    {
+      "html": "<div class=\"question-html-content \"><span>Consider the Boolean function of three Boolean variables </span>   <span class=\"math-inline\" style=\"display: inline-block; vertical-align: baseline; margin: 0px; padding: 0px; font-size: inherit; line-height: normal;\">$x_1,  x_2$</span><span>, and </span>   <span class=\"math-inline\" style=\"display: inline-block; vertical-align: baseline; margin: 0px; padding: 0px; font-size: inherit; line-height: normal;\">$x_3$</span><span>. The hypercube representation of the function is shown below. </span>   <br>   <div class=\"quiz-content-image-wrapper inline-block max-w-full\"><img alt=\"\" class=\"quiz-content-image max-w-full h-auto\" src=\"https://storage.googleapis.com/swayam-node1-production.appspot.com/assets/img/noc26_ee147/a4q4.png\"></div>   <br><span>Which of the following statements is/are correct for the above function?</span>   <br><span> A.</span>   <span class=\"math-inline\" style=\"display: inline-block; vertical-align: baseline; margin: 0px; padding: 0px; font-size: inherit; line-height: normal;\">$x_1'$</span><span> is a prime implicant</span>   <br><span> B.</span>   <span class=\"math-inline\" style=\"display: inline-block; vertical-align: baseline; margin: 0px; padding: 0px; font-size: inherit; line-height: normal;\">$x_2$</span><span> is a prime implicant</span>   <br><span> C.</span>   <span class=\"math-inline\" style=\"display: inline-block; vertical-align: baseline; margin: 0px; padding: 0px; font-size: inherit; line-height: normal;\">$x_2'x_3$</span><span>is a prime implicant</span></div>",
+      "images": [
+        {
+          "alt": "",
+          "url": "https://storage.googleapis.com/swayam-node1-production.appspot.com/assets/img/noc26_ee147/a4q4.png",
+          "path": "Resources/weekly/Week 04/figures/a4q4.png"
+        }
+      ],
+      "number": 5,
+      "options": [
+        "only A",
+        "only B",
+        "only C",
+        "only A, B",
+        "only A, C",
+        "only B, C",
+        "All statements are correct.",
+        "No statement is correct."
+      ],
+      "text": "Consider the Boolean function of three Boolean variables $x_1, x_2$, and $x_3$. The hypercube representation of the function is shown below.\n\n\nWhich of the following statements is/are correct for the above function?\nA. $x_1'$ is a prime implicant\nB. $x_2$ is a prime implicant\nC. $x_2'x_3$is a prime implicant",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All statements are correct.",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "No statement is correct.",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Consider the Boolean function of three Boolean variables ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "html": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub></math>",
+          "type": "mathml"
+        },
+        {
+          "text": ", and ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "html": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mi>x</mi><mn>3</mn></msub></math>",
+          "type": "mathml"
+        },
+        {
+          "text": ". The hypercube representation of the function is shown below. ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "alt": "",
+          "type": "image",
+          "url": "https://storage.googleapis.com/swayam-node1-production.appspot.com/assets/img/noc26_ee147/a4q4.png"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the following statements is/are correct for the above function?",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " A.",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "html": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msubsup><mi>x</mi><mn>1</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup></math>",
+          "type": "mathml"
+        },
+        {
+          "text": " is a prime implicant",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " B.",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "html": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mi>x</mi><mn>2</mn></msub></math>",
+          "type": "mathml"
+        },
+        {
+          "text": " is a prime implicant",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " C.",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "html": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msubsup><mi>x</mi><mn>2</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><msub><mi>x</mi><mn>3</mn></msub></math>",
+          "type": "mathml"
+        },
+        {
+          "text": "is a prime implicant",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "875ddc6b3b395bb7",
+      "answerHash": "3d46da511a2ce1858199fee64ea8642e8ba4d5fed1f3b9cd21881c99be2aca4e"
+    },
+    {
+      "html": "<div class=\"question-html-content\">Which of the following statements is/are correct about implicants and prime implicants?<br>\n\nA.An implicant of a function can include the corners of the OFF-set of the function.<br>\nB.An implicant of a function can include corners of the DC-set of the function.<br>\nC.A prime implicant is an implicant of a function that is not covered by any other implicant of that function.</div>",
+      "images": [],
+      "number": 6,
+      "options": [
+        "only A",
+        "only B",
+        "only C",
+        "only A, B",
+        "only A, C",
+        "only B, C",
+        "All statements are correct",
+        "No statement is correct"
+      ],
+      "text": "Which of the following statements is/are correct about implicants and prime implicants?\nA.An implicant of a function can include the corners of the OFF-set of the function.\nB.An implicant of a function can include corners of the DC-set of the function.\nC.A prime implicant is an implicant of a function that is not covered by any other implicant of that function.",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All statements are correct",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "No statement is correct",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the following statements is/are correct about implicants and prime implicants?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n\nA.An implicant of a function can include the corners of the OFF-set of the function.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\nB.An implicant of a function can include corners of the DC-set of the function.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\nC.A prime implicant is an implicant of a function that is not covered by any other implicant of that function.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "c2f3ff769d517748",
+      "answerHash": "b26d0b820918370eb974161c82003ffd1af25bfc76f60a1ce291acef17d9027a"
+    },
+    {
+      "html": "<div class=\"question-html-content\">Which of the following statements is/are correct about the heuristic minimizer in logic optimization?<br>\n\nA.A heuristic minimizer may not produce the exact minimum cover for a Boolean function. <br>\nB.A heuristic minimizer starts with an initial cover and iteratively improves the solution by applying operators to it. <br>\nC.A heuristic minimizer is typically slower than the exact minimizer, especially for large problems.</div>",
+      "images": [],
+      "number": 7,
+      "options": [
+        "only A",
+        "only B",
+        "only C",
+        "only A, B",
+        "only A, C",
+        "only B, C",
+        "All statements are correct",
+        "No statement is correct"
+      ],
+      "text": "Which of the following statements is/are correct about the heuristic minimizer in logic optimization?\nA.A heuristic minimizer may not produce the exact minimum cover for a Boolean function.\nB.A heuristic minimizer starts with an initial cover and iteratively improves the solution by applying operators to it.\nC.A heuristic minimizer is typically slower than the exact minimizer, especially for large problems.",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All statements are correct",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "No statement is correct",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the following statements is/are correct about the heuristic minimizer in logic optimization?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n\nA.A heuristic minimizer may not produce the exact minimum cover for a Boolean function. ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\nB.A heuristic minimizer starts with an initial cover and iteratively improves the solution by applying operators to it. ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\nC.A heuristic minimizer is typically slower than the exact minimizer, especially for large problems.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "def030fd1b0843a0",
+      "answerHash": "836d18dcab3ed99f8e76368f15adb0b323130b7f449edf1344aae3e3c8e82207"
+    },
+    {
+      "html": "<div class=\"question-html-content\">Which of the following statements is/are correct about optimizations done in RTL synthesis?<br>\n\nA.The primary objective of resource sharing is to reduce the area.<br>\nB.Resource sharing can sometimes lead to an increase in the delay of the critical path. <br>\nC.Unsharing resources can sometimes reduce the delay of the critical path.</div>",
+      "images": [],
+      "number": 8,
+      "options": [
+        "only A",
+        "only B",
+        "only C",
+        "only A, B",
+        "only A, C",
+        "only B, C",
+        "All statements are correct",
+        "No statement is correct"
+      ],
+      "text": "Which of the following statements is/are correct about optimizations done in RTL synthesis?\nA.The primary objective of resource sharing is to reduce the area.\nB.Resource sharing can sometimes lead to an increase in the delay of the critical path.\nC.Unsharing resources can sometimes reduce the delay of the critical path.",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All statements are correct",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "No statement is correct",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the following statements is/are correct about optimizations done in RTL synthesis?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n\nA.The primary objective of resource sharing is to reduce the area.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\nB.Resource sharing can sometimes lead to an increase in the delay of the critical path. ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\nC.Unsharing resources can sometimes reduce the delay of the critical path.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "d2c2e0426fcc3d3e",
+      "answerHash": "3e6bf7713c7bbf1de956d7bb565720cde31bf966dc0218592632f95ec4de52b1"
+    },
+    {
+      "html": "<div class=\"question-html-content\">Which of the following statements is/are correct about synthesis of a <b>for</b> loop in Verilog?<br>\n\nA.A for loop is not synthesizable if the number of iterations cannot be statically known or derived by the synthesis tool. <br>B.A for loop can be unrolled during RTL synthesis if the number of iterations is fixed or can be derived statically by the tool.\n<br>C.A for loop is never synthesized by an RTL synthesis tool.</div>",
+      "images": [],
+      "number": 9,
+      "options": [
+        "only A",
+        "only B",
+        "only C",
+        "only A, B",
+        "only A, C",
+        "only B, C",
+        "All statements are correct",
+        "No statement is correct"
+      ],
+      "text": "Which of the following statements is/are correct about synthesis of a for loop in Verilog?\nA.A for loop is not synthesizable if the number of iterations cannot be statically known or derived by the synthesis tool.\nB.A for loop can be unrolled during RTL synthesis if the number of iterations is fixed or can be derived statically by the tool.\nC.A for loop is never synthesized by an RTL synthesis tool.",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All statements are correct",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "No statement is correct",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the following statements is/are correct about synthesis of a ",
+          "type": "text"
+        },
+        {
+          "text": "for",
+          "type": "text"
+        },
+        {
+          "text": " loop in Verilog?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n\nA.A for loop is not synthesizable if the number of iterations cannot be statically known or derived by the synthesis tool. ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "B.A for loop can be unrolled during RTL synthesis if the number of iterations is fixed or can be derived statically by the tool.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "C.A for loop is never synthesized by an RTL synthesis tool.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "5944bb0c68ac6515",
+      "answerHash": "e484e0779a8422456f7e9cc760fc207d385cb603310ded46d0901b5984e6694a"
+    },
+    {
+      "html": "<div class=\"question-html-content\">Consider the following statements about the tools ICARUS, GTKWave, and COVERED used in simulation-based verification. <br>A.We can use the ICARUS tool to write a VCD file containing simulation results for a given Verilog design and testbench. <br>B.We can use GTKWave to display the results from a VCD file.\n<br>C.The COVERED tool is used to obtain a maximal cover for a Boolean function.\n<br><br>Which of the above statements is/are correct?</div>",
+      "images": [],
+      "number": 10,
+      "options": [
+        "only A",
+        "only B",
+        "only C",
+        "only A, B",
+        "only A, C",
+        "only B, C",
+        "All statements are correct",
+        "No statement is correct"
+      ],
+      "text": "Consider the following statements about the tools ICARUS, GTKWave, and COVERED used in simulation-based verification.\nA.We can use the ICARUS tool to write a VCD file containing simulation results for a given Verilog design and testbench.\nB.We can use GTKWave to display the results from a VCD file.\nC.The COVERED tool is used to obtain a maximal cover for a Boolean function.\n\nWhich of the above statements is/are correct?",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All statements are correct",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "No statement is correct",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Consider the following statements about the tools ICARUS, GTKWave, and COVERED used in simulation-based verification. ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "A.We can use the ICARUS tool to write a VCD file containing simulation results for a given Verilog design and testbench. ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "B.We can use GTKWave to display the results from a VCD file.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "C.The COVERED tool is used to obtain a maximal cover for a Boolean function.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the above statements is/are correct?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "847a8aeb259d20c8",
+      "answerHash": "6e22af02bc073af00cbe8d1a0af48702fbb324dcbcc848f65f3b40c6face7ea2"
+    }
+  ],
+  "sourceUrl": "https://onlinecourses.nptel.ac.in/e-learning/course/noc26_ee147?unitId=85&assessmentId=181",
+  "license": "CC-BY-NC-SA; NPTEL attribution retained"
+}

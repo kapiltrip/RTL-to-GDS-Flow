@@ -1,0 +1,606 @@
+{
+  "week": 12,
+  "kind": "Original practice, not verified PYQs",
+  "questions": [
+    {
+      "number": 1,
+      "text": "Consider clock timing. A. Insertion delay needs a defined source and sink. B. Equal insertion delays at two sinks imply zero pairwise skew under the same reference. C. Every sink's insertion delay equals the data-path cycle count. Which statements are correct?",
+      "options": [
+        "A and B only",
+        "B and C only",
+        "A only",
+        "A, B and C"
+      ],
+      "salt": "5692a5bbaefd7bc8",
+      "answerHash": "dc472d8e11853fedd47944aba308e46a216b4d8fe366c4840d4108d11844b043"
+    },
+    {
+      "number": 2,
+      "text": "Define skew as capture arrival minus launch arrival. Clock arrivals are 0.55 ns at capture and 0.35 ns at launch. What is skew?",
+      "options": [
+        "+0.20 ns",
+        "+0.90 ns",
+        "+0.35 ns",
+        "-0.20 ns"
+      ],
+      "salt": "647bd5e3b60dab7f",
+      "answerHash": "e61148644ff816b9adcf7384a189074621576555063a495dfac9669a0c53638e"
+    },
+    {
+      "number": 3,
+      "text": "Two sinks each have clock insertion delay 1 ns relative to the same reference. What is their pairwise skew?",
+      "options": [
+        "2 ns",
+        "0 ns",
+        "1 ns",
+        "-1 ns"
+      ],
+      "salt": "fd91a1dcefd2cde6",
+      "answerHash": "ae379e7d9c046cfa9144172f2958f6f2988776ed687d15a8c66a72ea044047ca"
+    },
+    {
+      "number": 4,
+      "text": "Consider physical clock buffering. A. Sink capacitance loads the clock network. B. Wires affect clock delay and slew. C. Correct logical toggling proves ideal physical delivery. Which statements are correct?",
+      "options": [
+        "A and B only",
+        "A, B and C",
+        "B only",
+        "A and C only"
+      ],
+      "salt": "fd27069603f229aa",
+      "answerHash": "817ac5634713ba7e48fc39a2cc0f088c9b1a1bea5b79805abf4aac7dd799327b"
+    },
+    {
+      "number": 5,
+      "text": "Consider CTS objectives. A. Skew and insertion delay can matter. B. Slew, loading and power can matter. C. A CTS pass alone proves the product algorithm correct. Which statements are correct?",
+      "options": [
+        "B and C only",
+        "A, B and C",
+        "A only",
+        "A and B only"
+      ],
+      "salt": "1144aab047baf3b3",
+      "answerHash": "1afda12bacc7ffb1ed6fb6d3628248ad00344dc21a2a99b8d69ce3178aa4db91"
+    },
+    {
+      "number": 6,
+      "text": "Why may a geometrically symmetric H-tree still have nonzero electrical skew?",
+      "options": [
+        "H-trees cannot contain buffers.",
+        "Loads, parasitics, cell variation and routing details can differ.",
+        "Geometric symmetry guarantees identical electrical conditions in every real design.",
+        "Electrical skew depends only on the number of RTL comments."
+      ],
+      "salt": "09f2b71557f30f5b",
+      "answerHash": "b2941e7840711564cf2d83c4f0b28e5d5c5fd7453f1390d4c33d462aad252c7c"
+    },
+    {
+      "number": 7,
+      "text": "What is one trade-off of a clock mesh compared with a simple tree?",
+      "options": [
+        "Potentially robust clock delivery at the cost of substantial wiring and switching load.",
+        "Guaranteed absence of any routing demand.",
+        "Complete removal of clock drivers.",
+        "Guaranteed zero clock power."
+      ],
+      "salt": "489ec59364de560e",
+      "answerHash": "78c47a9e781342818d2d878a5fb39dd77ba64e5f07f2f059262d32aeec041764"
+    },
+    {
+      "number": 8,
+      "text": "What does useful skew attempt to exploit?",
+      "options": [
+        "Randomly change every clock period.",
+        "Replace every data path with a clock wire.",
+        "Remove all hold checks from signoff.",
+        "Intentional relative clock timing to improve selected timing margins with other checks preserved."
+      ],
+      "salt": "a136afda3ca3d53f",
+      "answerHash": "76b2f8369360aba450826c84640b100903fa5c9f914393bc6497ddbe452c81b2"
+    },
+    {
+      "number": 9,
+      "text": "With capture-minus-launch skew convention, positive useful skew can have what trade-off?",
+      "options": [
+        "Better setup margin but reduced hold margin.",
+        "Worse setup and better hold margin always.",
+        "No timing effect at all.",
+        "Better setup and hold margin by the same amount always."
+      ],
+      "salt": "b16a4f374d9a1737",
+      "answerHash": "6081e36379f8bdefff60b193308fd8e80d25e36f00987383841a94d5f2316965"
+    },
+    {
+      "number": 10,
+      "text": "Nominal setup slack is 60 ps at zero skew. Capture arrives 30 ps later relative to launch, with other quantities fixed. New setup slack is what?",
+      "options": [
+        "30 ps",
+        "-90 ps",
+        "90 ps",
+        "-30 ps"
+      ],
+      "salt": "3beb3def7b7a5ec2",
+      "answerHash": "5dd97c4ef14ed269e9abbedc172bcfc8b4d7863089c1d185fda38166973f8edf"
+    },
+    {
+      "number": 11,
+      "text": "Nominal hold slack is 30 ps at zero skew. Capture arrives 30 ps later relative to launch, with other quantities fixed. New hold slack is what?",
+      "options": [
+        "30 ps",
+        "60 ps",
+        "-60 ps",
+        "0 ps"
+      ],
+      "salt": "2bad4eea7f1d02da",
+      "answerHash": "94005c2186d02c1378751b9d50c2b760e01e2a840ecd05affc76500a8e009fd1"
+    },
+    {
+      "number": 12,
+      "text": "Setup slack at zero skew is 60 ps and hold slack is 30 ps. With k=capture-minus-launch and other values fixed, which skew interval satisfies both ideal checks?",
+      "options": [
+        "-30 ps to +60 ps.",
+        "Any positive skew without a bound.",
+        "+60 ps to +30 ps.",
+        "-60 ps to +30 ps."
+      ],
+      "salt": "96260c5e6e92cd52",
+      "answerHash": "a8b0c5baeb888519b02f5fbf647659706c2cb7961692466f87125de5d655e44a"
+    },
+    {
+      "number": 13,
+      "text": "Why should clock gating cells and their enables receive timing checks?",
+      "options": [
+        "Clock-gating timing applies only to source-code compilation.",
+        "The gating operation must avoid unsafe clock pulses and respect control timing.",
+        "Gated clocks can never glitch under any enable transition.",
+        "Gating eliminates the need for clock distribution."
+      ],
+      "salt": "667b31bc349a93a7",
+      "answerHash": "040e75e9a21a3c9bb97a5db73e5df7fc409ba36a5ff80cb7c3a571df1ea9a005"
+    },
+    {
+      "number": 14,
+      "text": "What is a clock-tree sink?",
+      "options": [
+        "A wafer defect map.",
+        "A source-code file's last line.",
+        "Every signal port regardless of use.",
+        "A destination clock pin or specified endpoint of the clock network."
+      ],
+      "salt": "4421f34ccf7a2d97",
+      "answerHash": "ef25290cb24f8a08f983c40e55fe4f52ad0523171f8c9c9b1a873de8a5b335dc"
+    },
+    {
+      "number": 15,
+      "text": "Source latency is 2.0 ns and modeled network latency is 0.6 ns. What is their total under an additive convention?",
+      "options": [
+        "2.6 ns",
+        "1.4 ns",
+        "0.3 ns",
+        "3.2 ns"
+      ],
+      "salt": "a12faaac3f7223d0",
+      "answerHash": "4fc8812021ef9cc22a1ff943ee65127b6a8ea26a82929bc912571e86ce33e285"
+    },
+    {
+      "number": 16,
+      "text": "What does global routing primarily produce?",
+      "options": [
+        "The original untimed algorithm.",
+        "A manufacturing test response signature.",
+        "A coarse routing plan allocating paths and resources.",
+        "Every final legal wire polygon and via in all cases."
+      ],
+      "salt": "0010c16c1f9b0573",
+      "answerHash": "efdfc883cef2050d5191c575562428b270dd7f4621fe25f33995d0115bd6edfd"
+    },
+    {
+      "number": 17,
+      "text": "What does detailed routing add beyond global routing?",
+      "options": [
+        "Only an ideal zero-resistance connectivity graph.",
+        "Only a package marketing plan.",
+        "Exact tracks, layers, wire segments and vias subject to detailed rules.",
+        "Only a list of function names."
+      ],
+      "salt": "fadcb9e231944ad2",
+      "answerHash": "bc475183e768da93c195769dc031f7fef2679f65a22079f0c2c678a837ff9fc3"
+    },
+    {
+      "number": 18,
+      "text": "When does routing overflow occur on a resource?",
+      "options": [
+        "Demand equals zero.",
+        "Capacity exceeds demand.",
+        "The netlist has more than one module.",
+        "Demand exceeds its available capacity."
+      ],
+      "salt": "57f629948408f61a",
+      "answerHash": "2a936af9803be141eac027845711153386bc4401eae52b3af34b552876612415"
+    },
+    {
+      "number": 19,
+      "text": "An edge has capacity 8 tracks and demand 11 tracks. What is its overflow?",
+      "options": [
+        "8 tracks",
+        "19 tracks",
+        "3 tracks",
+        "11 tracks"
+      ],
+      "salt": "2d29d6c0666798a6",
+      "answerHash": "87312e182f32322c002f6812ef3f70a90952fa2a7acd56fc15b7a7a044bcc383"
+    },
+    {
+      "number": 20,
+      "text": "Two routing edges have (demand,capacity)=(7,5) and (6,8). Sum positive overflow on the edges.",
+      "options": [
+        "2",
+        "0",
+        "4",
+        "26"
+      ],
+      "salt": "ce90e9281dca9fdf",
+      "answerHash": "7f9865b3e8ef8234c12c81f30fb9045a086a2aeff1d62693d71ff32148686bfe"
+    },
+    {
+      "number": 21,
+      "text": "What does zero global-routing overflow establish by itself?",
+      "options": [
+        "Every detailed design rule necessarily passes.",
+        "All paths necessarily meet timing.",
+        "The coarse capacity model has no overflow, but detailed legality still needs checking.",
+        "No vias are needed in the design."
+      ],
+      "salt": "6063852be8d38f7d",
+      "answerHash": "cd405702a423ba3185169ff4793ea9e16c0914078b17ec62ae15e5f1e6ea048b"
+    },
+    {
+      "number": 22,
+      "text": "Why can a global route require a detour?",
+      "options": [
+        "Routing layers have infinite capacity.",
+        "Connectivity is independent of endpoints.",
+        "Obstacles or congested resources can prevent the shortest coarse path.",
+        "Every routed net must be a straight Euclidean line."
+      ],
+      "salt": "1511209c1928a69a",
+      "answerHash": "a213e99689e1f90fcb63a3ab0645d9cec996450f014048eff202bc1356aefc80"
+    },
+    {
+      "number": 23,
+      "text": "For rectilinear routing with no obstacles, what is the Manhattan distance from (3,5) to (10,1)?",
+      "options": [
+        "11 units",
+        "7 units",
+        "4 units",
+        "About 8.06 units"
+      ],
+      "salt": "e0a7a2056b9ee882",
+      "answerHash": "2300c68a76682c70472339c5bf47628626dcb8edddb45e76c026a44d37a84a56"
+    },
+    {
+      "number": 24,
+      "text": "What is the role of a via in multilayer routing?",
+      "options": [
+        "Join every nearby crossing net.",
+        "Connect conductors across selected metal layers.",
+        "Set every sink's data value to zero.",
+        "Replace the need for a timing library."
+      ],
+      "salt": "dd626ad815a014b8",
+      "answerHash": "9eacc1d6af6cccfb942a109fc14eeea82585d638560fc0e954ce72bd68e8c713"
+    },
+    {
+      "number": 25,
+      "text": "Why can redundant vias improve reliability?",
+      "options": [
+        "They remove every need for physical rules.",
+        "They change an AND function into an OR function.",
+        "They guarantee no routing area cost.",
+        "Multiple valid connections can reduce dependence on one via and may lower resistance."
+      ],
+      "salt": "4a0bcafcc003e0f9",
+      "answerHash": "fbf57250e630110775a950b65078f89d40ac17d713b0ee24de00b442ace0e854"
+    },
+    {
+      "number": 26,
+      "text": "What must redundant-via insertion respect?",
+      "options": [
+        "Applicable geometry, spacing and connectivity constraints.",
+        "Only source-code line length.",
+        "No process-dependent rules.",
+        "Only a clock period label."
+      ],
+      "salt": "3e5cc219a3ca5e9d",
+      "answerHash": "df83fc247d2904615fb973478c14b7b5316ae27679277a53323e58a7efb85062"
+    },
+    {
+      "number": 27,
+      "text": "What does a routing DRC violation indicate?",
+      "options": [
+        "The Boolean function is necessarily wrong on every input.",
+        "A geometric implementation condition fails a specified design rule.",
+        "The source-code file cannot be parsed.",
+        "Every clock has zero skew."
+      ],
+      "salt": "34d7dde1fa823877",
+      "answerHash": "a7f2ceefd1161e2866587c91ac6ca791585f5440c04fa6d5b1ba5670ae7a9451"
+    },
+    {
+      "number": 28,
+      "text": "Why are minimum spacing rules needed?",
+      "options": [
+        "To meet process-dependent manufacturability and electrical separation requirements.",
+        "To guarantee equal delays on all nets.",
+        "To create unknown values in simulation.",
+        "To force all connected pins apart logically."
+      ],
+      "salt": "823124b41a8ae3c3",
+      "answerHash": "cf38560d085118cc5bacc1480902c580951208a6d5a6082cec79c76ea12248cc"
+    },
+    {
+      "number": 29,
+      "text": "What is a routing rip-up-and-reroute step?",
+      "options": [
+        "Remove selected route segments and try an alternative implementation.",
+        "Recompile the operating system only.",
+        "Dismiss every DRC without fixing it.",
+        "Erase the intended circuit behavior."
+      ],
+      "salt": "6b6de4c73ec4442e",
+      "answerHash": "09586ac75efd47221a6b94e7737d0b6878e7e2d7ea1943d38e9b7963149b0d12"
+    },
+    {
+      "number": 30,
+      "text": "Why can routing-order choices affect congestion?",
+      "options": [
+        "Routes never share physical regions.",
+        "Every net has its own unlimited private routing layer.",
+        "Earlier nets can occupy resources needed by later nets.",
+        "Net order determines the truth table directly."
+      ],
+      "salt": "550a7a4be9647bff",
+      "answerHash": "0db00a832ef95aaf6cc087b68a0fb6ababc478250fb529d53c44d779c639dce6"
+    },
+    {
+      "number": 31,
+      "text": "What does parasitic extraction derive?",
+      "options": [
+        "The minimum Boolean cover from a clock waveform alone.",
+        "The original software source from a package label.",
+        "Electrical resistance and capacitance associated with physical interconnect.",
+        "The manufacturing exam score."
+      ],
+      "salt": "4d3af46feecd2deb",
+      "answerHash": "aa985043bf4c6bf22a8a55de79ad649dfaef66bb3af04deda3e3c95a662e6b71"
+    },
+    {
+      "number": 32,
+      "text": "What is a common use of SPEF in implementation analysis?",
+      "options": [
+        "Define the complete RTL algorithm.",
+        "Exchange extracted parasitic network information.",
+        "Record only user interface colors.",
+        "Store a processor executable."
+      ],
+      "salt": "650a51bd0a8ccd29",
+      "answerHash": "6eaf1476846b39fa2230664b79ec79dbbd5476935a27c79550d71064f065246c"
+    },
+    {
+      "number": 33,
+      "text": "Why is post-route extraction useful for timing?",
+      "options": [
+        "Actual wire geometry can yield more realistic RC than early estimates.",
+        "It guarantees zero uncertainty.",
+        "It replaces all functional verification.",
+        "It removes every cell timing arc."
+      ],
+      "salt": "7f56923564479aaa",
+      "answerHash": "a3b43afbea328a401cb95174d3191a77aaffb80a1634714ae341590fb68c5dc5"
+    },
+    {
+      "number": 34,
+      "text": "Under a simple uniform-wire model, R scales with length. If length increases 50% with cross-section unchanged, resistance scales by what?",
+      "options": [
+        "2.25",
+        "0.5",
+        "1/1.5",
+        "1.5"
+      ],
+      "salt": "1656f29e8b68a903",
+      "answerHash": "c928369ed7dff24c6d092a1ca1a5204be6a849f887906a15b77838856b678f49"
+    },
+    {
+      "number": 35,
+      "text": "A driver sees 6 fF of pin load and 9 fF of wire capacitance. Ignoring coupling, total load is what?",
+      "options": [
+        "15 fF",
+        "54 fF",
+        "9 fF",
+        "3 fF"
+      ],
+      "salt": "f589d4cefbe8e994",
+      "answerHash": "720238f1c638e3fc18ba8c87cb63c13ad3d892868dc52da6616c43a9602fd4c3"
+    },
+    {
+      "number": 36,
+      "text": "For a two-section RC tree with ground capacitances C1 at the first node and C2 at the sink, which Elmore expression applies at the sink, ignoring driver resistance?",
+      "options": [
+        "R1(C1+C2)+R2C2.",
+        "(R1+R2)/(C1+C2).",
+        "R1C1+R2C1.",
+        "R1C2 only."
+      ],
+      "salt": "ba5e8897b2805649",
+      "answerHash": "8d69314de72333dfa5712abf0d89a801bc9f92abfa68a325ad040d38f3d96e7f"
+    },
+    {
+      "number": 37,
+      "text": "Using that two-section model, R1=2 kilohms, R2=1 kilohm, C1=3 fF and C2=5 fF. What is the Elmore time constant?",
+      "options": [
+        "15 ps",
+        "21 ps",
+        "11 ps",
+        "30 ps"
+      ],
+      "salt": "5de42b2c295f0155",
+      "answerHash": "5ef8263f167802cd04834468505838f30dc63e41c636ab839dc297fb85939d06"
+    },
+    {
+      "number": 38,
+      "text": "Why can coupling capacitance require more context than a fixed ground capacitance?",
+      "options": [
+        "Its effect can depend on neighboring-net transitions.",
+        "It is determined only by RTL variable names.",
+        "It always cancels wire resistance completely.",
+        "It has no possible effect on delay or noise."
+      ],
+      "salt": "3e74c5cec6ca4cbc",
+      "answerHash": "5019fca68bc5e4bb12d936b0fbfed29f5b6a8e718b829a97840236409e9cca11"
+    },
+    {
+      "number": 39,
+      "text": "What does LVS verify after routing?",
+      "options": [
+        "Extracted layout connectivity matches the intended reference within the check's scope.",
+        "Every path meets setup and hold.",
+        "All silicon defects are detected.",
+        "The design uses minimum power."
+      ],
+      "salt": "84448c5508546f24",
+      "answerHash": "1279ef914a972d5ec0eb16ce637a9539e887413e2bc5696f8c1efd47902cb4e9"
+    },
+    {
+      "number": 40,
+      "text": "Why does a DRC-clean result not establish timing closure?",
+      "options": [
+        "DRC always computes every clock-domain property.",
+        "Timing depends only on geometry-rule count.",
+        "Geometry rules and timing requirements are different checks.",
+        "A legal wire has exactly zero delay."
+      ],
+      "salt": "8290e262aaae6ecc",
+      "answerHash": "b8418b4e000957adb54be598e3e490551c87ea3ff5a79fe5b56bf8f6e6cbc363"
+    },
+    {
+      "number": 41,
+      "text": "What does tapeout release for manufacture?",
+      "options": [
+        "An arbitrary unconstrained intermediate netlist.",
+        "Only a course certificate.",
+        "Final approved design data, commonly including a GDSII or equivalent layout database.",
+        "Only the testbench's console output."
+      ],
+      "salt": "df0859b00b3f41cd",
+      "answerHash": "f67638a825361db734983699873a11fdd7352726de4c37addeb870df1e5491b2"
+    },
+    {
+      "number": 42,
+      "text": "What is a GDSII stream primarily used to represent?",
+      "options": [
+        "Only a register-transfer algorithm.",
+        "A complete software runtime trace.",
+        "Only timing exceptions.",
+        "Geometric layout data with hierarchy and layers."
+      ],
+      "salt": "b4fbb9b5250d1a0e",
+      "answerHash": "c549cd5b5270d63a1386c46fe2f9a72afd74f3c824c97abee37e17b92279f66e"
+    },
+    {
+      "number": 43,
+      "text": "Why should final signoff use the final routed design version?",
+      "options": [
+        "Version identity affects only file naming.",
+        "Old analysis always proves every future change.",
+        "Every route change is electrically identical by definition.",
+        "Late ECOs and route changes can invalidate earlier analysis results."
+      ],
+      "salt": "a0ab63be1dfacf9c",
+      "answerHash": "1c9f8ccdaddeb3962f1a4c2469d4a8e1746fb0ec72cf85a0570f941f6c753ad5"
+    },
+    {
+      "number": 44,
+      "text": "A post-route hold path has slack -12 ps. A proposed data buffer adds at least 20 ps delay without other changes. What is its new ideal hold slack?",
+      "options": [
+        "32 ps",
+        "-32 ps",
+        "-8 ps",
+        "8 ps"
+      ],
+      "salt": "142b0aa5eea5e829",
+      "answerHash": "d93b01a9106997402f57461cf2499cb6f18ccd51ada5fe4010a9351a0d24acaf"
+    },
+    {
+      "number": 45,
+      "text": "A setup path has slack 18 ps. Its reroute adds 25 ps maximum delay. All else fixed, new setup slack is what?",
+      "options": [
+        "-7 ps",
+        "43 ps",
+        "7 ps",
+        "-43 ps"
+      ],
+      "salt": "4cab3b3577f1b78d",
+      "answerHash": "842b0bc666d613fa2a21dd8c72d215ae2f58f70aa2665bfa3ed75261c7810b81"
+    },
+    {
+      "number": 46,
+      "text": "Why should setup and hold both be rechecked after a clock-tree ECO?",
+      "options": [
+        "Clock changes affect only source-code compilation.",
+        "Clock sinks are independent of timing constraints.",
+        "A setup pass necessarily proves hold.",
+        "Relative launch/capture clock changes can affect the checks in opposite directions."
+      ],
+      "salt": "2c7114f7ccbea81d",
+      "answerHash": "d89e654c8a58a919f36c75bf7a05923f5e672638ee73272b1555196d6ce0426a"
+    },
+    {
+      "number": 47,
+      "text": "Consider a late buffer ECO. A. Added cells need legal physical locations. B. New connections can affect DRC and timing. C. Previous signoff automatically remains valid without reanalysis. Which statements are correct?",
+      "options": [
+        "A and B only",
+        "B only",
+        "A, B and C",
+        "A and C only"
+      ],
+      "salt": "22bce9ea985c4728",
+      "answerHash": "a02321b2e8f1206f9fe93df1ca8b12a652e1a76f6d21ef657cd28ca10512af27"
+    },
+    {
+      "number": 48,
+      "text": "Consider antenna cleanup. A. Current routing must meet applicable process antenna rules. B. A layer jump or diode may be a valid remedy in the appropriate flow. C. Timing closure alone proves all antenna checks pass. Which statements are correct?",
+      "options": [
+        "A only",
+        "A, B and C",
+        "A and B only",
+        "B and C only"
+      ],
+      "salt": "ba4812bfec4b7fc8",
+      "answerHash": "363cf32a90ba33084e1ab2fcff09c30553e78d0222385b250e477444d2d9b58f"
+    },
+    {
+      "number": 49,
+      "text": "What is the purpose of maintaining final constraint and parasitic provenance?",
+      "options": [
+        "Replace all numerical analysis with file names.",
+        "Guarantee every source file was written by one person.",
+        "Ensure signoff results correspond to the intended clocks, exceptions and physical network.",
+        "Remove the need for design review."
+      ],
+      "salt": "0f2efa96c5bfa159",
+      "answerHash": "f20824d23048a035bf93c116d07a60845db90412a3d0d0d986fc403f1a846d12"
+    },
+    {
+      "number": 50,
+      "text": "Which statement best describes signoff readiness?",
+      "options": [
+        "No extracted interconnect is ever needed after routing.",
+        "Required functional, timing, electrical and physical checks pass for the intended design version and scenarios.",
+        "A clean source-code compile guarantees manufacture-ready layout.",
+        "One favorable setup report is sufficient for every requirement."
+      ],
+      "salt": "aa5a8dcec0855719",
+      "answerHash": "16a07df1f7bc7c14b4d8a7ea0793079fe604157f717e2f62358223709e7bd02d"
+    }
+  ]
+}

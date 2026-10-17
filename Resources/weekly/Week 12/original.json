@@ -1,0 +1,3234 @@
+{
+  "course": "VLSI Design Flow: RTL to GDS",
+  "courseId": "noc26_ee147",
+  "week": 12,
+  "capturedOn": "2026-10-17",
+  "questions": [
+    {
+      "html": "<div class=\"question-html-content \"><span>The clock signal arrives at the clock sink </span>   <span class=\"math-inline\" style=\"display: inline-block; vertical-align: baseline; margin: 0px; padding: 0px; font-size: inherit; line-height: normal;\"><mjx-container class=\"MathJax CtxtMenu_Attached_0\" jax=\"CHTML\" tabindex=\"0\" ctxtmenu_counter=\"38\" style=\"font-size: 119.5%; position: relative;\"><mjx-math class=\"MJX-TEX\" aria-hidden=\"true\"><mjx-msub><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D446 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em; margin-left: -0.032em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c31\"></mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable=\"on\" display=\"inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mi>S</mi><mn>1</mn></msub></math></mjx-assistive-mml></mjx-container></span><span> at 15ps and at clock sink </span>   <span class=\"math-inline\" style=\"display: inline-block; vertical-align: baseline; margin: 0px; padding: 0px; font-size: inherit; line-height: normal;\"><mjx-container class=\"MathJax CtxtMenu_Attached_0\" jax=\"CHTML\" tabindex=\"0\" ctxtmenu_counter=\"39\" style=\"font-size: 119.5%; position: relative;\"><mjx-math class=\"MJX-TEX\" aria-hidden=\"true\"><mjx-msub><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D446 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em; margin-left: -0.032em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c32\"></mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable=\"on\" display=\"inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mi>S</mi><mn>2</mn></msub></math></mjx-assistive-mml></mjx-container></span><span> at 20ps. What is the clock skew between these two sinks?</span></div>",
+      "images": [],
+      "number": 1,
+      "options": [
+        "5 ps",
+        "10 ps",
+        "15 ps",
+        "20 ps",
+        "25 ps",
+        "30 ps"
+      ],
+      "text": "The clock signal arrives at the clock sink \n𝑆\n1\n at 15ps and at clock sink \n𝑆\n2\n at 20ps. What is the clock skew between these two sinks?",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "5 ps",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "10 ps",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "15 ps",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "20 ps",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "25 ps",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "30 ps",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "The clock signal arrives at the clock sink ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "html": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mi>S</mi><mn>1</mn></msub></math>",
+          "type": "mathml"
+        },
+        {
+          "text": " at 15ps and at clock sink ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "html": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mi>S</mi><mn>2</mn></msub></math>",
+          "type": "mathml"
+        },
+        {
+          "text": " at 20ps. What is the clock skew between these two sinks?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "589fdf85a79dd303",
+      "answerHash": "ae9e943e38be7860ae3145d0d3755d804675622750b7b29dfe9b13c1aa835b19"
+    },
+    {
+      "html": "<div class=\"question-html-content\">Consider the following statements about CTS:\n<br><br>A. Its primary objective is to minimize clock skew. <br>B. Sometimes it inserts useful skews to improve the overall timing of the circuit\n<br>C. At the end of CTS, all data signals get routed.\n<br><br>Which of the above statements is/are correct?</div>",
+      "images": [],
+      "number": 2,
+      "options": [
+        "Only A",
+        "Only B",
+        "Only C",
+        "Only A, B",
+        "Only A, C",
+        "Only B, C",
+        "All",
+        "None"
+      ],
+      "text": "Consider the following statements about CTS:\n\nA. Its primary objective is to minimize clock skew.\nB. Sometimes it inserts useful skews to improve the overall timing of the circuit\nC. At the end of CTS, all data signals get routed.\n\nWhich of the above statements is/are correct?",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "None",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Consider the following statements about CTS:\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "A. Its primary objective is to minimize clock skew. ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "B. Sometimes it inserts useful skews to improve the overall timing of the circuit\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "C. At the end of CTS, all data signals get routed.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the above statements is/are correct?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "f6e247399d0a38de",
+      "answerHash": "8497047e93b1a1759beca75b578b7e649de1ae4093b29305fab24d2c7453458e"
+    },
+    {
+      "html": "<div class=\"question-html-content\">Consider the following clock architecture: <br><br>A. H-tree\n<br>B. S-tree <br>C. X-tree\n<br><br>Which of the above is/are valid symmetric clock tree architecture(s)?</div>",
+      "images": [],
+      "number": 3,
+      "options": [
+        "Only A",
+        "Only B",
+        "Only C",
+        "Only A, B",
+        "Only A, C",
+        "Only B, C",
+        "All",
+        "None"
+      ],
+      "text": "Consider the following clock architecture:\n\nA. H-tree\nB. S-tree\nC. X-tree\n\nWhich of the above is/are valid symmetric clock tree architecture(s)?",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "None",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Consider the following clock architecture: ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "A. H-tree\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "B. S-tree ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "C. X-tree\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the above is/are valid symmetric clock tree architecture(s)?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "40f1106668162002",
+      "answerHash": "5c9285cdc27794cd14abea41afff828704948329a7705d36f928e9d52d52e8b6"
+    },
+    {
+      "html": "<div class=\"question-html-content\">Consider the following statements about the mesh architecture in the global clock distribution network. <br><br>A. It is highly reliable because multiple paths exist from the clock drivers to any point on the mesh.\n<br>B. It is impacted less by process-induced variations than the tree architecture.\n<br>C. It dissipates significant short-circuit power when the clock signal has skew at the inputs of the mesh drivers.\n<br><br>&nbsp;Which of the above statements is/are correct?</div>",
+      "images": [],
+      "number": 4,
+      "options": [
+        "Only A",
+        "Only B",
+        "Only C",
+        "Only A, B",
+        "Only A, C",
+        "Only B, C",
+        "All",
+        "None"
+      ],
+      "text": "Consider the following statements about the mesh architecture in the global clock distribution network.\n\nA. It is highly reliable because multiple paths exist from the clock drivers to any point on the mesh.\nB. It is impacted less by process-induced variations than the tree architecture.\nC. It dissipates significant short-circuit power when the clock signal has skew at the inputs of the mesh drivers.\n\n Which of the above statements is/are correct?",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "None",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Consider the following statements about the mesh architecture in the global clock distribution network. ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "A. It is highly reliable because multiple paths exist from the clock drivers to any point on the mesh.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "B. It is impacted less by process-induced variations than the tree architecture.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "C. It dissipates significant short-circuit power when the clock signal has skew at the inputs of the mesh drivers.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " Which of the above statements is/are correct?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "7719a6ebf3400e36",
+      "answerHash": "36f250c006bf23b3951f3ee7d52abbe485e478b523ade79e8759ed909fac6ad4"
+    },
+    {
+      "html": "The planning phase of the Detailed Routing that produces a high-level routing of nets is called:",
+      "images": [],
+      "number": 5,
+      "options": [
+        "Route Making",
+        "Local Routing",
+        "CTS",
+        "Global Routing",
+        "Congestion Routing",
+        "ECO",
+        "Signoff"
+      ],
+      "text": "The planning phase of the Detailed Routing that produces a high-level routing of nets is called:",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Route Making",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Local Routing",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "CTS",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Global Routing",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Congestion Routing",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "ECO",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Signoff",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "The planning phase of the Detailed Routing that produces a high-level routing of nets is called:",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "b1916ca3b01e562e",
+      "answerHash": "c2e2e5fed0b1073cdd12bed7f9082460fee020c846508aceea0d3cfa5825b5e3"
+    },
+    {
+      "html": "When is overflow said to occur in routing?",
+      "images": [],
+      "number": 6,
+      "options": [
+        "Routing resource usage is zero.",
+        "Routing resource availability is zero.",
+        "Routing resource usage is less than routing resource availability.",
+        "Routing resource usage is equal to routing resource availability.",
+        "Routing resource usage is more than routing resource availability."
+      ],
+      "text": "When is overflow said to occur in routing?",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Routing resource usage is zero.",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Routing resource availability is zero.",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Routing resource usage is less than routing resource availability.",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Routing resource usage is equal to routing resource availability.",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Routing resource usage is more than routing resource availability.",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "When is overflow said to occur in routing?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "b40073081ca9fd0d",
+      "answerHash": "b6139ce1bed584f6462c67025de13d0a1bd91cbb281120b173501375ee7e7a4d"
+    },
+    {
+      "html": "The addition of redundant vias helps improve:",
+      "images": [],
+      "number": 7,
+      "options": [
+        "Power dissipation",
+        "Performance or Speed",
+        "Area",
+        "Testability",
+        "Routability",
+        "Reliability"
+      ],
+      "text": "The addition of redundant vias helps improve:",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Power dissipation",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Performance or Speed",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Area",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Testability",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Routability",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Reliability",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "The addition of redundant vias helps improve:",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "5e500ff56dbd35e0",
+      "answerHash": "4101df17ec5c03a47daf2df6044ff403c2cd35fc47e7aca750ab381354727938"
+    },
+    {
+      "html": "<div class=\"question-html-content\">Consider the following statements about parasitic extraction:\n<br><br>A. It involves determining parasitic resistance, capacitance and inductance from a given layout.\n<br>B. Capacitance extraction involves partitioning a layout into smaller windows and matching them to pre-characterized patterns.\n<br>C. The technology pre-characterization of millions of sample geometries/structures requires a huge computational effort.\n<br><br>&nbsp;Which of the above statements is/are correct?</div>",
+      "images": [],
+      "number": 8,
+      "options": [
+        "Only A",
+        "Only B",
+        "Only C",
+        "Only A, B",
+        "Only A, C",
+        "Only B, C",
+        "All",
+        "None"
+      ],
+      "text": "Consider the following statements about parasitic extraction:\n\nA. It involves determining parasitic resistance, capacitance and inductance from a given layout.\nB. Capacitance extraction involves partitioning a layout into smaller windows and matching them to pre-characterized patterns.\nC. The technology pre-characterization of millions of sample geometries/structures requires a huge computational effort.\n\n Which of the above statements is/are correct?",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "None",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Consider the following statements about parasitic extraction:\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "A. It involves determining parasitic resistance, capacitance and inductance from a given layout.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "B. Capacitance extraction involves partitioning a layout into smaller windows and matching them to pre-characterized patterns.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "C. The technology pre-characterization of millions of sample geometries/structures requires a huge computational effort.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " Which of the above statements is/are correct?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "6d157dac1de8d83b",
+      "answerHash": "2fd1694133e694a2e768a7113852dc9dec360e696457ca2d5697fb48a9adea20"
+    },
+    {
+      "html": "For IC design, what do we mean by “tape out”?",
+      "images": [],
+      "number": 9,
+      "options": [
+        "Adding paper tape to the IC design.",
+        "Measuring the size of an IC using tape.",
+        "Taking a backup of the netlist on magnetic tape.",
+        "Handing over the final IC layout to the foundry for fabrication."
+      ],
+      "text": "For IC design, what do we mean by “tape out”?",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Adding paper tape to the IC design.",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Measuring the size of an IC using tape.",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Taking a backup of the netlist on magnetic tape.",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Handing over the final IC layout to the foundry for fabrication.",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "For IC design, what do we mean by “tape out”?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "de12c9d3a87f3d43",
+      "answerHash": "b3ca52804a9c404d10eff1c784fbb358a1ad6c5b8c626e9b2980c76aec82d0c9"
+    },
+    {
+      "html": "<div class=\"question-html-content\">Consider the following statements regarding physical design using OpenROAD:\n<br><br>A. We can use the command <i>clock_tree_synthesis</i> to perform clock tree synthesis for a given design\n<br>B. We can use the command <i>write_spef</i> to dump out the information about parasitics for a given design\n<br>C. We can use the command <i>check_equivalence</i> to detect rule violations related to plasma-induced gate damage\n<br><br>Which of the above statements is/are correct?</div>",
+      "images": [],
+      "number": 10,
+      "options": [
+        "Only A",
+        "Only B",
+        "Only C",
+        "Only A, B",
+        "Only A, C",
+        "Only B, C",
+        "All",
+        "None"
+      ],
+      "text": "Consider the following statements regarding physical design using OpenROAD:\n\nA. We can use the command clock_tree_synthesis to perform clock tree synthesis for a given design\nB. We can use the command write_spef to dump out the information about parasitics for a given design\nC. We can use the command check_equivalence to detect rule violations related to plasma-induced gate damage\n\nWhich of the above statements is/are correct?",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "None",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Consider the following statements regarding physical design using OpenROAD:\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "A. We can use the command ",
+          "type": "text"
+        },
+        {
+          "text": "clock_tree_synthesis",
+          "type": "text"
+        },
+        {
+          "text": " to perform clock tree synthesis for a given design\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "B. We can use the command ",
+          "type": "text"
+        },
+        {
+          "text": "write_spef",
+          "type": "text"
+        },
+        {
+          "text": " to dump out the information about parasitics for a given design\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "C. We can use the command ",
+          "type": "text"
+        },
+        {
+          "text": "check_equivalence",
+          "type": "text"
+        },
+        {
+          "text": " to detect rule violations related to plasma-induced gate damage\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the above statements is/are correct?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "9c0b399ac333af85",
+      "answerHash": "24c3063cf167d169c9d3b08ec7286a189fefe06feca61778f0a5605832c866d2"
+    }
+  ],
+  "sourceUrl": "https://onlinecourses.nptel.ac.in/e-learning/course/noc26_ee147?unitId=139&assessmentId=191",
+  "license": "CC-BY-NC-SA; NPTEL attribution retained"
+}

@@ -1,0 +1,606 @@
+{
+  "week": 4,
+  "kind": "Original practice, not verified PYQs",
+  "questions": [
+    {
+      "number": 1,
+      "text": "Consider incomplete assignments in combinational RTL. A. Retaining an old output value may imply storage. B. A missing else always implements a clock-edge flip-flop. C. Assigning all outputs on all paths helps avoid unintended latches. Which statements are correct?",
+      "options": [
+        "A and C only",
+        "A and B only",
+        "B only",
+        "A, B and C"
+      ],
+      "salt": "0e24ac1fe6de6427",
+      "answerHash": "94e402d50d55f30c5deb0d9ed97fae7428f275c2c9b49f967dc309456bb469e6"
+    },
+    {
+      "number": 2,
+      "text": "Consider combinational modeling. A. Default assignments can cover otherwise unassigned branches. B. An incomplete sensitivity list can cause stale simulation behavior. C. Merely declaring an output reg guarantees a register is intended. Which statements are correct?",
+      "options": [
+        "A, B and C",
+        "A and B only",
+        "B and C only",
+        "A only"
+      ],
+      "salt": "eddabbe85d7fe087",
+      "answerHash": "14976e4dcb2acbf336814aeb258213690fde0dc0762be087279a4a16472facbb"
+    },
+    {
+      "number": 3,
+      "text": "Consider an edge-triggered register. A. Its state updates at its specified active clock event. B. Its RTL must be modeled with timing intent. C. An unconditional combinational assign alone necessarily creates that state. Which statements are correct?",
+      "options": [
+        "C only",
+        "A and B only",
+        "B and C only",
+        "A and C only"
+      ],
+      "salt": "fa74649e2831b154",
+      "answerHash": "b4205f9b2788a4c5ffb1eefa6cb165c94bd2463921488cb78aacfcbd822dbf84"
+    },
+    {
+      "number": 4,
+      "text": "What does if (sel) y=a; else y=b; describe in a complete combinational block?",
+      "options": [
+        "An oscillator regardless of inputs.",
+        "A fabrication mask selector.",
+        "A multiplexer function.",
+        "A mandatory four-stage pipeline."
+      ],
+      "salt": "2cb17a1de12eadb5",
+      "answerHash": "7e861f1c3dfcdf5285cc769384973021373de9e4f7e92811feff102d597f1825"
+    },
+    {
+      "number": 5,
+      "text": "For a 4-bit unsigned input x, what function can y=x*4 implement when y is wide enough?",
+      "options": [
+        "A compulsory general-purpose CPU.",
+        "A divide-by-four network.",
+        "A right shift by four bits.",
+        "A two-bit left shift with appropriate zero extension."
+      ],
+      "salt": "db62aadc6ef5b6f8",
+      "answerHash": "28b044c85ad00b1a5dab5ae69384cd406c0e64fba01bca271e91bffc63050e5a"
+    },
+    {
+      "number": 6,
+      "text": "Why are signal widths important in synthesis?",
+      "options": [
+        "Wider signals always use less area.",
+        "They affect represented values, truncation and the amount of arithmetic hardware.",
+        "They affect only source-code file size.",
+        "They never affect overflow behavior."
+      ],
+      "salt": "0821a36e9659aae9",
+      "answerHash": "f6e7fb2bcddae1df5dc70656c9d51346edfb15a2dac9f8db09a242e6f8714e52"
+    },
+    {
+      "number": 7,
+      "text": "What happens to a constant false branch during ordinary optimization?",
+      "options": [
+        "It must occupy the same area as the whole design.",
+        "It can be removed if it has no required observable effect.",
+        "It becomes a new input clock.",
+        "It is converted into a package pin."
+      ],
+      "salt": "e4a786813b949bcd",
+      "answerHash": "7b962bed62a5f88430f2fd6bf3fc578e27b5c7a245c9fdefabe4bf0ea65f2696"
+    },
+    {
+      "number": 8,
+      "text": "Why can a statically bounded for loop in synthesizable RTL describe parallel hardware?",
+      "options": [
+        "Every loop iteration must execute on an embedded CPU.",
+        "The source keyword for directly sets clock frequency.",
+        "RTL loops always consume one clock cycle per iteration.",
+        "Elaboration or synthesis can expand the iterations into structural operations."
+      ],
+      "salt": "cf0ba063e55c94e7",
+      "answerHash": "f5ff779ac94378748451a2b1f068913056dc0b6c4026f1fc461ab458613ea879"
+    },
+    {
+      "number": 9,
+      "text": "What is the output of synthesizing a combinational constant assignment y=1'b0, subject to normal technology implementation?",
+      "options": [
+        "An arbitrary unknown output.",
+        "A programmable oscillator.",
+        "A clocked counter.",
+        "A constant-zero connection, potentially using a tie cell."
+      ],
+      "salt": "559c796cca9dad8f",
+      "answerHash": "5695f638223fce6b4ce4ffacece4eb6ff874672eb0dbe469f335348d012dc690"
+    },
+    {
+      "number": 10,
+      "text": "Which transformation is constant propagation?",
+      "options": [
+        "Replacing expressions whose operands are known constants with their computed values.",
+        "Extracting metal capacitance.",
+        "Moving a standard cell to a new coordinate.",
+        "Adding clock buffers at every input."
+      ],
+      "salt": "820e7c5e6e4dcfed",
+      "answerHash": "d1393d20ff20282e7372493656d90022e00e6bff83952c88004ddf9fb74df186"
+    },
+    {
+      "number": 11,
+      "text": "In Boolean algebra, what is x OR 0?",
+      "options": [
+        "1",
+        "NOT x",
+        "x",
+        "0"
+      ],
+      "salt": "d0165d4aca4f3428",
+      "answerHash": "2a63d7ff07f40201465c9f09c1822a82cfd688b678ecac4aea77df1c5d2e9da3"
+    },
+    {
+      "number": 12,
+      "text": "In Boolean algebra, what is x AND 0?",
+      "options": [
+        "x",
+        "0",
+        "NOT x",
+        "1"
+      ],
+      "salt": "fb9ca4aa44606a4b",
+      "answerHash": "0bffe97a35a040447b840348a3fcbdf7522a090a9cf64acbc7e506754bc1ede7"
+    },
+    {
+      "number": 13,
+      "text": "What is x OR (x AND y)?",
+      "options": [
+        "x XOR y",
+        "x",
+        "y",
+        "NOT x"
+      ],
+      "salt": "eef7435c2d91936e",
+      "answerHash": "993c2386917ef9dffa75909b5a646d1a785af4ad1e0b50fa24e47ed16a4bd86b"
+    },
+    {
+      "number": 14,
+      "text": "What is NOT(x AND y), by De Morgan's law?",
+      "options": [
+        "(NOT x) AND (NOT y).",
+        "x XOR y.",
+        "(NOT x) OR (NOT y).",
+        "x OR y."
+      ],
+      "salt": "9c634427b1a12838",
+      "answerHash": "3ef09f194c55be6c3022301e4efb8b1b5b71547ad3d7f1950cdcfed27df6d16a"
+    },
+    {
+      "number": 15,
+      "text": "For three inputs x,y,z, F is 1 at minterm numbers 1,3,5,7, where x is the most significant bit. What is F?",
+      "options": [
+        "z",
+        "x",
+        "NOT z",
+        "y"
+      ],
+      "salt": "77b5185d74278a1b",
+      "answerHash": "53dd2d368ad43090c1be70457e6679e13b7bcf37faa26cca79d247515b9fa73e"
+    },
+    {
+      "number": 16,
+      "text": "For three inputs x,y,z, F is 1 at minterms 2,3,6,7. What is F?",
+      "options": [
+        "y",
+        "NOT y",
+        "x",
+        "z"
+      ],
+      "salt": "f81a2aea4d05ead8",
+      "answerHash": "fb13a6ba5b1f3b0065e35c3c412767e3a9b10f32a3bbce982adeaeef9d078012"
+    },
+    {
+      "number": 17,
+      "text": "A two-input XOR is 1 on which input combinations?",
+      "options": [
+        "00 and 01.",
+        "01 and 10.",
+        "10 and 11.",
+        "00 and 11."
+      ],
+      "salt": "f3384ffad5a2c51e",
+      "answerHash": "c13ec4f3777ac19aee3d9059317ccb0e0890dab141dea09819539df852c73e5a"
+    },
+    {
+      "number": 18,
+      "text": "What is an implicant of a Boolean function in a sum-of-products setting?",
+      "options": [
+        "A term that must cover every OFF-set point.",
+        "Only a minterm containing every variable complemented.",
+        "Any product term with the largest number of variables.",
+        "A product term whose covered assignments do not include an OFF-set point."
+      ],
+      "salt": "6e1cc275a490ae8d",
+      "answerHash": "0a24f7bc992d417b3a7837c30a3115fe0beda528acb0f31ad6009fd4d6b38c6a"
+    },
+    {
+      "number": 19,
+      "text": "What makes an implicant prime?",
+      "options": [
+        "It cannot be expanded further by removing a literal without covering an OFF-set point.",
+        "It contains a prime number of variables.",
+        "It is always the only valid implementation.",
+        "It covers exactly one minterm in every function."
+      ],
+      "salt": "37069c8a129b240d",
+      "answerHash": "714cd5b91d88b98538efd4db101d7fb2cc8758d4de4604146baaf4f3e6ef579e"
+    },
+    {
+      "number": 20,
+      "text": "What makes a prime implicant essential?",
+      "options": [
+        "It has the longest source-code expression.",
+        "It appears first alphabetically.",
+        "It contains every variable in the function.",
+        "It covers at least one ON-set minterm covered by no other prime implicant."
+      ],
+      "salt": "52481888fc7cd22f",
+      "answerHash": "6554091cd2135ea6fb31ba05a67210a918a5d55d2837e293c1bbaee6ae4d6028"
+    },
+    {
+      "number": 21,
+      "text": "What is the role of a don't-care condition in minimization?",
+      "options": [
+        "It permits wrong behavior on all specified ON-set points.",
+        "Its output may be chosen to simplify implementation within the stated specification.",
+        "It automatically means the input can never occur physically.",
+        "It must always be implemented as an unknown voltage."
+      ],
+      "salt": "d47dd379af8649d6",
+      "answerHash": "edffe1f19d46bde673b8b1db9393603d4fb64b021ab5fcfd5154f121ee280223"
+    },
+    {
+      "number": 22,
+      "text": "What must a valid SOP cover include?",
+      "options": [
+        "Only the don't-care points.",
+        "Every required ON-set assignment while avoiding required OFF-set assignments.",
+        "Every OFF-set point.",
+        "Exactly one term regardless of the function."
+      ],
+      "salt": "975d89b37b49e1b1",
+      "answerHash": "8628e785da286519f007b55535fcacd0e068ea14d4fd3d7e272e0ec5bbf6b776"
+    },
+    {
+      "number": 23,
+      "text": "What is a literal?",
+      "options": [
+        "Only a decimal constant larger than one.",
+        "A physical cell instance.",
+        "A variable or its complement appearing in an expression.",
+        "A simulation waveform marker."
+      ],
+      "salt": "7e390930ae099838",
+      "answerHash": "880f5ec071520495a8037b326013209ade1108a512fb7cf42b74ccc2eb5f05ad"
+    },
+    {
+      "number": 24,
+      "text": "How many literal occurrences appear in ab + ac?",
+      "options": [
+        "2",
+        "4",
+        "3",
+        "6"
+      ],
+      "salt": "c296043934a409f8",
+      "answerHash": "f88027484c6bfde17ba6f4b50a4c366cadd59fcd3dfe7d34d967f2ab2ee3abd3"
+    },
+    {
+      "number": 25,
+      "text": "How many minterms are in a complete truth table for 4 Boolean inputs?",
+      "options": [
+        "8",
+        "16",
+        "32",
+        "4"
+      ],
+      "salt": "cf2302af6a69d7fc",
+      "answerHash": "4830a98410cc854cae2a2757e78cf972a64d856912b1fb737980dc5267b3af82"
+    },
+    {
+      "number": 26,
+      "text": "How many input assignments does an implicant fixing 2 of 5 Boolean inputs cover?",
+      "options": [
+        "4",
+        "32",
+        "2",
+        "8"
+      ],
+      "salt": "48bc6e86c56e649a",
+      "answerHash": "e72d78f3bd867ff3e667b29bbb004e122597f9a9b7605bf3ccb5f025dc8586d6"
+    },
+    {
+      "number": 27,
+      "text": "Which pair of binary minterms can be directly combined by removing one differing literal?",
+      "options": [
+        "010 and 101.",
+        "010 and 011.",
+        "001 and 110.",
+        "000 and 111."
+      ],
+      "salt": "fcc32b026eeff572",
+      "answerHash": "5a1efd512e56e4468d4e62f927d676f93c3624fed63f526d3efc790477d440af"
+    },
+    {
+      "number": 28,
+      "text": "What is a typical limitation of heuristic logic minimization?",
+      "options": [
+        "It applies only after chip packaging.",
+        "It requires every input assignment to be an OFF-set point.",
+        "It need not guarantee a globally minimum cover for every problem.",
+        "It can never reduce an expression."
+      ],
+      "salt": "e37caaf780ec3fd8",
+      "answerHash": "440ee0f3cfa9540e7825ad96466f6f5b22fc5aca9262457d624777c8c7182a27"
+    },
+    {
+      "number": 29,
+      "text": "What does logic equivalence preservation require?",
+      "options": [
+        "The transformed circuit matches the required behavior over the specified domain.",
+        "All physical wires must retain identical lengths.",
+        "Every internal signal must retain its old name.",
+        "The source text must remain character-for-character identical."
+      ],
+      "salt": "24b39d2f37f39c47",
+      "answerHash": "68b7a016d991ea1f296b7cdfb70cdc331d38fc328fc1050cb6c156fc73037ed1"
+    },
+    {
+      "number": 30,
+      "text": "Why can two equivalent Boolean expressions have different implementation quality?",
+      "options": [
+        "Equivalence requires exactly the same cell area.",
+        "All equivalent expressions must have identical power.",
+        "Library choices, fanout, depth and interconnect can differ.",
+        "The truth table determines every physical coordinate uniquely."
+      ],
+      "salt": "0c3e4328bbd0f39c",
+      "answerHash": "073f3db7188542cd37ae2d2306808f2799252151375ba601cd99af6844c7ebcb"
+    },
+    {
+      "number": 31,
+      "text": "What often improves when a deep logic chain is restructured into a shallower balanced tree?",
+      "options": [
+        "The number of logic levels on long paths can decrease.",
+        "The need to preserve functionality disappears.",
+        "Hold checks become irrelevant.",
+        "Every input capacitance necessarily becomes zero."
+      ],
+      "salt": "f7de0a7ef84a60e8",
+      "answerHash": "e30c60e411b1da4e94d6bce742f3588825d2d8c7b6af456e9aa66cf9d6789bb2"
+    },
+    {
+      "number": 32,
+      "text": "An 8-input reduction built as a balanced tree of two-input gates has how many gate levels?",
+      "options": [
+        "2",
+        "3",
+        "7",
+        "8"
+      ],
+      "salt": "d2a29b2b852ee1fd",
+      "answerHash": "91045ef10248d5fb9f82438b48dfbd577aacff4c773f493e50830b9e4480d7c1"
+    },
+    {
+      "number": 33,
+      "text": "An 8-input reduction built as a serial chain of two-input gates has how many gate levels?",
+      "options": [
+        "3",
+        "4",
+        "8",
+        "7"
+      ],
+      "salt": "96680eff6616a5e9",
+      "answerHash": "3c97862c68637ba54e814f9d66ec94143154abf205ac342fa86bb8530af8e89a"
+    },
+    {
+      "number": 34,
+      "text": "Which optimization can remove logic that cannot influence any required output or state?",
+      "options": [
+        "Via redundancy insertion.",
+        "Clock-tree balancing.",
+        "Wafer probing.",
+        "Dead-logic elimination."
+      ],
+      "salt": "b9909dc9cd08fed2",
+      "answerHash": "37a3bec7700ed39266490511f41a861eea2bee74189fcad4e06af1749048bd20"
+    },
+    {
+      "number": 35,
+      "text": "Why should simulation models used as references handle reset and unknown values deliberately?",
+      "options": [
+        "Unknown values are automatically identical to zero in every operator.",
+        "Synthesis never observes any constant.",
+        "Initialization and four-state behavior can affect the comparison.",
+        "Reset is only a packaging property."
+      ],
+      "salt": "cd0c8370a854c365",
+      "answerHash": "7e63cd64e820310872685f8741135da21cf223fe96ff9dfdf7147245f8c8dfee"
+    },
+    {
+      "number": 36,
+      "text": "Which construct is generally a testbench timing control rather than portable ASIC synthesizable RTL?",
+      "options": [
+        "A combinational AND expression.",
+        "An edge-triggered register update.",
+        "A procedural # delay used to model elapsed simulation time.",
+        "A static parameter width."
+      ],
+      "salt": "6092d035380ba700",
+      "answerHash": "5ed95c4dc90d347fce51d3c9e55c90b8aeee3977f771f2dd15f47ee08d30405b"
+    },
+    {
+      "number": 37,
+      "text": "Why can division by a known power of two simplify for unsigned arithmetic?",
+      "options": [
+        "It changes unsigned addition into subtraction.",
+        "It can map to a right shift with appropriate width semantics.",
+        "It must add an extra clock domain.",
+        "It always requires a floating-point CPU."
+      ],
+      "salt": "a895601698345579",
+      "answerHash": "f19e37b05690cc3df41acb25f0834a479cb27544b31ee08fa2ad9af280d326e4"
+    },
+    {
+      "number": 38,
+      "text": "What is 8-bit unsigned 40 divided by 4?",
+      "options": [
+        "160",
+        "8",
+        "10",
+        "20"
+      ],
+      "salt": "a53c0296c5d05799",
+      "answerHash": "d83588146a1680f557f368eff795fb6df6957896781c2f0f2e848187b40cae07"
+    },
+    {
+      "number": 39,
+      "text": "Which tool is commonly used to compile and simulate Verilog in this course?",
+      "options": [
+        "Icarus Verilog.",
+        "A detailed router only.",
+        "A wafer prober.",
+        "GTKWave alone."
+      ],
+      "salt": "6b8b3538262570d3",
+      "answerHash": "c49a0e5b493d23e556a0cdbcb395242f75537c29729ee4c1f38636c130ac86b6"
+    },
+    {
+      "number": 40,
+      "text": "What is GTKWave mainly used for?",
+      "options": [
+        "Inspecting recorded signal waveforms.",
+        "Replacing an RTL compiler in every flow.",
+        "Computing production sales tax.",
+        "Performing transistor fabrication."
+      ],
+      "salt": "24a6bba28eb3131e",
+      "answerHash": "1ecceb67e6efc01bf6645baf0af440a736b804f4079b7c4da55d36fa613d3c6f"
+    },
+    {
+      "number": 41,
+      "text": "What does a coverage-analysis tool add to a simulation workflow?",
+      "options": [
+        "Detailed routing for every net.",
+        "Measurements of which modeled structures or conditions the tests exercised.",
+        "An automatic manufacturing-yield guarantee.",
+        "A proof that no functional requirement was omitted."
+      ],
+      "salt": "5ea015d387487973",
+      "answerHash": "f4c479e4bd846cdc3efef8881f136dd34210c6818930e3f34e21a773c5b1f5d6"
+    },
+    {
+      "number": 42,
+      "text": "Why must the testbench and DUT port connections be checked?",
+      "options": [
+        "Every simulator repairs mismatched connections automatically.",
+        "Port names are never used during elaboration.",
+        "A correct test algorithm can still drive or observe the wrong signal.",
+        "Inputs and outputs are interchangeable without consequences."
+      ],
+      "salt": "ca589a43be7f8050",
+      "answerHash": "ef827208de86e0a0025c9508a349d1f2854b4a402ac4cc93a51c77f9523a81f9"
+    },
+    {
+      "number": 43,
+      "text": "What can happen if a combinational sensitivity list omits an input read by the block?",
+      "options": [
+        "Every gate doubles in physical size.",
+        "The omitted input becomes an ideal clock.",
+        "The fabrication process changes.",
+        "Simulation may fail to update when that input changes."
+      ],
+      "salt": "ef21a54d257f0c63",
+      "answerHash": "ff36cec50d4822307f918361c942baa965cb2233c0ccfb5731227b3977cc1ce8"
+    },
+    {
+      "number": 44,
+      "text": "What does always @* help express in traditional Verilog?",
+      "options": [
+        "A mandatory asynchronous reset.",
+        "An unconditional fabrication step.",
+        "A block that executes only at the first clock edge.",
+        "A combinational sensitivity set inferred from referenced signals."
+      ],
+      "salt": "01dff3ef0bb388ac",
+      "answerHash": "5ec157e7895731b97554def7e6c4119a2e445f037f202ce55c3799e6d110e89d"
+    },
+    {
+      "number": 45,
+      "text": "What is a priority structure in an if/else-if chain?",
+      "options": [
+        "Earlier satisfied conditions take precedence over later ones.",
+        "Every branch must execute simultaneously.",
+        "The last condition always wins regardless of earlier conditions.",
+        "All conditions are ignored after synthesis."
+      ],
+      "salt": "a0a8a5293c08f29d",
+      "answerHash": "61530e4351f2f195ca3bde40581e553bffad71b58a9bcbaa4fabf9997aa8faf2"
+    },
+    {
+      "number": 46,
+      "text": "For a two-input mux y=sel?a:b, what input determines y when sel=0?",
+      "options": [
+        "a",
+        "b",
+        "sel itself always",
+        "The old value of y necessarily"
+      ],
+      "salt": "930976085bd063f9",
+      "answerHash": "f26afb0bdca0f64bbcd69b649ca6ac1a40812a2d6392fb74b8040adc2a576466"
+    },
+    {
+      "number": 47,
+      "text": "Consider synthesis don't-cares. A. They allow implementation freedom in the stated domain. B. They guarantee a stable physical x voltage. C. They require care when comparing simulation assumptions with optimized hardware. Which statements are correct?",
+      "options": [
+        "B and C only",
+        "A only",
+        "A, B and C",
+        "A and C only"
+      ],
+      "salt": "629760f21c671955",
+      "answerHash": "1962b7be930645d558c12df5bda91cc5e2930cd8216e5cb34ec297c87ec640ee"
+    },
+    {
+      "number": 48,
+      "text": "Consider equivalent combinational circuits. A. Required output values agree for the same allowed inputs. B. Internal names must be identical. C. Cell counts can differ. Which statements are correct?",
+      "options": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and C"
+      ],
+      "salt": "7d487a98be46a87b",
+      "answerHash": "08bdcdb3b8dcdcbffcbc0b545005401f048b85ab78a4f25e79cd7ad815b91583"
+    },
+    {
+      "number": 49,
+      "text": "What is the minimum number of binary input bits needed to select among 8 choices?",
+      "options": [
+        "8",
+        "3",
+        "2",
+        "4"
+      ],
+      "salt": "7f8cfc768b904fc2",
+      "answerHash": "741ed2e0b20c65b9d38b804b0ab678cc696f1ab8aec6e7e20283cc052b8c4a6c"
+    },
+    {
+      "number": 50,
+      "text": "Which metric should accompany gate-count comparison when timing matters?",
+      "options": [
+        "Critical-path delay under the stated implementation assumptions.",
+        "Only the number of comments.",
+        "Only the order of module names.",
+        "Only the source file creation date."
+      ],
+      "salt": "a27da293dd2001be",
+      "answerHash": "7172ba404918b69868bbd39dd6daac891d3f13d7139f68f5534c55368ee5b6fb"
+    }
+  ]
+}

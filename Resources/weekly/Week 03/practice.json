@@ -1,0 +1,606 @@
+{
+  "week": 3,
+  "kind": "Original practice, not verified PYQs",
+  "questions": [
+    {
+      "number": 1,
+      "text": "Consider Verilog modules. A. One definition can have several instances. B. Parameters can configure instances at elaboration. C. Every instance must use a different source language. Which statements are correct?",
+      "options": [
+        "A and B only",
+        "A, B and C",
+        "A and C only",
+        "B only"
+      ],
+      "salt": "e303035734b2d69d",
+      "answerHash": "0c2d638a0f8444e094fbf483e932fb594b4c5cc3d92696bb63777d3a832e2f88"
+    },
+    {
+      "number": 2,
+      "text": "Consider elaboration. A. It resolves the design hierarchy. B. It resolves parameter-dependent structure. C. Successful elaboration proves all functional requirements. Which statements are correct?",
+      "options": [
+        "C only",
+        "B and C only",
+        "A only",
+        "A and B only"
+      ],
+      "salt": "dd1c2a010568974b",
+      "answerHash": "206e1888aa1ef562ae4d85061e03f143eae32aab2e7e3f0a09c3f13b356e5789"
+    },
+    {
+      "number": 3,
+      "text": "Consider traditional Verilog data objects. A. A reg declaration always guarantees a flip-flop. B. A wire represents a driven net. C. A procedural reg can model a combinational result. Which statements are correct?",
+      "options": [
+        "A and C only",
+        "B and C only",
+        "A and B only",
+        "A, B and C"
+      ],
+      "salt": "eabc3e5b3ea1095c",
+      "answerHash": "9465575bc24100d5724dd0e4d845f70f11844e0a2106f0398507682123fe585a"
+    },
+    {
+      "number": 4,
+      "text": "Which values are in Verilog four-state logic?",
+      "options": [
+        "low, high, rise and fall only.",
+        "0, 1, 2 and 3 only.",
+        "0, 1, x and z.",
+        "false and true only."
+      ],
+      "salt": "d4ba7e0c93b70703",
+      "answerHash": "1c8eb22731c26a9131ea36c895669f452ee811a1f0e2a99ae9224bcb9804943b"
+    },
+    {
+      "number": 5,
+      "text": "What does z normally represent on a Verilog net?",
+      "options": [
+        "High impedance.",
+        "A guaranteed logic zero.",
+        "A decimal integer of value 26.",
+        "A guaranteed logic one."
+      ],
+      "salt": "c966296b1359ff4e",
+      "answerHash": "32f0e224226bf8ed3a6159658d19b0c03a04da999693f2ab2a86e346e6c473fa"
+    },
+    {
+      "number": 6,
+      "text": "What does x generally indicate in a Verilog simulation?",
+      "options": [
+        "A request to stop simulation.",
+        "A bit that must be ignored by all operators.",
+        "An unknown logic value.",
+        "Always a legal physical third supply voltage."
+      ],
+      "salt": "01328f8673919c09",
+      "answerHash": "46ed8a244996680c60e8f05fb359cd147cd6a84a12c94772493aafc663e1b697"
+    },
+    {
+      "number": 7,
+      "text": "What is the value of the reduction OR expression |4'b0000?",
+      "options": [
+        "1'b1",
+        "1'b0",
+        "4'b0000",
+        "1'bz"
+      ],
+      "salt": "be6a4409e583cfbd",
+      "answerHash": "abe524159eb4481ecd2debc10966ca129d4fc8e8d53fac4d9ab52a802957e5b0"
+    },
+    {
+      "number": 8,
+      "text": "What is the value of the reduction AND expression &4'b1110?",
+      "options": [
+        "4'b1110",
+        "1'b1",
+        "1'b0",
+        "1'bz"
+      ],
+      "salt": "cfd9b24eaa95c31b",
+      "answerHash": "2f0bcac0e721f1ca67c7416092cf3f6cf0c07456ea542668a24ef5bfd59bb169"
+    },
+    {
+      "number": 9,
+      "text": "What is 4'b1010 & 4'b1100?",
+      "options": [
+        "4'b0000",
+        "4'b1110",
+        "4'b1000",
+        "4'b0110"
+      ],
+      "salt": "27852ee94f5ec0b7",
+      "answerHash": "f99f3fc44101ae726202d046174085da744daaccad027537943bc32477e9afd8"
+    },
+    {
+      "number": 10,
+      "text": "What is 4'b1010 | 4'b1100?",
+      "options": [
+        "4'b1110",
+        "4'b0010",
+        "4'b0110",
+        "4'b1000"
+      ],
+      "salt": "4663cac06483b02b",
+      "answerHash": "3d443cd8cee65585c22b5239d5e48b9dcfab8b98105960df0755cfae387140c7"
+    },
+    {
+      "number": 11,
+      "text": "What is 4'b1010 ^ 4'b1100?",
+      "options": [
+        "4'b0000",
+        "4'b0110",
+        "4'b1000",
+        "4'b1110"
+      ],
+      "salt": "4194785d189c7b6a",
+      "answerHash": "a3f22eb6a91c689a5b56636451c9585d8d32af4f72fc4cae356bfaf3dfae2dc6"
+    },
+    {
+      "number": 12,
+      "text": "What is the value of logical AND for 4'b0010 && 4'b0100?",
+      "options": [
+        "1'b1",
+        "4'b0000",
+        "1'b0",
+        "4'b0110"
+      ],
+      "salt": "db50503d3b66fd19",
+      "answerHash": "45521809dc571a51c69a5f22675b9935098d4202701ea913055845f1536a44df"
+    },
+    {
+      "number": 13,
+      "text": "How many bits are in {2'b10,2'b01}?",
+      "options": [
+        "4",
+        "8",
+        "2",
+        "1"
+      ],
+      "salt": "c71892b3b65bd684",
+      "answerHash": "7ae8a838e2f5a65d3b606138b751259a3d919f7ecec806885a7c401816b18554"
+    },
+    {
+      "number": 14,
+      "text": "What is {2{2'b10}}?",
+      "options": [
+        "2'b10",
+        "4'b1010",
+        "4'b1111",
+        "4'b0101"
+      ],
+      "salt": "1b03c1082200d499",
+      "answerHash": "8bb5537eecd6904911d7867dec50961eb3a2dd95cb973167967cedc3ce7ee442"
+    },
+    {
+      "number": 15,
+      "text": "For reg [7:0] v = 8'b11001010, what is v[3:0]?",
+      "options": [
+        "4'b0010",
+        "4'b1010",
+        "4'b1100",
+        "4'b0101"
+      ],
+      "salt": "94790441445a301b",
+      "answerHash": "00b690e46288f57a9f612adbe5674dad0dd371b51db3bc77898c9c32002548e9"
+    },
+    {
+      "number": 16,
+      "text": "What unsigned decimal value does 8'h2F denote?",
+      "options": [
+        "47",
+        "31",
+        "32",
+        "63"
+      ],
+      "salt": "e28bed79c20b2fea",
+      "answerHash": "1f50d21b607f26ea7560f3085cb64df48d17dc2c55d6f9bc8fdbc072efafd6c5"
+    },
+    {
+      "number": 17,
+      "text": "What is the stored 4-bit result of 4'b1111 + 4'b0001 when assigned to a 4-bit destination?",
+      "options": [
+        "4'b1111",
+        "5'b10000",
+        "4'b0000",
+        "4'b0001"
+      ],
+      "salt": "21f2e23a4b7ba7bc",
+      "answerHash": "635a28365caad97260b72b772ca0ddd8053d93096614217ec2eff9530b435b61"
+    },
+    {
+      "number": 18,
+      "text": "What is the signed two's-complement value of 4'b1110 when explicitly treated as signed?",
+      "options": [
+        "-1",
+        "-2",
+        "2",
+        "14"
+      ],
+      "salt": "081a607b5cfa749a",
+      "answerHash": "f2c03eb1c1bbc07c82ab354dcb115e49b59f0c2012a003782bac2fd2674fb5ab"
+    },
+    {
+      "number": 19,
+      "text": "Which construct continuously drives a net from an expression?",
+      "options": [
+        "parameter only",
+        "assign",
+        "task only",
+        "initial only"
+      ],
+      "salt": "06136ea3a17ffbee",
+      "answerHash": "3e3bded86947b1f1b87f47d0de2110dfc0fe6a1095ebfb729b3825c382f84ee9"
+    },
+    {
+      "number": 20,
+      "text": "Which statement about an initial block is correct?",
+      "options": [
+        "It starts once at simulation time zero for that instance.",
+        "It must repeat on every clock edge.",
+        "It always infers a clocked register.",
+        "It can contain only one assignment."
+      ],
+      "salt": "d23d2515cedbb8a3",
+      "answerHash": "0af092984638acbac85c83a77da1ad793b6e4eec1a926dc1c41ec3d39faaa91e"
+    },
+    {
+      "number": 21,
+      "text": "Which behavior is described by always @(posedge clk)?",
+      "options": [
+        "Execute once before time zero.",
+        "Execute only when clk stays low for one cycle.",
+        "Execute the block when a positive edge event occurs on clk.",
+        "Execute at every integer simulation time regardless of clk."
+      ],
+      "salt": "114db11904894a3e",
+      "answerHash": "ad659366a789bb20f3407396629420e1b551dac7f07421a42bcd037db5d12503"
+    },
+    {
+      "number": 22,
+      "text": "Within one procedural sequence, what distinguishes blocking assignment =?",
+      "options": [
+        "It always waits until the next clock cycle.",
+        "It is legal only in continuous assignments.",
+        "It never changes a variable value.",
+        "It updates before the following statement in that sequence proceeds."
+      ],
+      "salt": "8f7b063cbc9facb6",
+      "answerHash": "f1f740c7dd1bcb42a0b2aef1a88bf5557933eea92d64784a681358eabef58fc4"
+    },
+    {
+      "number": 23,
+      "text": "What does a nonblocking assignment normally schedule?",
+      "options": [
+        "Immediate execution of a new operating-system thread.",
+        "An update for a later simulation scheduling region of the current time step.",
+        "A permanent prohibition on reading the destination.",
+        "A mandatory delay of one full clock period."
+      ],
+      "salt": "7f5e65f4b4f0a0f6",
+      "answerHash": "59525f2443be418f2df7db0e4d7dc4d1c3c411f1e3a3fb5f25e707dc540d245b"
+    },
+    {
+      "number": 24,
+      "text": "Before a clock edge a=0 and b=1. The block executes a <= b; b <= a;. What are the updated values after nonblocking updates?",
+      "options": [
+        "a=0, b=0",
+        "a=1, b=1",
+        "a=1, b=0",
+        "a=0, b=1"
+      ],
+      "salt": "196adb9823160917",
+      "answerHash": "5f1bcd1fdead0157520f363924dd64cddd16774c5c7822891fd56639c03a0097"
+    },
+    {
+      "number": 25,
+      "text": "Before a clock edge a=0 and b=1. In one block a = b; b = a; executes in that order. What are the final values?",
+      "options": [
+        "a=0, b=1",
+        "a=1, b=0",
+        "a=0, b=0",
+        "a=1, b=1"
+      ],
+      "salt": "7cc5d7942714ea88",
+      "answerHash": "4cdb8b2d01de97a1fb9740063e6952cb480226ad6e5a2fabb0329d7cce533dcd"
+    },
+    {
+      "number": 26,
+      "text": "Why can two clocked blocks that communicate through blocking assignments race?",
+      "options": [
+        "Every blocking assignment waits one cycle.",
+        "Verilog always sorts blocks by signal name.",
+        "A race requires a fabricated chip.",
+        "Their active-region execution order may affect the observed result."
+      ],
+      "salt": "769e39f70a57069f",
+      "answerHash": "bbdd3461902e75a308bd09458b33e2075621ba7c6547f49cfad0874d3abac2c0"
+    },
+    {
+      "number": 27,
+      "text": "What does $display normally do?",
+      "options": [
+        "Automatically wait until all nonblocking updates complete.",
+        "Set every unknown value to zero.",
+        "Print values when the statement executes.",
+        "Synthesize an output display controller."
+      ],
+      "salt": "0f522fcfb77a0c5e",
+      "answerHash": "ec3a8b9910bb221e0052146bddecd0ab4d853b08aa3ffe98dccdb2c9dde5e641"
+    },
+    {
+      "number": 28,
+      "text": "What is a useful distinction for $strobe?",
+      "options": [
+        "It reports values at the end of the current time step.",
+        "It changes register values to their reset state.",
+        "It is the only way to define a clock.",
+        "It runs only after the simulation process exits."
+      ],
+      "salt": "eb945241c5530a24",
+      "answerHash": "1fc498cf056801eac58d4322fc781b553ec4ee16378edc64a1dad179539850de"
+    },
+    {
+      "number": 29,
+      "text": "With `timescale 1ns/1ps, a delay #2.5 represents what nominal time?",
+      "options": [
+        "250 ns",
+        "2.5 microseconds",
+        "2.5 ps",
+        "2.5 ns"
+      ],
+      "salt": "0c2b86d38cb4ece8",
+      "answerHash": "6ce2b4886b0e8f880e4d8f885351bd226bcf1d9748c67e936b0101831ed95a6f"
+    },
+    {
+      "number": 30,
+      "text": "A clock generator toggles every #5 under a 1 ns time unit. What is its period?",
+      "options": [
+        "10 ns",
+        "5 ns",
+        "1 ns",
+        "20 ns"
+      ],
+      "salt": "736cb60790a0ef94",
+      "answerHash": "21325bd2670f8ea4a92a413ffd0aa952c7e9df390f160fd4f71f205c6094b6ab"
+    },
+    {
+      "number": 31,
+      "text": "For a 10 ns ideal clock period, what is the frequency?",
+      "options": [
+        "200 MHz",
+        "1 GHz",
+        "100 MHz",
+        "10 MHz"
+      ],
+      "salt": "c491b966538989fe",
+      "answerHash": "10147d7d80a8760e17d12f19e71be2ceaaa4e6fd4098deed5ea6f47ee465cfcc"
+    },
+    {
+      "number": 32,
+      "text": "Why initialize a simulated clock before repeatedly complementing it?",
+      "options": [
+        "Initialization makes the clock asynchronous automatically.",
+        "An initialized clock cannot toggle.",
+        "It changes all timescale declarations in other modules.",
+        "Complementing an unknown value can leave it unknown."
+      ],
+      "salt": "c0065306db26d392",
+      "answerHash": "920d47729443760ddf8efa4f6b4034f93f50aaddfe9130dbce34cf5ac91a3fbc"
+    },
+    {
+      "number": 33,
+      "text": "Which task commonly ends a Verilog simulation?",
+      "options": [
+        "$finish",
+        "$time",
+        "$monitor",
+        "$dumpvars"
+      ],
+      "salt": "425f4d26560e8543",
+      "answerHash": "3a3cc8a6b4d8375ce0acde6f43330695b49da6df2401fbed3d95ab6d3566870a"
+    },
+    {
+      "number": 34,
+      "text": "What is the purpose of a VCD file?",
+      "options": [
+        "Replace an RTL testbench with a technology library.",
+        "Define a wafer defect distribution.",
+        "Store final detailed routing geometry.",
+        "Record selected signal value changes for later waveform inspection."
+      ],
+      "salt": "2c711cc84777ccfe",
+      "answerHash": "21199d6d243dfb18352540f275404a8e71950dfde99d04fa4de20bc60a39ddd6"
+    },
+    {
+      "number": 35,
+      "text": "What does statement coverage measure?",
+      "options": [
+        "Which executable statements were exercised.",
+        "Whether every possible input sequence was proved.",
+        "Whether the specification contains no omissions.",
+        "Whether every physical net is routed legally."
+      ],
+      "salt": "341422a9c0134726",
+      "answerHash": "5a957dc8ed6c07d7b52fcb8159da9d769409c3cdccff4d2ede3eb5ad79002d54"
+    },
+    {
+      "number": 36,
+      "text": "What is a limitation of 100% code coverage?",
+      "options": [
+        "It proves that no assertion is needed.",
+        "It proves that every manufactured chip works.",
+        "It guarantees minimum power.",
+        "It does not by itself prove functional correctness or complete specification coverage."
+      ],
+      "salt": "e26adea21510289d",
+      "answerHash": "ba21ef938992718f97777e8169b346df3de7c30f8faf508a76c3a641f9a01b6a"
+    },
+    {
+      "number": 37,
+      "text": "Why use a self-checking testbench?",
+      "options": [
+        "It forces every design to be combinational.",
+        "It compares observed results with expected behavior automatically.",
+        "It removes the need to specify expected behavior.",
+        "It fabricates test structures."
+      ],
+      "salt": "f00348376b7ef07b",
+      "answerHash": "f638001fde307f80ac9959afb2850aa4cfe73050e90a4cd5666e87ffea32f91e"
+    },
+    {
+      "number": 38,
+      "text": "What is the role of a reference model in a testbench?",
+      "options": [
+        "Generate final masks.",
+        "Supply expected results against which the DUT is checked.",
+        "Replace all input stimuli.",
+        "Define only the chip outline."
+      ],
+      "salt": "5fc7062be4a5864f",
+      "answerHash": "37dd43ae5372bddd8dea7c33b514395a1cba1ba868f19548dcffd8adab6fc97a"
+    },
+    {
+      "number": 39,
+      "text": "Which statement separates compilation from simulation success?",
+      "options": [
+        "A design may compile while still containing functional errors.",
+        "Every syntax error is a manufacturing defect.",
+        "Compilation proves every input-output relation.",
+        "Simulation can run only on a physically fabricated design."
+      ],
+      "salt": "e8c189040bcdc8b6",
+      "answerHash": "07827b675fc87aa4bc3308f1460ab0f6acff13d88fd9685f31d479ad158fcc72"
+    },
+    {
+      "number": 40,
+      "text": "What is the result of 1'bx === 1'bx in Verilog?",
+      "options": [
+        "1'b1",
+        "1'b0",
+        "1'bx",
+        "1'bz"
+      ],
+      "salt": "1acc32b0eeb29f38",
+      "answerHash": "078155f09b5cbafc50b4882565b0172a87b06b57325f8615de58f9db61ec9a5c"
+    },
+    {
+      "number": 41,
+      "text": "What is the result of 1'bx == 1'bx in ordinary four-state logical equality?",
+      "options": [
+        "1'b1",
+        "1'bz",
+        "1'bx",
+        "1'b0"
+      ],
+      "salt": "2c7c6b1cac302267",
+      "answerHash": "9682add94b5a0a3ada99f241e9c6980c218654c4d4171de349303a3a87dd7502"
+    },
+    {
+      "number": 42,
+      "text": "With sel=1'bx, what is the bitwise-merged value of sel ? 4'b1010 : 4'b1000?",
+      "options": [
+        "4'b10x0",
+        "4'bxxxx",
+        "4'b1000",
+        "4'b1010"
+      ],
+      "salt": "2bcfd42ada6c130b",
+      "answerHash": "407f6ba347ecc98a58f236ed63b694972087f7f26b420c04e42edd01c72b1c62"
+    },
+    {
+      "number": 43,
+      "text": "What is a Verilog parameter commonly used for?",
+      "options": [
+        "A physical via coordinate.",
+        "A runtime file descriptor only.",
+        "An elaboration-time configurable constant.",
+        "A mandatory register updated each cycle."
+      ],
+      "salt": "fd9d14f9d2d55721",
+      "answerHash": "6660281b2ce42a86669a1af444087401a0b935d93dc18404fd5f216c17b177f0"
+    },
+    {
+      "number": 44,
+      "text": "What is a generate construct primarily used for?",
+      "options": [
+        "Recording package test results.",
+        "Repeating a software computation once per simulation second.",
+        "Defining optical exposure conditions.",
+        "Conditionally or repetitively constructing hardware at elaboration."
+      ],
+      "salt": "c36034606394237a",
+      "answerHash": "5dc1a58cee5e7b072d771bcdecfaeffa683047e14d2fcc102a33f8ec764daf65"
+    },
+    {
+      "number": 45,
+      "text": "For a task and a function in traditional synthesizable Verilog usage, which statement is appropriate?",
+      "options": [
+        "A function always creates a new clock domain.",
+        "A function must contain a # delay.",
+        "A task cannot have output arguments.",
+        "A function is used as an expression and should not consume simulation time."
+      ],
+      "salt": "cb7400ba60fb2745",
+      "answerHash": "1c401149209c629ac52c872f61cb65d597b09440cbcc99f66a04f0ae90e68197"
+    },
+    {
+      "number": 46,
+      "text": "What does high-level synthesis with Bambu aim to generate from a supported high-level description?",
+      "options": [
+        "A text editor configuration.",
+        "A hardware RTL implementation.",
+        "A silicon wafer with no downstream tools.",
+        "Only a waveform screenshot."
+      ],
+      "salt": "3c4bc22120ccbc8e",
+      "answerHash": "afc72ec9e1830670ce3ef6613601636537f458a2f5c75ceca3b6205e58246e1f"
+    },
+    {
+      "number": 47,
+      "text": "Compare an HLS algorithm and its generated RTL. A. They can have different timing descriptions. B. Transaction acceptance must be interpreted consistently. C. Matching a few constant-input results proves all streaming alignments. Which statements are correct?",
+      "options": [
+        "B and C only",
+        "A and B only",
+        "A, B and C",
+        "A only"
+      ],
+      "salt": "781b0144770ddc4c",
+      "answerHash": "62ad48ebe59add6abc469e0c8980da6a13a392f046bcfafb58fce447238b0e74"
+    },
+    {
+      "number": 48,
+      "text": "Consider cycle latency. A. It needs a defined input-acceptance event. B. It needs a corresponding output-valid event. C. It is necessarily equal to the initiation interval. Which statements are correct?",
+      "options": [
+        "A and B only",
+        "A, B and C",
+        "A and C only",
+        "B only"
+      ],
+      "salt": "c88fc8a2f351fb68",
+      "answerHash": "f2c05ae9d1f785175c55b3cb41b420c529360ca94d3c405de9fcecbf9737d0ff"
+    },
+    {
+      "number": 49,
+      "text": "If an RTL pipeline produces valid outputs every 3 cycles at 100 MHz, what is its steady-state throughput?",
+      "options": [
+        "300 million outputs per second.",
+        "About 3.33 million outputs per second.",
+        "100 million outputs per second.",
+        "About 33.3 million outputs per second."
+      ],
+      "salt": "84e3373206a91f6d",
+      "answerHash": "0f7a98d2ebc20d9cb54bf4e68083027eeb6902ed64c32c9ad2de4c1286c24976"
+    },
+    {
+      "number": 50,
+      "text": "Which statement about simulation time and wall-clock time is correct?",
+      "options": [
+        "Simulated nanoseconds need not correspond to the same elapsed real time.",
+        "Faster simulation changes the specified RTL delays.",
+        "Every simulated nanosecond must take one real nanosecond.",
+        "Wall-clock speed proves the circuit frequency."
+      ],
+      "salt": "5002e40a06ee38f8",
+      "answerHash": "8989cd987c60dc0312300fa95397f62e0765b5bf7166f385f29ec1eb0a7346ff"
+    }
+  ]
+}

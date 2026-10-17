@@ -1,0 +1,3202 @@
+{
+  "course": "VLSI Design Flow: RTL to GDS",
+  "courseId": "noc26_ee147",
+  "week": 11,
+  "capturedOn": "2026-10-17",
+  "questions": [
+    {
+      "html": "<div class=\"question-html-content\">Consider the following statements about chip planning for a hierarchical design:\n<br><br>A. Partitioning allocates some fraction of a clock cycle to different blocks and the top-level design for signals crossing block boundaries.\n<br>B. Budgeting divides a given top-level design into smaller parts called blocks.\n<br>C. Top-level assembly integrates all the blocks at the top level.\n<br><br>Which of the above statements is/are correct?</div>",
+      "images": [],
+      "number": 1,
+      "options": [
+        "Only A",
+        "Only B",
+        "Only C",
+        "Only A, B",
+        "Only A, C",
+        "Only B, C",
+        "All",
+        "None"
+      ],
+      "text": "Consider the following statements about chip planning for a hierarchical design:\n\nA. Partitioning allocates some fraction of a clock cycle to different blocks and the top-level design for signals crossing block boundaries.\nB. Budgeting divides a given top-level design into smaller parts called blocks.\nC. Top-level assembly integrates all the blocks at the top level.\n\nWhich of the above statements is/are correct?",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "None",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Consider the following statements about chip planning for a hierarchical design:\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "A. Partitioning allocates some fraction of a clock cycle to different blocks and the top-level design for signals crossing block boundaries.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "B. Budgeting divides a given top-level design into smaller parts called blocks.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "C. Top-level assembly integrates all the blocks at the top level.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the above statements is/are correct?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "9e83c832d89010e1",
+      "answerHash": "e216447550866e16b53008234585ca9875d64ee17afe20a947a3d48946ba1dac"
+    },
+    {
+      "html": "<div class=\"question-html-content\">Consider the following functions: <br><br>A. Provides an interface between the die and the external world for the incoming and outgoing signals. <br>B. Increase the drive capability of the outgoing signal, if needed.\n<br>C. Protects core cells from high-voltage spikes arising due to ESD.\n<br><br>Which of the above functions is typically provided by an IO cell in an integrated circuit:</div>",
+      "images": [],
+      "number": 2,
+      "options": [
+        "Only A",
+        "Only B",
+        "Only C",
+        "Only A, B",
+        "Only A, C",
+        "Only B, C",
+        "All",
+        "None"
+      ],
+      "text": "Consider the following functions:\n\nA. Provides an interface between the die and the external world for the incoming and outgoing signals.\nB. Increase the drive capability of the outgoing signal, if needed.\nC. Protects core cells from high-voltage spikes arising due to ESD.\n\nWhich of the above functions is typically provided by an IO cell in an integrated circuit:",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "None",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Consider the following functions: ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "A. Provides an interface between the die and the external world for the incoming and outgoing signals. ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "B. Increase the drive capability of the outgoing signal, if needed.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "C. Protects core cells from high-voltage spikes arising due to ESD.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the above functions is typically provided by an IO cell in an integrated circuit:",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "f18cc475a3a361a8",
+      "answerHash": "6990fafca5e44b41c48d08ece283ad2137bcfc29a48e6bfb283a8fb90458cda0"
+    },
+    {
+      "html": "One of the popular topologies for power delivery networks is:",
+      "images": [],
+      "number": 3,
+      "options": [
+        "A-shape topology",
+        "B-shape topology",
+        "L-shape topology",
+        "Mesh grid topology",
+        "Fanout topology",
+        "Razor topology"
+      ],
+      "text": "One of the popular topologies for power delivery networks is:",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "A-shape topology",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "B-shape topology",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "L-shape topology",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Mesh grid topology",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Fanout topology",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Razor topology",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "One of the popular topologies for power delivery networks is:",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "9fe01ae8e0a4c4c1",
+      "answerHash": "d6103d05f7aaee809eae1265dd2f1080361903b1d2b939b776369d2480723911"
+    },
+    {
+      "html": "<div class=\"question-html-content\">Consider the following statements about chip planning:<br><br>A. Routing of all clock and data signal nets is typically undertaken during floorplanning.\n<br>B. Fly lines can be used to guide macro placement during floorplanning.\n<br>C. Placement of numerous standard cells over the layout is typically undertaken before floorplanning.\n<br><br>Which of the above statements are correct?</div>",
+      "images": [],
+      "number": 4,
+      "options": [
+        "Only A",
+        "Only B",
+        "Only C",
+        "Only A, B",
+        "Only A, C",
+        "Only B, C",
+        "All",
+        "None"
+      ],
+      "text": "Consider the following statements about chip planning:\n\nA. Routing of all clock and data signal nets is typically undertaken during floorplanning.\nB. Fly lines can be used to guide macro placement during floorplanning.\nC. Placement of numerous standard cells over the layout is typically undertaken before floorplanning.\n\nWhich of the above statements are correct?",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "None",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Consider the following statements about chip planning:",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "A. Routing of all clock and data signal nets is typically undertaken during floorplanning.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "B. Fly lines can be used to guide macro placement during floorplanning.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "C. Placement of numerous standard cells over the layout is typically undertaken before floorplanning.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the above statements are correct?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "5340d285c96b51ce",
+      "answerHash": "bf924c8bb1d20a928e6cd447715784d9f611029c45a99b05d0338e0ccba8f9a8"
+    },
+    {
+      "html": "The task that removes overlap among standard cells after global placement is known as:",
+      "images": [],
+      "number": 5,
+      "options": [
+        "Routing",
+        "Budgeting",
+        "Power Planning",
+        "Detailed Routing",
+        "Legalization",
+        "Clock Tree Synthesis",
+        "Floorplanning"
+      ],
+      "text": "The task that removes overlap among standard cells after global placement is known as:",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Routing",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Budgeting",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Power Planning",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Detailed Routing",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Legalization",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Clock Tree Synthesis",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Floorplanning",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "The task that removes overlap among standard cells after global placement is known as:",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "0ba95e611bb36d4e",
+      "answerHash": "c3d627400b0869f58606fe0f5fc0cf55f84164ed90aa555351b14842c48c9bc9"
+    },
+    {
+      "html": "<div class=\"question-html-content\">Consider the following statements about mesh grid topology in power planning:\n<br><br>A. Rails and straps are organized as a uniformly spaced array in a mesh grid topology.\n<br>B. The resistance from the power pad to any point in the grid is typically high because there is only one electrical path between them. <br>C. The robustness of the mesh grid topology is low because if any wire breaks, the only existing electrical path between the power pad and any point in the grid becomes an open circuit. <br><br>Which of the above statements is/are correct?</div>",
+      "images": [],
+      "number": 6,
+      "options": [
+        "Only A",
+        "Only B",
+        "Only C",
+        "Only A, B",
+        "Only A, C",
+        "Only B, C",
+        "All A, B, C"
+      ],
+      "text": "Consider the following statements about mesh grid topology in power planning:\n\nA. Rails and straps are organized as a uniformly spaced array in a mesh grid topology.\nB. The resistance from the power pad to any point in the grid is typically high because there is only one electrical path between them.\nC. The robustness of the mesh grid topology is low because if any wire breaks, the only existing electrical path between the power pad and any point in the grid becomes an open circuit.\n\nWhich of the above statements is/are correct?",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All A, B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Consider the following statements about mesh grid topology in power planning:\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "A. Rails and straps are organized as a uniformly spaced array in a mesh grid topology.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "B. The resistance from the power pad to any point in the grid is typically high because there is only one electrical path between them. ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "C. The robustness of the mesh grid topology is low because if any wire breaks, the only existing electrical path between the power pad and any point in the grid becomes an open circuit. ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the above statements is/are correct?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "92fbac0d0f59cfc1",
+      "answerHash": "c34664987e46f6b0a9848e8961e83ee269149908aead14c73ee8e8752eaefbde"
+    },
+    {
+      "html": "Scan Chain Reordering helps us:",
+      "images": [],
+      "number": 7,
+      "options": [
+        "Utilize routing resources more efficiently",
+        "Fix functional problems in the design",
+        "Allow us to carry out combinational equivalence checking more efficiently",
+        "Allow us to carry out simulations more efficiently",
+        "Scheduling floorplanning more efficiently on a GPU",
+        "Perform ECO again more efficiently"
+      ],
+      "text": "Scan Chain Reordering helps us:",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Utilize routing resources more efficiently",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Fix functional problems in the design",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Allow us to carry out combinational equivalence checking more efficiently",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Allow us to carry out simulations more efficiently",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Scheduling floorplanning more efficiently on a GPU",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Perform ECO again more efficiently",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Scan Chain Reordering helps us:",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "c6779615e828c5ca",
+      "answerHash": "8a090c3e829fb94b55a68a058c44b4e9f8633a3806384630143ffb894fa6772b"
+    },
+    {
+      "html": "The extra cells that we put in an integrated circuit in anticipation of later use are known as:",
+      "images": [],
+      "number": 8,
+      "options": [
+        "Filler Cell",
+        "Isolation Cell",
+        "Level Shifter",
+        "Integrated Clock Gater (ICG)",
+        "Spare Cell"
+      ],
+      "text": "The extra cells that we put in an integrated circuit in anticipation of later use are known as:",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Filler Cell",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Isolation Cell",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Level Shifter",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Integrated Clock Gater (ICG)",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Spare Cell",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "The extra cells that we put in an integrated circuit in anticipation of later use are known as:",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "d3d000375694b2bc",
+      "answerHash": "e9e0e3a0a7cbed658eeb51ab0a554560181f52b5011714a9d19492049eaa2501"
+    },
+    {
+      "html": "<div class=\"question-html-content\">Consider the following statements regarding physical design using OpenROAD:\n<br><br>A. The command <i>read_sdc </i>can be used to dump out the constraints file\n<br>B. The command <i>place_pins</i> can be used to floorplan a design\n<br>C. The command <i>write_def</i> can be used to write the DEF file\n<br><br>Which of the above statements is/are correct?</div>",
+      "images": [],
+      "number": 9,
+      "options": [
+        "Only A",
+        "Only B",
+        "Only C",
+        "Only A, B",
+        "Only A, C",
+        "Only B, C",
+        "All A, B, C"
+      ],
+      "text": "Consider the following statements regarding physical design using OpenROAD:\n\nA. The command read_sdc can be used to dump out the constraints file\nB. The command place_pins can be used to floorplan a design\nC. The command write_def can be used to write the DEF file\n\nWhich of the above statements is/are correct?",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All A, B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Consider the following statements regarding physical design using OpenROAD:\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "A. The command ",
+          "type": "text"
+        },
+        {
+          "text": "read_sdc ",
+          "type": "text"
+        },
+        {
+          "text": "can be used to dump out the constraints file\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "B. The command ",
+          "type": "text"
+        },
+        {
+          "text": "place_pins",
+          "type": "text"
+        },
+        {
+          "text": " can be used to floorplan a design\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "C. The command ",
+          "type": "text"
+        },
+        {
+          "text": "write_def",
+          "type": "text"
+        },
+        {
+          "text": " can be used to write the DEF file\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the above statements is/are correct?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "8360bfc1d6d89a40",
+      "answerHash": "fb9ddbf82485c2e92990d074f1231786356d2e89d4b98c18d42dfa6d52f2952b"
+    },
+    {
+      "html": "<div class=\"question-html-content\">What is the purpose of the command <i>report_tns</i> in OpenROAD?</div>",
+      "images": [],
+      "number": 10,
+      "options": [
+        "It reports the Total Negative Skew",
+        "It reports the Total Negative Slew",
+        "It reports the Total Negative Slack",
+        "It reports the Total Netlist Skew",
+        "It reports the Total Netlist Slew",
+        "It reports the Total Netlist Slack"
+      ],
+      "text": "What is the purpose of the command report_tns in OpenROAD?",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "It reports the Total Negative Skew",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "It reports the Total Negative Slew",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "It reports the Total Negative Slack",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "It reports the Total Netlist Skew",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "It reports the Total Netlist Slew",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "It reports the Total Netlist Slack",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "What is the purpose of the command ",
+          "type": "text"
+        },
+        {
+          "text": "report_tns",
+          "type": "text"
+        },
+        {
+          "text": " in OpenROAD?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "962c9c18da40e999",
+      "answerHash": "2d1bc581d25d3d6fc0e57d5d939722ab721ad6dba8a35edabfec78ff602de2bd"
+    }
+  ],
+  "sourceUrl": "https://onlinecourses.nptel.ac.in/e-learning/course/noc26_ee147?unitId=26&assessmentId=190",
+  "license": "CC-BY-NC-SA; NPTEL attribution retained"
+}

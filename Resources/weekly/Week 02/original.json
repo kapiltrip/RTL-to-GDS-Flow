@@ -1,0 +1,4167 @@
+{
+  "course": "VLSI Design Flow: RTL to GDS",
+  "courseId": "noc26_ee147",
+  "week": 2,
+  "capturedOn": "2026-10-17",
+  "questions": [
+    {
+      "html": "<div class=\"question-html-content\">Which of the following statements is/are correct regarding logic synthesis?<br>\nA. A logic synthesis tool typically takes a layout as an input.\n<br>B. A logic synthesis tool typically ignores all constraints defined in the SDC file.\n<br>C. A logic synthesis tool typically produces a netlist consisting of standard cells as an output. \nD. A logic synthesis tool typically produces a GDS file as an output.</div>",
+      "images": [],
+      "number": 1,
+      "options": [
+        "only A",
+        "only B",
+        "only C",
+        "only D",
+        "only A, B",
+        "only A, C",
+        "only A, D",
+        "only B, C",
+        "only B, D",
+        "only C, D",
+        "All are correct"
+      ],
+      "text": "Which of the following statements is/are correct regarding logic synthesis?\nA. A logic synthesis tool typically takes a layout as an input.\nB. A logic synthesis tool typically ignores all constraints defined in the SDC file.\nC. A logic synthesis tool typically produces a netlist consisting of standard cells as an output. D. A logic synthesis tool typically produces a GDS file as an output.",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only D",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, D",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B, D",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only C, D",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All are correct",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the following statements is/are correct regarding logic synthesis?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\nA. A logic synthesis tool typically takes a layout as an input.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "B. A logic synthesis tool typically ignores all constraints defined in the SDC file.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "C. A logic synthesis tool typically produces a netlist consisting of standard cells as an output. \nD. A logic synthesis tool typically produces a GDS file as an output.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "74016f2474cda475",
+      "answerHash": "c87f7c7a0c29d2b6fd7f374f28fa1ed7fbe7aa4945d376432487c79e2c5000c4"
+    },
+    {
+      "html": "<div class=\"question-html-content\">Which of the following statements is/are correct regarding the Verilog netlist produced by a typical logic synthesis tool?<br>\nA. The netlist can contain multiple instances of the same cell defined in the given technology library.\n<br>B. The logic specified in the given RTL guides the logic synthesis tool in selecting appropriate cells from the given technology library.&nbsp;<br>C. The constraints specified in the given SDC file guide the logic synthesis tool in selecting appropriate cells from the given technology library.</div>",
+      "images": [],
+      "number": 2,
+      "options": [
+        "only A",
+        "only B",
+        "only C",
+        "only A, B",
+        "only A, C",
+        "only B, C",
+        "All statements are correct",
+        "No statement is correct"
+      ],
+      "text": "Which of the following statements is/are correct regarding the Verilog netlist produced by a typical logic synthesis tool?\nA. The netlist can contain multiple instances of the same cell defined in the given technology library.\nB. The logic specified in the given RTL guides the logic synthesis tool in selecting appropriate cells from the given technology library. \nC. The constraints specified in the given SDC file guide the logic synthesis tool in selecting appropriate cells from the given technology library.",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All statements are correct",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "No statement is correct",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the following statements is/are correct regarding the Verilog netlist produced by a typical logic synthesis tool?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\nA. The netlist can contain multiple instances of the same cell defined in the given technology library.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "B. The logic specified in the given RTL guides the logic synthesis tool in selecting appropriate cells from the given technology library. ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "C. The constraints specified in the given SDC file guide the logic synthesis tool in selecting appropriate cells from the given technology library.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "04af80687298a3cd",
+      "answerHash": "5b9e0a7e36ad3a2fdd075bac495bd6a7a86c30bb954ba672a3556d4199e234f4"
+    },
+    {
+      "html": "<div class=\"question-html-content\">Which of the following statements is/are correct regarding physical design?<br>\nA. Physical design finally produces a layout typically represented as GDS. <br>B. Physical design typically requires iterations to achieve design closure. <br>C. The goal of a designer is to achieve design closure in the maximum number of iterations.</div>",
+      "images": [],
+      "number": 3,
+      "options": [
+        "only A",
+        "only B",
+        "only C",
+        "only A, B",
+        "only A, C",
+        "only B, C",
+        "All statements are correct",
+        "No statement is correct"
+      ],
+      "text": "Which of the following statements is/are correct regarding physical design?\nA. Physical design finally produces a layout typically represented as GDS.\nB. Physical design typically requires iterations to achieve design closure.\nC. The goal of a designer is to achieve design closure in the maximum number of iterations.",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All statements are correct",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "No statement is correct",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the following statements is/are correct regarding physical design?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\nA. Physical design finally produces a layout typically represented as GDS. ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "B. Physical design typically requires iterations to achieve design closure. ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "C. The goal of a designer is to achieve design closure in the maximum number of iterations.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "9360acdf5777a666",
+      "answerHash": "7c53e1efc19522031bfd771e6f933671ffb33f57eb4201c234901f16b6f3e0b6"
+    },
+    {
+      "html": "<div class=\"question-html-content\">Which of the following statements is/are correct regarding physical design?<br>\nA. Chip planning is done before placement.\n<br>B. Data signal routing is done before clock signal routing. <br>C. ECO is done before power planning.\n<br>D. Detailed routing is done before global routing.</div>",
+      "images": [],
+      "number": 4,
+      "options": [
+        "only A",
+        "only B",
+        "only C",
+        "only D",
+        "only A, B",
+        "only A, C",
+        "only A, D",
+        "only B, C",
+        "only B, D",
+        "only C, D",
+        "All are correct"
+      ],
+      "text": "Which of the following statements is/are correct regarding physical design?\nA. Chip planning is done before placement.\nB. Data signal routing is done before clock signal routing.\nC. ECO is done before power planning.\nD. Detailed routing is done before global routing.",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only D",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, D",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B, D",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only C, D",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All are correct",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the following statements is/are correct regarding physical design?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\nA. Chip planning is done before placement.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "B. Data signal routing is done before clock signal routing. ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "C. ECO is done before power planning.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "D. Detailed routing is done before global routing.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "1892ec82b9c421ba",
+      "answerHash": "c23a8dea6456b1d415279e87894b89a35079b25190985e4cb116374cf7d02ed3"
+    },
+    {
+      "html": "<div class=\"question-html-content\">Which of the following statements is/are correct regarding optimization goals of various tasks in a typical physical design flow?<br>A. CTS tries to maximize the clock skew in a design. <br>B. Placement tries to minimize the total wire length in a design.\n<br>C. Detailed routing tries to minimize the maximum operable frequency of a design.</div>",
+      "images": [],
+      "number": 5,
+      "options": [
+        "only A",
+        "only B",
+        "only C",
+        "only A, B",
+        "only A, C",
+        "only B, C",
+        "All statements are correct",
+        "No statement is correct"
+      ],
+      "text": "Which of the following statements is/are correct regarding optimization goals of various tasks in a typical physical design flow?\nA. CTS tries to maximize the clock skew in a design.\nB. Placement tries to minimize the total wire length in a design.\nC. Detailed routing tries to minimize the maximum operable frequency of a design.",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All statements are correct",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "No statement is correct",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the following statements is/are correct regarding optimization goals of various tasks in a typical physical design flow?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "A. CTS tries to maximize the clock skew in a design. ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "B. Placement tries to minimize the total wire length in a design.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "C. Detailed routing tries to minimize the maximum operable frequency of a design.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "d1ceb8f4e28ca577",
+      "answerHash": "14e6215c7718cd979e889f9fb068034fcc151d8f37fd1b4848fa0c68e94b3da7"
+    },
+    {
+      "html": "<div class=\"question-html-content\">Which of the following statements is/are correct regarding functional verification?\n<br>A. Simulation is widely used for functional verification of an RTL model.\n<br>B. A designer needs to provide test stimuli to a formal verification tool to verify the functionality of an RTL model.\n<br>C. A formal verification tool establishes the functional correctness of an RTL model by performing exhaustive simulation internally.</div>",
+      "images": [],
+      "number": 6,
+      "options": [
+        "only A",
+        "only B",
+        "only C",
+        "only A, B",
+        "only A, C",
+        "only B, C",
+        "All statements are correct",
+        "No statement is correct"
+      ],
+      "text": "Which of the following statements is/are correct regarding functional verification?\nA. Simulation is widely used for functional verification of an RTL model.\nB. A designer needs to provide test stimuli to a formal verification tool to verify the functionality of an RTL model.\nC. A formal verification tool establishes the functional correctness of an RTL model by performing exhaustive simulation internally.",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All statements are correct",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "No statement is correct",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the following statements is/are correct regarding functional verification?\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "A. Simulation is widely used for functional verification of an RTL model.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "B. A designer needs to provide test stimuli to a formal verification tool to verify the functionality of an RTL model.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "C. A formal verification tool establishes the functional correctness of an RTL model by performing exhaustive simulation internally.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "b4a8b3ca24d6dc79",
+      "answerHash": "f1abe36bb66ef3b0390d506d0cbd8363edae383294f1fb1e7f6d1ea143f3d507"
+    },
+    {
+      "html": "<div class=\"question-html-content\"><div>Which of the following statements is/are correct regarding STA?</div><div>A. We typically perform STA to verify the timing safety of an asynchronous design.</div><div>B. The STA tool ensures that the data launched by a flip-flop is captured by the sequentially adjacent flip-flop in the same clock cycle.</div><div>C. We perform STA many times throughout a VLSI design flow.</div><div>D. STA tool ensures that the behavior of a design remains random and unpredictable under all given scenarios.</div><div><br></div></div>",
+      "images": [],
+      "number": 7,
+      "options": [
+        "only A",
+        "only B",
+        "only C",
+        "only D",
+        "only A, B",
+        "only A, C",
+        "only A, D",
+        "only B, C",
+        "only B, D",
+        "only C, D",
+        "All are correct"
+      ],
+      "text": "Which of the following statements is/are correct regarding STA?\nA. We typically perform STA to verify the timing safety of an asynchronous design.\nB. The STA tool ensures that the data launched by a flip-flop is captured by the sequentially adjacent flip-flop in the same clock cycle.\nC. We perform STA many times throughout a VLSI design flow.\nD. STA tool ensures that the behavior of a design remains random and unpredictable under all given scenarios.",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only D",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, D",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B, D",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only C, D",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All are correct",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the following statements is/are correct regarding STA?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "A. We typically perform STA to verify the timing safety of an asynchronous design.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "B. The STA tool ensures that the data launched by a flip-flop is captured by the sequentially adjacent flip-flop in the same clock cycle.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "C. We perform STA many times throughout a VLSI design flow.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "D. STA tool ensures that the behavior of a design remains random and unpredictable under all given scenarios.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "ad7a285d61b8fdf1",
+      "answerHash": "3339ea9fdb46ea75838987a58360e8c9d758a7e2453b332f28301b41cdeb1030"
+    },
+    {
+      "html": "<div class=\"question-html-content\">Which of the following statements is/are correct regarding the manufacturing test?<br>A. We perform manufacturing tests to detect whether the logic synthesis tool performed the task correctly.\n<br>B. We perform manufacturing tests to detect whether the physical design tool performed the task correctly.\n<br>C. We perform manufacturing test to detect whether any fault exists in the manufactured die or circuit.\n<br>D. We perform manufacturing tests to detect whether any inconsequential flaws or distortions exist in the manufactured die or circuit.</div>",
+      "images": [],
+      "number": 8,
+      "options": [
+        "only A",
+        "only B",
+        "only C",
+        "only D",
+        "only A, B",
+        "only A, C",
+        "only A, D",
+        "only B, C",
+        "only B, D",
+        "only C, D",
+        "All are correct"
+      ],
+      "text": "Which of the following statements is/are correct regarding the manufacturing test?\nA. We perform manufacturing tests to detect whether the logic synthesis tool performed the task correctly.\nB. We perform manufacturing tests to detect whether the physical design tool performed the task correctly.\nC. We perform manufacturing test to detect whether any fault exists in the manufactured die or circuit.\nD. We perform manufacturing tests to detect whether any inconsequential flaws or distortions exist in the manufactured die or circuit.",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only D",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, D",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B, D",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only C, D",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All are correct",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the following statements is/are correct regarding the manufacturing test?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "A. We perform manufacturing tests to detect whether the logic synthesis tool performed the task correctly.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "B. We perform manufacturing tests to detect whether the physical design tool performed the task correctly.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "C. We perform manufacturing test to detect whether any fault exists in the manufactured die or circuit.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "D. We perform manufacturing tests to detect whether any inconsequential flaws or distortions exist in the manufactured die or circuit.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "33d65815c84f363b",
+      "answerHash": "bcdc68b54e32e267980db4516a4abb1c757d038878c03f1f309c450eb1faa274"
+    },
+    {
+      "html": "<div class=\"question-html-content\">Which of the following statements is/are correct regarding the yield of fabricating an integrated circuit?<br>A. If we increase the area of a circuit, the yield is expected to increase.\n<br>B. As the process matures, the yield typically increases. \nIf the yield of a process increases, the defect level is expected to reduce. <br>C.The yield of a process will be lower if defects are clustered rather than uniformly distributed across the entire wafer.</div>",
+      "images": [],
+      "number": 9,
+      "options": [
+        "only A",
+        "only B",
+        "only C",
+        "only D",
+        "only A, B",
+        "only A, C",
+        "only A, D",
+        "only B, C",
+        "only B, D",
+        "only C, D",
+        "All are correct"
+      ],
+      "text": "Which of the following statements is/are correct regarding the yield of fabricating an integrated circuit?\nA. If we increase the area of a circuit, the yield is expected to increase.\nB. As the process matures, the yield typically increases. If the yield of a process increases, the defect level is expected to reduce.\nC.The yield of a process will be lower if defects are clustered rather than uniformly distributed across the entire wafer.",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only D",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, D",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B, D",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only C, D",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All are correct",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the following statements is/are correct regarding the yield of fabricating an integrated circuit?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "A. If we increase the area of a circuit, the yield is expected to increase.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "B. As the process matures, the yield typically increases. \nIf the yield of a process increases, the defect level is expected to reduce. ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "C.The yield of a process will be lower if defects are clustered rather than uniformly distributed across the entire wafer.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "cd65ad352414417f",
+      "answerHash": "97c9445df8e0e143027aa1c49c363944c8d94c289c4a18d26af633798931e599"
+    },
+    {
+      "html": "Which of the following tasks is NOT a resolution enhancement technique?",
+      "images": [],
+      "number": 10,
+      "options": [
+        "Double patterning",
+        "Optical proximity correction",
+        "Multiple patterning",
+        "Binning"
+      ],
+      "text": "Which of the following tasks is NOT a resolution enhancement technique?",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Double patterning",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Optical proximity correction",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Multiple patterning",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Binning",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the following tasks is NOT a resolution enhancement technique?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "77bf4aadd78f152e",
+      "answerHash": "028dd2ea8f7957e58bd81f85d6769adbbf6beba17d956534ddf1c0dbc52fa744"
+    }
+  ],
+  "sourceUrl": "https://onlinecourses.nptel.ac.in/e-learning/course/noc26_ee147?unitId=53&assessmentId=179",
+  "license": "CC-BY-NC-SA; NPTEL attribution retained"
+}

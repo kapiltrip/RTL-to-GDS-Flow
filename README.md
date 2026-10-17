@@ -1,12 +1,26 @@
 # RTL to GDS PDF revision collection
 
-[Open the PDFs folder](PDFs/README.md) · **[Download the complete collection (ZIP)](https://github.com/kapiltrip/RTL-to-GDS-Flow/archive/refs/heads/main.zip)**
+[Revision](Revision/README.md) · [Assignments](Assignments/README.md) · [Full reading PDFs](PDFs/README.md) · **[Download the complete collection (ZIP)](https://github.com/kapiltrip/RTL-to-GDS-Flow/archive/refs/heads/main.zip)**
 
 **Current position: Week 12 complete — Day 09, Lesson 06 of the day (course Lesson 54).** Updated from Kapil's reported progress on 3 October 2026. Tutorials count in the sequence; the study notes review demonstrations without claiming new laboratory runs.
 
-**Open the [PDFs folder](PDFs/README.md) for all 14 reader PDFs**, including every study day. The daily reading and download links are below. Editable notes, images, original sources and tools are inside [Resources](Resources/README.md). The [complete PDF index](PDFs/README.md) lists every document. For quick revision, [Full Forms](PDFs/Full%20Forms.pdf) explains terminology, and [RTL to GDS Flow](PDFs/RTL%20to%20GDS%20Flow.pdf) outlines the implementation stages and course sequence.
+## Weekly revision and assignments
 
-For one file, choose **Download PDF** beside its title in the tables below. For the whole collection, use the **ZIP download** above, extract it, then open the `PDFs` folder. The ZIP includes all PDFs, editable notes and supporting files.
+Revision currently covers **Week 1 only**, including behavioural synthesis, its advantages and limitations, resource sharing, latency, throughput and worked numerical examples. The assignment sets cover **all 12 weeks**: 120 original course questions and 600 newly authored practice MCQs, with 50 per week. No answers are selected or printed in the worksheets.
+
+| Study pack | Read | Download | Pages |
+|---|---|---|---:|
+| Week 1 revision: Short revision with detailed behavioural synthesis | [Read PDF](Revision/Week%2001%20-%20Revision.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Revision/Week%2001%20-%20Revision.pdf) | 8 |
+| Original course questions: 120 original questions across Weeks 1-12 | [Read PDF](Assignments/Original%20Course%20Questions%20-%20Weeks%2001%20to%2012.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Assignments/Original%20Course%20Questions%20-%20Weeks%2001%20to%2012.pdf) | 51 |
+| 50 practice MCQs per week: 600 newly authored questions across Weeks 1-12 | [Read PDF](Assignments/Practice%20MCQs%20-%2050%20per%20Week.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Assignments/Practice%20MCQs%20-%2050%20per%20Week.pdf) | 108 |
+
+**To answer on screen and see marks later:** [download the browser practice ZIP](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Assignments/Practice/Browser%20Practice%20-%20All%20Weeks.zip), extract it and open either HTML file in Chrome. Choose a week, answer the questions, select **Finish attempt**, then **Show marks**. Only your score is displayed. Selections and previous attempts save in that browser when storage is available; an answers-backup download lets you keep a separate copy. See the [assignment guide](Assignments/README.md) for the two-file workflow.
+
+## Full lecture reading
+
+The [PDFs folder](PDFs/README.md) contains the 14 full reading PDFs, including every study day and the reference guides. The daily reading and download links are below. Editable notes, images, original sources and tools are inside [Resources](Resources/README.md). For quick reference, [Full Forms](PDFs/Full%20Forms.pdf) explains terminology, and [RTL to GDS Flow](PDFs/RTL%20to%20GDS%20Flow.pdf) outlines the implementation stages and course sequence.
+
+For one file, choose **Download PDF** beside its title in the tables. For the whole collection, use the **ZIP download** above and extract it. Open `Revision`, `Assignments` or `PDFs` for the material you want. The ZIP includes the PDFs, browser practice files, editable notes and supporting files.
 
 For the laboratory project, open the [Synopsys RTL to GDS Project Plan](PDFs/Synopsys%20RTL%20to%20GDS%20Project%20Plan.pdf) or its [editable source](Resources/Synopsys%20RTL%20to%20GDS%20Project%20Plan.md). The 18-page plan maps the tools to the flow, lists technology dependencies, supplies Thapar lab inventory forms and requires a complete trial before the main project begins. Take pages 6–8 to the lab; the readiness trial is on page 9.
 
@@ -111,7 +125,10 @@ The allocation is **six lessons per study day**: `day = floor((lesson−1)/6)+1`
 ## Collection structure
 
 ```text
-PDFs/                         All 14 reader PDFs and their download index
+Revision/                     Short weekly revision: Week 1 ready
+Assignments/                  Two question PDFs, indexed through Week 12
+  Practice/                   Two browser quizzes and their download ZIP
+PDFs/                         The 14 full reading PDFs and their index
   Day 01 - ...pdf to Day 09 - ...pdf
   Full Forms.pdf, RTL to GDS Flow.pdf
   Synopsys ...pdf, Week 07 and 08 - ...pdf

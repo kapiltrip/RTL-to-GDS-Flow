@@ -1,0 +1,3979 @@
+{
+  "course": "VLSI Design Flow: RTL to GDS",
+  "courseId": "noc26_ee147",
+  "week": 6,
+  "capturedOn": "2026-10-17",
+  "questions": [
+    {
+      "html": "<div class=\"question-html-content\">The voltage waveform at the clock pin and the Q pin of a flip-flop is shown below. \n<br><br><img src=\"https://storage.googleapis.com/swayam-node1-production.appspot.com/assets/img/noc26_ee147/A6Q1.png\" class=\"yui-img\" title=\"\" alt=\"\" style=\"width: 500px;\"><br><br><br>Assume that the 10% to 90% is taken as the slew threshold points, and 50% is taken as the delay threshold points. What are the slew of the clock signal, the slew of the Q signal, and clock-to-Q delay, respectively?</div>",
+      "images": [
+        {
+          "alt": "",
+          "url": "https://storage.googleapis.com/swayam-node1-production.appspot.com/assets/img/noc26_ee147/A6Q1.png",
+          "path": "Resources/weekly/Week 06/figures/A6Q1.png"
+        }
+      ],
+      "number": 1,
+      "options": [
+        "6 ps, 6 ps, 6 ps",
+        "12 ps, 6 ps, 6 ps",
+        "6 ps, 12 ps, 6 ps",
+        "6 ps, 6 ps, 12 ps",
+        "12 ps, 12 ps, 6 ps",
+        "6 ps, 12 ps, 12 ps",
+        "12 ps, 6 ps, 12 ps",
+        "12 ps, 12 ps, 12 ps"
+      ],
+      "text": "The voltage waveform at the clock pin and the Q pin of a flip-flop is shown below.\n\n\n\n\n\nAssume that the 10% to 90% is taken as the slew threshold points, and 50% is taken as the delay threshold points. What are the slew of the clock signal, the slew of the Q signal, and clock-to-Q delay, respectively?",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "6 ps, 6 ps, 6 ps",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "12 ps, 6 ps, 6 ps",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "6 ps, 12 ps, 6 ps",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "6 ps, 6 ps, 12 ps",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "12 ps, 12 ps, 6 ps",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "6 ps, 12 ps, 12 ps",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "12 ps, 6 ps, 12 ps",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "12 ps, 12 ps, 12 ps",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "The voltage waveform at the clock pin and the Q pin of a flip-flop is shown below. \n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "alt": "",
+          "type": "image",
+          "url": "https://storage.googleapis.com/swayam-node1-production.appspot.com/assets/img/noc26_ee147/A6Q1.png"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Assume that the 10% to 90% is taken as the slew threshold points, and 50% is taken as the delay threshold points. What are the slew of the clock signal, the slew of the Q signal, and clock-to-Q delay, respectively?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "5db158172627b141",
+      "answerHash": "e6d79cca338d23bcd9cc72611768591b95e110089753a1ebe981fb2b402db322"
+    },
+    {
+      "html": "<div class=\"question-html-content \"><span>Consider the following data from the NLDM table of a technology library for an inverter for rise delay: </span>   <br>   <br>   <div class=\"quiz-content-image-wrapper inline-block max-w-full\"><img alt=\"\" class=\"quiz-content-image max-w-full h-auto\" src=\"https://storage.googleapis.com/swayam-node1-production.appspot.com/assets/img/noc26_ee147/A6Q2.png\"></div>   <br>   <br>   <span class=\"math-inline\" style=\"display: inline-block; vertical-align: baseline; margin: 0px; padding: 0px; font-size: inherit; line-height: normal;\"><mjx-container class=\"MathJax CtxtMenu_Attached_0\" jax=\"CHTML\" tabindex=\"0\" ctxtmenu_counter=\"18\" style=\"font-size: 119.5%; position: relative;\"><mjx-math class=\"MJX-TEX\" aria-hidden=\"true\"><mjx-msub><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D436 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em; margin-left: -0.045em;\"><mjx-texatom size=\"s\" texclass=\"ORD\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D43F TEX-I\"></mjx-c></mjx-mi><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D441 TEX-I\"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable=\"on\" display=\"inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mi>C</mi><mrow data-mjx-texclass=\"ORD\"><mi>L</mi><mi>N</mi></mrow></msub></math></mjx-assistive-mml></mjx-container></span><span> is the output load, and the </span>   <span class=\"math-inline\" style=\"display: inline-block; vertical-align: baseline; margin: 0px; padding: 0px; font-size: inherit; line-height: normal;\"><mjx-container class=\"MathJax CtxtMenu_Attached_0\" jax=\"CHTML\" tabindex=\"0\" ctxtmenu_counter=\"19\" style=\"font-size: 119.5%; position: relative;\"><mjx-math class=\"MJX-TEX\" aria-hidden=\"true\"><mjx-msub><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D446 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em; margin-left: -0.032em;\"><mjx-texatom size=\"s\" texclass=\"ORD\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D43F TEX-I\"></mjx-c></mjx-mi><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D441 TEX-I\"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable=\"on\" display=\"inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mi>S</mi><mrow data-mjx-texclass=\"ORD\"><mi>L</mi><mi>N</mi></mrow></msub></math></mjx-assistive-mml></mjx-container></span><span> is the input slew. The values shown in the table are delays in ps. What will be the delay for the input slew of 30ps and load of 3pF, assuming that the tool will perform linear interpolation from the closest matches?</span></div>",
+      "images": [
+        {
+          "alt": "",
+          "url": "https://storage.googleapis.com/swayam-node1-production.appspot.com/assets/img/noc26_ee147/A6Q2.png",
+          "path": "Resources/weekly/Week 06/figures/A6Q2.png"
+        }
+      ],
+      "number": 2,
+      "options": [
+        "20",
+        "30",
+        "40",
+        "50",
+        "60",
+        "70",
+        "80",
+        "90",
+        "100",
+        "110",
+        "120"
+      ],
+      "text": "Consider the following data from the NLDM table of a technology library for an inverter for rise delay:\n\n\n\n\n\n𝐶\n𝐿\n𝑁\n is the output load, and the \n𝑆\n𝐿\n𝑁\n is the input slew. The values shown in the table are delays in ps. What will be the delay for the input slew of 30ps and load of 3pF, assuming that the tool will perform linear interpolation from the closest matches?",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "20",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "30",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "40",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "50",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "60",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "70",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "80",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "90",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "100",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "110",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "120",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Consider the following data from the NLDM table of a technology library for an inverter for rise delay: ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "alt": "",
+          "type": "image",
+          "url": "https://storage.googleapis.com/swayam-node1-production.appspot.com/assets/img/noc26_ee147/A6Q2.png"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "html": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mi>C</mi><mrow data-mjx-texclass=\"ORD\"><mi>L</mi><mi>N</mi></mrow></msub></math>",
+          "type": "mathml"
+        },
+        {
+          "text": " is the output load, and the ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "html": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mi>S</mi><mrow data-mjx-texclass=\"ORD\"><mi>L</mi><mi>N</mi></mrow></msub></math>",
+          "type": "mathml"
+        },
+        {
+          "text": " is the input slew. The values shown in the table are delays in ps. What will be the delay for the input slew of 30ps and load of 3pF, assuming that the tool will perform linear interpolation from the closest matches?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "6e1f99263b9acace",
+      "answerHash": "6fc437786e07edb446a694a18b76169a7e52cd10bec11ba271920e0cb6f724f5"
+    },
+    {
+      "html": "<div class=\"question-html-content\">Among the following options, on what factor(s) does the hold time of a D flip-flop typically depend?<br><br>A.Slew at the clock pin\t<br>B.Slew at the D-pin\n<br>C.Slew at the Q-pin</div>",
+      "images": [],
+      "number": 3,
+      "options": [
+        "only A",
+        "only B",
+        "only C",
+        "only A, B",
+        "only A, C",
+        "only B, C",
+        "All",
+        "None"
+      ],
+      "text": "Among the following options, on what factor(s) does the hold time of a D flip-flop typically depend?\n\nA.Slew at the clock pin\nB.Slew at the D-pin\nC.Slew at the Q-pin",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "None",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Among the following options, on what factor(s) does the hold time of a D flip-flop typically depend?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "A.Slew at the clock pin\t",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "B.Slew at the D-pin\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "C.Slew at the Q-pin",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "12e1974a224a5108",
+      "answerHash": "55b9118d2e82d8a8fea44a03d48506aaf465c66cb9272aefb83b3d6acfcb25db"
+    },
+    {
+      "html": "<div class=\"question-html-content \"><span>The truth tables of three functions F1, F2, and F3 are shown below (</span>   <span class=\"math-inline\" style=\"display: inline-block; vertical-align: baseline; margin: 0px; padding: 0px; font-size: inherit; line-height: normal;\"><mjx-container class=\"MathJax CtxtMenu_Attached_0\" jax=\"CHTML\" tabindex=\"0\" ctxtmenu_counter=\"20\" style=\"font-size: 119.5%; position: relative;\"><mjx-math class=\"MJX-TEX\" aria-hidden=\"true\"><mjx-msub><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c31\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2C\"></mjx-c></mjx-mo><mjx-msub space=\"2\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c32\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2C\"></mjx-c></mjx-mo><mjx-msub space=\"2\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c33\"></mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable=\"on\" display=\"inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>3</mn></msub></math></mjx-assistive-mml></mjx-container></span><span> are the Boolean variables on which these functions depend): </span>   <br>   <br>   <div class=\"quiz-content-image-wrapper inline-block max-w-full\"><img alt=\"\" class=\"quiz-content-image max-w-full h-auto\" src=\"https://storage.googleapis.com/swayam-node1-production.appspot.com/assets/img/noc26_ee147/A6Q4a.png\"></div>   <br>   <div class=\"quiz-content-image-wrapper inline-block max-w-full\"><img alt=\"\" class=\"quiz-content-image max-w-full h-auto\" src=\"https://storage.googleapis.com/swayam-node1-production.appspot.com/assets/img/noc26_ee147/A6Q4b.png\"></div>   <br>   <div class=\"quiz-content-image-wrapper inline-block max-w-full\"><img alt=\"\" class=\"quiz-content-image max-w-full h-auto\" src=\"https://storage.googleapis.com/swayam-node1-production.appspot.com/assets/img/noc26_ee147/A6Q4c.png\"></div>   <br>   <br>   <br><span>Which of the above functions are satisfiable?</span></div>",
+      "images": [
+        {
+          "alt": "",
+          "url": "https://storage.googleapis.com/swayam-node1-production.appspot.com/assets/img/noc26_ee147/A6Q4a.png",
+          "path": "Resources/weekly/Week 06/figures/A6Q4a.png"
+        },
+        {
+          "alt": "",
+          "url": "https://storage.googleapis.com/swayam-node1-production.appspot.com/assets/img/noc26_ee147/A6Q4b.png",
+          "path": "Resources/weekly/Week 06/figures/A6Q4b.png"
+        },
+        {
+          "alt": "",
+          "url": "https://storage.googleapis.com/swayam-node1-production.appspot.com/assets/img/noc26_ee147/A6Q4c.png",
+          "path": "Resources/weekly/Week 06/figures/A6Q4c.png"
+        }
+      ],
+      "number": 4,
+      "options": [
+        "only F1",
+        "only F2",
+        "only F3",
+        "only F1, F2",
+        "only F1, F3",
+        "only F2, F3",
+        "All",
+        "None"
+      ],
+      "text": "The truth tables of three functions F1, F2, and F3 are shown below ( \n𝑥\n1\n,\n𝑥\n2\n,\n𝑥\n3\n are the Boolean variables on which these functions depend):\n\n\n\n\n\n\n\n\n\nWhich of the above functions are satisfiable?",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only F1",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only F2",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only F3",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only F1, F2",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only F1, F3",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only F2, F3",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "None",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "The truth tables of three functions F1, F2, and F3 are shown below (",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "html": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>3</mn></msub></math>",
+          "type": "mathml"
+        },
+        {
+          "text": " are the Boolean variables on which these functions depend): ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "alt": "",
+          "type": "image",
+          "url": "https://storage.googleapis.com/swayam-node1-production.appspot.com/assets/img/noc26_ee147/A6Q4a.png"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "alt": "",
+          "type": "image",
+          "url": "https://storage.googleapis.com/swayam-node1-production.appspot.com/assets/img/noc26_ee147/A6Q4b.png"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "alt": "",
+          "type": "image",
+          "url": "https://storage.googleapis.com/swayam-node1-production.appspot.com/assets/img/noc26_ee147/A6Q4c.png"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the above functions are satisfiable?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "7ec8cbe669adad87",
+      "answerHash": "a76dd622b150e13c9753d522319e96c95220532b06087ef42737a3fc14d18c15"
+    },
+    {
+      "html": "<div class=\"question-html-content \"><span>Consider the following representations of a Boolean function:</span>   <br>   <br><span> A.</span>   <span class=\"math-inline\" style=\"display: inline-block; vertical-align: baseline; margin: 0px; padding: 0px; font-size: inherit; line-height: normal;\"><mjx-container class=\"MathJax CtxtMenu_Attached_0\" jax=\"CHTML\" tabindex=\"0\" ctxtmenu_counter=\"21\" style=\"font-size: 119.5%; position: relative;\"><mjx-math class=\"MJX-TEX\" aria-hidden=\"true\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D453 TEX-I\"></mjx-c></mjx-mi><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c28\"></mjx-c></mjx-mo><mjx-msub><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c31\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2C\"></mjx-c></mjx-mo><mjx-msub space=\"2\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c32\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2C\"></mjx-c></mjx-mo><mjx-msub space=\"2\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c33\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c29\"></mjx-c></mjx-mo><mjx-mo class=\"mjx-n\" space=\"4\"><mjx-c class=\"mjx-c3D\"></mjx-c></mjx-mo><mjx-mo class=\"mjx-n\" space=\"4\"><mjx-c class=\"mjx-c28\"></mjx-c></mjx-mo><mjx-msub><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c32\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c29\"></mjx-c></mjx-mo><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2E\"></mjx-c></mjx-mo><mjx-mo class=\"mjx-n\" space=\"2\"><mjx-c class=\"mjx-c28\"></mjx-c></mjx-mo><mjx-msub><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c31\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\" space=\"3\"><mjx-c class=\"mjx-c2B\"></mjx-c></mjx-mo><mjx-msubsup space=\"3\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.257em; margin-left: 0px;\"><mjx-mo class=\"mjx-var\" size=\"s\"><mjx-c class=\"mjx-c2032\"></mjx-c></mjx-mo><mjx-spacer style=\"margin-top: 0.18em;\"></mjx-spacer><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c33\"></mjx-c></mjx-mn></mjx-script></mjx-msubsup><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c29\"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable=\"on\" display=\"inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>f</mi><mo stretchy=\"false\">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>3</mn></msub><mo stretchy=\"false\">)</mo><mo>=</mo><mo stretchy=\"false\">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy=\"false\">)</mo><mo>.</mo><mo stretchy=\"false\">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msubsup><mi>x</mi><mn>3</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><mo stretchy=\"false\">)</mo></math></mjx-assistive-mml></mjx-container></span>   <br><span> B.</span>   <span class=\"math-inline\" style=\"display: inline-block; vertical-align: baseline; margin: 0px; padding: 0px; font-size: inherit; line-height: normal;\"><mjx-container class=\"MathJax CtxtMenu_Attached_0\" jax=\"CHTML\" tabindex=\"0\" ctxtmenu_counter=\"22\" style=\"font-size: 119.5%; position: relative;\"><mjx-math class=\"MJX-TEX\" aria-hidden=\"true\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D453 TEX-I\"></mjx-c></mjx-mi><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c28\"></mjx-c></mjx-mo><mjx-msub><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c31\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2C\"></mjx-c></mjx-mo><mjx-msub space=\"2\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c32\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2C\"></mjx-c></mjx-mo><mjx-msub space=\"2\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c33\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c29\"></mjx-c></mjx-mo><mjx-mo class=\"mjx-n\" space=\"4\"><mjx-c class=\"mjx-c3D\"></mjx-c></mjx-mo><mjx-msub space=\"4\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c31\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-msub><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c32\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\" space=\"3\"><mjx-c class=\"mjx-c2B\"></mjx-c></mjx-mo><mjx-msub space=\"3\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c32\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-msubsup><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.257em; margin-left: 0px;\"><mjx-mo class=\"mjx-var\" size=\"s\"><mjx-c class=\"mjx-c2032\"></mjx-c></mjx-mo><mjx-spacer style=\"margin-top: 0.18em;\"></mjx-spacer><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c33\"></mjx-c></mjx-mn></mjx-script></mjx-msubsup></mjx-math><mjx-assistive-mml unselectable=\"on\" display=\"inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>f</mi><mo stretchy=\"false\">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>3</mn></msub><mo stretchy=\"false\">)</mo><mo>=</mo><msub><mi>x</mi><mn>1</mn></msub><msub><mi>x</mi><mn>2</mn></msub><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub><msubsup><mi>x</mi><mn>3</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup></math></mjx-assistive-mml></mjx-container></span>   <br><span> C.</span>   <span class=\"math-inline\" style=\"display: inline-block; vertical-align: baseline; margin: 0px; padding: 0px; font-size: inherit; line-height: normal;\"><mjx-container class=\"MathJax CtxtMenu_Attached_0\" jax=\"CHTML\" tabindex=\"0\" ctxtmenu_counter=\"23\" style=\"font-size: 119.5%; position: relative;\"><mjx-math class=\"MJX-TEX\" aria-hidden=\"true\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D453 TEX-I\"></mjx-c></mjx-mi><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c28\"></mjx-c></mjx-mo><mjx-msub><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c31\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2C\"></mjx-c></mjx-mo><mjx-msub space=\"2\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c32\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2C\"></mjx-c></mjx-mo><mjx-msub space=\"2\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c33\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c29\"></mjx-c></mjx-mo><mjx-mo class=\"mjx-n\" space=\"4\"><mjx-c class=\"mjx-c3D\"></mjx-c></mjx-mo><mjx-mo class=\"mjx-n\" space=\"4\"><mjx-c class=\"mjx-c28\"></mjx-c></mjx-mo><mjx-msub><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c31\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\" space=\"3\"><mjx-c class=\"mjx-c2B\"></mjx-c></mjx-mo><mjx-msub space=\"3\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c32\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c29\"></mjx-c></mjx-mo><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2E\"></mjx-c></mjx-mo><mjx-mo class=\"mjx-n\" space=\"2\"><mjx-c class=\"mjx-c28\"></mjx-c></mjx-mo><mjx-msubsup><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.258em; margin-left: 0px;\"><mjx-mo class=\"mjx-var\" size=\"s\"><mjx-c class=\"mjx-c2032\"></mjx-c></mjx-mo><mjx-spacer style=\"margin-top: 0.18em;\"></mjx-spacer><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c31\"></mjx-c></mjx-mn></mjx-script></mjx-msubsup><mjx-mo class=\"mjx-n\" space=\"3\"><mjx-c class=\"mjx-c2B\"></mjx-c></mjx-mo><mjx-msub space=\"3\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c32\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c29\"></mjx-c></mjx-mo><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2E\"></mjx-c></mjx-mo><mjx-mo class=\"mjx-n\" space=\"2\"><mjx-c class=\"mjx-c28\"></mjx-c></mjx-mo><mjx-msub><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c31\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\" space=\"3\"><mjx-c class=\"mjx-c2B\"></mjx-c></mjx-mo><mjx-msubsup space=\"3\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.257em; margin-left: 0px;\"><mjx-mo class=\"mjx-var\" size=\"s\"><mjx-c class=\"mjx-c2032\"></mjx-c></mjx-mo><mjx-spacer style=\"margin-top: 0.18em;\"></mjx-spacer><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c33\"></mjx-c></mjx-mn></mjx-script></mjx-msubsup><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c29\"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable=\"on\" display=\"inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>f</mi><mo stretchy=\"false\">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>3</mn></msub><mo stretchy=\"false\">)</mo><mo>=</mo><mo stretchy=\"false\">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy=\"false\">)</mo><mo>.</mo><mo stretchy=\"false\">(</mo><msubsup><mi>x</mi><mn>1</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy=\"false\">)</mo><mo>.</mo><mo stretchy=\"false\">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msubsup><mi>x</mi><mn>3</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><mo stretchy=\"false\">)</mo></math></mjx-assistive-mml></mjx-container></span>   <br>   <br><span> Which of the representations are in CNF?</span></div>",
+      "images": [],
+      "number": 5,
+      "options": [
+        "only A",
+        "only B",
+        "only C",
+        "only A, B",
+        "only A, C",
+        "only B, C",
+        "All statements are correct.",
+        "No statement is correct."
+      ],
+      "text": "Consider the following representations of a Boolean function:\n\nA. \n𝑓\n(\n𝑥\n1\n,\n𝑥\n2\n,\n𝑥\n3\n)\n=\n(\n𝑥\n2\n)\n.\n(\n𝑥\n1\n+\n𝑥\n3\n′\n)\n\nB. \n𝑓\n(\n𝑥\n1\n,\n𝑥\n2\n,\n𝑥\n3\n)\n=\n𝑥\n1\n𝑥\n2\n+\n𝑥\n2\n𝑥\n3\n′\n\nC. \n𝑓\n(\n𝑥\n1\n,\n𝑥\n2\n,\n𝑥\n3\n)\n=\n(\n𝑥\n1\n+\n𝑥\n2\n)\n.\n(\n𝑥\n1\n′\n+\n𝑥\n2\n)\n.\n(\n𝑥\n1\n+\n𝑥\n3\n′\n)\n\n\nWhich of the representations are in CNF?",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All statements are correct.",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "No statement is correct.",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Consider the following representations of a Boolean function:",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " A.",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "html": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>f</mi><mo stretchy=\"false\">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>3</mn></msub><mo stretchy=\"false\">)</mo><mo>=</mo><mo stretchy=\"false\">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy=\"false\">)</mo><mo>.</mo><mo stretchy=\"false\">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msubsup><mi>x</mi><mn>3</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><mo stretchy=\"false\">)</mo></math>",
+          "type": "mathml"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " B.",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "html": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>f</mi><mo stretchy=\"false\">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>3</mn></msub><mo stretchy=\"false\">)</mo><mo>=</mo><msub><mi>x</mi><mn>1</mn></msub><msub><mi>x</mi><mn>2</mn></msub><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub><msubsup><mi>x</mi><mn>3</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup></math>",
+          "type": "mathml"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " C.",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "html": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>f</mi><mo stretchy=\"false\">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>3</mn></msub><mo stretchy=\"false\">)</mo><mo>=</mo><mo stretchy=\"false\">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy=\"false\">)</mo><mo>.</mo><mo stretchy=\"false\">(</mo><msubsup><mi>x</mi><mn>1</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy=\"false\">)</mo><mo>.</mo><mo stretchy=\"false\">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msubsup><mi>x</mi><mn>3</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><mo stretchy=\"false\">)</mo></math>",
+          "type": "mathml"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": " Which of the representations are in CNF?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "0233de4854b72057",
+      "answerHash": "e37f5336945a484a3666982dfc16b60172ef3976bc4cd2c1fc173c18e1f57332"
+    },
+    {
+      "html": "What is the name of the technique that tries to determine a counterexample reachable in a finite number of clock cycles starting from the initial state?",
+      "images": [],
+      "number": 6,
+      "options": [
+        "Bounded Model Checking",
+        "Unbounded Model Checking",
+        "State Optimization of FSM",
+        "State Encoding of FSM",
+        "Technology Mapping",
+        "Multi-level Logic Optimization"
+      ],
+      "text": "What is the name of the technique that tries to determine a counterexample reachable in a finite number of clock cycles starting from the initial state?",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Bounded Model Checking",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Unbounded Model Checking",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "State Optimization of FSM",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "State Encoding of FSM",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Technology Mapping",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Multi-level Logic Optimization",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "What is the name of the technique that tries to determine a counterexample reachable in a finite number of clock cycles starting from the initial state?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "ccd3757e4e008d6b",
+      "answerHash": "6de2ad1918d4747643783456db58a4f308d64afecf092b9782b154cd708cc1b1"
+    },
+    {
+      "html": "<div class=\"question-html-content \"><span>Consider an FSM with five states </span>   <span class=\"math-inline\" style=\"display: inline-block; vertical-align: baseline; margin: 0px; padding: 0px; font-size: inherit; line-height: normal;\"><mjx-container class=\"MathJax CtxtMenu_Attached_0\" jax=\"CHTML\" tabindex=\"0\" ctxtmenu_counter=\"24\" style=\"font-size: 119.5%; position: relative;\"><mjx-math class=\"MJX-TEX\" aria-hidden=\"true\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D444 TEX-I\"></mjx-c></mjx-mi><mjx-mo class=\"mjx-n\" space=\"4\"><mjx-c class=\"mjx-c3D\"></mjx-c></mjx-mo><mjx-texatom space=\"4\" texclass=\"ORD\"><mjx-msub><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D460 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c30\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2C\"></mjx-c></mjx-mo><mjx-msub space=\"2\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D460 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c31\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2C\"></mjx-c></mjx-mo><mjx-msub space=\"2\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D460 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c32\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2C\"></mjx-c></mjx-mo><mjx-msub space=\"2\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D460 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c33\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2C\"></mjx-c></mjx-mo><mjx-msub space=\"2\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D460 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c34\"></mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-texatom></mjx-math><mjx-assistive-mml unselectable=\"on\" display=\"inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>Q</mi><mo>=</mo><mrow data-mjx-texclass=\"ORD\"><msub><mi>s</mi><mn>0</mn></msub><mo>,</mo><msub><mi>s</mi><mn>1</mn></msub><mo>,</mo><msub><mi>s</mi><mn>2</mn></msub><mo>,</mo><msub><mi>s</mi><mn>3</mn></msub><mo>,</mo><msub><mi>s</mi><mn>4</mn></msub></mrow></math></mjx-assistive-mml></mjx-container></span><span>. The states are represented by 3 state bits </span>   <span class=\"math-inline\" style=\"display: inline-block; vertical-align: baseline; margin: 0px; padding: 0px; font-size: inherit; line-height: normal;\"><mjx-container class=\"MathJax CtxtMenu_Attached_0\" jax=\"CHTML\" tabindex=\"0\" ctxtmenu_counter=\"25\" style=\"font-size: 119.5%; position: relative;\"><mjx-math class=\"MJX-TEX\" aria-hidden=\"true\"><mjx-texatom texclass=\"ORD\"><mjx-msub><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c32\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-msub><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c31\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-msub><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c30\"></mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-texatom></mjx-math><mjx-assistive-mml unselectable=\"on\" display=\"inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><msub><mi>x</mi><mn>2</mn></msub><msub><mi>x</mi><mn>1</mn></msub><msub><mi>x</mi><mn>0</mn></msub></mrow></math></mjx-assistive-mml></mjx-container></span><span>. Assume that these states </span>   <span class=\"math-inline\" style=\"display: inline-block; vertical-align: baseline; margin: 0px; padding: 0px; font-size: inherit; line-height: normal;\"><mjx-container class=\"MathJax CtxtMenu_Attached_0\" jax=\"CHTML\" tabindex=\"0\" ctxtmenu_counter=\"26\" style=\"font-size: 119.5%; position: relative;\"><mjx-math class=\"MJX-TEX\" aria-hidden=\"true\"><mjx-texatom texclass=\"ORD\"><mjx-msub><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D460 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c30\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2C\"></mjx-c></mjx-mo><mjx-msub space=\"2\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D460 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c31\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2C\"></mjx-c></mjx-mo><mjx-msub space=\"2\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D460 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c32\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2C\"></mjx-c></mjx-mo><mjx-msub space=\"2\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D460 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c33\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2C\"></mjx-c></mjx-mo><mjx-msub space=\"2\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D460 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c34\"></mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-texatom></mjx-math><mjx-assistive-mml unselectable=\"on\" display=\"inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><msub><mi>s</mi><mn>0</mn></msub><mo>,</mo><msub><mi>s</mi><mn>1</mn></msub><mo>,</mo><msub><mi>s</mi><mn>2</mn></msub><mo>,</mo><msub><mi>s</mi><mn>3</mn></msub><mo>,</mo><msub><mi>s</mi><mn>4</mn></msub></mrow></math></mjx-assistive-mml></mjx-container></span><span> are encoded as </span>   <span class=\"math-inline\" style=\"display: inline-block; vertical-align: baseline; margin: 0px; padding: 0px; font-size: inherit; line-height: normal;\"><mjx-container class=\"MathJax CtxtMenu_Attached_0\" jax=\"CHTML\" tabindex=\"0\" ctxtmenu_counter=\"27\" style=\"font-size: 119.5%; position: relative;\"><mjx-math class=\"MJX-TEX\" aria-hidden=\"true\"><mjx-texatom texclass=\"ORD\"><mjx-mn class=\"mjx-n\"><mjx-c class=\"mjx-c30\"></mjx-c><mjx-c class=\"mjx-c30\"></mjx-c><mjx-c class=\"mjx-c30\"></mjx-c></mjx-mn><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2C\"></mjx-c></mjx-mo><mjx-mn class=\"mjx-n\" space=\"2\"><mjx-c class=\"mjx-c30\"></mjx-c><mjx-c class=\"mjx-c30\"></mjx-c><mjx-c class=\"mjx-c31\"></mjx-c></mjx-mn><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2C\"></mjx-c></mjx-mo><mjx-mn class=\"mjx-n\" space=\"2\"><mjx-c class=\"mjx-c30\"></mjx-c><mjx-c class=\"mjx-c31\"></mjx-c><mjx-c class=\"mjx-c30\"></mjx-c></mjx-mn><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2C\"></mjx-c></mjx-mo><mjx-mn class=\"mjx-n\" space=\"2\"><mjx-c class=\"mjx-c30\"></mjx-c><mjx-c class=\"mjx-c31\"></mjx-c><mjx-c class=\"mjx-c31\"></mjx-c></mjx-mn><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2C\"></mjx-c></mjx-mo><mjx-mn class=\"mjx-n\" space=\"2\"><mjx-c class=\"mjx-c31\"></mjx-c><mjx-c class=\"mjx-c30\"></mjx-c><mjx-c class=\"mjx-c30\"></mjx-c></mjx-mn></mjx-texatom></mjx-math><mjx-assistive-mml unselectable=\"on\" display=\"inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mn>000</mn><mo>,</mo><mn>001</mn><mo>,</mo><mn>010</mn><mo>,</mo><mn>011</mn><mo>,</mo><mn>100</mn></mrow></math></mjx-assistive-mml></mjx-container></span><span>. In this representation, the characteristics function </span>   <span class=\"math-inline\" style=\"display: inline-block; vertical-align: baseline; margin: 0px; padding: 0px; font-size: inherit; line-height: normal;\"><mjx-container class=\"MathJax CtxtMenu_Attached_0\" jax=\"CHTML\" tabindex=\"0\" ctxtmenu_counter=\"28\" style=\"font-size: 119.5%; position: relative;\"><mjx-math class=\"MJX-TEX\" aria-hidden=\"true\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D453 TEX-I\"></mjx-c></mjx-mi><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c28\"></mjx-c></mjx-mo><mjx-msub><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c32\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2C\"></mjx-c></mjx-mo><mjx-msub space=\"2\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c31\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2C\"></mjx-c></mjx-mo><mjx-msub space=\"2\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D465 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c30\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c29\"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable=\"on\" display=\"inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>f</mi><mo stretchy=\"false\">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy=\"false\">)</mo></math></mjx-assistive-mml></mjx-container></span><span> representing the subset of states: </span>   <span class=\"math-inline\" style=\"display: inline-block; vertical-align: baseline; margin: 0px; padding: 0px; font-size: inherit; line-height: normal;\"><mjx-container class=\"MathJax CtxtMenu_Attached_0\" jax=\"CHTML\" tabindex=\"0\" ctxtmenu_counter=\"29\" style=\"font-size: 119.5%; position: relative;\"><mjx-math class=\"MJX-TEX\" aria-hidden=\"true\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D434 TEX-I\"></mjx-c></mjx-mi><mjx-mo class=\"mjx-n\" space=\"4\"><mjx-c class=\"mjx-c3D\"></mjx-c></mjx-mo><mjx-texatom space=\"4\" texclass=\"ORD\"><mjx-msub><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D460 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c31\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2C\"></mjx-c></mjx-mo><mjx-msub space=\"2\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D460 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c33\"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class=\"mjx-n\"><mjx-c class=\"mjx-c2C\"></mjx-c></mjx-mo><mjx-msub space=\"2\"><mjx-mi class=\"mjx-i\"><mjx-c class=\"mjx-c1D460 TEX-I\"></mjx-c></mjx-mi><mjx-script style=\"vertical-align: -0.15em;\"><mjx-mn class=\"mjx-n\" size=\"s\"><mjx-c class=\"mjx-c34\"></mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-texatom></mjx-math><mjx-assistive-mml unselectable=\"on\" display=\"inline\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>A</mi><mo>=</mo><mrow data-mjx-texclass=\"ORD\"><msub><mi>s</mi><mn>1</mn></msub><mo>,</mo><msub><mi>s</mi><mn>3</mn></msub><mo>,</mo><msub><mi>s</mi><mn>4</mn></msub></mrow></math></mjx-assistive-mml></mjx-container></span><span> is:</span></div>",
+      "images": [],
+      "number": 7,
+      "options": [
+        "𝑥\n2\n′\n𝑥\n1\n′\n𝑥\n0\n′\n+\n𝑥\n2\n′\n𝑥\n1\n𝑥\n0\n′\n+\n𝑥\n2\n𝑥\n1\n′\n𝑥\n0\n′",
+        "𝑥\n2\n′\n𝑥\n1\n′\n𝑥\n0\n+\n𝑥\n2\n′\n𝑥\n1\n𝑥\n0\n+\n𝑥\n2\n𝑥\n1\n′\n𝑥\n0\n′",
+        "𝑥\n2\n′\n𝑥\n1\n′\n𝑥\n0\n′\n+\n𝑥\n2\n′\n𝑥\n1\n𝑥\n0\n+\n𝑥\n2\n𝑥\n1\n′\n𝑥\n0\n′",
+        "𝑥\n2\n′\n𝑥\n1\n′\n𝑥\n0\n+\n𝑥\n2\n′\n𝑥\n1\n𝑥\n0\n′\n+\n𝑥\n2\n′\n𝑥\n1\n𝑥\n0",
+        "𝑥\n2\n′\n𝑥\n1\n′\n𝑥\n0\n+\n𝑥\n2\n′\n𝑥\n1\n𝑥\n0\n′\n+\n𝑥\n2\n𝑥\n1\n′\n𝑥\n0\n′"
+      ],
+      "text": "Consider an FSM with five states \n𝑄\n=\n𝑠\n0\n,\n𝑠\n1\n,\n𝑠\n2\n,\n𝑠\n3\n,\n𝑠\n4\n. The states are represented by 3 state bits \n𝑥\n2\n𝑥\n1\n𝑥\n0\n. Assume that these states \n𝑠\n0\n,\n𝑠\n1\n,\n𝑠\n2\n,\n𝑠\n3\n,\n𝑠\n4\n are encoded as \n000\n,\n001\n,\n010\n,\n011\n,\n100\n. In this representation, the characteristics function \n𝑓\n(\n𝑥\n2\n,\n𝑥\n1\n,\n𝑥\n0\n)\n representing the subset of states: \n𝐴\n=\n𝑠\n1\n,\n𝑠\n3\n,\n𝑠\n4\n is:",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": " ",
+            "type": "text"
+          },
+          {
+            "text": " ",
+            "type": "text"
+          },
+          {
+            "text": " ",
+            "type": "text"
+          },
+          {
+            "html": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msubsup><mi>x</mi><mn>2</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><msubsup><mi>x</mi><mn>1</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><msubsup><mi>x</mi><mn>0</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><mo>+</mo><msubsup><mi>x</mi><mn>2</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><msub><mi>x</mi><mn>1</mn></msub><msubsup><mi>x</mi><mn>0</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub><msubsup><mi>x</mi><mn>1</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><msubsup><mi>x</mi><mn>0</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup></math>",
+            "type": "mathml"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": " ",
+            "type": "text"
+          },
+          {
+            "text": " ",
+            "type": "text"
+          },
+          {
+            "text": " ",
+            "type": "text"
+          },
+          {
+            "html": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msubsup><mi>x</mi><mn>2</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><msubsup><mi>x</mi><mn>1</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><msubsup><mi>x</mi><mn>2</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><msub><mi>x</mi><mn>1</mn></msub><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub><msubsup><mi>x</mi><mn>1</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><msubsup><mi>x</mi><mn>0</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup></math>",
+            "type": "mathml"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": " ",
+            "type": "text"
+          },
+          {
+            "text": " ",
+            "type": "text"
+          },
+          {
+            "text": " ",
+            "type": "text"
+          },
+          {
+            "html": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msubsup><mi>x</mi><mn>2</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><msubsup><mi>x</mi><mn>1</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><msubsup><mi>x</mi><mn>0</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><mo>+</mo><msubsup><mi>x</mi><mn>2</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><msub><mi>x</mi><mn>1</mn></msub><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub><msubsup><mi>x</mi><mn>1</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><msubsup><mi>x</mi><mn>0</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup></math>",
+            "type": "mathml"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": " ",
+            "type": "text"
+          },
+          {
+            "text": " ",
+            "type": "text"
+          },
+          {
+            "text": " ",
+            "type": "text"
+          },
+          {
+            "html": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msubsup><mi>x</mi><mn>2</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><msubsup><mi>x</mi><mn>1</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><msubsup><mi>x</mi><mn>2</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><msub><mi>x</mi><mn>1</mn></msub><msubsup><mi>x</mi><mn>0</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><mo>+</mo><msubsup><mi>x</mi><mn>2</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><msub><mi>x</mi><mn>1</mn></msub><msub><mi>x</mi><mn>0</mn></msub></math>",
+            "type": "mathml"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": " ",
+            "type": "text"
+          },
+          {
+            "text": " ",
+            "type": "text"
+          },
+          {
+            "text": " ",
+            "type": "text"
+          },
+          {
+            "html": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><msubsup><mi>x</mi><mn>2</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><msubsup><mi>x</mi><mn>1</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><msubsup><mi>x</mi><mn>2</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><msub><mi>x</mi><mn>1</mn></msub><msubsup><mi>x</mi><mn>0</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub><msubsup><mi>x</mi><mn>1</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup><msubsup><mi>x</mi><mn>0</mn><mo data-mjx-alternate=\"1\">′</mo></msubsup></math>",
+            "type": "mathml"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Consider an FSM with five states ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "html": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>Q</mi><mo>=</mo><mrow data-mjx-texclass=\"ORD\"><msub><mi>s</mi><mn>0</mn></msub><mo>,</mo><msub><mi>s</mi><mn>1</mn></msub><mo>,</mo><msub><mi>s</mi><mn>2</mn></msub><mo>,</mo><msub><mi>s</mi><mn>3</mn></msub><mo>,</mo><msub><mi>s</mi><mn>4</mn></msub></mrow></math>",
+          "type": "mathml"
+        },
+        {
+          "text": ". The states are represented by 3 state bits ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "html": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><msub><mi>x</mi><mn>2</mn></msub><msub><mi>x</mi><mn>1</mn></msub><msub><mi>x</mi><mn>0</mn></msub></mrow></math>",
+          "type": "mathml"
+        },
+        {
+          "text": ". Assume that these states ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "html": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><msub><mi>s</mi><mn>0</mn></msub><mo>,</mo><msub><mi>s</mi><mn>1</mn></msub><mo>,</mo><msub><mi>s</mi><mn>2</mn></msub><mo>,</mo><msub><mi>s</mi><mn>3</mn></msub><mo>,</mo><msub><mi>s</mi><mn>4</mn></msub></mrow></math>",
+          "type": "mathml"
+        },
+        {
+          "text": " are encoded as ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "html": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mn>000</mn><mo>,</mo><mn>001</mn><mo>,</mo><mn>010</mn><mo>,</mo><mn>011</mn><mo>,</mo><mn>100</mn></mrow></math>",
+          "type": "mathml"
+        },
+        {
+          "text": ". In this representation, the characteristics function ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "html": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>f</mi><mo stretchy=\"false\">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy=\"false\">)</mo></math>",
+          "type": "mathml"
+        },
+        {
+          "text": " representing the subset of states: ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "text": " ",
+          "type": "text"
+        },
+        {
+          "html": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>A</mi><mo>=</mo><mrow data-mjx-texclass=\"ORD\"><msub><mi>s</mi><mn>1</mn></msub><mo>,</mo><msub><mi>s</mi><mn>3</mn></msub><mo>,</mo><msub><mi>s</mi><mn>4</mn></msub></mrow></math>",
+          "type": "mathml"
+        },
+        {
+          "text": " is:",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "73c1e2569f53b9f0",
+      "answerHash": "136dea4017b884bd7ee71e1c26f7d7808167edc39b005291fc4ba9f1b101a7de"
+    },
+    {
+      "html": "Which of the following tasks is not a part of Combinational Equivalence Checking (CEC):",
+      "images": [],
+      "number": 8,
+      "options": [
+        "Port and register matching",
+        "Miter creation",
+        "Static Timing Analysis",
+        "Establishing the equivalence of miters"
+      ],
+      "text": "Which of the following tasks is not a part of Combinational Equivalence Checking (CEC):",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Port and register matching",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Miter creation",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Static Timing Analysis",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Establishing the equivalence of miters",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the following tasks is not a part of Combinational Equivalence Checking (CEC):",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "479a70a8d359f920",
+      "answerHash": "87db5066943fe8f6806bc293ea3f3ae7a5ea061ce4edf5be91a54edfe3b0c692"
+    },
+    {
+      "html": "<div class=\"question-html-content\">Which of the following statements are correct about the miter circuits created during Combinational Equivalence Checking of two sequential circuits?<br><br>\nA.A miter is derived using the corresponding combinational logic cones of both the circuits.\n<br>B.A miter typically has a full adder at its output.\n<br>C.A miter is a sequential circuit.</div>",
+      "images": [],
+      "number": 9,
+      "options": [
+        "Only A",
+        "Only B",
+        "Only C",
+        "Only A, B",
+        "Only B, C",
+        "Only A, C",
+        "All of the above",
+        "None of the above"
+      ],
+      "text": "Which of the following statements are correct about the miter circuits created during Combinational Equivalence Checking of two sequential circuits?\n\nA.A miter is derived using the corresponding combinational logic cones of both the circuits.\nB.A miter typically has a full adder at its output.\nC.A miter is a sequential circuit.",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A, B",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only B, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "Only A, C",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "All of the above",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "None of the above",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the following statements are correct about the miter circuits created during Combinational Equivalence Checking of two sequential circuits?",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\nA.A miter is derived using the corresponding combinational logic cones of both the circuits.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "B.A miter typically has a full adder at its output.\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "C.A miter is a sequential circuit.",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "613cb0234651b9e2",
+      "answerHash": "4d9c26a146ce858d8617054eebffc3e3bf6f3d1af39b857b43b45e8882d6e3de"
+    },
+    {
+      "html": "<div class=\"question-html-content\">Which of the following statements best describes the purpose of the following command in a script for Yosys: <b>share -aggressive</b></div>",
+      "images": [],
+      "number": 10,
+      "options": [
+        "It suggests small-cap stocks to buy for an aggressive portfolio",
+        "It shares the design with multiple users on the network",
+        "It parses a design and creates a data structure for it",
+        "It performs logic optimization by reusing resources for saving area",
+        "It maps a design to the given technology library",
+        "It loads the timing library from the file specified earlier"
+      ],
+      "text": "Which of the following statements best describes the purpose of the following command in a script for Yosys: share -aggressive",
+      "optionParts": [
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "It suggests small-cap stocks to buy for an aggressive portfolio",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "It shares the design with multiple users on the network",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "It parses a design and creates a data structure for it",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "It performs logic optimization by reusing resources for saving area",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "It maps a design to the given technology library",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ],
+        [
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          },
+          {
+            "text": "It loads the timing library from the file specified earlier",
+            "type": "text"
+          },
+          {
+            "text": "\n",
+            "type": "text"
+          }
+        ]
+      ],
+      "parts": [
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "Which of the following statements best describes the purpose of the following command in a script for Yosys: ",
+          "type": "text"
+        },
+        {
+          "text": "share -aggressive",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        },
+        {
+          "text": "\n",
+          "type": "text"
+        }
+      ],
+      "salt": "cf87ca83a7c07e2a",
+      "answerHash": "165f059ec059e63c2f7367b44762a8aea9a0a5abdeff8a4e7f19abb8094c50ce"
+    }
+  ],
+  "sourceUrl": "https://onlinecourses.nptel.ac.in/e-learning/course/noc26_ee147?unitId=102&assessmentId=185",
+  "license": "CC-BY-NC-SA; NPTEL attribution retained"
+}

@@ -1,0 +1,606 @@
+{
+  "week": 10,
+  "kind": "Original practice, not verified PYQs",
+  "questions": [
+    {
+      "number": 1,
+      "text": "Consider ATPG. A. A target fault model is needed. B. Detection needs an observable response difference. C. ATPG necessarily proves the original product specification is correct. Which statements are correct?",
+      "options": [
+        "A and B only",
+        "A, B and C",
+        "B and C only",
+        "A only"
+      ],
+      "salt": "fd7bfad54624e593",
+      "answerHash": "76c6df79758a433087100fa47f0a81b9ef6e35cbe7952aa81c7d0a8bc3fe651e"
+    },
+    {
+      "number": 2,
+      "text": "Consider five-valued fault reasoning. A. D means good 1, faulty 0. B. Complemented D means good 0, faulty 1. C. D always denotes high impedance. Which statements are correct?",
+      "options": [
+        "A and C only",
+        "A and B only",
+        "A, B and C",
+        "B only"
+      ],
+      "salt": "8109983fbb2409f9",
+      "answerHash": "5a8036438500c2f1e74d622ad5aa907ad29e4e685ca99fcddfdbc585a927faa9"
+    },
+    {
+      "number": 3,
+      "text": "Consider fault activation. A. A stuck-at-0 site must be 1 in the good circuit. B. A stuck-at-1 site must be 0 in the good circuit. C. Activation alone guarantees observation through every downstream gate. Which statements are correct?",
+      "options": [
+        "A, B and C",
+        "B and C only",
+        "A only",
+        "A and B only"
+      ],
+      "salt": "fcab06fcf343653b",
+      "answerHash": "aabf188ab2c9e5102f3c2ed255a5b0df5397fc7f09622a2ab1b8ae03b75084ac"
+    },
+    {
+      "number": 4,
+      "text": "To activate a stuck-at-1 fault on node n, what should n be in the good circuit?",
+      "options": [
+        "Any value without restriction",
+        "0",
+        "1",
+        "z necessarily"
+      ],
+      "salt": "eea3e627c5dcdba5",
+      "answerHash": "bc75f6121ff2029126ee2b164a6fe2af0805a891624a1624051c063977ea98cc"
+    },
+    {
+      "number": 5,
+      "text": "To propagate an effect through a two-input AND gate, what should the other input be in the two-state model?",
+      "options": [
+        "0",
+        "z",
+        "An uninitialized x necessarily",
+        "1"
+      ],
+      "salt": "32b8bcb79e8ca74c",
+      "answerHash": "c982f897b4258d50671c84b66e569f21f6d4013ce75b4a3991d6f8ab40dd09a9"
+    },
+    {
+      "number": 6,
+      "text": "To propagate an effect through a two-input OR gate, what should the other input be?",
+      "options": [
+        "1",
+        "An uninitialized x necessarily",
+        "z",
+        "0"
+      ],
+      "salt": "e8b227385008ef32",
+      "answerHash": "5c5e45973b8d56ceb53a52050b706c0d6e94d43a9528e1c8e0502280f56bd0f8"
+    },
+    {
+      "number": 7,
+      "text": "A two-input NAND output is stuck at 1. Which input detects it?",
+      "options": [
+        "00",
+        "11",
+        "10",
+        "01"
+      ],
+      "salt": "bd9ef3e2843a8f9c",
+      "answerHash": "dde05f57dcb9f6e2b4ca8c918f77ec7d99344b453545bfb4da4a9f4787c78741"
+    },
+    {
+      "number": 8,
+      "text": "A two-input NOR output is stuck at 0. Which input detects it?",
+      "options": [
+        "01",
+        "00",
+        "11",
+        "10"
+      ],
+      "salt": "ade96e503b477c3f",
+      "answerHash": "da9e5b09a7613b4a31d9cd6323e749eae28bb2ea7f79957717b0a394cfaf710c"
+    },
+    {
+      "number": 9,
+      "text": "What can block a fault effect at an AND gate output?",
+      "options": [
+        "A noncontrolling 1 on the other input.",
+        "A correct observation point.",
+        "A controlling 0 on another input.",
+        "A fault activation at the target node."
+      ],
+      "salt": "b6635ab721af06fb",
+      "answerHash": "54acecdd91dd84940e586fb88a27ee385db037c86f7ab0ee74ad41c3aeada68d"
+    },
+    {
+      "number": 10,
+      "text": "What is fault equivalence in test generation?",
+      "options": [
+        "Every fault has the same physical cause.",
+        "Faults produce indistinguishable faulty behavior under the model and allowed observations.",
+        "Fault sites have identical printed names.",
+        "Faults occur on the same wafer necessarily."
+      ],
+      "salt": "0c02b1ccf07ae5cf",
+      "answerHash": "22d7270b977511f6b377b7ad0a24ad7d8011497c80a4d539da29f5857176141e"
+    },
+    {
+      "number": 11,
+      "text": "Why can fault collapsing reduce ATPG effort?",
+      "options": [
+        "It physically repairs every defect.",
+        "It guarantees every random pattern detects every fault.",
+        "It removes all circuit inputs.",
+        "Equivalent or otherwise appropriately related faults can be represented by a reduced target set."
+      ],
+      "salt": "01701ac64bda759a",
+      "answerHash": "44f99979fd322ab1e5c287ad4fc9cf1ea3d225f4b15fff3b13a1a91b712239c7"
+    },
+    {
+      "number": 12,
+      "text": "What is a test cube?",
+      "options": [
+        "A routing grid with no logical values.",
+        "A mandatory three-dimensional package shape.",
+        "A truth table containing only ones.",
+        "A partially specified test pattern with some don't-care input positions."
+      ],
+      "salt": "05b94585207f7288",
+      "answerHash": "2d63a552074a1ff492bc9a504db691417466dd5fd6bbcb7de6a5bdc953817fb7"
+    },
+    {
+      "number": 13,
+      "text": "Why may two compatible test cubes be merged?",
+      "options": [
+        "Every don't-care must be converted to a fixed one first.",
+        "They must target the same source-code line.",
+        "All tests are compatible by definition.",
+        "Their specified input values do not conflict, allowing a combined test."
+      ],
+      "salt": "274f881754ef9a3f",
+      "answerHash": "56e217ea39242fa0945a61ff7463ed2d7e4d83674122274790f27e5526762b7e"
+    },
+    {
+      "number": 14,
+      "text": "What does backtracking in ATPG help do?",
+      "options": [
+        "Increase the wafer diameter.",
+        "Route all clocks geometrically.",
+        "Automatically change the fault model to hide failure.",
+        "Revise decisions when the current assignments cannot achieve activation or propagation."
+      ],
+      "salt": "6a15cd396cf8fdf2",
+      "answerHash": "324ca03e2bb8adbd520c000df92d7510254f23c4532ed19244189d7d0fbd01b7"
+    },
+    {
+      "number": 15,
+      "text": "What is built-in self-test (BIST)?",
+      "options": [
+        "On-chip mechanisms for generating tests and evaluating responses.",
+        "A proof of every possible product behavior.",
+        "A rule that forbids external test equipment.",
+        "A package assembly technique only."
+      ],
+      "salt": "881bff59aa2aac12",
+      "answerHash": "c9b03eec2ff4575e82d9215e59a8c5e8dad1f193baec2fd9974914d7897ea664"
+    },
+    {
+      "number": 16,
+      "text": "Which pair is typical in logic BIST?",
+      "options": [
+        "A pattern generator and a response compactor.",
+        "A source-code editor and a wafer saw only.",
+        "A photomask and a package lid only.",
+        "A clock constraint and a shipping invoice only."
+      ],
+      "salt": "7d322599b453a9f7",
+      "answerHash": "9002ee72d468e9e01a146c5e4b775c309f5aceedd28f8eb7fb4abbcc93a13b9a"
+    },
+    {
+      "number": 17,
+      "text": "What is a linear feedback shift register (LFSR)?",
+      "options": [
+        "A gate that performs optical exposure.",
+        "A memory whose size grows dynamically without bounds.",
+        "A shift register with linear feedback over binary arithmetic.",
+        "A substitute for every technology library."
+      ],
+      "salt": "a5e2efa713d4147f",
+      "answerHash": "85d7237c1e0ca135b5c49b33ef09d99a9da08fbbd633f038fbb959191c8d110e"
+    },
+    {
+      "number": 18,
+      "text": "What is the maximum nonzero cycle length of an n-bit XOR-feedback LFSR with suitable primitive feedback?",
+      "options": [
+        "n.",
+        "2 to the power n minus 1.",
+        "2 to the power n plus 1.",
+        "2n."
+      ],
+      "salt": "6d64d9892148f8ff",
+      "answerHash": "5094730a49053a3ccf218f493ea6a064a688c3269c8714aafc87117f4da24dd2"
+    },
+    {
+      "number": 19,
+      "text": "What is the maximum nonzero period of a 4-bit maximal-length LFSR?",
+      "options": [
+        "16",
+        "4",
+        "8",
+        "15"
+      ],
+      "salt": "5778397bd03482d9",
+      "answerHash": "2ada73b7eb83ee62a6cf3ad51672b04f6129c3f1b1ecf20a72e264671a8fa34c"
+    },
+    {
+      "number": 20,
+      "text": "Why is an all-zero seed unsuitable for a conventional XOR-feedback LFSR?",
+      "options": [
+        "It can remain locked in the all-zero state.",
+        "It always gives the maximum nonzero period.",
+        "It converts the shift register into an analog oscillator.",
+        "It doubles the number of storage bits."
+      ],
+      "salt": "0ebe256880bbb306",
+      "answerHash": "e072c7e16744129032bd050760124f40db757f7d20010979f40969a7a3e10915"
+    },
+    {
+      "number": 21,
+      "text": "A 3-bit LFSR state is [s2,s1,s0] and next state is [s1,s0,s2 XOR s0]. What follows state 101?",
+      "options": [
+        "101",
+        "001",
+        "111",
+        "010"
+      ],
+      "salt": "3b1490dc973977b4",
+      "answerHash": "c7fe4ac0bac4410e4f1e388953fba4858918ba903b9677f60c68c9ee01cfb188"
+    },
+    {
+      "number": 22,
+      "text": "Under that same explicit recurrence, what follows state 001?",
+      "options": [
+        "000",
+        "100",
+        "101",
+        "011"
+      ],
+      "salt": "4aa46c57c21a18f9",
+      "answerHash": "fb0b37ff144b5c8e58aade2604946dde0278ea38de4f012c61c79e58a14d1733"
+    },
+    {
+      "number": 23,
+      "text": "What does a multiple-input signature register (MISR) do?",
+      "options": [
+        "Measure final metal widths optically.",
+        "Guarantee that every faulty response has a unique signature.",
+        "Compact response streams from multiple inputs into a signature.",
+        "Replace all scan capture cycles with wafer probing."
+      ],
+      "salt": "1ec2fae0bbb00beb",
+      "answerHash": "7396fe5b83feb59806c77415fb0bb2d39f1b77a4908d5e287a85be3e3fae3204"
+    },
+    {
+      "number": 24,
+      "text": "What is signature aliasing?",
+      "options": [
+        "Different response sequences produce the same compacted signature.",
+        "Every response has a different signature.",
+        "A package has two identical printed labels.",
+        "The LFSR always stays in its seed state."
+      ],
+      "salt": "062d5dfddd2da14e",
+      "answerHash": "616614ae1987acccae44d6de6fed8adc2cd739d8783dffcdf99d032cd0ef4f88"
+    },
+    {
+      "number": 25,
+      "text": "Under an ideal uniformly random m-bit alias model, what is the approximate collision probability?",
+      "options": [
+        "m divided by 2.",
+        "1 divided by 2 to the power m.",
+        "Always zero.",
+        "1 divided by m."
+      ],
+      "salt": "a05aef3409ead645",
+      "answerHash": "f9e89d908eae05b97ccfa9116444add3e73bedb9ca6edb103bcc31011d958b52"
+    },
+    {
+      "number": 26,
+      "text": "Under that ideal model, a 16-bit signature has what approximate random-alias probability?",
+      "options": [
+        "1/32",
+        "1/65,536",
+        "1/256",
+        "1/16"
+      ],
+      "salt": "0d806897be5a26e0",
+      "answerHash": "628d677b2f1a3154c297306e983fdfe520030f6c315f2420fdfe07690644e3d8"
+    },
+    {
+      "number": 27,
+      "text": "If a fault is detected by one independent random trial with probability 0.25, what is the probability of detection within two trials?",
+      "options": [
+        "0.25",
+        "0.0625",
+        "0.4375",
+        "0.50"
+      ],
+      "salt": "7daaa436a8a401ca",
+      "answerHash": "0718b4a8d5fa9723993468cd2ceb2c15a1e632159c08fc42a764e36916ff1800"
+    },
+    {
+      "number": 28,
+      "text": "What is the probability that uniformly independent inputs of a 10-input AND are all 1?",
+      "options": [
+        "1/20",
+        "1/10",
+        "1/512",
+        "1/1024"
+      ],
+      "salt": "3d2f2a2e690c7f7c",
+      "answerHash": "a8aaaf6ef2dde47b96aebc479f4eca37e934c0208e01f39b695f08c39bac2147"
+    },
+    {
+      "number": 29,
+      "text": "Which fabrication task is ion implantation commonly used for?",
+      "options": [
+        "Introducing controlled dopants into semiconductor regions.",
+        "Selecting a Verilog sensitivity list.",
+        "Reordering a scan chain in a timing graph.",
+        "Compressing a response into a signature."
+      ],
+      "salt": "9a0abcb70c174190",
+      "answerHash": "8ae1719833b423661974a744d72e6ba255f577bd88a42ca65688e6e701510b0c"
+    },
+    {
+      "number": 30,
+      "text": "What is associated with front-end-of-line fabrication?",
+      "options": [
+        "Only the final system software update.",
+        "Only drawing package labels.",
+        "Only source-code parsing.",
+        "Forming transistor/device structures."
+      ],
+      "salt": "851349744fec8b46",
+      "answerHash": "793c121d5c17117bdd1b12b10f9b1c2aea3469b4e3c01dff56771a420f74bb2d"
+    },
+    {
+      "number": 31,
+      "text": "What is associated with back-end-of-line fabrication?",
+      "options": [
+        "Only generating random ATPG seeds.",
+        "Only compiling C into an executable.",
+        "Building interconnect metal and dielectric layers above devices.",
+        "Only the initial product requirements meeting."
+      ],
+      "salt": "d8234ef7e1a47362",
+      "answerHash": "5d2594fa85cd4107d0fa564b42be8b31398f4513ae318a2c17d0531d870cfbea"
+    },
+    {
+      "number": 32,
+      "text": "What is the role of an interlayer dielectric?",
+      "options": [
+        "Electrically separate conductors except at intended connections.",
+        "Store the final RTL text permanently.",
+        "Short every crossing wire by design.",
+        "Replace all transistors."
+      ],
+      "salt": "c1f090d12b534516",
+      "answerHash": "d153108d0b02a0886b44d1361f049f3ab359da3acebad8a7b8984c245afd352d"
+    },
+    {
+      "number": 33,
+      "text": "Under R=R_sheet times L/W, what is wire resistance for R_sheet=0.1 ohm per square, L=200 micrometres and W=2 micrometres?",
+      "options": [
+        "10 ohms",
+        "0.001 ohm",
+        "100 ohms",
+        "40 ohms"
+      ],
+      "salt": "595ff6a83aa56ceb",
+      "answerHash": "c2497e0066a24c2d4adefe1ef669a440ceede16b9f28f6260e2e585bc25cb7ea"
+    },
+    {
+      "number": 34,
+      "text": "Under the same sheet-resistance model, doubling width with length fixed has what effect?",
+      "options": [
+        "Resistance stays identical.",
+        "Resistance becomes four times larger.",
+        "Resistance halves.",
+        "Resistance doubles."
+      ],
+      "salt": "b926fb7afff8d694",
+      "answerHash": "3c3faeae44d6ab859ec650c677b6dc717035e4d99ebd452a8d3305238323e8fa"
+    },
+    {
+      "number": 35,
+      "text": "For a uniform wire with unchanged cross-section, both R and C scale with length. Doubling length changes the simple RC product by what factor?",
+      "options": [
+        "2",
+        "4",
+        "1/2",
+        "8"
+      ],
+      "salt": "783593c2e2e29533",
+      "answerHash": "1d0ee79627c914c9512f368916e7ec0f948359b0471ee4383ee4af47d4336eeb"
+    },
+    {
+      "number": 36,
+      "text": "What causes capacitive crosstalk between neighboring nets?",
+      "options": [
+        "Electrical coupling through mutual capacitance.",
+        "Identical source-code indentation.",
+        "A shared package marketing name.",
+        "The choice of PDF viewer."
+      ],
+      "salt": "8d22e3dd0caefd8d",
+      "answerHash": "0abaaca227098e9a5537475ce8f9b01da29a5ce74270eabfcc23651fdc886066"
+    },
+    {
+      "number": 37,
+      "text": "Why can the relative switching direction of an aggressor matter?",
+      "options": [
+        "Crosstalk exists only in ideal zero-capacitance wires.",
+        "It can change the effective coupling impact on the victim's delay or noise.",
+        "All aggressors affect a victim identically regardless of transitions.",
+        "Opposite transitions remove every physical field."
+      ],
+      "salt": "cf26cc0da93bcbdf",
+      "answerHash": "98d9d9e65b6474f8134190e0c9b2515b68e86ed6fe90dfab40dd168238d3dfd3"
+    },
+    {
+      "number": 38,
+      "text": "What is the manufacturing antenna effect concerned with?",
+      "options": [
+        "The number of source files in an RTL hierarchy.",
+        "Charge accumulation on conductors damaging gate oxide during processing.",
+        "A normal requirement that every clock radiate a radio signal.",
+        "Only the shape of the external package."
+      ],
+      "salt": "297be0a7fb9dc57e",
+      "answerHash": "f69bf1b008e65c5064f65d3c896008aecb3cd2efdb609d7598ddd4aaa6f968fe"
+    },
+    {
+      "number": 39,
+      "text": "Which measure can help mitigate a process antenna problem, depending on rules and flow?",
+      "options": [
+        "Renaming the gate.",
+        "Replacing every input vector by zero.",
+        "Antenna diodes or an appropriate routing-layer jump.",
+        "Deleting all verification constraints."
+      ],
+      "salt": "72af20d00134c25c",
+      "answerHash": "3ed7c4e467f94598df89bb8824208a86c857c9f4b3811a1f34fb9b33ed5eff09"
+    },
+    {
+      "number": 40,
+      "text": "Which physical data format commonly describes routing layers, rules and cell abstracts?",
+      "options": [
+        "VCD.",
+        "LEF.",
+        "A plain SDC clock report only.",
+        "A C testbench executable."
+      ],
+      "salt": "cc94c5fde561f066",
+      "answerHash": "625797995b256ffa667c501377f62c5005e29663580b6b6b8a2a19c7c45753ce"
+    },
+    {
+      "number": 41,
+      "text": "Where is routing-layer sheet resistance commonly provided in a technology abstract used by a physical tool?",
+      "options": [
+        "Only an RTL module declaration.",
+        "Only the package's retail label.",
+        "Technology LEF layer data.",
+        "Only a waveform signal list."
+      ],
+      "salt": "6b6a11fabe0c0490",
+      "answerHash": "e6660be8224cf52e192bebc81b1b5eda3478639f54d42ae43c930caefdfe5320"
+    },
+    {
+      "number": 42,
+      "text": "Which statement separates LEF and Liberty?",
+      "options": [
+        "Both are always the same file with different extensions.",
+        "Liberty contains only final top-level metal polygons.",
+        "LEF supplies physical abstract information; Liberty supplies characterized cell logic and electrical models.",
+        "LEF contains no physical information."
+      ],
+      "salt": "4821fda2420adf4f",
+      "answerHash": "9b9fe493e6fabd1ae6b5757d8add15d70e0dd8f4ceb1bf87798fb0ddd18b5aa6"
+    },
+    {
+      "number": 43,
+      "text": "What does the RC of an interconnect affect?",
+      "options": [
+        "Signal delay, transition behavior and sometimes noise interactions.",
+        "The total number of possible Boolean functions independently of implementation.",
+        "Only the spelling of net names.",
+        "Only how many comments are in RTL."
+      ],
+      "salt": "dd89027de2e4a10e",
+      "answerHash": "829f7db202658ceee135646c65e8e949c199780eb95c58ed495773128831aeb6"
+    },
+    {
+      "number": 44,
+      "text": "Two identical independent vias of resistance R are placed in ideal parallel. Their equivalent resistance is what?",
+      "options": [
+        "R squared",
+        "R/2",
+        "2R",
+        "R"
+      ],
+      "salt": "fb0afc5c8f8cee49",
+      "answerHash": "bf782a2085021d035b16d31f00426f78b9aa605ff414e349918857c485b3b909"
+    },
+    {
+      "number": 45,
+      "text": "What is electromigration associated with?",
+      "options": [
+        "A change in the Boolean meaning of AND.",
+        "The migration of RTL files between folders.",
+        "Material transport driven by high current density over time.",
+        "The number of random simulation seeds only."
+      ],
+      "salt": "cd18b01e7cb3570c",
+      "answerHash": "9243dc3ad9d89ab2182eb49758ee91deb33dd4a2a8203600e1b183fea7a38f8d"
+    },
+    {
+      "number": 46,
+      "text": "For fixed current, doubling conductor cross-sectional area changes current density by what factor?",
+      "options": [
+        "1",
+        "4",
+        "1/2",
+        "2"
+      ],
+      "salt": "02f5064675a1ff21",
+      "answerHash": "919f88a26e66d5cecc1b0bd7500ead9e92c22b17d32d4888707781256ba6bec2"
+    },
+    {
+      "number": 47,
+      "text": "Consider local decoupling capacitance. A. It can supply transient charge. B. It can help reduce supply disturbance within the network's limits. C. It eliminates all supply resistance. Which statements are correct?",
+      "options": [
+        "A and B only",
+        "A and C only",
+        "A, B and C",
+        "B only"
+      ],
+      "salt": "0767d0bb12252908",
+      "answerHash": "41b92018ff461c219baccc6a707aa835c3c7e16798d8bc2880bf4bdcdaef8803"
+    },
+    {
+      "number": 48,
+      "text": "Consider well or substrate taps. A. They provide required bias connections. B. Their use can depend on process rules. C. They are a replacement for the functional Boolean specification. Which statements are correct?",
+      "options": [
+        "B and C only",
+        "A only",
+        "A and B only",
+        "A, B and C"
+      ],
+      "salt": "f70c5a5d1cb74c58",
+      "answerHash": "bc4c1415a40c47c43be48887a0c54a2a06f5707c9655d20b77419464a2b70d1d"
+    },
+    {
+      "number": 49,
+      "text": "What are filler cells commonly used for in a standard-cell layout?",
+      "options": [
+        "Guarantee minimum placement wire length.",
+        "Implement arbitrary new functional RTL behavior.",
+        "Fill permitted gaps and maintain required row-level physical continuity.",
+        "Replace every timing buffer."
+      ],
+      "salt": "15564050acf2d00c",
+      "answerHash": "81909e1b54d451fe9e0e65e32ce7e06fb161f3e21e0831413599d46bc0f23d5e"
+    },
+    {
+      "number": 50,
+      "text": "Which tool in the course supports an RTL-to-GDS physical implementation flow?",
+      "options": [
+        "OpenROAD.",
+        "A Unix file-copy command alone.",
+        "A general PDF renderer.",
+        "GTKWave alone."
+      ],
+      "salt": "87b2ce48fbd6688a",
+      "answerHash": "a48c539e62f99ba4f5a23229de17055274c7c7a1e055650f29faabcb0bb31798"
+    }
+  ]
+}

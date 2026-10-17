@@ -1,0 +1,606 @@
+{
+  "week": 11,
+  "kind": "Original practice, not verified PYQs",
+  "questions": [
+    {
+      "number": 1,
+      "text": "Consider floorplanning. A. Macro arrangement matters. B. Routing and power space matter. C. Functional equivalence alone determines every physical coordinate. Which statements are correct?",
+      "options": [
+        "A and C only",
+        "B only",
+        "A, B and C",
+        "A and B only"
+      ],
+      "salt": "3818f787bc77067c",
+      "answerHash": "f7f0158de643d86e7b4c0182e9873c308813ecf941cf9c5c353ac60d09088ab2"
+    },
+    {
+      "number": 2,
+      "text": "Consider a standard-cell core region. A. It is a physical implementation region inside the die. B. Its usable area can be reduced by macros or blockages. C. It is simply the sum of RTL source-file sizes. Which statements are correct?",
+      "options": [
+        "B and C only",
+        "A and B only",
+        "A only",
+        "A, B and C"
+      ],
+      "salt": "dc1b884de67bc7d6",
+      "answerHash": "9f8cb1273fb2d67e84fe5719fc539d4afbf2b436ec60f5e982e55240dec58456"
+    },
+    {
+      "number": 3,
+      "text": "Consider core-to-die planning margins. A. Boundary and I/O needs can matter. B. Power structures can need space. C. Every process and design requires exactly the same margin. Which statements are correct?",
+      "options": [
+        "A and B only",
+        "B only",
+        "A, B and C",
+        "A and C only"
+      ],
+      "salt": "ede48db880d553ac",
+      "answerHash": "e7cb558e67ea27e7e25f4fa50ac12ccd5170a851a76f7a3b2e434bcc01dcbd86"
+    },
+    {
+      "number": 4,
+      "text": "If standard-cell area is 60,000 square micrometres and the available placement region is 100,000 square micrometres, utilization is what?",
+      "options": [
+        "40%",
+        "6%",
+        "60%",
+        "166.7%"
+      ],
+      "salt": "54f149cce30e9d24",
+      "answerHash": "d964700d5747654088a3b5b8da454d754d2dded5d681dc846034f17863afbb31"
+    },
+    {
+      "number": 5,
+      "text": "For 80,000 square micrometres of cells at a target 50% utilization in an otherwise unobstructed region, required region area is what?",
+      "options": [
+        "80,000 square micrometres",
+        "200,000 square micrometres",
+        "160,000 square micrometres",
+        "40,000 square micrometres"
+      ],
+      "salt": "c9de9de5200733ef",
+      "answerHash": "96fe2e5ace2c74cecf9ce8f6feb5b5f37c99c1a678403bf161e9ba1abfe31ef1"
+    },
+    {
+      "number": 6,
+      "text": "Why is targeting 100% standard-cell utilization often impractical?",
+      "options": [
+        "Routing, placement flexibility and other physical needs require space.",
+        "Cells do not occupy physical area.",
+        "Full utilization always guarantees minimum delay.",
+        "Every library forbids any placement above 10%."
+      ],
+      "salt": "de4b9c1a0a22eeaa",
+      "answerHash": "d07ecbdd8b077883e6a1634054f24eb969bd1bae4fa787a77ca8d53fe98f68a2"
+    },
+    {
+      "number": 7,
+      "text": "What is aspect ratio in a rectangular floorplan when defined as height/width?",
+      "options": [
+        "The number of cells divided by die cost.",
+        "Clock period divided by input delay.",
+        "The core height divided by its width.",
+        "Total wire resistance divided by voltage."
+      ],
+      "salt": "09b6fa8868af31bb",
+      "answerHash": "85c4f0233be648465c57cbbe355faba4affb3b88b3c4037eebda48e8c0cd7efe"
+    },
+    {
+      "number": 8,
+      "text": "A rectangular core has area 40,000 square micrometres and height/width=1. What are its dimensions?",
+      "options": [
+        "400 by 400 micrometres.",
+        "20 by 20 micrometres.",
+        "200 by 200 micrometres.",
+        "100 by 400 micrometres."
+      ],
+      "salt": "de5a85005640ccf4",
+      "answerHash": "f8ca8648f178b78d318787f79a959d21d5f297f3e9186acfffa0ca9f5446a129"
+    },
+    {
+      "number": 9,
+      "text": "A core is 100 by 200 micrometres. What is height/width if height is 200?",
+      "options": [
+        "100",
+        "2",
+        "20,000",
+        "0.5"
+      ],
+      "salt": "828acdc0d3cc3670",
+      "answerHash": "5e3fc7effb7efce117a715d99457cff653abd5b302d128b79af052f73aca2cb6"
+    },
+    {
+      "number": 10,
+      "text": "Why consider macro pin locations during macro placement?",
+      "options": [
+        "Pins have no relationship to connected nets.",
+        "Macro rotation never affects access.",
+        "Every macro pin is automatically shorted to every other pin.",
+        "Pin access and connectivity influence routing feasibility and delay."
+      ],
+      "salt": "a044c47692abc258",
+      "answerHash": "ff9b7ecc2782f4bc40c7306fb846dd7d39cb82282f3406caab9bc4a077a96584"
+    },
+    {
+      "number": 11,
+      "text": "What is a placement halo around a macro commonly used for?",
+      "options": [
+        "Record its source file's date.",
+        "Define an extra scan state bit.",
+        "Add a new Boolean output.",
+        "Reserve separation or keepout space for access and physical constraints."
+      ],
+      "salt": "ac09eeaebe7360a3",
+      "answerHash": "33fd4cef33a0017d2f2b71995f8b732673682c6ff57bd35c27b64d157381dee1"
+    },
+    {
+      "number": 12,
+      "text": "What is a macro channel?",
+      "options": [
+        "Space between large blocks that can provide routing or other required resources.",
+        "A manufacturing wafer defect.",
+        "A Verilog always block.",
+        "A software message queue necessarily."
+      ],
+      "salt": "b217a0e183c60210",
+      "answerHash": "7e16c9f993a66022b28a9956a86a797684b1b204394765951339f7e885d70bd9"
+    },
+    {
+      "number": 13,
+      "text": "Why can abutting macros without access planning be problematic?",
+      "options": [
+        "Connected pins and routing resources may become inaccessible or congested.",
+        "Macro edges automatically form every required signal connection.",
+        "Physical space never affects routing.",
+        "Pin shapes are unrelated to connectivity."
+      ],
+      "salt": "c3cacae9318fbe9a",
+      "answerHash": "05fbb236602e63ac20b5d60a6f17f5b28eb24370a79e73066902d7a5d781d9af"
+    },
+    {
+      "number": 14,
+      "text": "What is a placement blockage?",
+      "options": [
+        "A physical region restricting placement of selected objects.",
+        "A source-code syntax error only.",
+        "A required all-zero scan pattern.",
+        "A property that proves no timing path exists."
+      ],
+      "salt": "9ad507a8eb1bcb05",
+      "answerHash": "3da649f2f4cc2786875129e55686fe86b96e7c92f1f53838122d90fe9764845d"
+    },
+    {
+      "number": 15,
+      "text": "What is a routing blockage?",
+      "options": [
+        "A guarantee that every net is already connected.",
+        "A restriction on routing resources in a specified region or layer.",
+        "A prohibition on all logic simulation.",
+        "An instruction to delete the netlist."
+      ],
+      "salt": "92eeeead26ee9a6a",
+      "answerHash": "32de13ed5a9001d6c218ae7a7d1aaf6a02d2b03e7c799e6540fe60616ff4a457"
+    },
+    {
+      "number": 16,
+      "text": "What is a primary purpose of a power delivery network (PDN)?",
+      "options": [
+        "Replace the signal-routing network entirely.",
+        "Define every state-transition relation.",
+        "Deliver power and ground to cells with acceptable electrical behavior.",
+        "Execute all testbench instructions."
+      ],
+      "salt": "e439d9e31c8a9df3",
+      "answerHash": "3a83750539dd70462967b20d2de0b4a1bc2ec6051a301e489d8bdbded1f87bb4"
+    },
+    {
+      "number": 17,
+      "text": "Why are mesh or grid PDN structures useful?",
+      "options": [
+        "They remove every need for power analysis.",
+        "Multiple current paths can improve distribution robustness and lower effective delivery impedance.",
+        "They make wire resistance exactly zero.",
+        "They guarantee no routing-resource trade-off."
+      ],
+      "salt": "199dcbc2fe77a251",
+      "answerHash": "43ecbad378c4449e879d10281634444292a5e4c2916430b090af96bb1bd9989a"
+    },
+    {
+      "number": 18,
+      "text": "What is static IR drop?",
+      "options": [
+        "Voltage drop caused by current through resistive supply paths.",
+        "A mandatory clock phase difference.",
+        "The number of registers in a binary counter.",
+        "A measure of source-code indentation."
+      ],
+      "salt": "407fc887c5a4d08b",
+      "answerHash": "3401526977d4f0830e5203cb036205de5af393e8e2b1bc80061a3f283cd969f9"
+    },
+    {
+      "number": 19,
+      "text": "A supply path has resistance 0.2 ohm and current 0.1 A. What is its IR drop?",
+      "options": [
+        "2 mV",
+        "200 mV",
+        "20 mV",
+        "2 V"
+      ],
+      "salt": "83af4232cd1a6fc3",
+      "answerHash": "97025487da79551c478e132875f708604fbf80aa77d2a6c185ed8be23fec7bff"
+    },
+    {
+      "number": 20,
+      "text": "With a 1.0 V source and a 40 mV resistive drop, what voltage reaches the modeled load?",
+      "options": [
+        "1.04 V",
+        "0.96 V",
+        "0.60 V",
+        "0.04 V"
+      ],
+      "salt": "8789df263313e97d",
+      "answerHash": "71ec8335f23d9d4fe75d616986dc7ae2f189ec8ed5c24bcff010d0c0e03ec5ec"
+    },
+    {
+      "number": 21,
+      "text": "Which change reduces resistive drop for fixed current in a simple isolated stripe model?",
+      "options": [
+        "Increase stripe cross-section or provide suitable parallel paths.",
+        "Rename the power net.",
+        "Increase resistance.",
+        "Narrow every stripe without changing anything else."
+      ],
+      "salt": "a869621426a4e348",
+      "answerHash": "b1ee2bce01dc88a4eeaa0a2ec4d12f8d2ded92621cbe088aee36593ddeb341cc"
+    },
+    {
+      "number": 22,
+      "text": "Why can a denser PDN affect signal routing?",
+      "options": [
+        "Power conductors occupy routing resources.",
+        "PDN wires exist outside all physical layers.",
+        "Signal and power networks never compete for geometric space.",
+        "Routing ignores power structures entirely."
+      ],
+      "salt": "342350e2b2e8d14e",
+      "answerHash": "ba354344685a3ad6651007abe124a98c9b874f25278284430e0e3705ae8465a5"
+    },
+    {
+      "number": 23,
+      "text": "What is global placement primarily trying to optimize?",
+      "options": [
+        "Only the chip's packaging invoice.",
+        "Only final via manufacturing.",
+        "The source-code line ending format.",
+        "A coarse cell arrangement considering objectives such as wire length, density and timing."
+      ],
+      "salt": "d72a8afae3b83700",
+      "answerHash": "3c24d672ad66d7f41e97ab85b707bfd4176d59355c429b3257a637e907a79f03"
+    },
+    {
+      "number": 24,
+      "text": "Can a global-placement solution temporarily contain cell overlap?",
+      "options": [
+        "Yes, legalization may be required afterward.",
+        "Overlap is a Boolean truth-table property.",
+        "Only if every cell is a macro.",
+        "No, every global method directly produces a final signoff layout."
+      ],
+      "salt": "9a8c44508982ee86",
+      "answerHash": "dbf718d213a3ad199bda6ef1704b6157bb6a49c6c711f66a9a432f5ea8040cad"
+    },
+    {
+      "number": 25,
+      "text": "What is legalization?",
+      "options": [
+        "Convert every design to a full-custom transistor schematic.",
+        "Generate a scan test signature.",
+        "Change the product requirements.",
+        "Remove placement overlap and meet applicable row/site and placement restrictions."
+      ],
+      "salt": "ac3f6770d5247899",
+      "answerHash": "e7228882c862e8f1b2f935f60d8cf40195c8aec96e94026a22f887f993d0d335"
+    },
+    {
+      "number": 26,
+      "text": "What is detailed placement used for?",
+      "options": [
+        "Write the initial C algorithm.",
+        "Replace all technology rules with random choices.",
+        "Refine legal cell locations and improve physical objectives locally.",
+        "Fabricate the silicon ingot."
+      ],
+      "salt": "44572d1e64576028",
+      "answerHash": "37e26f8f5251add94a1ce221d65aad607121fe95c6353b00595a63383669449d"
+    },
+    {
+      "number": 27,
+      "text": "What is half-perimeter wire length (HPWL) for one net?",
+      "options": [
+        "The sum of the rectangle's four sides.",
+        "The squared Euclidean distance of every pin pair.",
+        "The exact routed length in every case.",
+        "The x-span plus y-span of the pin bounding box."
+      ],
+      "salt": "ab5eae52203f151b",
+      "answerHash": "931cdfe2f7b42194e6bcd182ee1ef30eaaf00a30e264115fa87fc07d57672df4"
+    },
+    {
+      "number": 28,
+      "text": "A net's pins span x=10 to 70 and y=20 to 50 micrometres. What is its HPWL?",
+      "options": [
+        "30 micrometres",
+        "90 micrometres",
+        "60 micrometres",
+        "180 micrometres"
+      ],
+      "salt": "c1122deabb1f2e60",
+      "answerHash": "123353d3b0da8d0faee705b80b29463dc1192a7bb7cd94a4b8fb7493334fe8e1"
+    },
+    {
+      "number": 29,
+      "text": "Why is HPWL only an estimate of routed wire length?",
+      "options": [
+        "It explicitly routes every wire and via.",
+        "It is computed only after detailed routing.",
+        "It includes all possible coupling capacitance exactly.",
+        "It omits actual routing topology, detours, layers and obstacles."
+      ],
+      "salt": "965f983cbd404eed",
+      "answerHash": "83dd6608f019b4d72326a4b2b68b3221511718c432035ae2015ed9c07328346e"
+    },
+    {
+      "number": 30,
+      "text": "What can a high cell-density hotspot cause?",
+      "options": [
+        "Guaranteed elimination of timing violations.",
+        "Guaranteed lower wire length for every net.",
+        "Congestion and reduced placement/routing flexibility.",
+        "Zero need for legalization."
+      ],
+      "salt": "c8c9ef83ff7717a7",
+      "answerHash": "e7b05dd957470392b30c32fb04cb806a9b0cd83cd825788e1d65d8d340342f4d"
+    },
+    {
+      "number": 31,
+      "text": "What is routability-driven placement concerned with?",
+      "options": [
+        "Only choosing testbench seeds.",
+        "Whether the arrangement leaves enough usable routing resources for the nets.",
+        "Only printing source code.",
+        "Only the alphabetical ordering of instances."
+      ],
+      "salt": "1de0ee6fd816dea3",
+      "answerHash": "524576604705f1632111eb94267c40c94945e1f00faa5d7a28cf76cafb0c4016"
+    },
+    {
+      "number": 32,
+      "text": "What is timing-driven placement concerned with?",
+      "options": [
+        "Only changing net names.",
+        "Only the total wafer count.",
+        "Improving path timing through physical arrangement and related optimization.",
+        "Only minimizing the number of PDF pages."
+      ],
+      "salt": "50f94801b8a789f1",
+      "answerHash": "456e498b9537ade3ffaa06a951479d88fa99919125e4c549c280edc33a50dcba"
+    },
+    {
+      "number": 33,
+      "text": "Why can placing connected cells closer help a critical net?",
+      "options": [
+        "It always eliminates every coupling interaction.",
+        "It may reduce wire length and parasitic delay, subject to other constraints.",
+        "It always removes cell delay.",
+        "It changes the required Boolean output automatically."
+      ],
+      "salt": "85cadd91ba9d8440",
+      "answerHash": "b290d47222f8988e86a8c4457d603ce6a29acc1c11e3e2d9d6fd3eb5228fe0fc"
+    },
+    {
+      "number": 34,
+      "text": "What does scan-chain reordering commonly optimize physically?",
+      "options": [
+        "The algorithm's arithmetic precision.",
+        "The number of manufacturing mask layers.",
+        "The connection order of scan cells to reduce shift-chain wiring cost.",
+        "The intended functional combinational truth table."
+      ],
+      "salt": "e3b4e1f974966a9c",
+      "answerHash": "967089577eb394f821c13f30834d67c2cb20ec3c38c83ab16c07d958d5212cf4"
+    },
+    {
+      "number": 35,
+      "text": "Why must scan-chain reordering preserve the test flow's interpretation?",
+      "options": [
+        "Scan patterns do not depend on chain ordering.",
+        "Reordering automatically removes all scan clocks.",
+        "Pattern generation and scan connections must agree on the final chain order.",
+        "Every order uses the same serialized bit positions without adjustment."
+      ],
+      "salt": "59a0404b21f801c8",
+      "answerHash": "f520dd62c26892410f464494317b32a3c8ac6207c722c4ec67c3f61889481d55"
+    },
+    {
+      "number": 36,
+      "text": "What are spare cells placed for?",
+      "options": [
+        "Replace all original functional cells immediately.",
+        "Execute user software as a CPU necessarily.",
+        "Facilitate later engineering changes without a complete new placement plan.",
+        "Guarantee zero die area."
+      ],
+      "salt": "6e22ee15b0b3004e",
+      "answerHash": "e1e44046efa139797da7f11cee181b09c57763dde07c3f75f42a27f6af0d366e"
+    },
+    {
+      "number": 37,
+      "text": "Why can spare-cell placement location matter?",
+      "options": [
+        "A later ECO needs accessible nearby resources and routable connections.",
+        "Spare cells are not physical objects.",
+        "All future changes occur at the same coordinate.",
+        "Their connectivity is determined only by their file names."
+      ],
+      "salt": "58082b43c95dc3b7",
+      "answerHash": "76c8b8b0312366789ad053cd69f46860d106d56955428554422300bed0d4e732"
+    },
+    {
+      "number": 38,
+      "text": "What is an engineering change order (ECO) in implementation?",
+      "options": [
+        "A controlled modification to an existing design implementation.",
+        "A mandatory redesign of every transistor from scratch.",
+        "A new independent course assignment.",
+        "Only a manufacturing shipment label."
+      ],
+      "salt": "ce8531ef49d4f56a",
+      "answerHash": "5f02b212c1fbb6880e4f0a3561a26d4cc109b0b4cc836bdc3119778d1836623a"
+    },
+    {
+      "number": 39,
+      "text": "What should follow an ECO affecting logic or routing?",
+      "options": [
+        "Assume all old signoff evidence remains valid without review.",
+        "Recheck relevant functionality, timing and physical rules.",
+        "Ignore parasitic changes.",
+        "Delete all constraints."
+      ],
+      "salt": "0d2bf37380b8e0f1",
+      "answerHash": "1a170d201ebeaf8bbc3538e02e75b465ae930ac0778377270f84daaa601545ab"
+    },
+    {
+      "number": 40,
+      "text": "In hierarchical design, why define block interface timing budgets?",
+      "options": [
+        "To make physical interconnect delay irrelevant.",
+        "To coordinate block-level closure with top-level timing requirements.",
+        "To eliminate top-level timing analysis.",
+        "To prove every block independently of all interfaces."
+      ],
+      "salt": "183a06c4deb9037e",
+      "answerHash": "94ab08a83a05b9f3adf7f625cd67d275ec07a9236b32fb29157a27029509403c"
+    },
+    {
+      "number": 41,
+      "text": "Why can a block meeting its own timing budget still need top-level reanalysis?",
+      "options": [
+        "A block has no interfaces after integration.",
+        "Every hierarchy boundary deletes delay.",
+        "Top-level analysis measures only source-code indentation.",
+        "Actual integration clocks, loads and interconnect may differ from assumed conditions."
+      ],
+      "salt": "8c63bf53a57e519e",
+      "answerHash": "141104bc94535c90e2dfcb60a21438fba62bfe24e1795e293c098980ca9e3c46"
+    },
+    {
+      "number": 42,
+      "text": "What information from LEF is directly useful for placement?",
+      "options": [
+        "Cell dimensions, pin shapes and physical obstructions.",
+        "Only every software runtime result.",
+        "Only dynamic testbench output.",
+        "Only the target's sales forecast."
+      ],
+      "salt": "761de6ee27fd09be",
+      "answerHash": "d76b6e51b6b13815848c6e13129151bd0fd71adf4c86812cc4daf079f0aa80e9"
+    },
+    {
+      "number": 43,
+      "text": "What does a DEF file commonly describe in an implementation exchange flow?",
+      "options": [
+        "Design-specific physical placement and routing information.",
+        "A waveform history only.",
+        "A high-level C algorithm only.",
+        "Only the unmodified process technology manual."
+      ],
+      "salt": "204ce91a178d5403",
+      "answerHash": "e40a03dd5fcdb68f5a5c1a1a5afa5a9459b12e3e608de9dad9024390c94341a6"
+    },
+    {
+      "number": 44,
+      "text": "Which report family helps assess aggregate timing violations in OpenROAD?",
+      "options": [
+        "Reports such as report_tns and worst-slack reports.",
+        "Only a chip packaging report.",
+        "Only a histogram of source-code characters.",
+        "Only a directory listing."
+      ],
+      "salt": "969c97aaafa1e13c",
+      "answerHash": "a67466dc0673037a58a3a0a9e5fd445e15998323b8b09d542e84f697399e9459"
+    },
+    {
+      "number": 45,
+      "text": "Three endpoint slacks are -0.02 ns, -0.03 ns and +0.04 ns. Summing the negative endpoints gives what TNS?",
+      "options": [
+        "-0.05 ns",
+        "-0.01 ns",
+        "-0.09 ns",
+        "+0.05 ns"
+      ],
+      "salt": "6fa09ef06c8e8296",
+      "answerHash": "d3f5260fca9c893ece99715cf90b7a5ac8b03fdbbd77897fa17781e5bf2b52e8"
+    },
+    {
+      "number": 46,
+      "text": "Why re-evaluate congestion after adding timing buffers?",
+      "options": [
+        "Routing depends only on the initial floorplan title.",
+        "Timing repair automatically guarantees routability.",
+        "Buffers have no area or pin demand.",
+        "New cells and nets consume physical and routing resources."
+      ],
+      "salt": "0b286db96a31fa7b",
+      "answerHash": "0e1c9ee5e98c1869f9a0d629e4f58310e60afddcf010ee0e87d26de895813d70"
+    },
+    {
+      "number": 47,
+      "text": "Consider placement sites and rows. A. They define alignment and legal placement structure. B. Legalization respects applicable site/row restrictions. C. Geometric overlap is acceptable at final signoff whenever logic is equivalent. Which statements are correct?",
+      "options": [
+        "A only",
+        "B and C only",
+        "A, B and C",
+        "A and B only"
+      ],
+      "salt": "73ac879e9447a44e",
+      "answerHash": "9b12c40a9e342d9dc407068e2e28b0a39ee10ce3550823cdbccde1969ac8e97b"
+    },
+    {
+      "number": 48,
+      "text": "Consider endcap and well-tap planning. A. Physical requirements can consume space. B. Required placement can be process-dependent. C. These cells make every signal route unnecessary. Which statements are correct?",
+      "options": [
+        "A, B and C",
+        "A and C only",
+        "A and B only",
+        "B only"
+      ],
+      "salt": "9c99bcec2b6eded5",
+      "answerHash": "24b7dd9a1e5296671a5a7c00fc60cffc12f9c29a00d7938dde350b4b8c2c8131"
+    },
+    {
+      "number": 49,
+      "text": "What can happen when a large macro is rotated?",
+      "options": [
+        "Its documented Boolean functionality must always invert.",
+        "Its logical input count necessarily doubles.",
+        "Its silicon process automatically changes.",
+        "Its physical pin locations and access conditions change with the orientation."
+      ],
+      "salt": "426e2faa4a7796ed",
+      "answerHash": "bdb3c9666d7fca7767f0ac847af3c08141f200f9f9458ac04857f8d1b5de274c"
+    },
+    {
+      "number": 50,
+      "text": "Which is a sound floorplan trade-off?",
+      "options": [
+        "Treat power structures as having no geometric footprint.",
+        "Balance area, utilization, macro access, power delivery, timing and routability.",
+        "Minimize all whitespace regardless of process needs.",
+        "Maximize density while ignoring all routing and timing."
+      ],
+      "salt": "1876d5f29ad9283e",
+      "answerHash": "87617d0c1508af8b19c704dcfde60a3045bba2dd9d0ad8a6b8bf6be991b10791"
+    }
+  ]
+}

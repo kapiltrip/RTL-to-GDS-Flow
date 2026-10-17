@@ -1,0 +1,606 @@
+{
+  "week": 9,
+  "kind": "Original practice, not verified PYQs",
+  "questions": [
+    {
+      "number": 1,
+      "text": "In the capacitive switching model P=alpha C V squared f, consider fixed other quantities. A. Power scales linearly with switched C. B. Power scales with voltage squared. C. Power is independent of frequency. Which statements are correct?",
+      "options": [
+        "A and B only",
+        "B only",
+        "A, B and C",
+        "A and C only"
+      ],
+      "salt": "354a1433f6bb6326",
+      "answerHash": "a6630f6eefb0b259697130b0234f873a729a3919dff12178fbb1e973907acfa7"
+    },
+    {
+      "number": 2,
+      "text": "With C=10 fF, V=1 V, f=1 GHz and alpha=0.2, what is switching power?",
+      "options": [
+        "2 milliwatts",
+        "20 microwatts",
+        "0.2 milliwatt",
+        "2 microwatts"
+      ],
+      "salt": "73d71802e9b48b02",
+      "answerHash": "d14505b7a6a7ed81460bd05c5ab6d96dbdd73f94ad750c39f8cf43d554ee8411"
+    },
+    {
+      "number": 3,
+      "text": "At unchanged C, V and alpha, frequency doubles. What happens to modeled switching power?",
+      "options": [
+        "It doubles.",
+        "It halves.",
+        "It remains constant.",
+        "It becomes four times larger."
+      ],
+      "salt": "d8ccd2d7ea3d4b2e",
+      "answerHash": "b3fce61d931a62bfb17efd57c09726274e052c9312863dd762a038e23c28c80e"
+    },
+    {
+      "number": 4,
+      "text": "At unchanged C, f and alpha, voltage falls from 1 V to 0.9 V. What is the switching-power ratio?",
+      "options": [
+        "0.19",
+        "1.11",
+        "0.90",
+        "0.81"
+      ],
+      "salt": "14b3984668e4c7bb",
+      "answerHash": "c98f61f014f26be7b4d9adcb48f7937b7dc40a743d7b9e0eb966178eb131c3cd"
+    },
+    {
+      "number": 5,
+      "text": "At unchanged V, f and alpha, total switched capacitance falls by 25%. What is the power ratio?",
+      "options": [
+        "0.75",
+        "0.25",
+        "1.25",
+        "1.75"
+      ],
+      "salt": "069ea2c6202fa918",
+      "answerHash": "c43707bee455a41bc5c1f440d44a201488f26ce9b2c5a12937b667f8e58ee474"
+    },
+    {
+      "number": 6,
+      "text": "For a 2 mW block operating for 3 microseconds, what is the consumed energy if this is its average task power?",
+      "options": [
+        "0.67 nJ",
+        "1.5 nJ",
+        "6 nJ",
+        "6 pJ"
+      ],
+      "salt": "54bda064fea13615",
+      "answerHash": "bfbf0d4af2125b4af666bab11d0985214e5372e1f3681479b056b5b31ac765fe"
+    },
+    {
+      "number": 7,
+      "text": "Consider CMOS power components. A. Leakage can occur without logic transitions. B. Capacitive switching depends on activity. C. Leakage is necessarily zero whenever the clock is gated. Which statements are correct?",
+      "options": [
+        "B and C only",
+        "A, B and C",
+        "A and B only",
+        "A only"
+      ],
+      "salt": "1e81d3b55998baf7",
+      "answerHash": "f2ceb6e9f1e203ed70b78bb9c0d871391c21e0455aa522193e0b23181476dd62"
+    },
+    {
+      "number": 8,
+      "text": "Consider short-circuit power during a CMOS transition. A. Pull-up and pull-down paths can conduct simultaneously for part of the transition. B. Input transition behavior can affect it. C. It is identical to the external capacitive charging term by definition. Which statements are correct?",
+      "options": [
+        "A and B only",
+        "A and C only",
+        "B only",
+        "A, B and C"
+      ],
+      "salt": "52408c3f889b104f",
+      "answerHash": "d58f65754c0715afa894e5a3bcccc1348a4bf365f1eed649359508d8ceb2126e"
+    },
+    {
+      "number": 9,
+      "text": "Why can glitching increase dynamic power?",
+      "options": [
+        "Extra transitions charge and discharge capacitances.",
+        "Every glitch necessarily changes the final steady-state truth table.",
+        "Glitching affects only printed waveform colors.",
+        "Glitches remove every switching event."
+      ],
+      "salt": "d774ddc97bf1f1d0",
+      "answerHash": "a2d4305463db93031e91a6a18e8340dee1a1f3e845e9b26536960785012aa350"
+    },
+    {
+      "number": 10,
+      "text": "What is clock gating intended to reduce?",
+      "options": [
+        "Every leakage current by definition.",
+        "Unnecessary clock-related switching when a block need not update.",
+        "The number of manufactured wafers only.",
+        "The silicon substrate thickness."
+      ],
+      "salt": "2ab1e0766f17b3ce",
+      "answerHash": "e8b88fb56c4f4c5474ad503a3f8ee32dd943f1d0a9ac49ea63b87325062b80ed"
+    },
+    {
+      "number": 11,
+      "text": "Why must clock gating be implemented carefully?",
+      "options": [
+        "Any combinational AND gate guarantees glitch-free gating in all conditions.",
+        "An unsafe enable transition can create unwanted clock pulses.",
+        "Clock gating removes the need for reset.",
+        "Clock waveforms have no timing requirements."
+      ],
+      "salt": "817abc3c09f165e4",
+      "answerHash": "ab9913291f7b39776b56a99f62f989b818a2e5fdf6b94a153f76acc5f408fa98"
+    },
+    {
+      "number": 12,
+      "text": "What does power gating target more directly than clock gating?",
+      "options": [
+        "Only the number of input ports.",
+        "Leakage by disconnecting supply to an inactive block, with required isolation and state handling.",
+        "A mandatory increase in clock toggles.",
+        "Only source-code indentation."
+      ],
+      "salt": "5896022279af8335",
+      "answerHash": "ce55a0166829af3ecdc6ba2f4eac9623a7144a15883abbb334d09a7eb5a498c7"
+    },
+    {
+      "number": 13,
+      "text": "Why can lowering voltage reduce achievable performance?",
+      "options": [
+        "The clock period is mathematically fixed by the file name.",
+        "Lower voltage always makes every cell faster.",
+        "Cell delays can increase as drive capability changes.",
+        "Voltage has no effect on transistor behavior."
+      ],
+      "salt": "492956b948948fa1",
+      "answerHash": "8bfd6b9321b1315d8788d2c1e6a19dc2746b01c979b25a47127117de580dad97"
+    },
+    {
+      "number": 14,
+      "text": "If task cycle count and voltage are fixed, halving frequency halves switching power and doubles runtime. What happens to modeled switching energy?",
+      "options": [
+        "It becomes zero.",
+        "It stays unchanged in this simplified model.",
+        "It necessarily becomes four times larger.",
+        "It necessarily halves."
+      ],
+      "salt": "22c0bfb2dbefc97a",
+      "answerHash": "2f83ea95faaa365ac11326d5fde64cea898b595429bb86a850307fb9cfbc79ca"
+    },
+    {
+      "number": 15,
+      "text": "What does a switching-activity trace provide?",
+      "options": [
+        "A proof that all workloads have identical power.",
+        "Information about signal changes over a workload.",
+        "A list of wafer defects only.",
+        "A final GDS layout."
+      ],
+      "salt": "e53dedaf8b73efd1",
+      "answerHash": "0553da8208204f575f51e9767501ae564fb1d705dda2768d601a7d1695cd3a79"
+    },
+    {
+      "number": 16,
+      "text": "Why does workload choice matter in power estimation?",
+      "options": [
+        "Different input and state activity can produce different switching.",
+        "A waveform file changes the fabrication process.",
+        "Power is independent of every signal transition.",
+        "Every workload exercises all nets identically."
+      ],
+      "salt": "6ca8a28d89d8e33c",
+      "answerHash": "c5f69780d942d1ff73e87beafc03dc198cdcdde10fc90f561f5f79498d9d9f67"
+    },
+    {
+      "number": 17,
+      "text": "For independent Boolean inputs with P(A=1)=0.5 and P(B=1)=0.4, what is P(A AND B=1)?",
+      "options": [
+        "0.60",
+        "0.90",
+        "0.10",
+        "0.20"
+      ],
+      "salt": "3eb44d3f93a07034",
+      "answerHash": "b67b97aa9a2c9e89b96261f767d6e780dcfdbf320dd3efe073e710a585e13073"
+    },
+    {
+      "number": 18,
+      "text": "For independent inputs with probabilities 0.5 and 0.4, what is P(A OR B=1)?",
+      "options": [
+        "0.30",
+        "0.90",
+        "0.20",
+        "0.70"
+      ],
+      "salt": "4e00310e7849b087",
+      "answerHash": "4b918cda83a0b59339115cdce9a8778190395562ffff0f45bfd5e1ae5e7e0ef9"
+    },
+    {
+      "number": 19,
+      "text": "For independent successive samples with P(signal=1)=0.5, what is the probability of a 0-to-1 transition?",
+      "options": [
+        "0.25",
+        "0.75",
+        "0.50",
+        "1.00"
+      ],
+      "salt": "957cad43e0442d67",
+      "answerHash": "187d95f53f1c22fa6869caee43f524e8f2ea6606aca40745e50a888946bb07c3"
+    },
+    {
+      "number": 20,
+      "text": "Under the same independent-sample model with P(signal=1)=0.2, what is the 0-to-1 transition probability?",
+      "options": [
+        "0.80",
+        "0.20",
+        "0.16",
+        "0.04"
+      ],
+      "salt": "63e0b39fe2cae19d",
+      "answerHash": "7c42be992dba136fa10c54b3cb2d94518f68af789c739d182d01dcda818634df"
+    },
+    {
+      "number": 21,
+      "text": "Why can a vectorless activity estimate be inaccurate?",
+      "options": [
+        "Independence and activity assumptions may not match actual correlated signals.",
+        "It never uses signal probability assumptions.",
+        "It measures silicon current directly.",
+        "It always enumerates every real workload exactly."
+      ],
+      "salt": "9d18c9fdbea00dbc",
+      "answerHash": "c0306a17f7a9dbf85f4cce761630929ec7ffaa24bfacda38d7ef916a38efad9f"
+    },
+    {
+      "number": 22,
+      "text": "What does the internal-power model in a library account for beyond the external capacitive load model?",
+      "options": [
+        "Only package mechanical stress.",
+        "Only the source file's memory size.",
+        "The retail price of the cell.",
+        "Energy consumed within the cell during specified events and conditions."
+      ],
+      "salt": "caed8daf45caa61d",
+      "answerHash": "783c351da39b98cccbe23cf7f400b16f293f4244f50e5fb3c7efb3afb7e6ff6e"
+    },
+    {
+      "number": 23,
+      "text": "Which technique can reduce unnecessary datapath switching?",
+      "options": [
+        "Increasing all logic depths without reason.",
+        "Randomizing every idle input.",
+        "Operand isolation when the computation result is not needed.",
+        "Toggling every clock continuously."
+      ],
+      "salt": "5e1072f9feeb975b",
+      "answerHash": "49bd0139157dbcebd1ebafc8fc6f3227e3fcb8d2c2d5c4d844031fe6ee155d1f"
+    },
+    {
+      "number": 24,
+      "text": "What is the objective of design for test (DFT)?",
+      "options": [
+        "Eliminate every possible manufacturing defect.",
+        "Replace functional design verification entirely.",
+        "Prove all software correct.",
+        "Improve controllability and observability for manufacturing-fault testing."
+      ],
+      "salt": "cf0be3eb977eedaa",
+      "answerHash": "f93341af4fc89fd9435a14628df7a1cab2230987ffa5a5c010e980ef31a5f954"
+    },
+    {
+      "number": 25,
+      "text": "What is controllability in a test context?",
+      "options": [
+        "How much power a package can deliver.",
+        "How readily a desired logic value can be established at a node.",
+        "How many source files a compiler reads.",
+        "How clearly a waveform color can be seen."
+      ],
+      "salt": "219d9c760e9e257a",
+      "answerHash": "cc7f50a0e40d30b94a2b0d1c47c49ab54447a704c959edf443a83e7a32ebf8e2"
+    },
+    {
+      "number": 26,
+      "text": "What is observability in a test context?",
+      "options": [
+        "The total number of masks.",
+        "The physical brightness of the chip surface.",
+        "How readily a node's effect can be observed at accessible outputs or scan elements.",
+        "The source-code line count."
+      ],
+      "salt": "71ac3e9abddc6c7d",
+      "answerHash": "7f4a58eccc0e281682f5f149332623b5ac47a4e7c6b49f6758fd8fcf30db0f2d"
+    },
+    {
+      "number": 27,
+      "text": "What does a scan flip-flop typically add compared with an ordinary flip-flop?",
+      "options": [
+        "A guaranteed absence of clock-to-Q delay.",
+        "A controllable scan-data path and scan-enable selection.",
+        "An optical exposure source.",
+        "A full embedded operating system necessarily."
+      ],
+      "salt": "2cb78e0ebf169f1b",
+      "answerHash": "bc3b3cf56f8edae6d990d703e34d9e29d60812831e740fca1d98ac26ecce74a8"
+    },
+    {
+      "number": 28,
+      "text": "In a conventional muxed-scan flip-flop, what is the usual role of scan enable?",
+      "options": [
+        "Select shift data versus the functional data input.",
+        "Replace the reset signal's meaning in every design.",
+        "Adjust transistor doping dynamically.",
+        "Set the clock frequency to zero permanently."
+      ],
+      "salt": "266fceab3b6526b8",
+      "answerHash": "2ea6420533a4036b9aaa6806e2483b8a802e442764f23bc0ca6ef1c8ab6c7a2d"
+    },
+    {
+      "number": 29,
+      "text": "What typically happens during scan shifting?",
+      "options": [
+        "The wafer is sliced into dies.",
+        "The entire circuit is verified against every specification.",
+        "Every flip-flop is removed from the netlist.",
+        "Serial test data moves through the scan chain."
+      ],
+      "salt": "fadeb677ee39bb0d",
+      "answerHash": "b3e279e59c460b03ed9da7c09198f270c7369a3db6b2704d11eedb1bd47a89e2"
+    },
+    {
+      "number": 30,
+      "text": "What typically happens during a functional capture phase of scan testing?",
+      "options": [
+        "The circuit captures a response to the applied test state and inputs.",
+        "The package is disconnected from power permanently.",
+        "The cell library is rewritten.",
+        "All scan bits are forced to the same constant by definition."
+      ],
+      "salt": "c43c7be14f8a79ba",
+      "answerHash": "b8a46f2b844d19f4796c3fdfc2707b08a84ad351b98d1f8e50ecd5e3026b7579"
+    },
+    {
+      "number": 31,
+      "text": "How many shift clocks load a complete 100-bit scan chain from a defined shift procedure?",
+      "options": [
+        "10",
+        "1",
+        "200",
+        "100"
+      ],
+      "salt": "4ccad312b10fe9e7",
+      "answerHash": "be1d74d5381b4efa8e850c1056ed78020296cc3df6189185852be4c509d2e54a"
+    },
+    {
+      "number": 32,
+      "text": "Two balanced 100-bit scan chains are loaded in parallel. How many shift clocks load both, ignoring capture overhead?",
+      "options": [
+        "200",
+        "10,000",
+        "50",
+        "100"
+      ],
+      "salt": "ca7087a73f2db20a",
+      "answerHash": "2efe4f1fb43b309ab454b84db5ae1ee87fb7041d2a569187a01e03d13ab18323"
+    },
+    {
+      "number": 33,
+      "text": "What is a stuck-at-0 fault model?",
+      "options": [
+        "The clock period is always zero.",
+        "A chip contains no registers.",
+        "A modeled signal remains at logic 0 regardless of its intended value.",
+        "A signal is always logic 1."
+      ],
+      "salt": "43da9b4dcf7e8edf",
+      "answerHash": "b513532a6799930fc8d46ff046c9b4861a50912c54a823984bf444b6f1345c4c"
+    },
+    {
+      "number": 34,
+      "text": "What is a stuck-at-1 fault model?",
+      "options": [
+        "A signal is always high impedance.",
+        "The power supply is physically always 0 V.",
+        "All outputs are removed from the design.",
+        "A modeled signal remains at logic 1 regardless of its intended value."
+      ],
+      "salt": "75d4760261b32e24",
+      "answerHash": "4bf579016f82de6a9cfd6e8eb9c10b8b2cdbc104091dc3ebd8c1b1d361b76643"
+    },
+    {
+      "number": 35,
+      "text": "What two steps are necessary to detect a single stuck-at fault through an output?",
+      "options": [
+        "Only rename the fault site and rerun compilation.",
+        "Only add a comment in the RTL.",
+        "Activate the fault and propagate its effect to an observation point.",
+        "Only increase the clock period arbitrarily."
+      ],
+      "salt": "751ba9d00b8d367c",
+      "answerHash": "590e316e7c9b53b9ac2ae998def542a407874e89921057ecbf953b5abc96072b"
+    },
+    {
+      "number": 36,
+      "text": "For a two-input AND gate with output stuck at 0, which input detects the fault?",
+      "options": [
+        "A=0, B=1",
+        "A=0, B=0",
+        "A=1, B=0",
+        "A=1, B=1"
+      ],
+      "salt": "9a4a665b85417cb6",
+      "answerHash": "6bc9cf411a95b4d5abe8cd582d9167fef4282b8d422db057ae2507ac593da3f8"
+    },
+    {
+      "number": 37,
+      "text": "For a two-input OR gate with output stuck at 1, which input detects the fault?",
+      "options": [
+        "A=1, B=1",
+        "A=1, B=0",
+        "A=0, B=0",
+        "A=0, B=1"
+      ],
+      "salt": "efc2a3d9e0187ea0",
+      "answerHash": "8b7c69ab253bf4a55e55aff82103c24472d1fcbc612913839e46df558db70aed"
+    },
+    {
+      "number": 38,
+      "text": "For a fault on input A of an AND gate stuck at 0, what value of B allows propagation after A is activated?",
+      "options": [
+        "B must be high impedance.",
+        "Either B value always works.",
+        "B=0",
+        "B=1"
+      ],
+      "salt": "495342eec0a5a5b9",
+      "answerHash": "5851d2baf0bbce9219f91d7b91e96fc122cf2394464eb6b8d8e2a85b3edb6ef8"
+    },
+    {
+      "number": 39,
+      "text": "What is the noncontrolling input value of an OR gate for fault propagation?",
+      "options": [
+        "x",
+        "0",
+        "1",
+        "z"
+      ],
+      "salt": "dcdf1f185ae8d07d",
+      "answerHash": "e809e9d8421425ded45a72b0b0d18ec7cb2d1ff37f1744e874a9e0a7a970ab7a"
+    },
+    {
+      "number": 40,
+      "text": "For a 3-input NAND gate, what is the minimum test-set size to detect all single stuck-at faults on its inputs and output in the simple gate model?",
+      "options": [
+        "2",
+        "8",
+        "4",
+        "3"
+      ],
+      "salt": "ee6688a5ae32572d",
+      "answerHash": "666c6f27a21ff745b706af9fa557f05549689e3eaea5c5f7fa378b46f01a8de7"
+    },
+    {
+      "number": 41,
+      "text": "For a 5-input NAND gate under the same simple all-input/output single stuck-at model, the minimum test-set size is what?",
+      "options": [
+        "5",
+        "32",
+        "6",
+        "10"
+      ],
+      "salt": "b21c6f4ed083958f",
+      "answerHash": "72406a3eefe470729ea2ebea3eaf22a60a42ecf90c82672c7c251ecb6fb1551f"
+    },
+    {
+      "number": 42,
+      "text": "Why are random vectors sometimes inefficient for a rare-condition fault?",
+      "options": [
+        "A random generator cannot produce binary values.",
+        "Random vectors remove the need for observation points.",
+        "The required activation and propagation combination can have low probability.",
+        "Every random vector is guaranteed to detect every fault."
+      ],
+      "salt": "c2a773a8e3a37b22",
+      "answerHash": "e5e2057918e2fd81204b9a05e20ff438afe0f22dc853b56bba3ca3e9aa831500"
+    },
+    {
+      "number": 43,
+      "text": "What does fault coverage measure?",
+      "options": [
+        "The number of clock cycles per arithmetic operation.",
+        "The silicon area occupied by power rails.",
+        "The fraction of the stated target fault set detected, using the specified denominator.",
+        "The fraction of comments exercised."
+      ],
+      "salt": "282fcd05f99b081c",
+      "answerHash": "059ec7ac14976851ddfb4d44435af741c134314b7a25fb576e1f1d006aa5e1df"
+    },
+    {
+      "number": 44,
+      "text": "If 900 of 1000 listed target faults are detected and that full list is the denominator, what is fault coverage?",
+      "options": [
+        "10%",
+        "111.1%",
+        "90%",
+        "99%"
+      ],
+      "salt": "d555f19cc81decb5",
+      "answerHash": "71b5eaabb3d676a142c15196b642a70f8185564f8f75beab4b86ad151cf478e5"
+    },
+    {
+      "number": 45,
+      "text": "Why should untestable faults be identified separately?",
+      "options": [
+        "They affect interpretation of coverage and may not be detectable under the allowed model.",
+        "They must always be counted as detected without explanation.",
+        "Every untestable fault is automatically a fabricated failure.",
+        "They prove the complete design is functionally incorrect."
+      ],
+      "salt": "1238600a01230afe",
+      "answerHash": "8adeba585fe83fb9ba2e9ff362dd3e3adf636831133b2a8c13b0ee6769242321"
+    },
+    {
+      "number": 46,
+      "text": "What is a test point used for?",
+      "options": [
+        "Guarantee zero extra area and no timing effect.",
+        "Improve access to control or observe difficult internal behavior.",
+        "Replace every scan register.",
+        "Only change the external package label."
+      ],
+      "salt": "16a1290a619a2460",
+      "answerHash": "602e4952c793636550dad5a8c151d09736eb6ae8b43fe6615fad1b04f2ed0890"
+    },
+    {
+      "number": 47,
+      "text": "Consider scan insertion. A. The data-input selection structure can affect functional delay. B. Added loading can affect physical timing. C. Functional timing need not be rechecked because scan logic is logically separate. Which statements are correct?",
+      "options": [
+        "A and B only",
+        "B and C only",
+        "A only",
+        "A, B and C"
+      ],
+      "salt": "fbcfa7bb04ae9051",
+      "answerHash": "ccc2ba48a4812c4eaff2d40c26fdf45b3b110c4cf8368ceb2e02309ca668e2da"
+    },
+    {
+      "number": 48,
+      "text": "Consider scan-shift and functional modes. A. Their clock requirements may differ. B. Scan-enable intent matters. C. One unconstrained mode automatically establishes the other mode's timing. Which statements are correct?",
+      "options": [
+        "B only",
+        "A and C only",
+        "A, B and C",
+        "A and B only"
+      ],
+      "salt": "31fd20d926a658ad",
+      "answerHash": "ba7fbdf2115b113deb19774fc61f822c6ed53f611aab2ec064faeac8c39c7dce"
+    },
+    {
+      "number": 49,
+      "text": "Which statement correctly distinguishes test coverage from functional correctness?",
+      "options": [
+        "High manufacturing fault coverage does not prove the design implements the intended specification.",
+        "Functional verification makes every manufactured chip defect-free.",
+        "Detecting all listed faults proves every product requirement.",
+        "The two measures are identical in all flows."
+      ],
+      "salt": "854e0e213d383cb1",
+      "answerHash": "b018c09e6bbdf25660fc04f2bd780e942fe041663a7c1ec398dfffda16b4b51a"
+    },
+    {
+      "number": 50,
+      "text": "Which tool used in the course can estimate power using libraries and activity assumptions or traces?",
+      "options": [
+        "OpenSTA.",
+        "A PDF viewer alone.",
+        "A standard text diff tool alone.",
+        "A silicon dicing saw."
+      ],
+      "salt": "fb5b8a05a475073d",
+      "answerHash": "ca72175800949f68eb027d155b5e3772d6897b2ec53ca2878d3c96e096cfe998"
+    }
+  ]
+}

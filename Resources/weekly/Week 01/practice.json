@@ -1,0 +1,606 @@
+{
+  "week": 1,
+  "kind": "Original practice, not verified PYQs",
+  "questions": [
+    {
+      "number": 1,
+      "text": "Consider conventional CMOS ICs. A. Silicon is a semiconductor used in device regions. B. All interconnect layers must be electrically shorted together. C. Dielectrics separate conductors except at intended connections. Which statements are correct?",
+      "options": [
+        "A only",
+        "A and C only",
+        "A, B and C",
+        "B and C only"
+      ],
+      "salt": "0572f9e69edd7003",
+      "answerHash": "2bc63df395fb3f2014e7ef8b87d7faea414d0d0d2833d2ccfb1026c41d50223e"
+    },
+    {
+      "number": 2,
+      "text": "Two wires cross on insulated different layers with no via at the crossing. A. They need not be the same net. B. The crossing forces a DC short. C. Geometric separation proves zero capacitive coupling. Which statements are correct?",
+      "options": [
+        "A and C only",
+        "A and B only",
+        "B and C only",
+        "A only"
+      ],
+      "salt": "7c9f980a474d9ef8",
+      "answerHash": "cbabae215d803e78c89ec18bd321d8dc29aa8b5485457c5315914b2a725f481f"
+    },
+    {
+      "number": 3,
+      "text": "Consider vias in an IC. A. They can connect selected metal layers. B. Their electrical and geometric properties matter in implementation. C. Adding a via automatically waives spacing rules. Which statements are correct?",
+      "options": [
+        "A only",
+        "A and B only",
+        "B and C only",
+        "A, B and C"
+      ],
+      "salt": "ee3c7b53c6c049e8",
+      "answerHash": "d1a92baab26b2eec50e84c25475c1c43dfcae9727611b98117e1758f5dd4552f"
+    },
+    {
+      "number": 4,
+      "text": "What distinguishes a wafer from an individual die?",
+      "options": [
+        "A die is the cylindrical silicon ingot before slicing.",
+        "A wafer usually contains many repeated die sites before dicing.",
+        "A wafer is the packaged form of a single die.",
+        "A die contains many separately packaged wafers."
+      ],
+      "salt": "bd6d1f16eccd4e73",
+      "answerHash": "f863cb1d72dab57e24a107f2318e2aaf4dd7b53ec9a4480b6d6cb48c6fc89cc3"
+    },
+    {
+      "number": 5,
+      "text": "Under a simplified doubling-every-two-years transistor-count trend, what is the multiplication factor after six years?",
+      "options": [
+        "6",
+        "8",
+        "3",
+        "12"
+      ],
+      "salt": "5759395b28adc562",
+      "answerHash": "5fdc96aed12103be6ab4207dcaf9734a5132d86e15c0147dfaa3d78b36c2e8fd"
+    },
+    {
+      "number": 6,
+      "text": "Which statement about a CMOS inverter is appropriate for an introductory static model?",
+      "options": [
+        "The pull-up and pull-down networks drive opposite output logic levels.",
+        "Its metal layers replace the need for transistors.",
+        "Its output always equals its input.",
+        "Its input is connected directly to both supply rails."
+      ],
+      "salt": "8f6d6e6887f6a6f2",
+      "answerHash": "9fba14c3be8cc2c1b4145355050e1d40e248d89975f1665ebbf8770fb8004943"
+    },
+    {
+      "number": 7,
+      "text": "What does a photomask specify in photolithography?",
+      "options": [
+        "The measured defect count after packaging.",
+        "The software instructions run by a processor.",
+        "The spatial pattern used for an exposure step.",
+        "The RTL execution schedule of the complete circuit."
+      ],
+      "salt": "b0656602fbede645",
+      "answerHash": "121a5221fb68a80b4e845df00517b110ab4cef94ab7ec89736c6ea2bff5b34f0"
+    },
+    {
+      "number": 8,
+      "text": "Which ordering is consistent with a simplified subtractive pattern-transfer sequence?",
+      "options": [
+        "Develop resist, expose, deposit film, strip resist, coat resist.",
+        "Etch all layers, coat resist, package, expose, develop.",
+        "Deposit film, coat resist, expose, develop, etch, strip resist.",
+        "Expose bare silicon, etch, coat resist, deposit film, develop."
+      ],
+      "salt": "55ad560a54de575f",
+      "answerHash": "5739dfd5ad0230cd0f92c920d1adebab890b9dfac317751e29150d2e631e1786"
+    },
+    {
+      "number": 9,
+      "text": "Why is using one unchanged mask for all patterned IC layers generally incorrect?",
+      "options": [
+        "Different layers require different geometric patterns and alignment.",
+        "Every layer must contain exactly the same conductor shape.",
+        "Masks describe only package outlines.",
+        "Metal layers do not require pattern definition."
+      ],
+      "salt": "8755eaae0eb4f050",
+      "answerHash": "8b1fa5232cf9a48d4bf50ddae35ce9f961f445f8de2b9e078fe9075c190e0448"
+    },
+    {
+      "number": 10,
+      "text": "Which statement correctly separates deposition from lithography?",
+      "options": [
+        "Deposition converts RTL into gates; lithography selects software.",
+        "Lithography always deposits the final interconnect metal.",
+        "Both terms refer only to testing packaged chips.",
+        "Deposition adds material; lithography defines a pattern in resist."
+      ],
+      "salt": "a42477112205d593",
+      "answerHash": "85b1891b2ffce572d15b9e0a853632bc6763a335c11d4883ff6a58d68eb2d804"
+    },
+    {
+      "number": 11,
+      "text": "Which responsibility best matches a fabless company?",
+      "options": [
+        "Supply only packaging without doing design.",
+        "Design chips while contracting wafer fabrication to a foundry.",
+        "Manufacture masks but never specify a circuit.",
+        "Operate every fabrication step in its own wafer plant."
+      ],
+      "salt": "913e369f819f8366",
+      "answerHash": "b6876a0951de7ea73f4b78b0320b2107945ec6643268ee1b3635ba97e25a5860"
+    },
+    {
+      "number": 12,
+      "text": "What is the main purpose of a process design kit (PDK)?",
+      "options": [
+        "Replace the need to define the product function.",
+        "Guarantee that any RTL description is physically manufacturable.",
+        "Provide process-related rules, models and design data.",
+        "Contain only the finished packaged chip inventory."
+      ],
+      "salt": "8827e88b714dd247",
+      "answerHash": "55fd0b3596aba7f55f716231611dc57afb02e0033ead854c990b9e23b5697f60"
+    },
+    {
+      "number": 13,
+      "text": "A low-volume prototype must be field-updated often and shipped quickly. Which implementation is usually the first candidate?",
+      "options": [
+        "An untested bare wafer because it is reprogrammable.",
+        "FPGA, subject to its power and performance limits.",
+        "A standard-cell ASIC because it has no fixed development cost.",
+        "A new full-custom ASIC regardless of its schedule."
+      ],
+      "salt": "fbcc079ea70f9744",
+      "answerHash": "30224915681b66eba9896d498563b5fd6750af33de552ba89141c00322703a92"
+    },
+    {
+      "number": 14,
+      "text": "What does a standard-cell design methodology reuse?",
+      "options": [
+        "Pre-designed and characterized cells assembled into a custom circuit.",
+        "One fixed complete chip for every application.",
+        "A fabrication line that never uses custom interconnect masks.",
+        "Only a general-purpose CPU software instruction set."
+      ],
+      "salt": "9dc62ed5800b8701",
+      "answerHash": "a035cc88db168e3fd40290568fbe87e1c7983e21d61c020b4f50bca87967c590"
+    },
+    {
+      "number": 15,
+      "text": "Which design style generally offers the greatest transistor-level customization?",
+      "options": [
+        "A standard off-the-shelf FPGA bitstream.",
+        "Software-only implementation on a purchased CPU.",
+        "A fixed gate array with no interconnect customization.",
+        "Full-custom design."
+      ],
+      "salt": "b501a3fb8db2e2bc",
+      "answerHash": "85a3c9f6960501932706fa74668281f1081400348aa33c5ca497e914bb4995d4"
+    },
+    {
+      "number": 16,
+      "text": "Compared with an ASIC implementation of the same function, an FPGA often has which cost pattern?",
+      "options": [
+        "No unit cost because it is programmable.",
+        "Higher application-specific fixed cost and zero unit cost.",
+        "Lower application-specific fixed cost but higher unit cost.",
+        "Identical fixed and variable costs at every volume."
+      ],
+      "salt": "f1073ac63bcec992",
+      "answerHash": "4ac04c9b7fb57072d94780d31440057b6235d156dab3ab60c7906d9de0590f77"
+    },
+    {
+      "number": 17,
+      "text": "For total cost C = F + N v, what does the slope with respect to production quantity N represent?",
+      "options": [
+        "Variable cost per unit v.",
+        "The number of masks in the process.",
+        "The fixed development cost F.",
+        "The fraction of dies passing test."
+      ],
+      "salt": "0a8d685379c989f6",
+      "answerHash": "9b68a400d012ef3dddc1d0f47c10e15bc60c284cfe8492802ea5e351a5fccff7"
+    },
+    {
+      "number": 18,
+      "text": "An ASIC costs 1,200,000 + 20N and an FPGA solution costs 200,000 + 70N, in the same units. At what quantity do the costs match?",
+      "options": [
+        "50,000 units",
+        "20,000 units",
+        "25,000 units",
+        "10,000 units"
+      ],
+      "salt": "f461e50bb2bc7112",
+      "answerHash": "167dbb6f98712fad00b3ec61f85664d3da06e4456b2d090955b7557616d4959d"
+    },
+    {
+      "number": 19,
+      "text": "Using C_ASIC=1,200,000+20N and C_FPGA=200,000+70N, which has lower modeled cost at N=10,000?",
+      "options": [
+        "They both cost 1,400,000.",
+        "FPGA: 700,000 versus ASIC: 1,200,000.",
+        "ASIC: 400,000 versus FPGA: 900,000.",
+        "FPGA: 900,000 versus ASIC: 1,400,000."
+      ],
+      "salt": "c8fdf5fb4143b63f",
+      "answerHash": "5becc6fa05b37bf36b3233ee96a11c9a76e8d0100087f63703fe65a1b9b6fa79"
+    },
+    {
+      "number": 20,
+      "text": "A wafer costs 6,000 units, has 500 gross dies and 80% die yield. Ignore all other costs. What is fabrication cost per good die?",
+      "options": [
+        "15 units",
+        "10 units",
+        "12 units",
+        "24 units"
+      ],
+      "salt": "102ae53a60ecf988",
+      "answerHash": "cbdb4b1efcb9066d7bac95543de0129bc66714ab6eb128af1caff5464fd70163"
+    },
+    {
+      "number": 21,
+      "text": "An ASIC requires more fixed investment and has unit cost equal to its FPGA competitor. What happens in the simple linear cost model?",
+      "options": [
+        "The ASIC becomes cheaper after exactly one unit.",
+        "There is no positive-volume break-even from unit-cost savings.",
+        "The two total costs are identical at every volume.",
+        "The larger fixed investment vanishes at high volume."
+      ],
+      "salt": "4b481bc903e78abc",
+      "answerHash": "34f19d66879134f89cf24b2cf7856e484704851d706f6080f3fd8c92c5471e74"
+    },
+    {
+      "number": 22,
+      "text": "If 350 out of 500 fabricated dies pass the stated tests, what is die yield?",
+      "options": [
+        "70%",
+        "143%",
+        "30%",
+        "0.7%"
+      ],
+      "salt": "6d3143abfbb72702",
+      "answerHash": "5779469f626d47ceb695acc32c1a75d027c1fe2877105b4de7e4eec3e11b0572"
+    },
+    {
+      "number": 23,
+      "text": "Which comparison distinguishes power from energy?",
+      "options": [
+        "A lower-power implementation always uses less task energy.",
+        "Energy per task depends on both average power and task duration.",
+        "Clock frequency alone determines both power and energy.",
+        "Power and energy have the same physical units."
+      ],
+      "salt": "e64750ef9c4ba659",
+      "answerHash": "7979b5d1710a7b972490ad3cb6112d16e7bc5f6c2e54248c7b99452d7c6f18f5"
+    },
+    {
+      "number": 24,
+      "text": "For unchanged activity, capacitance and frequency, voltage falls from 1.0 V to 0.8 V. In P_switch proportional to V squared, the power ratio is what?",
+      "options": [
+        "0.64",
+        "0.80",
+        "0.36",
+        "1.25"
+      ],
+      "salt": "a264ca44c1d4df3d",
+      "answerHash": "1978a8d2c1424bb3c2267adf8f9bbecac1ac6dfac95410268eafe98d10f0d9df"
+    },
+    {
+      "number": 25,
+      "text": "Which design conclusion is justified by an increased clock frequency alone?",
+      "options": [
+        "It always reduces the number of cycles per task.",
+        "It guarantees lower energy per completed task.",
+        "It proves smaller die area.",
+        "It reduces clock period, but end-to-end task latency also depends on cycle count."
+      ],
+      "salt": "493b62d2ebe2ff63",
+      "answerHash": "2edb76d4ec68c1a3ec0b912dee03f000d171efe32b9049c4d513d066cbd2b1dd"
+    },
+    {
+      "number": 26,
+      "text": "As a design moves from an algorithmic model toward physical layout, what generally happens?",
+      "options": [
+        "Abstraction increases while geometry disappears.",
+        "All models contain exactly the same detail.",
+        "Exploration necessarily becomes faster at every later stage.",
+        "Abstraction decreases and implementation detail increases."
+      ],
+      "salt": "fb02785d5fc91068",
+      "answerHash": "8f00ad636b0710f9fa3133d40d74e3a84df8c2f29e2ab279263276f0255a0cde"
+    },
+    {
+      "number": 27,
+      "text": "Why can higher-level models help early design exploration?",
+      "options": [
+        "They prove every physical signoff condition automatically.",
+        "They remove all need for functional specifications.",
+        "They omit lower-level detail so alternative architectures can be evaluated sooner.",
+        "They require completed mask data before simulation."
+      ],
+      "salt": "92eeeb19bc2d4307",
+      "answerHash": "d7c1a8eb92d6ab6267547ec74f2b90a7b345c5755b0c976a3df89d0f56990878"
+    },
+    {
+      "number": 28,
+      "text": "Which function is usually a suitable candidate to remain in software?",
+      "options": [
+        "A proven compute bottleneck needing fixed high-throughput arithmetic in every case.",
+        "The photoresist exposure step.",
+        "A control policy that must be updated frequently.",
+        "The mandatory physical connection between two metal layers."
+      ],
+      "salt": "e2ac0b7567df928e",
+      "answerHash": "8835bf1865bc4850b73d9d647233cfe4008adefbfdf2e315fa4e6ed97ddf4f0f"
+    },
+    {
+      "number": 29,
+      "text": "A computation takes 100 ms in software. Dedicated hardware needs 10 ms plus 30 ms transfer overhead. What is the end-to-end speedup?",
+      "options": [
+        "3.33 times",
+        "0.4 times",
+        "2.5 times",
+        "10 times"
+      ],
+      "salt": "dde5bd5d9d5e9e82",
+      "answerHash": "9eaad68d542c32bbc19cf072270d22f4fa45f5e350bf97574a48b1927e278b98"
+    },
+    {
+      "number": 30,
+      "text": "Before accelerating a computation, why should transfer and coordination overhead be included?",
+      "options": [
+        "They affect only the package color.",
+        "They are unrelated to latency.",
+        "They can reduce or eliminate the expected end-to-end speedup.",
+        "They are always zero when using dedicated hardware."
+      ],
+      "salt": "fc949880326d1351",
+      "answerHash": "36698048a5f2d63d79f8940f1a95e1922e90f6d6ee01527b107fb6331bcb708e"
+    },
+    {
+      "number": 31,
+      "text": "What makes a system-on-chip (SoC) more than a collection of isolated verified IP blocks?",
+      "options": [
+        "The integrated system also needs compatible interfaces and system-level verification.",
+        "Every block must be rewritten from scratch.",
+        "Top-level verification becomes unnecessary after vendor verification.",
+        "No block may be reused."
+      ],
+      "salt": "cd896e359184cb28",
+      "answerHash": "b1df518ae3e2f98260537bf965b5ce01702257ae2628a5ac0e2c460144d9a55f"
+    },
+    {
+      "number": 32,
+      "text": "Which statement distinguishes soft IP from hard IP in a common usage?",
+      "options": [
+        "Soft IP is typically supplied as synthesizable RTL; hard IP as a process-specific physical implementation.",
+        "Soft IP contains no functional behavior.",
+        "Hard IP can never contain a memory.",
+        "Both necessarily have identical process portability."
+      ],
+      "salt": "f88d5ea34ab77eb5",
+      "answerHash": "6c4feb4839cd25682611664a0af962f86474472815a645137d0493e7d78b7536"
+    },
+    {
+      "number": 33,
+      "text": "An IP block has a different reset convention and clock domain from its new host. What is required?",
+      "options": [
+        "Assume the vendor verified every possible host environment.",
+        "Remove all registers from the IP.",
+        "Resolve the integration assumptions and verify the interface behavior.",
+        "Connect the ports by name and omit further checks."
+      ],
+      "salt": "188ef7b8a9e86ee4",
+      "answerHash": "4130b6988609c2528dd0558365ebe84a1694b70715b72a69f4cb1cb266b0b676"
+    },
+    {
+      "number": 34,
+      "text": "Which item is useful IP integration metadata?",
+      "options": [
+        "Only a screenshot of the completed chip package.",
+        "Interface timing, protocol, clock/reset and configuration requirements.",
+        "Only the number of staff employed by the vendor.",
+        "Only the marketing name of the block."
+      ],
+      "salt": "aaae12e25bd35d92",
+      "answerHash": "cac36f9943ee9b8b83a6f479baebe43bffedc54119ecae5d3d1dc67da93cad24"
+    },
+    {
+      "number": 35,
+      "text": "What is behavioural synthesis, also called high-level synthesis (HLS)?",
+      "options": [
+        "Constructing a timed RTL architecture from an algorithmic description under constraints.",
+        "Executing a C program only on a general-purpose CPU.",
+        "Drawing final transistor polygons directly from an SDC file.",
+        "Converting a packaged chip back into a silicon ingot."
+      ],
+      "salt": "48a72b168fc0a4ba",
+      "answerHash": "c270ffef1f97aa05763346442e6c793466c305af4d3ae4c530a11e328ec04209"
+    },
+    {
+      "number": 36,
+      "text": "Which decision belongs to HLS scheduling?",
+      "options": [
+        "Assign operations to clock steps while respecting dependencies and constraints.",
+        "Measure wafer yield after manufacturing.",
+        "Choose the final chip package color.",
+        "Assign every net to a detailed routing track."
+      ],
+      "salt": "a8d2a723e898fa2f",
+      "answerHash": "1aa61fbce851ae9ab59753fe9dc334f98f25f93e31500ad80322da22ba862ddc"
+    },
+    {
+      "number": 37,
+      "text": "Which decision belongs to HLS resource binding?",
+      "options": [
+        "Choose which lithography mask is exposed first.",
+        "Compute final layout-vs-schematic equivalence from polygons.",
+        "Specify only the total production volume.",
+        "Associate scheduled operations with particular hardware resources."
+      ],
+      "salt": "acaa54465d4e8e31",
+      "answerHash": "9990ee28c58bcc1c785db4b6f0bed1783c29e2c4abe594ac14fee06d9c634c3b"
+    },
+    {
+      "number": 38,
+      "text": "In HLS terminology, what does resource allocation determine?",
+      "options": [
+        "The physical routing layer of every signal.",
+        "Only which die passes a manufacturing test.",
+        "Only the final names of input variables.",
+        "The types and numbers of resources made available to the architecture."
+      ],
+      "salt": "e222b08766d93848",
+      "answerHash": "0d3414ee0013b74025368fa998f621523fb47f38ca2703e8472f9820d8e994a0"
+    },
+    {
+      "number": 39,
+      "text": "A computation needs two additions. One nonpipelined adder can perform one addition per cycle. Ignoring other limits, what resource lower bound applies to its steady-state initiation interval?",
+      "options": [
+        "At least 2 cycles per transaction.",
+        "At most half a cycle.",
+        "Exactly 1 cycle because the expression has one result.",
+        "Zero cycles if the RTL is automatically generated."
+      ],
+      "salt": "df11e7f1eefafed1",
+      "answerHash": "283bdf8c190bebed3a24dd3f6133a1f1dc890a41b7f60af6fd49722b5d0dd669"
+    },
+    {
+      "number": 40,
+      "text": "A two-stage pipeline runs at a 10 ns period and accepts a new independent item every cycle. What are its ideal latency and initiation interval in time?",
+      "options": [
+        "10 ns latency and 20 ns initiation interval.",
+        "10 ns latency and zero initiation interval.",
+        "20 ns latency and 10 ns initiation interval.",
+        "20 ns latency and 20 ns initiation interval necessarily."
+      ],
+      "salt": "fa67824bfd04275c",
+      "answerHash": "33cbdd172d01432a24a9a24cfe4a8fdbc6c8f7d5c17c59426e0b20e4341ab4a3"
+    },
+    {
+      "number": 41,
+      "text": "A pipeline has a 5 ns clock and an initiation interval of 2 cycles. What is its ideal steady-state throughput?",
+      "options": [
+        "200 million items per second",
+        "10 million items per second",
+        "100 million items per second",
+        "400 million items per second"
+      ],
+      "salt": "27f3af5d9d332040",
+      "answerHash": "48bafbad4d36dae1c8bcd074f21f9427a414c659abcc5dcb6154c3c60fb63d3c"
+    },
+    {
+      "number": 42,
+      "text": "What can resource sharing in HLS change?",
+      "options": [
+        "Area, operand selection, storage/control needs and the acceptance schedule.",
+        "The need for any clocked storage always disappears.",
+        "Only variable spelling, with no architectural effect.",
+        "Only fabrication yield, never timing."
+      ],
+      "salt": "e1990e0a1aec1b6e",
+      "answerHash": "cc5e147ae9a629f27109d52caa12abaf68833f02d4f7dad6fbf2f699dc621ba2"
+    },
+    {
+      "number": 43,
+      "text": "Which is an advantage of HLS when used with suitable code and constraints?",
+      "options": [
+        "It can explore different RTL architectures from one high-level function.",
+        "It accepts every operating-system call as hardware.",
+        "It eliminates all RTL and system verification.",
+        "It guarantees the best possible PPA for every algorithm."
+      ],
+      "salt": "1730baa4595dc623",
+      "answerHash": "3652f30208a0b3f9369620e8f647aa8953569026d09dbfc6c9b7a61181525522"
+    },
+    {
+      "number": 44,
+      "text": "Which limitation should be considered before using an HLS tool?",
+      "options": [
+        "Only a supported synthesizable language subset maps to finite hardware resources.",
+        "All loop bounds and data dependencies are irrelevant.",
+        "Any arbitrary host operating-system operation becomes a hardware port automatically.",
+        "The generated circuit can dynamically acquire unlimited physical memory."
+      ],
+      "salt": "cef66e1fa1b7ad13",
+      "answerHash": "f0a143f28f844936bc4f6b489e39f2783fbac1f43ae0bbd3ba5c08228cebab3c"
+    },
+    {
+      "number": 45,
+      "text": "A pipelined implementation computes (a+b)+c from successive input transactions. Why may c need a matching delay register?",
+      "options": [
+        "To force every transaction to have identical input values.",
+        "To eliminate the second addition mathematically.",
+        "To convert the entire design into software.",
+        "To align c with the partial sum from the same transaction."
+      ],
+      "salt": "372920638f4be4e6",
+      "answerHash": "af58cd3e1a91135aa83619f8cf3389bcb8e8ce6abcc56a91f37ebd7fc4974c3d"
+    },
+    {
+      "number": 46,
+      "text": "A shell is currently in /home/k/lab. What path does ../rtl/top.v refer to?",
+      "options": [
+        "/rtl/top.v",
+        "/home/rtl/top.v",
+        "/home/k/lab/rtl/top.v",
+        "/home/k/rtl/top.v"
+      ],
+      "salt": "817ec0ca8486cba3",
+      "answerHash": "b923fd8696a6829ff0e968514684ad77a90449738d1be4550e04824636fbf88c"
+    },
+    {
+      "number": 47,
+      "text": "Consider touch under normal Unix permissions. A. It can create a file if absent. B. It normally erases an existing file. C. It can update timestamps while preserving existing contents. Which statements are correct?",
+      "options": [
+        "A and C only",
+        "A and B only",
+        "A, B and C",
+        "B only"
+      ],
+      "salt": "5985b38baf78229d",
+      "answerHash": "16f617cfacf9f49acc410770efdbb60d6c21faa978229ec59fda5155658175ce"
+    },
+    {
+      "number": 48,
+      "text": "Consider common Unix commands. A. ls -a includes dot-prefixed entries. B. df primarily lists shell job numbers. C. du can report directory disk usage. Which statements are correct?",
+      "options": [
+        "B and C only",
+        "A, B and C",
+        "A only",
+        "A and C only"
+      ],
+      "salt": "bef9b00a1458510c",
+      "answerHash": "4f8afcde188edea3cdb5c4663e605e09774d40bc54a7ee4a17ddb55479d8c2f5"
+    },
+    {
+      "number": 49,
+      "text": "What distinguishes Ctrl+Z followed by bg from terminating a foreground job?",
+      "options": [
+        "The operating system is put to sleep.",
+        "The job is suspended and then resumed in the background.",
+        "The process is permanently deleted from disk.",
+        "The command is rerun from its beginning with a new input file."
+      ],
+      "salt": "917a1f0032efb0aa",
+      "answerHash": "c768596eddac4885de4b4a859be663124e4e03dfe20dabc82f97bd6f8eb81934"
+    },
+    {
+      "number": 50,
+      "text": "Which pairing is correct for common Unix tools?",
+      "options": [
+        "df lists shell job numbers; du lists register names.",
+        "du reports clock period; df reports gate delay.",
+        "du reports directory disk usage; df reports filesystem space.",
+        "du and df both change file ownership."
+      ],
+      "salt": "f860a0a061020412",
+      "answerHash": "2bfed25fe34cb8b3225d5f27de3fecc7daf1fc410cd0e863e33bcb58d482b513"
+    }
+  ]
+}

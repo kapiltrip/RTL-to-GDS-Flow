@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>__TITLE__</title>
+<style>
+:root{color-scheme:light;font-family:Cambria,Georgia,serif;color:#25231f;background:#fff}
+*{box-sizing:border-box}body{margin:0}main{max-width:960px;margin:auto;padding:28px 28px 80px}
+h1{font-size:30px;line-height:1.15;margin:0 0 10px}h2{font-size:21px;margin:24px 0 10px}p{font-size:17px;line-height:1.45}
+.muted{color:#5c5c5c;font-size:15px}.toolbar{position:sticky;top:0;z-index:2;background:#fff;border-bottom:1px solid #d6d6d6;padding:14px 28px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.toolbar label{font-weight:bold}select,button,input[type=file]{font:16px Cambria,Georgia,serif}select,button{padding:9px 12px;border:1px solid #777;border-radius:3px;background:white;color:#25231f}
+button{cursor:pointer}button.primary{background:#25231f;color:white}button:disabled{opacity:.45;cursor:default}button:focus-visible,select:focus-visible,label.option:has(input:focus-visible){outline:3px solid #806018;outline-offset:3px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.status{margin:14px 0;padding:12px 0;border-top:1px solid #d6d6d6;border-bottom:1px solid #d6d6d6;line-height:1.45;font-size:17px}
+fieldset.question{border:0;border-top:1px solid #d6d6d6;padding:18px 0 20px;margin:0;break-inside:avoid}legend{font-weight:bold;font-size:17px;padding:0 9px 0 0}
+.prompt{font-size:18px;line-height:1.5;overflow-wrap:anywhere}.prompt p{margin:6px 0 12px}.prompt img.figure{display:block;max-width:100%;max-height:540px;object-fit:contain;margin:14px auto}
+.options{display:grid;grid-template-columns:1fr 1fr;gap:7px 18px;margin-top:12px}label.option{display:flex;gap:10px;align-items:flex-start;padding:9px 7px;line-height:1.4;font-size:17px;border:1px solid transparent;border-radius:2px;cursor:pointer}
+label.option:has(input:checked){border-color:#6b6b6b;background:#f5f5f5}input[type=radio]{flex:none;width:18px;height:18px;margin:3px 0 0;accent-color:#25231f}input[type=radio]:disabled{cursor:default}
+.option-number{color:#5c5c5c;min-width:20px}.option-content{min-width:0}.inline-math{vertical-align:middle;max-width:100%}math{font-family:'Cambria Math',serif}
+code{font-family:Consolas,monospace;font-size:.9em;white-space:pre-wrap}.source{font-size:14px;color:#5c5c5c;margin-top:20px}a{color:inherit;text-underline-offset:2px}
+.score{font-size:24px;font-weight:bold}.history{padding-left:22px;font-size:16px;line-height:1.5}#importFile{max-width:100%}[hidden]{display:none!important}
+@media(max-width:620px){main{padding:22px 16px 70px}.toolbar{padding:12px 16px}.options{grid-template-columns:1fr}.toolbar select{max-width:100%}h1{font-size:26px}}
+@media print{.toolbar,.actions,.backup,.no-print{display:none!important}main{max-width:none;padding:0}fieldset.question{break-inside:avoid}.option{font-size:12pt!important}.prompt{font-size:12pt}.status{font-size:12pt}h1{font-size:22pt}}
+</style>
+<div class="toolbar"><label for="week">Course week</label><select id="week" aria-label="Course week"></select><span id="progress" role="status"></span></div>
+<main>
+<h1>__TITLE__</h1>
+<p class="muted">VLSI Design Flow: RTL to GDS · __SUBTITLE__</p>
+<p id="instructions">Choose one option per question. Your choices are saved in this browser when storage is available. Finish the attempt when you are ready, then choose <strong>Show marks</strong>. Only the score is shown; correct answers are not displayed.</p>
+<p class="muted">You can work week by week and return later. This is independent practice; it does not submit anything to NPTEL.</p>
+<h2 id="weekTitle"></h2>
+<div id="result" class="status" aria-live="polite"></div>
+<div class="actions"><button id="finish" class="primary">Finish attempt</button><button id="marks" disabled>Show marks</button><button id="newAttempt" disabled>Begin new attempt</button></div>
+<p class="muted" id="storageStatus"></p>
+<div id="questions"></div>
+<div class="actions"><button id="finishBottom" class="primary">Finish attempt</button><button id="marksBottom" disabled>Show marks</button><button id="top">Back to top</button></div>
+<section class="backup"><h2>Keep an attempt</h2><p class="muted">Download an answers backup to keep your selections and finished attempts outside this browser. Import a backup from this same question set to continue. No answers or results are uploaded.</p><div class="actions"><button id="export">Download answers backup</button><label for="importFile">Import answers backup</label><input id="importFile" type="file" accept="application/json,.json"></div><p id="importStatus" role="status"></p></section>
+<h2>Previous attempts for this week</h2><div id="history"></div>
+<p class="source">__PROVENANCE__</p>
+<p class="source">This file works offline after downloading. No external libraries or accounts are needed.</p>
+</main>
+<script id="bank" type="application/json">__BANK__</script>
+<script>
+'use strict';
+const BANK=JSON.parse(document.getElementById('bank').textContent);
+const STORAGE='rtl-gds-'+BANK.kind+'-'+BANK.version;
+const $=id=>document.getElementById(id);
+function fresh(week){return {answers:Array(week.questions.length).fill(null),stage:'draft',history:[],started:new Date().toISOString()};}
+function validateStore(value){
+ if(!value||value.version!==BANK.version||value.kind!==BANK.kind||!Array.isArray(value.weeks)||value.weeks.length!==12)throw Error('This backup belongs to a different question set or version.');
+ return {version:BANK.version,kind:BANK.kind,weeks:value.weeks.map((s,i)=>{
+  const questions=BANK.weeks[i].questions;
+  function answers(a){if(!Array.isArray(a)||a.length!==questions.length||a.some((v,n)=>v!==null&&(!Number.isInteger(v)||v<0||v>=questions[n].options.length)))throw Error('The backup contains invalid selections.');return a.slice();}
+  if(!s||!['draft','finished','scored'].includes(s.stage)||!Array.isArray(s.history))throw Error('The backup format is invalid.');
+  const history=s.history.slice(-100).map(h=>({answers:answers(h.answers),finished:String(h.finished||''),shown:Boolean(h.shown)}));
+  return {answers:answers(s.answers),stage:s.stage,history,started:String(s.started||''),finished:String(s.finished||'')};
+ })};
+}
+function blankStore(){return {version:BANK.version,kind:BANK.kind,weeks:BANK.weeks.map(fresh)};}
+let store=blankStore(),storageOK=true,current=0;
+try{const saved=localStorage.getItem(STORAGE);if(saved)store=validateStore(JSON.parse(saved));}catch(e){storageOK=false;}
+function save(){try{localStorage.setItem(STORAGE,JSON.stringify(store));storageOK=true;}catch(e){storageOK=false;}$('storageStatus').textContent=storageOK?'Selections saved in this browser.':'Browser autosave is unavailable. Use Download answers backup before closing.';}
+async function digest(text){const bytes=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text));return Array.from(new Uint8Array(bytes),b=>b.toString(16).padStart(2,'0')).join('');}
+async function score(questions,answers){const results=await Promise.all(questions.map(async(q,i)=>answers[i]!==null&&(await digest(q.salt+':'+answers[i]))===q.answerHash));return {points:results.filter(Boolean).length,total:questions.length,attempted:answers.filter(x=>x!==null).length};}
+function progress(){const s=store.weeks[current],n=s.answers.filter(v=>v!==null).length;$('progress').textContent=n+' / '+s.answers.length+' answered · Week '+(current+1);}
+async function paintStatus(){
+ const weekIndex=current,s=store.weeks[current],q=BANK.weeks[current].questions;
+ $('finish').disabled=$('finishBottom').disabled=s.stage!=='draft';$('marks').disabled=$('marksBottom').disabled=s.stage==='draft';$('newAttempt').disabled=s.stage==='draft';
+ if(s.stage==='draft')$('result').textContent='Attempt in progress. No marks or answer feedback are shown. Unanswered questions count as zero when graded.';
+ else if(s.stage==='finished')$('result').textContent='Attempt finished and selections locked. Choose Show marks whenever you are ready.';
+ else{try{const r=await score(q,s.answers);if(current===weekIndex)$('result').innerHTML='<span class="score">'+r.points+' / '+r.total+'</span> · '+(100*r.points/r.total).toFixed(0)+'% · '+r.attempted+' answered. Correct answers are not displayed.';}catch(e){if(current===weekIndex)$('result').textContent='Scoring is unavailable in this browser. Keep an answers backup and open this file in Chrome.';}}
+}
+async function paintHistory(){const weekIndex=current,s=store.weeks[current],questions=BANK.weeks[current].questions,list=[];for(const h of s.history){let text='Finished '+new Date(h.finished).toLocaleString();if(h.shown){const r=await score(questions,h.answers);text+=' - '+r.points+' / '+r.total;}else text+=' - marks not opened';list.push(text);}if(current!==weekIndex)return;$('history').replaceChildren();if(!list.length){$('history').textContent='No previous attempts yet.';return;}const ul=document.createElement('ul');ul.className='history';for(const text of list){const li=document.createElement('li');li.textContent=text;ul.appendChild(li);}$('history').appendChild(ul);}
+function render(){
+ const week=BANK.weeks[current],s=store.weeks[current];$('week').value=String(current);$('weekTitle').textContent='Week '+String(week.week).padStart(2,'0')+' - '+week.topic;
+ $('questions').innerHTML=week.questions.map((q,i)=>'<fieldset class="question"><legend>Question '+String(i+1).padStart(2,'0')+'</legend><div class="prompt">'+q.prompt+'</div><div class="options">'+q.options.map((o,j)=>'<label class="option"><input type="radio" name="q'+i+'" value="'+j+'" aria-label="Question '+(i+1)+' option '+(j+1)+'"'+(s.answers[i]===j?' checked':'')+(s.stage!=='draft'?' disabled':'')+'><span class="option-number">'+(j+1)+'.</span><span class="option-content">'+o+'</span></label>').join('')+'</div></fieldset>').join('');
+ $('questions').querySelectorAll('input').forEach(input=>input.addEventListener('change',()=>{const i=Number(input.name.slice(1));s.answers[i]=Number(input.value);save();progress();}));
+ progress();paintStatus();paintHistory();save();
+}
+function finish(){const s=store.weeks[current];if(s.stage!=='draft')return;s.stage='finished';s.finished=new Date().toISOString();save();render();}
+async function showMarks(){const s=store.weeks[current];if(s.stage==='draft')return;s.stage='scored';save();await paintStatus();}
+$('week').innerHTML=BANK.weeks.map((w,i)=>'<option value="'+i+'">Week '+String(w.week).padStart(2,'0')+' - '+w.topic+'</option>').join('');
+$('week').addEventListener('change',()=>{current=Number($('week').value);render();});
+$('finish').onclick=$('finishBottom').onclick=finish;$('marks').onclick=$('marksBottom').onclick=showMarks;
+$('newAttempt').onclick=()=>{const old=store.weeks[current];if(old.stage==='draft')return;const next=fresh(BANK.weeks[current]);next.history=[...old.history,{answers:old.answers.slice(),finished:old.finished,shown:old.stage==='scored'}];store.weeks[current]=next;save();render();};
+$('top').onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+$('export').onclick=()=>{const blob=new Blob([JSON.stringify(store,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='rtl-gds-'+BANK.kind+'-answers.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+$('importFile').addEventListener('change',async event=>{try{const file=event.target.files[0];if(!file)return;if(file.size>5000000)throw Error('This backup is too large.');const candidate=validateStore(JSON.parse(await file.text()));store=candidate;save();render();$('importStatus').textContent='Answers backup imported.';}catch(e){$('importStatus').textContent=e.message;}event.target.value='';});
+render();
+</script>
+</html>

@@ -5,3 +5,4 @@ __pycache__/
 *.vcd
 Thumbs.db
 .DS_Store
+.work/

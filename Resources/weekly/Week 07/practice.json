@@ -1,0 +1,606 @@
+{
+  "week": 7,
+  "kind": "Original practice, not verified PYQs",
+  "questions": [
+    {
+      "number": 1,
+      "text": "Consider ordinary synchronous setup analysis. A. It normally uses late/max data arrival. B. It protects data arrival before the intended capture edge. C. It proves every hold check automatically. Which statements are correct?",
+      "options": [
+        "B and C only",
+        "A and B only",
+        "A, B and C",
+        "A only"
+      ],
+      "salt": "07aedbb5b9fa2a51",
+      "answerHash": "0c0e660d57a21ab85070ca38098978359369f4a981fbb8a69cd3847a80993518"
+    },
+    {
+      "number": 2,
+      "text": "Consider same-edge hold analysis. A. It is concerned with data changing too early. B. It normally uses early/minimum data delay. C. Increasing the clock period always repairs a violation. Which statements are correct?",
+      "options": [
+        "A and B only",
+        "A, B and C",
+        "A and C only",
+        "B only"
+      ],
+      "salt": "0e370c594b5a37c5",
+      "answerHash": "14e9c4c1428e6e6106b844c5a6aa36faf5d1fb7948a17d417c49ff0a91a461c3"
+    },
+    {
+      "number": 3,
+      "text": "Consider an ordinary register-to-register setup budget. A. Launch clock-to-Q delay contributes. B. Capture setup time consumes available margin. C. Only combinational delay is needed to determine the period. Which statements are correct?",
+      "options": [
+        "A only",
+        "A, B and C",
+        "B and C only",
+        "A and B only"
+      ],
+      "salt": "9357dc4c3261d887",
+      "answerHash": "f1d7dd39e7d7f7ef908b10c43902f79c275306ebdd953b47dc311e1928efc03b"
+    },
+    {
+      "number": 4,
+      "text": "Ignoring skew and uncertainty, which hold inequality is appropriate?",
+      "options": [
+        "T is always equal to tHold.",
+        "tCQ_max + d_max + tSetup is at most zero.",
+        "tHold must exceed every possible data delay.",
+        "tCQ_min + d_min is at least tHold."
+      ],
+      "salt": "13853ce48bf9a09f",
+      "answerHash": "7acc6b84e6c2630dafb9ab811e6164a6056354e837b79e679a97354b76b5ed98"
+    },
+    {
+      "number": 5,
+      "text": "For T=1000 ps, tCQ_max=80 ps, d_max=700 ps and tSetup=70 ps, with zero skew and uncertainty, what is setup slack?",
+      "options": [
+        "850 ps",
+        "-150 ps",
+        "150 ps",
+        "230 ps"
+      ],
+      "salt": "c5d983356d27cf3e",
+      "answerHash": "1a38df3829d9ac92508254fa3680a6bb7a612e401c620875df8fc68af27fe180"
+    },
+    {
+      "number": 6,
+      "text": "For tCQ_min=30 ps, d_min=20 ps and tHold=40 ps, with zero skew and uncertainty, what is hold slack?",
+      "options": [
+        "-10 ps",
+        "50 ps",
+        "10 ps",
+        "90 ps"
+      ],
+      "salt": "8a386754fa94453c",
+      "answerHash": "cc2ae24ba48c88a4677eeb22e2fa453c87d7734f189261226d81ebb8c23abf4e"
+    },
+    {
+      "number": 7,
+      "text": "With zero skew and uncertainty, tCQ_max=60 ps, d_max=840 ps and tSetup=100 ps, what is the minimum setup-safe clock period in this model?",
+      "options": [
+        "840 ps",
+        "900 ps",
+        "160 ps",
+        "1000 ps"
+      ],
+      "salt": "87a23f3aef93f922",
+      "answerHash": "63c65df1e3c00d06e28603d7aa65b0c912d4fd74a9e2927e2f42848e89f3fb59"
+    },
+    {
+      "number": 8,
+      "text": "A minimum setup-safe period is 2 ns in the given model. What maximum clock frequency corresponds to it?",
+      "options": [
+        "50 MHz",
+        "2 GHz",
+        "500 MHz",
+        "250 MHz"
+      ],
+      "salt": "802cb8059ee849cb",
+      "answerHash": "0c7aeeffde056ce3daf0db5b93f905e6d718a795418cedb7c31386975aecaa2c"
+    },
+    {
+      "number": 9,
+      "text": "Define skew k as capture-clock arrival minus launch-clock arrival. What does positive k do to the setup budget?",
+      "options": [
+        "It removes clock-to-Q delay.",
+        "It increases the available single-cycle setup time.",
+        "It necessarily makes setup worse by exactly one period.",
+        "It has no effect on any timing check."
+      ],
+      "salt": "3d2399135eaac88c",
+      "answerHash": "e3695d4512b749a65e574a82529f2b068f58418d86115cce4f39f7a47f9d77b4"
+    },
+    {
+      "number": 10,
+      "text": "With the same capture-minus-launch skew convention, what does positive k do to hold margin?",
+      "options": [
+        "It always improves hold margin.",
+        "It reduces hold margin.",
+        "It makes hold independent of clock arrival.",
+        "It is equivalent to deleting every data buffer."
+      ],
+      "salt": "6ceb82bdfff0da8b",
+      "answerHash": "9230b8fc743e31729e0d47f2b888aa44bb6f917e35c68728ad0e5cea949c93b7"
+    },
+    {
+      "number": 11,
+      "text": "For T=1000 ps, k=50 ps, tCQ_max=80 ps, d_max=700 ps and tSetup=70 ps, ignoring uncertainty, setup slack is what?",
+      "options": [
+        "-200 ps",
+        "100 ps",
+        "150 ps",
+        "200 ps"
+      ],
+      "salt": "064e04c3598ce154",
+      "answerHash": "af7605a84233e20c98da4bfc40e998c6febb45a418aba84018e05a4d2b90e4e0"
+    },
+    {
+      "number": 12,
+      "text": "For k=20 ps, tCQ_min=30 ps, d_min=20 ps and tHold=40 ps, ignoring uncertainty, hold slack is what?",
+      "options": [
+        "-10 ps",
+        "10 ps",
+        "70 ps",
+        "30 ps"
+      ],
+      "salt": "ce78bc094d25e67a",
+      "answerHash": "563f14e65944d7b9d1eff9ee613b4c234c11fc60587b58e059e325bd68dc8cb2"
+    },
+    {
+      "number": 13,
+      "text": "For T=1000 ps, k=-40 ps, tCQ_max=60 ps, d_max=800 ps and tSetup=70 ps, ignoring uncertainty, setup slack is what?",
+      "options": [
+        "110 ps",
+        "30 ps",
+        "-30 ps",
+        "70 ps"
+      ],
+      "salt": "bfc9b49963544e06",
+      "answerHash": "81a5d2e6357f7ffdbd0f4d2f7c9a9d363917061e67744a6cbf3cdf16695dfa79"
+    },
+    {
+      "number": 14,
+      "text": "If setup uncertainty is 30 ps and the nominal setup slack is 80 ps, what is slack after subtracting this uncertainty?",
+      "options": [
+        "50 ps",
+        "-110 ps",
+        "110 ps",
+        "80 ps"
+      ],
+      "salt": "37e19c69dc99acf3",
+      "answerHash": "65dda9d02be0be663fe5f935fc78696523549ac9930ef1d12e8cdd77669452d5"
+    },
+    {
+      "number": 15,
+      "text": "Why can slowing the clock fail to repair a same-edge hold violation?",
+      "options": [
+        "The hold inequality is primarily a minimum-delay and relative-clock requirement, not the next-period setup budget.",
+        "Clock-to-Q delay becomes zero at slower frequency.",
+        "Every hold check includes three full clock periods.",
+        "Hold depends only on the source file size."
+      ],
+      "salt": "718ec24cf9bd87cc",
+      "answerHash": "df04fe485c794913d94511ef0f385b2be664b6e802d56197bacd7cfacd86a184"
+    },
+    {
+      "number": 16,
+      "text": "A path has hold slack -25 ps. A repair adds 40 ps to its minimum data delay, with no other changes. New hold slack is what?",
+      "options": [
+        "-15 ps",
+        "15 ps",
+        "-65 ps",
+        "65 ps"
+      ],
+      "salt": "0b869fe8e821652d",
+      "answerHash": "63eee964d39ec2a0d46fbe770fa206705d9ea4a304c3eac92d37bf8d259036f9"
+    },
+    {
+      "number": 17,
+      "text": "A path has setup slack 35 ps. A change adds 20 ps to its maximum data delay, with no other changes. New setup slack is what?",
+      "options": [
+        "55 ps",
+        "-15 ps",
+        "-55 ps",
+        "15 ps"
+      ],
+      "salt": "25c6962946a4a35f",
+      "answerHash": "b2a581079f9cb96a0d5d2b9fdf0d2f8e20f9374804fead718d26dad654d6ffc5"
+    },
+    {
+      "number": 18,
+      "text": "Which data is important for STA?",
+      "options": [
+        "Only a single simulation waveform image.",
+        "Only the chip package invoice.",
+        "Only the source-code comments.",
+        "Netlist, timing libraries and timing constraints, plus interconnect modeling appropriate to the stage."
+      ],
+      "salt": "309661d97bd3c22a",
+      "answerHash": "995890e5db406184d272fd08f74d5dfba9da6b0a44f8436d37288e9dd7f376c7"
+    },
+    {
+      "number": 19,
+      "text": "What does an arrival time represent?",
+      "options": [
+        "Only the time a file was downloaded.",
+        "When a signal can reach a point relative to a timing reference.",
+        "The number of sinks on the clock net.",
+        "The number of Boolean minterms."
+      ],
+      "salt": "b2d8f0850b32ce6a",
+      "answerHash": "647e406b5b9b08f8826fd238309eebdedd402d25f0be3ab4525a4531c4cc5d49"
+    },
+    {
+      "number": 20,
+      "text": "What does required time represent in a setup check?",
+      "options": [
+        "The earliest time the source file may be edited.",
+        "The total number of gates in a library.",
+        "A mandatory value of zero at every endpoint.",
+        "The latest allowable data-arrival boundary for that check."
+      ],
+      "salt": "abe34954cdc5645c",
+      "answerHash": "36216e683f68ccd0eed7c903bb02b88e330cba7a77c7878e13c3d3378f544568"
+    },
+    {
+      "number": 21,
+      "text": "What is setup slack with arrival 720 ps and required time 800 ps?",
+      "options": [
+        "-80 ps",
+        "1520 ps",
+        "80 ps",
+        "720 ps"
+      ],
+      "salt": "84bad5928a47327d",
+      "answerHash": "6c19cfaa16d5ad80b36ff5cc8a4943c4c0ecb3e8a459dbf9afcbc773c52f47bd"
+    },
+    {
+      "number": 22,
+      "text": "What is setup slack with arrival 900 ps and required time 850 ps?",
+      "options": [
+        "1750 ps",
+        "50 ps",
+        "-50 ps",
+        "-1750 ps"
+      ],
+      "salt": "86454f49a2d5b7de",
+      "answerHash": "6523db3e288afce0ceddd6d5b9964fbe953f60f6bffb9744c39fd8f748fc54ca"
+    },
+    {
+      "number": 23,
+      "text": "For a hold comparison, earliest arrival is 90 ps and required minimum arrival is 65 ps. What is hold slack?",
+      "options": [
+        "65 ps",
+        "25 ps",
+        "155 ps",
+        "-25 ps"
+      ],
+      "salt": "cec3e51710a3653a",
+      "answerHash": "e4ab73d7ae0e0b053a5bff7cc41d420a1e25e1e9fe950b48a1e4732b5d854fe0"
+    },
+    {
+      "number": 24,
+      "text": "At a reconvergent node, how are late arrivals commonly propagated for a maximum timing check?",
+      "options": [
+        "Always take the arithmetic average of incoming arrivals.",
+        "Always select the shortest source-code name.",
+        "Take the maximum applicable incoming arrival plus its corresponding arc delay.",
+        "Add all incoming arrivals together regardless of path structure."
+      ],
+      "salt": "db8e46665c5b9310",
+      "answerHash": "dc31e95c734f615187e4edf6f472b4fd631bb110df957e8c32d36dd8a8da5732"
+    },
+    {
+      "number": 25,
+      "text": "At a reconvergent node, how are early arrivals commonly propagated for a minimum timing check?",
+      "options": [
+        "Replace every early arrival with one clock period.",
+        "Take the largest incoming arrival regardless of arc.",
+        "Take the minimum applicable incoming arrival plus its corresponding arc delay.",
+        "Multiply all arrivals together."
+      ],
+      "salt": "c798439e22669b03",
+      "answerHash": "2bd8f38736cd4ee76ee2082487a3b291eee9715e0cc4bad1fe63526ec0af7bae"
+    },
+    {
+      "number": 26,
+      "text": "Two candidate late arrival-plus-arc values are 120 ps and 170 ps. What late arrival propagates?",
+      "options": [
+        "290 ps",
+        "145 ps",
+        "120 ps",
+        "170 ps"
+      ],
+      "salt": "27727f38c9b0f3a8",
+      "answerHash": "ac9d69088bf9232ec1477bdeaa0a0b92832b0d664a2bf7564461eae9c2673a8d"
+    },
+    {
+      "number": 27,
+      "text": "Two candidate early arrival-plus-arc values are 120 ps and 170 ps. What early arrival propagates?",
+      "options": [
+        "290 ps",
+        "145 ps",
+        "170 ps",
+        "120 ps"
+      ],
+      "salt": "2f1a1dfcc6e34821",
+      "answerHash": "8ef2434b0a1e4cd981c5b745dca4640734996a0b2b90a7667e5e4c3421f6e466"
+    },
+    {
+      "number": 28,
+      "text": "What can make graph-based analysis pessimistic compared with path-based analysis?",
+      "options": [
+        "Always using exact joint path histories at no computational cost.",
+        "Combining conservative quantities that do not occur together on the same realizable path.",
+        "Considering only the newest source file.",
+        "Ignoring every load capacitance."
+      ],
+      "salt": "ebe04a2cea6409f0",
+      "answerHash": "c4b213e659399e0848f1ed1ff30ef9eb0d671dd4006b41c67024bc60602e247a"
+    },
+    {
+      "number": 29,
+      "text": "What does path-based analysis attempt to retain more precisely?",
+      "options": [
+        "An assumption that all paths are identical.",
+        "Only aggregate package price.",
+        "Only the number of RTL files.",
+        "The conditions and delay/slew behavior along a particular path."
+      ],
+      "salt": "e965690ef9829e6c",
+      "answerHash": "1ec8b898cfe6aa0107dd6b6f4a8d813dd37c7cc0d00d10368456409500b763e2"
+    },
+    {
+      "number": 30,
+      "text": "Why is a critical-path report useful?",
+      "options": [
+        "It replaces the design specification.",
+        "It identifies a path limiting the stated timing requirement.",
+        "It proves all functional behaviors correct.",
+        "It guarantees zero routing congestion."
+      ],
+      "salt": "04c7d11ed410a091",
+      "answerHash": "268c512325d04ce2118923374dae3f9bac9d51acdb172e5b05bc960c27081e64"
+    },
+    {
+      "number": 31,
+      "text": "What is a common data-path startpoint?",
+      "options": [
+        "A launch register's clocked output or a constrained input port.",
+        "Any comment in a Verilog file.",
+        "A package label.",
+        "Only the edge of the wafer."
+      ],
+      "salt": "d6e9fe4ae02bf6bc",
+      "answerHash": "95c58bc4ababeaa6b7bd11591563e972163097e2ea4a6b39c4c484e96a481307"
+    },
+    {
+      "number": 32,
+      "text": "What is a common data-path endpoint?",
+      "options": [
+        "A capture register's data pin or a constrained output port.",
+        "The power supply's marketing name.",
+        "A tool installation directory.",
+        "Only an RTL module name."
+      ],
+      "salt": "6ade46b76ccbb9ff",
+      "answerHash": "624ab14cd60a198a6c18094f7c4378b8fe969effaaf653ef150b7e6041737316"
+    },
+    {
+      "number": 33,
+      "text": "Why are rising and falling transitions often analyzed separately?",
+      "options": [
+        "Rising transitions never use timing arcs.",
+        "A falling transition has no electrical meaning.",
+        "Both transition types always have identical delay.",
+        "Their cell and net delays can differ."
+      ],
+      "salt": "d936511daf4dfa40",
+      "answerHash": "46049f3e554bbfd2fac46ecbb5ebf135931d1476ea6966810f86fecb0c1f4aa2"
+    },
+    {
+      "number": 34,
+      "text": "Why should multiple process and environmental scenarios be analyzed?",
+      "options": [
+        "Different scenarios can limit different paths or timing checks.",
+        "One arbitrary scenario necessarily bounds all checks.",
+        "A netlist can exist at only one temperature.",
+        "Scenarios affect only report typography."
+      ],
+      "salt": "2dfe6c4d1783b02b",
+      "answerHash": "039a938eb0e9d228d2e9c40a41a2c49806aef669e246589bcbd7945e99f6f6ae"
+    },
+    {
+      "number": 35,
+      "text": "What does on-chip variation modeling address?",
+      "options": [
+        "Delay variation among different paths or locations within one chip.",
+        "The spelling of clock names.",
+        "Only a source-file syntax variation.",
+        "Only the number of separate wafers ordered."
+      ],
+      "salt": "da9e46906a79ff7e",
+      "answerHash": "e6c36ef18e569fc601e0d3c1d3193b3545e8e387911af06a30579c52fcf40fdf"
+    },
+    {
+      "number": 36,
+      "text": "What is a purpose of common-path pessimism removal in clock analysis?",
+      "options": [
+        "Remove every real clock delay.",
+        "Convert all hold checks into setup checks.",
+        "Remove inconsistent early/late treatment of a physically shared clock path.",
+        "Ignore the capture clock entirely."
+      ],
+      "salt": "4a012fffe687a45f",
+      "answerHash": "959c866fc44b1e6363ffb75dbe64280711dd99d3bfdae6a78e505a9c7332a22d"
+    },
+    {
+      "number": 37,
+      "text": "A timing path has three combinational delays 40,60,80 ps. Ignoring net delays, what is their sum?",
+      "options": [
+        "100 ps",
+        "240 ps",
+        "80 ps",
+        "180 ps"
+      ],
+      "salt": "35d6bcfecd6ae13b",
+      "answerHash": "13fd6fb70da7dafbdaa20e2326a139cdebcb0095a4caa4bc5af0a6eb6957e364"
+    },
+    {
+      "number": 38,
+      "text": "Add launch tCQ=30 ps to combinational delay 180 ps. What is data arrival relative to the launch edge, ignoring other delays?",
+      "options": [
+        "180 ps",
+        "210 ps",
+        "150 ps",
+        "30 ps"
+      ],
+      "salt": "ee51fdedff20f8ec",
+      "answerHash": "29396b95e0d70aa112ee91f1fdfb6dc53c10d37e7cb4420e129c749a499c7a2d"
+    },
+    {
+      "number": 39,
+      "text": "If capture required time is 260 ps for the arrival in the preceding defined 210 ps case, what is setup slack?",
+      "options": [
+        "50 ps",
+        "470 ps",
+        "210 ps",
+        "-50 ps"
+      ],
+      "salt": "0cbc0082dabb4c7e",
+      "answerHash": "786ff81f4f812584b3c3e77ee33345dc249a1348ffcb432b32f1bdf9e97eb0fb"
+    },
+    {
+      "number": 40,
+      "text": "Two paths have slacks -40 ps and +15 ps. What is the worst slack?",
+      "options": [
+        "-40 ps",
+        "-25 ps",
+        "+15 ps",
+        "+40 ps"
+      ],
+      "salt": "5902b5bdc6fef5ca",
+      "answerHash": "839f293178608b784f01933df1e74834f82a93f32979a2e536fe905bd16b49d1"
+    },
+    {
+      "number": 41,
+      "text": "Three endpoint slacks are -30 ps, -10 ps and +20 ps. Summing only negative endpoint slacks gives what TNS?",
+      "options": [
+        "-60 ps",
+        "-40 ps",
+        "-20 ps",
+        "+40 ps"
+      ],
+      "salt": "2ae005a29f6073ea",
+      "answerHash": "a50845cc258372a54780d554adcacf6b1d8c1eee1fc085f9ebd498c0388bd165"
+    },
+    {
+      "number": 42,
+      "text": "Which conclusion is justified by positive setup slack on one path?",
+      "options": [
+        "Every operating mode is necessarily checked.",
+        "That particular modeled setup check meets its requirement.",
+        "Every hold path necessarily passes.",
+        "The chip has no functional errors."
+      ],
+      "salt": "80b22ecf9b692979",
+      "answerHash": "987e3bf6b31876235042b536e23dad79162ad457bee19a1a2d2202e7e4ce3af7"
+    },
+    {
+      "number": 43,
+      "text": "Why should an unconstrained path be investigated?",
+      "options": [
+        "It always contains no gates.",
+        "It may be omitted from the intended timing checks.",
+        "It necessarily has infinite physical speed.",
+        "It proves that the design has no clocks."
+      ],
+      "salt": "26b415e013fbc4c9",
+      "answerHash": "996e4b4cd86636c21e74fb8140877219da9b284c216b0c77d78b99e1433794af"
+    },
+    {
+      "number": 44,
+      "text": "What is the role of an ideal-clock assumption in an early analysis?",
+      "options": [
+        "Prove clock skew is physically impossible.",
+        "Delete all setup and hold checks.",
+        "Treat clock distribution according to an idealized model rather than a built physical clock network.",
+        "Set every data delay to zero."
+      ],
+      "salt": "7270adae5ab09f77",
+      "answerHash": "8a8b0c4ff199f1fe098a74bd205232bc8c0fa21b2b8c49c1adc3c043cb895f16"
+    },
+    {
+      "number": 45,
+      "text": "Why may post-route timing differ from synthesis timing?",
+      "options": [
+        "Post-route analysis ignores libraries.",
+        "Routing cannot change load capacitance.",
+        "Synthesis and routing always use identical parasitics by definition.",
+        "Extracted interconnect and physical clock behavior can differ from earlier estimates."
+      ],
+      "salt": "e4d68743dadaecdc",
+      "answerHash": "5dd47273196cf7400bfb3808b00fa33f26cf96539e2ce22038161990c24297be"
+    },
+    {
+      "number": 46,
+      "text": "Which tool in the course performs static timing analysis?",
+      "options": [
+        "A silicon dicing saw.",
+        "A shell text editor only.",
+        "OpenSTA.",
+        "GTKWave alone."
+      ],
+      "salt": "41e9d51890565e2b",
+      "answerHash": "dd753971e2dcc4cf8962e980a156dc98e3368f36c3f8fb755c15cd3b8755a168"
+    },
+    {
+      "number": 47,
+      "text": "Consider a timing-path report. A. The check type must be identified. B. Units and scenario must be read. C. A positive result on one path proves every design requirement. Which statements are correct?",
+      "options": [
+        "A, B and C",
+        "A and C only",
+        "A and B only",
+        "B only"
+      ],
+      "salt": "d24daf00efb29f8b",
+      "answerHash": "7f38db7fb87db32493d18df808e86ce3cc91067ed0acdd5dc101bef4a0a98265"
+    },
+    {
+      "number": 48,
+      "text": "For fixed path and clock quantities, consider increasing capture setup time. A. It reduces setup margin. B. It automatically removes clock skew. C. It does not make the combinational path delay vanish. Which statements are correct?",
+      "options": [
+        "B and C only",
+        "A only",
+        "A and C only",
+        "A, B and C"
+      ],
+      "salt": "0d29eb0411a9af19",
+      "answerHash": "047944ce40be49c644831616836931cca0bc4abbf122b04ec61e22781704ed3f"
+    },
+    {
+      "number": 49,
+      "text": "What is the hold impact of increasing tHold by 10 ps with other quantities fixed?",
+      "options": [
+        "Setup period decreases by exactly 10 ps.",
+        "Clock-to-Q delay is removed.",
+        "Hold slack decreases by 10 ps.",
+        "Hold slack increases by 10 ps."
+      ],
+      "salt": "1c6321d7b7c8cb37",
+      "answerHash": "922053a9a5641a30a9201cae9469e20c135c197e07e2b110115f423c0fefcf14"
+    },
+    {
+      "number": 50,
+      "text": "Which interpretation of a timing report is sound?",
+      "options": [
+        "A positive number alone proves every design requirement.",
+        "Read path type, units, scenario and constraints before interpreting the slack value.",
+        "Net names determine whether a path is physically slow.",
+        "All timing tools use the same unstated units in every library."
+      ],
+      "salt": "7c2b3353b1e4896d",
+      "answerHash": "95a1bc4d52a2ee388aa70a01e272d8e3ca47a6536fac1b6175ef73db75b4b997"
+    }
+  ]
+}

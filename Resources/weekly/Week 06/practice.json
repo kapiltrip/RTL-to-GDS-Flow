@@ -1,0 +1,606 @@
+{
+  "week": 6,
+  "kind": "Original practice, not verified PYQs",
+  "questions": [
+    {
+      "number": 1,
+      "text": "Consider model checking. A. It checks properties of a transition model. B. Assumptions can restrict analyzed behaviors. C. A successful modeled proof automatically covers every manufacturing defect. Which statements are correct?",
+      "options": [
+        "B and C only",
+        "A and B only",
+        "A, B and C",
+        "A only"
+      ],
+      "salt": "1a8e5f2e766ddde0",
+      "answerHash": "a69c4e69ae02f9ffe7bd0ff21194b464304c3c1d340d7d9d754893983a72bc81"
+    },
+    {
+      "number": 2,
+      "text": "Consider reachability. A. Initial-state assumptions matter. B. Every representable binary encoding must be reachable. C. Transitions determine which later states are attainable. Which statements are correct?",
+      "options": [
+        "B only",
+        "A and B only",
+        "A and C only",
+        "A, B and C"
+      ],
+      "salt": "a3d43fee637cd6f2",
+      "answerHash": "4a7c9a2d23f49841a0e57095f33f3052b54828e26eac38278bd426ed5c59f155"
+    },
+    {
+      "number": 3,
+      "text": "Consider bounded model checking at depth k. A. It can find a counterexample within the bound. B. A clean bounded result alone always proves arbitrary-depth safety. C. A completeness argument is needed to justify an unbounded conclusion from a bound. Which statements are correct?",
+      "options": [
+        "A, B and C",
+        "A and B only",
+        "B only",
+        "A and C only"
+      ],
+      "salt": "38f07372653408e0",
+      "answerHash": "8e1359c32b75178cfef3b85df707b3e3617ce1f9e5fce6616e926dd07d914b85"
+    },
+    {
+      "number": 4,
+      "text": "An assertion holds for all executions up to depth 5. What can be concluded without further reasoning?",
+      "options": [
+        "No violation was found within that bound.",
+        "The property is proved for every execution length.",
+        "The design has minimum area.",
+        "Every reset state is reachable from every other state."
+      ],
+      "salt": "1380d23e4f21d1f8",
+      "answerHash": "198d8626f4646f768ec94c720d6858a187ebb0f5aaf84ef79548ad46ec37ef48"
+    },
+    {
+      "number": 5,
+      "text": "What is the role of induction in an unbounded safety proof?",
+      "options": [
+        "Establish an initial condition and show the property is preserved by transitions.",
+        "Replace the state-transition relation with a timing report.",
+        "Ignore all initial conditions.",
+        "Enumerate only one arbitrary test vector."
+      ],
+      "salt": "295d13c684d6b2d6",
+      "answerHash": "828e78ac4d7802227a1b531796257be6385165e5698ad01ab65fb5f0ce014008"
+    },
+    {
+      "number": 6,
+      "text": "What does a combinational equivalence check compare?",
+      "options": [
+        "The input-output functions of two combinational representations under the specified domain.",
+        "Only their source-code line counts.",
+        "Their power dissipation at every future process node.",
+        "Only their placed cell coordinates."
+      ],
+      "salt": "009381cf5009b944",
+      "answerHash": "c555465261d51650719bac18496ee9914c2e099819c9b69720a872fe9c033b5e"
+    },
+    {
+      "number": 7,
+      "text": "How is a mismatch miter commonly formed?",
+      "options": [
+        "XOR corresponding outputs and OR the differences.",
+        "AND every input with ground.",
+        "Delete every output from both designs.",
+        "Connect all outputs directly together without comparison."
+      ],
+      "salt": "db8c7b1ad044ff27",
+      "answerHash": "e6cf0ca5387802b6dbe214baf3580454fbefb9ae7804d61c6aa24f47fa02c032"
+    },
+    {
+      "number": 8,
+      "text": "For two 4-output circuits, how many pairwise XOR comparisons are needed in a simple mismatch miter?",
+      "options": [
+        "8",
+        "1",
+        "4",
+        "16"
+      ],
+      "salt": "6adbf4df6b1c40a9",
+      "answerHash": "a03d7f372f446fb4d7dcc5eef6260df417722292831eed58fdf5beca83152fe4"
+    },
+    {
+      "number": 9,
+      "text": "If the miter output can be 1, what does that demonstrate?",
+      "options": [
+        "A counterexample to equivalence exists in the modeled domain.",
+        "The functions agree on every input.",
+        "Both netlists are physically legal.",
+        "Both designs have zero delay."
+      ],
+      "salt": "56a511eba8e60b91",
+      "answerHash": "09717ac7229b71df2db157bf52daee587eb4b6006fa78313bf3d4885ccb4382e"
+    },
+    {
+      "number": 10,
+      "text": "Which assumption is important when using partitioned equivalence checking?",
+      "options": [
+        "Every internal signal name proves equivalence automatically.",
+        "Correspondence and boundary assumptions must correctly connect the compared partitions.",
+        "Partitions must have equal physical areas.",
+        "Arbitrary partition inputs can be ignored without justification."
+      ],
+      "salt": "d7603dcb0ef1b1f4",
+      "answerHash": "e0a4fb0e4ae3986aa8da13c84dd89f45396eb6fb638f9d5fa2ae995ad632b033"
+    },
+    {
+      "number": 11,
+      "text": "Why can black-boxing affect a proof's meaning?",
+      "options": [
+        "A black box automatically behaves like every possible real implementation in the same way.",
+        "It resolves all timing constraints.",
+        "It removes all design inputs.",
+        "The proof depends on what behavior is assumed for the omitted block."
+      ],
+      "salt": "4ca5d95e09aab66f",
+      "answerHash": "f6d84755f692a91f646fd87efb29952594648778bf0ec442db51a22686d99f7b"
+    },
+    {
+      "number": 12,
+      "text": "What does a Liberty technology library normally provide?",
+      "options": [
+        "Cell logic and characterized electrical/timing information.",
+        "Only the finished GDS layout of the top-level design.",
+        "The complete functional specification of every customer chip.",
+        "Only fabrication defect measurements."
+      ],
+      "salt": "f552d552beb1e3c2",
+      "answerHash": "f88fb40af7ad3d1212c50782926f2db1f4bc9fe04ab2b350986f2ae88f7af1ec"
+    },
+    {
+      "number": 13,
+      "text": "What is a timing arc?",
+      "options": [
+        "A package outline drawing.",
+        "A manufacturing wafer boundary.",
+        "A file-system symbolic link.",
+        "A modeled timing relationship from a related pin or event to another pin."
+      ],
+      "salt": "2cfe33a05d1f946b",
+      "answerHash": "305f4cd4a47ceb2df67bf86cb85c3be94679d15bd297d87529e11b8e2639b440"
+    },
+    {
+      "number": 14,
+      "text": "For an inverter's negative-unate arc, an input rise normally corresponds to what output transition?",
+      "options": [
+        "A rise necessarily.",
+        "No possible transition.",
+        "A change in clock frequency only.",
+        "A fall."
+      ],
+      "salt": "8623586b364f196e",
+      "answerHash": "5b25b604740361f98ceab61ea4689bf43cf1eb18e6119a31d06db8bc9560b52e"
+    },
+    {
+      "number": 15,
+      "text": "For an AND gate with other inputs held at noncontrolling values, the input-to-output arc is usually what?",
+      "options": [
+        "A sequential setup constraint only.",
+        "Always non-unate.",
+        "Positive unate.",
+        "Negative unate."
+      ],
+      "salt": "cc1a856d2b2ee14a",
+      "answerHash": "8ce7f21bc11d921e6f63223e1df33334d35734509e4f5b07a16f1153d3802105"
+    },
+    {
+      "number": 16,
+      "text": "Why can an XOR input-to-output relationship be non-unate?",
+      "options": [
+        "XOR has no input pins.",
+        "The output never changes.",
+        "The output transition direction depends on the other input's value.",
+        "Every input rise always causes an output rise."
+      ],
+      "salt": "92b71bc9b153eafb",
+      "answerHash": "14fefccac4088301d022a5e2e46339d4f55e129ed93bef7f9dca06891832c2c1"
+    },
+    {
+      "number": 17,
+      "text": "What does a basic NLDM propagation-delay table commonly use as indices?",
+      "options": [
+        "Clock period and the number of comments.",
+        "Input transition time and output load capacitance.",
+        "Only package weight and die color.",
+        "Only source-code width and file size."
+      ],
+      "salt": "37bd2bca59de804b",
+      "answerHash": "1013fafb858379f0269d8fe4005ae18df744cda002e8367aab6abc6fec79cc57"
+    },
+    {
+      "number": 18,
+      "text": "What does an output transition table model?",
+      "options": [
+        "The distance between two module source files.",
+        "The yield of a wafer after dicing.",
+        "Only the clock's absolute arrival timestamp.",
+        "Output slew under the specified input slew and load conditions."
+      ],
+      "salt": "cab92fa9d6fbc52f",
+      "answerHash": "76ffef56bdee794802600e5e8cf902f1e5f138c5181e687fdfa32b9fc9b5e9c9"
+    },
+    {
+      "number": 19,
+      "text": "What is slew?",
+      "options": [
+        "The time between two unrelated chip deliveries.",
+        "The count of gates in a truth table.",
+        "The total number of clock cycles since reset only.",
+        "The time taken for a signal transition between specified voltage thresholds."
+      ],
+      "salt": "4f8cf94fb770b356",
+      "answerHash": "bab0246988886c4964d968a8db7d6c8f4e82f8c9a6f70aa9d78989d60cb4b491"
+    },
+    {
+      "number": 20,
+      "text": "Why should slew thresholds be specified?",
+      "options": [
+        "Thresholds determine the number of RTL ports.",
+        "A transition time depends on which voltage levels define its measurement interval.",
+        "Voltage levels never affect transition-time definitions.",
+        "Every library uses an identical threshold convention by necessity."
+      ],
+      "salt": "45afc987aaecaa77",
+      "answerHash": "ff82d12b7884733d77c10512d76d7b84f365b3d555b0e3ff60735e255de63400"
+    },
+    {
+      "number": 21,
+      "text": "An inverter input crossing occurs at 10 ns and its corresponding output crossing at 10.08 ns. What is the propagation delay?",
+      "options": [
+        "20.08 ns",
+        "0.8 ns",
+        "80 ps",
+        "8 ps"
+      ],
+      "salt": "1b0bd38a0a8ed187",
+      "answerHash": "39b1fbee5e5f0f7fbec6ce110555a26331306ca1054101b4a44f87529fbd8b64"
+    },
+    {
+      "number": 22,
+      "text": "At a fixed input slew, a table gives delay 20 ps at 10 fF and 40 ps at 30 fF. What is linear-interpolated delay at 20 fF?",
+      "options": [
+        "60 ps",
+        "30 ps",
+        "40 ps",
+        "25 ps"
+      ],
+      "salt": "645c5f976b8cd106",
+      "answerHash": "8bef6f08976f5c5b802f7853c65397093d33ab85b5f0667e63fe452393a556ff"
+    },
+    {
+      "number": 23,
+      "text": "For a table f(x,y) with corner values 10,20,30,40, what is its bilinear value at the center of that rectangular cell?",
+      "options": [
+        "30",
+        "25",
+        "100",
+        "20"
+      ],
+      "salt": "3c22f747111f3373",
+      "answerHash": "02cac32a578f882151aa1e7935481706e7608e51046d2d90672c494549e8ab9e"
+    },
+    {
+      "number": 24,
+      "text": "Why must values outside a characterized table's range be treated carefully?",
+      "options": [
+        "The logic function of the cell always changes.",
+        "Results may depend on the tool's extrapolation or limiting behavior.",
+        "All tools necessarily use identical extrapolation.",
+        "Every out-of-range value is exactly zero."
+      ],
+      "salt": "b7c8ec01dce898c4",
+      "answerHash": "03a57c1e2e37d1be73cfd320193f81814c07cd5a44268bc6d390d0fcae732804"
+    },
+    {
+      "number": 25,
+      "text": "What is setup time relative to a capture clock edge?",
+      "options": [
+        "The wire delay from one package to another.",
+        "The RTL compilation duration.",
+        "The required interval during which data must be stable before that edge.",
+        "The minimum time the clock must remain low after power-off."
+      ],
+      "salt": "87ae05848ff7181c",
+      "answerHash": "38a835b1fcc8e32e4f7446fd9dc1ff1ac8c5a62be0a58494e6e2733d4495193d"
+    },
+    {
+      "number": 26,
+      "text": "What is hold time relative to a capture edge?",
+      "options": [
+        "The number of registers in a pipeline.",
+        "Only the maximum combinational delay.",
+        "The entire clock period of the chip.",
+        "The required interval during which data must remain stable after that edge."
+      ],
+      "salt": "fe279717651ffc57",
+      "answerHash": "4627a2fa1873b1a7528d3f3f4d21c80943c5e4f64f8834c8e99022fc858f9313"
+    },
+    {
+      "number": 27,
+      "text": "What does clock-to-Q delay measure for a flip-flop?",
+      "options": [
+        "The period of an arbitrary unrelated clock.",
+        "Delay from the active clock event to the corresponding Q transition.",
+        "Delay from the first source-code line to the last.",
+        "The physical length of the clock-tree source file."
+      ],
+      "salt": "27fa4ac8b245961d",
+      "answerHash": "6b9d7e8d4b3e414eb34a502fd17563019fada2f1b14f7b2c12f21f5b67581a8f"
+    },
+    {
+      "number": 28,
+      "text": "Which values commonly index a sequential setup or hold constraint table?",
+      "options": [
+        "Data transition and related clock transition.",
+        "Only a testbench's total simulation duration.",
+        "Only die width and die height.",
+        "Only output net name and instance name."
+      ],
+      "salt": "857e923a64fda3b8",
+      "answerHash": "f01fcab07b637400e0d8dad8eabe52373be8e2d396b34ce69a458d8f98fccd37"
+    },
+    {
+      "number": 29,
+      "text": "In a fixed library corner, why can two flip-flop instances have different clock-to-Q delays?",
+      "options": [
+        "Every instance has the exact same electrical environment.",
+        "The Boolean name of D automatically changes its function.",
+        "Their clock slew and output loading can differ.",
+        "Placement never affects loading."
+      ],
+      "salt": "4ba2afd26a4b9f38",
+      "answerHash": "644c0093a761405ee2b274e588941f4949d85f8411e50353797c256fb163c216"
+    },
+    {
+      "number": 30,
+      "text": "What does a process-voltage-temperature corner specify?",
+      "options": [
+        "A list of package colors.",
+        "Three arbitrary clock phase names.",
+        "A modeled fabrication condition, supply condition and temperature.",
+        "The chip's three geometric corner coordinates."
+      ],
+      "salt": "dcaa1c283f56bbc8",
+      "answerHash": "544d8510d75f81cdb94905005872456d7bb515a592bd0d3857e0f26472335f98"
+    },
+    {
+      "number": 31,
+      "text": "Why should signoff consider more than one operating corner?",
+      "options": [
+        "A design has no variation after synthesis.",
+        "One corner always proves every physical effect in all conditions.",
+        "Corners are used only to render tables.",
+        "Different conditions can stress different maximum and minimum timing checks."
+      ],
+      "salt": "a008e83cb5da71b8",
+      "answerHash": "496d1d5a2ed0cfdb6a50da97a4dba0813eb0f1d2e82662aa48d80a28d1df2a10"
+    },
+    {
+      "number": 32,
+      "text": "Why is a slow-corner setup check insufficient to establish hold timing?",
+      "options": [
+        "Hold is a maximum-delay-only requirement.",
+        "Setup and hold are mathematically identical checks.",
+        "A slower clock always repairs hold.",
+        "Hold depends on minimum data-path behavior and clock relationships as well."
+      ],
+      "salt": "6cbf14f96ac11b96",
+      "answerHash": "31e1c90001e2d6ab021b05891342f65d50fc73acc7b80471236f36fee5ad28ce"
+    },
+    {
+      "number": 33,
+      "text": "What information is associated with a sequential cell's functional model?",
+      "options": [
+        "Its state-update and output behavior.",
+        "Only a printable logo.",
+        "Every future routed net's capacitance.",
+        "The customer's complete floorplan."
+      ],
+      "salt": "542e52ae32b010cb",
+      "answerHash": "4ed6a0a85bb944fed969fbceae0e0c9381cb7e5dae3df9f64b8372be361e6af5"
+    },
+    {
+      "number": 34,
+      "text": "What is input pin capacitance used for in timing analysis?",
+      "options": [
+        "Setting every net delay to zero.",
+        "Modeling the load that the pin presents to its driver.",
+        "Replacing the Boolean function of the receiving cell.",
+        "Recording the number of source statements."
+      ],
+      "salt": "f7bf9ae7589a5b23",
+      "answerHash": "825a74c8e486c1b9e24d6be11efa6ed6077b3d8a02dcde063ffaf67ef9d16c74"
+    },
+    {
+      "number": 35,
+      "text": "Two receiver pins have 2 fF and 3 fF capacitance, and the wire adds 4 fF. What is the simple total capacitive load?",
+      "options": [
+        "24 fF",
+        "5 fF",
+        "9 fF",
+        "4 fF"
+      ],
+      "salt": "3290b8042796b771",
+      "answerHash": "824e9630f3ca399a5b30fec917ff43120dbeba6f73cd7de7593bcaa80e1080cb"
+    },
+    {
+      "number": 36,
+      "text": "How is cell delay different from interconnect delay?",
+      "options": [
+        "The two quantities have different units of time by definition.",
+        "Cell delay never depends on loading.",
+        "Interconnect delay is always exactly zero.",
+        "Cell delay is through a cell arc; interconnect delay is through the connecting net model."
+      ],
+      "salt": "ad9e54a7c04cf036",
+      "answerHash": "8512e7f75963b4de5a8434248fc5b3decf3aa75befd37dec48cf17dcebc5d4a3"
+    },
+    {
+      "number": 37,
+      "text": "What does a max-transition constraint limit?",
+      "options": [
+        "Only the number of cell instances in a design.",
+        "The number of legal state encodings.",
+        "The magnitude of a Verilog integer constant.",
+        "The allowed signal transition time."
+      ],
+      "salt": "c3a5953cc3984c4d",
+      "answerHash": "bc61a31f829f857633322683a4f33e1a525e47da8ee6693d00a62d978d5a8c82"
+    },
+    {
+      "number": 38,
+      "text": "What does a max-capacitance constraint limit?",
+      "options": [
+        "The number of proof clauses in a SAT solver.",
+        "The capacitive load a driver is allowed to see.",
+        "The distance between file directories.",
+        "The clock period in all designs."
+      ],
+      "salt": "6de7f7a84cfa32de",
+      "answerHash": "78f814935ef320f183aa6526b4b6468e3eebcf32a7f97a52d08639bff3c945ed"
+    },
+    {
+      "number": 39,
+      "text": "Why can a functionally equivalent replacement violate an electrical constraint?",
+      "options": [
+        "Every equivalent gate has the same transistor sizes.",
+        "Logical equivalence guarantees identical input capacitance.",
+        "Electrical constraints are unrelated to gates.",
+        "Equivalent Boolean behavior does not ensure adequate drive or acceptable slew/loading."
+      ],
+      "salt": "8c2ab3cdd2884dcb",
+      "answerHash": "c9f31294c33a03b4f31d0d78d63f8cfa404dff1a82b73e9236f082bada38fdf5"
+    },
+    {
+      "number": 40,
+      "text": "What is a conditional timing arc?",
+      "options": [
+        "A route existing only in a PDF illustration.",
+        "A delay measured only when the tool's user is logged in.",
+        "An arc that requires no related pin.",
+        "An arc whose applicability depends on a specified logical condition."
+      ],
+      "salt": "af72f57ec66e8eab",
+      "answerHash": "e5bf98d234790b4df9cf13be00289b063388ab1d3b124cda163673a693bcf7d8"
+    },
+    {
+      "number": 41,
+      "text": "If a cell's input slew worsens while load is fixed, which conclusion is safest without its table?",
+      "options": [
+        "The delay must become exactly zero.",
+        "The Boolean function must invert.",
+        "The delay must halve for every cell.",
+        "Consult the characterized table rather than assume an exact delay change."
+      ],
+      "salt": "9e60a2dd74acee5b",
+      "answerHash": "20130e076a558e6ebe2cf0f84bb6e6b228a4f2e5bcfc842890a459caa46518bb"
+    },
+    {
+      "number": 42,
+      "text": "Which sequence is appropriate for a simple CEC flow?",
+      "options": [
+        "Compare only file creation dates.",
+        "Delete outputs, ignore inputs, then claim equivalence.",
+        "Prepare corresponding designs, create a mismatch comparison, then prove or find a counterexample.",
+        "Place cells, package chips, then write the specification."
+      ],
+      "salt": "bcc5b61e8d82bd36",
+      "answerHash": "e6b6f85bd34bfb23af23cd1b752dec23674fc2a97e4ac7f655ddaaca0c3e53a4"
+    },
+    {
+      "number": 43,
+      "text": "What property can a counterexample to a safety assertion demonstrate?",
+      "options": [
+        "A reachable execution violating the assertion under the modeled assumptions.",
+        "That every possible execution violates it.",
+        "That the design has no outputs.",
+        "That all technology libraries are invalid."
+      ],
+      "salt": "215c48ad140fe130",
+      "answerHash": "f14f551c7e369bc1a6b6392b1c02d85b77b7c195fa2569e0abf5434f9ab1c911"
+    },
+    {
+      "number": 44,
+      "text": "An FSM reset state is S0, and only transitions S0 to S1 and S1 to S1 exist. Which listed state is unreachable?",
+      "options": [
+        "Both S0 and S1",
+        "S1",
+        "S0",
+        "S2"
+      ],
+      "salt": "8d5f00f64544eb35",
+      "answerHash": "7dd2113bc15336b461e793a85c1c2bd55f06f595a5ab12ca33668b189cadfd21"
+    },
+    {
+      "number": 45,
+      "text": "Why can state-space size grow rapidly with register count?",
+      "options": [
+        "Only the output port count matters.",
+        "n binary state bits admit up to 2 to the power n encodings.",
+        "State encodings grow only as n+1.",
+        "Every register removes one possible state."
+      ],
+      "salt": "889cb7a1cbd7778d",
+      "answerHash": "4cf3b8dfb57805cfd784d92341a0e6a0822e6b704159ce1d520d79352918bf63"
+    },
+    {
+      "number": 46,
+      "text": "How many binary encodings can 8 state bits represent?",
+      "options": [
+        "64",
+        "8",
+        "16",
+        "256"
+      ],
+      "salt": "a89332bf90763ddb",
+      "answerHash": "777813ddfe415becd5f4dc286fa79f61c537c168df873cfdf66df7c7dfb8a7ee"
+    },
+    {
+      "number": 47,
+      "text": "Consider library-based timing abstraction. A. Characterization supports efficient delay estimation. B. The models have operating conditions and ranges. C. They guarantee exact behavior in every unmodeled analog situation. Which statements are correct?",
+      "options": [
+        "A, B and C",
+        "A and B only",
+        "A only",
+        "B and C only"
+      ],
+      "salt": "ae746d2d5879c616",
+      "answerHash": "26f09378d723c03175468d75bb0a1bef9eb907d62116d4ca678ee15c60953683"
+    },
+    {
+      "number": 48,
+      "text": "Consider library units. A. A numerical delay must be read with its time unit. B. Capacitance units affect interpretation of loads. C. Signal names automatically correct unit mismatches. Which statements are correct?",
+      "options": [
+        "A, B and C",
+        "B only",
+        "A and B only",
+        "A and C only"
+      ],
+      "salt": "49f33e95c26a1fac",
+      "answerHash": "a0540d4025b9f347279ef3e7699f67918099a11363ea6feb8ab796ac8078ee28"
+    },
+    {
+      "number": 49,
+      "text": "A library uses a 1 ns time unit. What physical delay does a value of 0.025 represent?",
+      "options": [
+        "250 ps",
+        "25 ps",
+        "0.025 ps",
+        "25 ns"
+      ],
+      "salt": "61cb3c2980524724",
+      "answerHash": "46f0819fc1db3a87d41c93083cb7ce63a2a79048ce4e6749c361b9a05efb5141"
+    },
+    {
+      "number": 50,
+      "text": "What does a successful library-based implementation still require?",
+      "options": [
+        "Replacing all registers by constants.",
+        "No checks after mapping.",
+        "Verification against functional, timing and physical requirements in the intended context.",
+        "A guarantee that every fabricated die passes."
+      ],
+      "salt": "6d095f6bd6afc171",
+      "answerHash": "66b9e2ebe51039fc7a373f4b1715258939e1384803fd9c229ce26be10817fd63"
+    }
+  ]
+}

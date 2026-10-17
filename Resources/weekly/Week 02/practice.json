@@ -1,0 +1,606 @@
+{
+  "week": 2,
+  "kind": "Original practice, not verified PYQs",
+  "questions": [
+    {
+      "number": 1,
+      "text": "Consider ASIC logic synthesis. A. RTL is a usual input. B. A target cell library provides implementation choices. C. The normal output is a fabricated packaged chip. Which statements are correct?",
+      "options": [
+        "A, B and C",
+        "A and C only",
+        "A and B only",
+        "B only"
+      ],
+      "salt": "18278aa2e041d1b1",
+      "answerHash": "c08b189a3da3ee9721fc40218802b6b572c47d777b0c9542c098e245773018d7"
+    },
+    {
+      "number": 2,
+      "text": "Consider constrained synthesis inputs. A. Clock targets can influence implementation. B. Cell timing models can influence mapping. C. A testbench waveform alone defines all target-library behavior. Which statements are correct?",
+      "options": [
+        "A and B only",
+        "A only",
+        "B and C only",
+        "C only"
+      ],
+      "salt": "2342f5444bcaa1a9",
+      "answerHash": "c6cfc7166d4eee67737f3cb62c3e23099106fb7a596e3181840964a70267d901"
+    },
+    {
+      "number": 3,
+      "text": "Consider technology mapping. A. It selects available cell implementations. B. Equivalent logic may have different PPA in different libraries. C. It determines every final routed wire polygon. Which statements are correct?",
+      "options": [
+        "B and C only",
+        "A and B only",
+        "A and C only",
+        "A, B and C"
+      ],
+      "salt": "3cb6e7f1b5fe2951",
+      "answerHash": "965a5019282de49d64fb30f7f663bb338b1f2e541a0402b4bc24a494c5048d5b"
+    },
+    {
+      "number": 4,
+      "text": "A library cell has input pins A and B and output Y. Three instances are used. How many instance input pins are present?",
+      "options": [
+        "2",
+        "6",
+        "9",
+        "3"
+      ],
+      "salt": "0f325617826da2f3",
+      "answerHash": "a497354814521e369a5d19b0772ea0da2bef5b2e3e5e05c10aa4866c0d0a2cf4"
+    },
+    {
+      "number": 5,
+      "text": "What distinguishes a cell master from an instance?",
+      "options": [
+        "A master defines a reusable cell; an instance is one occurrence in the design.",
+        "A master is always a complete chip package.",
+        "Each instance must have a different Boolean function from its master.",
+        "An instance cannot have pin connections."
+      ],
+      "salt": "410ef8f53c4358e5",
+      "answerHash": "99df1c9e91a52c3e97489f1d2185348b24a28abd16404fae096a78a002b98954"
+    },
+    {
+      "number": 6,
+      "text": "Why may synthesis choose two drive strengths for cells implementing the same logic function?",
+      "options": [
+        "To avoid using any technology library.",
+        "To remove all input capacitance from the circuit.",
+        "To change the truth table of the function.",
+        "To meet different electrical loads and timing requirements."
+      ],
+      "salt": "116e618b424f88e6",
+      "answerHash": "0e81bb137a0611c274e505bc0e98d12efa21f2d7252e5e6e8435c3d7b0c767c4"
+    },
+    {
+      "number": 7,
+      "text": "Which item primarily records logical connections among instances?",
+      "options": [
+        "A packaging invoice.",
+        "A netlist.",
+        "A photomask inventory.",
+        "A wafer map showing failed dies."
+      ],
+      "salt": "10140e4193f3a895",
+      "answerHash": "42d12ed22a4a4923a5de459132acdde3b96ef47af6bfaf813330056be7692817"
+    },
+    {
+      "number": 8,
+      "text": "Which statement separates logical and physical representations?",
+      "options": [
+        "A netlist gives connectivity; layout also gives geometry and layer information.",
+        "They are identical descriptions in every respect.",
+        "A netlist always contains final detailed wire shapes.",
+        "A layout never represents connectivity."
+      ],
+      "salt": "76c7dfa0f8833f32",
+      "answerHash": "35ec801ffcc491de0cb7d101feeb80978ad303bab35d9b937718c24c23b2e535"
+    },
+    {
+      "number": 9,
+      "text": "Which stage is normally performed before standard-cell placement?",
+      "options": [
+        "Post-silicon binning.",
+        "Final package shipment.",
+        "Wafer dicing.",
+        "Floorplanning or chip planning."
+      ],
+      "salt": "d640a7ad44fe2f24",
+      "answerHash": "0fde8f328623ac31621244c56cd747d43872c97fc088ad3c07d16ac1892cbcf5"
+    },
+    {
+      "number": 10,
+      "text": "What does placement primarily determine?",
+      "options": [
+        "Which production dies pass wafer test.",
+        "Locations of cells within the physical design.",
+        "The exact transistor doping profile for fabrication.",
+        "The source-code grammar of Verilog."
+      ],
+      "salt": "0351ecfe0413ddc3",
+      "answerHash": "591a796019da083de03d4ce84d85854fbcb268c684eff5ebb5e1f578a850792e"
+    },
+    {
+      "number": 11,
+      "text": "What is a primary purpose of clock-tree synthesis?",
+      "options": [
+        "Convert all signal nets into power rails.",
+        "Distribute clock signals to sinks with controlled timing and electrical behavior.",
+        "Remove every sequential element.",
+        "Prove all functional properties without a specification."
+      ],
+      "salt": "3129597367c306b7",
+      "answerHash": "315f224e7508b8f1976bc7978b5194f1038c1129273ea8e4d178cdba26507f35"
+    },
+    {
+      "number": 12,
+      "text": "What does routing add to a placed netlist?",
+      "options": [
+        "A different required product specification.",
+        "Wafer yield measurements.",
+        "A new high-level software algorithm only.",
+        "Physical wire and via connections."
+      ],
+      "salt": "4b70ca7b9bdca008",
+      "answerHash": "64fa45a6eefb9b7ba7f5b1181e73dc6edcc2cddfa40718ddbea472d70e4dfc7a"
+    },
+    {
+      "number": 13,
+      "text": "Which flow ordering is normally appropriate?",
+      "options": [
+        "Route, dice wafer, floorplan, place.",
+        "Package, route, synthesize, specify behavior.",
+        "Floorplan, place, build clock network, route.",
+        "Clock-tree synthesis, fabrication, RTL coding, floorplanning."
+      ],
+      "salt": "8db433935db9d437",
+      "answerHash": "d7c021cccc562111a36dde4f6b8bd4e5014238d7e802dd677268cfa1d8de69d3"
+    },
+    {
+      "number": 14,
+      "text": "What does DRC check?",
+      "options": [
+        "The final market price of the device.",
+        "Geometric compliance with process design rules.",
+        "Whether every simulation stimulus was generated randomly.",
+        "Equality of all software execution times."
+      ],
+      "salt": "cf69bd57f69d0e74",
+      "answerHash": "59a7e948c9edd7c9ba43dd5e9e5652052dd9e76fe0273f813b345ad3c89d50b8"
+    },
+    {
+      "number": 15,
+      "text": "What does LVS primarily compare?",
+      "options": [
+        "The source-code indentation of two modules.",
+        "Connectivity extracted from layout with the reference circuit connectivity.",
+        "The purchase prices of two FPGA boards.",
+        "Only the lengths of file names."
+      ],
+      "salt": "1973fc878dc77f61",
+      "answerHash": "6829a702c968126cb61d565fd447dd75da794f8649197f09e9bb9f3b510b801c"
+    },
+    {
+      "number": 16,
+      "text": "What is tapeout in the design-to-manufacture flow?",
+      "options": [
+        "Packaging a die after final test.",
+        "Running a behavioral simulation for the first time.",
+        "Release of the finalized design data for fabrication.",
+        "Powering off all EDA workstations."
+      ],
+      "salt": "4260b8fae6a9b499",
+      "answerHash": "ab6fe9b8eac82c15f6b6f7d7721b91e52e3f24c73ca50b937aba9e409595535c"
+    },
+    {
+      "number": 17,
+      "text": "What distinguishes functional verification from manufacturing test?",
+      "options": [
+        "Manufacturing test proves that the specification itself is correct.",
+        "Functional verification is performed only after wafer fabrication.",
+        "Verification checks the design against intended behavior; manufacturing test targets fabricated-device defects.",
+        "Both exclusively measure package weight."
+      ],
+      "salt": "50489ce34da9be75",
+      "answerHash": "27b5f97d84a6a5df85b9bca70bc21798477d0875b684e1a5fd76f94f64a6fecb"
+    },
+    {
+      "number": 18,
+      "text": "Which conclusion follows from passing a finite set of simulation tests?",
+      "options": [
+        "The tested behaviors passed; untested behaviors may still contain errors.",
+        "All physical design rules have necessarily passed.",
+        "The chip is guaranteed to have 100% manufacturing yield.",
+        "Every possible input and state has necessarily been proved."
+      ],
+      "salt": "655c300bd76b03f8",
+      "answerHash": "38b4e372223016e82c35ef474c458e923dbb16d0af5a18029fdd25dc684fdbf8"
+    },
+    {
+      "number": 19,
+      "text": "What is a testbench used for?",
+      "options": [
+        "Applying stimuli and checking or observing the design responses.",
+        "Fabricating silicon transistors.",
+        "Defining every detailed routing track.",
+        "Measuring the market demand for the chip."
+      ],
+      "salt": "2d2aface8c561830",
+      "answerHash": "a8be6308ea205ea59aecd4bcc346467052f83683fad234ecf4cfdfd13902b218"
+    },
+    {
+      "number": 20,
+      "text": "What does static timing analysis primarily check?",
+      "options": [
+        "All functional properties of arbitrary software.",
+        "Timing requirements over modeled timing paths without enumerating functional stimulus sequences.",
+        "The physical strength of the chip package.",
+        "Only the color coding in waveform viewers."
+      ],
+      "salt": "f4a0fd132b2e5790",
+      "answerHash": "1f1d08c4d268d56f120df0f37720a02032fd39f1ae7a6f48f7495da4332d9b92"
+    },
+    {
+      "number": 21,
+      "text": "Which quantity is a timing constraint rather than a simulation stimulus?",
+      "options": [
+        "The expected text printed by a testbench.",
+        "A randomly selected packet payload.",
+        "One input vector applied at 12 ns.",
+        "Required clock period."
+      ],
+      "salt": "94a914d626ed5d15",
+      "answerHash": "26fafb175defe34786aa081c40d970dbf45f0244d9076c5c4878cf37909bbaf9"
+    },
+    {
+      "number": 22,
+      "text": "Which statement about setup and hold is appropriate?",
+      "options": [
+        "Setup applies only to combinational circuits without clocks.",
+        "Both are solely restrictions on package soldering.",
+        "Hold is always solved by increasing clock period.",
+        "Setup constrains data before capture; hold constrains data after capture."
+      ],
+      "salt": "b07c7c9e18c07072",
+      "answerHash": "e9d9b2e045e93f13b5c256bd00dc92fa9059751ddbcd02cebc59ef3971800084"
+    },
+    {
+      "number": 23,
+      "text": "What does positive setup slack indicate for the modeled check?",
+      "options": [
+        "Hold timing necessarily fails.",
+        "All functional verification is complete.",
+        "The required clock is necessarily the fastest possible physical clock.",
+        "Arrival meets the required setup boundary with margin."
+      ],
+      "salt": "a2b4767f4f14804b",
+      "answerHash": "2ae609f1c78e1732940d3f7762fcee26b6ba7cf134bf3a58888b73c4ea5ca62c"
+    },
+    {
+      "number": 24,
+      "text": "If 720 of 900 fabricated dies pass the stated test, what is the yield?",
+      "options": [
+        "125%",
+        "72%",
+        "80%",
+        "20%"
+      ],
+      "salt": "e478804b620b9a32",
+      "answerHash": "9ccc2cfa15cc4df78d6d24aef1cd8866f290aa5f2bd679825263672db2afbe79"
+    },
+    {
+      "number": 25,
+      "text": "Using Y=exp(-D A), with D A = 0, what is the modeled defect-limited yield?",
+      "options": [
+        "0",
+        "It is undefined.",
+        "0.5",
+        "1"
+      ],
+      "salt": "3b0fde7fb0e1f960",
+      "answerHash": "8fca9b43839513fbb2e129e519b7789eaa8fb4d4ce484d0a1eb671bbbd9c1e85"
+    },
+    {
+      "number": 26,
+      "text": "Under Y=exp(-D A), increasing area A while keeping positive D fixed has what effect?",
+      "options": [
+        "Decreases yield in this model.",
+        "Leaves yield unchanged for all A.",
+        "Changes yield only after packaging.",
+        "Increases yield in this model."
+      ],
+      "salt": "9703f5bcdb083a5f",
+      "answerHash": "9e7fbe82e86cce32e7d3014e62468269686d34bc0d3b482babdcdcc98083784e"
+    },
+    {
+      "number": 27,
+      "text": "For Y=exp(-D A), D=0.2 defects per square centimetre and A=1 square centimetre, yield is approximately what?",
+      "options": [
+        "98.0%",
+        "18.1%",
+        "81.9%",
+        "20.0%"
+      ],
+      "salt": "f169a7d2a4bf1250",
+      "answerHash": "b60dda0d5d6bd58840f5e64adad548cececa9c11ddfd4ffad5899619e100a680"
+    },
+    {
+      "number": 28,
+      "text": "If D is expressed per square centimetre, which area value should be paired with it for a 100 square millimetre die?",
+      "options": [
+        "0.01 square centimetre.",
+        "100 square centimetres.",
+        "10 square centimetres.",
+        "1 square centimetre."
+      ],
+      "salt": "1415e7f3fec6a635",
+      "answerHash": "ca2838a910f294cf3f264010db6d1f06ac2131d8334f240239ce716d1a4e17d5"
+    },
+    {
+      "number": 29,
+      "text": "A 10,000-unit wafer has 400 gross dies and 50% yield. Ignore other costs. Cost per good die is what?",
+      "options": [
+        "25 units",
+        "50 units",
+        "100 units",
+        "20 units"
+      ],
+      "salt": "1de6ed0d3e9afb73",
+      "answerHash": "48ca84f676b6baff358f4505c69ffa5a52a02e06452445c9fda97ba1e16d1337"
+    },
+    {
+      "number": 30,
+      "text": "What does a resolution enhancement technique primarily address in lithography?",
+      "options": [
+        "Faithful printing of small intended geometric features.",
+        "The clock period in an RTL simulation.",
+        "The storage capacity of a logic analyzer.",
+        "The number of Verilog module parameters."
+      ],
+      "salt": "596b269b1aeb5d2c",
+      "answerHash": "892b5912d8f0f5b6c7f038a1c55712e3ced34b964ecaeb6334fd6b4a10a535d9"
+    },
+    {
+      "number": 31,
+      "text": "Which item is associated with optical lithography resolution enhancement?",
+      "options": [
+        "RTL constant propagation.",
+        "Optical proximity correction.",
+        "Clock-domain crossing synchronization.",
+        "Scan-chain shifting."
+      ],
+      "salt": "86ecf63c4a5fbfe3",
+      "answerHash": "ed84c4c07a30e1bdfdd041439d33068af12b20e8854832f99addbb39148d7ba8"
+    },
+    {
+      "number": 32,
+      "text": "Which is a correct distinction between synthesis and physical design?",
+      "options": [
+        "Synthesis directly packages every manufactured die.",
+        "Synthesis builds a logical implementation; physical design realizes it geometrically.",
+        "Physical design must be completed before any RTL can be written.",
+        "The two stages always take exactly the same inputs and produce the same files."
+      ],
+      "salt": "0c6a33044c6a29db",
+      "answerHash": "584f1fbd329d899baf3221cacdde00c6181dd57198480c3f79ca84bf675994a2"
+    },
+    {
+      "number": 33,
+      "text": "Why can physical design require iteration after a logically correct netlist exists?",
+      "options": [
+        "Logical correctness forces every cell to occupy the same location.",
+        "Routing cannot change delay.",
+        "Wire parasitics, congestion and physical rules may prevent implementation targets from being met.",
+        "Layout contains no process-dependent constraints."
+      ],
+      "salt": "db4fa29442d6b6c3",
+      "answerHash": "21473a5e3a8ecc228f91a0a823d072993e92d458bde849680796f02407cc036a"
+    },
+    {
+      "number": 34,
+      "text": "What is parasitic extraction used for?",
+      "options": [
+        "Assigning software licenses to students.",
+        "Choosing source-code keywords.",
+        "Measuring only the number of staff in a design team.",
+        "Deriving interconnect electrical models from physical geometry."
+      ],
+      "salt": "4274bfef5f52deb3",
+      "answerHash": "8a29db00c0252a78c18e589a3b75f7b01d40f08d25eefc21f9af532ea7c57e34"
+    },
+    {
+      "number": 35,
+      "text": "What does a PDK describe more directly than an RTL source file?",
+      "options": [
+        "The exact cycle-by-cycle behavior of every customer design.",
+        "The application software user interface.",
+        "The pass/fail history of every future die.",
+        "The target manufacturing process and associated design information."
+      ],
+      "salt": "6d2c2d6bc749d408",
+      "answerHash": "49329b4754091360e29cb53e00ac75090b7117592a50d35417b0e670acb12fc0"
+    },
+    {
+      "number": 36,
+      "text": "In Tcl, what does set x 7 do?",
+      "options": [
+        "Assign the value 7 to variable x.",
+        "Define a seven-bit Verilog wire.",
+        "Print the current directory seven times.",
+        "Create seven operating-system processes."
+      ],
+      "salt": "2d96d0aa0a85f409",
+      "answerHash": "ff4d158259705e1f0183bf8f59308b8b0424221f8b4c6c9e680b5f0399f6ed02"
+    },
+    {
+      "number": 37,
+      "text": "In Tcl, what value does set y $x use when x has the value 7?",
+      "options": [
+        "Always an empty string.",
+        "The literal characters dollar-sign x.",
+        "The current value of x.",
+        "The name of the last file opened."
+      ],
+      "salt": "8b2df59af1cf1f1b",
+      "answerHash": "35e9afaa2da7f03cde906752f3b2932dd8b8d17f9f19f2d0ce6e9ff4e12d9603"
+    },
+    {
+      "number": 38,
+      "text": "In Tcl, what is the main effect of braces in set s {$x}?",
+      "options": [
+        "They execute x as a shell command.",
+        "They suppress variable substitution inside this word.",
+        "They convert x to a Verilog parameter.",
+        "They delete x after assigning s."
+      ],
+      "salt": "6dc837a628e6becc",
+      "answerHash": "105ed1c3a9f0621e85ac7abb968e2296202fe805785e95c24b7222ca293d24a0"
+    },
+    {
+      "number": 39,
+      "text": "In Tcl, square brackets around a command normally request what?",
+      "options": [
+        "A mandatory array slice.",
+        "A physical routing obstruction.",
+        "A comment block.",
+        "Command substitution."
+      ],
+      "salt": "148ddf817e1d8c02",
+      "answerHash": "b413354b5326a10faef69a49de3bd76cdb277fcd39a9ae47e0276e1afd94cd74"
+    },
+    {
+      "number": 40,
+      "text": "What is the result of expr {3 + 4 * 2} in Tcl?",
+      "options": [
+        "11",
+        "24",
+        "14",
+        "10"
+      ],
+      "salt": "0fc7401309a26d26",
+      "answerHash": "a6789608fe0e839b08cf7d80b08d0f2a0765639eabc0abaeb0e33f48903a0f71"
+    },
+    {
+      "number": 41,
+      "text": "In Tcl, which command writes text to standard output?",
+      "options": [
+        "display_netlist",
+        "echo_signal",
+        "append-only",
+        "puts"
+      ],
+      "salt": "42935578aeb85876",
+      "answerHash": "f74140b0925d238cd772388adbcc9c28fae283be66ea42c9a31913fe03f6c7ed"
+    },
+    {
+      "number": 42,
+      "text": "For set xs {4 7 9}, what does lindex $xs 1 return?",
+      "options": [
+        "9",
+        "4",
+        "1",
+        "7"
+      ],
+      "salt": "dc10a9bf32a373db",
+      "answerHash": "d5ebe7ed914bde0c792f736b7f2664d8b4f67f3fb70199e6dc0728b70bc16a42"
+    },
+    {
+      "number": 43,
+      "text": "For set xs {4 7 9}, what does llength $xs return?",
+      "options": [
+        "3",
+        "2",
+        "9",
+        "20"
+      ],
+      "salt": "dddadb031d1dd0b9",
+      "answerHash": "1b8968b351e332f473ab65efddc350285c94b9c1f25cdd3fd13437a7f4c3e9bc"
+    },
+    {
+      "number": 44,
+      "text": "Which Tcl construct iterates over elements of a list?",
+      "options": [
+        "foreach",
+        "wire",
+        "always_ff",
+        "module"
+      ],
+      "salt": "e026754c6bd6a0be",
+      "answerHash": "e32b128aa0f1bfaf49a5c5ce4e123a175e305b4108ec9e6ee0a07bcf3c5a6969"
+    },
+    {
+      "number": 45,
+      "text": "In Tcl, which command appends elements to a list variable?",
+      "options": [
+        "initial",
+        "assign",
+        "lappend",
+        "link_library"
+      ],
+      "salt": "2999fd3f31ea9848",
+      "answerHash": "794917031b17a9d9cd9355ee092384c38c725015bd0ee38af42c0d24cd3a1c83"
+    },
+    {
+      "number": 46,
+      "text": "What does Tcl proc define?",
+      "options": [
+        "A named procedure.",
+        "A Unix directory permission.",
+        "A physical clock sink.",
+        "A standard-cell timing arc."
+      ],
+      "salt": "f9b6acda69241fc3",
+      "answerHash": "68e164dcf9fc3cd1ea54b72219dee526124427c515aab790f53a6fd74def3041"
+    },
+    {
+      "number": 47,
+      "text": "Consider a Tcl procedure. A. proc defines it. B. return can provide its result. C. puts and return always have identical effects on the caller. Which statements are correct?",
+      "options": [
+        "B only",
+        "A and B only",
+        "A, B and C",
+        "A and C only"
+      ],
+      "salt": "7e73f1d1648abc07",
+      "answerHash": "612dff285599066c003a226e8317e7fae3a96ba9156db90398b8147565586690"
+    },
+    {
+      "number": 48,
+      "text": "Consider Tcl in EDA tools. A. A tool may add domain-specific commands. B. Every base Tcl interpreter contains every EDA command. C. A command can change the active design database. Which statements are correct?",
+      "options": [
+        "A and C only",
+        "B and C only",
+        "A, B and C",
+        "A only"
+      ],
+      "salt": "f6c7996a7727bd64",
+      "answerHash": "b74222e3b4add54c934a79a1be3d4f12d3dc1fd1338e97677f73a6974d57a7fc"
+    },
+    {
+      "number": 49,
+      "text": "If a Tcl list has 6 elements and a loop processes each element once, how many body executions occur?",
+      "options": [
+        "7",
+        "12",
+        "6",
+        "5"
+      ],
+      "salt": "77b746b946736acb",
+      "answerHash": "75b930711935b4b8261465feec32bd724a7a5314b663ca7918ae1ee96f5cbb4e"
+    },
+    {
+      "number": 50,
+      "text": "Why should an EDA script check that required input files exist?",
+      "options": [
+        "To force all cells to have one drive strength.",
+        "To distinguish missing or mislocated inputs from later tool failures.",
+        "To guarantee zero delay after routing.",
+        "To eliminate all verification requirements."
+      ],
+      "salt": "eb7cc8a740ea894a",
+      "answerHash": "2fbb83ebb9e81c3ac1b8e8f17eeaa0346a68e33c997a7d400549febc193683a8"
+    }
+  ]
+}

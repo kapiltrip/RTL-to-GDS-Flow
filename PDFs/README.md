@@ -2,7 +2,7 @@
 
 [Master index](../README.md) · [Editable daily notes](../Resources/Daily%20Notes/README.md)
 
-**14 reader PDFs · 493 pages.** This folder contains nine study days, two quick references, two Synopsys guides and one practice worksheet. Original scans and lecture decks stay in [Resources](../Resources/README.md).
+**14 full reading PDFs · 493 pages.** This folder contains nine study days, two quick references, two Synopsys guides and one practice worksheet. Original scans and lecture decks stay in [Resources](../Resources/README.md).
 
 [Download the complete collection ZIP](https://github.com/kapiltrip/RTL-to-GDS-Flow/archive/refs/heads/main.zip). The ZIP includes all PDFs, editable notes and supporting files. Extract it before reading so links to other days and examples can resolve. For one document, use **Download PDF** in the tables below; the reader links open GitHub previews.
 
@@ -41,3 +41,13 @@ The practice worksheet contains questions and unmarked options. Its [checker](..
 The reading editions use white A4 pages, dark text and embedded fonts. Keep the extracted folder structure for links to supporting files. A PDF viewer may ask before opening another local file.
 
 Page counts and download links in this index come from the actual PDFs. After editing a daily note, rebuild its PDF and inspect the rendered pages. The [build and verification guide](../Resources/tools/pdf/README.md) lists the content, navigation, source-coverage and layout checks.
+
+## Weekly revision and assignments
+
+| Study pack | Read | Download | Pages |
+|---|---|---|---:|
+| Week 1 revision: Short revision with detailed behavioural synthesis | [Read PDF](../Revision/Week%2001%20-%20Revision.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Revision/Week%2001%20-%20Revision.pdf) | 8 |
+| Original course questions: 120 original questions across Weeks 1-12 | [Read PDF](../Assignments/Original%20Course%20Questions%20-%20Weeks%2001%20to%2012.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Assignments/Original%20Course%20Questions%20-%20Weeks%2001%20to%2012.pdf) | 51 |
+| 50 practice MCQs per week: 600 newly authored questions across Weeks 1-12 | [Read PDF](../Assignments/Practice%20MCQs%20-%2050%20per%20Week.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Assignments/Practice%20MCQs%20-%2050%20per%20Week.pdf) | 108 |
+
+The weekly packs are in the separate [Revision](../Revision/README.md) and [Assignments](../Assignments/README.md) folders. Revision currently covers Week 1; both question sets cover all 12 weeks. The [browser practice download](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Assignments/Practice/Browser%20Practice%20-%20All%20Weeks.zip) lets you fill answers and reveal marks later without displaying correct answers.

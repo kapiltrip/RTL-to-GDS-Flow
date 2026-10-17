@@ -33,6 +33,11 @@ REFERENCES = [
     ('Week 07 and 08 - Practice Questions.pdf', 'Week 7 and 8 practice questions',
      '20 original questions, 161 unmarked options and six source figures'),
 ]
+WEEKLY = [
+    ('Revision/Week 01 - Revision.pdf', 'Week 1 revision', 'Short revision with detailed behavioural synthesis'),
+    ('Assignments/Original Course Questions - Weeks 01 to 12.pdf', 'Original course questions', '120 original questions across Weeks 1-12'),
+    ('Assignments/Practice MCQs - 50 per Week.pdf', '50 practice MCQs per week', '600 newly authored questions across Weeks 1-12'),
+]
 
 
 def download(name):
@@ -50,6 +55,9 @@ def main():
     expected = {name for name, _ in days} | set(pages)
     assert {p.name for p in DOC.glob('*.pdf')} == expected, 'Unindexed or missing PDFs'
     total = sum(count for _, count in days) + sum(pages.values())
+    weekly = [(relative, title, purpose, len(PdfReader(ROOT / relative).pages))
+              for relative, title, purpose in WEEKLY if (ROOT / relative).is_file()]
+    assert len(weekly) in (0, len(WEEKLY)), 'Incomplete weekly study pack'
 
     def daily_table(index):
         from os.path import relpath
@@ -76,6 +84,15 @@ def main():
                         f'[Download PDF]({download(name)}) | {pages[name]} |')
         return '\n'.join(rows)
 
+    def weekly_table(index):
+        from os.path import relpath
+        rows = ['| Study pack | Read | Download | Pages |', '|---|---|---|---:|']
+        for relative, title, purpose, count in weekly:
+            href = quote(Path(relpath(ROOT / relative, index.parent)).as_posix(), safe='/')
+            url = REPOSITORY + '/raw/refs/heads/main/' + quote(relative, safe='/')
+            rows.append(f'| {title}: {purpose} | [Read PDF]({href}) | [Download PDF]({url}) | {count} |')
+        return '\n'.join(rows)
+
     for relative in ['README.md', 'Resources/Daily Notes/README.md']:
         path = ROOT / relative
         text = path.read_text(encoding='utf-8')
@@ -88,6 +105,11 @@ def main():
                 r'\| Document \| PDF \| Download \| Pages \|\n.*?(?=\n\n)',
                 lambda _: reference_downloads(path), text, count=1, flags=re.S)
             assert replaced == 1, 'Reference download table missing from README.md'
+            if weekly:
+                text, replaced = re.subn(
+                    r'\| Study pack \| Read \| Download \| Pages \|\n.*?(?=\n\n)',
+                    lambda _: weekly_table(path), text, count=1, flags=re.S)
+                assert replaced == 1, 'Weekly study table missing from README.md'
         path.write_text(text, encoding='utf-8')
 
     reference_rows = ['| Document | Purpose | Read | Download | Pages |',
@@ -100,7 +122,7 @@ def main():
     text = (
         '# PDF collection\n\n'
         '[Master index](../README.md) · [Editable daily notes](../Resources/Daily%20Notes/README.md)\n\n'
-        f'**{len(expected)} reader PDFs · {total} pages.** This folder contains '
+        f'**{len(expected)} full reading PDFs · {total} pages.** This folder contains '
         'nine study days, two quick references, two Synopsys guides and '
         'one practice worksheet. Original scans and lecture decks stay in '
         '[Resources](../Resources/README.md).\n\n'
@@ -132,9 +154,17 @@ def main():
         'After editing a daily note, rebuild its PDF and inspect the rendered pages. '
         'The [build and verification guide](../Resources/tools/pdf/README.md) '
         'lists the content, navigation, source-coverage and layout checks.\n')
+    if weekly:
+        text += ('\n## Weekly revision and assignments\n\n' + weekly_table(DOC / 'README.md') + '\n\n'
+                 'The weekly packs are in the separate [Revision](../Revision/README.md) and '
+                 '[Assignments](../Assignments/README.md) folders. Revision currently covers Week 1; '
+                 'both question sets cover all 12 weeks. The [browser practice download]('
+                 + REPOSITORY + '/raw/refs/heads/main/Assignments/Practice/Browser%20Practice%20-%20All%20Weeks.zip) '
+                 'lets you fill answers and reveal marks later without displaying correct answers.\n')
     (DOC / 'README.md').write_text(text, encoding='utf-8')
     print(f'Updated three indexes: {len(expected)} PDFs, {total} pages, '
-          f'{len(days)} daily downloads and {len(REFERENCES)} reference downloads.')
+          f'{len(days)} daily downloads, {len(REFERENCES)} reference downloads and '
+          f'{len(weekly)} weekly-pack downloads.')
 
 
 if __name__ == '__main__':

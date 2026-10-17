@@ -1,0 +1,606 @@
+{
+  "week": 5,
+  "kind": "Original practice, not verified PYQs",
+  "questions": [
+    {
+      "number": 1,
+      "text": "For Boolean factoring, consider ab+ac=a(b+c). A. The two forms have the same truth table. B. Their literal-occurrence counts are necessarily equal. C. Their physical timing need not be equal. Which statements are correct?",
+      "options": [
+        "B only",
+        "A and B only",
+        "A and C only",
+        "A, B and C"
+      ],
+      "salt": "c786876f3e71f6aa",
+      "answerHash": "4c1c77bbee197d20d6e0d2ee37881d1fd1b49c79929e76dc4b4aed7bba19bdc8"
+    },
+    {
+      "number": 2,
+      "text": "Consider common-subexpression extraction. A. It can reduce duplicated logic. B. It can increase a shared node's fanout. C. It always improves the critical path. Which statements are correct?",
+      "options": [
+        "A and B only",
+        "A, B and C",
+        "A and C only",
+        "B and C only"
+      ],
+      "salt": "903f91f4a2caacb7",
+      "answerHash": "120817ab06271320d3d2e8c4b566d96b725a3c83dec0d542292c44ccf7787de6"
+    },
+    {
+      "number": 3,
+      "text": "Consider sharing and timing. A. Shared logic can need buffering for added load. B. Logical equivalence fixes every cell's electrical environment. C. A lower gate count alone does not prove a shorter critical path. Which statements are correct?",
+      "options": [
+        "A and B only",
+        "B only",
+        "A and C only",
+        "A, B and C"
+      ],
+      "salt": "94653aea7940b73f",
+      "answerHash": "6778d96ae4e86f5e26197968123bef354bb313de87d8815aeed62a6b5e9bfb84"
+    },
+    {
+      "number": 4,
+      "text": "What is the main objective of multi-level logic optimization?",
+      "options": [
+        "Improve a network with multiple logic stages while preserving required behavior.",
+        "Replace all sequential behavior with unknown values.",
+        "Only reduce package cost after fabrication.",
+        "Force all functions into one fixed two-level implementation."
+      ],
+      "salt": "7fc7402f32c55b6a",
+      "answerHash": "567da9ed936eac7b2e1dc7c5e9d0bc5516ab19a442ff3a466b759a8f873841c8"
+    },
+    {
+      "number": 5,
+      "text": "What is an observability don't-care for an internal node?",
+      "options": [
+        "Any input combination that changes an output.",
+        "A value that must be represented as high impedance.",
+        "A condition under which changing that node does not affect observed outputs.",
+        "Every unreachable state regardless of its use assumptions."
+      ],
+      "salt": "011fae32950fc85a",
+      "answerHash": "947ce347f270681b87fc1d09327a6311943b1f807e4e88194189bf737b8b4b1b"
+    },
+    {
+      "number": 6,
+      "text": "For y=n AND c, under which condition is n unobservable at y in a two-state Boolean model?",
+      "options": [
+        "c=1",
+        "n=0 only",
+        "c=0",
+        "n=1 only"
+      ],
+      "salt": "6aaaa617ac8d8f33",
+      "answerHash": "f0515280275347005d6b9382c9a1c2f895bf11b026df16edb9828de23b78ef0e"
+    },
+    {
+      "number": 7,
+      "text": "For y=n OR c, under which condition is n unobservable at y in a two-state Boolean model?",
+      "options": [
+        "c=0",
+        "c=1",
+        "n=0 only",
+        "n=1 only"
+      ],
+      "salt": "5b8ed32ee58dff85",
+      "answerHash": "cfd3c5d30df4f093790b4c7adc31cf45b4a8bc024586532eea3a095221958221"
+    },
+    {
+      "number": 8,
+      "text": "What is required before treating an unreachable-state condition as a valid don't-care?",
+      "options": [
+        "Assume every inconvenient state is impossible.",
+        "Justify reachability from the allowed initial states and environment.",
+        "Remove reset verification from the design.",
+        "Check only the alphabetical order of state names."
+      ],
+      "salt": "1ad811ce6868da0b",
+      "answerHash": "e6f8b00dabcac537e257a62f81d2c534099caa617242583d9688e50d077db4c3"
+    },
+    {
+      "number": 9,
+      "text": "What describes a finite state machine?",
+      "options": [
+        "A set of fabrication masks with no logical behavior.",
+        "Only a combinational truth table without any state.",
+        "Only an operating-system process list.",
+        "State storage plus next-state and output behavior."
+      ],
+      "salt": "02fa26d915db8cd9",
+      "answerHash": "7b9d57360d38abe65621f6ed7489a08df167e15747d13b6c6b1674f90f77d337"
+    },
+    {
+      "number": 10,
+      "text": "What distinguishes a Moore output from a Mealy output in the usual model?",
+      "options": [
+        "Both outputs must depend only on the clock period.",
+        "A Mealy machine cannot have registers.",
+        "A Moore machine cannot have any inputs.",
+        "A Moore output depends on current state; a Mealy output may also depend on current inputs."
+      ],
+      "salt": "b1c9869bcd7a4787",
+      "answerHash": "217956b9905958762628ac3a98050cdd66302ef1e8cb36f1b684720b5a20f185"
+    },
+    {
+      "number": 11,
+      "text": "What is a necessary notion for merging equivalent states?",
+      "options": [
+        "They occupy adjacent physical locations.",
+        "Their names have the same length.",
+        "Their current output is the same on one sampled input only.",
+        "Their observable future behavior matches for all allowed future input sequences."
+      ],
+      "salt": "4282c08cb8d2a5e5",
+      "answerHash": "b672b28e363c72dfcfe79ec258d7d884f6732164e6be92dda3004abfaa8f7173"
+    },
+    {
+      "number": 12,
+      "text": "What is the minimum binary state width for 10 states?",
+      "options": [
+        "5 bits",
+        "10 bits",
+        "3 bits",
+        "4 bits"
+      ],
+      "salt": "583fc25320b2729d",
+      "answerHash": "c7f25835d2d16dcea6242e68308676244274bdb6fcdebb107de4230d815d27d1"
+    },
+    {
+      "number": 13,
+      "text": "How many state bits does a direct one-hot encoding of 10 states use?",
+      "options": [
+        "10 bits",
+        "100 bits",
+        "3 bits",
+        "4 bits"
+      ],
+      "salt": "90ada3a0df54f16c",
+      "answerHash": "f2b2832bb264ff3281718dedb7b696734dc0a52201dd431461cab50f9eb1237e"
+    },
+    {
+      "number": 14,
+      "text": "With 3 binary state bits, how many distinct encodings are available?",
+      "options": [
+        "3",
+        "6",
+        "8",
+        "9"
+      ],
+      "salt": "f1da781e8f058d04",
+      "answerHash": "1bc8d8385ba20ce2ed4d0ffdbc1fda50addec6adb97b7cf782889c66f0bf3d44"
+    },
+    {
+      "number": 15,
+      "text": "If an FSM has 7 reachable states and 2 unreachable states, how many remain after removing only the unreachable states?",
+      "options": [
+        "5",
+        "7",
+        "9",
+        "2"
+      ],
+      "salt": "6467a1e8b28ee7a2",
+      "answerHash": "ac2adaf2807adeb57259fd09346f56c40c29528a39351382f1611952bc4a30aa"
+    },
+    {
+      "number": 16,
+      "text": "Why can one-hot encoding improve some FPGA FSM timing?",
+      "options": [
+        "It can simplify state decoding at the cost of more state bits.",
+        "It removes all reset requirements.",
+        "It always uses fewer flip-flops than binary encoding.",
+        "It guarantees fewer wires under every placement."
+      ],
+      "salt": "ccaa05b30bdaeb11",
+      "answerHash": "4d2bff00068751fe6f07d73384ab5af433aad0d6e741edcd5e859314e28ea63f"
+    },
+    {
+      "number": 17,
+      "text": "Which action is an FSM optimization?",
+      "options": [
+        "Replacing every state with an unrelated random value.",
+        "Skipping verification of the transformed machine.",
+        "Removing unreachable states under justified assumptions.",
+        "Changing every output to a constant regardless of the specification."
+      ],
+      "salt": "47b029d3a525d13d",
+      "answerHash": "399fb8f9ae26cfc7977889e088823c01315f6712044992d651521b706b677539"
+    },
+    {
+      "number": 18,
+      "text": "Why must reset behavior be included when comparing two FSMs?",
+      "options": [
+        "All state encodings reset to every state simultaneously.",
+        "It determines the allowed initial state or state correspondence.",
+        "Reset is irrelevant to reachability.",
+        "Reset affects only source-code indentation."
+      ],
+      "salt": "e2bc61328105ce35",
+      "answerHash": "4acfe27fcf588f9bf646bd0781aca789241111bb3a8c9896d95c984820cbb952"
+    },
+    {
+      "number": 19,
+      "text": "What is the Boolean satisfiability (SAT) problem?",
+      "options": [
+        "Determine whether some assignment makes a Boolean formula true.",
+        "Count only the number of transistors in a netlist.",
+        "Measure analog current without a model.",
+        "Decide a chip package material."
+      ],
+      "salt": "7cd129f5c4312687",
+      "answerHash": "de3efde0696a977f021bffb64470125cd8445c5df5740972f7a7f689c838f4c4"
+    },
+    {
+      "number": 20,
+      "text": "Which formula is unsatisfiable?",
+      "options": [
+        "x AND NOT x.",
+        "x OR NOT x.",
+        "x OR y.",
+        "x AND y."
+      ],
+      "salt": "e9f3fa70e4df8468",
+      "answerHash": "3a2ae6e37728a7033fe1dd20e45486411d232244d2986f90ca01718d00e54a01"
+    },
+    {
+      "number": 21,
+      "text": "Which formula is a tautology?",
+      "options": [
+        "x OR NOT x.",
+        "x XOR x.",
+        "x AND y.",
+        "x AND NOT x."
+      ],
+      "salt": "db3e3039998cadc2",
+      "answerHash": "c002f49437d2fd8f98e714529ee0ef99cd2bbe3db4e5ab9d6f026ed65ad73b0d"
+    },
+    {
+      "number": 22,
+      "text": "How many satisfying assignments does x OR y have over two Boolean inputs?",
+      "options": [
+        "3",
+        "2",
+        "1",
+        "4"
+      ],
+      "salt": "6a52120916ee7892",
+      "answerHash": "238c23ba6adb03625b8bb536f3562a100f1c7fb4090d3be15cfb604eb05f2c72"
+    },
+    {
+      "number": 23,
+      "text": "How many satisfying assignments does x AND y have over two Boolean inputs?",
+      "options": [
+        "2",
+        "0",
+        "3",
+        "1"
+      ],
+      "salt": "aab54c0bf4f68a72",
+      "answerHash": "0728dbbab86ce431b4b15dc589e62f49622a25926059b0054d4354548ae245aa"
+    },
+    {
+      "number": 24,
+      "text": "What is a clause in conjunctive normal form?",
+      "options": [
+        "A single mandatory state register.",
+        "A product of all the clauses.",
+        "A physical timing arc.",
+        "A disjunction of literals."
+      ],
+      "salt": "24bc4ec9ea1e6576",
+      "answerHash": "89e0ff45d20bfe7269a359be20b9b5b77bdb8af96ddc788935e7591e9cd726df"
+    },
+    {
+      "number": 25,
+      "text": "What is a CNF formula?",
+      "options": [
+        "A conjunction of clauses, with each clause a disjunction of literals.",
+        "An arbitrary waveform screenshot.",
+        "A gate library without Boolean functions.",
+        "A list containing only integer delays."
+      ],
+      "salt": "37b58dee0b305cce",
+      "answerHash": "c82f77169627e023628e7e4cd1a009476a3b514ded45cf03da16fb6a88932d9e"
+    },
+    {
+      "number": 26,
+      "text": "For clauses (x) AND (NOT x OR y), what does unit propagation force?",
+      "options": [
+        "No variable can be forced.",
+        "x=1 and then y=1.",
+        "x=0 and y=0.",
+        "x=1 and y=0."
+      ],
+      "salt": "58c647f3718c3835",
+      "answerHash": "829e8b03c148522e132dc177b2566d6eef8081ba17ed4d5e9271c5bd24cf3d43"
+    },
+    {
+      "number": 27,
+      "text": "What is a SAT counterexample in a combinational equivalence check?",
+      "options": [
+        "A proof that every implementation is physically legal.",
+        "An input assignment on which the compared circuits differ.",
+        "A random state name unrelated to an output.",
+        "A report that there are no source files."
+      ],
+      "salt": "665b0031934b717e",
+      "answerHash": "013679d2c86ecac1b61200125f97e8e8214de8d7f16614c14426aee4f9b42493"
+    },
+    {
+      "number": 28,
+      "text": "What is a binary decision diagram (BDD) used to represent?",
+      "options": [
+        "A Boolean function through variable tests and branches.",
+        "A file-system directory tree with no logic meaning.",
+        "Only package-pin capacitance.",
+        "Only physical wire geometry."
+      ],
+      "salt": "cbd89daa7460d833",
+      "answerHash": "cd22dc3475ed1a8b71ae8a814d4ece0128fb86e6566092c9ab82d8bca14202c3"
+    },
+    {
+      "number": 29,
+      "text": "For a BDD decision node, what do the two outgoing branches conventionally mean?",
+      "options": [
+        "The selected Boolean variable is 0 or 1.",
+        "A transistor is manufactured in two different wafers.",
+        "The clock is slow or fast.",
+        "Two routing layers must be connected."
+      ],
+      "salt": "3bdc99337022ee9f",
+      "answerHash": "5d49cb6f697079b301a52843461ce1391a3d603eb85858a256fe103f27ee74c9"
+    },
+    {
+      "number": 30,
+      "text": "What is an ordered BDD?",
+      "options": [
+        "One whose paths respect a fixed variable order.",
+        "One with no terminal nodes.",
+        "One whose nodes are sorted by physical cell area.",
+        "One containing only OR gates."
+      ],
+      "salt": "601e53b4489a5f1a",
+      "answerHash": "0a3e3479a331d4ea116492c29d85405179c938e757dc8178fa3e5d6985c41b4f"
+    },
+    {
+      "number": 31,
+      "text": "With a fixed variable ordering, what useful property does an ROBDD have?",
+      "options": [
+        "A size that is always linear in the number of variables.",
+        "A guaranteed minimum physical wire length.",
+        "A canonical representation of a Boolean function.",
+        "Identical size for all variable orderings."
+      ],
+      "salt": "ad50f85c2870b009",
+      "answerHash": "8ca7857af9e89ffa837e10a566bcad2cc404fdc52b61864787e67feace97337f"
+    },
+    {
+      "number": 32,
+      "text": "Which reduction removes a redundant decision node in a BDD?",
+      "options": [
+        "Duplicate it whenever its successors are identical.",
+        "Force a new variable order on only one branch.",
+        "Replace all terminal 1 nodes with 0.",
+        "Delete the node when its low and high successors are identical."
+      ],
+      "salt": "9f38e8c338697a5e",
+      "answerHash": "d01eed4603afb051caf68d9fc9d2fb8dc4c3809bb74ad3974996454ccc06b0c4"
+    },
+    {
+      "number": 33,
+      "text": "Which other reduction is standard for ROBDDs?",
+      "options": [
+        "Merge nodes with the same variable and identical low/high successors.",
+        "Swap terminal meanings on every other level.",
+        "Merge arbitrary nodes merely because they have the same drawing color.",
+        "Delete all nodes representing the first variable."
+      ],
+      "salt": "a46b982e55b8de0c",
+      "answerHash": "eff3eadbbe715974deb839427897c7563afef6a9b02f418939500ffa7babd201"
+    },
+    {
+      "number": 34,
+      "text": "Why does variable ordering matter for BDDs?",
+      "options": [
+        "It changes the mathematical truth table of the specified function.",
+        "It can cause a large change in representation size.",
+        "It eliminates the need for terminal nodes.",
+        "It guarantees identical memory use for every function."
+      ],
+      "salt": "902d2d726ac877cf",
+      "answerHash": "ddbb586aeed5f9e08071861f0966328f7311178532763da757a9fff4bf03566e"
+    },
+    {
+      "number": 35,
+      "text": "What are the terminal nodes of a Boolean BDD?",
+      "options": [
+        "The largest and smallest physical delays.",
+        "The constants 0 and 1.",
+        "The first and last source-code lines.",
+        "The chip's input and output packages."
+      ],
+      "salt": "af09e54047b56d7b",
+      "answerHash": "68f7594d8dcd0e3ec63c91da837d1e352e399f831d40f4e3c8c9a9674ab294b1"
+    },
+    {
+      "number": 36,
+      "text": "If two functions have identical ROBDDs under the same order and conventions, what follows?",
+      "options": [
+        "They must have the same original source text.",
+        "They must consume equal power at every voltage.",
+        "They must have identical transistor layouts.",
+        "They are logically equivalent."
+      ],
+      "salt": "3501f06b90bfd36d",
+      "answerHash": "a95df07767936dbcd71fcba65e22d7e40b7c970d5967450d7e5898b76bf5867f"
+    },
+    {
+      "number": 37,
+      "text": "What is a formal property?",
+      "options": [
+        "A precise statement of required behavior checked against a model.",
+        "Only a statement that the design is complicated.",
+        "A mandatory waveform color.",
+        "The date of a synthesis run."
+      ],
+      "salt": "bf3db1561457d881",
+      "answerHash": "3e0492f4e608be01b64a7695e923cf266006ab0eff4c48c816f4282c1bb0c24e"
+    },
+    {
+      "number": 38,
+      "text": "What distinguishes exhaustive formal reasoning from finite random testing?",
+      "options": [
+        "Formal proofs automatically include every fabrication defect.",
+        "Formal methods can reason over all behaviors within the model and assumptions.",
+        "Random testing necessarily covers every possible sequence.",
+        "Formal methods need no model or assumptions."
+      ],
+      "salt": "262719fe895f1e66",
+      "answerHash": "2f0bc1866952e60bf2a0a37d3a682c3215964093de943e1128c1db2d0635e3fb"
+    },
+    {
+      "number": 39,
+      "text": "Why are environment assumptions significant in formal verification?",
+      "options": [
+        "They can never remove any behavior from the model.",
+        "They prove the assumptions themselves are valid in every system.",
+        "They only change the PDF report format.",
+        "They define which input behaviors the proof covers."
+      ],
+      "salt": "ea9d984b4d804ad0",
+      "answerHash": "2936e2febb4fc2eca2b30470e9f54497f8fcd4dce91d256f59d13e1d5bd78e21"
+    },
+    {
+      "number": 40,
+      "text": "What risk results from overconstraining a formal environment?",
+      "options": [
+        "All unreachable states become reachable automatically.",
+        "Realistic failing behaviors may be excluded from the proof.",
+        "The design is guaranteed to become slower.",
+        "The solver must always report a syntax error."
+      ],
+      "salt": "9af37db38d448b09",
+      "answerHash": "2583d25ada571e73685a43079ce794c1915d156defef016afbb0ab75ef98d7eb"
+    },
+    {
+      "number": 41,
+      "text": "What does an abstraction in formal analysis usually do?",
+      "options": [
+        "Simplify the model while preserving the relevant property relationship.",
+        "Replace all specified behavior with arbitrary outputs without qualification.",
+        "Add detailed physical geometry to every Boolean variable.",
+        "Eliminate all need to interpret a proof result."
+      ],
+      "salt": "40ddaa215a39aa06",
+      "answerHash": "c41c0f0c6c3e9c8d9c5b17d5436ac6fd56d0c36cb224bd7808c094818d64d6b9"
+    },
+    {
+      "number": 42,
+      "text": "Why should a reported counterexample be inspected?",
+      "options": [
+        "Counterexamples cannot include input sequences.",
+        "Every counterexample proves the tool itself is incorrect.",
+        "Counterexamples always describe manufacturing defects.",
+        "It may expose a design bug, a specification mismatch or an assumption issue."
+      ],
+      "salt": "623c9f3fe1680f1c",
+      "answerHash": "c48fc211cff3e4d3066c1f50e8f48419d9466669fbbe96ed6ddc585953be16d2"
+    },
+    {
+      "number": 43,
+      "text": "What does SAT on a mismatch miter indicate?",
+      "options": [
+        "At least one allowed input makes an output differ.",
+        "No allowed input can cause a mismatch.",
+        "The layout is DRC-clean.",
+        "The timing constraints are complete."
+      ],
+      "salt": "0ef9dde55a498b56",
+      "answerHash": "dd0f15b259a40bcc1f46313c63300f2a59b719c2c2337358ee68699340cb8f78"
+    },
+    {
+      "number": 44,
+      "text": "A complete combinational mismatch miter is UNSAT. A. No modeled input causes an output mismatch. B. All physical timing requirements are thereby proved. C. The result depends on the comparison domain and modeling assumptions. Which statements are correct?",
+      "options": [
+        "A only",
+        "B and C only",
+        "A, B and C",
+        "A and C only"
+      ],
+      "salt": "88aea45bf91501fb",
+      "answerHash": "23d4f9e9de0a0c77748f44d174dae86c3a00b19518abb85726e65e3bd1e503f0"
+    },
+    {
+      "number": 45,
+      "text": "Consider the open-source tools in this course. A. Yosys performs RTL synthesis. B. GTKWave is mainly a waveform viewer. C. A waveform viewer alone performs complete RTL synthesis. Which statements are correct?",
+      "options": [
+        "A and B only",
+        "A, B and C",
+        "B only",
+        "A and C only"
+      ],
+      "salt": "adfd52ed34b916f5",
+      "answerHash": "4e240a1fa6ba3017dfeef902b1d9d7a3822ae941293d2425e65ad49391bb56b6"
+    },
+    {
+      "number": 46,
+      "text": "Why run optimization after converting processes to logic in a synthesis flow?",
+      "options": [
+        "To replace all constraints with random values.",
+        "To force every signal to remain unknown.",
+        "To manufacture the final masks directly.",
+        "To simplify and transform the inferred network before later implementation steps."
+      ],
+      "salt": "b724bddd719d4ef3",
+      "answerHash": "e0d34c6ff80d11891c9d3bb241cc448d114c370af97e858a565ca3b98a9b549c"
+    },
+    {
+      "number": 47,
+      "text": "What does equivalence checking after optimization help detect?",
+      "options": [
+        "Every possible thermal reliability failure.",
+        "Only the price of a cell library.",
+        "Only missing source-code comments.",
+        "Accidental changes in required functional behavior."
+      ],
+      "salt": "d8415f6de2cd1ad5",
+      "answerHash": "32d3ace3cbc4795e01eda7e0e4f00fa5994230ec7bffe1885697d7b1bfe2d501"
+    },
+    {
+      "number": 48,
+      "text": "How many distinct states can 5 binary flip-flops encode?",
+      "options": [
+        "10",
+        "32",
+        "25",
+        "5"
+      ],
+      "salt": "10d2b698ae93c2c0",
+      "answerHash": "9f11db406f2d6d6197f5c5c750c84de1a043bb6545e95bef09e225a5f5a786e1"
+    },
+    {
+      "number": 49,
+      "text": "If one-hot encoding uses 12 bits and binary encoding uses the minimum for 12 states, how many extra state bits does one-hot use?",
+      "options": [
+        "8",
+        "4",
+        "9",
+        "12"
+      ],
+      "salt": "2bfb39607580f325",
+      "answerHash": "becc2641fe44d3ebcfa28df0a810603de3a138cb49fc17b62e8493927f2429c7"
+    },
+    {
+      "number": 50,
+      "text": "Which is the soundest interpretation of a successful proof?",
+      "options": [
+        "The design must have minimum area.",
+        "The stated property holds for the analyzed model under its assumptions.",
+        "All future changes to the RTL are automatically proved.",
+        "Every unspecified property of the manufactured chip is guaranteed."
+      ],
+      "salt": "a14358b6ab215c00",
+      "answerHash": "0245c46d3500706f696c616ee3f1d0a5a298b787d3b02a39b10856f296c95ef3"
+    }
+  ]
+}

@@ -1,0 +1,606 @@
+{
+  "week": 8,
+  "kind": "Original practice, not verified PYQs",
+  "questions": [
+    {
+      "number": 1,
+      "text": "Consider an SDC clock definition. A. It establishes a timing reference. B. It can describe the clock waveform. C. It physically builds the complete clock network by itself. Which statements are correct?",
+      "options": [
+        "B and C only",
+        "A only",
+        "A and B only",
+        "A, B and C"
+      ],
+      "salt": "a7b3853d62dac692",
+      "answerHash": "8fb14ea7b68abf3ee9e942129d8a11a4e1b69cfd7bd0c80e8c43945093677e2a"
+    },
+    {
+      "number": 2,
+      "text": "Consider create_clock. A. It is a common SDC command. B. Its period affects synchronous timing requirements. C. It proves clock-domain crossing correctness by itself. Which statements are correct?",
+      "options": [
+        "A and B only",
+        "B only",
+        "A and C only",
+        "A, B and C"
+      ],
+      "salt": "f9c59eb69479ca43",
+      "answerHash": "8eca9a5063d2545a45d9d6f0a246d6a1ee5d42a857adc0936316e96bd50c2af9"
+    },
+    {
+      "number": 3,
+      "text": "A primary clock has period 8 ns. What is its frequency?",
+      "options": [
+        "62.5 MHz",
+        "8 MHz",
+        "800 MHz",
+        "125 MHz"
+      ],
+      "salt": "1297f610213feb0e",
+      "answerHash": "a9932cb589413b0604c94078697e1a73b98d8d23e08b598655d665f05147054a"
+    },
+    {
+      "number": 4,
+      "text": "For a 10 ns clock with waveform edges at 0 ns and 4 ns, what is the high-time fraction?",
+      "options": [
+        "40%",
+        "60%",
+        "50%",
+        "25%"
+      ],
+      "salt": "0f394258d5310c75",
+      "answerHash": "73f5b74dfbca597de6b8419810ef2945cdadfce8981b20c279cad8fc9fb24be7"
+    },
+    {
+      "number": 5,
+      "text": "Why might a generated clock need an explicit relationship to a source clock?",
+      "options": [
+        "Generated clocks are only labels in simulation screenshots.",
+        "Generated clocks cannot have a period.",
+        "Every generated clock is necessarily asynchronous.",
+        "Its divide, multiply or edge relationship affects timing between domains."
+      ],
+      "salt": "16b2541954bed1f1",
+      "answerHash": "fadb3aa8265206d1bdb675a7a36f8388acf7751c4d79e240686bcad07dddf29b"
+    },
+    {
+      "number": 6,
+      "text": "A generated clock divides a 200 MHz source by 4. What is its frequency?",
+      "options": [
+        "100 MHz",
+        "800 MHz",
+        "50 MHz",
+        "25 MHz"
+      ],
+      "salt": "2c9eeafaffc0c598",
+      "answerHash": "9ccd9c398383bd45356849491c69124c65c5698bfa114edf28365cecfd1408b8"
+    },
+    {
+      "number": 7,
+      "text": "Consider input delays. A. They model external arrival assumptions. B. Min and max bounds can serve different timing checks. C. They necessarily insert physical delay cells at all input ports. Which statements are correct?",
+      "options": [
+        "A only",
+        "A, B and C",
+        "B and C only",
+        "A and B only"
+      ],
+      "salt": "2bbc03aedcc07f85",
+      "answerHash": "85ebae11d76ce9b5958fe23899405af3edd347f0aa114145ab4156dcc0e8fc71"
+    },
+    {
+      "number": 8,
+      "text": "What does set_output_delay model?",
+      "options": [
+        "A mandatory clock-tree insertion delay.",
+        "The number of output pins in the package.",
+        "Only the source file's save duration.",
+        "The external timing requirement imposed beyond a design output."
+      ],
+      "salt": "3138f3b7fef648ee",
+      "answerHash": "8a4906dcdca6fdf5fd74877f0de71d770723babf0f7a5e8970055485ed1c1ccb"
+    },
+    {
+      "number": 9,
+      "text": "Why are both max and min input delays useful?",
+      "options": [
+        "Min values apply only to source-code comments.",
+        "Setup and hold require different external timing bounds.",
+        "Max and min are always identical in every system.",
+        "Max values remove all capture requirements."
+      ],
+      "salt": "6e324127f557bb5c",
+      "answerHash": "7c32d670471df6ead1761b1be667940c700f1ea0ac22992367aad24d1fdb3da8"
+    },
+    {
+      "number": 10,
+      "text": "What does set_clock_uncertainty represent?",
+      "options": [
+        "A guarantee of exact physical clock delivery.",
+        "The number of possible Verilog state values.",
+        "The source-code compiler's warning count.",
+        "Timing margin for specified uncertainty effects in the analysis."
+      ],
+      "salt": "c8f9bf1b3f6391ae",
+      "answerHash": "7bd5a03a9fdc1b94c39925daf9b573d4ab0daf1041e8571cef5c3e235560df63"
+    },
+    {
+      "number": 11,
+      "text": "Why distinguish source latency from clock-network latency?",
+      "options": [
+        "Neither can affect timing.",
+        "They refer to different portions of clock delivery relative to the defined design boundary.",
+        "They are names for source-code indentation.",
+        "Both necessarily equal the full data-path delay."
+      ],
+      "salt": "54c0d11ea0159ee3",
+      "answerHash": "dab49107288c5170600be6dbcdac6e22b506315af88a6720b2125227c99653d0"
+    },
+    {
+      "number": 12,
+      "text": "What does a false-path exception do?",
+      "options": [
+        "Exclude specified paths from the selected timing checks.",
+        "Prove that the excluded path is functionally impossible by itself.",
+        "Automatically insert synchronizers.",
+        "Physically remove every gate on the path."
+      ],
+      "salt": "a969d43ff1c4cffe",
+      "answerHash": "448762419c2b664e2370e70a5d34a500f830c4848e39e5aa3a9e1d9f28104206"
+    },
+    {
+      "number": 13,
+      "text": "What must support a false-path constraint?",
+      "options": [
+        "A justified functional or timing-intent reason.",
+        "Merely a desire to hide an inconvenient violation.",
+        "The fact that its net name is long.",
+        "A missing testbench comment."
+      ],
+      "salt": "076cba44376b5f89",
+      "answerHash": "5b219a34b5ec27802b2ae62760e490c647b8eaa767f2de6665e0fca75be6f1a6"
+    },
+    {
+      "number": 14,
+      "text": "What does a multicycle setup exception normally change?",
+      "options": [
+        "Which capture edge is used for the setup requirement of the specified path.",
+        "The number of metal layers in the process.",
+        "The physical oscillator frequency by itself.",
+        "The Boolean function of every gate."
+      ],
+      "salt": "d571eb29b71bae2e",
+      "answerHash": "4d618ba7cc097be507738f6afffacd5988e3637945a29c592644c1ea9a94ecb9"
+    },
+    {
+      "number": 15,
+      "text": "For a same-clock path intentionally allowed 3 setup cycles, why review the corresponding hold exception?",
+      "options": [
+        "Hold analysis is automatically meaningless for all multicycle paths.",
+        "Multicycle paths contain no registers.",
+        "The setup edge shift can also change the hold relationship used by the tool.",
+        "Every hold requirement must become exactly zero."
+      ],
+      "salt": "0e88b4a53a59fca5",
+      "answerHash": "0d80e7dca557d2470d7b3f9b223036e3dc58db4cd0709660518d498fa792b19c"
+    },
+    {
+      "number": 16,
+      "text": "In the common same-clock convention, a setup multicycle of N is often paired with what hold adjustment to restore the original hold edge?",
+      "options": [
+        "2N",
+        "N+1",
+        "N-1",
+        "Zero in every possible case regardless of intent"
+      ],
+      "salt": "e76f5fff173cb779",
+      "answerHash": "fae1f9cbf2742e6578092220ba937a70820ca2e3d5a217543d13e5b8306652d8"
+    },
+    {
+      "number": 17,
+      "text": "For a 5 ns clock, a correctly specified 3-cycle setup path has what ideal edge-to-edge budget before other deductions?",
+      "options": [
+        "20 ns",
+        "10 ns",
+        "15 ns",
+        "5 ns"
+      ],
+      "salt": "94ff5fd54f8c133a",
+      "answerHash": "426afc06f33cc668ac5fa1a4fe346ececb51e3e835d00f38d8c9aba093b322bf"
+    },
+    {
+      "number": 18,
+      "text": "Why should asynchronous clock domains be handled deliberately in timing constraints?",
+      "options": [
+        "All crossings are safe without synchronization.",
+        "They always have identical edge times.",
+        "The timing tool creates every needed protocol automatically.",
+        "Their phase relationship is not a normal fixed synchronous launch/capture assumption."
+      ],
+      "salt": "2c1980a154490e83",
+      "answerHash": "52cb57d891336fcd9a43675f255e50a4225c8f69d273db0bea6f540c24e2b09f"
+    },
+    {
+      "number": 19,
+      "text": "What is a risk of declaring clocks asynchronous too broadly?",
+      "options": [
+        "Every data pin becomes a clock pin.",
+        "Every false path is automatically proved unreachable.",
+        "The chip's area necessarily halves.",
+        "Legitimate timing relationships may be omitted from analysis."
+      ],
+      "salt": "c2ed3ff1468398fc",
+      "answerHash": "476133136b3a9a1842f832bd0307771e7661066294caa5998032494feec61884"
+    },
+    {
+      "number": 20,
+      "text": "What should happen to paths unintentionally left without clocks or I/O constraints?",
+      "options": [
+        "Investigate and define the missing timing intent.",
+        "Assume they pass because no slack is printed.",
+        "Mark all of them as false paths without review.",
+        "Delete them from the functional specification."
+      ],
+      "salt": "eb88867bf538ebd3",
+      "answerHash": "e3ab346a1e80dcbfe0a8c26dca90d0def09e6559744a0062994fde80ce8c50d9"
+    },
+    {
+      "number": 21,
+      "text": "For an input-to-register path, max external input delay is 200 ps, internal max delay is 500 ps, setup is 80 ps and T=1000 ps. Ignore skew and uncertainty. Setup slack is what?",
+      "options": [
+        "-220 ps",
+        "220 ps",
+        "420 ps",
+        "300 ps"
+      ],
+      "salt": "1d55dd10a9b5f64f",
+      "answerHash": "2840ae217b3d54be62b892d4f6e1bc3b2e5af8e72212e380193a592e73704ad0"
+    },
+    {
+      "number": 22,
+      "text": "For a register-to-output path, T=1000 ps, output required external delay is 150 ps, launch tCQ=70 ps and internal delay is 480 ps. Ignore other effects. Setup slack is what?",
+      "options": [
+        "450 ps",
+        "300 ps",
+        "-300 ps",
+        "550 ps"
+      ],
+      "salt": "9dabc3e74a7e5919",
+      "answerHash": "f5533a5186cef9addcf4ef3f801cbcb5ccd91fb72fb03bf62385c2d355a09f53"
+    },
+    {
+      "number": 23,
+      "text": "An input-to-register early arrival is 40 ps external plus 30 ps internal. Required minimum arrival is 50 ps. What is hold slack?",
+      "options": [
+        "20 ps",
+        "-20 ps",
+        "120 ps",
+        "70 ps"
+      ],
+      "salt": "d391eead3ba23f44",
+      "answerHash": "208ee4305bc607a9dedf41c458b5f451d2fc49842abec9347c94f774e256752e"
+    },
+    {
+      "number": 24,
+      "text": "If setup uncertainty increases from 20 ps to 50 ps, with all else fixed, what happens to setup slack?",
+      "options": [
+        "It increases by 30 ps.",
+        "It remains identical by definition.",
+        "It decreases by 70 ps.",
+        "It decreases by 30 ps."
+      ],
+      "salt": "e222228ed94a65b3",
+      "answerHash": "538a824be1f3f180aef84592ddb7706308ec614e9975a0d7d990f6525ebcfc30"
+    },
+    {
+      "number": 25,
+      "text": "For a 10 ns clock, a same-domain falling-edge launch at 5 ns and next rising-edge capture at 10 ns provide what ideal edge budget?",
+      "options": [
+        "0 ns",
+        "10 ns",
+        "15 ns",
+        "5 ns"
+      ],
+      "salt": "a3193068dc4d3e49",
+      "answerHash": "996ba7ddeaaf5f7fcf99e714877d2aa7c351b895c02284ce850e24031d3f27cb"
+    },
+    {
+      "number": 26,
+      "text": "What is the aim of technology mapping?",
+      "options": [
+        "Assign high-level algorithms to software licenses.",
+        "Determine wafer defects from an RTL file alone.",
+        "Implement a logical network with available target-library cells under constraints.",
+        "Replace every logic function by a wire."
+      ],
+      "salt": "be340ea4fb9b17b5",
+      "answerHash": "9e8efd9412f10873b630e8eca5425ddf6b173b9f2acaab90612b576267b5c119"
+    },
+    {
+      "number": 27,
+      "text": "Why can different libraries give different PPA for the same Boolean network?",
+      "options": [
+        "A mapped netlist does not depend on its target library.",
+        "Truth-table equivalence fixes every transistor size.",
+        "Available cell functions, sizes and characterized behavior differ.",
+        "All libraries contain identical cells at identical delays."
+      ],
+      "salt": "59484b29cd44dc47",
+      "answerHash": "ac7f6ee7c8177e16eaa62049d9e3e07a44cf1b916f915f29f76816a628d0c582"
+    },
+    {
+      "number": 28,
+      "text": "What does increasing a cell's drive strength often trade?",
+      "options": [
+        "Elimination of every input capacitance.",
+        "Better drive capability against increased area and input loading.",
+        "Better performance with guaranteed zero cost in every metric.",
+        "A changed Boolean truth table necessarily."
+      ],
+      "salt": "e74c04fa58f0f636",
+      "answerHash": "47340cb57782f2a14cfb8fcb367503b22e1bc0d4cac2a56264668d346d773357"
+    },
+    {
+      "number": 29,
+      "text": "Why can upsizing one gate hurt the preceding stage?",
+      "options": [
+        "It removes the driver from the netlist automatically.",
+        "It turns the preceding stage into a package pin.",
+        "The larger gate can present more input capacitance to its driver.",
+        "The preceding stage can never see a load change."
+      ],
+      "salt": "04f4e9d5b5496042",
+      "answerHash": "f9476e5ef11a8beac973f0a8f249fd8ddd7aeae53fe7c1845d25b078493ad0d4"
+    },
+    {
+      "number": 30,
+      "text": "Which technique is often used to drive a heavily loaded net?",
+      "options": [
+        "Changing the net's logic value arbitrarily.",
+        "Removing all required sinks.",
+        "Suppressing every timing report.",
+        "Buffer insertion or suitable driver sizing."
+      ],
+      "salt": "f33003d589ae4755",
+      "answerHash": "d7bda0b0ac6e3ff8e008699608796e3194fc38a65551b3fca79926665dd51dd3"
+    },
+    {
+      "number": 31,
+      "text": "Why may buffering improve a long interconnect's delay?",
+      "options": [
+        "It proves the path functionally unreachable.",
+        "It removes all physical wire resistance.",
+        "A buffer has zero delay and zero area in silicon.",
+        "It can divide the electrical effort and isolate sections of the RC load."
+      ],
+      "salt": "8643f235373a6121",
+      "answerHash": "a667562ad4779f91768e8fade906acca6ace6981fe16a94650cf025c0e08cc5d"
+    },
+    {
+      "number": 32,
+      "text": "What is logic duplication used for in some timing optimizations?",
+      "options": [
+        "Replace every sequential element by a constant.",
+        "Guarantee minimum total area.",
+        "Reduce load or fanout on a critical shared driver by creating separate equivalent drivers.",
+        "Change required output values."
+      ],
+      "salt": "78d19e91f4891542",
+      "answerHash": "c0d309b6e882e45f89d282971e85226b67f55324d16abb4104be881b5a4ecd88"
+    },
+    {
+      "number": 33,
+      "text": "What is pin swapping in a timing context?",
+      "options": [
+        "Swap a clock net with ground arbitrarily.",
+        "Reassign logically interchangeable input connections to exploit different pin timing/loading.",
+        "Exchange package serial numbers.",
+        "Change all input values to unknown."
+      ],
+      "salt": "667e092076be96f7",
+      "answerHash": "f89d4893608cd555d96bbbfa2810b1ac0b8a8cb5a2d1f1c05979b64638abe179"
+    },
+    {
+      "number": 34,
+      "text": "What does restructuring a logic network aim to change?",
+      "options": [
+        "Only the font in the RTL editor.",
+        "The number of manufactured wafers only.",
+        "Its topology or depth while preserving the required function.",
+        "The product specification without review."
+      ],
+      "salt": "e614a40ddbc08abc",
+      "answerHash": "27d727f616d73b6bdbfe0ef72c9a9b00ca7eb8d495fa5454ebd8497e0f949122"
+    },
+    {
+      "number": 35,
+      "text": "What is the aim of sizing noncritical gates down, when constraints permit?",
+      "options": [
+        "Force every path to fail setup.",
+        "Reduce area or power while retaining adequate timing margin.",
+        "Remove all timing analysis.",
+        "Increase every input capacitance."
+      ],
+      "salt": "9fb841ba6c8642a3",
+      "answerHash": "8aef552edb486648b79a93ec4918ee6c8b2626de2eefedbec45aaae27df0cfeb"
+    },
+    {
+      "number": 36,
+      "text": "Which measure describes worst negative timing margin for a selected set of checks?",
+      "options": [
+        "Total positive area.",
+        "Worst negative slack, under the report's convention.",
+        "The average source-code line length.",
+        "The number of clock definitions only."
+      ],
+      "salt": "828d2f3efa8c0699",
+      "answerHash": "fc3dd3925d7a6bb8dc65c6340f44542185a6c768c55c92d472318b22d559d6a4"
+    },
+    {
+      "number": 37,
+      "text": "Which measure sums negative slack contributions over the report's selected endpoints or checks?",
+      "options": [
+        "Maximum cell drive strength.",
+        "Peak clock frequency alone.",
+        "Total number of reset bits.",
+        "Total negative slack."
+      ],
+      "salt": "6b7e12f434ffab51",
+      "answerHash": "3b52a9ca2f1b92ad4ad438ac684c8c672b41087ffdf54414360631d5bce874a3"
+    },
+    {
+      "number": 38,
+      "text": "Why recheck hold after a setup optimization?",
+      "options": [
+        "Any setup improvement proves hold automatically.",
+        "Hold is a maximum-frequency-only test.",
+        "Hold matters only before synthesis.",
+        "Faster data paths or changed clocks can reduce minimum-delay margin."
+      ],
+      "salt": "b5ffe5fc53850065",
+      "answerHash": "71ef12656463e9316b7c928ae5453523172a2b95221569c9b214572372bb3716"
+    },
+    {
+      "number": 39,
+      "text": "A setup repair removes 40 ps of max delay from a path whose setup slack was -25 ps. All else fixed, new slack is what?",
+      "options": [
+        "-15 ps",
+        "65 ps",
+        "-65 ps",
+        "15 ps"
+      ],
+      "salt": "9f0c93c0fcfa1271",
+      "answerHash": "7f04d27e6fc185292b195b25683a59e35e91678b6d26296cae9d2033a8e19d5f"
+    },
+    {
+      "number": 40,
+      "text": "A hold repair adds 25 ps minimum delay to a path whose hold slack was -10 ps. All else fixed, new slack is what?",
+      "options": [
+        "35 ps",
+        "15 ps",
+        "-15 ps",
+        "-35 ps"
+      ],
+      "salt": "6f8d73907a59fff2",
+      "answerHash": "b84c3362e7a54c99aaadf62d60b3efa097a7f69ca05006a2c30b9e9263694287"
+    },
+    {
+      "number": 41,
+      "text": "A cell change adds 15 ps to max delay and 10 ps to min delay. Which direct effect follows with other values fixed?",
+      "options": [
+        "Both checks necessarily fail regardless of their original margins.",
+        "Setup slack increases by 10 ps and hold slack decreases by 15 ps.",
+        "Setup slack decreases by 15 ps and hold slack increases by 10 ps.",
+        "Both setup and hold slack increase by 15 ps."
+      ],
+      "salt": "48653a8717f79b48",
+      "answerHash": "0b70e1f072fa1ee0344603ac31517a963c43aa8c4422128ee7d32fbbe33f5eec"
+    },
+    {
+      "number": 42,
+      "text": "Why must timing exceptions be reviewed after hierarchy or signal names change?",
+      "options": [
+        "Their object queries may no longer target the intended paths.",
+        "Signal renaming removes all physical delays.",
+        "Every exception becomes a verified formal proof.",
+        "Constraint queries are guaranteed to follow every arbitrary text change."
+      ],
+      "salt": "ac1a08fd3447ba74",
+      "answerHash": "007df4b3f0df3fa1bb5757c775e4cf8fe5b3bfec48a634ce51db7e80b6acacd3"
+    },
+    {
+      "number": 43,
+      "text": "What does a get_ports query normally select?",
+      "options": [
+        "All manufactured package labels.",
+        "Every internal transistor geometry.",
+        "Top-level design ports matching the query.",
+        "Only operating-system process IDs."
+      ],
+      "salt": "207dbadfd3031c09",
+      "answerHash": "18d247a855573796bafefc95c4b4201948f33f11998bda73e44a8eac76c4d083"
+    },
+    {
+      "number": 44,
+      "text": "What does a get_clocks query normally select?",
+      "options": [
+        "Every net that happens to toggle.",
+        "Every output with a long name.",
+        "Only files ending in .clk.",
+        "Clock objects defined in the timing environment."
+      ],
+      "salt": "cfd67b30290627b3",
+      "answerHash": "84b2bca6e46f0e7e83a988d92137b5a345edd88b274be71dcbff2d9a14ebca32"
+    },
+    {
+      "number": 45,
+      "text": "What is the purpose of report_checks or an equivalent timing-report command?",
+      "options": [
+        "Automatically submit a course assignment.",
+        "Change the chip's required behavior.",
+        "Display details of selected timing checks and paths.",
+        "Manufacture the chosen cell library."
+      ],
+      "salt": "296c5a83e3ae8e28",
+      "answerHash": "1f591d7a552555d5223da94decd8b7d5b574365663eae23290030aaa1cbd5e30"
+    },
+    {
+      "number": 46,
+      "text": "Why is reading a Liberty library important before link or timing analysis?",
+      "options": [
+        "It proves all exceptions are valid.",
+        "It supplies the referenced cells and their timing models.",
+        "It routes every signal.",
+        "It assigns every design input a clock waveform automatically."
+      ],
+      "salt": "d38c0ace175649ec",
+      "answerHash": "e76f36a6f6032bea5ffd3b64099c93b47c667a3a628f5bf3fda2400d2a479d79"
+    },
+    {
+      "number": 47,
+      "text": "Consider wildcard object queries in constraints. A. They can match no objects. B. They can match unintended additional objects. C. Their matches should be reviewed. Which statements are correct?",
+      "options": [
+        "A, B and C",
+        "B only",
+        "A and C only",
+        "A and B only"
+      ],
+      "salt": "dba7c80c8188d2bf",
+      "answerHash": "6335cbb18e9c742f88e7b32c66656db92e0ae8710d132cdcc8741607d5997079"
+    },
+    {
+      "number": 48,
+      "text": "After technology-mapping changes, consider verification. A. Required functional equivalence matters. B. Relevant timing and electrical checks matter. C. Source-code line count alone establishes correctness. Which statements are correct?",
+      "options": [
+        "A and B only",
+        "A only",
+        "B and C only",
+        "A, B and C"
+      ],
+      "salt": "cd43accfd87598f6",
+      "answerHash": "22472d4661d7d6499a5f73e6c9bedf913c4033b0f8604dd8595b643a84fc1b67"
+    },
+    {
+      "number": 49,
+      "text": "Why can an area-optimal cover differ from a timing-optimal mapping?",
+      "options": [
+        "Area and timing are mathematically identical metrics.",
+        "Cell delays, loading and logic depth affect timing beyond raw logic count.",
+        "Mapping ignores all electrical data.",
+        "The smallest cell is always the fastest under every load."
+      ],
+      "salt": "8d90852751a2c930",
+      "answerHash": "06d1ebde378504e4f245776e86950c1a4824a263756085330d687022732a78cf"
+    },
+    {
+      "number": 50,
+      "text": "What is a sound closure criterion for a constrained timing flow?",
+      "options": [
+        "Hide every negative slack using false paths.",
+        "Stop after a single positive path report.",
+        "Meet the intended checks across relevant scenarios with justified constraints and reviewed exceptions.",
+        "Ignore all I/O timing because internal paths pass."
+      ],
+      "salt": "3bcc47bb8aeec393",
+      "answerHash": "5df41d5958e22ecc424d95b7a4d8a18639a2cf6eec2654d3be90e39659eae7c4"
+    }
+  ]
+}
