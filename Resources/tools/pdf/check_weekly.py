@@ -50,7 +50,7 @@ def check(record):
     assert not issues,(path.name,issues[:15])
     assert all(n>50 for n in body_counts),(path.name,'Unexpected sparse text page',body_counts)
     kind='original' if path.name.startswith('Original') else ('practice' if path.name.startswith('Practice') else None)
-    figures=0;math_parts=0;checked_text=0
+    figures=0;math_parts=0;checked_text=0;handwritten_figures=0
     if kind:
         for week in load_banks(kind):
             for q in week['questions']:
@@ -79,6 +79,32 @@ def check(record):
                         with Image.open(figure_path(image['url'])) as original:assert pixels(original) in observed,(name,'Source figure pixels')
                         figures+=1
         assert len(fields)==(120 if kind=='original' else 600)
+    if path.parent.name=='Revision':
+        from build_notes import MD
+        from build_weekly import revision_scans
+        week=int(re.search(r'Week (\d+)',path.name)[1])
+        source=DATA/f'Week {week:02d}'/'revision.md'
+        parts=source.read_text(encoding='utf-8').split('<!-- page -->')
+        assert len(parts)==record.get('guide_pages',len(parts))
+        for number,part in enumerate(parts,1):
+            assert reader.get_destination_page_number(names[f'section{number}'])==number-1
+            page_norm=normalized(reader.pages[number-1].extract_text() or '')
+            for token in MD.parse(part):
+                fragments=[child.content for child in token.children or [] if child.type in ('text','code_inline')]
+                if token.type=='fence':fragments.append(token.content)
+                for fragment in fragments:
+                    signature=normalized(fragment)
+                    if len(signature)>10:
+                        assert signature in page_norm,(path.name,number,'Missing revision text',fragment[:80])
+                        checked_text+=1
+        scans=revision_scans(source.parent,record.get('handwritten',[]))
+        assert len(reader.pages)==len(parts)+len(scans)
+        for index,scan in enumerate(scans,1):
+            page=len(parts)+index-1
+            assert reader.get_destination_page_number(names[f'handwritten-{index}'])==page
+            with Image.open(scan['path']) as original:expected=pixels(original)
+            assert expected in {pixels(saved.image) for saved in reader.pages[page].images},(path.name,index,'Handwriting changed')
+            handwritten_figures+=1
     output=QA/path.stem;output.mkdir(exist_ok=True)
     (output/'extracted.txt').write_text(text,encoding='utf-8')
     subprocess.run([str(pdftoppm()),'-r','90','-png',str(path),str(output/'page')],capture_output=True,check=True)
@@ -94,7 +120,8 @@ def check(record):
             sheet.paste(im,(x,y));draw.text((x,y-25),f'Page {offset+index+1}',font=font,fill='black')
         target=output/f'sheet-{offset//4+1:02d}.jpg';sheet.save(target,quality=90);sheets.append(str(target))
     return {'file':record['filename'],'pages':len(pages),'blank_fields':len(fields),
-            'blank_widgets':record['widgets'],'verified_source_figures':figures,'source_math_parts':math_parts,
+            'blank_widgets':record['widgets'],'verified_source_figures':figures,
+            'verified_handwritten_figures':handwritten_figures,'source_math_parts':math_parts,
             'source_text_fragments_checked':checked_text,'geometry_issues':issues,'sheets':sheets}
 
 def check_roundtrip(record):

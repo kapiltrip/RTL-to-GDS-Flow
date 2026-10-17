@@ -1,7 +1,7 @@
-"""Build two unanswered course-week worksheets and the Week 1 revision PDF."""
+"""Build unanswered course-week worksheets and a selected weekly revision PDF."""
 from pathlib import Path
 from urllib.parse import quote,unquote,urlsplit
-import hashlib,html,json,os,re
+import hashlib,html,json,os,re,subprocess
 
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import A4
@@ -15,6 +15,7 @@ from PIL import Image as PILImage
 from weekly_common import (ROOT,DATA,QA,TOPICS,PDF_NAMES,LICENSE,clean,
     prepare_original_checks,load_banks,figure_path,markup)
 from build_notes import (Builder,MD,Equation,CodeBlock,math_asset,STYLES)
+from runtime import pdftoppm
 
 W,H=A4
 M=56.7
@@ -207,7 +208,7 @@ class RevisionBuilder(Builder):
     def target(self,url):
         parsed=urlsplit(url)
         if parsed.scheme or parsed.netloc or not parsed.path:return url
-        source=(DATA/'Week 01'/unquote(parsed.path)).resolve()
+        source=(DATA/f'Week {self.day:02d}'/unquote(parsed.path)).resolve()
         relative=Path(os.path.relpath(source,ROOT/'Revision')).as_posix()
         return quote(relative,safe='/')+(('#'+parsed.fragment) if parsed.fragment else '')
 
@@ -241,13 +242,39 @@ def revision_blocks(tokens,builder,section):
         else:raise ValueError((token.type,token.content[:60]))
     return out
 
-def build_revision():
-    source=DATA/'Week 01/revision.md'
+def revision_scans(folder,entries):
+    """Render original handwriting, retaining a source digest and explicit crop."""
+    assets=QA/f'{folder.name} handwriting';assets.mkdir(exist_ok=True)
+    records=[]
+    for entry in entries:
+        source=folder/entry['source']
+        digest=hashlib.sha256(source.read_bytes()).hexdigest()
+        if entry.get('source_sha256'):
+            assert digest==entry['source_sha256'],f'Original source changed: {source}'
+        page=entry['page'];prefix=assets/f'original-{page:02d}'
+        subprocess.run([str(pdftoppm()),'-f',str(page),'-l',str(page),
+            '-singlefile','-r','160','-png',str(source),str(prefix)],
+            capture_output=True,check=True)
+        path=prefix.with_suffix('.png')
+        if entry.get('crop_top_ratio'):
+            with PILImage.open(path) as original:
+                top=round(original.height*entry['crop_top_ratio'])
+                cropped=original.crop((0,top,original.width,original.height))
+            path=assets/f'original-{page:02d}-week-portion.png';cropped.save(path)
+        records.append({**entry,'path':path,'source_sha256':digest})
+    return records
+
+def build_revision(week=1):
+    source=DATA/f'Week {week:02d}'/'revision.md'
     parts=source.read_text(encoding='utf-8').split('<!-- page -->')
-    assert len(parts)==8
+    config_path=source.with_suffix('.json')
+    config=json.loads(config_path.read_text(encoding='utf-8')) if config_path.exists() else {
+        'sections':['ICs','Styles','Economics','Partitioning','HLS','Trade-offs','Numericals','Unix/sources']}
+    assert len(parts)==len(config['sections'])
+    scans=revision_scans(source.parent,config.get('handwritten',[]))
     folder=ROOT/'Revision';folder.mkdir(exist_ok=True)
-    path=folder/'Week 01 - Revision.pdf'
-    doc=WeeklyDoc(path,'Week 1 revision','Week 1 revision');builder=RevisionBuilder(1,'')
+    path=folder/f'Week {week:02d} - Revision.pdf'
+    doc=WeeklyDoc(path,f'Week {week} revision',f'Week {week} revision');builder=RevisionBuilder(week,'')
     # The source supplies explicit page sections; use compact links rather than a separate cover.
     story=[]
     for i,text in enumerate(parts,1):
@@ -256,13 +283,26 @@ def build_revision():
             first=text.split('## 1.',1)
             story+=revision_blocks(MD.parse(first[0]),builder,1)
             links=' | '.join(f'<link href="#section{n}" color="#25231F"><u>{n}. {label}</u></link>'
-                for n,label in enumerate(['ICs','Styles','Economics','Partitioning','HLS','Trade-offs','Numericals','Unix/sources'],1))
+                for n,label in enumerate(config['sections'],1))
+            if scans:links+=' | <link href="#handwritten-1" color="#25231F"><u>Your handwriting</u></link>'
             story.append(Paragraph(links,S['small']))
             story+=revision_blocks(MD.parse('## 1.'+first[1]),builder,1)
         else:story+=revision_blocks(MD.parse(text),builder,i)
+    for i,entry in enumerate(scans,1):
+        story.append(PageBreak())
+        story.append(heading(entry['title'],f'handwritten-{i}'))
+        story.append(Paragraph(html.escape(entry['caption']),S['small']))
+        with PILImage.open(entry['path']) as im:w,h=im.size
+        scale=min(WIDTH/w,(HEIGHT-110)/h)
+        picture=Image(str(entry['path']),width=w*scale,height=h*scale)
+        picture.hAlign='CENTER';story.append(picture)
     doc.build(story)
-    assert doc.page==8,('Revision overflow',doc.page)
+    assert doc.page==len(parts)+len(scans),('Revision overflow',doc.page,len(parts)+len(scans))
+    for i in range(1,len(parts)+1):
+        assert doc.destinations[f'section{i}']==i,('Section overflow',i,doc.destinations)
     finish(path,doc)
+    RECORDS[path.name]['guide_pages']=len(parts)
+    RECORDS[path.name]['handwritten']=[{k:v for k,v in entry.items() if k!='path'} for entry in scans]
 
 def main():
     import argparse
@@ -270,6 +310,7 @@ def main():
     mode=parser.add_mutually_exclusive_group()
     mode.add_argument('--revision-only',action='store_true',help='Rebuild the short revision without changing assignments.')
     mode.add_argument('--practice-only',action='store_true',help='Rebuild practice questions without changing the other PDFs.')
+    parser.add_argument('--week',type=int,default=1,help='Revision week to build (default: 1).')
     args=parser.parse_args()
     if (QA/'build.json').exists():RECORDS.update(json.loads((QA/'build.json').read_text(encoding='utf-8')))
     if args.practice_only:
@@ -278,7 +319,7 @@ def main():
         prepare_original_checks()
         build_questions('original')
         build_questions('practice')
-    if not args.practice_only:build_revision()
+    if not args.practice_only:build_revision(args.week)
     (QA/'build.json').write_text(json.dumps(RECORDS,indent=2),encoding='utf-8')
 
 if __name__=='__main__':main()

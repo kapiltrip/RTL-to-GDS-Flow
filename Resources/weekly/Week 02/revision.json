@@ -1,0 +1,44 @@
+{
+  "sections": [
+    "Synthesis",
+    "Terms",
+    "Planning",
+    "Clocks/routes",
+    "Verification",
+    "Test/yield",
+    "After GDS",
+    "Tcl",
+    "Recall/sources"
+  ],
+  "handwritten": [
+    {
+      "source": "handwritten/Fsm.pdf",
+      "page": 3,
+      "crop_top_ratio": 0.315,
+      "title": "Your notes: synthesis",
+      "caption": "Original page 3, Week 2 portion. The earlier FSM exercise above the Week 2 heading is excluded from this view; the full source is preserved.",
+      "source_sha256": "2a4c5a330086e9b121bc0ef65323e7305fe5e6ff50f782d892173169ace4a224"
+    },
+    {
+      "source": "handwritten/Fsm.pdf",
+      "page": 4,
+      "title": "Your notes: physical design",
+      "caption": "Complete original page 4. Typed sections 3-5 expand chip planning, placement, CTS, routing and verification, and clarify their boundaries.",
+      "source_sha256": "2a4c5a330086e9b121bc0ef65323e7305fe5e6ff50f782d892173169ace4a224"
+    },
+    {
+      "source": "handwritten/Fsm.pdf",
+      "page": 5,
+      "title": "Your notes: checks, yield and ATE",
+      "caption": "Complete original page 5. Typed sections 5-6 distinguish verification from manufacturing test and explain the yield model and coverage denominator.",
+      "source_sha256": "2a4c5a330086e9b121bc0ef65323e7305fe5e6ff50f782d892173169ace4a224"
+    },
+    {
+      "source": "handwritten/Fsm.pdf",
+      "page": 6,
+      "title": "Your notes: escapes and manufacturing",
+      "caption": "Complete original page 6. Typed sections 6-7 make the 100-chip example's assumption explicit and expand OPC, patterning, FEOL/BEOL, packaging and binning.",
+      "source_sha256": "2a4c5a330086e9b121bc0ef65323e7305fe5e6ff50f782d892173169ace4a224"
+    }
+  ]
+}

@@ -6,11 +6,12 @@
 
 ## Weekly revision and assignments
 
-Revision currently covers **Week 1 only**, including behavioural synthesis, its advantages and limitations, resource sharing, latency, throughput and worked numerical examples. The assignment sets cover **all 12 weeks**: 120 original course questions and 600 newly authored practice MCQs, with 50 per week. No answers are selected or printed in the worksheets.
+Revision currently covers **Weeks 1 and 2**. Week 1 explains behavioural synthesis and its trade-offs; Week 2 covers logic synthesis, physical design, verification, testing and yield, post-GDS processes and Tcl. Week 2 includes nine revision pages and four pages of Kapil's newly supplied handwriting, with the complete upload preserved under Resources. The assignment sets cover **all 12 weeks**: 120 original course questions and 600 newly authored practice MCQs, with 50 per week. No answers are selected or printed in the worksheets.
 
 | Study pack | Read | Download | Pages |
 |---|---|---|---:|
 | Week 1 revision: Short revision with detailed behavioural synthesis | [Read PDF](Revision/Week%2001%20-%20Revision.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Revision/Week%2001%20-%20Revision.pdf) | 8 |
+| Week 2 revision: Implementation, verification, test, manufacturing and Tcl; four handwritten pages | [Read PDF](Revision/Week%2002%20-%20Revision.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Revision/Week%2002%20-%20Revision.pdf) | 13 |
 | Original course questions: 120 original questions across Weeks 1-12 | [Read PDF](Assignments/Original%20Course%20Questions%20-%20Weeks%2001%20to%2012.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Assignments/Original%20Course%20Questions%20-%20Weeks%2001%20to%2012.pdf) | 51 |
 | 50 practice MCQs per week: 600 newly authored questions across Weeks 1-12 | [Read PDF](Assignments/Practice%20MCQs%20-%2050%20per%20Week.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Assignments/Practice%20MCQs%20-%2050%20per%20Week.pdf) | 108 |
 
@@ -125,7 +126,7 @@ The allocation is **six lessons per study day**: `day = floor((lesson−1)/6)+1`
 ## Collection structure
 
 ```text
-Revision/                     Short weekly revision: Week 1 ready
+Revision/                     Short weekly revision: Weeks 1 and 2 ready
 Assignments/                  Two question PDFs, indexed through Week 12
   Practice/                   Two browser quizzes and their download ZIP
 PDFs/                         The 14 full reading PDFs and their index
