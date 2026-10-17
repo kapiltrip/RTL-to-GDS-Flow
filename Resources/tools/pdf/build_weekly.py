@@ -326,5 +326,8 @@ def main():
         build_questions('practice')
     if not args.practice_only:build_revision(args.week)
     (QA/'build.json').write_text(json.dumps(RECORDS,indent=2),encoding='utf-8')
+    if not args.practice_only:
+        from combine_revisions import build_combined
+        build_combined()
 
 if __name__=='__main__':main()

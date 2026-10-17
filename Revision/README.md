@@ -2,13 +2,19 @@
 
 [Master index](../README.md) · [Assignments](../Assignments/README.md) · [Full reading PDFs](../PDFs/README.md)
 
-**Weeks 1 to 3 are ready.** Later weeks will be added when requested; the completed 12-week lecture notes remain in the full reading collection. Use **Download PDF** to save a revision guide; the local app is for assignment practice.
+<!-- combined-revision:start -->
+**One revision download: [Download Combined Revision.pdf](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Revision/Combined%20Revision.pdf)** · [Read PDF](Combined%20Revision.pdf)
+
+Includes **Weeks 1 to 3 · 38 pages**, with explanations, worked examples, original handwriting, linked contents and bookmarks. Future prepared weeks are added to this same file; the download link stays the same.
+<!-- combined-revision:end -->
+
+Use the combined file for one continuous revision session. It retains every weekly page and adds a master index, week/chapter bookmarks, global page numbers and an **All weeks** return link on each weekly page. Its external file references use public repository URLs, so they also work when this PDF is downloaded by itself. Individual weekly editions remain available below. Later weeks will be added when requested; the completed 12-week lecture notes remain in the full reading collection. The local app is for assignment practice.
 
 | Week | Revision | Download | Pages |
 |---|---|---|---:|
-| 01 | [IC foundations and pre-RTL methods](Week%2001%20-%20Revision.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Revision/Week%2001%20-%20Revision.pdf) | 8 |
+| 01 | [IC foundations and pre-RTL design](Week%2001%20-%20Revision.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Revision/Week%2001%20-%20Revision.pdf) | 8 |
 | 02 | [Implementation, verification, manufacturing and Tcl](Week%2002%20-%20Revision.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Revision/Week%2002%20-%20Revision.pdf) | 13 |
-| 03 | [Verilog, simulation, coverage and Bambu HLS](Week%2003%20-%20Revision.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Revision/Week%2003%20-%20Revision.pdf) | 16 |
+| 03 | [Verilog, simulation and high-level synthesis](Week%2003%20-%20Revision.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Revision/Week%2003%20-%20Revision.pdf) | 16 |
 
 **Week 1** covers IC structure and fabrication, design styles, economics, PPA, abstraction, hardware-software partitioning, SoC/IP reuse and Unix. Behavioural synthesis receives a detailed treatment of scheduling, allocation, binding, control, interfaces, resource sharing, advantages and limitations. Worked examples distinguish latency, initiation interval, throughput and clock-period budgets.
 

@@ -11,6 +11,7 @@ import sys
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE / 'vendor'))
 from pypdf import PdfReader
+from weekly_common import TOPICS as WEEK_TOPICS
 
 ROOT = HERE.parents[2]
 DOC = ROOT / 'PDFs'
@@ -34,9 +35,7 @@ REFERENCES = [
      '20 original questions, 161 unmarked options and six source figures'),
 ]
 WEEKLY = [
-    ('Revision/Week 01 - Revision.pdf', 'Week 1 revision', 'Short revision with detailed behavioural synthesis'),
-    ('Revision/Week 02 - Revision.pdf', 'Week 2 revision', 'Implementation, verification, test, manufacturing and Tcl; four handwritten pages'),
-    ('Revision/Week 03 - Revision.pdf', 'Week 3 revision', 'Verilog, simulation, coverage and Bambu HLS; six handwritten pages'),
+    ('Revision/Combined Revision.pdf', 'Combined revision', 'All prepared weeks in one PDF, expanded as new weeks are added'),
     ('Assignments/Original Course Questions - Weeks 01 to 12.pdf', 'Original course questions', '120 original questions across Weeks 1-12'),
     ('Assignments/Practice MCQs - 50 per Week.pdf', '50 practice MCQs per week', '600 newly authored questions across Weeks 1-12'),
 ]
@@ -57,9 +56,13 @@ def main():
     expected = {name for name, _ in days} | set(pages)
     assert {p.name for p in DOC.glob('*.pdf')} == expected, 'Unindexed or missing PDFs'
     total = sum(count for _, count in days) + sum(pages.values())
+    revision_paths=sorted((ROOT/'Revision').glob('Week ?? - Revision.pdf'))
+    revisions=[(int(re.search(r'Week (\d+)',path.name)[1]),path,len(PdfReader(path).pages)) for path in revision_paths]
+    weekly_specs=[WEEKLY[0]]+[(path.relative_to(ROOT).as_posix(),f'Week {week} revision',WEEK_TOPICS[week])
+                             for week,path,_ in revisions]+WEEKLY[1:]
     weekly = [(relative, title, purpose, len(PdfReader(ROOT / relative).pages))
-              for relative, title, purpose in WEEKLY if (ROOT / relative).is_file()]
-    assert len(weekly) in (0, len(WEEKLY)), 'Incomplete weekly study pack'
+              for relative, title, purpose in weekly_specs if (ROOT / relative).is_file()]
+    assert len(weekly) in (0, len(weekly_specs)), 'Incomplete weekly study pack'
 
     def daily_table(index):
         from os.path import relpath
@@ -159,11 +162,41 @@ def main():
     if weekly:
         text += ('\n## Weekly revision and assignments\n\n' + weekly_table(DOC / 'README.md') + '\n\n'
                  'The weekly packs are in the separate [Revision](../Revision/README.md) and '
-                 '[Assignments](../Assignments/README.md) folders. Revision currently covers Weeks 1 to 3; '
+                 '[Assignments](../Assignments/README.md) folders. Use the combined revision for every prepared week; '
                  'both question sets cover all 12 weeks. The [browser practice download]('
                  + REPOSITORY + '/raw/refs/heads/main/Assignments/Practice/Browser%20Practice%20-%20All%20Weeks.zip) '
                  'lets you fill answers and reveal marks later without displaying correct answers.\n')
     (DOC / 'README.md').write_text(text, encoding='utf-8')
+    combined=ROOT/WEEKLY[0][0]
+    if combined.is_file():
+        from os.path import relpath
+        weeks=[week for week,_,_ in revisions]
+        label=(f'Week {weeks[0]}' if len(weeks)==1 else
+               f'Weeks {weeks[0]} to {weeks[-1]}' if weeks==list(range(weeks[0],weeks[-1]+1)) else
+               'Weeks '+', '.join(map(str,weeks)))
+        count=len(PdfReader(combined).pages)
+        url=REPOSITORY+'/raw/refs/heads/main/'+quote(WEEKLY[0][0],safe='/')
+        for index in (ROOT/'README.md',ROOT/'Revision/README.md'):
+            read=quote(Path(relpath(combined,index.parent)).as_posix(),safe='/')
+            block=('<!-- combined-revision:start -->\n'
+                   f'**One revision download: [Download Combined Revision.pdf]({url})** '
+                   f'· [Read PDF]({read})\n\n'
+                   f'Includes **{label} · {count} pages**, with explanations, worked examples, original handwriting, '
+                   'linked contents and bookmarks. Future prepared weeks are added to this same file; '
+                   'the download link stays the same.\n'
+                   '<!-- combined-revision:end -->')
+            text=index.read_text(encoding='utf-8')
+            text,changed=re.subn(r'<!-- combined-revision:start -->.*?<!-- combined-revision:end -->',lambda _:block,text,count=1,flags=re.S)
+            assert changed==1,f'Combined revision block missing from {index}'
+            if index.parent.name=='Revision':
+                rows=['| Week | Revision | Download | Pages |','|---|---|---|---:|']
+                for week,path,pages_in_week in revisions:
+                    relative=path.relative_to(ROOT).as_posix()
+                    rows.append(f'| {week:02d} | [{WEEK_TOPICS[week]}]({quote(path.name)}) | '
+                                f'[Download PDF]({REPOSITORY}/raw/refs/heads/main/{quote(relative,safe="/")}) | {pages_in_week} |')
+                text,changed=re.subn(r'\| Week \| Revision \| Download \| Pages \|\n.*?(?=\n\n)',lambda _:'\n'.join(rows),text,count=1,flags=re.S)
+                assert changed==1,'Individual revision table missing'
+            index.write_text(text,encoding='utf-8')
     print(f'Updated three indexes: {len(expected)} PDFs, {total} pages, '
           f'{len(days)} daily downloads, {len(REFERENCES)} reference downloads and '
           f'{len(weekly)} weekly-pack downloads.')
