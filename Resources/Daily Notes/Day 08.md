@@ -11,7 +11,13 @@ Lessons 43–48 · Weeks 10–11. Source pages D-05–D-21.
 - [Lesson 47: Chip Planning I](#lesson-47-chip-planning-i)
 - [Lesson 48: Chip Planning II](#lesson-48-chip-planning-ii)
 
-[Master index](../README.md) · [Handwritten page index](../Resources/Handwritten%20Index.md) · [Sources](../Resources/Sources.md)
+[Master index](../../README.md) · [Handwritten page index](../Handwritten%20Index.md) · [Sources](../Sources.md)
+
+## Revision route
+
+Derive the LFSR recurrence and signature behavior before assuming random-test coverage. Then connect wire geometry to resistance/capacitance, coupling and manufacturing obligations. Read LEF, Liberty, DEF and GDS by the question each format answers. During chip planning, define the usable-area denominator and distinguish sustained IR loss from transient charge and inductive effects.
+
+[Revision checks and explained answers](#revision-checks-and-explained-answers) close the day. These are authored practice examples; original handwritten page identities remain attached to their source figures.
 
 ## Lesson 43: Built-in Self-Test
 
@@ -19,7 +25,7 @@ Week 10 · [Lecture video](https://www.youtube.com/watch?v=iT_lXRDUdZI) · [Back
 
 <!-- wrapup-frame-43 -->
 
-[![Pseudorandom sequences are repeatable, not independent randomness](../Resources/images/Day%2008/Lesson%2043/01-lecture-frame.jpg)](#day-08-index)
+[![Pseudorandom sequences are repeatable, not independent randomness](../images/Day%2008/Lesson%2043/01-lecture-frame.jpg)](#day-08-index)
 
 *Lecture: [20:27 — Pseudorandom sequences are repeatable, not independent randomness](https://www.youtube.com/watch?v=iT_lXRDUdZI&t=1227s).*
 
@@ -27,7 +33,7 @@ The LFSR diagram feeds selected state bits back through XOR logic. Its seed, tap
 
 ### D-05: Move selected test functions onto the chip
 
-[![D-05: ATE cost, in-field testing and random-pattern coverage](../Resources/sources/handwritten/scan-d/h05.jpg)](#day-08-index)
+[![D-05: ATE cost, in-field testing and random-pattern coverage](../sources/handwritten/scan-d/h05.jpg)](#day-08-index)
 
 *Source: Scan D, PDF page 5.*
 
@@ -41,7 +47,7 @@ Costs include generator/analyzer area, muxes, routing, control and test power. L
 
 ### D-06: The BIST blocks each have a specific role
 
-[![D-06: BIST architecture and LFSR structure](../Resources/sources/handwritten/scan-d/h06.jpg)](#day-08-index)
+[![D-06: BIST architecture and LFSR structure](../sources/handwritten/scan-d/h06.jpg)](#day-08-index)
 
 *Source: Scan D, PDF page 6.*
 
@@ -55,7 +61,7 @@ Separate reset/seed control from normal operation. With XOR feedback, an all-zer
 
 ### D-07: Work out the seven-state LFSR and the rare-pattern problem
 
-[![D-07: Three-bit LFSR, random-resistant fault and response volume](../Resources/sources/handwritten/scan-d/h07.jpg)](#day-08-index)
+[![D-07: Three-bit LFSR, random-resistant fault and response volume](../sources/handwritten/scan-d/h07.jpg)](#day-08-index)
 
 *Source: Scan D, PDF page 7.*
 
@@ -93,7 +99,7 @@ The response-volume example has one million patterns and 100 observed bits per p
 
 ### D-08: Signature compression trades data volume for aliasing risk
 
-[![D-08: Signature analyzers, aliasing and BIST overhead](../Resources/sources/handwritten/scan-d/h08.jpg)](#day-08-index)
+[![D-08: Signature analyzers, aliasing and BIST overhead](../sources/handwritten/scan-d/h08.jpg)](#day-08-index)
 
 *Source: Scan D, PDF page 8.*
 
@@ -127,7 +133,7 @@ Week 10 · [Lecture video](https://www.youtube.com/watch?v=r0rianLiAg4) · [Back
 
 <!-- wrapup-frame-44 -->
 
-[![A patterned mask selects where dopants enter](../Resources/images/Day%2008/Lesson%2044/01-lecture-frame.jpg)](#day-08-index)
+[![A patterned mask selects where dopants enter](../images/Day%2008/Lesson%2044/01-lecture-frame.jpg)](#day-08-index)
 
 *Lecture: [12:42 — A patterned mask selects where dopants enter](https://www.youtube.com/watch?v=r0rianLiAg4&t=762s).*
 
@@ -135,7 +141,7 @@ The cross-sections show donor and acceptor implantation through exposed regions,
 
 ### D-09: FEOL forms devices; BEOL connects them
 
-[![D-09: Front-end fabrication and ion implantation](../Resources/sources/handwritten/scan-d/h09.jpg)](#day-08-index)
+[![D-09: Front-end fabrication and ion implantation](../sources/handwritten/scan-d/h09.jpg)](#day-08-index)
 
 *Source: Scan D, PDF page 9.*
 
@@ -149,7 +155,7 @@ Isolation structures, gate formation, source/drain formation and contacts have g
 
 ### D-10: Wire dimensions set resistance and manufacturing behavior
 
-[![D-10: Copper interconnect, vias and the resistance formula](../Resources/sources/handwritten/scan-d/h10.jpg)](#day-08-index)
+[![D-10: Copper interconnect, vias and the resistance formula](../sources/handwritten/scan-d/h10.jpg)](#day-08-index)
 
 *Source: Scan D, PDF page 10.*
 
@@ -163,7 +169,7 @@ Skin effect is frequency-dependent current crowding. Whether it materially affec
 
 ### D-11: Capacitance comes from several geometric relationships
 
-[![D-11: Wire-to-substrate, lateral, overlap and fringing capacitance](../Resources/sources/handwritten/scan-d/h11.jpg)](#day-08-index)
+[![D-11: Wire-to-substrate, lateral, overlap and fringing capacitance](../sources/handwritten/scan-d/h11.jpg)](#day-08-index)
 
 *Source: Scan D, PDF page 11.*
 
@@ -183,7 +189,7 @@ Week 10 · [Lecture video](https://www.youtube.com/watch?v=uIZ7hVuZGHA) · [Back
 
 <!-- wrapup-frame-45 -->
 
-[![Glitch amplitude depends on the electrical environment](../Resources/images/Day%2008/Lesson%2045/01-lecture-frame.jpg)](#day-08-index)
+[![Glitch amplitude depends on the electrical environment](../images/Day%2008/Lesson%2045/01-lecture-frame.jpg)](#day-08-index)
 
 *Lecture: [24:47 — Glitch amplitude depends on the electrical environment](https://www.youtube.com/watch?v=uIZ7hVuZGHA&t=1487s).*
 
@@ -191,7 +197,7 @@ The quiet victim is coupled to the switching aggressor through Cc and to a refer
 
 ### D-12: Coupling acts on the difference between two voltages
 
-[![D-12: Crosstalk-induced delay and same/opposite transitions](../Resources/sources/handwritten/scan-d/h12.jpg)](#day-08-index)
+[![D-12: Crosstalk-induced delay and same/opposite transitions](../sources/handwritten/scan-d/h12.jpg)](#day-08-index)
 
 *Source: Scan D, PDF page 12.*
 
@@ -205,7 +211,7 @@ For a victim with 20 fF ground capacitance and 5 fF coupling, the simplified eff
 
 ### D-13: A quiet victim can receive a noise pulse
 
-[![D-13: Quiet-victim glitches and aggressor edge effects](../Resources/sources/handwritten/scan-d/h13.jpg)](#day-08-index)
+[![D-13: Quiet-victim glitches and aggressor edge effects](../sources/handwritten/scan-d/h13.jpg)](#day-08-index)
 
 *Source: Scan D, PDF page 13.*
 
@@ -227,7 +233,7 @@ Even a pulse that propagates through combinational logic may disappear before a 
 
 ### D-14: Antenna rules and LEF describe different physical obligations
 
-[![D-14: Plasma-induced gate damage and technology/cell LEF](../Resources/sources/handwritten/scan-d/h14.jpg)](#day-08-index)
+[![D-14: Plasma-induced gate damage and technology/cell LEF](../sources/handwritten/scan-d/h14.jpg)](#day-08-index)
 
 *Source: Scan D, PDF page 14.*
 
@@ -260,7 +266,7 @@ Week 10 tutorial · [Lecture video](https://www.youtube.com/watch?v=FGpM8YYS6ic)
 
 <!-- wrapup-frame-46 -->
 
-[![The installation tutorial provisions dependencies in WSL](../Resources/images/Day%2008/Lesson%2046/01-lecture-frame.jpg)](#day-08-index)
+[![The installation tutorial provisions dependencies in WSL](../images/Day%2008/Lesson%2046/01-lecture-frame.jpg)](#day-08-index)
 
 *Lecture: [2:48 — The installation tutorial provisions dependencies in WSL](https://www.youtube.com/watch?v=FGpM8YYS6ic&t=168s).*
 
@@ -282,7 +288,7 @@ Week 11 · [Lecture video](https://www.youtube.com/watch?v=37Hf_q6IhAs) · [Back
 
 <!-- wrapup-frame-47 -->
 
-[![Budget one complete cross-block transfer](../Resources/images/Day%2008/Lesson%2047/01-lecture-frame.jpg)](#day-08-index)
+[![Budget one complete cross-block transfer](../images/Day%2008/Lesson%2047/01-lecture-frame.jpg)](#day-08-index)
 
 *Lecture: [22:11 — Budget one complete cross-block transfer](https://www.youtube.com/watch?v=37Hf_q6IhAs&t=1331s).*
 
@@ -290,7 +296,7 @@ The frame follows FF1 through B1, inter-block logic/wire and B3 to FF2. Block-le
 
 ### D-15: Hierarchy needs interface budgets, not just partitions
 
-[![D-15: Hierarchical blocks and timing-budget distribution](../Resources/sources/handwritten/scan-d/h15.jpg)](#day-08-index)
+[![D-15: Hierarchical blocks and timing-budget distribution](../sources/handwritten/scan-d/h15.jpg)](#day-08-index)
 
 *Source: Scan D, PDF page 15.*
 
@@ -304,7 +310,7 @@ Block-level closure is conditional on the agreed interface environment. Recheck 
 
 ### D-16: Floorplanning defines the space available for implementation
 
-[![D-16: Hierarchical-flow tradeoffs and floorplanning tasks](../Resources/sources/handwritten/scan-d/h16.jpg)](#day-08-index)
+[![D-16: Hierarchical-flow tradeoffs and floorplanning tasks](../sources/handwritten/scan-d/h16.jpg)](#day-08-index)
 
 *Source: Scan D, PDF page 16.*
 
@@ -318,7 +324,7 @@ For an illustrative 10,000 µm² core with 2000 µm² of macros and 500 µm² of
 
 ### D-17: Utilization, I/O direction and package access
 
-[![D-17: Core utilization and bidirectional I/O cells](../Resources/sources/handwritten/scan-d/h17.jpg)](#day-08-index)
+[![D-17: Core utilization and bidirectional I/O cells](../sources/handwritten/scan-d/h17.jpg)](#day-08-index)
 
 *Source: Scan D, PDF page 17.*
 
@@ -332,7 +338,7 @@ Distributing power-hungry I/O and sufficient supply access can reduce local hot 
 
 ### D-18: Macro location, shape and halos affect routability
 
-[![D-18: Hard/soft macros, flylines and placement halos](../Resources/sources/handwritten/scan-d/h18.jpg)](#day-08-index)
+[![D-18: Hard/soft macros, flylines and placement halos](../sources/handwritten/scan-d/h18.jpg)](#day-08-index)
 
 *Source: Scan D, PDF page 18.*
 
@@ -360,7 +366,7 @@ Week 11 · [Lecture video](https://www.youtube.com/watch?v=H2UHFlFTUoo) · [Back
 
 <!-- wrapup-frame-48 -->
 
-[![A halo reserves pin-access space at macro corners](../Resources/images/Day%2008/Lesson%2048/01-lecture-frame.jpg)](#day-08-index)
+[![A halo reserves pin-access space at macro corners](../images/Day%2008/Lesson%2048/01-lecture-frame.jpg)](#day-08-index)
 
 *Lecture: [22:10 — A halo reserves pin-access space at macro corners](https://www.youtube.com/watch?v=H2UHFlFTUoo&t=1330s).*
 
@@ -368,7 +374,7 @@ The left macro corner is crowded with a standard cell; the right reserves a halo
 
 ### D-19: Legal orientation and the beginning of the power network
 
-[![D-19: Macro orientations, standard-cell rows and power rails](../Resources/sources/handwritten/scan-d/h19.jpg)](#day-08-index)
+[![D-19: Macro orientations, standard-cell rows and power rails](../sources/handwritten/scan-d/h19.jpg)](#day-08-index)
 
 *Source: Scan D, PDF page 19.*
 
@@ -390,7 +396,7 @@ These are geometry demonstrations, not a declaration that a specific LEF macro p
 
 ### D-20: Meshes spread current; electromigration sets reliability limits
 
-[![D-20: Power mesh, parallel paths and electromigration](../Resources/sources/handwritten/scan-d/h20.jpg)](#day-08-index)
+[![D-20: Power mesh, parallel paths and electromigration](../sources/handwritten/scan-d/h20.jpg)](#day-08-index)
 
 *Source: Scan D, PDF page 20.*
 
@@ -404,7 +410,7 @@ The [OpenROAD PDN documentation](https://openroad.readthedocs.io/en/latest/main/
 
 ### D-21: Separate steady IR drop from transient droop and decap support
 
-[![D-21: Resistive/inductive supply drop and decoupling capacitance](../Resources/sources/handwritten/scan-d/h21.jpg)](#day-08-index)
+[![D-21: Resistive/inductive supply drop and decoupling capacitance](../sources/handwritten/scan-d/h21.jpg)](#day-08-index)
 
 *Source: Scan D, PDF page 21.*
 
@@ -427,3 +433,44 @@ Now add illustrative ESR=0.1 Ω. A 10 mA step contributes an immediate 1 mV resi
 These terms describe different phases of the response: connection inductance matters during rapid current change, ESR while current flows, and charge depletion over time. They should not be summed as constant penalties over every interval. The actual regulator, package and on-chip mesh share current and replenish charge. Local placement and low-inductance connections can matter as much as nominal capacitance. Analyze the relevant waveform and network, rather than treating decap as a permanent replacement for a DC supply path.
 
 [Back to day index](#day-08-index)
+
+
+## Revision checks and explained answers
+
+Try each question before reading its answer. Revisit the linked lesson and its original handwritten page when an assumption or step is unclear.
+
+### Check 01: A longer LFSR run may never apply a test
+
+**Question.** A maximal XOR LFSR directly supplies every input of an OR gate and starts from a nonzero seed. Can repeated periods detect that OR output stuck at one by applying the complete LFSR state?
+
+**Explained answer.** The required activating vector is all zero, because only that vector makes the good OR output 0. A maximal XOR LFSR's nonzero cycle excludes the all-zero state, so this direct connection never applies the needed test. Repeating the period cannot help. The independent-random-vector probability model is not a substitute for examining the deterministic sequence.
+
+### Check 02: Construct a signature collision
+
+**Question.** A deliberately simple response compressor XORs four response bits. Compare responses 1010 and 0000. What does this say about a passing signature?
+
+**Explained answer.** Both compress to 0: the first has two ones and the second none. The full responses differ while their signatures agree. A signature match can therefore alias an error. A numerical aliasing probability needs an explicit error/compactor model; this deterministic collision does not prove a universal random probability.
+
+### Check 03: Scale an unbuffered wire estimate
+
+**Question.** Double wire length while holding width, thickness and per-unit-length capacitance fixed. How do resistance, capacitance and the simple distributed-RC delay scale?
+
+**Explained answer.** Resistance doubles because $R=\rho L/(wt)$; capacitance doubles with length under this model. Their product increases by four, so an RC delay proportional to that product also increases fourfold. Driver resistance, loads, coupling and buffering add terms and can change the complete path's behavior. State the model before applying the square-law intuition.
+
+### Check 04: Explain opposite-switching coupling
+
+**Question.** Why can an equal-slope aggressor switching opposite to a victim produce a larger coupling load than an aggressor switching with it?
+
+**Explained answer.** Coupling current follows $i_c=C_c\,d(V_v-V_a)/dt$. Equal-direction, equal-slope ramps keep the voltage difference nearly constant. Opposite ramps change it at twice one ramp's rate. This idealized comparison motivates effective-load factors; actual receiver delay and noise depend on slew, alignment, driver impedance and the surrounding network.
+
+### Check 05: Name the utilization denominator
+
+**Question.** A 10,000 square micrometre core contains 6,000 of standard cells and 2,000 of macro/blockage area. Compare gross-core and remaining-area utilization.
+
+**Explained answer.** Using the full core gives 60%. If the stated 2,000 is unavailable to standard cells, the remaining-area measure is $6000/8000=0.75$, or 75%. Both calculations can be meaningful, but their labels must disclose the denominator. Local pin access, halos, power straps and routing demand still need separate checks.
+
+### Check 06: Separate IR loss and decap charge
+
+**Question.** A 0.04 ohm path carries 0.5 A. Separately, a 50 pF ideal local capacitor supplies 10 mA for 100 ps without replenishment. Find each voltage change.
+
+**Explained answer.** The steady resistive loss is $IR=0.5\times0.04=0.02$ V, or 20 mV. The isolated-capacitor change is $I\Delta t/C=0.01\times100\times10^{-12}/(50\times10^{-12})=0.02$ V. Equal numbers do not make the mechanisms identical: one is sustained path resistance and the other finite stored charge. ESR, inductance and supply replenishment require the actual transient network.

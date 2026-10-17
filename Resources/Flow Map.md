@@ -4,23 +4,23 @@ Implementation sequence, stage purpose and the NPTEL teaching approach.
 
 ## 1. Define intent and architecture
 
-Set function, interfaces and power/performance/area targets; partition the design into blocks. Architecture determines what hardware must do. High-level synthesis is one route from behavioral operations to a datapath and controller; RTL can also be written directly. [L03-L04](../Daily%20Notes/Day%2001.md#lesson-03-overview-of-vlsi-design-flow-i)
+Set function, interfaces and power/performance/area targets; partition the design into blocks. Architecture determines what hardware must do. High-level synthesis is one route from behavioral operations to a datapath and controller; RTL can also be written directly. [L03-L04](Daily%20Notes/Day%2001.md#lesson-03-overview-of-vlsi-design-flow-i)
 
 ## 2. Model and verify RTL
 
-Describe bit-accurate combinational logic and state transitions. Simulation exercises behavior with a testbench; formal methods check specified properties or equivalence under stated assumptions. Resolve intent before implementation. Output: verified synthesizable RTL and its requirements. [L11](../Daily%20Notes/Day%2002.md#lesson-11-hardware-modeling--introduction-to-verilog-i); [L13](../Daily%20Notes/Day%2003.md#lesson-13-functional-verification-using-simulation)
+Describe bit-accurate combinational logic and state transitions. Simulation exercises behavior with a testbench; formal methods check specified properties or equivalence under stated assumptions. Resolve intent before implementation. Output: verified synthesizable RTL and its requirements. [L11](Daily%20Notes/Day%2002.md#lesson-11-hardware-modeling--introduction-to-verilog-i); [L13](Daily%20Notes/Day%2003.md#lesson-13-functional-verification-using-simulation)
 
 ## 3. Synthesize a technology-mapped netlist
 
-**Elaborate and infer hardware.** Resolve hierarchy, parameters and widths; turn RTL constructs into registers, multiplexers, arithmetic and control networks. [L15-L16](../Daily%20Notes/Day%2003.md#lesson-15-rtl-synthesis---part-i)
+**Elaborate and infer hardware.** Resolve hierarchy, parameters and widths; turn RTL constructs into registers, multiplexers, arithmetic and control networks. [L15-L16](Daily%20Notes/Day%2003.md#lesson-15-rtl-synthesis---part-i)
 
-**Optimize logic.** Simplify Boolean covers, factor/share expressions and optimize state representations while preserving required behavior. Cost depends on both logic structure and its implementation. [L17](../Daily%20Notes/Day%2003.md#lesson-17-logic-optimization---part-i); [L19-L20](../Daily%20Notes/Day%2004.md#lesson-19-logic-optimization---part-ii)
+**Optimize logic.** Simplify Boolean covers, factor/share expressions and optimize state representations while preserving required behavior. Cost depends on both logic structure and its implementation. [L17](Daily%20Notes/Day%2003.md#lesson-17-logic-optimization---part-i); [L19-L20](Daily%20Notes/Day%2004.md#lesson-19-logic-optimization---part-ii)
 
-**Map to technology.** Select legal cells from a characterized library under timing, load and area objectives. Output: a cell-instance netlist with connectivity. Constraints and library models guide optimization from this stage onward. [L26](../Daily%20Notes/Day%2005.md#lesson-26-technology-library); [L32](../Daily%20Notes/Day%2006.md#lesson-32-constraints-i)
+**Map to technology.** Select legal cells from a characterized library under timing, load and area objectives. Output: a cell-instance netlist with connectivity. Constraints and library models guide optimization from this stage onward. [L26](Daily%20Notes/Day%2005.md#lesson-26-technology-library); [L32](Daily%20Notes/Day%2006.md#lesson-32-constraints-i)
 
 ## 4. Make the design testable
 
-Plan DFT early; add appropriate scan/test structures to improve internal controllability and observability. Generate tests for defined fault models and recheck functional/test modes and timing. Scan insertion and physical scan-chain reordering belong to coordinated logical and physical stages. [L39-L42](../Daily%20Notes/Day%2007.md#lesson-40-scan-design-flow)
+Plan DFT early; add appropriate scan/test structures to improve internal controllability and observability. Generate tests for defined fault models and recheck functional/test modes and timing. Scan insertion and physical scan-chain reordering belong to coordinated logical and physical stages. [L39-L42](Daily%20Notes/Day%2007.md#lesson-40-scan-design-flow)
 
 ## 5. Implement the physical design
 
@@ -28,11 +28,11 @@ Plan DFT early; add appropriate scan/test structures to improve internal control
 
 **Place and legalize:** assign legal cell locations, balancing wirelength, congestion and timing. **Clock tree synthesis:** distribute clocks with controlled skew, latency and transition.
 
-**Route:** allocate signal paths, then create rule-compliant wires and vias. Output: placed and routed geometry with a realizable clock and power network. [L47-L48](../Daily%20Notes/Day%2008.md#lesson-47-chip-planning-i); [L49-L52](../Daily%20Notes/Day%2009.md#lesson-49-placement)
+**Route:** allocate signal paths, then create rule-compliant wires and vias. Output: placed and routed geometry with a realizable clock and power network. [L47-L48](Daily%20Notes/Day%2008.md#lesson-47-chip-planning-i); [L49-L52](Daily%20Notes/Day%2009.md#lesson-49-placement)
 
 ## 6. Close and hand off GDSII
 
-Extract interconnect parasitics; close setup/hold timing across required modes/corners, physical rules and power/reliability checks. DRC checks geometry, LVS checks extracted connectivity against the reference, and ERC checks electrical rules. ECOs trigger relevant rechecks. GDSII exports layout geometry; masks, fabrication, packaging and manufactured-device test follow the design handoff. [L53-L54](../Daily%20Notes/Day%2009.md#lesson-53-post-layout-verification-and-signoff)
+Extract interconnect parasitics; close setup/hold timing across required modes/corners, physical rules and power/reliability checks. DRC checks geometry, LVS checks extracted connectivity against the reference, and ERC checks electrical rules. ECOs trigger relevant rechecks. GDSII exports layout geometry; masks, fabrication, packaging and manufactured-device test follow the design handoff. [L53-L54](Daily%20Notes/Day%2009.md#lesson-53-post-layout-verification-and-signoff)
 
 <!-- pagebreak -->
 
@@ -52,9 +52,9 @@ Resizing a gate changes both its delay and the load seen by its driver. A hold-f
 
 ## Models and checks that accompany the flow
 
-**Constraints:** define clocks, external interface timing and justified timing exceptions; timing analysis needs the intended operating requirements. **Libraries:** supply cell functions, delay/check models and operating conditions. **Parasitics:** model interconnect loading and delay, with fidelity appropriate to the implementation stage. [L26](../Daily%20Notes/Day%2005.md#lesson-26-technology-library); [L29](../Daily%20Notes/Day%2005.md#lesson-29-static-timing-analysis---ii); [L32](../Daily%20Notes/Day%2006.md#lesson-32-constraints-i)
+**Constraints:** define clocks, external interface timing and justified timing exceptions; timing analysis needs the intended operating requirements. **Libraries:** supply cell functions, delay/check models and operating conditions. **Parasitics:** model interconnect loading and delay, with fidelity appropriate to the implementation stage. [L26](Daily%20Notes/Day%2005.md#lesson-26-technology-library); [L29](Daily%20Notes/Day%2005.md#lesson-29-static-timing-analysis---ii); [L32](Daily%20Notes/Day%2006.md#lesson-32-constraints-i)
 
-**Functional checks** establish behavior under a specification and assumptions. **STA** checks modeled timing requirements. **DRC/LVS/ERC** check physical or electrical implementation rules. Passing one check does not establish the others. [L08](../Daily%20Notes/Day%2002.md#lesson-08-overview-of-vlsi-design-flow-v--verification-and-test); [L25](../Daily%20Notes/Day%2005.md#lesson-25-formal-verification---iv); [L28](../Daily%20Notes/Day%2005.md#lesson-28-static-timing-analysis---i)
+**Functional checks** establish behavior under a specification and assumptions. **STA** checks modeled timing requirements. **DRC/LVS/ERC** check physical or electrical implementation rules. Passing one check does not establish the others. [L08](Daily%20Notes/Day%2002.md#lesson-08-overview-of-vlsi-design-flow-v--verification-and-test); [L25](Daily%20Notes/Day%2005.md#lesson-25-formal-verification---iv); [L28](Daily%20Notes/Day%2005.md#lesson-28-static-timing-analysis---i)
 
 ## How NPTEL builds the theory
 

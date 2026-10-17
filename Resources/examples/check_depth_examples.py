@@ -21,7 +21,7 @@ results = {}
 
 
 def hdl_program(day, module):
-    source = (ROOT/'Daily Notes'/f'Day {day:02}.md').read_text(encoding='utf-8')
+    source = (ROOT/'Resources/Daily Notes'/f'Day {day:02}.md').read_text(encoding='utf-8')
     blocks = re.findall(r'```verilog\n(.*?)```', source, re.S)
     matches = [b for b in blocks if re.search(r'\bmodule\s+'+module+r'\b', b)]
     assert len(matches) == 1, module
@@ -246,7 +246,7 @@ results['final_sanity_physical_models'] = {'antenna_ratios':antenna,
     'density_global_average':.35, 'window_A_legal_fill_area_um2':4000}
 results['numeric_and_geometric_models']='yield/cost, signed requirements, scenario matrix, RC, decap, pin transforms, via pitch and ECO budgets'
 
-hashes={str(d):hashlib.sha256((ROOT/'Daily Notes'/f'Day {d:02}.md').read_bytes()).hexdigest()
+hashes={str(d):hashlib.sha256((ROOT/'Resources/Daily Notes'/f'Day {d:02}.md').read_bytes()).hexdigest()
         for d in range(1,10)}
 (QA/'depth-example-checks.json').write_text(json.dumps({'results':results,'source_sha256':hashes},
                                                     indent=2)+'\n',encoding='utf-8')

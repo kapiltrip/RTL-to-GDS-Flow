@@ -10,6 +10,7 @@ sys.path.insert(0,str(HERE/'vendor'))
 from pypdf import PdfReader
 import pdfplumber
 from PIL import Image, ImageDraw, ImageFont
+from build_notes import MD
 
 from runtime import pdftoppm
 POPPLER=pdftoppm()
@@ -23,15 +24,15 @@ def normalized(s):
 
 for day in days:
     m=manifest[str(day)]
-    pdf=ROOT/'PDFs'/m['filename']
-    source=(ROOT/'Daily Notes'/f'Day {day:02d}.md').read_text(encoding='utf-8')
+    pdf=ROOT/m['filename']
+    source=(ROOT/'Resources/Daily Notes'/f'Day {day:02d}.md').read_text(encoding='utf-8')
     source_images=re.findall(r'!\[[^\]]*\]\(([^)]+)\)',source)
     source_codes=re.findall(r'^```[^\n]*\n(.*?)^```',source,re.M|re.S)
     assert len(source_images)==m['figures']
     assert len(source_codes)==m['code_blocks']
     assert {(source_path.resolve().relative_to(ROOT)).as_posix()
-            for source_path in (ROOT/'Daily Notes'/unquote(s) for s in source_images)}=={r['path'].replace('\\','/') for r in m['figures_detail']}
-    assert hashlib.sha256((ROOT/'Daily Notes'/f'Day {day:02d}.md').read_bytes()).hexdigest()==m['source_sha256']
+            for source_path in (ROOT/'Resources/Daily Notes'/unquote(s) for s in source_images)}=={r['path'].replace('\\','/') for r in m['figures_detail']}
+    assert hashlib.sha256((ROOT/'Resources/Daily Notes'/f'Day {day:02d}.md').read_bytes()).hexdigest()==m['source_sha256']
     r=PdfReader(pdf)
     text='\n'.join(p.extract_text() or '' for p in r.pages)
     # Editorial acceptance criterion for the formal reading edition. Check
@@ -59,9 +60,9 @@ for day in days:
     missing=[]
     # Require a substantial native-text signature for every retained paragraph.
     for para in m['paragraphs']:
-        plain=re.sub(r'\$[^$]*\$',' ',para)
-        plain=re.sub(r'\[([^\]]+)\]\([^)]+\)',r'\1',plain)
-        plain=re.sub(r'[*`_]','',plain)
+        children=MD.parseInline(para)[0].children or []
+        plain=''.join(t.content if t.type in ('text','code_inline') else ' '
+                      if t.type in ('math_inline','softbreak','hardbreak') else '' for t in children)
         chunks=re.split(r'\s{2,}',plain)
         candidate=max(chunks,key=len).strip()
         signature=normalized(candidate[:110])
@@ -131,4 +132,6 @@ for day in days:
                       'internal_links':internal,'external_links':external,'relative_links':len(relative),
                       'geometry_issues':geometry,'sparse_pages_to_review':sparse,'contact_sheets':sheets}
     print(json.dumps({k:v for k,v in checks[str(day)].items() if k!='contact_sheets'},ensure_ascii=False),flush=True)
-(QA/'checks.json').write_text(json.dumps(checks,indent=2),encoding='utf-8')
+latest=json.loads((QA/'checks.json').read_text(encoding='utf-8')) if (QA/'checks.json').exists() else {}
+latest.update({str(day):checks[str(day)] for day in days})
+(QA/'checks.json').write_text(json.dumps(latest,indent=2),encoding='utf-8')

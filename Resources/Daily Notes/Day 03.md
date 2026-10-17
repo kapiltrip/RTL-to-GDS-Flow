@@ -17,11 +17,17 @@ Lessons 13–18. Six-lesson study blocks; the full collection is complete throug
 - [Lesson 18: Simulation-based Verification using Icarus](#lesson-18-simulation-based-verification-using-icarus)
 
 
-[Master index](../README.md) · [Handwritten page index](../Resources/Handwritten%20Index.md) · [Glossary](../Resources/Glossary.md)
+[Master index](../../README.md) · [Handwritten page index](../Handwritten%20Index.md) · [Glossary](../Glossary.md)
 
 
 Figures link to the day index. Source page identifiers refer to the original scans.
 
+
+## Revision route
+
+Start with the simulator's event ordering, then trace how elaboration turns parameterized RTL into a concrete design. Compare synthesis transformations under explicit width and timing assumptions. For Boolean minimization, identify the ON-set and OFF-set before accepting a cube or coverage chart. End by distinguishing a tested trace from an exhaustive equivalence claim.
+
+[Revision checks and explained answers](#revision-checks-and-explained-answers) close the day. These are authored practice examples; original handwritten page identities remain attached to their source figures.
 
 ## Lesson 13: Functional Verification using Simulation
 
@@ -29,13 +35,13 @@ Figures link to the day index. Source page identifiers refer to the original sca
 Week 3 · [Lecture video](https://www.youtube.com/watch?v=3EmADY-fSaw&t=1350s) · [Back to day index](#day-03-index)
 
 
-[![Code coverage: executed statements, branches and FSM states](../Resources/images/Day%2003/Lesson%2013/01-verification-coverage.jpg)](#day-03-index)  
-[![Handwritten source A-01](../Resources/images/Day%2003/Lesson%2013/handwritten-comparison.jpg)](#day-03-index)
+[![Code coverage: executed statements, branches and FSM states](../images/Day%2003/Lesson%2013/01-verification-coverage.jpg)](#day-03-index)  
+[![Handwritten source A-01](../images/Day%2003/Lesson%2013/handwritten-comparison.jpg)](#day-03-index)
 
 
 *Lecture: [22:30](https://www.youtube.com/watch?v=3EmADY-fSaw&t=1350s) · Source: A-01.*
 
-[![Full lecture frame: Code coverage: executed statements, branches and FSM states](../Resources/images/Day%2003/Lesson%2013/01-verification-coverage.jpg)](#day-03-index)
+[![Full lecture frame: Code coverage: executed statements, branches and FSM states](../images/Day%2003/Lesson%2013/01-verification-coverage.jpg)](#day-03-index)
 
 *Lecture: [22:30](https://www.youtube.com/watch?v=3EmADY-fSaw&t=1350s).*
 
@@ -49,7 +55,7 @@ Week 3 · [Lecture video](https://www.youtube.com/watch?v=3EmADY-fSaw&t=1350s) �
 
 ### A-01: Testbench, DUT, waveform and coverage
 
-[![Handwritten Scan A, PDF page 1](../Resources/sources/handwritten/scan-a/h01.jpg)](#day-03-index)
+[![Handwritten Scan A, PDF page 1](../sources/handwritten/scan-a/h01.jpg)](#day-03-index)
 
 *Source: Scan A, PDF page 1.*
 
@@ -78,7 +84,7 @@ Each requirement needs a distinguishable stimulus and expected observation. A sk
 
 ### A-02: Evaluation, updates, event queues and races
 
-[![Handwritten Scan A, PDF page 2](../Resources/sources/handwritten/scan-a/h02.jpg)](#day-03-index)
+[![Handwritten Scan A, PDF page 2](../sources/handwritten/scan-a/h02.jpg)](#day-03-index)
 
 *Source: Scan A, PDF page 2.*
 
@@ -92,7 +98,7 @@ For a small teaching testbench, drive on the falling edge and check after the ne
 
 ### A-03: Classic Verilog stratified event queue
 
-[![Handwritten Scan A, PDF page 3](../Resources/sources/handwritten/scan-a/h03.jpg)](#day-03-index)
+[![Handwritten Scan A, PDF page 3](../sources/handwritten/scan-a/h03.jpg)](#day-03-index)
 
 *Source: Scan A, PDF page 3.*
 
@@ -128,7 +134,7 @@ The [Sutherland Verilog reference guide](https://sutherland-hdl.com/pdfs/verilog
 Week 3 · [Lecture video](https://www.youtube.com/watch?v=Ubupdoq8Nio&t=250s) · [Back to day index](#day-03-index)
 
 
-[![The Bambu tutorial installs the dependencies for its HLS environment](../Resources/images/Day%2003/Lesson%2014/01-bambu-tutorial.jpg)](#day-03-index)
+[![The Bambu tutorial installs the dependencies for its HLS environment](../images/Day%2003/Lesson%2014/01-bambu-tutorial.jpg)](#day-03-index)
 
 
 *Lecture: [Lecture at 4:10](https://www.youtube.com/watch?v=Ubupdoq8Nio&t=250s).*
@@ -184,13 +190,13 @@ This invocation reproduces the historical course version. The handout explains t
 Week 4 · [Lecture video](https://www.youtube.com/watch?v=cnpWgZLgB4I&t=1200s) · [Back to day index](#day-03-index)
 
 
-[![The synthesis boundary and support for Verilog constructs](../Resources/images/Day%2003/Lesson%2015/01-rtl-synthesis.jpg)](#day-03-index)  
-[![Handwritten source A-06](../Resources/images/Day%2003/Lesson%2015/handwritten-comparison.jpg)](#day-03-index)
+[![The synthesis boundary and support for Verilog constructs](../images/Day%2003/Lesson%2015/01-rtl-synthesis.jpg)](#day-03-index)  
+[![Handwritten source A-06](../images/Day%2003/Lesson%2015/handwritten-comparison.jpg)](#day-03-index)
 
 
 *Lecture: [20:00](https://www.youtube.com/watch?v=cnpWgZLgB4I&t=1200s) · Source: A-06.*
 
-[![Full lecture frame: The synthesis boundary and support for Verilog constructs](../Resources/images/Day%2003/Lesson%2015/01-rtl-synthesis.jpg)](#day-03-index)
+[![Full lecture frame: The synthesis boundary and support for Verilog constructs](../images/Day%2003/Lesson%2015/01-rtl-synthesis.jpg)](#day-03-index)
 
 *Lecture: [20:00](https://www.youtube.com/watch?v=cnpWgZLgB4I&t=1200s).*
 
@@ -204,7 +210,7 @@ Week 4 · [Lecture video](https://www.youtube.com/watch?v=cnpWgZLgB4I&t=1200s) �
 
 ### A-04: Parsing, syntax trees and elaboration
 
-[![Handwritten Scan A, PDF page 4](../Resources/sources/handwritten/scan-a/h04.jpg)](#day-03-index)
+[![Handwritten Scan A, PDF page 4](../sources/handwritten/scan-a/h04.jpg)](#day-03-index)
 
 *Source: Scan A, PDF page 4.*
 
@@ -216,7 +222,7 @@ The internal representation may contain word-level operators, muxes and register
 
 ### A-05: Port direction, instances and parameterized counters
 
-[![Handwritten Scan A, PDF page 5](../Resources/sources/handwritten/scan-a/h05.jpg)](#day-03-index)
+[![Handwritten Scan A, PDF page 5](../sources/handwritten/scan-a/h05.jpg)](#day-03-index)
 
 *Source: Scan A, PDF page 5.*
 
@@ -232,7 +238,7 @@ For an unsigned W-bit counter incremented at each enabled edge, the representabl
 
 ### A-06: Synthesis support, muxes and wildcard cases
 
-[![Handwritten Scan A, PDF page 6](../Resources/sources/handwritten/scan-a/h06.jpg)](#day-03-index)
+[![Handwritten Scan A, PDF page 6](../sources/handwritten/scan-a/h06.jpg)](#day-03-index)
 
 *Source: Scan A, PDF page 6.*
 
@@ -259,7 +265,7 @@ For binary inputs, the complete selection is: 00 produces zero, 01 selects d, an
 
 ### A-07: Blocking chains, pipelines and latch inference
 
-[![Handwritten Scan A, PDF page 7](../Resources/sources/handwritten/scan-a/h07.jpg)](#day-03-index)
+[![Handwritten Scan A, PDF page 7](../sources/handwritten/scan-a/h07.jpg)](#day-03-index)
 
 *Source: Scan A, PDF page 7.*
 
@@ -283,13 +289,13 @@ The practical rule is to use blocking assignments for combinational temporaries 
 Week 4 · [Lecture video](https://www.youtube.com/watch?v=7BEKV6FRrOg&t=1200s) · [Back to day index](#day-03-index)
 
 
-[![Speculation: duplicate the adder to move a late selection to the output](../Resources/images/Day%2003/Lesson%2016/01-rtl-optimization.jpg)](#day-03-index)  
-[![Handwritten source A-09](../Resources/images/Day%2003/Lesson%2016/handwritten-comparison.jpg)](#day-03-index)
+[![Speculation: duplicate the adder to move a late selection to the output](../images/Day%2003/Lesson%2016/01-rtl-optimization.jpg)](#day-03-index)  
+[![Handwritten source A-09](../images/Day%2003/Lesson%2016/handwritten-comparison.jpg)](#day-03-index)
 
 
 *Lecture: [20:00](https://www.youtube.com/watch?v=7BEKV6FRrOg&t=1200s) · Source: A-09.*
 
-[![Full lecture frame: Speculation: duplicate the adder to move a late selection to the output](../Resources/images/Day%2003/Lesson%2016/01-rtl-optimization.jpg)](#day-03-index)
+[![Full lecture frame: Speculation: duplicate the adder to move a late selection to the output](../images/Day%2003/Lesson%2016/01-rtl-optimization.jpg)](#day-03-index)
 
 *Lecture: [20:00](https://www.youtube.com/watch?v=7BEKV6FRrOg&t=1200s).*
 
@@ -300,7 +306,7 @@ The lecture moves from individual RTL constructs to transformations that affect 
 
 ### A-08: Loop unrolling, functions and resource sharing
 
-[![Handwritten Scan A, PDF page 8](../Resources/sources/handwritten/scan-a/h08.jpg)](#day-03-index)
+[![Handwritten Scan A, PDF page 8](../sources/handwritten/scan-a/h08.jpg)](#day-03-index)
 
 *Source: Scan A, PDF page 8.*
 
@@ -314,7 +320,7 @@ Resource sharing can replace two mutually exclusive 8-by-8 multipliers with oper
 
 ### A-09: Speculation and the late select path
 
-[![Handwritten Scan A, PDF page 9](../Resources/sources/handwritten/scan-a/h09.jpg)](#day-03-index)
+[![Handwritten Scan A, PDF page 9](../sources/handwritten/scan-a/h09.jpg)](#day-03-index)
 
 *Source: Scan A, PDF page 9.*
 
@@ -352,7 +358,7 @@ For sufficiently late select, the saving is $d_A+d_{in}-d_{out}$, rather than ne
 
 ### A-10: Compiler-style optimization and arithmetic limits
 
-[![Handwritten Scan A, PDF page 10](../Resources/sources/handwritten/scan-a/h10.jpg)](#day-03-index)
+[![Handwritten Scan A, PDF page 10](../sources/handwritten/scan-a/h10.jpg)](#day-03-index)
 
 *Source: Scan A, PDF page 10.*
 
@@ -388,13 +394,13 @@ The [Yosys binary-cell reference](https://yosyshq.readthedocs.io/projects/yosys/
 Week 4 · [Lecture video](https://www.youtube.com/watch?v=xL6VvlsKrjk&t=1350s) · [Back to day index](#day-03-index)
 
 
-[![Boolean space and the vertices of an n-dimensional hypercube](../Resources/images/Day%2003/Lesson%2017/01-cubes-and-minterms.jpg)](#day-03-index)  
-[![Handwritten source A-11](../Resources/images/Day%2003/Lesson%2017/handwritten-comparison.jpg)](#day-03-index)
+[![Boolean space and the vertices of an n-dimensional hypercube](../images/Day%2003/Lesson%2017/01-cubes-and-minterms.jpg)](#day-03-index)  
+[![Handwritten source A-11](../images/Day%2003/Lesson%2017/handwritten-comparison.jpg)](#day-03-index)
 
 
 *Lecture: [22:30](https://www.youtube.com/watch?v=xL6VvlsKrjk&t=1350s) · Source: A-11.*
 
-[![Full lecture frame: Boolean space and the vertices of an n-dimensional hypercube](../Resources/images/Day%2003/Lesson%2017/01-cubes-and-minterms.jpg)](#day-03-index)
+[![Full lecture frame: Boolean space and the vertices of an n-dimensional hypercube](../images/Day%2003/Lesson%2017/01-cubes-and-minterms.jpg)](#day-03-index)
 
 *Lecture: [22:30](https://www.youtube.com/watch?v=xL6VvlsKrjk&t=1350s).*
 
@@ -405,7 +411,7 @@ Use Boolean notation here: juxtaposition is AND, `+` is OR, and a prime mark is 
 
 ### A-11: Literals, cubes, minterms and maxterms
 
-[![Handwritten Scan A, PDF page 11](../Resources/sources/handwritten/scan-a/h11.jpg)](#day-03-index)
+[![Handwritten Scan A, PDF page 11](../sources/handwritten/scan-a/h11.jpg)](#day-03-index)
 
 *Source: Scan A, PDF page 11.*
 
@@ -419,7 +425,7 @@ Canonical SOP is the sum of the minterms where the function is one. Canonical PO
 
 ### A-12: ON-set, OFF-set, dont-cares and implicants
 
-[![Handwritten Scan A, PDF page 12](../Resources/sources/handwritten/scan-a/h12.jpg)](#day-03-index)
+[![Handwritten Scan A, PDF page 12](../sources/handwritten/scan-a/h12.jpg)](#day-03-index)
 
 *Source: Scan A, PDF page 12.*
 
@@ -448,7 +454,7 @@ One way to express the proof obligation is $\mathrm{care}\land(f\oplus g)=0$ for
 
 ### A-13: The prime implicants of AB + ABC + BC
 
-[![Handwritten Scan A, PDF page 13](../Resources/sources/handwritten/scan-a/h13.jpg)](#day-03-index)
+[![Handwritten Scan A, PDF page 13](../sources/handwritten/scan-a/h13.jpg)](#day-03-index)
 
 *Source: Scan A, PDF page 13.*
 
@@ -471,7 +477,7 @@ Redundancy also depends on the selected cover as it evolves. “Nonessential” 
 
 ### A-14: Coverage charts, minimal covers and minimum cost
 
-[![Handwritten Scan A, PDF page 14](../Resources/sources/handwritten/scan-a/h14.jpg)](#day-03-index)
+[![Handwritten Scan A, PDF page 14](../sources/handwritten/scan-a/h14.jpg)](#day-03-index)
 
 *Source: Scan A, PDF page 14.*
 
@@ -532,7 +538,7 @@ The **heuristic minimizer** heading is about finding a good cover without exhaus
 Week 4 · [Lecture video](https://www.youtube.com/watch?v=9Wzz--APeLU&t=650s) · [Back to day index](#day-03-index)
 
 
-[![Counter and testbench structure in the Icarus tutorial](../Resources/images/Day%2003/Lesson%2018/01-icarus-simulation.jpg)](#day-03-index)
+[![Counter and testbench structure in the Icarus tutorial](../images/Day%2003/Lesson%2018/01-icarus-simulation.jpg)](#day-03-index)
 
 
 *Lecture: [Lecture at 10:50](https://www.youtube.com/watch?v=9Wzz--APeLU&t=650s).*
@@ -591,3 +597,44 @@ The expected values at computing edges 14 through 18 are 14, 15, 0, 1 and 2. Edg
 
 
 [Back to day index](#day-03-index)
+
+
+## Revision checks and explained answers
+
+Try each question before reading its answer. Revisit the linked lesson and its original handwritten page when an assumption or step is unclear.
+
+### Check 01: A four-state mux exposes modeling choices
+
+**Question.** For sel=x, a=2'b10 and b=2'b11, compare sel ? a : b with an if(sel) branch selecting a and an else branch selecting b.
+
+**Explained answer.** The conditional operator merges corresponding bits when its condition is unknown: the shared high bit remains 1 and the differing low bit becomes x, giving 1x. The procedural if condition is not true, so the else branch selects 11. The descriptions agree for known 0/1 selects but differ in four-state simulation. State the intended semantics when calling them equivalent.
+
+### Check 02: Count resource-constrained operations
+
+**Question.** Four independent multiplications must run on a nonpipelined unit that accepts and finishes one multiplication per cycle. Compare one such unit with four identical parallel units.
+
+**Explained answer.** One unit needs at least four operation cycles; four units can finish the independent multiplications in one operation cycle under the same per-operation timing assumption. This is a resource/schedule comparison. Dependencies, memory ports, interface traffic and the chosen clock can increase the complete function's latency. A count of arithmetic operations does not establish the achieved initiation interval.
+
+### Check 03: Explain the inferred latch
+
+**Question.** A combinationally intended process assigns y only when enable is true. What must happen when enable is false, and how is storage avoided?
+
+**Explained answer.** The missing assignment requires the previous y value to survive, so the model implies storage. Give y a valid default on every process evaluation, or cover every branch with the required value, when the intended behavior is combinational. Adding an arbitrary default merely to remove a warning can change the required function; establish that function first.
+
+### Check 04: Signed division is not always a shift
+
+**Question.** For signed two's-complement -3, compare division by 2 with arithmetic right shift by one bit.
+
+**Explained answer.** Signed division truncating toward zero gives -1. A sign-preserving right shift gives -2 because the represented negative value rounds downward here. The substitution is valid for some restricted inputs, including suitable nonnegative values, but is not a general signed identity. Keep a signed declaration and enough bits in an executable test; an unsigned or truncated expression asks a different question.
+
+### Check 05: Remove an absorbed cube
+
+**Question.** Simplify AB+ABC+BC and list its ON minterms for variable order A,B,C.
+
+**Explained answer.** ABC is contained in AB, so the function is AB+BC. AB covers 110 and 111; BC covers 011 and 111. The ON-set is therefore {3,6,7}. Both terms are essential: minterm 6 requires AB and minterm 3 requires BC. The absorption proof establishes the Boolean function; it does not predict the final cell topology or physical delay.
+
+### Check 06: Test reset and wrap boundaries
+
+**Question.** An initialized four-bit unsigned counter increments by one per enabled edge. What transition follows 15, and why should the testbench check reset separately?
+
+**Explained answer.** Four-bit storage retains the result modulo 16, so 15 is followed by 0. A wrap assertion checks the implemented width and update behavior. It does not prove reset polarity, asynchronous behavior or the release sequence. Check those conditions independently, and use comparisons that fail on unexpected unknowns rather than allowing an x-valued comparison to hide a failure.

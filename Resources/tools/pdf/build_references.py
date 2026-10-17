@@ -1,4 +1,4 @@
-"""Build the two root-level, theory-focused PDF references from maintained Markdown."""
+"""Build the two theory references alongside the daily PDFs."""
 from pathlib import Path
 from urllib.parse import unquote, quote, urlsplit
 from html import escape
@@ -7,6 +7,7 @@ import hashlib, json, os, re, sys
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 RES = ROOT / 'Resources'
+OUT = ROOT
 QA = HERE / 'qa/references'
 QA.mkdir(parents=True, exist_ok=True)
 sys.path.insert(0, str(HERE / 'vendor'))
@@ -66,12 +67,12 @@ def target(url):
         return url
     source = (RES / unquote(parsed.path)).resolve()
     match = re.fullmatch(r'Day (\d\d)\.md', source.name)
-    if match and source.parent == ROOT / 'Daily Notes':
+    if match and source.parent == ROOT / 'Resources/Daily Notes':
         day = int(match[1])
         destination = unquote(parsed.fragment) or 'contents'
         assert destination == 'contents' or destination in manifest[str(day)]['destinations'], url
-        return 'PDFs/' + quote(manifest[str(day)]['filename']) + '#nameddest=' + quote(destination)
-    relative = Path(os.path.relpath(source, ROOT)).as_posix()
+        return quote(manifest[str(day)]['filename']) + '#nameddest=' + quote(destination)
+    relative = Path(os.path.relpath(source, OUT)).as_posix()
     return quote(relative, safe='/') + (('#' + parsed.fragment) if parsed.fragment else '')
 
 def inline(tokens):
@@ -166,7 +167,7 @@ def finish(path, doc, story, source):
     temporary = path.with_suffix('.named.pdf')
     with temporary.open('wb') as out: writer.write(out)
     os.replace(temporary, path)
-    return {'filename': path.name, 'pages': len(reader.pages),
+    return {'filename': path.relative_to(ROOT).as_posix(), 'pages': len(reader.pages),
             'destinations': doc.destinations, 'headings': doc.headings,
             'source_sha256': hashlib.sha256(source.read_bytes()).hexdigest()}
 
@@ -216,7 +217,7 @@ def build_flow():
             ]))
             story.extend([table, Spacer(1, 5)]); table_no += 1; i += 1
         else: raise ValueError(('Unsupported block', t.type))
-    path = ROOT / 'RTL to GDS Flow.pdf'
+    path = OUT / 'RTL to GDS Flow.pdf'
     doc = ReferenceDoc(path, 'RTL to GDS Flow')
     result = finish(path, doc, story, source)
     assert result['pages'] == 2, ('The flow guide must remain two pages', result['pages'])
@@ -276,7 +277,7 @@ def build_glossary():
         'color="#242424"><u>Course lectures</u></a> · '
         '<a href="Resources/Sources.md" color="#242424"><u>Source register</u></a> · '
         '<a href="RTL%20to%20GDS%20Flow.pdf" color="#242424"><u>Flow guide</u></a>', 'small'))
-    path = ROOT / 'Full Forms.pdf'
+    path = OUT / 'Full Forms.pdf'
     doc = ReferenceDoc(path, 'Full forms and meanings')
     result = finish(path, doc, story, source)
     result['terms'] = term_records

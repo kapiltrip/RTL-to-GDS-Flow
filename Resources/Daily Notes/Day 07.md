@@ -11,7 +11,13 @@ Lessons 37–42 · Weeks 9–10. Source pages C-13–C-24, D-01–D-04 and N-01.
 - [Lesson 41: Power Analysis using OpenSTA](#lesson-41-power-analysis-using-opensta)
 - [Lesson 42: Automatic Test Pattern Generation](#lesson-42-automatic-test-pattern-generation)
 
-[Master index](../README.md) · [Handwritten page index](../Resources/Handwritten%20Index.md) · [Sources](../Resources/Sources.md)
+[Master index](../../README.md) · [Handwritten page index](../Handwritten%20Index.md) · [Sources](../Sources.md)
+
+## Revision route
+
+Separate transition energy from transition rate, then distinguish signal probability from activity. Follow the scan chain using old register values and write a nonpalindromic load pattern. For ATPG, activate the stated fault, propagate its effect with noncontrolling side inputs and justify the assignments. A failed propagation path does not establish that every observation path fails.
+
+[Revision checks and explained answers](#revision-checks-and-explained-answers) close the day. These are authored practice examples; original handwritten page identities remain attached to their source figures.
 
 ## Lesson 37: Power Analysis
 
@@ -19,7 +25,7 @@ Week 9 · [Lecture video](https://www.youtube.com/watch?v=u3--39QdD2Y) · [Back 
 
 <!-- wrapup-frame-37 -->
 
-[![Charge the wire and every receiving pin](../Resources/images/Day%2007/Lesson%2037/01-lecture-frame.jpg)](#day-07-index)
+[![Charge the wire and every receiving pin](../images/Day%2007/Lesson%2037/01-lecture-frame.jpg)](#day-07-index)
 
 *Lecture: [14:39 — Charge the wire and every receiving pin](https://www.youtube.com/watch?v=u3--39QdD2Y&t=879s).*
 
@@ -27,7 +33,7 @@ The fanout drawing separates wire and pin capacitances from the driving cell's i
 
 ### C-13: Where the energy of a CMOS transition goes
 
-[![C-13: Dynamic and static power, and charging capacitance](../Resources/sources/handwritten/scan-c/h13.jpg)](#day-07-index)
+[![C-13: Dynamic and static power, and charging capacitance](../sources/handwritten/scan-c/h13.jpg)](#day-07-index)
 
 *Source: Scan C, PDF page 13.*
 
@@ -47,7 +53,7 @@ For C=20 fF, V=1 V, f=1 GHz and rise-count activity 0.1, power is 2 µW. Doublin
 
 ### C-14: Switching, short-circuit and leakage power
 
-[![C-14: CMOS short-circuit current and power-accounting boundaries](../Resources/sources/handwritten/scan-c/h14.jpg)](#day-07-index)
+[![C-14: CMOS short-circuit current and power-accounting boundaries](../sources/handwritten/scan-c/h14.jpg)](#day-07-index)
 
 *Source: Scan C, PDF page 14.*
 
@@ -61,7 +67,7 @@ For an illustrative cell with 0.4 fJ internal energy per event at 100 million ev
 
 ### C-15: Power tables need realistic activity and parasitics
 
-[![C-15: Nonlinear power model, conditional leakage and activity files](../Resources/sources/handwritten/scan-c/h15.jpg)](#day-07-index)
+[![C-15: Nonlinear power model, conditional leakage and activity files](../sources/handwritten/scan-c/h15.jpg)](#day-07-index)
 
 *Source: Scan C, PDF page 15.*
 
@@ -81,7 +87,7 @@ Week 9 · [Lecture video](https://www.youtube.com/watch?v=-jYtXAHvoZM) · [Back 
 
 <!-- wrapup-frame-38 -->
 
-[![Keep the switch, retention and isolation supplies distinct](../Resources/images/Day%2007/Lesson%2038/01-lecture-frame.jpg)](#day-07-index)
+[![Keep the switch, retention and isolation supplies distinct](../images/Day%2007/Lesson%2038/01-lecture-frame.jpg)](#day-07-index)
 
 *Lecture: [25:33 — Keep the switch, retention and isolation supplies distinct](https://www.youtube.com/watch?v=-jYtXAHvoZM&t=1533s).*
 
@@ -89,7 +95,7 @@ The diagram places a high-VT sleep switch on the gated supply and keeps retentio
 
 ### C-16: Signal probability is not transition activity; DVFS changes both power and time
 
-[![C-16: Signal probabilities and the voltage-frequency example](../Resources/sources/handwritten/scan-c/h16.jpg)](#day-07-index)
+[![C-16: Signal probabilities and the voltage-frequency example](../sources/handwritten/scan-c/h16.jpg)](#day-07-index)
 
 *Source: Scan C, PDF page 16.*
 
@@ -103,7 +109,7 @@ The task contains 12 million clock cycles in either case under the fixed-cycle-c
 
 ### C-17: Power gating disconnects an idle domain
 
-[![C-17: DVFS ratios and the PMOS sleep header](../Resources/sources/handwritten/scan-c/h17.jpg)](#day-07-index)
+[![C-17: DVFS ratios and the PMOS sleep header](../sources/handwritten/scan-c/h17.jpg)](#day-07-index)
 
 *Source: Scan C, PDF page 17.*
 
@@ -117,7 +123,7 @@ Power gating saves energy only when idle time is long enough to repay sleep/wake
 
 ### C-18: Retention and isolation preserve system behavior
 
-[![C-18: Retention supply, isolation and a direct AND clock gate](../Resources/sources/handwritten/scan-c/h18.jpg)](#day-07-index)
+[![C-18: Retention supply, isolation and a direct AND clock gate](../sources/handwritten/scan-c/h18.jpg)](#day-07-index)
 
 *Source: Scan C, PDF page 18.*
 
@@ -131,7 +137,7 @@ The lower AND-gate clock example is unsafe if enable changes while the clock is 
 
 ### C-19: A low-level latch makes the clock enable stable during the high pulse
 
-[![C-19: Integrated clock gate with a transparent-low latch](../Resources/sources/handwritten/scan-c/h19.jpg)](#day-07-index)
+[![C-19: Integrated clock gate with a transparent-low latch](../sources/handwritten/scan-c/h19.jpg)](#day-07-index)
 
 *Source: Scan C, PDF page 19.*
 
@@ -161,7 +167,7 @@ A direct AND would create a late edge at 3 ns and truncate the pulse at 12 ns. T
 
 ### C-20: Spend noncritical slack on power; distinguish design verification from manufacturing test
 
-[![C-20: Noncritical-cell resizing and the manufacturing-test flow](../Resources/sources/handwritten/scan-c/h20.jpg)](#day-07-index)
+[![C-20: Noncritical-cell resizing and the manufacturing-test flow](../sources/handwritten/scan-c/h20.jpg)](#day-07-index)
 
 *Source: Scan C, PDF page 20. The lower DFT introduction continues in Lesson 39.*
 
@@ -181,7 +187,7 @@ Week 9 · [Lecture video](https://www.youtube.com/watch?v=1OoJG8CeFns) · [Back 
 
 <!-- wrapup-frame-39 -->
 
-[![A physical short becomes a testable logical model](../Resources/images/Day%2007/Lesson%2039/01-lecture-frame.jpg)](#day-07-index)
+[![A physical short becomes a testable logical model](../images/Day%2007/Lesson%2039/01-lecture-frame.jpg)](#day-07-index)
 
 *Lecture: [19:32 — A physical short becomes a testable logical model](https://www.youtube.com/watch?v=1OoJG8CeFns&t=1172s).*
 
@@ -189,7 +195,7 @@ The upper wire drawing shorts B to ground; the lower logic drawing represents th
 
 ### C-21: Structural tests target a fault model
 
-[![C-21: Structural NAND testing and physical-defect models](../Resources/sources/handwritten/scan-c/h21.jpg)](#day-07-index)
+[![C-21: Structural NAND testing and physical-defect models](../sources/handwritten/scan-c/h21.jpg)](#day-07-index)
 
 *Source: Scan C, PDF page 21.*
 
@@ -203,7 +209,7 @@ Process variation can shift delay or leakage in otherwise connected devices; it 
 
 ### C-22: Activate the fault and observe the difference
 
-[![C-22: AND-gate stuck-at-zero detection](../Resources/sources/handwritten/scan-c/h22.jpg)](#day-07-index)
+[![C-22: AND-gate stuck-at-zero detection](../sources/handwritten/scan-c/h22.jpg)](#day-07-index)
 
 *Source: Scan C, PDF page 22.*
 
@@ -217,7 +223,7 @@ Controllability means how difficult it is to establish a desired internal value.
 
 ### C-23: Five NAND patterns and the counter-state problem
 
-[![C-23: NAND test vectors, controllability and full scan](../Resources/sources/handwritten/scan-c/h23.jpg)](#day-07-index)
+[![C-23: NAND test vectors, controllability and full scan](../sources/handwritten/scan-c/h23.jpg)](#day-07-index)
 
 *Source: Scan C, PDF page 23.*
 
@@ -237,7 +243,7 @@ Week 9 · [Lecture video](https://www.youtube.com/watch?v=7fGJto2F8JU) · [Back 
 
 <!-- wrapup-frame-40 -->
 
-[![SE selects the value captured at the next clock edge](../Resources/images/Day%2007/Lesson%2040/01-lecture-frame.jpg)](#day-07-index)
+[![SE selects the value captured at the next clock edge](../images/Day%2007/Lesson%2040/01-lecture-frame.jpg)](#day-07-index)
 
 *Lecture: [11:47 — SE selects the value captured at the next clock edge](https://www.youtube.com/watch?v=7fGJto2F8JU&t=707s).*
 
@@ -245,7 +251,7 @@ The scan mux chooses D in functional/capture mode and SI in shift mode. Q also f
 
 ### C-24: The scan mux chooses functional data or serial test data
 
-[![C-24: Scan-cell pins and test-mode settings](../Resources/sources/handwritten/scan-c/h24.jpg)](#day-07-index)
+[![C-24: Scan-cell pins and test-mode settings](../sources/handwritten/scan-c/h24.jpg)](#day-07-index)
 
 *Source: Scan C, PDF page 24.*
 
@@ -267,7 +273,7 @@ Keep three facts separate: the scan pattern was loaded correctly, the fault effe
 
 ### D-01: Follow the serial bits through shift, capture and readout
 
-[![D-01: Three-register scan chain and testing phases](../Resources/sources/handwritten/scan-d/h01.jpg)](#day-07-index)
+[![D-01: Three-register scan chain and testing phases](../sources/handwritten/scan-d/h01.jpg)](#day-07-index)
 
 *Source: Scan D, PDF page 1.*
 
@@ -298,7 +304,7 @@ For K equal parallel chains, replace N by the longest chain length, approximatel
 
 ### D-02: Scan insertion is a logical and physical flow
 
-[![D-02: Scan replacement, stitching, ATPG and overhead](../Resources/sources/handwritten/scan-d/h02.jpg)](#day-07-index)
+[![D-02: Scan replacement, stitching, ATPG and overhead](../sources/handwritten/scan-d/h02.jpg)](#day-07-index)
 
 *Source: Scan D, PDF page 2.*
 
@@ -318,7 +324,7 @@ Week 9 tutorial · [Lecture video](https://www.youtube.com/watch?v=ZHk9e0KpHUY) 
 
 <!-- wrapup-frame-41 -->
 
-[![Read the internal-energy table before multiplying by activity](../Resources/images/Day%2007/Lesson%2041/01-lecture-frame.jpg)](#day-07-index)
+[![Read the internal-energy table before multiplying by activity](../images/Day%2007/Lesson%2041/01-lecture-frame.jpg)](#day-07-index)
 
 *Lecture: [11:34 — Read the internal-energy table before multiplying by activity](https://www.youtube.com/watch?v=ZHk9e0KpHUY&t=694s).*
 
@@ -350,7 +356,7 @@ Week 10 · [Lecture video](https://www.youtube.com/watch?v=oOVaTWGkVy8) · [Back
 
 <!-- wrapup-frame-42 -->
 
-[![Activation alone does not make a complete ATPG vector](../Resources/images/Day%2007/Lesson%2042/01-lecture-frame.jpg)](#day-07-index)
+[![Activation alone does not make a complete ATPG vector](../images/Day%2007/Lesson%2042/01-lecture-frame.jpg)](#day-07-index)
 
 *Lecture: [28:22 — Activation alone does not make a complete ATPG vector](https://www.youtube.com/watch?v=oOVaTWGkVy8&t=1702s).*
 
@@ -358,7 +364,7 @@ The highlighted stuck-at-one branch must have good value zero. The NAND producin
 
 ### D-03: Write both propagation paths and check reconvergence
 
-[![D-03: Seven-gate reconvergent network and paths P1 and P2](../Resources/sources/handwritten/scan-d/h03.jpg)](#day-07-index)
+[![D-03: Seven-gate reconvergent network and paths P1 and P2](../sources/handwritten/scan-d/h03.jpg)](#day-07-index)
 
 *Source: Scan D, PDF page 3.*
 
@@ -378,7 +384,7 @@ This fault assignment is an added worked example; the source page principally de
 
 ### D-04: Controlling values and a complete NAND test
 
-[![D-04: Controlling/noncontrolling values and activation example](../Resources/sources/handwritten/scan-d/h04.jpg)](#day-07-index)
+[![D-04: Controlling/noncontrolling values and activation example](../sources/handwritten/scan-d/h04.jpg)](#day-07-index)
 
 *Source: Scan D, PDF page 4.*
 
@@ -396,7 +402,7 @@ The vector is successful because activation, propagation and justification agree
 
 ### N-01: Backtrack the failed Y path and detect the fault at Z
 
-[![N-01: Digital notebook ATPG backtracking and redundant branch fault](../Resources/sources/handwritten/notebook-atpg/h01.jpg)](#day-07-index)
+[![N-01: Digital notebook ATPG backtracking and redundant branch fault](../sources/handwritten/notebook-atpg/h01.jpg)](#day-07-index)
 
 *Source: Notebook ATPG, PDF page 1. This additional one-page notebook is preserved independently of Scans C–E.*
 
@@ -422,3 +428,44 @@ A proven redundant fault can suggest a logic simplification: replacing that G3 b
 **Day 07 recall:** distinguish energy from power; state the activity convention; trace safe clock gating and power-state sequencing; load a nonpalindromic scan pattern; and justify an ATPG result using both good and faulty behavior.
 
 [Back to day index](#day-07-index)
+
+
+## Revision checks and explained answers
+
+Try each question before reading its answer. Revisit the linked lesson and its original handwritten page when an assumption or step is unclear.
+
+### Check 01: Calculate switching power with units
+
+**Question.** Use activity 0.1 for counted charging events per cycle, capacitance 20 fF, supply 0.8 V and frequency 1 GHz. Find the load-charging power in the stated model.
+
+**Explained answer.** Using $P=\alpha C V^2 f$ gives $0.1\times20\times10^{-15}\times0.8^2\times10^9=1.28\times10^{-6}$ W, or 1.28 microwatts. The activity definition matters: a count of both rising and falling transitions uses a different convention. This calculation excludes separate short-circuit and leakage contributions.
+
+### Check 02: Compare DVFS power and energy
+
+**Question.** For the same operation count, reduce voltage from 1.0 V to 0.8 V and frequency by half. Assume unchanged switched capacitance and charging-event activity per cycle; ignore leakage.
+
+**Explained answer.** Dynamic power scales by $0.8^2\times0.5=0.32$. Runtime doubles under the stated performance assumption, so dynamic energy scales by $0.32\times2=0.64$. Lower instantaneous power does not mean the same proportional energy reduction. Leakage, regulator efficiency and a voltage-dependent timing limit require additional modeling.
+
+### Check 03: Activate an output stuck fault
+
+**Question.** A two-input NAND output is stuck at one. Which input vector distinguishes it from the good circuit? What changes for output stuck at zero?
+
+**Explained answer.** For stuck at one, apply 11 so the good output is 0 and the faulty output is 1. For stuck at zero, any vector with at least one zero gives a good output of 1 and a faulty output of 0. These are tests of the stated output faults. Input and internal branch faults can impose different activation and propagation conditions.
+
+### Check 04: Load a nonpalindromic scan state
+
+**Question.** For SI to FF1 to FF2 to FF3 to SO, load final Q1 Q2 Q3=110 from 000. Give the input order and explain the old-value rule.
+
+**Explained answer.** Shift SI bits 0,1,1. The states after successive shifts are 000,100,110. Each edge uses the old Q1 and Q2 for the downstream registers; the first serial bit ends furthest along the chain. Initial unload observation is Q3=0, then old Q2=1, then old Q1=1 under this convention. Capture is a separate functional phase.
+
+### Check 05: Separate activity changes from a timing repair
+
+**Question.** A power estimate uses 20 million charging events per second for a fixed capacitance and voltage. Measured activity is instead 100 million. What scales, and what remains to be checked?
+
+**Explained answer.** The modeled load-charging contribution increases by a factor of five. This statement holds for the same event convention, capacitance and voltage; it does not multiply every leakage or internal-power term by five. Match stimulus coverage and analysis windows, and use consistent parasitics. A change in the activity annotation alone is not a timing optimization.
+
+### Check 06: Backtrack to another observation point
+
+**Question.** In the notebook example G3=B AND NOT C, G4=C OR D and Z=G3 OR G4. Test G3-output stuck at zero and explain why a failed route toward Y does not end the search.
+
+**Explained answer.** Set B=1,C=0 to activate G3. Set D=0 so G4=0 does not mask Z; A can be either value. Good Z is 1 and faulty Z is 0. The Y route requires a contradictory B assignment in that network, but the Z route remains consistent. Untestability requires excluding all permitted ways to observe the fault, not just the first attempted path.

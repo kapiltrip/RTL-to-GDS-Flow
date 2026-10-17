@@ -5,9 +5,13 @@ from urllib.parse import unquote, quote, urlparse, urlsplit
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent.parent
-OUT = ROOT / 'PDFs'
+OUT = ROOT
 CACHE = HERE / 'cache'
 QA = HERE / 'qa'
+HANDWRITING = {}
+for original in json.loads((ROOT/'Resources/sources/handwritten-inventory.json').read_text(encoding='utf-8'))['originals']:
+    for page in original['page_images']:
+        HANDWRITING[page['path']] = {'source': original['source'], 'pdf_page': page['pdf_page']}
 for folder in (CACHE, QA):
     folder.mkdir(exist_ok=True, parents=True)
 os.environ['MPLCONFIGDIR'] = str(CACHE / 'matplotlib')
@@ -271,12 +275,13 @@ class CodeBlock(Flowable):
 
 class StudyFigure(Flowable):
     """Keep each source figure with its caption and permit modest fit adjustments."""
-    def __init__(self,path,w,h,caption,base_scale=1.0):
+    def __init__(self,path,w,h,caption,base_scale=1.0,source_key=None):
         Flowable.__init__(self)
         self.path=path
         self.base_w=w
         self.base_h=h
         self.caption=caption
+        self.source_key=source_key
         self.scale=base_scale
         self.spaceBefore=5
         self.spaceAfter=9
@@ -291,7 +296,7 @@ class StudyFigure(Flowable):
         possible=(aH-self.cap_h-8)/self.base_h
         # Avoid reducing the source below a comfortably readable size.
         if possible>=.80 and possible<self.scale:
-            return [StudyFigure(self.path,self.base_w,self.base_h,self.caption,possible)]
+            return [StudyFigure(self.path,self.base_w,self.base_h,self.caption,possible,self.source_key)]
         return []
     def draw(self):
         w=self.base_w*self.scale
@@ -338,6 +343,7 @@ class Builder:
         self.source=source
         self.figure_count=0
         self.figure_records=[]
+        self.handwritten_records=[]
         self.headings=[]
         self.lesson=0
         self.external={}
@@ -351,7 +357,7 @@ class Builder:
         if url.startswith('#'):
             if re.match(r'#day-\d+-index$',url) or url=='#lesson-index':return '#contents'
             return '#'+url[1:]
-        m=re.match(r'Day (0[1-6])\.md(?:#(.*))?$',url)
+        m=re.match(r'Day (0[1-9])\.md(?:#(.*))?$',url)
         if m:
             targetday=int(m.group(1))
             anchor=m.group(2) or 'contents'
@@ -363,7 +369,7 @@ class Builder:
                 self.external.setdefault(url,'')
             return url
         parsed = urlsplit(url)
-        target = (ROOT / 'Daily Notes' / parsed.path).resolve()
+        target = (ROOT / 'Resources/Daily Notes' / parsed.path).resolve()
         references = {
             ROOT / 'Resources/Glossary.md': ROOT / 'Full Forms.pdf',
             ROOT / 'Resources/Flow Map.md': ROOT / 'RTL to GDS Flow.pdf',
@@ -472,7 +478,7 @@ class Builder:
         return KeepTogether([tbl]) if keep_small and tbl.wrap(WIDTH,HEIGHT)[1]<=200 else tbl
     def figure(self,token,caption_tokens=None):
         self.figure_count+=1
-        path=(ROOT/'Daily Notes'/unquote(token.attrGet('src'))).resolve()
+        path=(ROOT/'Resources/Daily Notes'/unquote(token.attrGet('src'))).resolve()
         if not path.is_file():raise FileNotFoundError(path)
         w,h=PILImage.open(path).size
         hand='/h' in path.as_posix()
@@ -488,7 +494,13 @@ class Builder:
         self.figure_records.append({'id':label,'path':str(path.relative_to(ROOT)),
                                     'pixels':[w,h],'width_pt':w*scale,'height_pt':h*scale,
                                     'sha256':hashlib.sha256(path.read_bytes()).hexdigest()})
-        return StudyFigure(path,w*scale,h*scale,caption)
+        original=HANDWRITING.get(path.relative_to(ROOT).as_posix())
+        key=None
+        if original:
+            key=f'handwritten-{slug(original["source"])}-page-{original["pdf_page"]}'
+            self.handwritten_records.append({**original,'key':key,'figure':label,
+                                             'path':path.relative_to(ROOT).as_posix()})
+        return StudyFigure(path,w*scale,h*scale,caption,source_key=key)
     def blocks(self,tokens):
         out=[]; i=0; lists=[]
         while i<len(tokens):
@@ -605,6 +617,9 @@ class NotesDoc(BaseDocTemplate):
         c.restoreState()
         self.page_records.append({'page':doc.page,'section':self.current_lesson})
     def afterFlowable(self,f):
+        if getattr(f,'source_key',None):
+            self.canv.bookmarkPage(f.source_key)
+            self.builder.dest_pages[f.source_key]=self.page
         if hasattr(f,'_heading'):
             level,key,title,lesson=f._heading
             self.canv.bookmarkPage(key)
@@ -615,16 +630,17 @@ class NotesDoc(BaseDocTemplate):
                 self.notify('TOCEntry',(level,html.escape(title),self.page,key))
 
 def assembled(day):
-    original=(ROOT/'Daily Notes'/f'Day {day:02d}.md').read_text(encoding='utf-8')
+    original=(ROOT/'Resources/Daily Notes'/f'Day {day:02d}.md').read_text(encoding='utf-8')
     # Maintenance comments identify frame insertions in editable Markdown;
     # they are not reader-facing paragraphs when HTML parsing is disabled.
     original=re.sub(r'^<!-- wrapup-frame-\d+ -->\s*\n','',original,flags=re.M)
     lessons=re.split(r'(?=^## Lesson \d+:)',original,flags=re.M)[1:]
-    result=[]
+    route=re.search(r'^## Revision route\n.*?(?=^## |\Z)',original,re.M|re.S)
+    result=[route.group(0).strip()] if route else []
     for lesson in lessons:
         lesson=re.sub(r'^\[Back to (?:lesson|day) index\].*\n?', '',lesson,flags=re.M)
-        lesson=re.sub(r'^\[Course index\]\(\.\./README.md\) · ', '',lesson,flags=re.M)
-        lesson=re.sub(r' · \[Handwritten index\]\(\.\./Resources/Handwritten%20Index.md\)', '',lesson)
+        lesson=re.sub(r'^\[Course index\]\(\.\./\.\./README.md\) · ', '',lesson,flags=re.M)
+        lesson=re.sub(r' · \[Handwritten index\]\(\.\./Handwritten%20Index.md\)', '',lesson)
         lesson=re.sub(r' · \[Back to day index\]\([^)]+\)', '',lesson)
         lesson=re.sub(r'^### Lesson \d+ outline\n.*?(?=^### )','',lesson,flags=re.M|re.S)
         result.append(lesson.strip())
@@ -636,19 +652,23 @@ def front(b):
           Paragraph(f'VLSI Design Flow RTL to GDS<br/>{lessons}',STYLES['subtitle']),
           b.simple(scope+'.'),
           b.simple('Contents and bookmarks link to sections; figures and page footers return to contents.','small'),
+          b.simple(f'Includes **{len(b.handwritten_records)} complete handwritten pages**. '
+                   '[Find an original page](#handwritten-page-finder) or '
+                   '[test your understanding](#revision-checks-and-explained-answers).','small'),
           b.simple('Course: Prof. Sneh Saurabh, IIIT Delhi, NPTEL. Unix and Tcl tutorials: Jasmine Kaur. Worked examples state their analytical assumptions.','small')]
     toc_heading=ParagraphStyle('contentsheading',parent=STYLES['heading'],keepWithNext=0)
     flow.append(Paragraph('Contents',toc_heading))
     toc=TableOfContents()
     toc.levelStyles=[
-        ParagraphStyle('toc0',fontName='Book-Bold',fontSize=10.4,leading=14.4,
-                       spaceBefore=7,spaceAfter=3,textColor=DARK,leftIndent=0,rightIndent=26,
+        ParagraphStyle('toc0',fontName='Book-Bold',fontSize=10.2 if day<=2 else 10.4,leading=13.5 if day<=2 else 14.4,
+                       spaceBefore=6 if day<=2 else 7,spaceAfter=2 if day<=2 else 3,textColor=DARK,leftIndent=0,rightIndent=26,
                        keepWithNext=1),
-        ParagraphStyle('toc1',fontName='Book',fontSize=9.55,leading=12.5,
+        ParagraphStyle('toc1',fontName='Book',fontSize=9.2 if day<=2 else 9.55,leading=11.8 if day<=2 else 12.5,
                        spaceBefore=0,spaceAfter=1.5,textColor=DARK,leftIndent=13,rightIndent=26),
     ]
     toc.dotsMinLevel=0
     flow.append(toc)
+    flow.append(PageBreak())
     return flow
 
 def backmatter(b):
@@ -656,6 +676,24 @@ def backmatter(b):
     def heading(title,key):
         p=Paragraph(title,STYLES['lesson']);p._heading=(0,key,title,0)
         flow.append(CondPageBreak(340));flow.append(Spacer(1,12));flow.append(p)
+    heading('Handwritten page finder','handwritten-page-finder')
+    flow.append(b.simple('Every entry opens the complete original page embedded in this PDF, '
+                         'beside its explanation. Original scan page numbers and this PDF\'s '
+                         'page numbers are different.'))
+    rows=[[Paragraph('Original handwritten page',STYLES['heading']),
+           Paragraph('Open in this PDF',STYLES['heading'])]]
+    for record in b.handwritten_records:
+        rows.append([b.simple(f'{record["source"]}, page {record["pdf_page"]}'),
+                     b.simple(f'[{record["figure"]}](#{record["key"]})')])
+    finder=Table(rows,colWidths=[WIDTH*.63,WIDTH*.37],repeatRows=1,hAlign='LEFT')
+    finder.setStyle(TableStyle([
+        ('VALIGN',(0,0),(-1,-1),'TOP'),
+        ('LEFTPADDING',(0,0),(-1,-1),0),('RIGHTPADDING',(0,0),(-1,-1),8),
+        ('TOPPADDING',(0,0),(-1,-1),3),('BOTTOMPADDING',(0,0),(-1,-1),3),
+        ('LINEBELOW',(0,0),(-1,0),.6,RULE),
+        ('LINEBELOW',(0,1),(-1,-1),.25,RULE),
+    ]))
+    flow.append(finder)
     heading('Sources and references','sources-and-study-boundary')
     flow.append(b.simple('Primary course: **VLSI Design Flow: RTL to GDS**, Prof. Sneh Saurabh, IIIT Delhi, NPTEL. Unix and Tcl tutorials: Jasmine Kaur. Lecture captions provide video timestamps. Additional derivations and practice examples are study annotations.'))
     flow.append(b.simple('[Open the course video playlist](https://www.youtube.com/playlist?list=PLyqSpQzTE6M8iOrfy70ELk9W72JG5a98V).'))
@@ -678,7 +716,7 @@ def backmatter(b):
     flow.append(b.simple('Numerical examples use stated teaching assumptions. Technology-specific library values and manufacturing rules require their corresponding source models. Verilog examples use traditional Verilog semantics unless otherwise stated.'))
     # Keep this short reference section intact instead of exporting a final
     # page containing only the last two lines of its explanation.
-    return [KeepTogether(flow)] if b.day == 5 else flow
+    return flow
 
 def add_named_destinations(path, dests):
     reader=PdfReader(path)
@@ -709,8 +747,9 @@ def main():
         summary[str(day)]={'filename':path.name,'pages':len(r.pages),'figures':b.figure_count,
                           'code_blocks':len(b.code_records),'word_count':len(source.split()),
                           'headings':b.headings,'destinations':b.dest_pages,'figures_detail':b.figure_records,
+                          'handwritten_pages':b.handwritten_records,
                           'page_sections':doc.page_records,'passes':doc._pass,
-                          'source_sha256':hashlib.sha256((ROOT/'Daily Notes'/f'Day {day:02d}.md').read_bytes()).hexdigest(),
+                          'source_sha256':hashlib.sha256((ROOT/'Resources/Daily Notes'/f'Day {day:02d}.md').read_bytes()).hexdigest(),
                           'paragraphs':b.body_records,'code':b.code_records}
         saved.write_text(json.dumps(summary,indent=2,ensure_ascii=False),encoding='utf-8')
         print(f'Day {day:02d}: {len(r.pages)} pages, {b.figure_count} figures, {len(b.code_records)} code blocks, {doc._pass} layout passes',flush=True)

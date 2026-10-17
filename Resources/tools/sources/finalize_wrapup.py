@@ -42,7 +42,7 @@ for record in records:
         lesson=record['lesson']; day=(lesson-1)//6+1
         title, explanation=annotations[lesson]
         record['caption']=title
-        file=ROOT/'Daily Notes'/f'Day {day:02d}.md'
+        file=ROOT/'Resources/Daily Notes'/f'Day {day:02d}.md'
         text=file.read_text(encoding='utf-8')
         marker=f'<!-- wrapup-frame-{lesson} -->'
         if marker not in text:
@@ -62,7 +62,7 @@ existing=[r for r in existing if r['path'] not in paths]
 
 newpages=[]
 for day in range(6,10):
-    text=(ROOT/'Daily Notes'/f'Day {day:02d}.md').read_text(encoding='utf-8')
+    text=(ROOT/'Resources/Daily Notes'/f'Day {day:02d}.md').read_text(encoding='utf-8')
     lesson=None
     for line in text.splitlines():
         match=re.match(r'^## Lesson (\d+):',line)
@@ -87,7 +87,7 @@ text=index.read_text(encoding='utf-8').split('\n## October continuation')[0].rst
 text+='\n\n## October continuation\n\nThe 3 October uploads contain **24 + 24 + 19 scan pages**, plus **one digital ATPG notebook page**. All 68 are reproduced and explained. PDF source positions remain separate from paper numbers and generated PDF pages.\n\n'
 text+='| Source page | Topic | Explanation |\n|---|---|---|\n'
 for page in sorted(newpages,key=lambda p:(p['key'][0],p['key'])):
-    text+=f'| [{page["key"]}]({page["path"][10:]}) | {page["title"]} | [Day {page["day"]:02d}, Lesson {page["lesson"]}](../Daily%20Notes/Day%20{page["day"]:02d}.md#{page["anchor"]}) |\n'
+    text+=f'| [{page["key"]}]({page["path"][10:]}) | {page["title"]} | [Day {page["day"]:02d}, Lesson {page["lesson"]}](Daily%20Notes/Day%20{page["day"]:02d}.md#{page["anchor"]}) |\n'
 index.write_text(text,encoding='utf-8')
 
 sourcefile=ROOT/'Resources/Sources.md'
@@ -124,9 +124,9 @@ text=re.sub(r'The equal allocation is.*?(?=\n\n)', 'The allocation is **six less
 rows=[]
 for video in videos:
     lesson=video['lesson']; day=(lesson-1)//6+1
-    daytext=(ROOT/'Daily Notes'/f'Day {day:02d}.md').read_text(encoding='utf-8')
+    daytext=(ROOT/'Resources/Daily Notes'/f'Day {day:02d}.md').read_text(encoding='utf-8')
     title=re.search(rf'^## Lesson {lesson}: (.+)$',daytext,re.M).group(1)
-    rows.append(f'| {day:02d} | {video["week"]} | [{lesson:02d} — {title}](Daily%20Notes/Day%20{day:02d}.md#{slug(f"Lesson {lesson}: {title}")}) |')
+    rows.append(f'| {day:02d} | {video["week"]} | [{lesson:02d} — {title}](Resources/Daily%20Notes/Day%20{day:02d}.md#{slug(f"Lesson {lesson}: {title}")}) |')
 text=re.sub(r'^\| \d\d \| \d+ \| \[(?:3[3-9]|4\d|5[0-4])[^\n]*\n','',text,flags=re.M)
 pattern=r'(\| 06 \| 8 \| \[32[^\n]*\n)'
 text=re.sub(pattern,lambda m:m.group(1)+'\n'.join(rows)+'\n',text,count=1)

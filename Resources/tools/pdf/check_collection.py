@@ -56,7 +56,7 @@ assert register['completed_sequence']==54
 assert register['current_day']==(54-1)//6+1==9
 assert register['current_day_lesson']==(54-1)%6+1==6
 for source in register['handwritten_new_pages']:
-    file=ROOT/'Daily Notes'/f'Day {source["day"]:02d}.md'
+    file=ROOT/'Resources/Daily Notes'/f'Day {source["day"]:02d}.md'
     assert source['anchor'] in cache[file.resolve()],source
     assert (ROOT/source['path']).is_file(),source
 assert len(register['handwritten_new_pages'])==100
@@ -94,7 +94,7 @@ for row in index.read_text(encoding='utf-8').splitlines():
     assert len(paths)==1,row
     path='Resources/'+unquote(paths[0])
     assert path in expected and path not in mapped,path
-    targets=re.findall(r'\]\((\.\./Daily%20Notes/Day%20(\d\d)\.md#[^)]+)\)',row)
+    targets=re.findall(r'\]\((Daily%20Notes/Day%20(\d\d)\.md#[^)]+)\)',row)
     assert targets,(path,'Missing explanation')
     assert len({int(day) for url,day in targets})==1,(path,'Mixed-day source identity')
     mapped[path]={**expected[path],'path':path,'day':int(targets[0][1]),
@@ -103,17 +103,19 @@ for row in index.read_text(encoding='utf-8').splitlines():
 assert set(mapped)==set(expected),(set(expected)-set(mapped),set(mapped)-set(expected))
 assert len(mapped)==128
 for page in register['handwritten_new_pages']:
-    target=f'../Daily%20Notes/Day%20{page["day"]:02d}.md#{page["anchor"]}'
+    target=f'Daily%20Notes/Day%20{page["day"]:02d}.md#{page["anchor"]}'
     assert target in mapped[page['path']]['explanations'],page
-    day_source=(ROOT/'Daily Notes'/f'Day {page["day"]:02d}.md').read_text(encoding='utf-8')
-    assert '../'+page['path'] in unquote(day_source),(page,'Full image missing from day notes')
+    day_source=(ROOT/'Resources/Daily Notes'/f'Day {page["day"]:02d}.md').read_text(encoding='utf-8')
+    images=re.findall(r'!\[[^\]]*\]\(([^)]+)\)',day_source)
+    source_folder=ROOT/'Resources/Daily Notes'
+    assert (ROOT/page['path']).resolve() in {(source_folder/unquote(url)).resolve() for url in images},(page,'Full image missing from day notes')
 assert len({p['path'] for p in register['handwritten_new_pages']})==100
 day_counts=Counter(p['day'] for p in mapped.values())
 assert dict(sorted(day_counts.items()))=={1:16,2:12,3:14,4:7,5:8,6:15,7:17,8:17,9:22},day_counts
 lesson_ids=[]
 for day in range(1,10):
     ids=[int(x) for x in re.findall(r'^## Lesson (\d\d):',
-         (ROOT/'Daily Notes'/f'Day {day:02d}.md').read_text(encoding='utf-8'),re.M)]
+         (ROOT/'Resources/Daily Notes'/f'Day {day:02d}.md').read_text(encoding='utf-8'),re.M)]
     assert ids==list(range((day-1)*6+1,day*6+1)),(day,ids)
     lesson_ids.extend(ids)
 assert lesson_ids==list(range(1,55))

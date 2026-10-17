@@ -16,7 +16,7 @@ pages={p['key']:p for p in register['handwritten_new_pages']}
 
 def source_link(key):
     p=pages[key]
-    return f'../Daily%20Notes/Day%20{p["day"]:02d}.md#{p["anchor"]}'
+    return f'Daily%20Notes/Day%20{p["day"]:02d}.md#{p["anchor"]}'
 
 questions=[
 ('C-03','Why subtract the 20 ps capture-clock offset?',
@@ -100,7 +100,7 @@ file.write_text(text,encoding='utf-8')
 
 file=ROOT/'Resources/Study Guide.md'
 text=file.read_text(encoding='utf-8').split('\n## Revising the final weeks')[0].rstrip()
-text+='\n\n## Revising the final weeks\n\nUse Days 06–09 in order when rebuilding the reasoning from constraints to tapeout. For a focused Week 12 review, start at [Day 09](../Daily%20Notes/Day%2009.md#day-09-index). Each full source page has its own explanation; lecture frames link to the demonstrated segment.\n\n'
+text+='\n\n## Revising the final weeks\n\nUse Days 06–09 in order when rebuilding the reasoning from constraints to tapeout. For a focused Week 12 review, start at [Day 09](Daily%20Notes/Day%2009.md#day-09-index). Each full source page has its own explanation; lecture frames link to the demonstrated segment.\n\n'
 text+='| Study block | Reproduce without looking |\n|---|---|\n'
 text+='| Day 06 | Derive input/output delay signs, calculate every mapped path, and compare the original, rewired and Shannon-decomposed timing examples. |\n'
 text+='| Day 07 | Account for event energy/activity, explain clock versus power gating, shift a non-palindromic scan vector, and justify a complete ATPG test or redundancy proof. |\n'
@@ -116,13 +116,13 @@ if '--final' in sys.argv:
     visual=json.loads((QA/'visual-review-wrapup.json').read_text(encoding='utf-8'))
     for day in range(6,10):
         review=visual['days'][str(day)]
-        pdf=ROOT/'PDFs'/manifest[str(day)]['filename']
+        pdf=ROOT/manifest[str(day)]['filename']
         assert review['pages_reviewed']==list(range(1,manifest[str(day)]['pages']+1))
         assert review['pdf_sha256']==hashlib.sha256(pdf.read_bytes()).hexdigest()
     navigation=json.loads((QA/'navigation-detail.json').read_text(encoding='utf-8'))
     checks=json.loads((QA/'checks.json').read_text(encoding='utf-8'))
     for day in range(6,10):
-        pdf=ROOT/'PDFs'/manifest[str(day)]['filename']
+        pdf=ROOT/manifest[str(day)]['filename']
         assert navigation[str(day)]['pdf_sha256']==hashlib.sha256(pdf.read_bytes()).hexdigest()
         assert not checks[str(day)]['geometry_issues']
 
@@ -134,16 +134,16 @@ if '--final' in sys.argv:
       'including tutorials, have lesson sections. The October continuation adds 68 source pages and 22 '
       'course items after Constraints I. Nine six-lesson study blocks are complete.',text,flags=re.S)
     text=re.sub(r'^\| \[06\].*$',
-      '| [06](../Daily%20Notes/Day%2006.md) | 31–36 | Scan B, pages 9–11; Scan C, pages 1–12 | 15 | '
+      '| [06](Daily%20Notes/Day%2006.md) | 31–36 | Scan B, pages 9–11; Scan C, pages 1–12 | 15 | '
       'Clock/SDC modeling; external input/output delay signs; mapped-cell polarity and timing; '
       'late-input rewiring, Shannon decomposition, buffering and retiming with state alignment. |\n'
-      '| [07](../Daily%20Notes/Day%2007.md) | 37–42 | Scan C, pages 13–24; Scan D, pages 1–4; ATPG notebook | 17 | '
+      '| [07](Daily%20Notes/Day%2007.md) | 37–42 | Scan C, pages 13–24; Scan D, pages 1–4; ATPG notebook | 17 | '
       'Switching/internal/leakage power; DVFS energy; power gating and retention; glitch-free clock enable; '
       'scan bit ordering/cost; activation, propagation, backtracking and redundancy proofs. |\n'
-      '| [08](../Daily%20Notes/Day%2008.md) | 43–48 | Scan D, pages 5–21 | 17 | '
+      '| [08](Daily%20Notes/Day%2008.md) | 43–48 | Scan D, pages 5–21 | 17 | '
       'LFSR recurrence/aliasing; implantation and BEOL; wire RC/crosstalk; interface timing budgets; '
       'eligible-area utilization; macro halos/orientations; PDN, IR, transient droop, decoupling and EM. |\n'
-      '| [09](../Daily%20Notes/Day%2009.md) | 49–54 | Scan D, pages 22–24; Scan E, pages 1–19 | 22 | '
+      '| [09](Daily%20Notes/Day%2009.md) | 49–54 | Scan D, pages 22–24; Scan E, pages 1–19 | 22 | '
       'HPWL/density/legalization; scan reordering/ECO spares; buffered clock wire; latency/skew/meshes; '
       'useful-skew setup and hold; global/detailed routing; fill, extraction, DRC/ERC/LVS and final signoff. |',
       text,flags=re.M)

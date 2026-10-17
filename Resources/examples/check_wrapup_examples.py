@@ -164,7 +164,7 @@ results['Placement and clock scheduling'] = {'HPWL_units': hpwl,
     'short_path_hold_slacks_ps': [20, -30]}
 
 source_hashes = {str(day): hashlib.sha256(
-    (ROOT/'Daily Notes'/f'Day {day:02d}.md').read_bytes()).hexdigest()
+    (ROOT/'Resources/Daily Notes'/f'Day {day:02d}.md').read_bytes()).hexdigest()
     for day in range(6, 10)}
 qa = ROOT/'Resources/tools/pdf/qa'
 qa.mkdir(parents=True, exist_ok=True)

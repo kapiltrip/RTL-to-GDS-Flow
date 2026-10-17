@@ -11,9 +11,15 @@ Lessons 49–54 · Weeks 11–12. Source pages D-22–D-24 and E-01–E-19. The 
 - [Lesson 53: Post-layout Verification and Signoff](#lesson-53-post-layout-verification-and-signoff)
 - [Lesson 54: Clock Tree Synthesis and Routing](#lesson-54-clock-tree-synthesis-and-routing)
 
-[Master index](../README.md) · [Handwritten page index](../Resources/Handwritten%20Index.md) · [Sources](../Resources/Sources.md)
+[Master index](../../README.md) · [Handwritten page index](../Handwritten%20Index.md) · [Sources](../Sources.md)
 
 For focused revision: [Why clock buffers help](#e-03-why-an-extra-buffer-can-reduce-wire-delay), [Useful-skew arithmetic](#e-06-recompute-the-333-to-4-ghz-useful-skew-example), [Setup versus hold after CTS](#e-07-useful-skew-transfers-margin-and-can-create-hold-failures), [Routing demand and capacity](#e-10-count-demand-capacity-overflow-and-congestion-separately), and [Final signoff obligations](#e-18-lvs-and-signoff-must-refer-to-the-same-final-design).
+
+## Revision route
+
+Read placement as a preparation for legal routing, not a picture of completed wires. For CTS, derive both setup and hold effects of clock arrival changes. In routing, distinguish capacity estimates from detailed geometry; after any ECO, follow the updated netlist, routes, extraction and signoff evidence together. End with the final handoff so the GDS and every report describe the same design version.
+
+[Revision checks and explained answers](#revision-checks-and-explained-answers) close the day. These are authored practice examples; original handwritten page identities remain attached to their source figures.
 
 ## Lesson 49: Placement
 
@@ -21,7 +27,7 @@ Week 11 · [Lecture video](https://www.youtube.com/watch?v=-M6o03yNb78) · [Back
 
 <!-- wrapup-frame-49 -->
 
-[![Measure the box, then remember what it omits](../Resources/images/Day%2009/Lesson%2049/01-lecture-frame.jpg)](#day-09-index)
+[![Measure the box, then remember what it omits](../images/Day%2009/Lesson%2049/01-lecture-frame.jpg)](#day-09-index)
 
 *Lecture: [14:43 — Measure the box, then remember what it omits](https://www.youtube.com/watch?v=-M6o03yNb78&t=883s).*
 
@@ -29,7 +35,7 @@ The two grid drawings enclose the same pin set and count adjacent sides of the b
 
 ### D-22: Placement makes later routing possible
 
-[![D-22: Global placement, legalization and post-placement optimization](../Resources/sources/handwritten/scan-d/h22.jpg)](#day-09-index)
+[![D-22: Global placement, legalization and post-placement optimization](../sources/handwritten/scan-d/h22.jpg)](#day-09-index)
 
 *Source: Scan D, PDF page 22.*
 
@@ -41,7 +47,7 @@ Each change affects the next stage. A timing repair can add cells and increase l
 
 ### D-23: HPWL is a bounding-box estimate, not a routed tree
 
-[![D-23: Half-perimeter wire length and quadratic placement objective](../Resources/sources/handwritten/scan-d/h23.jpg)](#day-09-index)
+[![D-23: Half-perimeter wire length and quadratic placement objective](../sources/handwritten/scan-d/h23.jpg)](#day-09-index)
 
 *Source: Scan D, PDF page 23.*
 
@@ -59,7 +65,7 @@ The quadratic expression at the bottom is squared Euclidean separation, $(x_i-x_
 
 ### D-24: Density and legality complete the placement objective
 
-[![D-24: Density penalties, legalization and timing-weighted nets](../Resources/sources/handwritten/scan-d/h24.jpg)](#day-09-index)
+[![D-24: Density penalties, legalization and timing-weighted nets](../sources/handwritten/scan-d/h24.jpg)](#day-09-index)
 
 *Source: Scan D, PDF page 24.*
 
@@ -71,7 +77,7 @@ Timing-driven placement assigns greater importance to nets or paths that threate
 
 ### E-01: Reorder scan chains and reserve spare cells deliberately
 
-[![E-01: Timing net weights, scan reordering and spare cells](../Resources/sources/handwritten/scan-e/h01.jpg)](#day-09-index)
+[![E-01: Timing net weights, scan reordering and spare cells](../sources/handwritten/scan-e/h01.jpg)](#day-09-index)
 
 *Source: Scan E, PDF page 1.*
 
@@ -99,7 +105,7 @@ Week 11 tutorial · [Lecture video](https://www.youtube.com/watch?v=NWgkBBXXFKg)
 
 <!-- wrapup-frame-50 -->
 
-[![A generated power grid still needs electrical analysis](../Resources/images/Day%2009/Lesson%2050/01-lecture-frame.jpg)](#day-09-index)
+[![A generated power grid still needs electrical analysis](../images/Day%2009/Lesson%2050/01-lecture-frame.jpg)](#day-09-index)
 
 *Lecture: [10:01 — A generated power grid still needs electrical analysis](https://www.youtube.com/watch?v=NWgkBBXXFKg&t=601s).*
 
@@ -130,7 +136,7 @@ Week 12 · [Lecture video](https://www.youtube.com/watch?v=BQHczZr4ONA) · [Back
 
 <!-- wrapup-frame-51 -->
 
-[![Identify the clock boundary before measuring skew](../Resources/images/Day%2009/Lesson%2051/01-lecture-frame.jpg)](#day-09-index)
+[![Identify the clock boundary before measuring skew](../images/Day%2009/Lesson%2051/01-lecture-frame.jpg)](#day-09-index)
 
 *Lecture: [10:20 — Identify the clock boundary before measuring skew](https://www.youtube.com/watch?v=BQHczZr4ONA&t=620s).*
 
@@ -138,7 +144,7 @@ The diagram labels the generator, declared source and consuming register clock p
 
 ### E-02: Replace the ideal-clock assumption with a physical network
 
-[![E-02: Ideal clock behavior, CTS tasks and clock power](../Resources/sources/handwritten/scan-e/h02.jpg)](#day-09-index)
+[![E-02: Ideal clock behavior, CTS tasks and clock power](../sources/handwritten/scan-e/h02.jpg)](#day-09-index)
 
 *Source: Scan E, PDF page 2.*
 
@@ -152,11 +158,11 @@ The handwritten clock-power percentage is a broad motivation. The course slide g
 
 ### E-03: Why an extra buffer can reduce wire delay
 
-[![E-03: Long-wire RC delay, repeaters and insertion delay](../Resources/sources/handwritten/scan-e/h03.jpg)](#day-09-index)
+[![E-03: Long-wire RC delay, repeaters and insertion delay](../sources/handwritten/scan-e/h03.jpg)](#day-09-index)
 
 *Source: Scan E, PDF page 3.*
 
-[![Clock-wire repeater explanation in the actual lecture](../Resources/images/Day%2009/Lesson%2051/02-clock-wire-buffers.jpg)](#day-09-index)
+[![Clock-wire repeater explanation in the actual lecture](../images/Day%2009/Lesson%2051/02-clock-wire-buffers.jpg)](#day-09-index)
 
 *Lecture: [12:17 — clock-wire buffers](https://www.youtube.com/watch?v=BQHczZr4ONA&t=737s).*
 
@@ -172,7 +178,7 @@ The source writes a signed difference between sink arrivals. Throughout these ex
 
 ### E-04: Global skew and balanced trees
 
-[![E-04: Global/local clock distribution and H-tree/X-tree structures](../Resources/sources/handwritten/scan-e/h04.jpg)](#day-09-index)
+[![E-04: Global/local clock distribution and H-tree/X-tree structures](../sources/handwritten/scan-e/h04.jpg)](#day-09-index)
 
 *Source: Scan E, PDF page 4.*
 
@@ -186,7 +192,7 @@ CTS operates on the actual placement and available resources. A perfectly symmet
 
 ### E-05: Clock meshes improve robustness at an electrical cost
 
-[![E-05: Crosslinks, clock mesh and power tradeoffs](../Resources/sources/handwritten/scan-e/h05.jpg)](#day-09-index)
+[![E-05: Crosslinks, clock mesh and power tradeoffs](../sources/handwritten/scan-e/h05.jpg)](#day-09-index)
 
 *Source: Scan E, PDF page 5.*
 
@@ -200,11 +206,11 @@ As an illustrative power comparison, adding 1 pF of clock capacitance at 1 V and
 
 ### E-06: Recompute the 3.33-to-4 GHz useful-skew example
 
-[![E-06: Three-register example with 200/300 ps logic and changed clock arrivals](../Resources/sources/handwritten/scan-e/h06.jpg)](#day-09-index)
+[![E-06: Three-register example with 200/300 ps logic and changed clock arrivals](../sources/handwritten/scan-e/h06.jpg)](#day-09-index)
 
 *Source: Scan E, PDF page 6.*
 
-[![The completed useful-skew example from the lecture](../Resources/images/Day%2009/Lesson%2051/03-useful-skew.jpg)](#day-09-index)
+[![The completed useful-skew example from the lecture](../images/Day%2009/Lesson%2051/03-useful-skew.jpg)](#day-09-index)
 
 *Lecture: [39:57 — useful-skew illustration](https://www.youtube.com/watch?v=BQHczZr4ONA&t=2397s).*
 
@@ -229,7 +235,7 @@ Also check the external input-to-FF1 and FF3-to-output constraints and every oth
 
 ### E-07: Useful skew transfers margin and can create hold failures
 
-[![E-07: Setup/hold tradeoff, useful skew and propagated clocks](../Resources/sources/handwritten/scan-e/h07.jpg)](#day-09-index)
+[![E-07: Setup/hold tradeoff, useful skew and propagated clocks](../sources/handwritten/scan-e/h07.jpg)](#day-09-index)
 
 *Source: Scan E, PDF page 7.*
 
@@ -269,7 +275,7 @@ Week 12 · [Lecture video](https://www.youtube.com/watch?v=nsYhC5btQko) · [Back
 
 <!-- wrapup-frame-52 -->
 
-[![A graph edge represents a limited physical resource](../Resources/images/Day%2009/Lesson%2052/01-lecture-frame.jpg)](#day-09-index)
+[![A graph edge represents a limited physical resource](../images/Day%2009/Lesson%2052/01-lecture-frame.jpg)](#day-09-index)
 
 *Lecture: [26:38 — A graph edge represents a limited physical resource](https://www.youtube.com/watch?v=nsYhC5btQko&t=1598s).*
 
@@ -277,7 +283,7 @@ The frame connects three-dimensional layer graphs through via edges and compares
 
 ### E-08: Global routing plans; detailed routing creates geometry
 
-[![E-08: Routing goals and the global/detailed split](../Resources/sources/handwritten/scan-e/h08.jpg)](#day-09-index)
+[![E-08: Routing goals and the global/detailed split](../sources/handwritten/scan-e/h08.jpg)](#day-09-index)
 
 *Source: Scan E, PDF page 8.*
 
@@ -291,7 +297,7 @@ Timing and power estimates improve as geometric knowledge improves. A globally e
 
 ### E-09: Turn the routing space into a layer-aware graph
 
-[![E-09: Global-routing bins, graph vertices and layer/via edges](../Resources/sources/handwritten/scan-e/h09.jpg)](#day-09-index)
+[![E-09: Global-routing bins, graph vertices and layer/via edges](../sources/handwritten/scan-e/h09.jpg)](#day-09-index)
 
 *Source: Scan E, PDF page 9.*
 
@@ -305,7 +311,7 @@ The coarse graph hides exact track coordinates and many local rules to keep plan
 
 ### E-10: Count demand, capacity, overflow and congestion separately
 
-[![E-10: Routing capacity, used resources and congestion measures](../Resources/sources/handwritten/scan-e/h10.jpg)](#day-09-index)
+[![E-10: Routing capacity, used resources and congestion measures](../sources/handwritten/scan-e/h10.jpg)](#day-09-index)
 
 *Source: Scan E, PDF page 10.*
 
@@ -331,7 +337,7 @@ The [OpenROAD global-router documentation](https://openroad.readthedocs.io/en/la
 
 ### E-11: Feasibility can require detours, and grid size changes accuracy
 
-[![E-11: Overflow priorities, detours and global-bin granularity](../Resources/sources/handwritten/scan-e/h11.jpg)](#day-09-index)
+[![E-11: Overflow priorities, detours and global-bin granularity](../sources/handwritten/scan-e/h11.jpg)](#day-09-index)
 
 *Source: Scan E, PDF page 11.*
 
@@ -345,11 +351,11 @@ Zero global overflow is a useful milestone. It remains conditional on the coarse
 
 ### E-12: Track pitch must leave room for both wires and vias
 
-[![E-12: Detailed-routing tracks and line/via spacing tradeoffs](../Resources/sources/handwritten/scan-e/h12.jpg)](#day-09-index)
+[![E-12: Detailed-routing tracks and line/via spacing tradeoffs](../sources/handwritten/scan-e/h12.jpg)](#day-09-index)
 
 *Source: Scan E, PDF page 12.*
 
-[![Line-on-line, line-on-via and via-on-via comparisons in the lecture](../Resources/images/Day%2009/Lesson%2052/02-detailed-routing-grid.jpg)](#day-09-index)
+[![Line-on-line, line-on-via and via-on-via comparisons in the lecture](../images/Day%2009/Lesson%2052/02-detailed-routing-grid.jpg)](#day-09-index)
 
 *Lecture: [46:46 — detailed-routing grid](https://www.youtube.com/watch?v=nsYhC5btQko&t=2806s).*
 
@@ -377,7 +383,7 @@ Real via legality also includes cut spacing, enclosure on both connected layers,
 
 ### E-13: Post-route repair changes the circuit and must be analyzed again
 
-[![E-13: Timing/power repair and signal-integrity corrections](../Resources/sources/handwritten/scan-e/h13.jpg)](#day-09-index)
+[![E-13: Timing/power repair and signal-integrity corrections](../sources/handwritten/scan-e/h13.jpg)](#day-09-index)
 
 *Source: Scan E, PDF page 13.*
 
@@ -391,7 +397,7 @@ Use updated parasitics for changed geometry. A cached SPEF from before rerouting
 
 ### E-14: Redundant vias and metal fill protect different aspects of fabrication
 
-[![E-14: Redundant vias, dummy fill and the extraction transition](../Resources/sources/handwritten/scan-e/h14.jpg)](#day-09-index)
+[![E-14: Redundant vias, dummy fill and the extraction transition](../sources/handwritten/scan-e/h14.jpg)](#day-09-index)
 
 *Source: Scan E, PDF page 14. The lower extraction introduction continues in Lesson 53.*
 
@@ -428,7 +434,7 @@ Week 12 · [Lecture video](https://www.youtube.com/watch?v=EKt-Ev3c_bE) · [Back
 
 <!-- wrapup-frame-53 -->
 
-[![LVS compares two independently formed circuit descriptions](../Resources/images/Day%2009/Lesson%2053/01-lecture-frame.jpg)](#day-09-index)
+[![LVS compares two independently formed circuit descriptions](../images/Day%2009/Lesson%2053/01-lecture-frame.jpg)](#day-09-index)
 
 *Lecture: [26:41 — LVS compares two independently formed circuit descriptions](https://www.youtube.com/watch?v=EKt-Ev3c_bE&t=1601s).*
 
@@ -436,7 +442,7 @@ Merged layout and an extraction deck produce the layout netlist; the design data
 
 ### E-15: Circuit extraction and parasitic extraction answer different questions
 
-[![E-15: Merged layout, extracted device netlist and wire parasitics](../Resources/sources/handwritten/scan-e/h15.jpg)](#day-09-index)
+[![E-15: Merged layout, extracted device netlist and wire parasitics](../sources/handwritten/scan-e/h15.jpg)](#day-09-index)
 
 *Source: Scan E, PDF page 15.*
 
@@ -462,7 +468,7 @@ The first moment is a useful response measure, not an exact 50% threshold delay 
 
 ### E-16: Characterized patterns make full-chip extraction practical
 
-[![E-16: Technology characterization, field solving and pattern matching](../Resources/sources/handwritten/scan-e/h16.jpg)](#day-09-index)
+[![E-16: Technology characterization, field solving and pattern matching](../sources/handwritten/scan-e/h16.jpg)](#day-09-index)
 
 *Source: Scan E, PDF page 16.*
 
@@ -476,7 +482,7 @@ The [OpenRCX documentation](https://openroad.readthedocs.io/en/latest/main/src/r
 
 ### E-17: DRC checks geometry; ERC checks electrical construction
 
-[![E-17: Design-rule checking and electrical-rule reports](../Resources/sources/handwritten/scan-e/h17.jpg)](#day-09-index)
+[![E-17: Design-rule checking and electrical-rule reports](../sources/handwritten/scan-e/h17.jpg)](#day-09-index)
 
 *Source: Scan E, PDF page 17.*
 
@@ -490,7 +496,7 @@ When a rule report is fixed, rerun the relevant check on the modified geometry. 
 
 ### E-18: LVS and signoff must refer to the same final design
 
-[![E-18: LVS comparison and final timing/power/physical signoff](../Resources/sources/handwritten/scan-e/h18.jpg)](#day-09-index)
+[![E-18: LVS comparison and final timing/power/physical signoff](../sources/handwritten/scan-e/h18.jpg)](#day-09-index)
 
 *Source: Scan E, PDF page 18.*
 
@@ -514,7 +520,7 @@ The final netlist, placement/routing, merged layout, extraction and reports must
 
 ### E-19: ECOs change the evidence; tapeout releases a verified layout
 
-[![E-19: Functional/timing ECOs and tapeout](../Resources/sources/handwritten/scan-e/h19.jpg)](#day-09-index)
+[![E-19: Functional/timing ECOs and tapeout](../sources/handwritten/scan-e/h19.jpg)](#day-09-index)
 
 *Source: Scan E, PDF page 19.*
 
@@ -548,7 +554,7 @@ Week 12 tutorial · [Lecture video](https://www.youtube.com/watch?v=78O_COvyqAw)
 
 <!-- wrapup-frame-54 -->
 
-[![The script records routing evidence and checkpoints](../Resources/images/Day%2009/Lesson%2054/01-lecture-frame.jpg)](#day-09-index)
+[![The script records routing evidence and checkpoints](../images/Day%2009/Lesson%2054/01-lecture-frame.jpg)](#day-09-index)
 
 *Lecture: [8:20 — The script records routing evidence and checkpoints](https://www.youtube.com/watch?v=78O_COvyqAw&t=500s).*
 
@@ -579,7 +585,7 @@ The course routing script establishes pin-access layers, writes global guides, c
 
 Parasitic extraction then uses a technology extraction model to write the appropriate parasitic file, commonly SPEF. If no extraction model is available and the script falls back to global-route estimates, label the result as estimated. That fallback does not become final-layout extraction just because it appears at the end of the script.
 
-[![The actual tutorial's routed layout with clock and signal-net display](../Resources/images/Day%2009/Lesson%2054/02-routed-layout.jpg)](#day-09-index)
+[![The actual tutorial's routed layout with clock and signal-net display](../images/Day%2009/Lesson%2054/02-routed-layout.jpg)](#day-09-index)
 
 *Lecture: [11:34 — routed-layout display](https://www.youtube.com/watch?v=78O_COvyqAw&t=694s).*
 
@@ -592,3 +598,44 @@ Follow one register-to-register transfer across the stages. Placement chooses th
 To explain this flow without memorized labels, answer these five prompts: why does a midpoint clock buffer help a long wire; why can a later capture clock pass setup and fail hold; why does zero global overflow not prove legal detailed routing; why can a layout be DRC-clean but LVS-wrong; and why must fill or rerouting precede the final parasitic/timing evidence? The page-specific derivations above supply the mechanisms and assumptions for each answer.
 
 [Back to day index](#day-09-index)
+
+
+## Revision checks and explained answers
+
+Try each question before reading its answer. Revisit the linked lesson and its original handwritten page when an assumption or step is unclear.
+
+### Check 01: HPWL is a lower-bound estimate
+
+**Question.** Four pins occupy the corners of a 10 by 10 square. Find HPWL and compare it with a rectilinear tree consisting of three sides of the square.
+
+**Explained answer.** HPWL is bounding-box width plus height: 10+10=20 length units. The stated connected tree has length 30. HPWL does not enumerate all wire segments and therefore is not the measured routed length. Pin access, layer changes and obstacles can add further cost; placement minimizes an estimate whose physical feasibility must be checked later.
+
+### Check 02: A saved checkpoint has a boundary
+
+**Question.** A post-placement checkpoint loads successfully. Does it establish that clock trees, detailed routes and final signoff exist?
+
+**Explained answer.** It establishes that the saved placement-stage representation can be reopened. Inspect which stages and objects it contains. Clock-tree cells, detailed wires, extraction and final checks are separate evidence unless the checkpoint actually includes them. Resume with matching libraries, constraints and technology files so a later report refers to that same design state.
+
+### Check 03: Useful skew transfers margin
+
+**Question.** A proposed clock change delays capture by 40 ps while launch and data delays remain fixed. What happens to ordinary next-cycle setup and same-edge hold slack?
+
+**Explained answer.** Setup slack increases by 40 ps and hold slack decreases by 40 ps. Both follow from capture-minus-launch skew entering the two inequalities with opposite signs. The change is useful only if the remaining hold margin and other affected paths are acceptable. Real clock edits also change slew and variation, so rerun the relevant propagated-clock scenarios.
+
+### Check 04: Count congestion before declaring a route legal
+
+**Question.** A global-routing edge has capacity 10 and demand 13. Find overflow. If a neighboring edge has spare capacity, is the detailed route automatically feasible?
+
+**Explained answer.** Overflow on the first edge is max(13-10,0)=3 track-equivalent units. Spare capacity elsewhere can motivate a detour, but a connected, layer-legal path with accessible pins and legal vias must exist. Global demand/capacity counts are an abstraction; detailed rules and geometric conflicts can still prevent a legal route.
+
+### Check 05: Recheck both sides of a hold ECO
+
+**Question.** Before an illustrative ECO, hold slack is -20 ps and setup slack is +80 ps. Assume its effective added delay is exactly 30 ps in both analyses. What are the new slacks?
+
+**Explained answer.** Hold becomes +10 ps; setup becomes +50 ps under those assumptions. This demonstrates the tradeoff, not the signoff result: real minimum and maximum added delays can differ. Legalize and route the change, re-extract, check the appropriate corners and confirm equivalence and physical checks on the resulting version.
+
+### Check 06: Assemble a consistent final handoff
+
+**Question.** A layout passes DRC and its extracted connectivity matches the reference in LVS. What still prevents treating these two passes as complete timing signoff?
+
+**Explained answer.** DRC checks the encoded geometry rules and LVS checks modeled connectivity/device agreement. Neither alone proves timing with the final parasitics, clocks, operating corners and constraints. The final GDS, post-ECO netlist, extraction, timing reports and accepted verification evidence must identify matching versions. A functional ECO also requires the approved revised functional reference.

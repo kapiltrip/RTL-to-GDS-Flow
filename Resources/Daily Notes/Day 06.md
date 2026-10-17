@@ -13,11 +13,17 @@ Lessons 31–36. This completed study block continues through the Week 8 tutoria
 - [Lesson 36: Technology Library and Constraints](#lesson-36-technology-library-and-constraints)
 
 
-[Master index](../README.md) · [Handwritten page index](../Resources/Handwritten%20Index.md) · [Glossary](../Resources/Glossary.md)
+[Master index](../../README.md) · [Handwritten page index](../Handwritten%20Index.md) · [Glossary](../Glossary.md)
 
 
 Figures link to the day index. Source page identifiers refer to the original scans.
 
+
+## Revision route
+
+Read an OpenSTA report as an arrival/deadline calculation before changing a constraint. Work from external interface behavior to input/output budgets and distinguish model declarations from hardware. For mapping and optimization, preserve the full function and cycle alignment. The revision checks expose incorrect repairs caused by ignoring protocols, reconvergence or the location of a late input.
+
+[Revision checks and explained answers](#revision-checks-and-explained-answers) close the day. These are authored practice examples; original handwritten page identities remain attached to their source figures.
 
 ## Lesson 31: Static Timing Analysis using OpenSTA
 
@@ -25,7 +31,7 @@ Figures link to the day index. Source page identifiers refer to the original sca
 Week 7 · [Lecture video](https://www.youtube.com/watch?v=fKKuQGoirfM&t=500s) · [Back to day index](#day-06-index)
 
 
-[![OpenSTA input files, command sequence and timing-report instructions](../Resources/images/Day%2006/Lesson%2031/01-opensta-report.jpg)](#day-06-index)
+[![OpenSTA input files, command sequence and timing-report instructions](../images/Day%2006/Lesson%2031/01-opensta-report.jpg)](#day-06-index)
 
 
 *Lecture: [Lecture at 8:20](https://www.youtube.com/watch?v=fKKuQGoirfM&t=500s).*
@@ -79,20 +85,20 @@ The absence of a path from a report can mean it is unconstrained, disconnected, 
 Week 8 · [Lecture video](https://www.youtube.com/watch?v=rLhnmyGYsuQ&t=2300s) · [Back to day index](#day-06-index)
 
 
-[![Generated-clock definition preserves its relationship to a master clock](../Resources/images/Day%2006/Lesson%2032/02-generated-clock-definition.jpg)](#day-06-index)  
-[![Handwritten source B-10](../Resources/images/Day%2006/Lesson%2032/handwritten-comparison.jpg)](#day-06-index)
+[![Generated-clock definition preserves its relationship to a master clock](../images/Day%2006/Lesson%2032/02-generated-clock-definition.jpg)](#day-06-index)  
+[![Handwritten source B-10](../images/Day%2006/Lesson%2032/handwritten-comparison.jpg)](#day-06-index)
 
 
 *Lecture: [38:20](https://www.youtube.com/watch?v=rLhnmyGYsuQ&t=2300s) · Source: B-10.*
 
-[![Full lecture frame: Generated-clock definition preserves its relationship to a master clock](../Resources/images/Day%2006/Lesson%2032/02-generated-clock-definition.jpg)](#day-06-index)
+[![Full lecture frame: Generated-clock definition preserves its relationship to a master clock](../images/Day%2006/Lesson%2032/02-generated-clock-definition.jpg)](#day-06-index)
 
 *Lecture: [38:20](https://www.youtube.com/watch?v=rLhnmyGYsuQ&t=2300s).*
 
 
 ### B-09: Constraint categories and primary-clock definitions
 
-[![Handwritten Scan B, PDF page 9](../Resources/sources/handwritten/scan-b/h09.jpg)](#day-06-index)
+[![Handwritten Scan B, PDF page 9](../sources/handwritten/scan-b/h09.jpg)](#day-06-index)
 
 *Source: Scan B, PDF page 9.*
 
@@ -163,7 +169,7 @@ Draw the old-data launch, capture and next-data launch before substituting numbe
 
 ### B-10: Generated clocks, latency and model versus hardware
 
-[![Handwritten Scan B, PDF page 10](../Resources/sources/handwritten/scan-b/h10.jpg)](#day-06-index)
+[![Handwritten Scan B, PDF page 10](../sources/handwritten/scan-b/h10.jpg)](#day-06-index)
 
 *Source: Scan B, PDF page 10.*
 
@@ -199,11 +205,11 @@ The handwritten “set_unit” is not a universal SDC command. Verify the select
 
 ### B-11: Jitter, skew, uncertainty and transition
 
-[![Lecture: clock uncertainty](../Resources/images/Day%2006/Lesson%2032/03-clock-uncertainty.jpg)](#day-06-index)
+[![Lecture: clock uncertainty](../images/Day%2006/Lesson%2032/03-clock-uncertainty.jpg)](#day-06-index)
 
 *Lecture: [Clock uncertainty at 49:20](https://www.youtube.com/watch?v=rLhnmyGYsuQ&t=2960s). Jitter, skew estimates and explicit margins have different physical origins.*
 
-[![Handwritten Scan B, PDF page 11](../Resources/sources/handwritten/scan-b/h11.jpg)](#day-06-index)
+[![Handwritten Scan B, PDF page 11](../sources/handwritten/scan-b/h11.jpg)](#day-06-index)
 
 *Source: Scan B, PDF page 11.*
 
@@ -240,7 +246,7 @@ Week 8 · [Lecture video](https://www.youtube.com/watch?v=psrHHK7GFiY) · [Back 
 
 <!-- wrapup-frame-33 -->
 
-[![Translate the external receiver into an output requirement](../Resources/images/Day%2006/Lesson%2033/01-lecture-frame.jpg)](#day-06-index)
+[![Translate the external receiver into an output requirement](../images/Day%2006/Lesson%2033/01-lecture-frame.jpg)](#day-06-index)
 
 *Lecture: [20:01 — Translate the external receiver into an output requirement](https://www.youtube.com/watch?v=psrHHK7GFiY&t=1201s).*
 
@@ -248,7 +254,7 @@ The frame compares the physical receiver with its virtual analysis counterpart. 
 
 ### C-01: Input delay describes the circuit outside the block
 
-[![C-01: External launching register and the block input](../Resources/sources/handwritten/scan-c/h01.jpg)](#day-06-index)
+[![C-01: External launching register and the block input](../sources/handwritten/scan-c/h01.jpg)](#day-06-index)
 
 *Source: Scan C, PDF page 1.*
 
@@ -268,7 +274,7 @@ These values assume the library time unit is ps. Check `report_units` before int
 
 ### C-02: Input slew and output capacitance are different boundary conditions
 
-[![C-02: Input-transition and driving-cell models](../Resources/sources/handwritten/scan-c/h02.jpg)](#day-06-index)
+[![C-02: Input-transition and driving-cell models](../sources/handwritten/scan-c/h02.jpg)](#day-06-index)
 
 *Source: Scan C, PDF page 2.*
 
@@ -282,7 +288,7 @@ The handwritten `BUF1X` and technology name identify an example driver, not a po
 
 ### C-03: Derive the 410 ps output delay from the external receiver
 
-[![C-03: External capture register, setup and board-wire delay](../Resources/sources/handwritten/scan-c/h03.jpg)](#day-06-index)
+[![C-03: External capture register, setup and board-wire delay](../sources/handwritten/scan-c/h03.jpg)](#day-06-index)
 
 *Source: Scan C, PDF page 3.*
 
@@ -300,7 +306,7 @@ The zero-setup/zero-hold virtual register in the drawing is an analysis abstract
 
 ### C-04: Output timing, load and false paths
 
-[![C-04: Output constraints and logically blocked timing paths](../Resources/sources/handwritten/scan-c/h04.jpg)](#day-06-index)
+[![C-04: Output constraints and logically blocked timing paths](../sources/handwritten/scan-c/h04.jpg)](#day-06-index)
 
 *Source: Scan C, PDF page 4.*
 
@@ -319,7 +325,7 @@ The [OpenSTA command reference](https://opensta.readthedocs.io/en/latest/Command
 
 ### C-05: Multicycle checks, case analysis and the mapper's inputs
 
-[![C-05: Multicycle relationships, case analysis and technology mapping](../Resources/sources/handwritten/scan-c/h05.jpg)](#day-06-index)
+[![C-05: Multicycle relationships, case analysis and technology mapping](../sources/handwritten/scan-c/h05.jpg)](#day-06-index)
 
 *Source: Scan C, PDF page 5. The lower mapping diagram continues in Lesson 34.*
 
@@ -359,7 +365,7 @@ Week 8 · [Lecture video](https://www.youtube.com/watch?v=ooOZagskglo) · [Back 
 
 <!-- wrapup-frame-34 -->
 
-[![Count every mapped cell and every relevant input arc](../Resources/images/Day%2006/Lesson%2034/01-lecture-frame.jpg)](#day-06-index)
+[![Count every mapped cell and every relevant input arc](../images/Day%2006/Lesson%2034/01-lecture-frame.jpg)](#day-06-index)
 
 *Lecture: [14:11 — Count every mapped cell and every relevant input arc](https://www.youtube.com/watch?v=ooOZagskglo&t=851s).*
 
@@ -367,7 +373,7 @@ The displayed toy mapping uses two NAND1 and two INV1 cells. Their area totals 4
 
 ### C-06: Replace generic logic with characterized cells
 
-[![C-06: Mapping choices and the function y equals NOT of AB plus C](../Resources/sources/handwritten/scan-c/h06.jpg)](#day-06-index)
+[![C-06: Mapping choices and the function y equals NOT of AB plus C](../sources/handwritten/scan-c/h06.jpg)](#day-06-index)
 
 *Source: Scan C, PDF page 6.*
 
@@ -381,7 +387,7 @@ The NAND/low-power variants in the notes illustrate a menu of legal library cell
 
 ### C-07: Structural alternatives must preserve the complete function
 
-[![C-07: De Morgan transformation, functional matching and BDDs](../Resources/sources/handwritten/scan-c/h07.jpg)](#day-06-index)
+[![C-07: De Morgan transformation, functional matching and BDDs](../sources/handwritten/scan-c/h07.jpg)](#day-06-index)
 
 *Source: Scan C, PDF page 7.*
 
@@ -401,7 +407,7 @@ Week 8 · [Lecture video](https://www.youtube.com/watch?v=xLw7xAosmtI) · [Back 
 
 <!-- wrapup-frame-35 -->
 
-[![Late-input rewiring changes 220 ps into 180 ps](../Resources/images/Day%2006/Lesson%2035/01-lecture-frame.jpg)](#day-06-index)
+[![Late-input rewiring changes 220 ps into 180 ps](../images/Day%2006/Lesson%2035/01-lecture-frame.jpg)](#day-06-index)
 
 *Lecture: [24:28 — Late-input rewiring changes 220 ps into 180 ps](https://www.youtube.com/watch?v=xLw7xAosmtI&t=1468s).*
 
@@ -409,7 +415,7 @@ In the left chain, late B=70 ps crosses three 50 ps gates: the successive arriva
 
 ### C-08: Timing optimization is an analysis-and-change loop
 
-[![C-08: Synthesis stages and the timing optimization loop](../Resources/sources/handwritten/scan-c/h08.jpg)](#day-06-index)
+[![C-08: Synthesis stages and the timing optimization loop](../sources/handwritten/scan-c/h08.jpg)](#day-06-index)
 
 *Source: Scan C, PDF page 8.*
 
@@ -423,7 +429,7 @@ After setup closure, recovering area or power from slack is reasonable: a slower
 
 ### C-09: Upsizing and rewiring move delay between stages
 
-[![C-09: Larger transistor drive and critical-input rewiring](../Resources/sources/handwritten/scan-c/h09.jpg)](#day-06-index)
+[![C-09: Larger transistor drive and critical-input rewiring](../sources/handwritten/scan-c/h09.jpg)](#day-06-index)
 
 *Source: Scan C, PDF page 9.*
 
@@ -443,7 +449,7 @@ After resizing, propagate the new slew into downstream table lookups and evaluat
 
 ### C-10: Reassociate the AND chain around the late input
 
-[![C-10: AND-chain arrivals and Shannon expansion](../Resources/sources/handwritten/scan-c/h10.jpg)](#day-06-index)
+[![C-10: AND-chain arrivals and Shannon expansion](../sources/handwritten/scan-c/h10.jpg)](#day-06-index)
 
 *Source: Scan C, PDF page 10.*
 
@@ -461,7 +467,7 @@ It implements the two cofactors in parallel and uses $x_0$ to select between the
 
 ### C-11: A late-select mux saves 15 ps in the page's example
 
-[![C-11: Shannon decomposition of AB plus C and buffered fanout](../Resources/sources/handwritten/scan-c/h11.jpg)](#day-06-index)
+[![C-11: Shannon decomposition of AB plus C and buffered fanout](../sources/handwritten/scan-c/h11.jpg)](#day-06-index)
 
 *Source: Scan C, PDF page 11.*
 
@@ -473,7 +479,7 @@ The buffered-fanout drawing isolates a critical destination from many noncritica
 
 ### C-12: Balance fanout and retime with cycle alignment preserved
 
-[![C-12: Fanout groups and register-to-register retiming example](../Resources/sources/handwritten/scan-c/h12.jpg)](#day-06-index)
+[![C-12: Fanout groups and register-to-register retiming example](../sources/handwritten/scan-c/h12.jpg)](#day-06-index)
 
 *Source: Scan C, PDF page 12.*
 
@@ -501,7 +507,7 @@ Week 8 tutorial · [Lecture video](https://www.youtube.com/watch?v=u_XXFBwTXRk) 
 
 <!-- wrapup-frame-36 -->
 
-[![Recompute the actual tutorial timing report](../Resources/images/Day%2006/Lesson%2036/01-lecture-frame.jpg)](#day-06-index)
+[![Recompute the actual tutorial timing report](../images/Day%2006/Lesson%2036/01-lecture-frame.jpg)](#day-06-index)
 
 *Lecture: [11:04 — Recompute the actual tutorial timing report](https://www.youtube.com/watch?v=u_XXFBwTXRk&t=664s).*
 
@@ -538,3 +544,44 @@ Use the actual top module name in `link_design`. Before changing one variable, r
 **Day 06 recall:** derive both I/O maximum and minimum constraints; explain the difference between arrival and slew; compare functionally equivalent mappings using complete path arrivals; and distinguish a constraint change from a netlist transformation.
 
 [Back to day index](#day-06-index)
+
+
+## Revision checks and explained answers
+
+Try each question before reading its answer. Revisit the linked lesson and its original handwritten page when an assumption or step is unclear.
+
+### Check 01: Diagnose a negative slack
+
+**Question.** A setup report gives required time 1.7 ns and arrival time 1.9 ns. What is slack, and would changing a reported constraint prove the circuit repaired?
+
+**Explained answer.** Slack is $1.7-1.9=-0.2$ ns. A genuine clock-period relaxation can change the requirement if the specification allows it; editing a constraint to hide the violation does not improve the circuit. Check the start/end points, launch/capture clocks and path components before choosing a repair. Same-edge hold is not ordinarily fixed by increasing period.
+
+### Check 02: Generated-clock declarations do not divide hardware
+
+**Question.** A primary clock has period 2 ns. A generated clock declared divide-by-four models a divider output. Find the modeled period and state what must exist in RTL/netlist.
+
+**Explained answer.** The generated period is 8 ns, or 125 MHz. The declaration tells timing analysis how to relate edges; it does not build a divider. The actual divider, its source pin and edge behavior must match that model. An unrelated target or an incorrect edge relationship can make a syntactically accepted constraint describe the wrong circuit.
+
+### Check 03: Budget the external receiver
+
+**Question.** The next reference edge is at 3 ns. External flight time plus receiver setup is represented by an output delay of 0.410 ns. The block's output arrives at 2.600 ns. Ignore other margins for this check.
+
+**Explained answer.** The block must present its output by $3-0.410=2.590$ ns. Slack is -0.010 ns, or -10 ps. The positive output-delay requirement reserves time for the receiving environment. It is not an extra on-chip cell delay to append to the arrival path, and output capacitance is a separate electrical boundary condition.
+
+### Check 04: Justify a multicycle exception
+
+**Question.** For a common 2 ns clock, a four-cycle setup relationship permits which nominal capture edge? Why is a long path alone insufficient justification?
+
+**Explained answer.** The nominal setup capture edge moves from 2 ns to 8 ns under the stated same-frequency convention. The functional protocol must make that the valid sample and keep the required launched value stable; intervening captures cannot be interpreted as valid results. The familiar three-cycle hold adjustment restores the intended hold relationship for this convention, not for every -start/-end or unrelated-clock case.
+
+### Check 05: Place the late input last
+
+**Question.** Four inputs feed three 20 ps two-input AND gates. Input a arrives at 120 ps; b,c,d arrive at zero. Compare ((a AND b) AND c) AND d with a AND ((b AND c) AND d).
+
+**Explained answer.** The first form propagates a through three gates and finishes at 180 ps. In the second, the b,c,d subtree is ready at 40 ps; the final gate waits for a at 120 ps and finishes at 140 ps. The Boolean identity permits reassociation, and the simplified timing model predicts 40 ps improvement. Characterized slew/load and routing can change the realized benefit.
+
+### Check 06: Retiming must preserve a mux's time alignment
+
+**Question.** A register boundary is moved backward across a mux to balance stage delays. Is registering only one data input sufficient?
+
+**Explained answer.** No general equivalence follows. Both relevant data values and the select must refer to the intended transaction/cycle at the moved boundary. A mux combining data from different cycles can be logically plausible yet sequentially wrong. State mapping, reset, enables and externally visible latency must also satisfy the chosen retiming proof.

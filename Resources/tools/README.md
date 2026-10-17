@@ -9,4 +9,4 @@
 
 Run commands from the repository root. Content belongs in the daily Markdown and resource references; production scripts supply formatting and verification. Numerical and HDL teaching checks live with the executable examples.
 
-PDF tools use ignored `vendor`, `cache`, `qa`, `logs` and `history` folders for local dependencies and work products. Generated final reader PDFs are versioned in the root and `PDFs`; temporary page renders and simulation outputs are not published.
+PDF tools use ignored `vendor`, `cache`, `qa`, `logs` and `history` folders for local dependencies and work products. All final reader PDFs are versioned directly at the repository top level; temporary page renders and simulation outputs are not published.

@@ -17,11 +17,17 @@ Lessons 19–24. Six-lesson study blocks; the full collection is complete throug
 - [Lesson 24: Formal Verification - III](#lesson-24-formal-verification---iii)
 
 
-[Master index](../README.md) · [Handwritten page index](../Resources/Handwritten%20Index.md) · [Glossary](../Resources/Glossary.md)
+[Master index](../../README.md) · [Handwritten page index](../Handwritten%20Index.md) · [Glossary](../Glossary.md)
 
 
 Figures link to the day index. Source page identifiers refer to the original scans.
 
+
+## Revision route
+
+Read combinational factoring as an identity over a stated care set. Then move to sequential behavior, where state correspondence and legal input sequences matter. Derive BDD cofactors before reducing the graph, and interpret SAT or bounded-model-checking results using the exact formula, initialization and bound. The checks below make the proof obligation explicit rather than accepting a tool's pass label without context.
+
+[Revision checks and explained answers](#revision-checks-and-explained-answers) close the day. These are authored practice examples; original handwritten page identities remain attached to their source figures.
 
 ## Lesson 19: Logic Optimization - Part II
 
@@ -29,13 +35,13 @@ Figures link to the day index. Source page identifiers refer to the original sca
 Week 5 · [Lecture video](https://www.youtube.com/watch?v=x747bipwDeQ&t=1351s) · [Back to day index](#day-04-index)
 
 
-[![A Boolean network exposes both local functions and structural dependencies](../Resources/images/Day%2004/Lesson%2019/01-multilevel-logic.jpg)](#day-04-index)  
-[![Handwritten source A-15](../Resources/images/Day%2004/Lesson%2019/handwritten-comparison.jpg)](#day-04-index)
+[![A Boolean network exposes both local functions and structural dependencies](../images/Day%2004/Lesson%2019/01-multilevel-logic.jpg)](#day-04-index)  
+[![Handwritten source A-15](../images/Day%2004/Lesson%2019/handwritten-comparison.jpg)](#day-04-index)
 
 
 *Lecture: [22:31](https://www.youtube.com/watch?v=x747bipwDeQ&t=1351s) · Source: A-15.*
 
-[![Full lecture frame: A Boolean network exposes both local functions and structural dependencies](../Resources/images/Day%2004/Lesson%2019/01-multilevel-logic.jpg)](#day-04-index)
+[![Full lecture frame: A Boolean network exposes both local functions and structural dependencies](../images/Day%2004/Lesson%2019/01-multilevel-logic.jpg)](#day-04-index)
 
 *Lecture: [22:31](https://www.youtube.com/watch?v=x747bipwDeQ&t=1351s).*
 
@@ -49,7 +55,7 @@ Week 5 · [Lecture video](https://www.youtube.com/watch?v=x747bipwDeQ&t=1351s) �
 
 ### A-15: Factoring and Boolean-network structure
 
-[![Handwritten Scan A, PDF page 15](../Resources/sources/handwritten/scan-a/h15.jpg)](#day-04-index)
+[![Handwritten Scan A, PDF page 15](../sources/handwritten/scan-a/h15.jpg)](#day-04-index)
 
 *Source: Scan A, PDF page 15.*
 
@@ -63,7 +69,7 @@ Literal totals and counts of graph stages are useful estimates during optimizati
 
 ### A-16: Substitution, extraction and the algebraic model
 
-[![Handwritten Scan A, PDF page 16](../Resources/sources/handwritten/scan-a/h16.jpg)](#day-04-index)
+[![Handwritten Scan A, PDF page 16](../sources/handwritten/scan-a/h16.jpg)](#day-04-index)
 
 *Source: Scan A, PDF page 16.*
 
@@ -97,13 +103,13 @@ The acronym SDC in this optimization context can mean **satisfiability don't-car
 Week 5 · [Lecture video](https://www.youtube.com/watch?v=HNqmpCD2-pY&t=1400s) · [Back to day index](#day-04-index)
 
 
-[![FSM optimization and state encoding](../Resources/images/Day%2004/Lesson%2020/01-sequential-optimization.jpg)](#day-04-index)  
-[![Handwritten source A-17](../Resources/images/Day%2004/Lesson%2020/handwritten-comparison.jpg)](#day-04-index)
+[![FSM optimization and state encoding](../images/Day%2004/Lesson%2020/01-sequential-optimization.jpg)](#day-04-index)  
+[![Handwritten source A-17](../images/Day%2004/Lesson%2020/handwritten-comparison.jpg)](#day-04-index)
 
 
 *Lecture: [23:20](https://www.youtube.com/watch?v=HNqmpCD2-pY&t=1400s) · Source: A-17.*
 
-[![Full lecture frame: FSM optimization and state encoding](../Resources/images/Day%2004/Lesson%2020/01-sequential-optimization.jpg)](#day-04-index)
+[![Full lecture frame: FSM optimization and state encoding](../images/Day%2004/Lesson%2020/01-sequential-optimization.jpg)](#day-04-index)
 
 *Lecture: [23:20](https://www.youtube.com/watch?v=HNqmpCD2-pY&t=1400s).*
 
@@ -112,7 +118,7 @@ Week 5 · [Lecture video](https://www.youtube.com/watch?v=HNqmpCD2-pY&t=1400s) �
 
 ### A-17: FSMs, state equivalence and encoding
 
-[![Handwritten Scan A, PDF page 17](../Resources/sources/handwritten/scan-a/h17.jpg)](#day-04-index)
+[![Handwritten Scan A, PDF page 17](../sources/handwritten/scan-a/h17.jpg)](#day-04-index)
 
 *Source: Scan A, PDF page 17.*
 
@@ -156,13 +162,13 @@ The “how to find errors” question connects to the next formal-verification l
 Week 5 · [Lecture video](https://www.youtube.com/watch?v=Li-tGyilPOc&t=1091s) · [Back to day index](#day-04-index)
 
 
-[![BDDs and SAT solvers as formal-verification engines](../Resources/images/Day%2004/Lesson%2021/01-formal-verification.jpg)](#day-04-index)  
-[![Handwritten source A-18](../Resources/images/Day%2004/Lesson%2021/handwritten-comparison.jpg)](#day-04-index)
+[![BDDs and SAT solvers as formal-verification engines](../images/Day%2004/Lesson%2021/01-formal-verification.jpg)](#day-04-index)  
+[![Handwritten source A-18](../images/Day%2004/Lesson%2021/handwritten-comparison.jpg)](#day-04-index)
 
 
 *Lecture: [18:11](https://www.youtube.com/watch?v=Li-tGyilPOc&t=1091s) · Source: A-18.*
 
-[![Full lecture frame: BDDs and SAT solvers as formal-verification engines](../Resources/images/Day%2004/Lesson%2021/01-formal-verification.jpg)](#day-04-index)
+[![Full lecture frame: BDDs and SAT solvers as formal-verification engines](../images/Day%2004/Lesson%2021/01-formal-verification.jpg)](#day-04-index)
 
 *Lecture: [18:11](https://www.youtube.com/watch?v=Li-tGyilPOc&t=1091s).*
 
@@ -173,7 +179,7 @@ The screenshot separates BDDs and SAT solvers as computational engines. Model ch
 
 ### A-18: Proof scope, simulation and symbolic representation
 
-[![Handwritten Scan A, PDF page 18](../Resources/sources/handwritten/scan-a/h18.jpg)](#day-04-index)
+[![Handwritten Scan A, PDF page 18](../sources/handwritten/scan-a/h18.jpg)](#day-04-index)
 
 *Source: Scan A, PDF page 18.*
 
@@ -187,7 +193,7 @@ Truth tables provide a canonical explicit representation after variable order is
 
 ### A-19: Shannon expansion and cofactors
 
-[![Handwritten Scan A, PDF page 19](../Resources/sources/handwritten/scan-a/h19.jpg)](#day-04-index)
+[![Handwritten Scan A, PDF page 19](../sources/handwritten/scan-a/h19.jpg)](#day-04-index)
 
 *Source: Scan A, PDF page 19.*
 
@@ -207,7 +213,7 @@ The red three-variable example used in the next drawing is `f=x1 x2 + x2' x3 + x
 
 ### A-20: Ordered graphs and reduction rules
 
-[![Handwritten Scan A, PDF page 20](../Resources/sources/handwritten/scan-a/h20.jpg)](#day-04-index)
+[![Handwritten Scan A, PDF page 20](../sources/handwritten/scan-a/h20.jpg)](#day-04-index)
 
 *Source: Scan A, PDF page 20.*
 
@@ -261,7 +267,7 @@ This is why the polynomial-size margin note on A-21 needs qualification. Good sh
 Week 5 · [Lecture video](https://www.youtube.com/watch?v=c-cFxuH-HbE&t=394s) · [Back to day index](#day-04-index)
 
 
-[![Yosys tutorial: commands that transform RTL into a mapped netlist](../Resources/images/Day%2004/Lesson%2022/01-yosys-synthesis.jpg)](#day-04-index)
+[![Yosys tutorial: commands that transform RTL into a mapped netlist](../images/Day%2004/Lesson%2022/01-yosys-synthesis.jpg)](#day-04-index)
 
 
 *Lecture: [Lecture at 6:34](https://www.youtube.com/watch?v=c-cFxuH-HbE&t=394s).*
@@ -310,13 +316,13 @@ No SDC timing target is supplied by this simple tutorial script. Do not interpre
 Week 6 · [Lecture video](https://www.youtube.com/watch?v=wN6XP-aTlRs&t=901s) · [Back to day index](#day-04-index)
 
 
-[![CNF clause sizes and the k-SAT convention](../Resources/images/Day%2004/Lesson%2023/02-sat-propagation.jpg)](#day-04-index)  
-[![Handwritten source A-21](../Resources/images/Day%2004/Lesson%2023/handwritten-comparison.jpg)](#day-04-index)
+[![CNF clause sizes and the k-SAT convention](../images/Day%2004/Lesson%2023/02-sat-propagation.jpg)](#day-04-index)  
+[![Handwritten source A-21](../images/Day%2004/Lesson%2023/handwritten-comparison.jpg)](#day-04-index)
 
 
 *Lecture: [15:01](https://www.youtube.com/watch?v=wN6XP-aTlRs&t=901s) · Source: A-21.*
 
-[![Full lecture frame: CNF clause sizes and the k-SAT convention](../Resources/images/Day%2004/Lesson%2023/02-sat-propagation.jpg)](#day-04-index)
+[![Full lecture frame: CNF clause sizes and the k-SAT convention](../images/Day%2004/Lesson%2023/02-sat-propagation.jpg)](#day-04-index)
 
 *Lecture: [15:01](https://www.youtube.com/watch?v=wN6XP-aTlRs&t=901s).*
 
@@ -325,7 +331,7 @@ Week 6 · [Lecture video](https://www.youtube.com/watch?v=wN6XP-aTlRs&t=901s) ·
 
 ### A-21: SAT, UNSAT, CNF and ROBDD scope
 
-[![Handwritten Scan A, PDF page 21](../Resources/sources/handwritten/scan-a/h21.jpg)](#day-04-index)
+[![Handwritten Scan A, PDF page 21](../sources/handwritten/scan-a/h21.jpg)](#day-04-index)
 
 *Source: Scan A, PDF page 21.*
 
@@ -382,7 +388,7 @@ A circuit CNF can repeat this construction with auxiliary variables for gate out
 Week 6 · [Lecture video](https://www.youtube.com/watch?v=u494ozFC5pI&t=1840s) · [Back to day index](#day-04-index)
 
 
-[![BDD-based model checking: the one-step image of a state set](../Resources/images/Day%2004/Lesson%2024/01-model-checking.jpg)](#day-04-index)
+[![BDD-based model checking: the one-step image of a state set](../images/Day%2004/Lesson%2024/01-model-checking.jpg)](#day-04-index)
 
 
 *Lecture: [Lecture at 30:40](https://www.youtube.com/watch?v=u494ozFC5pI&t=1840s).*
@@ -425,3 +431,44 @@ Strengthen the induction hypothesis with q<2, which excludes the unreachable sta
 Report which result you have: a reset-reachable counterexample, bounded absence of a counterexample, or an inductive proof with established invariants. A SAT assignment from an induction step has a different interpretation from a SAT trace constrained by reset and every preceding transition.
 
 [Back to day index](#day-04-index)
+
+
+## Revision checks and explained answers
+
+Try each question before reading its answer. Revisit the linked lesson and its original handwritten page when an assumption or step is unclear.
+
+### Check 01: Factoring preserves a function, not a timing report
+
+**Question.** Why does AB+AC equal A(B+C), and does the factored expression necessarily run faster?
+
+**Explained answer.** Distributivity proves equality for every Boolean assignment. When A is 0 both forms are 0; when A is 1 both reduce to B+C. Factoring can share the A condition, but mapped cell choices, fanout and wire loads determine physical cost. A reduced literal count is not a proof of improved delay or power.
+
+### Check 02: Equal current outputs do not merge Moore states
+
+**Question.** Two Moore states both output 0. Under input 1, one enters a state outputting 1 and the other enters a state outputting 0. Can the original states be merged?
+
+**Explained answer.** No. The one-symbol future input sequence 1 distinguishes their future outputs. State equivalence requires indistinguishable required behavior for all allowed future sequences. Partition refinement must split states whose corresponding successors fall into different output/equivalence classes, even if their present outputs match.
+
+### Check 03: Construct the Shannon branches
+
+**Question.** For F=AB+A'C, derive the cofactors at A=0 and A=1 and reconstruct F.
+
+**Explained answer.** Setting A=0 gives C; setting A=1 gives B. Shannon expansion therefore gives F=A'C+AB. These are the low and high branches at an A decision node. Reduction can remove a node whose branches become identical or merge identical subgraphs, but those rules apply to the same variable ordering and function.
+
+### Check 04: Interpret a mapped-netlist result
+
+**Question.** A Yosys run reads RTL, elaborates the top, lowers processes, optimizes and maps gates. What would a lower cell count establish?
+
+**Explained answer.** It establishes a change in the counted representation under that run's inputs and accounting. It does not alone establish preserved behavior, realistic timing or a routable layout. Check the elaborated top, parameters, library and constraints; compare behavior with an appropriate equivalence method. A smaller generic network and a smaller technology-mapped design are different measurements.
+
+### Check 05: Find a short UNSAT proof
+
+**Question.** Show that (a OR b), (NOT a OR b), (a OR NOT b), and (NOT a OR NOT b) cannot all hold.
+
+**Explained answer.** If b=0, the first two clauses require both a and NOT a, so they force b=1. If b=1, the last two require both a and NOT a, so they force b=0. No assignment satisfies the four-clause conjunction. This is a proof about the encoded Boolean formula; a hardware conclusion also requires a faithful encoding.
+
+### Check 06: Strengthen the induction hypothesis
+
+**Question.** A reset machine reaches only states 0 and 1. An unreachable state 2 transitions to forbidden state 3. Why can induction fail for q!=3 although all reset traces satisfy it?
+
+**Explained answer.** The induction step may begin in any state satisfying q!=3, including unreachable state 2, and then reach 3. Strengthen the hypothesis with the reachable-state invariant q in {0,1}, prove that reset establishes it and transitions preserve it, then derive q!=3. UNSAT for a finite BMC bound alone does not supply that unbounded argument.

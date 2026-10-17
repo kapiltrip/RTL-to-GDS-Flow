@@ -17,11 +17,17 @@ Lessons 25–30. Six-lesson study blocks; the full collection is complete throug
 - [Lesson 30: Static Timing Analysis - III](#lesson-30-static-timing-analysis---iii)
 
 
-[Master index](../README.md) · [Handwritten page index](../Resources/Handwritten%20Index.md) · [Glossary](../Resources/Glossary.md)
+[Master index](../../README.md) · [Handwritten page index](../Handwritten%20Index.md) · [Glossary](../Glossary.md)
 
 
 Figures link to the day index. Source page identifiers refer to the original scans.
 
+
+## Revision route
+
+Compare implementations using the correct combinational or sequential reference. Treat Liberty as characterized electrical behavior, not a physical footprint. For every timing calculation, write launch and capture edges, choose max for setup or min for hold, and only then substitute numbers. Close with the operating-mode and corner assumptions; passing one scenario is not closure of the scenario set.
+
+[Revision checks and explained answers](#revision-checks-and-explained-answers) close the day. These are authored practice examples; original handwritten page identities remain attached to their source figures.
 
 ## Lesson 25: Formal Verification - IV
 
@@ -29,7 +35,7 @@ Figures link to the day index. Source page identifiers refer to the original sca
 Week 6 · [Lecture video](https://www.youtube.com/watch?v=uQ-xAc7SxEc&t=1080s) · [Back to day index](#day-05-index)
 
 
-[![CEC matching: correspondence of registers and ports](../Resources/images/Day%2005/Lesson%2025/02-register-matching.jpg)](#day-05-index)
+[![CEC matching: correspondence of registers and ports](../images/Day%2005/Lesson%2025/02-register-matching.jpg)](#day-05-index)
 
 
 *Lecture: [Lecture at 18:00](https://www.youtube.com/watch?v=uQ-xAc7SxEc&t=1080s).*
@@ -71,7 +77,7 @@ Source: NPTEL Formal Verification IV, lecture-material pages 4–13. Prerequisit
 Week 6 · [Lecture video](https://www.youtube.com/watch?v=tcfwuloB-zM&t=2700s) · [Back to day index](#day-05-index)
 
 
-[![Timing arcs and threshold-based propagation-delay definitions](../Resources/images/Day%2005/Lesson%2026/02-nonlinear-delay-model.jpg)](#day-05-index)
+[![Timing arcs and threshold-based propagation-delay definitions](../images/Day%2005/Lesson%2026/02-nonlinear-delay-model.jpg)](#day-05-index)
 
 
 *Lecture: [Lecture at 45:00](https://www.youtube.com/watch?v=tcfwuloB-zM&t=2700s).*
@@ -134,7 +140,7 @@ The lecture introduces CCS (Composite Current Source) and ECSM (Effective Curren
 Week 6 · [Lecture video](https://www.youtube.com/watch?v=Phcq_iDo3ss&t=531s) · [Back to day index](#day-05-index)
 
 
-[![Unoptimized cell statistics and the optimization script](../Resources/images/Day%2005/Lesson%2027/01-yosys-sharing.jpg)](#day-05-index)
+[![Unoptimized cell statistics and the optimization script](../images/Day%2005/Lesson%2027/01-yosys-sharing.jpg)](#day-05-index)
 
 
 *Lecture: [Lecture at 8:51](https://www.youtube.com/watch?v=Phcq_iDo3ss&t=531s).*
@@ -172,20 +178,20 @@ An operator-level area estimate makes the tradeoff explicit. With multiplier are
 Week 7 · [Lecture video](https://www.youtube.com/watch?v=qC5ZPVaOgTI&t=1700s) · [Back to day index](#day-05-index)
 
 
-[![STA: setup checks and data-path timing](../Resources/images/Day%2005/Lesson%2028/01-setup-timing.jpg)](#day-05-index)  
-[![Handwritten source B-01](../Resources/images/Day%2005/Lesson%2028/handwritten-comparison.jpg)](#day-05-index)
+[![STA: setup checks and data-path timing](../images/Day%2005/Lesson%2028/01-setup-timing.jpg)](#day-05-index)  
+[![Handwritten source B-01](../images/Day%2005/Lesson%2028/handwritten-comparison.jpg)](#day-05-index)
 
 
 *Lecture: [28:20](https://www.youtube.com/watch?v=qC5ZPVaOgTI&t=1700s) · Source: B-01.*
 
-[![Full lecture frame: STA: setup checks and data-path timing](../Resources/images/Day%2005/Lesson%2028/01-setup-timing.jpg)](#day-05-index)
+[![Full lecture frame: STA: setup checks and data-path timing](../images/Day%2005/Lesson%2028/01-setup-timing.jpg)](#day-05-index)
 
 *Lecture: [28:20](https://www.youtube.com/watch?v=qC5ZPVaOgTI&t=1700s).*
 
 
 ### B-01: The sampling window and the basic setup equation
 
-[![Handwritten Scan B, PDF page 1](../Resources/sources/handwritten/scan-b/h01.jpg)](#day-05-index)
+[![Handwritten Scan B, PDF page 1](../sources/handwritten/scan-b/h01.jpg)](#day-05-index)
 
 *Source: Scan B, PDF page 1.*
 
@@ -207,7 +213,7 @@ The slew annotation belongs to the shape of a transition. In library and STA usa
 
 ### B-02: Setup slack, skewed clocks and the hold window
 
-[![Handwritten Scan B, PDF page 2](../Resources/sources/handwritten/scan-b/h02.jpg)](#day-05-index)
+[![Handwritten Scan B, PDF page 2](../sources/handwritten/scan-b/h02.jpg)](#day-05-index)
 
 *Source: Scan B, PDF page 2.*
 
@@ -221,7 +227,7 @@ Increasing the period can help an ordinary next-cycle setup check, but it does n
 
 ### B-03: Maximum frequency, hold repair and signed requirements
 
-[![Handwritten Scan B, PDF page 3](../Resources/sources/handwritten/scan-b/h03.jpg)](#day-05-index)
+[![Handwritten Scan B, PDF page 3](../sources/handwritten/scan-b/h03.jpg)](#day-05-index)
 
 *Source: Scan B, PDF page 3.*
 
@@ -252,13 +258,13 @@ For setup, a requirement of -10 ps moves the latest allowed data arrival to ten 
 Week 7 · [Lecture video](https://www.youtube.com/watch?v=ftkMDGJY6cg&t=2000s) · [Back to day index](#day-05-index)
 
 
-[![Delay calculation uses input waveform, driver, wire and receiver models](../Resources/images/Day%2005/Lesson%2029/01-slew-and-propagation.jpg)](#day-05-index)  
-[![Handwritten source B-05](../Resources/images/Day%2005/Lesson%2029/handwritten-comparison.jpg)](#day-05-index)
+[![Delay calculation uses input waveform, driver, wire and receiver models](../images/Day%2005/Lesson%2029/01-slew-and-propagation.jpg)](#day-05-index)  
+[![Handwritten source B-05](../images/Day%2005/Lesson%2029/handwritten-comparison.jpg)](#day-05-index)
 
 
 *Lecture: [33:20](https://www.youtube.com/watch?v=ftkMDGJY6cg&t=2000s) · Source: B-05.*
 
-[![Full lecture frame: Delay calculation uses input waveform, driver, wire and receiver models](../Resources/images/Day%2005/Lesson%2029/01-slew-and-propagation.jpg)](#day-05-index)
+[![Full lecture frame: Delay calculation uses input waveform, driver, wire and receiver models](../images/Day%2005/Lesson%2029/01-slew-and-propagation.jpg)](#day-05-index)
 
 *Lecture: [33:20](https://www.youtube.com/watch?v=ftkMDGJY6cg&t=2000s).*
 
@@ -269,7 +275,7 @@ Define skew as `C-L`, capture latency minus launch latency. This sign convention
 
 ### B-04: Derive the skew signs before memorizing them
 
-[![Handwritten Scan B, PDF page 4](../Resources/sources/handwritten/scan-b/h04.jpg)](#day-05-index)
+[![Handwritten Scan B, PDF page 4](../sources/handwritten/scan-b/h04.jpg)](#day-05-index)
 
 *Source: Scan B, PDF page 4.*
 
@@ -295,7 +301,7 @@ To interpret the internal sampling sketch, consider a deliberately simplified ce
 
 ### B-05: Arrival time and slew are separate propagated quantities
 
-[![Handwritten Scan B, PDF page 5](../Resources/sources/handwritten/scan-b/h05.jpg)](#day-05-index)
+[![Handwritten Scan B, PDF page 5](../sources/handwritten/scan-b/h05.jpg)](#day-05-index)
 
 *Source: Scan B, PDF page 5.*
 
@@ -326,7 +332,7 @@ This is the operational reason for the max/min distinction in B-04 and B-05. Set
 
 ### B-06: Graph-based versus path-based analysis and timing margins
 
-[![Handwritten Scan B, PDF page 6](../Resources/sources/handwritten/scan-b/h06.jpg)](#day-05-index)
+[![Handwritten Scan B, PDF page 6](../sources/handwritten/scan-b/h06.jpg)](#day-05-index)
 
 *Source: Scan B, PDF page 6.*
 
@@ -348,13 +354,13 @@ Do not arbitrarily remove a margin to make a report pass. As physical implementa
 Week 7 · [Lecture video](https://www.youtube.com/watch?v=NOOXX3OIvj4&t=2600s) · [Back to day index](#day-05-index)
 
 
-[![MMMC scenarios combine cell-library, mode and interconnect conditions](../Resources/images/Day%2005/Lesson%2030/02-multi-mode-multi-corner.jpg)](#day-05-index)  
-[![Handwritten source B-08](../Resources/images/Day%2005/Lesson%2030/handwritten-comparison.jpg)](#day-05-index)
+[![MMMC scenarios combine cell-library, mode and interconnect conditions](../images/Day%2005/Lesson%2030/02-multi-mode-multi-corner.jpg)](#day-05-index)  
+[![Handwritten source B-08](../images/Day%2005/Lesson%2030/handwritten-comparison.jpg)](#day-05-index)
 
 
 *Lecture: [43:20](https://www.youtube.com/watch?v=NOOXX3OIvj4&t=2600s) · Source: B-08.*
 
-[![Full lecture frame: MMMC scenarios combine cell-library, mode and interconnect conditions](../Resources/images/Day%2005/Lesson%2030/02-multi-mode-multi-corner.jpg)](#day-05-index)
+[![Full lecture frame: MMMC scenarios combine cell-library, mode and interconnect conditions](../images/Day%2005/Lesson%2030/02-multi-mode-multi-corner.jpg)](#day-05-index)
 
 *Lecture: [43:20](https://www.youtube.com/watch?v=NOOXX3OIvj4&t=2600s).*
 
@@ -363,7 +369,7 @@ Week 7 · [Lecture video](https://www.youtube.com/watch?v=NOOXX3OIvj4&t=2600s) �
 
 ### B-07: MMMC scenarios and the role of uncertainty
 
-[![Handwritten Scan B, PDF page 7](../Resources/sources/handwritten/scan-b/h07.jpg)](#day-05-index)
+[![Handwritten Scan B, PDF page 7](../sources/handwritten/scan-b/h07.jpg)](#day-05-index)
 
 *Source: Scan B, PDF page 7.*
 
@@ -390,7 +396,7 @@ Actual scenarios also vary clock paths, requirements, slew and RC models. A scan
 
 ### B-08: Early/late derating and the inputs to STA
 
-[![Handwritten Scan B, PDF page 8](../Resources/sources/handwritten/scan-b/h08.jpg)](#day-05-index)
+[![Handwritten Scan B, PDF page 8](../sources/handwritten/scan-b/h08.jpg)](#day-05-index)
 
 *Source: Scan B, PDF page 8.*
 
@@ -412,3 +418,44 @@ The lower diagram identifies the STA inputs: a linked netlist for topology, timi
 
 
 [Back to day index](#day-05-index)
+
+
+## Revision checks and explained answers
+
+Try each question before reading its answer. Revisit the linked lesson and its original handwritten page when an assumption or step is unclear.
+
+### Check 01: Use a miter witness
+
+**Question.** Compare f=a XOR b with g=b XOR a. Then replace g with a OR b. What can a combinational miter show?
+
+**Explained answer.** For the first pair, f XOR g is zero for all four Boolean inputs, so that combinational comparison is equivalent. For the second, a=b=1 gives f=0 and g=1, producing a counterexample. A combinational result does not by itself relate reset states or retimed registers in two sequential machines.
+
+### Check 02: Interpolate both dimensions
+
+**Question.** Use delay rows [20,30] ps at input transition 10 ps and [40,60] ps at 30 ps, with loads 1 and 3 fF. Find delay at transition 15 ps and load 2.5 fF.
+
+**Explained answer.** The load fraction is 0.75. Interpolating each row gives 27.5 ps and 55 ps. The transition fraction is 0.25, so the result is $0.75\times27.5+0.25\times55=34.375$ ps. This is in-range bilinear interpolation for this authored table. It says nothing about the tool's extrapolation policy or a separate output-transition table.
+
+### Check 03: State what resource sharing saves
+
+**Question.** Two mutually exclusive operators each cost 100 area units. A shared implementation uses one operator plus 30 units of selection/control. Compare stated area and name the remaining timing question.
+
+**Explained answer.** The stated unshared area is 200; the shared area is 130, saving 70 units, or 35%. Exclusivity must hold under the legal operation protocol. Selection can add a mux to a late path, and sharing can increase fanout and wire length. Those effects require a timing/physical comparison rather than an inference from the illustrative area totals.
+
+### Check 04: Derive setup slack with positive skew
+
+**Question.** Use T=1,000 ps, launch arrival 50 ps, capture arrival 100 ps, maximum clock-to-Q 80 ps, maximum data delay 600 ps, setup 70 ps and setup uncertainty 20 ps.
+
+**Explained answer.** Data arrives at $50+80+600=730$ ps. The next capture deadline is $1000+100-70-20=1010$ ps. Setup slack is 280 ps. The positive capture-minus-launch skew is 50 ps and helps this setup relation. Do not reuse the maximum delays for a hold check; hold requires the corresponding minimum path and same-edge relationship.
+
+### Check 05: Propagate maximum and minimum arrival separately
+
+**Question.** A fixed output transition has two feasible input paths. Their latest arrivals/arc delays are (100,40) and (180,20) ps; earliest values are (20,40) and (70,20) ps. Find propagated latest and earliest output arrivals.
+
+**Explained answer.** Latest arrival is max(140,200)=200 ps. Earliest arrival is min(60,90)=60 ps. The latest and earliest paths differ. This arithmetic assumes the listed arc polarities and transitions are feasible; an inverting or non-unate arc requires the corresponding input-transition pairing rather than indiscriminately mixing values.
+
+### Check 06: Keep MMMC scenarios explicit
+
+**Question.** A design has functional and scan modes and slow and fast timing corners. How many mode/corner pairs exist before pruning, and what does passing one slow-corner setup report prove?
+
+**Explained answer.** The Cartesian product has four pairs. A justified analysis plan may select a different scenario set, but its omissions need explicit reasons. One passing setup report establishes that checked relation under its mode, corner, clocks, constraints and parasitics. It does not establish fast-corner hold, scan timing or coverage of unconstrained endpoints.

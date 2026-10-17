@@ -1,8 +1,14 @@
 # Build and verify the reading collection
 
-[Maintenance tools](../README.md) · [Editable notes](../../../Daily%20Notes/README.md) · [Study examples](../../examples/README.md)
+[Maintenance tools](../README.md) · [Editable notes](../../Daily%20Notes/README.md) · [Study examples](../../examples/README.md)
 
-The nine daily Markdown files are authoritative content sources. `build_notes.py` exports them with contents, hierarchical bookmarks, embedded Cambria/Consolas fonts, vector formulas and figure/footer returns to contents. `build_references.py` exports the root glossary and two-page flow guide. `update_index.py` refreshes the three reader indexes from actual PDF page counts.
+The nine Markdown files in `Resources/Daily Notes` are authoritative content sources. `build_notes.py` exports them with contents, hierarchical bookmarks, embedded Cambria/Consolas fonts, vector formulas, revision routes, worked revision answers and an internal handwritten-page finder. `build_references.py` exports the glossary and two-page flow guide alongside the daily PDFs at the repository top level. All editable material and tools remain inside `Resources`.
+
+`update_index.py` refreshes the master, daily and complete-PDF indexes from actual page counts, includes individual download links and a complete-repository ZIP link, and retains the Synopsys guides. It can refresh indexes in a fresh clone without local QA manifests. `check_handwriting.py` matches every original handwritten JPEG byte for byte against the actual image stream embedded at its named PDF destination; all 128 complete pages must be present without resizing or recompression.
+
+`build_synopsys_plan.py` separately builds the [Synopsys project plan](../../Synopsys%20RTL%20to%20GDS%20Project%20Plan.md) into its indexed PDF. Run it with the Codex bundled Python runtime and its ReportLab/pypdf packages. It records actual section destinations, page count, source/PDF hashes and link counts under ignored `qa/synopsys-plan`; render the current PDF with Poppler and inspect every page before delivery. If pagination changes, update its page references in the reader indexes.
+
+`build_synopsys_tool_map.py` builds the separate single-page [process and tool map](../../Synopsys%20RTL%20to%20GDS%20Tool%20Map.md), using the same bundled runtime and font setup. It verifies one-page output and confirms that the full project plan and its source retain their original hashes.
 
 The checked production environment uses Windows with Cambria and Consolas installed, Python and the versions in [requirements.txt](requirements.txt). Poppler's `pdftoppm` must be on PATH, or `PDFTOPPM` must name its executable. The numerical/HDL checks additionally need Icarus Verilog; Tcl examples use Python's Tcl/Tk support. Fonts and Poppler are external prerequisites, not installed by the builder.
 
@@ -18,6 +24,7 @@ python Resources/tools/pdf/build_references.py
 python Resources/tools/pdf/update_index.py
 python Resources/tools/pdf/check_notes.py
 python Resources/tools/pdf/check_navigation.py
+python Resources/tools/pdf/check_handwriting.py
 python Resources/tools/pdf/check_references.py
 python Resources/tools/pdf/check_quiz.py
 python Resources/tools/pdf/check_collection.py
