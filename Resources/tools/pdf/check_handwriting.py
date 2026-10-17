@@ -34,7 +34,7 @@ def main():
     per_day = {}
     for day in range(1, 10):
         record = manifest[str(day)]
-        path = ROOT / record['filename']
+        path = ROOT / 'PDFs' / record['filename']
         reader = PdfReader(path)
         names = reader.named_destinations
         assert 'handwritten-page-finder' in names, path
@@ -64,7 +64,7 @@ def main():
     assert list(per_day.values()) == [16, 12, 14, 7, 8, 15, 17, 17, 22], per_day
     result = {'verified_original_pages': len(verified), 'per_day': per_day,
               'method': 'Original JPEG bytes matched the actual embedded DCT streams on named PDF destination pages; no resizing or recompression.',
-              'pdf_sha256': {m['filename']: hashlib.sha256((ROOT / m['filename']).read_bytes()).hexdigest()
+              'pdf_sha256': {m['filename']: hashlib.sha256((ROOT / 'PDFs' / m['filename']).read_bytes()).hexdigest()
                              for m in manifest.values()}, 'pages': verified}
     (HERE / 'qa/handwriting-embedded.json').write_text(json.dumps(result, indent=2), encoding='utf-8')
     print('PASS: all 128 complete handwritten pages are embedded in the nine daily PDFs; no external-file dependency for reading them.')

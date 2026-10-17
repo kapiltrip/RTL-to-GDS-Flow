@@ -7,7 +7,8 @@ import hashlib, json, os, re, sys
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 RES = ROOT / 'Resources'
-OUT = ROOT
+OUT = ROOT / 'PDFs'
+OUT.mkdir(exist_ok=True)
 QA = HERE / 'qa/references'
 QA.mkdir(parents=True, exist_ok=True)
 sys.path.insert(0, str(HERE / 'vendor'))
@@ -275,7 +276,7 @@ def build_glossary():
         'color="#242424"><u>NPTEL official course outline</u></a> · '
         '<a href="https://www.youtube.com/playlist?list=PLyqSpQzTE6M8iOrfy70ELk9W72JG5a98V" '
         'color="#242424"><u>Course lectures</u></a> · '
-        '<a href="Resources/Sources.md" color="#242424"><u>Source register</u></a> · '
+        '<a href="../Resources/Sources.md" color="#242424"><u>Source register</u></a> · '
         '<a href="RTL%20to%20GDS%20Flow.pdf" color="#242424"><u>Flow guide</u></a>', 'small'))
     path = OUT / 'Full Forms.pdf'
     doc = ReferenceDoc(path, 'Full forms and meanings')

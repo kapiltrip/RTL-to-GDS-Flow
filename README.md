@@ -1,14 +1,16 @@
 # RTL to GDS PDF revision collection
 
+[Open the PDFs folder](PDFs/README.md) · **[Download the complete collection (ZIP)](https://github.com/kapiltrip/RTL-to-GDS-Flow/archive/refs/heads/main.zip)**
+
 **Current position: Week 12 complete — Day 09, Lesson 06 of the day (course Lesson 54).** Updated from Kapil's reported progress on 3 October 2026. Tutorials count in the sequence; the study notes review demonstrations without claiming new laboratory runs.
 
-**Start with the daily PDFs below.** All 14 reader PDFs are directly at the repository top level. Editable notes, images, original sources and tools are inside [Resources](Resources/README.md). The [complete PDF index](Resources/PDF%20Index.md) lists every document. For quick revision, [Full Forms](Full%20Forms.pdf) explains terminology, and [RTL to GDS Flow](RTL%20to%20GDS%20Flow.pdf) outlines the implementation stages and course sequence.
+**Open the [PDFs folder](PDFs/README.md) for all 14 reader PDFs**, including every study day. The daily reading and download links are below. Editable notes, images, original sources and tools are inside [Resources](Resources/README.md). The [complete PDF index](PDFs/README.md) lists every document. For quick revision, [Full Forms](PDFs/Full%20Forms.pdf) explains terminology, and [RTL to GDS Flow](PDFs/RTL%20to%20GDS%20Flow.pdf) outlines the implementation stages and course sequence.
 
-[Download the complete collection ZIP](https://github.com/kapiltrip/RTL-to-GDS-Flow/archive/refs/heads/main.zip) for all PDFs, editable notes and supporting files. Extract the ZIP before reading. Each day below also has its own **Download PDF** link; the [PDF index](Resources/PDF%20Index.md#references-and-practice) has downloads for the references and practice worksheet.
+For one file, choose **Download PDF** beside its title in the tables below. For the whole collection, use the **ZIP download** above, extract it, then open the `PDFs` folder. The ZIP includes all PDFs, editable notes and supporting files.
 
-For the laboratory project, open the [Synopsys RTL to GDS Project Plan](Synopsys%20RTL%20to%20GDS%20Project%20Plan.pdf) or its [editable source](Resources/Synopsys%20RTL%20to%20GDS%20Project%20Plan.md). The 18-page plan maps the tools to the flow, lists technology dependencies, supplies Thapar lab inventory forms and requires a complete trial before the main project begins. Take pages 6–8 to the lab; the readiness trial is on page 9.
+For the laboratory project, open the [Synopsys RTL to GDS Project Plan](PDFs/Synopsys%20RTL%20to%20GDS%20Project%20Plan.pdf) or its [editable source](Resources/Synopsys%20RTL%20to%20GDS%20Project%20Plan.md). The 18-page plan maps the tools to the flow, lists technology dependencies, supplies Thapar lab inventory forms and requires a complete trial before the main project begins. Take pages 6–8 to the lab; the readiness trial is on page 9.
 
-The separate [one-page Synopsys tool map](Synopsys%20RTL%20to%20GDS%20Tool%20Map.pdf) lists only the process stages and tool names for quick reference.
+The separate [one-page Synopsys tool map](PDFs/Synopsys%20RTL%20to%20GDS%20Tool%20Map.pdf) lists only the process stages and tool names for quick reference.
 
 The nine daily PDFs contain **all 128 complete handwritten pages**, with explanations beside their source material. Each PDF adds a subject-specific revision route, six worked questions with explained answers, and a clickable handwritten-page finder. Contents, bookmarks and figure/footer links support quick revision; detailed mechanisms, lecture timestamps, corrections, examples and code remain in the reading editions.
 
@@ -18,19 +20,29 @@ The allocation is **six lessons per study day**: `day = floor((lesson−1)/6)+1`
 
 | Day | Lessons | Topic | PDF | Download | Pages |
 |---|---|---|---|---|---:|
-| [Day 01](Resources/Daily%20Notes/Day%2001.md) | 01–06 | IC foundations and synthesis | [Read PDF](Day%2001%20-%20IC%20Foundations%20and%20Logic%20Synthesis.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Day%2001%20-%20IC%20Foundations%20and%20Logic%20Synthesis.pdf) | 85 |
-| [Day 02](Resources/Daily%20Notes/Day%2002.md) | 07–12 | Physical design and Verilog | [Read PDF](Day%2002%20-%20Physical%20Design%20and%20Verilog%20Foundations.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Day%2002%20-%20Physical%20Design%20and%20Verilog%20Foundations.pdf) | 82 |
-| [Day 03](Resources/Daily%20Notes/Day%2003.md) | 13–18 | Simulation, synthesis and Boolean covers | [Read PDF](Day%2003%20-%20Simulation%20Synthesis%20and%20Logic%20Optimization.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Day%2003%20-%20Simulation%20Synthesis%20and%20Logic%20Optimization.pdf) | 43 |
-| [Day 04](Resources/Daily%20Notes/Day%2004.md) | 19–24 | Multilevel optimization and formal methods | [Read PDF](Day%2004%20-%20Multilevel%20Optimization%20and%20Formal%20Verification.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Day%2004%20-%20Multilevel%20Optimization%20and%20Formal%20Verification.pdf) | 30 |
-| [Day 05](Resources/Daily%20Notes/Day%2005.md) | 25–30 | Equivalence, libraries and STA | [Read PDF](Day%2005%20-%20Equivalence%20Libraries%20and%20Static%20Timing%20Analysis.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Day%2005%20-%20Equivalence%20Libraries%20and%20Static%20Timing%20Analysis.pdf) | 28 |
-| [Day 06](Resources/Daily%20Notes/Day%2006.md) | 31–36 | Constraints, mapping and timing optimization | [Read PDF](Day%2006%20-%20OpenSTA%20and%20Clock%20Constraints.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Day%2006%20-%20OpenSTA%20and%20Clock%20Constraints.pdf) | 44 |
-| [Day 07](Resources/Daily%20Notes/Day%2007.md) | 37–42 | Power, scan design and ATPG | [Read PDF](Day%2007%20-%20Power%20Scan%20Design%20and%20ATPG.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Day%2007%20-%20Power%20Scan%20Design%20and%20ATPG.pdf) | 42 |
-| [Day 08](Resources/Daily%20Notes/Day%2008.md) | 43–48 | BIST, physical foundations and chip planning | [Read PDF](Day%2008%20-%20BIST%20Physical%20Foundations%20and%20Chip%20Planning.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Day%2008%20-%20BIST%20Physical%20Foundations%20and%20Chip%20Planning.pdf) | 44 |
-| [Day 09](Resources/Daily%20Notes/Day%2009.md) | 49–54 | Placement, clocks, routing and signoff | [Read PDF](Day%2009%20-%20Placement%20Clocks%20Routing%20and%20Signoff.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/Day%2009%20-%20Placement%20Clocks%20Routing%20and%20Signoff.pdf) | 59 |
+| [Day 01](Resources/Daily%20Notes/Day%2001.md) | 01–06 | IC foundations and synthesis | [Read PDF](PDFs/Day%2001%20-%20IC%20Foundations%20and%20Logic%20Synthesis.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/PDFs/Day%2001%20-%20IC%20Foundations%20and%20Logic%20Synthesis.pdf) | 85 |
+| [Day 02](Resources/Daily%20Notes/Day%2002.md) | 07–12 | Physical design and Verilog | [Read PDF](PDFs/Day%2002%20-%20Physical%20Design%20and%20Verilog%20Foundations.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/PDFs/Day%2002%20-%20Physical%20Design%20and%20Verilog%20Foundations.pdf) | 82 |
+| [Day 03](Resources/Daily%20Notes/Day%2003.md) | 13–18 | Simulation, synthesis and Boolean covers | [Read PDF](PDFs/Day%2003%20-%20Simulation%20Synthesis%20and%20Logic%20Optimization.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/PDFs/Day%2003%20-%20Simulation%20Synthesis%20and%20Logic%20Optimization.pdf) | 43 |
+| [Day 04](Resources/Daily%20Notes/Day%2004.md) | 19–24 | Multilevel optimization and formal methods | [Read PDF](PDFs/Day%2004%20-%20Multilevel%20Optimization%20and%20Formal%20Verification.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/PDFs/Day%2004%20-%20Multilevel%20Optimization%20and%20Formal%20Verification.pdf) | 30 |
+| [Day 05](Resources/Daily%20Notes/Day%2005.md) | 25–30 | Equivalence, libraries and STA | [Read PDF](PDFs/Day%2005%20-%20Equivalence%20Libraries%20and%20Static%20Timing%20Analysis.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/PDFs/Day%2005%20-%20Equivalence%20Libraries%20and%20Static%20Timing%20Analysis.pdf) | 28 |
+| [Day 06](Resources/Daily%20Notes/Day%2006.md) | 31–36 | Constraints, mapping and timing optimization | [Read PDF](PDFs/Day%2006%20-%20OpenSTA%20and%20Clock%20Constraints.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/PDFs/Day%2006%20-%20OpenSTA%20and%20Clock%20Constraints.pdf) | 44 |
+| [Day 07](Resources/Daily%20Notes/Day%2007.md) | 37–42 | Power, scan design and ATPG | [Read PDF](PDFs/Day%2007%20-%20Power%20Scan%20Design%20and%20ATPG.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/PDFs/Day%2007%20-%20Power%20Scan%20Design%20and%20ATPG.pdf) | 42 |
+| [Day 08](Resources/Daily%20Notes/Day%2008.md) | 43–48 | BIST, physical foundations and chip planning | [Read PDF](PDFs/Day%2008%20-%20BIST%20Physical%20Foundations%20and%20Chip%20Planning.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/PDFs/Day%2008%20-%20BIST%20Physical%20Foundations%20and%20Chip%20Planning.pdf) | 44 |
+| [Day 09](Resources/Daily%20Notes/Day%2009.md) | 49–54 | Placement, clocks, routing and signoff | [Read PDF](PDFs/Day%2009%20-%20Placement%20Clocks%20Routing%20and%20Signoff.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/PDFs/Day%2009%20-%20Placement%20Clocks%20Routing%20and%20Signoff.pdf) | 59 |
+
+## Reference and practice downloads
+
+| Document | PDF | Download | Pages |
+|---|---|---|---:|
+| Full forms and meanings | [Read PDF](PDFs/Full%20Forms.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/PDFs/Full%20Forms.pdf) | 6 |
+| RTL to GDS flow | [Read PDF](PDFs/RTL%20to%20GDS%20Flow.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/PDFs/RTL%20to%20GDS%20Flow.pdf) | 2 |
+| Synopsys project plan | [Read PDF](PDFs/Synopsys%20RTL%20to%20GDS%20Project%20Plan.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/PDFs/Synopsys%20RTL%20to%20GDS%20Project%20Plan.pdf) | 18 |
+| Synopsys tool map | [Read PDF](PDFs/Synopsys%20RTL%20to%20GDS%20Tool%20Map.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/PDFs/Synopsys%20RTL%20to%20GDS%20Tool%20Map.pdf) | 1 |
+| Week 7 and 8 practice questions | [Read PDF](PDFs/Week%2007%20and%2008%20-%20Practice%20Questions.pdf) | [Download PDF](https://github.com/kapiltrip/RTL-to-GDS-Flow/raw/refs/heads/main/PDFs/Week%2007%20and%2008%20-%20Practice%20Questions.pdf) | 9 |
 
 [Find handwritten pages](Resources/Handwritten%20Index.md) · [Corrections and doubts](Resources/Questions.md) · [Sources and timestamps](Resources/Sources.md) · [Study method](Resources/Study%20Guide.md) · [Coverage and depth review](Resources/Coverage%20Review.md)
 
-[Week 7 and Week 8 practice questions](Resources/Week%2007%20and%2008%20-%20Practice%20Questions.md) · [Question-only worksheet PDF](Week%2007%20and%2008%20-%20Practice%20Questions.pdf). All 20 assignment questions, their unmarked options and six source figures are included.
+[Week 7 and Week 8 practice questions](Resources/Week%2007%20and%2008%20-%20Practice%20Questions.md) · [Question-only worksheet PDF](PDFs/Week%2007%20and%2008%20-%20Practice%20Questions.pdf). All 20 assignment questions, their unmarked options and six source figures are included.
 
 <details>
 <summary>Detailed course lesson index and editable sources</summary>
@@ -99,16 +111,15 @@ The allocation is **six lessons per study day**: `day = floor((lesson−1)/6)+1`
 ## Collection structure
 
 ```text
-Day 01 - ...pdf to Day 09 - ...pdf    Daily reading and revision
-Full Forms.pdf                      Terminology and meanings
-RTL to GDS Flow.pdf                  Two-page flow reference
-Synopsys ...pdf                      Project plan and one-page tool map
-Week 07 and 08 - ...pdf              Practice worksheet
-README.md                           Reading and download index
-Resources/                          All supporting material
-  Daily Notes/                      Editable sources for the nine daily PDFs
-  sources/ and images/              Original pages and lecture figures
-  examples/ and tools/              Checked examples and PDF maintenance
+PDFs/                         All 14 reader PDFs and their download index
+  Day 01 - ...pdf to Day 09 - ...pdf
+  Full Forms.pdf, RTL to GDS Flow.pdf
+  Synopsys ...pdf, Week 07 and 08 - ...pdf
+Resources/                    Editable notes, original pages and support files
+  Daily Notes/
+  sources/ and images/
+  examples/ and tools/
+README.md                     Reading and download guide
 ```
 
 Read the PDF files in day order. Each contains its complete original handwritten pages, so revision does not require opening the supporting folders. The [resource guide](Resources/README.md) explains the editable sources and maintenance tools.

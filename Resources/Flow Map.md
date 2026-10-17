@@ -72,4 +72,4 @@ The teaching order introduces models before detailed optimization. Implementatio
 
 ## Sources and deeper reading
 
-[NPTEL course outline](https://onlinecourses.nptel.ac.in/e-learning/preview/noc26_ee147) gives the week sequence. Lesson links open the detailed notes. [Timing repair](https://openroad.readthedocs.io/en/latest/main/src/rsz/README.html#repair-timing) explains interacting setup/hold checks; [Full forms](../Full%20Forms.pdf) expands abbreviations. All 54 lessons through Week 12 are complete.
+[NPTEL course outline](https://onlinecourses.nptel.ac.in/e-learning/preview/noc26_ee147) gives the week sequence. Lesson links open the detailed notes. [Timing repair](https://openroad.readthedocs.io/en/latest/main/src/rsz/README.html#repair-timing) explains interacting setup/hold checks; [Full forms](../PDFs/Full%20Forms.pdf) expands abbreviations. All 54 lessons through Week 12 are complete.

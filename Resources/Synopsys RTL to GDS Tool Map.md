@@ -25,4 +25,4 @@
 
 **\* Scope dependent:** Include the checks required by your design and teacher. Lint is recommended; clock and reset crossing checks depend on the design. The full plan covers licenses, libraries and signoff requirements.
 
-[Full project plan](../Synopsys%20RTL%20to%20GDS%20Project%20Plan.pdf)
+[Full project plan](../PDFs/Synopsys%20RTL%20to%20GDS%20Project%20Plan.pdf)

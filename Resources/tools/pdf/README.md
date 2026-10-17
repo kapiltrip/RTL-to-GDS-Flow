@@ -2,7 +2,7 @@
 
 [Maintenance tools](../README.md) · [Editable notes](../../Daily%20Notes/README.md) · [Study examples](../../examples/README.md)
 
-The nine Markdown files in `Resources/Daily Notes` are authoritative content sources. `build_notes.py` exports them with contents, hierarchical bookmarks, embedded Cambria/Consolas fonts, vector formulas, revision routes, worked revision answers and an internal handwritten-page finder. `build_references.py` exports the glossary and two-page flow guide alongside the daily PDFs at the repository top level. All editable material and tools remain inside `Resources`.
+The nine Markdown files in `Resources/Daily Notes` are authoritative content sources. `build_notes.py` exports them with contents, hierarchical bookmarks, embedded Cambria/Consolas fonts, vector formulas, revision routes, worked revision answers and an internal handwritten-page finder. `build_references.py` exports the glossary and two-page flow guide alongside the daily PDFs in `PDFs`. All editable material and tools remain inside `Resources`.
 
 `update_index.py` refreshes the master, daily and complete-PDF indexes from actual page counts, includes individual download links and a complete-repository ZIP link, and retains the Synopsys guides. It can refresh indexes in a fresh clone without local QA manifests. `check_handwriting.py` matches every original handwritten JPEG byte for byte against the actual image stream embedded at its named PDF destination; all 128 complete pages must be present without resizing or recompression.
 

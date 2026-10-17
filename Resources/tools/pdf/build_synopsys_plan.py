@@ -1,7 +1,7 @@
 """Build the indexed Synopsys project plan from its maintained Markdown source.
 
 Run with the Codex bundled Python runtime. ReportLab and pypdf are required.
-Reader PDFs stay at the repository root; editable sources and QA stay in Resources.
+Reader PDFs stay in PDFs; editable sources and QA stay in Resources.
 """
 from pathlib import Path
 from html import escape
@@ -25,7 +25,8 @@ from pypdf import PdfReader
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 SOURCE = ROOT / 'Resources/Synopsys RTL to GDS Project Plan.md'
-OUTPUT = ROOT / 'Synopsys RTL to GDS Project Plan.pdf'
+OUTPUT = ROOT / 'PDFs/Synopsys RTL to GDS Project Plan.pdf'
+OUTPUT.parent.mkdir(exist_ok=True)
 QA = HERE / 'qa/synopsys-plan'
 W, H = A4
 MARGIN = 56.7

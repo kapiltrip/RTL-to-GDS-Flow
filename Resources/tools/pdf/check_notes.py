@@ -24,7 +24,7 @@ def normalized(s):
 
 for day in days:
     m=manifest[str(day)]
-    pdf=ROOT/m['filename']
+    pdf=ROOT/'PDFs'/m['filename']
     source=(ROOT/'Resources/Daily Notes'/f'Day {day:02d}.md').read_text(encoding='utf-8')
     source_images=re.findall(r'!\[[^\]]*\]\(([^)]+)\)',source)
     source_codes=re.findall(r'^```[^\n]*\n(.*?)^```',source,re.M|re.S)

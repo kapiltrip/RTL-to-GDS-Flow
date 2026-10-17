@@ -14,7 +14,7 @@ selected=sys.argv[1:] or list(manifest)
 
 for day in selected:
     m=manifest[day]
-    path=HERE.parents[2]/m['filename']
+    path=HERE.parents[2]/'PDFs'/m['filename']
     reader=PdfReader(path)
     first=reader.pages[0].indirect_reference
     def contents_link(annotation):

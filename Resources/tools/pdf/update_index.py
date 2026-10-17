@@ -13,7 +13,7 @@ sys.path.insert(0, str(HERE / 'vendor'))
 from pypdf import PdfReader
 
 ROOT = HERE.parents[2]
-DOC = ROOT
+DOC = ROOT / 'PDFs'
 REPOSITORY = 'https://github.com/kapiltrip/RTL-to-GDS-Flow'
 ARCHIVE = REPOSITORY + '/archive/refs/heads/main.zip'
 TOPICS = [
@@ -36,7 +36,7 @@ REFERENCES = [
 
 
 def download(name):
-    return REPOSITORY + '/raw/refs/heads/main/' + quote(name)
+    return REPOSITORY + '/raw/refs/heads/main/PDFs/' + quote(name)
 
 
 def main():
@@ -62,8 +62,18 @@ def main():
             rows.append(
                 f'| [Day {day:02d}]({href(ROOT / "Resources/Daily Notes" / f"Day {day:02d}.md")}) | '
                 f'{lessons} | {TOPICS[day - 1]} | '
-                f'[Read PDF]({href(ROOT / name)}) | '
+                f'[Read PDF]({href(DOC / name)}) | '
                 f'[Download PDF]({download(name)}) | {count} |')
+        return '\n'.join(rows)
+
+    def reference_downloads(index):
+        from os.path import relpath
+        rows = ['| Document | PDF | Download | Pages |',
+                '|---|---|---|---:|']
+        for name, title, _ in REFERENCES:
+            href = quote(Path(relpath(DOC / name, index.parent)).as_posix(), safe='/')
+            rows.append(f'| {title} | [Read PDF]({href}) | '
+                        f'[Download PDF]({download(name)}) | {pages[name]} |')
         return '\n'.join(rows)
 
     for relative in ['README.md', 'Resources/Daily Notes/README.md']:
@@ -73,27 +83,32 @@ def main():
             r'\| Day \| Lessons \| Topic \| PDF \|(?: Download \|)? Pages \|\n.*?(?=\n\n)',
             lambda _: daily_table(path), text, count=1, flags=re.S)
         assert replaced == 1, f'Daily table missing from {relative}'
+        if relative == 'README.md':
+            text, replaced = re.subn(
+                r'\| Document \| PDF \| Download \| Pages \|\n.*?(?=\n\n)',
+                lambda _: reference_downloads(path), text, count=1, flags=re.S)
+            assert replaced == 1, 'Reference download table missing from README.md'
         path.write_text(text, encoding='utf-8')
 
     reference_rows = ['| Document | Purpose | Read | Download | Pages |',
                       '|---|---|---|---|---:|']
     for name, title, purpose in REFERENCES:
         reference_rows.append(
-            f'| {title} | {purpose} | [Read PDF](../{quote(name)}) | '
+            f'| {title} | {purpose} | [Read PDF]({quote(name)}) | '
             f'[Download PDF]({download(name)}) | {pages[name]} |')
 
     text = (
         '# PDF collection\n\n'
-        '[Master index](../README.md) · [Editable daily notes](Daily%20Notes/README.md)\n\n'
-        f'**{len(expected)} reader PDFs · {total} pages.** All reader PDFs are directly at '
-        'the repository top level: nine study days, two quick references, two Synopsys guides and '
+        '[Master index](../README.md) · [Editable daily notes](../Resources/Daily%20Notes/README.md)\n\n'
+        f'**{len(expected)} reader PDFs · {total} pages.** This folder contains '
+        'nine study days, two quick references, two Synopsys guides and '
         'one practice worksheet. Original scans and lecture decks stay in '
-        '[Resources](README.md).\n\n'
+        '[Resources](../Resources/README.md).\n\n'
         f'[Download the complete collection ZIP]({ARCHIVE}). The ZIP includes all PDFs, '
         'editable notes and supporting files. Extract it before reading so links to '
         'other days and examples can resolve. For one document, use **Download PDF** '
         'in the tables below; the reader links open GitHub previews.\n\n'
-        '## Daily reading\n\n' + daily_table(ROOT / 'Resources/PDF Index.md') + '\n\n'
+        '## Daily reading\n\n' + daily_table(DOC / 'README.md') + '\n\n'
         'Each day contains six lessons. Together the nine days cover all 54 course '
         'lessons through Week 12. The PDFs retain the source figures, handwritten '
         'pages, explanations, worked examples, code and recall checks from the '
@@ -102,12 +117,12 @@ def main():
         '## References and practice\n\n' + '\n'.join(reference_rows) + '\n\n'
         'The Synopsys project plan has lab meeting forms on pages 6–8 and the '
         'readiness trial on page 9. Its [editable source]'
-        '(Synopsys%20RTL%20to%20GDS%20Project%20Plan.md) '
+        '(../Resources/Synopsys%20RTL%20to%20GDS%20Project%20Plan.md) '
         'contains the full requirements and execution plan. The separate '
-        '[tool map source](Synopsys%20RTL%20to%20GDS%20Tool%20Map.md) '
+        '[tool map source](../Resources/Synopsys%20RTL%20to%20GDS%20Tool%20Map.md) '
         'maintains the one-page process table.\n\n'
         'The practice worksheet contains questions and unmarked options. Its '
-        '[checker](tools/pdf/check_quiz.py) verifies the original '
+        '[checker](../Resources/tools/pdf/check_quiz.py) verifies the original '
         'sequence, figures, navigation and layout.\n\n'
         '## Reading and maintenance\n\n'
         'The reading editions use white A4 pages, dark text and embedded fonts. '
@@ -115,9 +130,9 @@ def main():
         'A PDF viewer may ask before opening another local file.\n\n'
         'Page counts and download links in this index come from the actual PDFs. '
         'After editing a daily note, rebuild its PDF and inspect the rendered pages. '
-        'The [build and verification guide](tools/pdf/README.md) '
+        'The [build and verification guide](../Resources/tools/pdf/README.md) '
         'lists the content, navigation, source-coverage and layout checks.\n')
-    (ROOT / 'Resources/PDF Index.md').write_text(text, encoding='utf-8')
+    (DOC / 'README.md').write_text(text, encoding='utf-8')
     print(f'Updated three indexes: {len(expected)} PDFs, {total} pages, '
           f'{len(days)} daily downloads and {len(REFERENCES)} reference downloads.')
 

@@ -5,7 +5,8 @@ from urllib.parse import unquote, quote, urlparse, urlsplit
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent.parent
-OUT = ROOT
+OUT = ROOT / 'PDFs'
+OUT.mkdir(exist_ok=True)
 CACHE = HERE / 'cache'
 QA = HERE / 'qa'
 HANDWRITING = {}
@@ -371,8 +372,8 @@ class Builder:
         parsed = urlsplit(url)
         target = (ROOT / 'Resources/Daily Notes' / parsed.path).resolve()
         references = {
-            ROOT / 'Resources/Glossary.md': ROOT / 'Full Forms.pdf',
-            ROOT / 'Resources/Flow Map.md': ROOT / 'RTL to GDS Flow.pdf',
+            ROOT / 'Resources/Glossary.md': OUT / 'Full Forms.pdf',
+            ROOT / 'Resources/Flow Map.md': OUT / 'RTL to GDS Flow.pdf',
         }
         target = references.get(target, target)
         relative = Path(os.path.relpath(target, OUT)).as_posix()

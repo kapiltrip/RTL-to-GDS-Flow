@@ -13,9 +13,10 @@ from pypdf import PdfReader
 from build_synopsys_plan import ROOT, W, H, WIDTH, MARGIN, RULE, INK
 
 SOURCE = ROOT / 'Resources/Synopsys RTL to GDS Tool Map.md'
-OUTPUT = ROOT / 'Synopsys RTL to GDS Tool Map.pdf'
+OUTPUT = ROOT / 'PDFs/Synopsys RTL to GDS Tool Map.pdf'
+OUTPUT.parent.mkdir(exist_ok=True)
 QA = ROOT / 'Resources/tools/pdf/qa/synopsys-tool-map'
-MAIN_PDF = ROOT / 'Synopsys RTL to GDS Project Plan.pdf'
+MAIN_PDF = ROOT / 'PDFs/Synopsys RTL to GDS Project Plan.pdf'
 MAIN_SOURCE = ROOT / 'Resources/Synopsys RTL to GDS Project Plan.md'
 
 

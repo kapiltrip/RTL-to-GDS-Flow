@@ -1,6 +1,6 @@
 # Full forms and meanings
 
-[Master index](../README.md) · [Read the PDF](../Full%20Forms.pdf)
+[Master index](../README.md) · [Read the PDF](../PDFs/Full%20Forms.pdf)
 
 Alphabetical terminology for the completed lessons and the RTL-to-GDS overview. Each entry links to the relevant daily explanation; that lesson contains lecture frames, timestamps and supporting primary references. Coverage extends through all 54 lessons and Week 12. Links point to the detailed treatment, including ATPG, BIST and final physical verification.
 

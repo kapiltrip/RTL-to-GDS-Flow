@@ -116,13 +116,13 @@ if '--final' in sys.argv:
     visual=json.loads((QA/'visual-review-wrapup.json').read_text(encoding='utf-8'))
     for day in range(6,10):
         review=visual['days'][str(day)]
-        pdf=ROOT/manifest[str(day)]['filename']
+        pdf=ROOT/'PDFs'/manifest[str(day)]['filename']
         assert review['pages_reviewed']==list(range(1,manifest[str(day)]['pages']+1))
         assert review['pdf_sha256']==hashlib.sha256(pdf.read_bytes()).hexdigest()
     navigation=json.loads((QA/'navigation-detail.json').read_text(encoding='utf-8'))
     checks=json.loads((QA/'checks.json').read_text(encoding='utf-8'))
     for day in range(6,10):
-        pdf=ROOT/manifest[str(day)]['filename']
+        pdf=ROOT/'PDFs'/manifest[str(day)]['filename']
         assert navigation[str(day)]['pdf_sha256']==hashlib.sha256(pdf.read_bytes()).hexdigest()
         assert not checks[str(day)]['geometry_issues']
 

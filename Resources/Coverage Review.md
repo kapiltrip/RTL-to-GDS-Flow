@@ -8,7 +8,7 @@ Updated on **17 October 2026**, through Kapil's reported completion of **Week 12
 
 The nine daily PDFs now contain **457 pages**, **283 figures**, and all **128 complete handwritten pages**. The 28 earlier pages are now embedded in full in Days 01 and 02, alongside the existing topic crops and explanations. A new checker compares every original JPEG byte for byte with its actual embedded PDF image stream and verifies its named destination.
 
-Each day has a subject-specific revision route, six worked checks with explained answers, and an internal handwritten-page finder. The 54 new revision checks retain explicit assumptions, units and reasoning. All 1,731 pre-existing source paragraphs, tables and code blocks were retained. All 14 reader PDFs are at the repository top level; editable notes and production resources are inside `Resources`. The [PDF index](PDF%20Index.md) provides current page counts and individual/full-collection downloads.
+Each day has a subject-specific revision route, six worked checks with explained answers, and an internal handwritten-page finder. The 54 new revision checks retain explicit assumptions, units and reasoning. All 1,731 pre-existing source paragraphs, tables and code blocks were retained. All 14 reader PDFs are grouped in the `PDFs` folder; editable notes and production resources are inside `Resources`. The [PDF index](../PDFs/README.md) provides current page counts and individual/full-collection downloads.
 
 ## Review by day
 
